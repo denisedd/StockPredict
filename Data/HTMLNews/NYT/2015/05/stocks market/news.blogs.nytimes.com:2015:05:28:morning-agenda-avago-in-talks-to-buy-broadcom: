@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003707897"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1432812418" />
+<meta name="PUD" content="20150528" />
+<meta name="pdate" content="20150528" />
+<meta name="ptime" content="20150528072658" />
+<meta name="utime" content="20150528112658" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-05-28T11:26:58-04:00" />
+<meta name="DISPLAYDATE" content="May 28, 2015" />
+<meta name="dat" content="May 28, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Banking and Financial Institutions;Computer Chips;Federal Taxes (US);Hedge Funds;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Pensions and Retirement Plans;Private Equity;Regulation and Deregulation of Industry;Stocks and Bonds;Venture Capital">
+<meta name="org" content="Alibaba Group Holding Ltd;Avago Technologies Ltd;Broadcom Corporation;Internal Revenue Service;Kaisa Group Holdings Ltd;Taxation;Yahoo! Inc">
+<meta name="ticker" content="Avago Technologies Ltd|AVGO|NASDAQ;Broadcom Corporation|BRCM|NASDAQ;Yahoo! Inc|YHOO|NASDAQ" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Computer Chips" />
+<meta property="article:tag" content="Federal Taxes (US)" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Pensions and Retirement Plans" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Alibaba Group Holding Ltd" />
+<meta property="article:tag" content="Avago Technologies Ltd" />
+<meta property="article:tag" content="Broadcom Corporation" />
+<meta property="article:tag" content="Internal Revenue Service" />
+<meta property="article:tag" content="Kaisa Group Holdings Ltd" />
+<meta property="article:tag" content="Taxation" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Banking and Financial Institutions,Computer Chips,Federal Taxes (US),Hedge Funds,Initial Public Offerings,Mergers Acquisitions and Divestitures,Pensions and Retirement Plans,Private Equity,Regulation and Deregulation of Industry,Stocks and Bonds,Venture Capital,Alibaba Group Holding Ltd,Avago Technologies Ltd,Broadcom Corporation,Internal Revenue Service,Kaisa Group Holdings Ltd,Taxation,Yahoo! Inc,DealBook" />
+<meta name="news_keywords" content="Alibaba,Banking and Finance,Computer Chip,Federal Taxes,Hedge fund,IPO,IRS,Kaisa Group,Mergers and Acquistions,Pensions and Retirement Plans,Private equity,Regulation and Deregulation,Stocks and Bonds,Venture capital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F05%2F28%2Fmorning-agenda-avago-in-talks-to-buy-broadcom%2F" title="Morning Agenda: Avago in Talks to Buy Broadcom" />
+<meta name="description" content="Avago in Talks to Buy Broadcom &#124; Growing Appeal of Pension Obligation Bonds &#124; Sunac Cancels Takeover of Kaisa &#124; Parallels to Yahoo Spinoff Plan in 1934 Tax Case" />
+<meta name="hdl" content="Morning Agenda: Avago in Talks to Buy Broadcom" />
+<meta property="og:title" content="Morning Agenda: Avago in Talks to Buy Broadcom" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/05/28/morning-agenda-avago-in-talks-to-buy-broadcom/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Avago in Talks to Buy Broadcom &#124; Growing Appeal of Pension Obligation Bonds &#124; Sunac Cancels Takeover of Kaisa &#124; Parallels to Yahoo Spinoff Plan in 1934 Tax Case" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Avago in Talks to Buy Broadcom" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/05/28/morning-agenda-avago-in-talks-to-buy-broadcom/" />
+<meta name="twitter:description" content="Avago in Talks to Buy Broadcom &#124; Growing Appeal of Pension Obligation Bonds &#124; Sunac Cancels Takeover of Kaisa &#124; Parallels to Yahoo Spinoff Plan in 1934 Tax Case" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Return of the &#8216;King of Cable&#8217;' href='//news.blogs.nytimes.com/2015/05/27/morning-agenda-return-of-the-king-of-cable/' />
+<link rel='next' title='Morning Agenda: Fuld Breaks His Silence' href='//news.blogs.nytimes.com/2015/05/29/morning-agenda-fuld-breaks-his-silence/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/05/28/morning-agenda-avago-in-talks-to-buy-broadcom/' />
+<link rel='shortlink' href='//nyti.ms/1ckPygv' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/05/28/morning-agenda-avago-in-talks-to-buy-broadcom/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Avago in Talks to Buy Broadcom - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2468 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Avago in Talks to Buy Broadcom        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/05/28/morning-agenda-avago-in-talks-to-buy-broadcom/"
+	 data-title="Morning Agenda: Avago in Talks to Buy Broadcom"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Avago in Talks to Buy Broadcom | Growing Appeal of Pension Obligation Bonds | Sunac Cancels Takeover of Kaisa | Parallels to Yahoo Spinoff Plan in 1934 Tax Case&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/05/28/morning-agenda-avago-in-talks-to-buy-broadcom/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 28, 2015 7:26 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Avago in Talks to Buy Broadcom</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-05-28T11:26:58+00:00" itemprop="datePublished">May 28, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">May 28, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2468 post type-post status-publish hentry category-dealbook tag-alibaba-group-holding-ltd tag-avago-technologies-ltd tag-banking-and-financial-institutions tag-broadcom-corporation tag-computer-chips tag-federal-taxes-us tag-hedge-funds tag-initial-public-offerings tag-internal-revenue-service tag-kaisa-group-holdings-ltd tag-mergers-acquisitions-and-divestitures tag-pensions-and-retirement-plans tag-private-equity tag-regulation-and-deregulation-of-industry tag-stocks-and-bonds tag-taxation tag-venture-capital tag-yahoo-inc des-banking-and-financial-institutions des-computer-chips des-federal-taxes-us des-hedge-funds des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-pensions-and-retirement-plans des-private-equity des-regulation-and-deregulation-of-industry des-stocks-and-bonds des-venture-capital org-alibaba-group-holding-ltd org-avago-technologies-ltd org-broadcom-corporation org-internal-revenue-service org-kaisa-group-holdings-ltd org-taxation org-yahoo-inc news_keywords-alibaba news_keywords-banking-and-finance news_keywords-computer-chip news_keywords-federal-taxes news_keywords-hedge-fund news_keywords-ipo news_keywords-irs news_keywords-kaisa-group news_keywords-mergers-and-acquistions news_keywords-pensions-and-retirement-plans news_keywords-private-equity-2 news_keywords-regulation-and-deregulation news_keywords-stocks-and-bonds news_keywords-venture-capital-2" id="post-2468">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Avago in Talks to Buy Broadcom</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-05-28T11:26:58+00:00" itemprop="datePublished">May 28, 2015 7:26 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 28, 2015 7:26 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/05/28/morning-agenda-avago-in-talks-to-buy-broadcom/" data-title="Morning Agenda: Avago in Talks to Buy Broadcom" data-description="Avago in Talks to Buy Broadcom | Growing Appeal of Pension Obligation Bonds | Sunac Cancels Takeover of Kaisa | Parallels to Yahoo Spinoff Plan in 1934 Tax Case">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AVAGO IN TALKS TO BUY BROADCOM</strong> <span class="divider"> | </span></span> Avago Technologies, a chip maker based in Singapore, is in advanced talks to buy Broadcom, a rival semiconductor maker based in the United States, <a href="//www.nytimes.com/2015/05/28/business/dealbook/avago-in-talks-to-acquire-broadcom.htm"> Michael J. de la Merced and Quentin Hardy report in DealBook</a>, citing people briefed on the matter. A deal could be announced as soon as Thursday, one of the people said, but cautioned that talks could collapse. Avago, which specializes in chips for things like fiber-optic lines and lighting, has relatively little overlap with Broadcomâs products, which are used in iPhones and other popular devices. A merger could combine the two companiesâ wares to offer <b>comprehensive products to big communications companies</b>, while negotiating cheaper manufacturing costs from the third-party factories where both companiesâ chips are made.</p>
+<p class="story-body-text" itemprop="articleBody">As of Tuesdayâs market close, before the rumors of a deal publicly surfaced, <b>Broadcomâs market value was about $28.1 billion</b>. âIf completed, the deal would be the latest in the chip-making industry, which has been swept by a wave of consolidation as companies look to gain scale and negotiating leverage with customers,â Mr. de la Merced and Mr. Hardy write. <b>Broadcom shares closed 21.5 percent higher</b> on Wednesday, while those in Avago were up 7.7 percent, after <a href="//www.wsj.com/articles/broadcom-is-in-advanced-talks-to-be-bought-by-avago-technologies-1432749850"> The Wall Street Journal reported news of the talks</a>.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>GROWING APPEAL OF PENSION OBLIGATION BONDS</strong> <span class="divider"> | </span></span> As more local governments scramble to plug shortfalls in public workersâ pensions, several states and municipalities are considering the use of so-called pension obligation bonds, even though these bonds have contributed to financial crises in Detroit, Puerto Rico, Illinois and other places, <a href="//www.nytimes.com/2015/05/28/business/dealbook/borrowing-to-replenish-depleted-pensions.html"> Mary Williams Walsh writes in DealBook</a>. The deals are generally pitched to state and local officials as <b>an arbitrage play</b>, she explains: âThe government will issue the bonds; the pension system will invest the proceeds; and the investments will earn more, on average, than the interest rate on the bonds. The projected spread between the two rates makes it look as if the government has refinanced its pension shortfall at a lower interest rate, saving vast sums of money.â</p>
+<p class="story-body-text" itemprop="articleBody">However, in reality, the <b>higher returns are merely assumptions</b>, and the deals are often used to make struggling pension systems appear healthier for a few years, allowing lawmakers to postpone the changes needed to make the system sustainable in the long run. To make matters worse, the influx of cash from the bonds may also <b>tempt officials to suspend contributions to the pension fund</b> â âthe very action that has caused so much pension distress to begin with,â Ms. Walsh writes.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SUNAC CANCELS TAKEOVER OF KAISA</strong> <span class="divider"> | </span></span> Sunac China Holdings said on Thursday that it had abandoned its proposed takeover of the Kaisa Group, the Chinese property developer that had recently defaulted on some of its offshore bonds, <a href="//www.nytimes.com/2015/05/29/business/international/kaisa-takeover-bid-by-sunac-is-dropped.html"> David Barboza reports in The New York Times</a>. Sunac said in a filing with the Hong Kong Stock Exchange that it decided to terminate an agreement to acquire the company because <b>âcertain conditionsâ it had set for the deal were unlikely to be met</b> before the deadline it set earlier this year. Morgan Stanley has also resigned as financial adviser to Sunac in the terminated deal, <a href="//www.ft.com/intl/cms/s/0/1eb4dfcc-04d1-11e5-adaf-00144feabdc0.html#axzz3bQGWDvKk"> The Financial Times reports</a>. </p>
+<p class="story-body-text" itemprop="articleBody">Doubts about Sunacâs willingness to continue with the acquisition began to emerge, analysts say, after the surprise return last month of Kaisaâs chairman and co-founder, Guo Yingcheng, who had resigned late last year. Since his return, Mr. Guo had dismissed some Sunac employees who had been working at Kaisaâs offices, <b>in a sign that he was reasserting his control over the company</b>. âSunacâs decision to call off the planned deal to acquire 49.3 percent of Kaisa for about $580 million is the latest twist in the dramatic downfall early this year of one of Chinaâs most successful mid-sized property developers, one that had been heavily backed by global investors, many of whom had purchased the companyâs offshore bonds in Hong Kong,â Mr. Barboza writes.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>Narayana Kocherlakota</b>, president of the Federal Reserve Bank of Minneapolis, speaks about monetary policy at the Helena, Mont., branch of the Minneapolis Fed at 12:45 p.m. (2:45 E.D.T.). Companies reporting earnings today include <b> Avago Technologies and Abercrombie &#038; Fitch</b>. <b>Weekly jobless claims data</b> is out at 8:30 a.m. and the National Association of Realtorsâ <b>pending home sales index for April</b> is out at 10 a.m. <b> Michael L. Corbat</b>, Citigroupâs chief executive, speaks at the Sanford C. Bernsteinâs Strategic Decisions Conference in New York at 10 a.m. <b>Richard S. Fuld Jr.</b>, the former chief executive of Lehman Brothers, will speak at the Marcum MicroCap Conference in New York at 12:30 p.m. <b>John Stumpf</b>, Wells Fargoâs chief executive, is on CNBC at 4:10 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PARALLELS TO YAHOO SPINOFF PLAN IN 1934 TAX CASE</strong> <span class="divider"> | </span></span> If history is any guide, Yahooâs shareholders may have good reason to be nervous about the companyâs plan to spin off its stake in Alibaba, <a href="//www.nytimes.com/2015/05/28/business/dealbook/yahoos-tax-free-spinoff-plan-parallels-a-historic-case.html"> Victor Fleischer writes in the Standard Deduction column</a>. Professor Fleischer finds that Yahooâs plan, which is structured to avoid taxes by bundling Yahooâs small-business services division with its 384 million shares of Alibaba, has some similarities to the landmark case of Evelyn Gregory against Guy T. Helvering, then the commissioner of the Internal Revenue Service, in 1934. âYahooâs plan to spin off Alibaba stock to its shareholders follows the same basic playbook as Mrs. Gregoryâs old plan, <b>making it vulnerable to the same kind of judicial attack</b>,â he writes. </p>
+<p class="story-body-text" itemprop="articleBody">In the 1934 case, Mrs. Gregory was the sole shareholder of United Mortgage Corporation, which owned shares of Monitor Securities Corporation. When she wanted to sell the Monitor stock, to avoid paying ordinary income taxes, she created a new company so that United could transfer Monitor shares there. United Mortgage then <b>distributed the new companyâs stock to Mrs. Gregory in what purported to be a tax-free reorganization</b>. After three days, she liquidated the new company and sold the Monitor stock, reporting her profits as a capital gain, which had a lower marginal tax rate than ordinary income. </p>
+<p class="story-body-text" itemprop="articleBody">All the transactions met the literal requirements of the statutes, but Judge Learned Hand of the United States Court of Appeals for the Second Circuit ruled that it was <b>not enough for Mrs. Gregory to comply with the literal words of the tax code</b>. When lawmakers wrote the tax code, he explained, they <b>did not intend to allow reorganizations for the purpose of tax avoidance</b>. Just as Judge Hand found the three-day life span of Mrs. Gregoryâs new company too ephemeral, âa judge might find Yahoo Small Business too flimsy to carry the weight of the Alibaba shares,â Professor Fleischer writes.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Charter Customers Say Bigger Isnât Likely to Mean Better" src="https://static01.nyt.com/images/2015/05/28/business/28consumer-web/28consumer-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Charter Customers Say Bigger Isnât Likely to Mean Better</strong> <span class="divider"> | </span></span> Despite recent improvements in consumer satisfaction ratings, many of the cable companyâs subscribers believe a merger wonât improve service.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/28/business/charter-customers-say-bigger-isnt-likely-to-mean-better.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/05/27/business/dealbook/charters-guarded-optimism-that-this-time-a-merger-will-clear.html">News Analysis: Charterâs Guarded Optimism That This Time a Merger Will Clear</a> <time class="timestamp" data-eastern-timestamp="9:40 PM" datetime="2015-05-26" data-utc-timestamp="1432690821000">9:40 PM</time><span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/05/27/business/dealbook/john-malone-charter-cable.html">The âKing of Cableâ Behind a Charter-Time Warner Cable Deal</a> <span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Fiat Boss Too Cautious on Case for Industry Consolidation</strong> <span class="divider"> | </span></span> Sergio Marchionne argues that mergers would increase shareholder returns. But he hurts his case by playing down the scale of potential cost cuts.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/28/business/dealbook/fiat-boss-too-cautious-on-case-for-industry-consolidation.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JPMorgan Chase Said to Receive Inquiry Over Chinese Official</strong> <span class="divider"> | </span></span> American authorities have asked JPMorgan Chase to provide information about Wang Qishan, a powerful Chinese government official, as part of an investigation of the bankâs hiring of people linked to Chinese government officials, The Wall Street Journal reports.<br /><span class="kicker"><a href="//www.wsj.com/articles/top-china-official-subject-of-u-s-bank-hiring-subpoena-1432743394"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Why Lehman Brothers Lives On</strong> <span class="divider"> | </span></span> Almost seven years after the Wall Street bankâs collapse, the reputations of financial markets, central banks and economic theorists remain tarnished.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/28/business/dealbook/why-lehman-brothers-lives-on.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>G.E. Leveraged Buyout Finance Unit Said to Draw Big Bids</strong> <span class="divider"> | </span></span> General Electricâs unit that finances leveraged buyouts has drawn several private equity bidders in a sale that could fetch more than $17 billion, The Wall Street Journal reports, citing people familiar with the sale process. <br /><span class="kicker"><a href="//www.wsj.com/articles/auction-of-ges-private-equity-loan-business-nears-conclusion-1432744733"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New Jersey Pension Fund Withdraws From BlueCrest</strong> <span class="divider"> | </span></span> New Jerseyâs public pension plan said it is pulling about $284 million from BlueCrest Capital Management because of disappointing returns, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-05-27/new-jersey-pulls-bluecrest-money-after-disappointing-returns"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Buzzfeed C.E.O. Says I.P.O. Planned</strong> <span class="divider"> | </span></span> BuzzFeed is planning to go public, Jonah Peretti, the websiteâs chief executive, said at ReCodeâs conference on Wednesday, but he declined to provide a timeline. <br /><span class="kicker"><a href="//recode.net/2015/05/27/buzzfeed-plans-to-go-public-someday/"> RECODE </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="DJI and Accel Partners Form Drone Investment Fund" src="https://static01.nyt.com/images/2015/05/27/technology/27bits-drone/27bits-drone-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DJI and Accel Partners Form Drone Investment Fund</strong> <span class="divider"> | </span></span> The Chinese drone maker and the venture capital firm have formed an investment fund to support more drone and advanced robotics start-ups.<br /><span class="kicker"><a href="//bits.blogs.nytimes.com/2015/05/27/dji-and-accel-form-drone-investment-fund/">Bits Blog &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>San Francisco Fed President Says Rate Rise Likely This Year</strong> <span class="divider"> | </span></span> John Williams, president of the Federal Reserve Bank of San Francisco, said at a regulatory symposium in Singapore that the United States is likely to raise interest rates later this year, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-05-28/fed-s-williams-sees-rate-increase-this-year-as-growth-to-recover"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FIFA Investigation to Include Examination of Banksâ Conduct</strong> <span class="divider"> | </span></span> The Justice Departmentâs indictment of FIFA officials said money involved in bribing international soccer officials passed through American banks including Citigroup and JPMorgan Chase, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-05-27/lynch-says-fifa-probe-continues-as-u-s-seeks-more-arrests"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hong Kong Regulator Confirms Hanergy Investigation</strong> <span class="divider"> | </span></span> Hong Kongâs securities watchdog has for the first time confirmed that it is investigating Hanergy Thin Film Power Group, a solar equipment manufacturer, after the companyâs shares plunged and trading in the stock was suspended, The Financial Times reports.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/576f5f1c-0509-11e5-9627-00144feabdc0.html#axzz3bQGWDvKk"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Jawbone Accuses Fitbit of StealingÂ Information by Hiring Workers Away" src="https://static01.nyt.com/images/2015/05/28/business/28fitbit-web/28fitbit-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Jawbone Accuses Fitbit of StealingÂ Information by Hiring Workers Away</strong> <span class="divider"> | </span></span> The legal action is an unusual twist as Fitbit prepares to make its stock market debut to take advantage of huge demand for wearable devices.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/28/business/dealbook/jawbone-sues-fitbit-over-data-plundering-by-ex-employees.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/05/28/morning-agenda-avago-in-talks-to-buy-broadcom/"
+					data-title="Morning Agenda: Avago in Talks to Buy Broadcom"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Avago in Talks to Buy Broadcom | Growing Appeal of Pension Obligation Bonds | Sunac Cancels Takeover of Kaisa | Parallels to Yahoo Spinoff Plan in 1934 Tax Case&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/05/28/morning-agenda-avago-in-talks-to-buy-broadcom/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":79,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

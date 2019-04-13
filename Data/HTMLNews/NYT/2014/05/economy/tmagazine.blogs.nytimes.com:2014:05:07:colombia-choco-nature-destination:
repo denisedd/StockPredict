@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" lang="en-US" itemscope xmlns:og="//opengraphprotocol.org/schema/">
+<head profile="//gmpg.org/xfn/11"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>On the Verge &#124; The Razor&#8217;s Edge</title>
+<link rel="shortcut icon" href="https://static01.nyt.com/packages/images/blogs/tmagazine/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="https://static01.nyt.com/js/common.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/app/lib/NYTD/0.0.1/tabset.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/common.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/memberTools.js"></script>
+<!--[if lt IE 9]>
+<script src="https://static01.nyt.com/js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="https://static01.nyt.com/js/common/screen/modifyNavigationDisplay.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/tabsetoverlayrevealer.js"></script>
+<!--[if lt IE 7]><script defer type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/pngfix.js"></script><![endif]-->
+<script type="text/JavaScript">
+// <![CDATA[
+var nyt_google_hints = "";
+var nyt_google_ad_channel = "bl_t-magazine";
+// ]]>
+</script>
+<script type="text/JavaScript">
+NYTD.Blogs.Ads = {};function processBlogsAds(data) { NYTD.Blogs.Ads = data.ads; }
+</script>
+<script type="text/javascript">
+if ((document.referrer).indexOf("nytimes.com") !== -1) {var nyt_doc_referrer = 'nytimes.com;';}else {var nyt_doc_referrer = '';}
+document.write( '<script id="adxScript" src="'+ '//www.nytimes.com' +'/adx/bin/adxrun.html?v=3&jsonp=processBlogsAds&page=' + 'blog.nytimes.com/tmagazine/post&positions=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&query=qstring&keywords='+ encodeURIComponent(nyt_doc_referrer) +';A-list;celebrity;chic;collections;concierge;design;designers;fashion;first+class;gossip;hotel;jet+set;luxury;models;New+York+Times;restaurant;runway;shopping;style;T+Magazine;travel;Men&#039;s+wear;Women&#039;s+wear;t-summer-travel-2014;Eco-Tourism;Travel+and+Vacations;Mexico;T+Summer+Travel+2014;Travel;_featured;' + '"' + '>' + '</' + 'script>');
+</script>
+<script type="text/javascript" src="https://static01.nyt.com/js/common/sharetools/2.0/shareTools.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/app/save/crossPlatformSave.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/blogscrnr.js"></script>
+<link rel="stylesheet" type="text/css" href="https://static01.nyt.com/css/blogs/3.1/screen/themes/tmagazine/style.css" media="screen" />
+<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/tmagazine/On the Verge | The Razor&rsquo;s Edge ( 20140507 )" />
+<meta name="communityAssetURL" content="//tmagazine.blogs.nytimes.com/2014/05/07/colombia-choco-nature-destination/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta name="author" content="Maureen Orth" />
+<meta name="CLMST" content="Maureen Orth" />
+<meta name="byl" content="Maureen Orth" />
+<meta name="GBLC" content="T Summer Travel 2014;Travel">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1399479352" />
+<meta name="PUD" content="20140507" />
+<meta name="pdate" content="20140507" />
+<meta name="ptime" content="20140507121552" />
+<meta name="utime" content="20140518005838" />
+<meta property="article:modified_time" itemprop="dateModified" content="2014-05-18T00:58:38-04:00" />
+<meta name="DISPLAYDATE" content="May 7, 2014" />
+<meta name="dat" content="May 7, 2014" />
+<meta itemprop="articleSection" property="article:section" content="T:Style" />
+<meta name="CG" content="T:Style" />
+<meta name="SCG" content="tmagazine" />
+<meta name="BN" content="tmagazine" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Eco-Tourism;Travel and Vacations">
+<meta name="geo" content="Mexico">
+<meta property="article:tag" content="Eco-Tourism" />
+<meta property="article:tag" content="Travel and Vacations" />
+<meta property="article:tag" content="Mexico" />
+<meta property="article:tag" content="T Summer Travel 2014" />
+<meta property="article:tag" content="Travel" />
+<meta property="article:tag" content="_featured" />
+<meta name="keywords" content="Eco-Tourism,Travel and Vacations,Mexico,T Summer Travel 2014,Travel,_featured" />
+<meta name="description" content="After years of civil war and conflict, a writer returns to the Colombia of her youth and uncovers a region at a crossroads, ripe for rediscovery." />
+<meta name="hdl" content="On the Verge &#124; The Razor&#8217;s Edge" />
+<meta property="og:title" content="On the Verge &#124; The Razor&#8217;s Edge" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//tmagazine.blogs.nytimes.com/2014/05/07/colombia-choco-nature-destination/" />
+<meta property="og:site_name" content="T Magazine" />
+<meta property="og:description" content="After years of civil war and conflict, a writer returns to the Colombia of her youth and uncovers a region at a crossroads, ripe for rediscovery." />
+<meta property="og:image" content="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia1/11travel-arena-colombia1-videoSixteenByNine600.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia1/11travel-arena-colombia1-thumbLarge.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="On the Verge &#124; The Razor&#8217;s Edge" />
+<meta name="twitter:url" content="//tmagazine.blogs.nytimes.com/2014/05/07/colombia-choco-nature-destination/" />
+<meta name="twitter:description" content="After years of civil war and conflict, a writer returns to the Colombia of her youth and uncovers a region at a crossroads, ripe for rediscovery." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia1/11travel-arena-colombia1-thumbLarge.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia1/11travel-arena-colombia1-thumbLarge.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@https://twitter.com/tmagazine">
+<script src="https://static01.nyt.com/js/app/lib/jquery/jquery-1.6.2.min.js" type="text/javascript"></script><script src="https://static01.nyt.com/js/EmbeddedComments/embeddedComments.js" type="text/javascript"></script>
+<link rel='prev' title='Feeling For | Decadent Cashmere Blankets With a Planet-Friendly Pedigree' href='//tmagazine.blogs.nytimes.com/2014/05/07/feeling-for-decadent-cashmere-blankets-with-a-planet-friendly-pedigree/' />
+<link rel='next' title='The Collective 2 Fair Kicks Off a Month of New York Design Happenings' href='//tmagazine.blogs.nytimes.com/2014/05/07/collective-2-fair-frieze-new-york-nada-hella-jongerius/' />
+<link rel='canonical' href='//tmagazine.blogs.nytimes.com/2014/05/07/colombia-choco-nature-destination/' />
+<link rel='shortlink' href='//tmagazine.blogs.nytimes.com/?p=267595' />
+<link rel='https://github.com/WP-API/WP-API' href='//tmagazine.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/tmagazine/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//tmagazine.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/t-magazine/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/tmagazine/2014/05/07/colombia-choco-nature-destination/" />
+<style type="text/css">
+address {font-style: normal;display: inline;}.story-meta-footer span + time {border: 0;}.story-meta-footer .kicker + time, .story-meta-footer .kicker + span {border-left: 1px solid #ccc;}.has-kicker .byline {border-left: 1px solid #ccc;padding: 0 5px 0 8px;}figure {    margin: 0px;}.credit {    display: inline;}.visually-hidden {    border: 0;    clip: rect(0 0 0 0);    height: 1px;    margin: -1px;    overflow: hidden;    padding: 0;    position: absolute;    width: 1px;}.entry-content .story-addendum {    color: #333;    font-style: italic;    font-size: 1rem;    line-height: 1.4375rem;    font-weight: 400;    font-family: georgia,"times new roman",times,serif;    margin-bottom: 1em;    max-width: 540px;}.entry-content .story-footer {    margin-top: 24px;    margin-bottom: 45px;}.entry-content .story-footer .story-notes p {    font-size: .875rem;    line-height: 1.125rem;    font-weight: 500;    font-family: "nyt-franklin", arial, helvetica, sans-serif;    margin-bottom: 14px;}.entry-content .story-footer:before {    content: "";    width: 60px;    height: 1px;    display: inline-block;    background-color: #000;    margin: 0 0 13px;}.entry-content .story-print-citation {    font-size: .6875rem;    line-height: .9375rem;    font-weight: 300;    font-family: "nyt-franklin", arial, helvetica, sans-serif;    color: #999;}body.single article.hentry {    padding: 15px 10px 0;}.fullScreenSlideShow #fullScreenWrapper {    z-index: 10000000;}figure .image {    margin-bottom: 7px;}figure .credit {    font-size: 1em;line-height: 1.2em;}.caption {    font-size: 1.2em;}body.blogHome.nyt-blog-tmagazine .hfeed .hentry:first-child,body.blogAuthor.nyt-blog-tmagazine .hfeed div:first-child+ .hentry {    margin-top: 0px!important;    padding-top: 0px!important;    background:none;}body.blogAuthor.nyt-blog-tmagazine .hfeed div:first-child+ .hentry,body.blogCategories.nyt-blog-tmagazine .hfeed div:first-child+ .hentry {    background:none;}body.blogHome.nyt-blog-tmagazine .hfeed .hentry,body.blogAuthor.nyt-blog-tmagazine .hfeed .hentry {    margin-top: 40px;    padding-top: 40px;}body.blogCategories.nyt-blog-tmagazine .resultsLabel,body.blogAuthor.nyt-blog-tmagazine .resultsLabel,body.blogTags.nyt-blog-tmagazine .resultsLabel {    margin-left: 15px;    margin-top: 15px;    border-bottom: 1px solid #e2e2e2;    padding-bottom: 15px;}body.nyt-blog-tmagazine #aCol .nav .next {    margin-left: 135px;}body.nyt-blog-tmagazine .entry-content .related-coverage {    margin-bottom: 1em;}body.nyt-blog-tmagazine .entry-content .related-coverage h6.kicker {    margin-bottom:5px;}body.nyt-blog-tmagazine .entry-content .related-coverage li {    margin-bottom: 0;}body.nyt-blog-tmagazine #cCol .nav .next {    margin-left: 45px;}body.nyt-blog-tmagazine #cCol .nav li {    max-width: 110px;}body.nyt-blog-tmagazine #aCol .nav li {    max-width: 190px;}body.nyt-blog-tmagazine .nav li a {    overflow: hidden;}body.nyt-blog-tmagazine.wideAd #aCol .nav .element1, body.nyt-blog-tmagazine.wideAd #aCol .nav .element2 {    width: 50%;}body.nyt-blog-tmagazine.wideAd #aCol .nav ul {    background: url("https://static01.nyt.com/images/layout/vertical_rule.gif") repeat-y center;}body.nyt-blog-tmagazine.wideAd #aCol .nav .next {    margin-left: 182px;}body.nyt-blog-tmagazine.wideAd #aCol .nav .w75 {    display: none;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo {    margin: 0 0 20px;    padding: 22px 22px 10px;    background: #f9f9f9;    overflow: hidden;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo .w190 {    float: right;    margin: 0 0 10px;    padding: 0;    width: auto;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo img {    width: 155px;    height: 103px;    margin: 0 0 0 10px;    padding: 0;    display: block !important;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo .nyt-article-byline {    margin-bottom: 4px;    font-size: 10px;    line-height: 13px;    font-weight: 500;    color: #808080;    font-family: arial;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo h4 {    font-size: 17px;    line-height: 21px;    font-weight: 500;    margin-bottom: 5px;    font-family: georgia;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo h4 a {    color: #000;    text-decoration: none;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo h4 a:hover {    color: #f00;    text-decoration: underline;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo .nyt-article-summary {    font-size: 13px;    line-height: 18px;    margin-bottom: 0;    font-family: georgia;    font-style: italic;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module {    border-bottom: 1px solid #000;    border-top: 1px solid #000;    padding: 10px 0 10px 0;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module .entry {    padding: 10px 0 0 0;    text-align: left;    border: none;}body.nyt-blog-tmagazine #aCol .postHeader .postSubHeader {    text-align: center;    margin-bottom: 5px;}body.nyt-blog-tmagazine #aCol .postHeader .postSubHeader .post-kicker {    text-transform: uppercase;    font-weight: bold;    font-size: 11px;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module {    border-bottom: 1px solid #000;    border-top: 1px solid #000;    padding: 10px 0 10px 0;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module .entry {    padding: 10px 0 0 0;    text-align: left;    border: none;}body.nyt-blog-tmagazine .entry-content .w190 .entry h6.kicker {    font-weight: 700;    margin-bottom: 5px;}body.nyt-blog-tmagazine .entry-content .w190 .entry h5 {    margin-bottom: 3px;}body.nyt-blog-tmagazine .entry-content .w190 .entry p.summary,body.nyt-blog-tmagazine .entry-content .w190 ul li {    font-family: arial;    font-size: 1.2em;    line-height: 1.5em;}body.nyt-blog-tmagazine .entry-content .w190 ul li a {    font-size: 0.9em;}body.nyt-blog-tmagazine .postMetaHeader .byline {    text-transform: uppercase;}body.nyt-blog-tmagazine.wideAd .w480,body.nyt-blog-tmagazine.wideAd .w592,body.nyt-blog-tmagazine.wideAd .w480 img,body.nyt-blog-tmagazine.wideAd .w592 img,body.nyt-blog-tmagazine.wideAd .videoplayerContainer,body.nyt-blog-tmagazine.wideAd .videoplayerContainer object,body.nyt-blog-tmagazine.wideAd .nytd-player-poster {height: 266px !important;}</style>
+</head>
+<body id=travel class="single postid-267595 blogPost  blog-universal nyt-blog-tmagazine" data-env="production" data-region="ewr1">
+<!-- Header1 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header1 != "undefined" ){document.write(NYTD.Blogs.Ads.Header1.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header1 != "undefined" ) { NYTD.jQuery("#Header1").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Header1"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Header1&query=qstring&keywords=?"></a></noscript>
+<!-- Header2 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header2 != "undefined" ){document.write(NYTD.Blogs.Ads.Header2.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header2 != "undefined" ) { NYTD.jQuery("#Header2").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Header2"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Header2&query=qstring&keywords=?"></a></noscript>
+<!-- Header3 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header3 != "undefined" ){document.write(NYTD.Blogs.Ads.Header3.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header3 != "undefined" ) { NYTD.jQuery("#Header3").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Header3"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Header3&query=qstring&keywords=?"></a></noscript>
+<a name="top"></a>
+<div id="shell" class="wrap">
+  <div id="PushDown" class="leaderboard ad clearfix">
+    <script type="text/javascript">
+      if ((typeof adxpos_PushDown == "undefined") || (typeof adxads[adxpos_PushDown] == "undefined") ) {
+        if ( $( "PushDown") ) {
+          $( "PushDown").hide();
+        }
+      }
+      if ((typeof adxpos_PushDown != "undefined") && (typeof adxads[adxpos_PushDown] != "undefined") ){
+        document.write(adxads[adxpos_PushDown]);
+      }
+    </script>
+  </div>
+  <div id="masthead-nav" class="wrap">
+    <div id="masthead">
+      <h2>
+        <a href="//www.nytimes.com/pages/t-magazine/index.html">
+          Go Back To Home
+        </a>
+      </h2>
+    </div>
+    <div class="navigation" id="topNav">
+      <ul id="mainNavigation" class="flush">
+        <li class="firstItem">
+          <a href="//www.nytimes.com/pages/t-magazine/womens-fashion/index.html">
+            Women's Fashion
+          </a>
+        </li>
+        <li class="secondItem">
+          <a href="//www.nytimes.com/pages/t-magazine/mens-fashion/index.html">
+            Men's Fashion
+          </a>
+        </li>
+        <li class="thirdItem">
+          <a href="//www.nytimes.com/pages/t-magazine/design/index.html">
+            Design
+          </a>
+        </li>
+        <li class="fourthItem">
+          <a href="//www.nytimes.com/pages/t-magazine/travel/index.html">
+            Travel
+          </a>
+        </li>
+        <li class="fifthItem">
+          <a href="//www.nytimes.com/pages/t-magazine/food/index.html">
+            Food
+          </a>
+        </li>
+        <li class="sixthItem">
+          <a href="//www.nytimes.com/pages/t-magazine/culture/index.html">
+            Culture
+          </a>
+        </li>
+        <li class="lastItem">
+          <a href="//www.nytimes.com/gst/tmagazine/video/index.html">
+            Video
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="masthead-nav-divider" class="singleRuleDivider">
+  </div>
+  <div class="searchModule">
+    <div class="insetV">
+      <div class="inlineSearchControl">
+        <form method="get" action="https://query.nytimes.com/search/tmagazine" enctype="application/x-www-form-urlencoded">
+          <input type="text" id="searchQuery" name="query" size="" value="SEARCH" class="text" onblur="if (this.value=='')this.value='SEARCH';" onfocus="if (this.value=='SEARCH')this.value='';">
+          <input type="image" src="//static01.nyt.com/images/tmagazine/buttons/search-button.gif" alt="Search" title="Search" id="searchSubmit">
+        </form>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+// <![CDATA[
+if ((typeof NYTD.Blogs.Ads != "undefined") && (typeof NYTD.Blogs.Ads.XXL != "undefined") ) {$(document.body).addClassName( "wideAd");}
+// ]]>
+</script><hr />
+<!-- Here is the start of everything good -->
+<div id="tmagazine" class="spanAC blog wrap">
+<div id="aCol">
+<hr />	<div id="content" class="hfeed">
+	<article class="post-267595 post type-post status-publish hentry category-t-summer-travel-2014 category-travel category-featured des-eco-tourism des-travel-and-vacations geo-mexico" id="post-267595">
+<header class="postHeader">
+    <div class="postSubHeader"><span class="post-kicker"><a href="//tmagazine.blogs.nytimes.com/category/on_the_verge/?module=BlogCategory&version=Blog Post&action=Click&contentCollection=T:Style&pgtype=Blogs&region=Header">On the Verge</a></span>
+</div>
+	<h1 itemprop="headline" class="entry-title">On the Verge | The Razor&rsquo;s Edge</h1>		<div class="postMetaHeader story-meta-footer centeredText has-kicker">
+		<span class="kicker"><a href="//tmagazine.blogs.nytimes.com/category/travel/">Travel</a></span>
+				<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+			By Maureen Orth		</address>
+		<!-- date published --><time class="dateline " datetime="2014-05-07T16:15:52-04:00" itemprop="datePublished">May 7, 2014 12:15 pm</time>
+			<!-- date updated --><span class="visually-hidden updated">May 7, 2014 12:15 pm</span><span class="postMetaHeaderCommentCount commentCount hidden">
+					<a class="commentCountLink icon commentIcon" href="//tmagazine.blogs.nytimes.com/2014/05/07/colombia-choco-nature-destination/"></a>
+				</span>	</div>
+</header>
+<div class="entry-content">
+    <p class="story-body-text" itemprop="articleBody"><em>The staggering beauty and abundant resources of Colombia&#8217;s ChocÃ³ region have been preserved through poverty and neglect. With its natural wonders now being discovered, it stands at a crossroads.</em><br />
+<div class="w592"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia1/11travel-arena-colombia1-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia1/11travel-arena-colombia1-tmagArticle.jpg" src="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia1/11travel-arena-colombia1-tmagArticle.jpg" id="100000002853068" width="592" height="395" alt="&lt;strong&gt;CURRENT AFFAIRS&lt;/strong&gt; Wooden motorboats are used for transport on the NuquÃ­ river in Colombia."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text"><strong>CURRENT AFFAIRS</strong> Wooden motorboats are used for transport on the NuquÃ­ river in Colombia.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Ben Hoffmann</span></figcaption></figure></div><br />
+Children who grow up along Colombia&#8217;s isolated and practically untouched ChocÃ³ region on the Pacific coast, where the jungle extends to the ocean, are used to glimpsing humpback whale mothers teach their babies to jump across the water. They routinely encounter hundreds of species of butterflies and birds; the region even boasts golden poison dart frogs with powerful venom that is being studied for potential medical use. The majority of those who live here, in one of the most biodiverse and sparsely populated zones on the planet, are either black Colombians, many of whom are the descendants of escaped slaves the Spanish originally brought to work the gold mines and sugar-cane plantations or members of formerly fierce indigenous tribes, both considered to be among the poorest, least educated people in Colombia.</p>
+<p class="story-body-text" itemprop="articleBody">The country&#8217;s coastline extends from the Panamanian border to Ecuador, over 800 miles of mostly tiny subsistence villages accessible only by air or by water, which evoke a &#8220;Dr. Livingstone, I presume,&#8221; Indiana Jones-style vibe that hypnotically pulls you out of your own reality. Television arrived about a decade ago, more or less at the same time the drug dealers who were losing too many planes did, offering those who had the know-how the chance to make an unheard-of 30 million pesos (about $15,000) by racing a 32-foot power boat north to Panama, hopefully undetected. Today the government has become much more vigilant in the territory and ChocÃ³, located in the north, is part of its strategy to make Colombia an important nature destination.<span id="more-267595"></span></p>
+<p class="story-body-text" itemprop="articleBody">The goal is ambitious. For years the rap on Colombia has been that it is not a safe place to travel. But the country has been breaking away from its violent past for some time now and currently boasts one of the most vibrant economies in Latin America. Ironically, Colombia&#8217;s long civil war, along with its drug war, has served to preserve vast swaths of the country from development or exploitation. Colombia, for example, has more bird species than any other country on earth. Fifty-three percent of the country â an area larger in size than California and Texas combined â is still natural forest. There are three mountain ranges, sophisticated cities and port access to both the Caribbean Sea and the Pacific Ocean. Colombia recently won an international poll for having the happiest people on the planet. With over 2.5 million foreign visitors annually, tourist earnings have become the country&#8217;s third largest source of foreign currency.</p>
+<p class="story-body-text" itemprop="articleBody">Colombia, however, faces a unique challenge before becoming global nature destination No. 1. It is part of the Pacific Alliance, the free-trade bloc with Mexico, Peru and Chile that increasingly looks to the Pacific Rim and to trade with Asia as a source of economic wealth. In these markets the demand for its myriad resources, as well as the needs of its own emerging middle class in a country where the median age is about 29, threatens the &#8220;magical realism&#8221; experience the government&#8217;s latest tourism campaign promises. Colombia is going to have to decide pretty quickly whether it wants to be Exxon or Conservation International.</p>
+<div class="w592"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia2/11travel-arena-colombia2-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia2/11travel-arena-colombia2-tmagArticle.jpg" src="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia2/11travel-arena-colombia2-tmagArticle.jpg" id="100000002853097" width="592" height="395" alt="&lt;strong&gt;WELCOME TO THE JUNGLE&lt;/strong&gt; Clockwise from bottom left: an Embera Indian family at home in the village of Jovi;Â lush volcanic rock formations fill Cabo Corrientes, a series of coves along the Pacific coast; sun-soaked palms, as seen from the El Cantil eco-lodge in NuquÃ­."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text"><strong>WELCOME TO THE JUNGLE</strong> Clockwise from bottom left: an Embera Indian family at home in the village of Jovi;Â lush volcanic rock formations fill Cabo Corrientes, a series of coves along the Pacific coast; sun-soaked palms, as seen from the El Cantil eco-lodge in NuquÃ­.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Ben Hoffmann</span></figcaption></figure></div><p class="story-body-text" itemprop="articleBody">
+The children who grow up strolling the untouched beaches of ChocÃ³&#8217;s impoverished villages have never really been taught that the astonishing natural beauty they wake up to every morning is beyond value because its sheer profusion is so rare. But maybe that privilege doesn&#8217;t mean as much when the only choice of going beyond the fifth grade is a six-hour walk along the beach to the town that has a bigger underserved school.</p>
+<p class="story-body-text" itemprop="articleBody">Certainly, the kids in the seaside village of Termales had never seen anyone surf or dreamed that they themselves might one day hang ten. Termales is somewhat south of the midpoint of the coast, a 40-minute boat ride from the town of NuquÃ­, where I flew in on a small prop plane from ChocÃ³&#8217;s provincial capital of QuibdÃ³. The NuquÃ­ airport features an abandoned drug-running plane rotting in the weeds. ChocÃ³ has never catered to mass tourism but its wonders are slowly being discovered by adventurers such as thrill-seeking surfers. Several years ago, the children noticed that the co-owner of a nearby eco-lodge, Guillermo &#8220;Memo&#8221; GÃ³mez, had taught himself to skim across the tips of seasonal, giant hollow-tube waves. GÃ³mez, a 46-year-old former businessman from MedellÃ­n, did not even know that the waves were suitable for surfing until a guest at his hotel, El Cantil, suggested they were. GÃ³mez taught a curious villager who then started giving lessons to the children with a board he donated; they eventually started to make their own boards from balsa wood. In February of last year, some Australians who had visited NuquÃ­ arranged for the American, Florida-based surfing foundation, Share the Stoke, to donate five real Firewire boards. The children of Termales were so excited they decided to form a club, which grew to 35 members, from ages 5 to 18. The ChocÃ³ Surf Club, with strict rules about behavior and discipline, was headed by Nestor Tello, a young leader of the village. Within eight months, they had participated in two national championships and earned medals in both.</p>
+<p class="story-body-text" itemprop="articleBody">After years spent watching N.G.O.s come into ChocÃ³ without making much of a change, GÃ³mez was elated to see the whole town get behind the club. &#8220;One of the biggest problems in Colombia and ChocÃ³ is that these groups just give things and money and when they leave it&#8217;s worse,&#8221; he said. &#8220;Yes, you have rights but you must also have goals and produce your own things.&#8221; He was mainly referring to human rights groups and others who seek to educate the ChocÃ³anos about their ability to stand up for themselves according to the law but do not offer or teach a way to earn a decent income.</p>
+<p class="story-body-text" itemprop="articleBody">In the past, the remoteness of ChocÃ³, its abundant rainfall and primitive amenities discouraged tourism. Although I had traveled extensively in Colombia in the last decade, I had not been to ChocÃ³ since I was a 21-year-old Peace Corps volunteer many moons ago. I found that not much had changed â the Pan-American Highway still stops near the Panamanian border. The difference today is that tourism presents a solution for those who no longer wish to live by catching fish or harvesting rice in the humid tropics. Still, friends in BogotÃ¡ and MedellÃ­n confessed they had never ventured to ChocÃ³ and, except for those who loved to fish like me, didn&#8217;t understand why I would want to go. The answer lies in the opportunity to feel overwhelmed by the scale and beauty of the land and water; ChocÃ³ is home to about 8,000 plant species, thousands of them endemic to the region. One also hears passing comments: &#8220;Oh, that&#8217;s the place where Captain Morgan was supposed to have buried all his treasure.&#8221; Here, it seems so normal to fantasize about pirates and parrots.</p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia3/11travel-arena-colombia3-articleInline.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia3/11travel-arena-colombia3-articleInline.jpg" src="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia3/11travel-arena-colombia3-articleInline.jpg" id="100000002853099" width="190" height="238" alt="&lt;strong&gt;HANG TEN&lt;/strong&gt; Young members of the ChocÃ³ Surf Club on the beach in the village of Termales."   /><meta itemprop="height" content="238"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text"><strong>HANG TEN</strong> Young members of the ChocÃ³ Surf Club on the beach in the village of Termales.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Ben Hoffmann</span></figcaption></figure></div><p class="story-body-text" itemprop="articleBody">
+Yet there is a constant tension between preserving and extracting ChocÃ³&#8217;s resources. I spoke to Juan Carlos GutiÃ©rrez of the EduardoÃ±o Foundation who helped lobby successfully on behalf of artisanal fishermen for a ban in northern ChocÃ³ against large industrial trawlers from Korea, Japan and Colombia, who threaten to take away not only the people&#8217;s protein but also their livelihoods. In the early &#8217;90s, laws were passed in the Colombian congress to recognize and guarantee the protection of ancestral lands for both blacks and the indigenous people, who suffered discrimination by those of African descent, forcing them back farther into the jungle. According to these laws, any development has to go through a long, slow bureaucratic process and be approved by local community councils, who may or may not be susceptible to outside pressures. So far they have checked any Club Meds from moving in, though the Gulf of TribugÃ¡ of which NuquÃ­ is the hub will see its first small cruise ship come in to port this year. &#8220;The contradiction is being backwards saves these places,&#8221; says MarÃ­a LaCouture, head of a government trade and tourism agency. Unlike parts of the triple-canopied ChocÃ³ interior that were torn apart by illegal gold mining, cocoa cultivation and deforestation from palm-oil production, for example, the coast around NuquÃ­, and farther north in UtrÃ­a National Natural Park, is still breathtakingly pristine.</p>
+<p class="story-body-text" itemprop="articleBody">Within a few minutes of my entering El Cantil&#8217;s 21-foot power boat to cruise past empty brown beaches dotted with palms, two mother whales and their young calves suddenly appeared and swam nearby. One of the boatmen said that he had gone out fishing the night before in a canoe and the whales were so close that the sound of the spume from their breathing frightened him into coming ashore. GÃ³mez&#8217;s wife, Adriana &#8220;Nana&#8221; Cardona, told me that if you dived down at least three feet and stayed underwater, you could sometimes actually hear the humpback whales sing.</p>
+<p class="story-body-text" itemprop="articleBody">The most striking feature of this landscape was the pocked volcanic rocks in the emerald water that looked like giant dried natural sponges and had large trees growing straight out of their tops. The rock formations were somewhat reminiscent of Big Sur&#8217;s landscape but far more alien. Sometimes I could make out thatched-roof vacation getaways built atop rocks or near the beach, but they were hardly ever visible because there was so much lush vegetation all around, literally falling into the sea.</p>
+<p class="story-body-text" itemprop="articleBody">In ChocÃ³, the people walk the beaches or jungle trails to go from village to village. The indigenous population still often uses handmade canoes. One sunny morning I took a power boat to another village, Jovi, where my guides were two local men who, with the help of a small grant from the United States Agency for International Development (U.S.A.I.D.), had opened their own business to take tourists up the Jovi river. Along the way we passed under a living arc of pichindÃ© trees growing on either bank and I kept involuntarily murmuring &#8220;oh my god&#8221; to myself at the total beauty while the guides announced the medicinal properties of all the trees and plants.</p>
+<p class="story-body-text" itemprop="articleBody">Many noteworthy characters make their homes along the beach, like the two artist-activists Fernando Arias, 50, and Jonathan Colin, 47, who run an arts organization called MÃ¡s Arte MÃ¡s AcciÃ³n. &#8220;The idea,&#8221; Colin explained, was to bring other artists out to ChocÃ³ to engage with the community and &#8220;to reconsider what it means to be on the periphery, the edge.&#8221; Sixty years ago someone who needed wood for a canoe felled a giant JenenÃ© tree on their land â the wood was so hard that termites could never digest it. In 2011, they decided to commission an artist who frequently works in fiberglass: the Dutch dystopian avant-gardist Joep van Lieshout, who came to the jungle and created an amazing treehouse from the wood. The only level surfaces are two tables and a bed; even the bathroom sink and toilet are made of carved wood. In the run-up to the 500th anniversary of Sir Thomas More&#8217;s &#8220;Utopia,&#8221; first published in 1516, the treehouse has served as an intellectual fort where for the last two years artists, writers and chefs have gathered to contemplate nuevotopias.</p>
+<p class="story-body-text" itemprop="articleBody">Other neighbors include a lesbian couple, a Colombian biologist and a Spanish writer, who paddle nude in their canoe. Although Colin has written of &#8220;humanity&#8217;s disconnect from the heart of nature&#8221; and &#8220;the national and international companies [that] circle like vultures over ChocÃ³&#8217;s gold, platinum, silver, its rare earth metals, minerals and trees,&#8221; he told me he goes for days without seeing anyone on the beach and he doesn&#8217;t expect &#8220;any Sheratons anytime soon. Luckily ChocÃ³ has a very bad image among upper-class Colombians who think it&#8217;s black and it rains a lot.&#8221;</p>
+<div class="w592"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia4/11travel-arena-colombia4-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia4/11travel-arena-colombia4-tmagArticle.jpg" src="https://static01.nyt.com/images/2014/05/11/t-magazine/11travel-arena-colombia4/11travel-arena-colombia4-tmagArticle.jpg" id="100000002853110" width="592" height="395" alt="&lt;strong&gt;BODIES IN MOTION&lt;/strong&gt; Clockwise from top left: NuquÃ­âs coastline and river, as seen from the air; the entrance to the artist-activists Fernando Arias and Jonathan Colinâs treehouse in ChocÃ³, crafted by the Dutch artist Joep van Lieshout for the arts organization MÃ¡s Arte MÃ¡s AcciÃ³n; ChocÃ³ana girls learn a traditional dance at the Mano Cambiada organization in NuquÃ­."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text"><strong>BODIES IN MOTION</strong> Clockwise from top left: NuquÃ­âs coastline and river, as seen from the air; the entrance to the artist-activists Fernando Arias and Jonathan Colinâs treehouse in ChocÃ³, crafted by the Dutch artist Joep van Lieshout for the arts organization MÃ¡s Arte MÃ¡s AcciÃ³n; ChocÃ³ana girls learn a traditional dance at the Mano Cambiada organization in NuquÃ­.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Ben Hoffmann</span></figcaption></figure></div><p class="story-body-text" itemprop="articleBody">
+Colombia has so far given over 12 percent of its territory to national parks, including the 140,000 acres of land and almost 18 square miles of the Pacific for its UtrÃ­a park in ChocÃ³. U.S.A.I.D. has put its confidence in the local community leader Josefina Klinger, a 50-year-old ChocÃ³ana mother of three, who operates the lodge of UtrÃ­a and is the founder of Mano Cambiada, an eco-tourism business in the area. Her son manages the visitor center at UtrÃ­a situated in a large mangrove forest, alongside a warm, sheltered bay that serves as a nursery for mother whales to bring their newborns. Klinger said that when she was growing up, ChocÃ³ had a barter economy where everyone exchanged and shared; money did not really intrude. Today, both in NuquÃ­ where she lives and runs an after-school center for music and dance, and at UtrÃ­a, she tries to change the prevailing ChocÃ³ mind-set: &#8220;When I don&#8217;t value the resources I feel poor. I am always sending the message I have nothing.&#8221; Like GÃ³mez, she decries the innate sense of victimization she sees after centuries of neglect. Her goal, she told me, is to change the paradigm that &#8220;success is a threat instead of an inspiration.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Klinger&#8217;s message has certainly been heard by Leonilde Caizamo Isarama, a sure-footed 21-year-old Embera Indian. A guide in training at UtrÃ­a, he led me up and over slopes of red clay mud contrasting with a riot of green â palms, vines, flowers and towering trees as well as down along creek banks to the ocean. Wordlessly he whipped out his machete, whacked off a nearby branch and handed me my walking staff. The day before, I had taken a canoe up the ChorÃ­ river to the village where he lives, where the older females are bare breasted and the tribe administers its own justice by putting offenders in wooden stocks. For years the Indians said they did not want outsiders coming in, but recently they have changed their minds.</p>
+<p class="story-body-text" itemprop="articleBody">If there are not more people visiting Colombia, the government is not entirely to blame. Things are not at all helped by an overly harsh travel warning issued by the U.S. State Department that includes kidnapping and narco-trafficking. But since 2003, kidnappings have declined over 85 percent. Colombian officials joke that the reason for the warning is that U.S. government personnel receive an extra 15 percent in &#8220;danger pay&#8221; while serving in Colombia, plus at least another 5 percent for being at a &#8220;hardship post.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">The travel warning was not on my mind at all as I set off to stroll the beaches under a full moon near midnight from El Cantil with Memo and Nana GÃ³mez and Sifredo Mendoza, known as the Turtle Man. We were looking for the eggs and nests of the rapidly disappearing giant leatherback tortoises along the coastline near Termales â about a 45-minute brisk walk from the hotel at low tide. My moon shadow was about 20 feet long. It all seemed unreal. When we came upon some fresh human tracks near a nest but found no eggs, Mendoza said he knew the culprit. I immediately wanted to go find him. Tracking turtle poachers was something I had never imagined doing. But I was in ChocÃ³.</p>
+<div id="addendums" class="addendums"><div class="story-addendum theme-correction"><strong>Correction: May 18, 2014</strong> <br>An article last Sunday about Colombiaâs uncertain prospects as a tourist attraction misstated the national affiliation of the nonprofit foundation Share the Stoke, which has contributed surfboards to some children in a village in the ChocÃ³ region as part of an effort to make it a surfing destination. It is American, not Australian.</div></div>    </div>
+</article>
+<div class="entry-meta">
+        <div class="shareTools shareToolsThemeClassic shareToolsThemeClassicHorizontal articleShareToolsBottom " data-shares="facebook|,twitter|,google|,save,email,showall|Share,print" data-url="//tmagazine.blogs.nytimes.com/2014/05/07/colombia-choco-nature-destination/" data-title="On the Verge | The Razor&rsquo;s Edge" data-description="After years of civil war and conflict, a writer returns to the Colombia of her youth and uncovers a region at a crossroads, ripe for rediscovery."></div>
+    </div><!-- end .entry-meta -->		<hr />
+		<div class="w75 left"><img src="https://static01.nyt.com/images/2014/05/08/t-magazine/08noon-hartman/08noon-hartman-thumbStandard.jpg" width="75" height="75"></div><div class="w75 right"><img src="https://static01.nyt.com/images/2014/05/07/t-magazine/07collective-rubinstein3/07collective-rubinstein3-thumbStandard-v3.jpg" width="75" height="75"></div>	<div class="module box nav">
+		<ul class="opposingFloatControl wrap">
+			<li class="element1">
+								<span class="previous">Previous Post</span>
+				<!-- date published --><time class="dateline " datetime="2014-05-07T14:44:52-04:00" itemprop="datePublished">May 7, 2014</time>
+			<!-- date updated --><span class="visually-hidden updated">May 7, 2014</span>				<a href="//tmagazine.blogs.nytimes.com/2014/05/07/feeling-for-decadent-cashmere-blankets-with-a-planet-friendly-pedigree/" title="Feeling For | Decadent Cashmere Blankets With a Planet-Friendly Pedigree">Feeling For | Decadent Cashmere Blankets With a Planet-Friendly Pedigree</a>
+							</li>
+			<li class="element2">
+								<span class="next">Next Post</span>
+				<!-- date published --><time class="dateline " datetime="2014-05-07T17:30:33-04:00" itemprop="datePublished">May 7, 2014</time>
+			<!-- date updated --><span class="visually-hidden updated">May 7, 2014</span>				<a href="//tmagazine.blogs.nytimes.com/2014/05/07/collective-2-fair-frieze-new-york-nada-hella-jongerius/" title="The Collective 2 Fair Kicks Off a Month of New York Design Happenings">The Collective 2 Fair Kicks Off a Month of New York Design Happenings</a>
+							</li>
+		</ul>
+	</div>
+<!-- community comments -->
+<a id="postComment"></a>
+<div id="commentsContainer" class="commentsContainer"></div>
+<script type="text/javascript">
+NYTD.jQuery(document).ready(function ($) {
+   NYTD.commentsInstance = new EmbeddedComments($, 'NYTD.commentsInstance' );
+   NYTD.commentsInstance.init({configName: 'default'});
+});
+</script>
+	</div> <!-- end content -->
+	<div id="google_ads_aCol">
+<!-- SponLink2 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink2 != "undefined" ){document.write(NYTD.Blogs.Ads.SponLink2.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink2 != "undefined" ) { NYTD.jQuery("#SponLink2").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=SponLink2"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=SponLink2&query=qstring&keywords=?"></a></noscript>
+</div>
+</div><!-- end aCol -->
+<div id="cCol">
+<div id="blog-index">
+	<a href="//www.nytimes.com/blogs/" title="Blogs - The New York Times">All NYTimes.com Blogs Â»</a>
+</div>
+<div class="w50 left"><img src="https://static01.nyt.com/images/2014/05/08/t-magazine/08noon-hartman/08noon-hartman-thumbStandard.jpg" width="50" height="50"></div><div class="w50 right"><img src="https://static01.nyt.com/images/2014/05/07/t-magazine/07collective-rubinstein3/07collective-rubinstein3-thumbStandard-v3.jpg" width="50" height="50"></div>	<div class="module box nav">
+		<ul class="opposingFloatControl wrap">
+			<li class="element1">
+								<span class="previous">Previous Post</span>
+								<a href="//tmagazine.blogs.nytimes.com/2014/05/07/feeling-for-decadent-cashmere-blankets-with-a-planet-friendly-pedigree/" title="Feeling For | Decadent Cashmere Blankets With a Planet-Friendly Pedigree">Feeling For | Decadent Cashmere Blankets With a Planet-Friendly Pedigree</a>
+							</li>
+			<li class="element2">
+								<span class="next">Next Post</span>
+								<a href="//tmagazine.blogs.nytimes.com/2014/05/07/collective-2-fair-frieze-new-york-nada-hella-jongerius/" title="The Collective 2 Fair Kicks Off a Month of New York Design Happenings">The Collective 2 Fair Kicks Off a Month of New York Design Happenings</a>
+							</li>
+		</ul>
+	</div>
+<div class=" module ad" id="XXL">
+	<!-- XXL position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.XXL != "undefined" ){document.write(NYTD.Blogs.Ads.XXL.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.XXL != "undefined" ) { NYTD.jQuery("#XXL").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=XXL"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=XXL&query=qstring&keywords=?"></a></noscript>
+</div>
+	    <div class='box module ad nocontent' id="MiddleRight">
+			<div class='bigAdContainer'>
+				<!-- MiddleRight position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.MiddleRight != "undefined" ){document.write(NYTD.Blogs.Ads.MiddleRight.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.MiddleRight != "undefined" ) { NYTD.jQuery("#MiddleRight").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=MiddleRight"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=MiddleRight&query=qstring&keywords=?"></a></noscript>
+			</div>
+	    </div>
+	    	<div class='box module ad nocontent' id="Box1">
+	<!-- Box1 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Box1 != "undefined" ){document.write(NYTD.Blogs.Ads.Box1.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Box1 != "undefined" ) { NYTD.jQuery("#Box1").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Box1"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Box1&query=qstring&keywords=?"></a></noscript>
+	</div>
+	<div id="google_ads" class="box module ad">
+<!-- SponLink position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink != "undefined" ){document.write(NYTD.Blogs.Ads.SponLink.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink != "undefined" ) { NYTD.jQuery("#SponLink").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=SponLink"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=SponLink&query=qstring&keywords=?"></a></noscript>
+</div>
+</div><!-- end cCol --></div><!-- end blog wrap --><div id="footer" class="singleRule">
+	<div class="opposingFloatControl wrap">
+		<div class="element1">
+			<ul id="footerNavigation" class="flush">
+				<li class="firstItem">
+					<a href="//www.nytimes.com">NYTIMES.COM</a></li>
+				<li class="secondItem">
+					<a href="//www.nytimes.com/ref/membercenter/help/infoservdirectory.html">CONTACT US</a>
+				</li>
+				<li class="thirdItem">
+					<a href="//nytmediakit.com/">MEDIA KIT</a>
+				</li>
+				<li class="fourthItem">
+					<a href="//www.nytimes.com/ref/membercenter/help/privacysummary.html">PRIVACY POLICY</a>
+				</li>
+				<li class="lastItem">
+					<a href="//www.nytco.com/">THE NEW YORK TIMES COMPANY</a>
+				</li>
+			</ul>
+		</div>
+		<div class="element2">
+			<div id="footerLogo">
+				<a href="//www.nytimes.com/pages/t-magazine/index.html">The New York Times Style Magazine</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div> <!-- end page --><!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-23',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":19,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

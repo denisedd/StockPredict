@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004545941"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1469182629" />
+<meta name="PUD" content="20160722" />
+<meta name="pdate" content="20160722" />
+<meta name="ptime" content="20160722061709" />
+<meta name="utime" content="20160722101709" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-07-22T10:17:09-04:00" />
+<meta name="DISPLAYDATE" content="July 22, 2016" />
+<meta name="dat" content="July 22, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Ailes, Roger E;Holder, Eric H Jr;Murdoch, Rupert;Musk, Elon;Thiel, Peter A;Trump, Donald J">
+<meta name="des" content="Appointments and Executive Changes;Banking and Financial Institutions;Espionage and Intelligence Services;Great Britain Withdrawal from EU (Brexit);Mergers, Acquisitions and Divestitures;Presidential Election of 2016;Private Equity;Regulation and Deregulation of Industry;Republican National Convention;Sexual Harassment;Standard &amp; Poor&#039;s Case-Shiller Home Price Index;Suits and Litigation (Civil);Venture Capital">
+<meta name="org" content="1Malaysia Development Berhad (1MDB);21st Century Fox;Aetna Inc;Anheuser-Busch InBev NV;Brookfield Asset Management;CargoX Pty SA;CIGNA Corporation;DBS Bank Ltd;Elliott Management Corp;Exxon Mobil Corp;Fox News Channel;General Electric Company;Goldman Sachs Group Inc;Humana Inc;InterOil Corporation;JPMorgan Chase &amp; Company;Justice Department;Lazard LLC;Lehman Brothers Holdings Inc;Liberty Media Corp;Pandora Media Inc;Point72 Asset Management LP;PulteGroup;SABMiller;Telcordia Technologies Inc;Terra Firma Capital Partners Ltd;UBS AG">
+<meta property="article:tag" content="Ailes Roger E" />
+<meta property="article:tag" content="Holder Eric H Jr" />
+<meta property="article:tag" content="Murdoch Rupert" />
+<meta property="article:tag" content="Musk Elon" />
+<meta property="article:tag" content="Thiel Peter A" />
+<meta property="article:tag" content="Trump Donald J" />
+<meta property="article:tag" content="Appointments and Executive Changes" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Espionage and Intelligence Services" />
+<meta property="article:tag" content="Great Britain Withdrawal from EU (Brexit)" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Presidential Election of 2016" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Republican National Convention" />
+<meta property="article:tag" content="Sexual Harassment" />
+<meta property="article:tag" content="Standard &amp; Poor&#039;s Case-Shiller Home Price Index" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="1Malaysia Development Berhad (1MDB)" />
+<meta property="article:tag" content="21st Century Fox" />
+<meta property="article:tag" content="Aetna Inc" />
+<meta property="article:tag" content="Anheuser-Busch InBev NV" />
+<meta property="article:tag" content="Brookfield Asset Management" />
+<meta property="article:tag" content="CargoX Pty SA" />
+<meta property="article:tag" content="CIGNA Corporation" />
+<meta property="article:tag" content="DBS Bank Ltd" />
+<meta property="article:tag" content="Elliott Management Corp" />
+<meta property="article:tag" content="Exxon Mobil Corp" />
+<meta property="article:tag" content="Fox News Channel" />
+<meta property="article:tag" content="General Electric Company" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Humana Inc" />
+<meta property="article:tag" content="InterOil Corporation" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="Justice Department" />
+<meta property="article:tag" content="Lazard LLC" />
+<meta property="article:tag" content="Lehman Brothers Holdings Inc" />
+<meta property="article:tag" content="Liberty Media Corp" />
+<meta property="article:tag" content="Pandora Media Inc" />
+<meta property="article:tag" content="Point72 Asset Management LP" />
+<meta property="article:tag" content="PulteGroup" />
+<meta property="article:tag" content="SABMiller" />
+<meta property="article:tag" content="Telcordia Technologies Inc" />
+<meta property="article:tag" content="Terra Firma Capital Partners Ltd" />
+<meta property="article:tag" content="UBS AG" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Ailes Roger E,Holder Eric H Jr,Murdoch Rupert,Musk Elon,Thiel Peter A,Trump Donald J,Appointments and Executive Changes,Banking and Financial Institutions,Espionage and Intelligence Services,Great Britain Withdrawal from EU (Brexit),Mergers Acquisitions and Divestitures,Presidential Election of 2016,Private Equity,Regulation and Deregulation of Industry,Republican National Convention,Sexual Harassment,Standard &amp; Poor&#039;s Case-Shiller Home Price Index,Suits and Litigation (Civil),Venture Capital,1Malaysia Development Berhad (1MDB),21st Century Fox,Aetna Inc,Anheuser-Busch InBev NV,Brookfield Asset Management,CargoX Pty SA,CIGNA Corporation,DBS Bank Ltd,Elliott Management Corp,Exxon Mobil Corp,Fox News Channel,General Electric Company,Goldman Sachs Group Inc,Humana Inc,InterOil Corporation,JPMorgan Chase &amp; Company,Justice Department,Lazard LLC,Lehman Brothers Holdings Inc,Liberty Media Corp,Pandora Media Inc,Point72 Asset Management LP,PulteGroup,SABMiller,Telcordia Technologies Inc,Terra Firma Capital Partners Ltd,UBS AG,DealBook" />
+<meta name="news_keywords" content="PulteGroup,SABMiller" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F07%2F22%2Fmorning-agenda-roger-ailes-is-out-at-fox-news-rupert-murdoch-steps-in%2F" title="Morning Agenda: Roger Ailes Is Out at Fox News; Rupert Murdoch Steps In" />
+<meta name="description" content="Goldman Sachs Raises a New Private Equity Fund &#124; Continuing Debate Over the Financial Crisis" />
+<meta name="hdl" content="Morning Agenda: Roger Ailes Is Out at Fox News; Rupert Murdoch Steps In" />
+<meta property="og:title" content="Morning Agenda: Roger Ailes Is Out at Fox News; Rupert Murdoch Steps In" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/07/22/morning-agenda-roger-ailes-is-out-at-fox-news-rupert-murdoch-steps-in/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Goldman Sachs Raises a New Private Equity Fund &#124; Continuing Debate Over the Financial Crisis" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Roger Ailes Is Out at Fox News; Rupert Murdoch Steps In" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/07/22/morning-agenda-roger-ailes-is-out-at-fox-news-rupert-murdoch-steps-in/" />
+<meta name="twitter:description" content="Goldman Sachs Raises a New Private Equity Fund &#124; Continuing Debate Over the Financial Crisis" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Tesla&#8217;s New Grand Plan' href='//news.blogs.nytimes.com/2016/07/21/morning-agenda-teslas-new-grand-plan/' />
+<link rel='next' title='What Weâre Reading' href='//news.blogs.nytimes.com/2016/07/22/what-were-reading-173/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/07/22/morning-agenda-roger-ailes-is-out-at-fox-news-rupert-murdoch-steps-in/' />
+<link rel='shortlink' href='//nyti.ms/29YrdlI' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/07/22/morning-agenda-roger-ailes-is-out-at-fox-news-rupert-murdoch-steps-in/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Roger Ailes Is Out at Fox News; Rupert Murdoch Steps In - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5332 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Roger Ailes Is Out at Fox News; Rupert Murdoch Steps In        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/07/22/morning-agenda-roger-ailes-is-out-at-fox-news-rupert-murdoch-steps-in/"
+	 data-title="Morning Agenda: Roger Ailes Is Out at Fox News; Rupert Murdoch Steps In"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Goldman Sachs Raises a New Private Equity Fund | Continuing Debate Over the Financial Crisis&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/22/morning-agenda-roger-ailes-is-out-at-fox-news-rupert-murdoch-steps-in/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 22, 2016 6:17 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Roger Ailes Is Out at Fox News; Rupert Murdoch Steps In</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-07-22T10:17:09+00:00" itemprop="datePublished">July 22, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">July 22, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5332 post type-post status-publish hentry category-dealbook tag-1malaysia-development-berhad-1mdb tag-21st-century-fox tag-aetna-inc tag-ailes-roger-e tag-anheuser-busch-inbev-nv tag-appointments-and-executive-changes tag-banking-and-financial-institutions tag-brookfield-asset-management tag-cargox-pty-sa tag-cigna-corporation tag-dbs-bank-ltd tag-elliott-management-corp tag-espionage-and-intelligence-services tag-exxon-mobil-corp tag-fox-news-channel tag-general-electric-company tag-goldman-sachs-group-inc tag-great-britain-withdrawal-from-eu-brexit tag-holder-eric-h-jr tag-humana-inc tag-interoil-corporation tag-jpmorgan-chase-company tag-justice-department tag-lazard-llc tag-lehman-brothers-holdings-inc tag-liberty-media-corp tag-mergers-acquisitions-and-divestitures tag-murdoch-rupert tag-musk-elon tag-pandora-media-inc tag-point72-asset-management-lp tag-presidential-election-of-2016 tag-private-equity tag-pultegroup tag-regulation-and-deregulation-of-industry tag-republican-national-convention tag-sabmiller tag-sexual-harassment tag-standard-poors-case-shiller-home-price-index tag-suits-and-litigation-civil tag-telcordia-technologies-inc tag-terra-firma-capital-partners-ltd tag-thiel-peter-a tag-trump-donald-j tag-ubs-ag tag-venture-capital per-ailes-roger-e per-holder-eric-h-jr per-murdoch-rupert per-musk-elon per-thiel-peter-a per-trump-donald-j des-appointments-and-executive-changes des-banking-and-financial-institutions des-espionage-and-intelligence-services des-great-britain-withdrawal-from-eu-brexit des-mergers-acquisitions-and-divestitures des-presidential-election-of-2016 des-private-equity des-regulation-and-deregulation-of-industry des-republican-national-convention des-sexual-harassment des-standard-poors-case-shiller-home-price-index des-suits-and-litigation-civil des-venture-capital org-1malaysia-development-berhad-1mdb org-21st-century-fox org-aetna-inc org-anheuser-busch-inbev-nv org-brookfield-asset-management org-cargox-pty-sa org-cigna-corporation org-dbs-bank-ltd org-elliott-management-corp org-exxon-mobil-corp org-fox-news-channel org-general-electric-company org-goldman-sachs-group-inc org-humana-inc org-interoil-corporation org-jpmorgan-chase-company org-justice-department org-lazard-llc org-lehman-brothers-holdings-inc org-liberty-media-corp org-pandora-media-inc org-point72-asset-management-lp org-pultegroup org-sabmiller org-telcordia-technologies-inc org-terra-firma-capital-partners-ltd org-ubs-ag news_keywords-pultegroup news_keywords-sabmiller" id="post-5332">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Roger Ailes Is Out at Fox News; Rupert Murdoch Steps In</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-07-22T10:17:09+00:00" itemprop="datePublished">July 22, 2016 6:17 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 22, 2016 6:17 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/07/22/morning-agenda-roger-ailes-is-out-at-fox-news-rupert-murdoch-steps-in/" data-title="Morning Agenda: Roger Ailes Is Out at Fox News; Rupert Murdoch Steps In" data-description="Goldman Sachs Raises a New Private Equity Fund | Continuing Debate Over the Financial Crisis">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>ROGER AILES IS OUT AT FOX NEWS; RUPERT MURDOCH STEPS IN</strong> An unsettling two weeks for Fox News has culminated with the <a href="//www.nytimes.com/2016/07/22/business/media/roger-ailes-fox-news.html?ref=business&amp;nl=dealbook&amp;emc=edit_dlbkam_20160722">ouster of its chairman</a> and chief executive, Roger Ailes. Rupert Murdoch, the media mogul who started the company with Mr. Ailes, will be taking over in the interim, a move that signals there is not going to be an overhaul of the network. Fox News&#8217;s parent company, 21st Century Fox, had learned that Mr. Ailes was trying to get his on-air stars to criticize those who cooperated with investigators looking into accusations of sexual harassment against him.</p>
+<p class="story-body-text" itemprop="articleBody">In a letter to Mr. Murdoch on Thursday, Mr. Ailes made no mention of the investigation into his workplace behavior or the sexual harassment lawsuit he faces, but he wrote pointedly: &#8220;I take particular pride in the role that I have played advancing the careers of the many women I have promoted to executive and on-air positions.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Mr. Ailes will walk away with about $40 million as part of a settlement agreement and cannot start a competitor to Fox News.</strong> His stunning fall came as hundreds of Fox employees were gathered in Cleveland for the Republican National Convention, where Donald J. Trump accepted the presidential nomination with a speech <a href="//www.nytimes.com/2016/07/22/us/politics/donald-trump-rnc-speech.html?action=click&amp;pgtype=Homepage&amp;clickSource=story-heading&amp;module=span-abc-region&amp;region=span-abc-region&amp;WT.nav=span-abc-region&amp;nl=dealbook&amp;emc=edit_dlbkam_20160722">filled with dark imagery</a>, portraying the United States as a diminished nation.</p>
+<p class="story-body-text" itemprop="articleBody">In departing from optimistic talk about American opportunity, Mr. Trump was not the only one to break with tradition. His speech had been preceded by the venture capitalist Peter Thiel declaring, <a href="//www.nytimes.com/2016/07/22/us/politics/peter-thiel-republican-convention-gay.html?module=ArrowsNav&amp;contentCollection=Politics&amp;action=keypress&amp;region=FixedRight&amp;pgtype=article&amp;nl=dealbook&amp;emc=edit_dlbkam_20160722">&#8220;I am proud to be gay.&#8221;</a> Mr. Thiel is likely to be the first person to have said those words from the stage of a Republican National Convention.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>GOLDMAN SACHS RAISES A NEW PRIVATE EQUITY FUND</strong> Goldman Sachs will soon begin marketing a new corporate buyout fund of $5 billion to $8 billion, according to<a href="//www.wsj.com/articles/goldman-sachs-raising-private-equity-fund-of-5-billion-to-8-billion-sources-1469141281?nl=dealbook&amp;emc=edit_dlbkam_20160722"> The Wall Street Journal</a>, which cites people familiar with the matter.</p>
+<p class="story-body-text" itemprop="articleBody">Goldman has remained committed to a part of Wall Street that many of its rivals have abandoned, but <strong>regulation has still made this new fund a very different creature to its past funds</strong>. This new buyout fund is less than half the $20 billion that Goldman raised for GS Capital Partners VI in 2007 and it will only contribute a small slice of its own capital.</p>
+<p class="story-body-text" itemprop="articleBody">Private equity firms are facing tough competition from corporate acquirers and high prices for assets. Goldman also recently led a $10 million financing round in a Brazilian start-up, CargoX, in a move that showed its interest in backing early-stage companies before their valuations soar.<br />
+<strong>ON THE AGENDA</strong> <strong>General Electric&#8217;s</strong> latest quarterly earnings presentation will start at 8:30 a.m.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>CONTINUING DEBATE OVER THE FINANCIAL CRISIS</strong> With some of the economic and political consequences of the 2008 financial crisis manifesting themselves as the frustration and disillusionment in evidence at this week&#8217;s convention, two New York Times columnists look at the questions that crop up about the period.</p>
+<p class="story-body-text" itemprop="articleBody">In <a href="//www.nytimes.com/2016/07/22/business/dealbook/a-clue-to-the-scarcity-of-financial-crisis-prosecutions.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160722">the Street Scene</a>, William D. Cohan examines why there were so few attempts to prosecute the individuals responsible for it. Eric H. Holder Jr., the former attorney general, said he was &#8220;frustrated&#8221; by the lack of prosecutions of individual wrongdoing, but he took pride in the &#8220;record-breaking&#8221; amount of money collected in the form of civil penalties. Forcing big banks to hand over their shareholders&#8217; money in exchange for burying forever the evidence of wrongdoing is not nearly the same as holding people accountable for their behavior, Mr. Cohan writes.</p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/07/22/business/economy/pointing-a-finger-at-the-fed-in-the-lehman-disaster.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160722">James B. Stewart</a> examines a paper by Laurence M. Ball, chairman of the economics department at Johns Hopkins University, which argues that the Federal Reserve could have saved Lehman from its chaotic bankruptcy in September 2008.</p>
+<p class="story-body-text" itemprop="articleBody">&#8220;Fed officials have not been transparent about the Lehman crisis. <strong>Their explanations for their actions rest on flawed economic and legal reasoning and dubious factual claims</strong>,&#8221; Mr. Ball argues.<br />
+Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Karl Case, Economist Who Developed Home Price Index, Dies at 69</strong> Mr. Case, a professor at Wellesley College, teamed up with a Yale economist to develop the Case-Shiller Index to track home values in an opaque market.<br />
+<a href="//www.nytimes.com/2016/07/22/business/economy/karl-case-economist-who-developed-home-price-index-dies-at-69.html?nl=dealbook&amp;emc=edit_dlbkam_20160722">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/?nl=dealbook&amp;emc=edit_dlbkam_20160722">MERGERS &amp; ACQUISITIONS Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>U.S. Sues to Block Anthem-Cigna and Aetna-Humana Mergers</strong> The Justice Department contends that allowing the mergers would quash competition, leading to higher prices for consumers and reducing their benefits.<br />
+<a href="//www.nytimes.com/2016/07/22/business/dealbook/us-sues-to-block-anthem-cigna-and-aetna-humana-mergers.html?nl=dealbook&amp;emc=edit_dlbkam_20160722">NYT Â»</a><br />
+<strong>Exxon Mobil Acquires InterOil for $2.5 Billion</strong> InterOil&#8217;s holdings in Papua New Guinea are a potential source for liquefied natural gas.<br />
+<a href="//www.nytimes.com/2016/07/22/business/dealbook/exxon-mobil-acquires-interoil-for-2-5-million.html?nl=dealbook&amp;emc=edit_dlbkam_20160722">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Chief of Liberty Media Said to Have Suggested Offer for Pandora</strong> Greg Maffei, the chief executive of Liberty Media, floated an offer to buy Pandora Media that valued the company at more than $3.4 billion, The Wall Street Journal reports, citing people familiar with the matter.<br />
+<a href="//www.wsj.com/articles/liberty-media-ceo-greg-maffei-floated-roughly-15-a-share-offer-for-pandora-media-1469117183?mod=pls_whats_news_us_business_f&amp;nl=dealbook&amp;emc=edit_dlbkam_20160722">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Chinese Group Said to Be in Advanced Talks to Buy Caesars&#8217; Interactive Game Unit</strong> A Chinese consortium is in exclusive talks to buy the online games business of Caesars Interactive Entertainment in a deal that could value the unit at more than $4.2 billion, Reuters reports, citing people familiar with the matter.<br />
+<a href="//www.reuters.com/article/us-caesars-acquisition-co-m-a-consortium-idUSKCN10208G?feedType=RSS&amp;feedName=innovationNews&amp;nl=dealbook&amp;emc=edit_dlbkam_20160722">REUTERS</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Elon Musk&#8217;s Futuristic Plans Give Shareholders Cause to Worry</strong> Mr. Musk, the chief of the carmaker Tesla, reveals a new master plan; investors wonder how he&#8217;ll pay for it, Antony Currie writes in Breakingviews.<br />
+<a href="//www.nytimes.com/2016/07/22/business/dealbook/eton-musks-futuristic-plans-give-shareholders-cause-to-worry.html?nl=dealbook&amp;emc=edit_dlbkam_20160722">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160722"><strong>INVESTMENT BANKING Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Singapore Cites Three Banks in Inquiry Into Malaysia&#8217;s 1MDB Fund</strong> Officials found lapses in anti-money laundering controls at DBS Bank, Standard Chartered and UBS as part of a global investigation into the Malaysian sovereign wealth fund.<br />
+<a href="//www.nytimes.com/2016/07/22/business/1mdb-singapore-ubs-dbs-standard-chartered.html?nl=dealbook&amp;emc=edit_dlbkam_20160722">NYT Â»Â </a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>JPMorgan Said to Be Near Settlement Over Hiring in Asia</strong> JPMorgan Chase is expected to pay around $200 million to settle federal investigations into whether it tried to win business by hiring the sons and daughters of powerful people in Asia, The Wall Street Journal reports, citing people familiar with the matter.<br />
+<a href="//www.wsj.com/articles/j-p-morgan-chase-nearing-settlement-with-prosecutors-on-asia-hiring-probes-1469121763?nl=dealbook&amp;emc=edit_dlbkam_20160722">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Top Lazard Banker Leaves for Brookfield Asset Management</strong> The banker, Ron Bloom, perhaps best known for his work guiding G.M. and Chrysler through bankruptcies, will help manage Brookfield&#8217;s private equity operations.<br />
+<a href="//www.nytimes.com/2016/07/22/business/dealbook/ron-bloom-a-top-lazard-banker-leaves-for-brookfield-asset-management.html?nl=dealbook&amp;emc=edit_dlbkam_20160722">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody">For the latest updates, go to <a href="//www.nytimes.com/pages/business/dealbook/index.html">NYTimes.com/DealBook</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160722"><strong>PRIVATE EQUITY Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Terra Firma Hires Andrew Geczy as C.E.O.</strong> Mr. Geczy joins the private equity firm after stints at the Australia and New Zealand Banking Group, the Lloyds Banking Group and Citigroup.<br />
+<a href="//www.nytimes.com/2016/07/22/business/dealbook/terra-firma-andrew-geczy-guy-hands.html?nl=dealbook&amp;emc=edit_dlbkam_20160722">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Blackstone&#8217;s Assets Under Management Hit Record High</strong> Blackstone expanded its empire to record size in the second quarter as assets under its management surpassed $350 billion for the first time.<br />
+<a href="//www.ft.com/cms/s/0/2fe266e8-4f53-11e6-8172-e39ecd3b86fc.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct&amp;nl=dealbook&amp;emc=edit_dlbkam_20160722#axzz4EisUfw00">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160722"><strong>HEDGE FUNDS Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Elliott Questions $106 Billion Beer Merger</strong> Elliott Management wrote to the board of SABMiller to raise concerns about the structure of its takeover by Anheuser-Busch InBev, The Wall Street Journal reports, citing people with knowledge of the letter.<br />
+<a href="//www.ft.com/cms/s/0/d8941ffc-4f3f-11e6-8172-e39ecd3b86fc.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct&amp;nl=dealbook&amp;emc=edit_dlbkam_20160722#axzz4EisUfw00">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>PulteGroup Settles With Elliott</strong> The homebuilder PulteGroup added three independent directors and committed to spending cuts as part of a settlement reached with Elliott Management.<br />
+<a href="//www.nytimes.com/2016/07/22/business/dealbook/leave-london-after-brexit-steve-cohen-doubles-down.html?nl=dealbook&amp;emc=edit_dlbkam_20160722">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Leave London After &#8216;Brexit&#8217;? Steve Cohen Doubles Down</strong> The billionaire investor is expanding the London office of his firm, Point72 Asset Management, even as other firms pare back.<br />
+<a href="//www.nytimes.com/2016/07/22/business/dealbook/leave-london-after-brexit-steve-cohen-doubles-down.html?nl=dealbook&amp;emc=edit_dlbkam_20160722">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160722"><strong>LEGAL/REGULATORY Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>E.C.B. Keeps Rates Steady, but Still Faces Plenty of Uncertainty</strong> The eurozone is dealing with aftershocks of earlier crises, while coping with more recent threats like Britain&#8217;s vote to leave the European Union and a shaky banking system in Italy.<br />
+<a href="//www.nytimes.com/2016/07/22/business/international/ecb-meeting-brexit-europe-interest-rates.html?nl=dealbook&amp;emc=edit_dlbkam_20160722">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>F.C.C. Backs Swedish Company to Run American Phone Routing System</strong> Major wireless carriers pushed for Telcordia because of the cost savings, but some intelligence officials have raised national security concerns.<br />
+<a href="//www.nytimes.com/2016/07/22/business/fcc-backs-swedish-company-to-run-american-phone-routing-system.html?nl=dealbook&amp;emc=edit_dlbkam_20160722">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>What Donald Trump Doesn&#8217;t Understand About the Trade Deficit</strong> Part of what makes the United States powerful is the great importance of the dollar to global finance.<br />
+<a href="//www.nytimes.com/2016/07/22/upshot/what-donald-trump-doesnt-understand-about-the-trade-deficit.html?nl=dealbook&amp;emc=edit_dlbkam_20160722">NYT Â»</a></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/07/22/morning-agenda-roger-ailes-is-out-at-fox-news-rupert-murdoch-steps-in/"
+					data-title="Morning Agenda: Roger Ailes Is Out at Fox News; Rupert Murdoch Steps In"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Goldman Sachs Raises a New Private Equity Fund | Continuing Debate Over the Financial Crisis&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/22/morning-agenda-roger-ailes-is-out-at-fox-news-rupert-murdoch-steps-in/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":57,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

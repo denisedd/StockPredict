@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004449050"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1464862695" />
+<meta name="PUD" content="20160602" />
+<meta name="pdate" content="20160602" />
+<meta name="ptime" content="20160602061815" />
+<meta name="utime" content="20160602101819" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-06-02T10:18:19-04:00" />
+<meta name="DISPLAYDATE" content="June 2, 2016" />
+<meta name="dat" content="June 2, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Cordray, Richard;Herzer, Manuela (1963- );Holmes, Elizabeth (1984- );Plouffe, David;Redstone, Keryn L (1982- );Redstone, Shari;Redstone, Sumner M">
+<meta name="des" content="Banking and Financial Institutions;Consumer Protection;Credit and Debt;Embargoes and Sanctions;Initial Public Offerings;Law and Legislation;Mergers, Acquisitions and Divestitures;Payday Loans;Regulation and Deregulation of Industry;Start-ups;Suits and Litigation (Civil);Venture Capital">
+<meta name="org" content="Alibaba Group Holding Ltd;Consumer Financial Protection Bureau;English Premier League;European Central Bank;Federal Reserve Bank of New York;Gannett Company Inc;Infoblox Inc;JPMorgan Chase &amp; Company;Pew Charitable Trusts;Salesforce.com Inc;Saudi Aramco;Skadden Arps Slate Meagher &amp; Flom;SOFTBANK Corporation;Starboard Value LP;Takata Corp;Theranos Inc;Treasury Department;Uber Technologies Inc;Viacom Inc">
+<meta name="geo" content="Middle East;Silicon Valley (Calif)">
+<meta property="article:tag" content="Cordray Richard" />
+<meta property="article:tag" content="Herzer Manuela (1963- )" />
+<meta property="article:tag" content="Holmes Elizabeth (1984- )" />
+<meta property="article:tag" content="Plouffe David" />
+<meta property="article:tag" content="Redstone Keryn L (1982- )" />
+<meta property="article:tag" content="Redstone Shari" />
+<meta property="article:tag" content="Redstone Sumner M" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Consumer Protection" />
+<meta property="article:tag" content="Credit and Debt" />
+<meta property="article:tag" content="Embargoes and Sanctions" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Law and Legislation" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Payday Loans" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Alibaba Group Holding Ltd" />
+<meta property="article:tag" content="Consumer Financial Protection Bureau" />
+<meta property="article:tag" content="English Premier League" />
+<meta property="article:tag" content="European Central Bank" />
+<meta property="article:tag" content="Federal Reserve Bank of New York" />
+<meta property="article:tag" content="Gannett Company Inc" />
+<meta property="article:tag" content="Infoblox Inc" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="Pew Charitable Trusts" />
+<meta property="article:tag" content="Salesforce.com Inc" />
+<meta property="article:tag" content="Saudi Aramco" />
+<meta property="article:tag" content="Skadden Arps Slate Meagher &amp; Flom" />
+<meta property="article:tag" content="SOFTBANK Corporation" />
+<meta property="article:tag" content="Starboard Value LP" />
+<meta property="article:tag" content="Takata Corp" />
+<meta property="article:tag" content="Theranos Inc" />
+<meta property="article:tag" content="Treasury Department" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="Viacom Inc" />
+<meta property="article:tag" content="Middle East" />
+<meta property="article:tag" content="Silicon Valley (Calif)" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Cordray Richard,Herzer Manuela (1963- ),Holmes Elizabeth (1984- ),Plouffe David,Redstone Keryn L (1982- ),Redstone Shari,Redstone Sumner M,Banking and Financial Institutions,Consumer Protection,Credit and Debt,Embargoes and Sanctions,Initial Public Offerings,Law and Legislation,Mergers Acquisitions and Divestitures,Payday Loans,Regulation and Deregulation of Industry,Start-ups,Suits and Litigation (Civil),Venture Capital,Alibaba Group Holding Ltd,Consumer Financial Protection Bureau,English Premier League,European Central Bank,Federal Reserve Bank of New York,Gannett Company Inc,Infoblox Inc,JPMorgan Chase &amp; Company,Pew Charitable Trusts,Salesforce.com Inc,Saudi Aramco,Skadden Arps Slate Meagher &amp; Flom,SOFTBANK Corporation,Starboard Value LP,Takata Corp,Theranos Inc,Treasury Department,Uber Technologies Inc,Viacom Inc,Middle East,Silicon Valley (Calif),DealBook" />
+<meta name="news_keywords" content="Startup" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F06%2F02%2Fmorning-agenda-uber-receives-3-5-billion-from-saudi-arabia%2F" title="Morning Agenda: Uber Receives $3.5 Billion from Saudi Arabia" />
+<meta name="description" content="Payday Loan Industry Could Soon Be Gutted &#124; Sumner Redstone&#8217;s Granddaughter Sides With Viacom Directors" />
+<meta name="hdl" content="Morning Agenda: Uber Receives $3.5 Billion from Saudi Arabia" />
+<meta property="og:title" content="Morning Agenda: Uber Receives $3.5 Billion from Saudi Arabia" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/06/02/morning-agenda-uber-receives-3-5-billion-from-saudi-arabia/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Payday Loan Industry Could Soon Be Gutted &#124; Sumner Redstone&#8217;s Granddaughter Sides With Viacom Directors" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Uber Receives $3.5 Billion from Saudi Arabia" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/06/02/morning-agenda-uber-receives-3-5-billion-from-saudi-arabia/" />
+<meta name="twitter:description" content="Payday Loan Industry Could Soon Be Gutted &#124; Sumner Redstone&#8217;s Granddaughter Sides With Viacom Directors" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: The Struggles of Today&#8217;s Sumner Redstone' href='//news.blogs.nytimes.com/2016/06/01/morning-agenda-the-struggles-of-todays-sumner-redstone/' />
+<link rel='next' title='Morning Agenda: Chairman Puts His Brand on Tribune' href='//news.blogs.nytimes.com/2016/06/03/morning-agenda-chairman-puts-his-brand-on-tribune/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/06/02/morning-agenda-uber-receives-3-5-billion-from-saudi-arabia/' />
+<link rel='shortlink' href='//nyti.ms/1XjKjU2' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/06/02/morning-agenda-uber-receives-3-5-billion-from-saudi-arabia/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Uber Receives $3.5 Billion from Saudi Arabia - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4949 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Uber Receives $3.5 Billion from Saudi Arabia        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/06/02/morning-agenda-uber-receives-3-5-billion-from-saudi-arabia/"
+	 data-title="Morning Agenda: Uber Receives $3.5 Billion from Saudi Arabia"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Payday Loan Industry Could Soon Be Gutted | Sumner Redstone&#039;s Granddaughter Sides With Viacom Directors&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/02/morning-agenda-uber-receives-3-5-billion-from-saudi-arabia/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 2, 2016 6:18 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Uber Receives $3.5 Billion from Saudi Arabia</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-06-02T10:18:15+00:00" itemprop="datePublished">June 2, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">June 2, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4949 post type-post status-publish hentry category-dealbook tag-alibaba-group-holding-ltd tag-banking-and-financial-institutions tag-consumer-financial-protection-bureau tag-consumer-protection tag-cordray-richard tag-credit-and-debt tag-embargoes-and-sanctions tag-english-premier-league tag-european-central-bank tag-federal-reserve-bank-of-new-york tag-gannett-company-inc tag-herzer-manuela-1963 tag-holmes-elizabeth-1984 tag-infoblox-inc tag-initial-public-offerings tag-jpmorgan-chase-company tag-law-and-legislation tag-mergers-acquisitions-and-divestitures tag-middle-east tag-payday-loans tag-pew-charitable-trusts tag-plouffe-david tag-redstone-keryn-l-1982 tag-redstone-shari tag-redstone-sumner-m tag-regulation-and-deregulation-of-industry tag-salesforce-com-inc tag-saudi-aramco tag-silicon-valley-calif tag-skadden-arps-slate-meagher-flom tag-softbank-corporation tag-starboard-value-lp tag-start-ups tag-suits-and-litigation-civil tag-takata-corp tag-theranos-inc tag-treasury-department tag-uber-technologies-inc tag-venture-capital tag-viacom-inc per-cordray-richard per-herzer-manuela-1963 per-holmes-elizabeth-1984 per-plouffe-david per-redstone-keryn-l-1982 per-redstone-shari per-redstone-sumner-m des-banking-and-financial-institutions des-consumer-protection des-credit-and-debt des-embargoes-and-sanctions des-initial-public-offerings des-law-and-legislation des-mergers-acquisitions-and-divestitures des-payday-loans des-regulation-and-deregulation-of-industry des-start-ups des-suits-and-litigation-civil des-venture-capital org-alibaba-group-holding-ltd org-consumer-financial-protection-bureau org-english-premier-league org-european-central-bank org-federal-reserve-bank-of-new-york org-gannett-company-inc org-infoblox-inc org-jpmorgan-chase-company org-pew-charitable-trusts org-salesforce-com-inc org-saudi-aramco org-skadden-arps-slate-meagher-flom org-softbank-corporation org-starboard-value-lp org-takata-corp org-theranos-inc org-treasury-department org-uber-technologies-inc org-viacom-inc geo-middle-east geo-silicon-valley-calif news_keywords-startup" id="post-4949">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Uber Receives $3.5 Billion from Saudi Arabia</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-06-02T10:18:15+00:00" itemprop="datePublished">June 2, 2016 6:18 am</time>
+			<!-- date updated --><span class="visually-hidden updated">June 2, 2016 6:18 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/06/02/morning-agenda-uber-receives-3-5-billion-from-saudi-arabia/" data-title="Morning Agenda: Uber Receives $3.5 Billion from Saudi Arabia" data-description="Payday Loan Industry Could Soon Be Gutted | Sumner Redstone&#039;s Granddaughter Sides With Viacom Directors">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>UBER RECEIVES $3.5 BILLION FROM SAUDI ARABIA</strong> <span class="divider"> | </span></span> Uber has turned to the Middle East in its quest to build a global empire. It raised $3.5 billion from Saudi Arabiaâs Public Investment Fund in <b>one of the largest ever investments into a privately held start-up</b>,<br />
+<a href="//www.nytimes.com/2016/06/02/technology/uber-investment-saudi-arabia.html">Mike Isaac and Michael J. de la Merced report in The New York Times.</a> This round of fund-raising continued to value the company at $62.5 billion. </p>
+<p class="story-body-text" itemprop="articleBody">Uber said the investment aligned the company with Saudi Arabiaâs plans to transform its economy and reduce its dependence on oil. <b>It came together after David Plouffe, an Uber board member, traveled to the Middle East in March and was invited to the Saudi fund for a briefing.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Uber, Silicon Valleyâs most valuable private business, has redefined private fund-raising, drawing hundreds of millions in new cash every six months or so. It has been spending furiously to expand and defend its territory, particularly in China, where it is in a subsidy war with Didi Chuxing, the dominant ride-hailing start-up. </p>
+<p class="story-body-text" itemprop="articleBody">Uber said it planned to invest $250 million in The Middle East where it has rolled out its service in 15 cities across nine countries.<br />
+<b>It also said its service may be a boon for Saudi Arabia, where women are not allowed to drive because of religious edicts.</b> âOf course we think women should be allowed to drive,â said Jill Hazelbaker, an Uber spokeswoman. âIn the absence of that, we have been able to provide extraordinary mobility that didnât exist before â and weâre incredibly proud of that.â The company said about 80 percent of its riders were women. </p>
+<p class="story-body-text" itemprop="articleBody">Princess Reema bint Bandar al-Saud sits on Uberâs public policy advisory board and has worked with it to usher the service into the country.<br />
+Saudi Arabia was not known for venture capital investing, but some members of the royal family have been involved in deals. Prince Alwaleed bin Talal has invested in Lyft, a competitor of Uber.  </p>
+<p class="story-body-text" itemprop="articleBody">Investing in an American company like Uber, however, could run counter to Saudi Arabiaâs threat to sell off investments in the United States, which was issued during discussion about a bill in Congress that would allow the kingdom to be held responsible in American courts for any role in the Sept. 11, 2001, attacks. </p>
+<p class="story-body-text" itemprop="articleBody">Saudi Arabia had just two advisers on the deal: <b>JPMorgan Chase on the financial side and Skadden, Arps, Slate, Meagher &#038; Flom on the legal side.</b> The deal is unlikely to yield a huge payday for these companies, but it lends them bragging rights and could put them in line for advisory positions down the line, <a href="//www.nytimes.com/2016/06/02/business/dealbook/saudi-stake-in-uber-lifts-advisory-companies-to-prime-positions.html">Michael J. de la Merced reports in DealBook.</a> JPMorgan is already helping advise the kingdom in its initial public offering of Saudi Aramco, the state-owned oil company.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PAYDAY LOAN INDUSTRY COULD SOON BE GUTTED</strong> <span class="divider"> | </span></span> <b>New rules that federal regulators plan to announce on Thursday</b> could severely restrict the payday loan industry, which has been vilified for the exorbitant interest rates it charges on short-term loans,<br />
+<a href="//www.nytimes.com/2016/06/02/business/dealbook/payday-borrowings-debt-spiral-to-be-curtailed.html?smid=tw-dealbook&#038;smtyp=cur">Stacy Cowley reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">People who borrow money against their paychecks are generally supposed to pay it back within two weeks, with substantial fees piled on, but as most borrowers roll loans over into new ones, they become steadily less less likely to emerge from the debt. Mainstream banks are generally barred from this kind of lending and more than a dozen states have their own rules prohibiting payday loans. </p>
+<p class="story-body-text" itemprop="articleBody">The new guidelines from the Consumer Financial  Protection Bureau will  <b>require lenders in many cases to verify their customersâ income and confirm that they can afford to repay the money they borrow.</b> The number of times that people could roll over their loans into newer â and more expensive â ones would be curtailed. The new rules do not need congressional approval and could take effect as soon as next year. </p>
+<p class="story-body-text" itemprop="articleBody">âThe very economics of the payday lending business model depend on a substantial percentage of borrowers being unable to repay the loan and borrowing again and again at high interest rates,â said Richard Cordray, the director of the bureau. <b>âIt is much like getting into a taxi just to ride across town and finding yourself stuck in a ruinously expensive cross-country journey.â</b></p>
+<p class="story-body-text" itemprop="articleBody">Dennis Shaul, the chief executive of the Community Financial Services Association of America, a trade group for payday lenders, responded by saying that vulnerable borrowers would be cut off from a financial lifeline. âThousands of lenders, especially small businesses, will be forced to shutter their doors, lay off employees, and <b>leave communities that already have too few options for financial services</b>,â he said. </p>
+<p class="story-body-text" itemprop="articleBody">The Consumer Financial Protection Bureau estimated that <b>loan volume could fall by at least 55 percent</b>. An economic study paid for by the trade association also estimated that the $37,000 annual profit generated by the average storefront lender would instead become a $28,000 loss. </p>
+<p class="story-body-text" itemprop="articleBody">Some consumer advocates say the rules still do not go far enough. <b>âThis misses the mark,â</b> said Nick Bourke, a research director at the Pew Charitable Trusts, which has conducted extensive research on small-dollar lending. âThe C.F.P.B. is proposing an underwriting process, which is helpful, but clearer product safety standards are needed.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> <b>Lawrence H. Summers</b> will give the Daniel E. Holland III keynote address at the Boston College Carroll School of Management finance conference at 8:45 a.m. <b>Robert S. Kaplan</b>, will take part in the Dorothy Margaret Rose Knight Economic Keynote Discussion in Boston at 1 p.m. The <b>European Central Bankâs</b> governing council will hold a news conference at 9:30 a.m., after its latest monetary policy meeting. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SUMNER REDSTONEâS GRANDDAUGHTER SIDES WITH VIACOM DIRECTORS</strong> <span class="divider"> | </span></span> The battle that is splitting Sumner M. Redstoneâs $40 billion media empire has created yet another divide,<br />
+<a href="//www.nytimes.com/2016/06/02/business/media/sumner-redstones-granddaughter-sides-with-viacom-directors.html?ref=business">Emily Steel reports in The New York Times.</a>  His granddaughter Keryn Redstone has sided with the Viacom directors who are challenging his competence and asserting that he was manipulated by his daughter, Shari Redstone. </p>
+<p class="story-body-text" itemprop="articleBody">Keryn Redstone said in statement that she was <b>planning legal action to join with Viacom directors</b> in a âcommon cause to liberate my grandfather from Shariâs clutches and protect my fellow trust beneficiaries and myself from her machinations.â </p>
+<p class="story-body-text" itemprop="articleBody">Keryn Redstone, 34, said that her grandfather had been incompetent since October and that she had been prevented from seeing him since Valentineâs Day, when he <b>âsat there lifeless and flanked by nurses and caretakers.â</b> </p>
+<p class="story-body-text" itemprop="articleBody">She also asserted that Shari Redstone and her family had âmanaged to totally isolate and effectively kidnap, brainwash and take advantage of my grandfather due to his debilitated state of mind and frail health.â She added that Shari Redstone and her three children had <b>âsucceeded in reversing decades of my grandfatherâs careful estate planning and are poised to seize control of Viacom and CBS.â</b> </p>
+<p class="story-body-text" itemprop="articleBody">Feuds are not uncommon in the Redstone family. Keryn Redstone is the daughter of Brent Redstone, Sumnerâs estranged son. Brent Redstone sued his father in 2006 asserting that he had favored his sister and frozen him out of the family business. They settled the year after, when Brent Redstoneâs share of the business was bought out. </p>
+<p class="story-body-text" itemprop="articleBody">Keryn Redstone unsuccessfully filed a petition in April this year to join Manuela Herzer, a former companion and onetime romantic partner of Mr. Redstone, in Ms. Herzerâs suit challenging the media mogulâs mental competency. </p>
+<p class="story-body-text" itemprop="articleBody">The specific legal action that Keryn Redstone plans to take is unclear. <b>âI do not intend to let Shari get away with this outrage,â</b> she said in her statement.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Salesforce.com to Acquire Demandware for $2.8 Billion</strong> <span class="divider"> | </span></span> The purchase price is an aggressive bet on growth. If Demandware doesnât deliver over several years, Salesforce will have wasted a chunk of its cash, Robert Cyran writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/02/business/dealbook/salesforcecom-to-acquire-demandware-for-2-8-billion.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hopes of a Quick Acquisition of Tribune Look Slim for Gannett </strong> <span class="divider"> | </span></span> As of Wednesday evening, the prospects for a big âwithholdâ vote were looking slim. <br /><span class="kicker"><a href="//www.politico.com/media/story/2016/06/tomorrow-wont-be-good-for-gannetts-bid-on-tribune-004568">POLITICO </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Alibaba Details Plans to Repurchase Shares From SoftBank</strong> <span class="divider"> | </span></span> The total value of the selloff, reflecting additional interest from investors, is $8.9 billion. <br /><span class="kicker"><a href="//www.wsj.com/articles/alibaba-details-plans-to-repurchase-shares-from-softbank-1464823437">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Premier League Soccer Clubs Become Targets as Profits Rise</strong> <span class="divider"> | </span></span> Teams were always attractive to overseas investors, but usually more for emotional reasons or as trophy assets, analysts say. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/22a22e2c-27ea-11e6-8ba3-cdd781d02d89.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz4AJX1yrbj">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Future of Banking Is in China</strong> <span class="divider"> | </span></span> In a living example of what financial technology companies in the United States can only aspire to, Chinaâs giant technology companies are using their internet payment systems as a wedge into an array of money-management services, prying deposits and fee-generating business away from the countryâs banks.<br /><span class="kicker"><a href="//www.wsj.com/articles/the-future-of-banking-is-in-china-1464802904">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JPMorgan Sheds Light on Currency Trade Practice </strong> <span class="divider"> | </span></span> JPMorgan has released guidelines to provide clarity on why it rejects some currency trades in the latest effort by the worldâs biggest banks to improve a public image muddied by scandals.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/24d75eaa-2813-11e6-8b18-91555f2f4fde.html#axzz4AJX1yrbj"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Former Barclays Employees Tell of Humiliation and Pressure </strong> <span class="divider"> | </span></span> Five former Barclays employees on trial accused of conspiring to rig interest rates have taken the stand and described the stress and pressure that they felt while working at the British bank. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/2a6b8572-2812-11e6-8b18-91555f2f4fde.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz4AJX1yrbj">THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Infoblox Said to Hire Morgan Stanley for Activist Defense</strong> <span class="divider"> | </span></span> Infoblox, the network and online security software company targeted by Starboard Value, hired Morgan Stanley to help defend it, Bloomberg reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-06-01/infoblox-said-to-hire-morgan-stanley-for-activist-defense">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="No Venture Capital Needed, or Wanted" src="https://static01.nyt.com/images/2016/06/01/business/02ebiz1/02ebiz1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>No Venture Capital Needed, or Wanted</strong> <span class="divider"> | </span></span> Although rare, start-ups have become multimillion-dollar businesses by bootstrapping financing themselves.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/02/business/smallbusiness/no-venture-capital-needed-or-wanted.html">Entrepreneurship &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Silicon Valley Finds Trumpâs Disruption Unwelcome" src="https://static01.nyt.com/images/2016/06/02/business/02TRUMPTECH/02TRUMPTECH-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Silicon Valley Finds Trumpâs Disruption Unwelcome</strong> <span class="divider"> | </span></span> There may be no love lost between Donald Trump and the tech world, but he is likely to need tech backers as his campaign turns to the general election.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/02/technology/silicon-valley-finds-trumps-disruption-unwelcome.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/06/01/us/politics/donald-trump-university.html">Former Trump University Workers Call the School a âLieâ and a âSchemeâ in Testimony</a> </span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Treasury Imposes Sanctions on North Korea, Cutting Access to Banks" src="https://static01.nyt.com/images/2016/06/02/world/02SANCTIONS/02SANCTIONS-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Treasury Imposes Sanctions on North Korea, Cutting Access to Banks</strong> <span class="divider"> | </span></span> The Treasury, employing techniques used on Iran, wants to cut Pyongyang off from the American financial system with what are known as secondary sanctions.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/02/world/asia/treasury-imposes-sanctions-on-north-korea.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Why the World Is Drawing Battle Lines Against American Tech Giants" src="https://static01.nyt.com/images/2016/06/01/business/02STATE/02STATE-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Why the World Is Drawing Battle Lines Against American Tech Giants</strong> <span class="divider"> | </span></span> European efforts to rein in the largest American tech companies are only a taste of what countries like Brazil, India and China are likely to do.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/02/technology/why-the-world-is-drawing-battle-lines-against-american-tech-giants.html">State of the Art &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="E.C.B. Expected to Keep Status Quo as Inflation Shows Signs of Rising" src="https://static01.nyt.com/images/2016/06/03/business/03ecb/03ecb-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>E.C.B. Expected to Keep Status Quo as Inflation Shows Signs of Rising</strong> <span class="divider"> | </span></span> Analysts say the central bank is entering a period of inaction, following a series of aggressive moves, as the eurozone economy slowly improves.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/03/business/international/ecb-interest-rates-meeting.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Oracle Hit With Whistle-Blower Lawsuit Over Cloud Accounting</strong> <span class="divider"> | </span></span> Svetlana Blackburn, a former senior finance manager, sued Oracle claiming that she was fired in retaliation for complaining about improper accounting practices in Oracleâs cloud services business.<br /><span class="kicker"><a href="//www.reuters.com/article/oracle-lawsuit-whistleblower-idUSL1N18T2AD">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Automakers Still Selling Cars With Defective Takata Airbags" src="https://static01.nyt.com/images/2016/06/02/business/02AIRBAG-web-1/02AIRBAG-web-1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Automakers Still Selling Cars With Defective Takata Airbags</strong> <span class="divider"> | </span></span> New models from Toyota, Volkswagen, Fiat Chrysler and Mitsubishi are still being fitted with defective airbags and will need to be eventually recalled.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/02/business/automakers-still-selling-cars-with-riskiest-takata-airbags.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/reuters/2016/06/01/business/01reuters-usa-autos.html">May U.S. Auto Sales Drop for GM and Ford</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>How the Feds Pulled Off the Biggest Insider-Trading Investigation in U.S. History</strong> <span class="divider"> | </span></span> Federal prosecutors in New York have racked up 91 convictions and collected almost $2 billion in fines in about seven years. <br /><span class="kicker"><a href="//www.bloomberg.com/graphics/2016-insider-trading/">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Congress Begins Inquiry Into New York Fedâs Handling of Online Heist</strong> <span class="divider"> | </span></span> The chairman of the House Committee on Science, Space and Technology has asked New York Fed officials to brief the committee on its handling of a security breach, which led to millions being stolen from the Bangladesh central bankâs account there.<br /><span class="kicker"><a href="//www.wsj.com/articles/congress-launches-inquiry-into-n-y-fed-handling-of-bank-of-bangladesh-cyberheist-1464795338?mod=pls_whats_news_us_business_f">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Asian Regulators Said to Ask Banks to Reveal Panama Papersâ Links </strong> <span class="divider"> | </span></span> Regulators in Hong Kong and Singapore have asked banks doing business there to disclose if they have dealings with entities and individuals named in the leak documents known as the Panama Papers, Reuters reports, citing people familiar with the requests.<br /><span class="kicker"><a href="//www.reuters.com/article/us-panama-tax-hongkong-exclusive-idUSKCN0YN3TE">REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Trans-Pacific Partnership Supporters Pin Hopes on Lame-Duck Vote" src="https://static01.nyt.com/images/2016/06/02/business/02TRADE-web/02TRADE-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Trans-Pacific Partnership Supporters Pin Hopes on Lame-Duck Vote</strong> <span class="divider"> | </span></span> The certainty of President Obamaâs successor rejecting the agreement has advocates of the pact pushing for a vote before 2017.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/02/business/trans-pacific-partnership-supporters-pin-hopes-on-lame-duck-vote.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Mitsubishi Materials Apologizes to Chinese World War II Laborers" src="https://static01.nyt.com/images/2016/06/02/world/02MITSUBISHI-1/02MITSUBISHI-1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Mitsubishi Materials Apologizes to Chinese World War II Laborers</strong> <span class="divider"> | </span></span> Three survivors of its predecessor companyâs mines will each receive about $15,000 under an agreement intended to be used as a template for future settlements.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/02/world/asia/mitsubishi-china-ww2-apology.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Abe to Delay Putting Japanâs Sales Tax Increase Into Effect" src="https://static01.nyt.com/images/2016/06/02/business/02yen/02yen-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Abe to Delay Putting Japanâs Sales Tax Increase Into Effect</strong> <span class="divider"> | </span></span> While the prime ministerâs decision was widely expected, it amounts to an acknowledgment that the countryâs economy remains fragile.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/02/business/international/abe-to-delay-implementing-increase-in-japan-sales-tax.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Founder of Theranos Falls From Highest Perch Off Forbes List" src="https://static01.nyt.com/images/2016/06/02/business/02HOLMES/02HOLMES-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Founder of Theranos Falls From Highest Perch Off Forbes List</strong> <span class="divider"> | </span></span> The business publication removed the founder, Elizabeth Holmes, from atop its list of Americaâs richest self-made women after it said her wealth had toppled from $4.5 billion to $0.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/02/business/elizabeth-holmes-founder-of-theranos-falls-from-highest-perch-off-forbes-list.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/06/02/morning-agenda-uber-receives-3-5-billion-from-saudi-arabia/"
+					data-title="Morning Agenda: Uber Receives $3.5 Billion from Saudi Arabia"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Payday Loan Industry Could Soon Be Gutted | Sumner Redstone&#039;s Granddaughter Sides With Viacom Directors&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/02/morning-agenda-uber-receives-3-5-billion-from-saudi-arabia/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":49,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

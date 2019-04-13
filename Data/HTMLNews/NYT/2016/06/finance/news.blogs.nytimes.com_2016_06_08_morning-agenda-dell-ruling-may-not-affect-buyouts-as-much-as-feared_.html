@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004459130"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1465381090" />
+<meta name="PUD" content="20160608" />
+<meta name="pdate" content="20160608" />
+<meta name="ptime" content="20160608061810" />
+<meta name="utime" content="20160608101810" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-06-08T10:18:10-04:00" />
+<meta name="DISPLAYDATE" content="June 8, 2016" />
+<meta name="dat" content="June 8, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Kerviel, Jerome;Laplanche, Renaud;McClendon, Aubrey K;Redstone, Sumner M">
+<meta name="des" content="Banking and Financial Institutions;Dodd-Frank Wall Street Reform and Consumer Protection Act (2010);European Sovereign Debt Crisis (2010- );Furniture;Hedge Funds;Insurance;Legal Profession;Mergers, Acquisitions and Divestitures;Private Equity;Real Estate Investment Trusts;Regulation and Deregulation of Industry;Start-ups;Suicides and Suicide Attempts;Suits and Litigation (Civil)">
+<meta name="org" content="Covington &amp; Burling;Design Within Reach;Deutsche Borse AG;EMI Group PLC;European Union;Herman Miller Inc;House Financial Services Committee;Justice Department;Lending Club;London Stock Exchange;National Amusements Inc;Salesforce.com Inc;Securities and Exchange Commission;Societe Generale;Terra Firma Capital Partners Ltd;The Blackstone Group;Tribune Publishing Company;Valeant Pharmaceuticals International Inc;Viacom Inc">
+<meta name="ticker" content="Herman Miller Inc|MLHR|NASDAQ;Societe Generale|SCGLY|Other OTC;The Blackstone Group|BX|NYSE;Tribune Publishing Company|TPUB|NYSE;Valeant Pharmaceuticals International Inc|VRX|NYSE;Viacom Inc|VIAB|NASDAQ" />
+<meta property="article:tag" content="Kerviel Jerome" />
+<meta property="article:tag" content="Laplanche Renaud" />
+<meta property="article:tag" content="McClendon Aubrey K" />
+<meta property="article:tag" content="Redstone Sumner M" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Dodd-Frank Wall Street Reform and Consumer Protection Act (2010)" />
+<meta property="article:tag" content="European Sovereign Debt Crisis (2010- )" />
+<meta property="article:tag" content="Furniture" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Insurance" />
+<meta property="article:tag" content="Legal Profession" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Real Estate Investment Trusts" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Suicides and Suicide Attempts" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="Covington &amp; Burling" />
+<meta property="article:tag" content="Design Within Reach" />
+<meta property="article:tag" content="Deutsche Borse AG" />
+<meta property="article:tag" content="EMI Group PLC" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="Herman Miller Inc" />
+<meta property="article:tag" content="House Financial Services Committee" />
+<meta property="article:tag" content="Justice Department" />
+<meta property="article:tag" content="Lending Club" />
+<meta property="article:tag" content="London Stock Exchange" />
+<meta property="article:tag" content="National Amusements Inc" />
+<meta property="article:tag" content="Salesforce.com Inc" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Societe Generale" />
+<meta property="article:tag" content="Terra Firma Capital Partners Ltd" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="Tribune Publishing Company" />
+<meta property="article:tag" content="Valeant Pharmaceuticals International Inc" />
+<meta property="article:tag" content="Viacom Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Kerviel Jerome,Laplanche Renaud,McClendon Aubrey K,Redstone Sumner M,Banking and Financial Institutions,Dodd-Frank Wall Street Reform and Consumer Protection Act (2010),European Sovereign Debt Crisis (2010- ),Furniture,Hedge Funds,Insurance,Legal Profession,Mergers Acquisitions and Divestitures,Private Equity,Real Estate Investment Trusts,Regulation and Deregulation of Industry,Start-ups,Suicides and Suicide Attempts,Suits and Litigation (Civil),Covington &amp; Burling,Design Within Reach,Deutsche Borse AG,EMI Group PLC,European Union,Herman Miller Inc,House Financial Services Committee,Justice Department,Lending Club,London Stock Exchange,National Amusements Inc,Salesforce.com Inc,Securities and Exchange Commission,Societe Generale,Terra Firma Capital Partners Ltd,The Blackstone Group,Tribune Publishing Company,Valeant Pharmaceuticals International Inc,Viacom Inc,DealBook" />
+<meta name="news_keywords" content="Furniture,Personal finance,Startup" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F06%2F08%2Fmorning-agenda-dell-ruling-may-not-affect-buyouts-as-much-as-feared%2F" title="Morning Agenda: Dell Ruling May Not Affect Buyouts as Much as Feared" />
+<meta name="description" content="The Merger That Wasn&#8217;t? &#124; Renaud Laplanche Said to Consider Lending Club Takeover" />
+<meta name="hdl" content="Morning Agenda: Dell Ruling May Not Affect Buyouts as Much as Feared" />
+<meta property="og:title" content="Morning Agenda: Dell Ruling May Not Affect Buyouts as Much as Feared" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/06/08/morning-agenda-dell-ruling-may-not-affect-buyouts-as-much-as-feared/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="The Merger That Wasn&#8217;t? &#124; Renaud Laplanche Said to Consider Lending Club Takeover" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Dell Ruling May Not Affect Buyouts as Much as Feared" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/06/08/morning-agenda-dell-ruling-may-not-affect-buyouts-as-much-as-feared/" />
+<meta name="twitter:description" content="The Merger That Wasn&#8217;t? &#124; Renaud Laplanche Said to Consider Lending Club Takeover" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/06/07/what-were-reading-160/' />
+<link rel='next' title='Morning Agenda:  A Bearish George Soros Trades Again' href='//news.blogs.nytimes.com/2016/06/09/morning-agenda-a-bearish-george-soros-trades-again/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/06/08/morning-agenda-dell-ruling-may-not-affect-buyouts-as-much-as-feared/' />
+<link rel='shortlink' href='//nyti.ms/217fwHT' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/06/08/morning-agenda-dell-ruling-may-not-affect-buyouts-as-much-as-feared/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Dell Ruling May Not Affect Buyouts as Much as Feared - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5000 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Dell Ruling May Not Affect Buyouts as Much as Feared        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/06/08/morning-agenda-dell-ruling-may-not-affect-buyouts-as-much-as-feared/"
+	 data-title="Morning Agenda: Dell Ruling May Not Affect Buyouts as Much as Feared"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;The Merger That Wasn&#039;t? | Renaud Laplanche Said to Consider Lending Club Takeover&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/08/morning-agenda-dell-ruling-may-not-affect-buyouts-as-much-as-feared/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 8, 2016 6:18 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Dell Ruling May Not Affect Buyouts as Much as Feared</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-06-08T10:18:10+00:00" itemprop="datePublished">June 8, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">June 8, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5000 post type-post status-publish hentry category-dealbook tag-banking-and-financial-institutions tag-covington-burling tag-design-within-reach tag-deutsche-borse-ag tag-dodd-frank-wall-street-reform-and-consumer-protection-act-2010 tag-emi-group-plc tag-european-sovereign-debt-crisis-2010 tag-european-union tag-furniture tag-hedge-funds tag-herman-miller-inc tag-house-financial-services-committee tag-insurance tag-justice-department tag-kerviel-jerome tag-laplanche-renaud tag-legal-profession tag-lending-club tag-london-stock-exchange tag-mcclendon-aubrey-k tag-mergers-acquisitions-and-divestitures tag-national-amusements-inc tag-private-equity tag-real-estate-investment-trusts tag-redstone-sumner-m tag-regulation-and-deregulation-of-industry tag-salesforce-com-inc tag-securities-and-exchange-commission tag-societe-generale tag-start-ups tag-suicides-and-suicide-attempts tag-suits-and-litigation-civil tag-terra-firma-capital-partners-ltd tag-the-blackstone-group tag-tribune-publishing-company tag-valeant-pharmaceuticals-international-inc tag-viacom-inc per-kerviel-jerome per-laplanche-renaud per-mcclendon-aubrey-k per-redstone-sumner-m des-banking-and-financial-institutions des-dodd-frank-wall-street-reform-and-consumer-protection-act-2010 des-european-sovereign-debt-crisis-2010 des-furniture des-hedge-funds des-insurance des-legal-profession des-mergers-acquisitions-and-divestitures des-private-equity des-real-estate-investment-trusts des-regulation-and-deregulation-of-industry des-start-ups des-suicides-and-suicide-attempts des-suits-and-litigation-civil org-covington-burling org-design-within-reach org-deutsche-borse-ag org-emi-group-plc org-european-union org-herman-miller-inc org-house-financial-services-committee org-justice-department org-lending-club org-london-stock-exchange org-national-amusements-inc org-salesforce-com-inc org-securities-and-exchange-commission org-societe-generale org-terra-firma-capital-partners-ltd org-the-blackstone-group org-tribune-publishing-company org-valeant-pharmaceuticals-international-inc org-viacom-inc news_keywords-furniture news_keywords-personal-finance news_keywords-startup" id="post-5000">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Dell Ruling May Not Affect Buyouts as Much as Feared</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-06-08T10:18:10+00:00" itemprop="datePublished">June 8, 2016 6:18 am</time>
+			<!-- date updated --><span class="visually-hidden updated">June 8, 2016 6:18 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/06/08/morning-agenda-dell-ruling-may-not-affect-buyouts-as-much-as-feared/" data-title="Morning Agenda: Dell Ruling May Not Affect Buyouts as Much as Feared" data-description="The Merger That Wasn&#039;t? | Renaud Laplanche Said to Consider Lending Club Takeover">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DELL RULING MAY NOT AFFECT BUYOUTS AS MUCH AS FEARED</strong> <span class="divider"> | </span></span> Will a judgeâs ruling that buyers underpaid for Dell when it was taken private change buyouts more broadly? Probably not,<br />
+<a href="//www.nytimes.com/2016/06/08/business/dealbook/ruling-on-dell-buyout-may-not-be-precedent-some-fear.html?ref=dealbook&#038;_r=0">Steven Davidoff Solomon argues in the Deal Professor column.</a></p>
+<p class="story-body-text" itemprop="articleBody">The purpose of appraisal rights is not to say what a companyâs market price should have been â it is to give shareholders a remedy if they think the negotiated deal is just not good enough. <b>So the appraisal is based on âfair value,â which can have a different meaning to âmarket price.â</b> This difference is at the heart of this decision and courts are struggling to figure out what âfair valueâ is in light of the emergence of hedge funds specializing in exercising appraisal rights. </p>
+<p class="story-body-text" itemprop="articleBody"><b>The proceedings were historically a corporate finance exercise with each party hiring an expert to value the company.</b> In the case of the Dell buyout, Glenn Hubbard, dean of Columbiaâs business school and former chairman of the Council of Economic Advisers, calculated the fair value to be $12.68. Brad Cornell, a professor at the University of California, Los Angeles, calculated on behalf of the dissident shareholders that the value was $28.61. </p>
+<p class="story-body-text" itemprop="articleBody">Frustration over this sort of battle among experts has led Delaware courts to change how they calculate appraisal prices. Instead of puzzling through conflicting opinions, <b>judges in recent cases have looked at the merger price to determine if the price was fair.</b> So long as the price paid was negotiated through an armâs-length process, the court deemed this to be fair value. The underlying assumption was that the fairly bargained market price was fair value. </p>
+<p class="story-body-text" itemprop="articleBody">Vice Chancellor J. Travis Laster of the Delaware Court of Chancery found that the process was not entirely complete because the Dell board did not reach out to all parties. He also pointed out that because <b>the pricing was based on a leveraged buyout model, it was not a market price.</b> So the judge determined that the market price was not a reliable one because it showed the price the private equity firm could pay, not one that was âfair value.â</p>
+<p class="story-body-text" itemprop="articleBody">So the judge conducted an old-style appraisal proceeding, using a discounted cash flow analysis to compute âfair valueâ using the expert opinions. </p>
+<p class="story-body-text" itemprop="articleBody">This is why the case is unlikely to be a game changer. The market price is likely to continue to be the price used because it is so difficult to compute âfair valueâ otherwise. The effect it might have â <b>forcing would-be managers to work hard to justify buying their own companies â would be better for shareholders.</b> </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>THE MERGER THAT WASNâT? </strong> <span class="divider"> | </span></span> The 2014 merger of Herman Miller, the famed purveyor of classics like the Eames lounge chair, and Design Within Reach, the emporium for sleek modern furnishings, seemed a no-brainer. But a lawsuit brought by two longtime shareholders <b>contends that the $154 million merger never happened at all</b>,<br />
+<a href="//www.nytimes.com/2016/06/08/business/dealbook/design-within-reach-merger-never-happened-lawsuit-claims.html?ref=dealbook">Michael J. de la Merced reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">The lead plaintiff, Andrew Franklin, president of UTR, an  investment firm, called it <b>âthe most-botched merger in Delaware history.â</b> </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Franklin and another shareholder, Charles Almond, are seeking unspecified damages and their argument could theoretically lead to the court ordering that the merger be rescinded and DWR carved out of the company. The lawsuit is in the discovery phrase and may not succeed, but it <b>threatens to mar a merger that was seen as an important combination in the world of high-end furniture.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Representatives for Herman Miller and the four men who made up DWRâs board declined to comment. In court filings, they denied the allegations and contended that âthe plaintiffs suffered no damages.â </p>
+<p class="story-body-text" itemprop="articleBody">The plaintiffs say that because of a series of technical mistakes, Herman Millerâs agreement to buy Design Within Reach never took effect.<br />
+A series of moves by DWRâs directors, led by Glenn Krevlin, a hedge fund manager, sought to squeeze out minority shareholders, the lawsuit says. The capstone of that campaign proved to be the Herman Miller deal. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Mr. Franklin contends that DWR never successfully carried out a reverse split of its shares</b>, meaning that Herman Miller never collected the roughly 90 percent of the retailers stock needed to carry out the takeover. </p>
+<p class="story-body-text" itemprop="articleBody">âOnce you donât know the capital structure, what are these shares worth?â Mr. Franklin asked. âThey didnât do the split right.â </p>
+<p class="story-body-text" itemprop="articleBody">In February, shareholders received a notice from Design Within Reach acknowledging âdefective corporate acts,â but contending that it had remedied those mistakes under a provision of Delaware law. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Krevlinâs investment firm had made a $15 million investment in DWR that, along with the 17 percent of DWR it already owned, gave it 91 percent of the retailer.  </p>
+<p class="story-body-text" itemprop="articleBody">Several months later, the company de-registered with the Securities and Exchange Commission, ending public filings, but still trading over the counter as a penny stock. In 2010, DWR sought to reduce its total authorized shares from 31.5 million to just 630,000. Mr Franklin argued that while DWR declared the reserve split effective in August 2010, <b>it had not notified minority shareholders of the move</b>. When an agreement was struck with Herman Miller, it said that DWR had 7.5 million authorized shares, with 6.6 million outstanding. </p>
+<p class="story-body-text" itemprop="articleBody">The lawsuit contends that because of failures to comply with Delaware law, DWR had 30 million shares outstanding.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> The House Financial Services Committee will hold a hearing on <b>terrorism financing</b> at 9 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>RENAUD LAPLANCHE SAID TO CONSIDER LENDING CLUB TAKEOVER</strong> <span class="divider"> | </span></span> Renaud Laplanche, who helped found Lending Club, has been speaking to private equity firms and banks about <b>financing a buyout of the online lender</b>,<br />
+<a href="//www.reuters.com/article/us-lendingclub-lbo-exclusive-idUSKCN0YT2R4">Reuters reports</a>, citing people familiar with the matter. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Laplanche, who left Lending Club after an internal investigation found the company had falsified documentation when selling loans, has approached firms about a possible bid to take the company private. <b>The talks were only preliminary</b>, the sources told Reuters. Mr. Laplanche and Lending Club declined to comment. </p>
+<p class="story-body-text" itemprop="articleBody">It could be difficult for Mr. Laplanche to secure funding while <b>the company is being investigated</b> by both the Justice Department and the New York Financial Services Department. The regulatory issues are already putting pressure on buyers of the companyâs loans, some of whom have already paused their purchases, squeezing a key source of funding for the company. </p>
+<p class="story-body-text" itemprop="articleBody">On Tuesday, the company <b>abruptly canceled its annual meeting and rescheduled it</b> for June 28, saying it was not yet ready to provide stockholders with a complete report of the state of the company. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Gannett Says It Is Determined to Woo Tribune Publishing" src="https://static01.nyt.com/images/2016/06/08/business/08DB-TRIBUNE/08DB-TRIBUNE-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Gannett Says It Is Determined to Woo Tribune Publishing</strong> <span class="divider"> | </span></span> Tribune Publishing rejected Gannettâs latest offer, but its shareholders showed support for the deal, giving Gannett fuel to continue its battle.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/08/business/dealbook/gannett-says-it-is-determined-to-woo-tribune-publishing.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/06/08/business/dealbook/tribune-publishing-vote-hands-board-a-rebuke.html">Breakingviews: Tribune Publishing Vote Hands Board a Rebuke</a> <time class="timestamp" data-eastern-timestamp="12:58 PM" datetime="2016-06-07" data-utc-timestamp="1465318729000">12:58 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tribune Publishing Vote Hands Board a Rebuke</strong> <span class="divider"> | </span></span> More than 40 percent of shareholders withheld votes for Tribuneâs slate of directors, virtually unheard of when proxy advisers support the candidates, Jennifer Saba writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/08/business/dealbook/tribune-publishing-vote-hands-board-a-rebuke.html">Breakingviews &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/06/08/business/dealbook/gannett-says-it-is-determined-to-woo-tribune-publishing.html">Gannett Says It Is Determined to Woo Tribune Publishing</a> <time class="timestamp" data-eastern-timestamp="4:39 PM" datetime="2016-06-07" data-utc-timestamp="1465331950000">4:39 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche BÃ¶rse Workers Demand a Change of Headquarters </strong> <span class="divider"> | </span></span> A group representing Deutsche BÃ¶rseâs workers has demanded that the company formed as part of the proposed takeover of London Stock Exchange Group be based in Frankfurst instead of London, Bloomberg reports, citing a letter to staff and shareholders. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-06-07/deutsche-boerse-workers-demand-headquarters-change-in-lse-deal">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="SociÃ©tÃ© GÃ©nÃ©rale Is Ordered to Pay Trader Who Almost Ruined It" src="https://static01.nyt.com/images/2016/06/08/business/08DB-ROGUE/08DB-ROGUE-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SociÃ©tÃ© GÃ©nÃ©rale Is Ordered to Pay Trader Who Almost Ruined It</strong> <span class="divider"> | </span></span> JÃ©rÃ´me Kerviel persuaded a French labor tribunal that he should not have been fired for his trades, which nearly brought about the demise of the bank.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/08/business/dealbook/french-bank-is-ordered-to-pay-trader-who-almost-ruined-it.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sovereign Debt Rule Changes Threaten E.U. Bank Finances </strong> <span class="divider"> | </span></span> Expected changes to regulation could lead to a 30 percent increase in capital requirements for the main banks in the European Union, according to research to be published on Wednesday by the credit rating agency Fitch. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/d76b51a4-2ccb-11e6-a18d-a96ab29e3c95.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz4AlMmHbKZ">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstone Bids to Buy Insurance Broker Acrisure </strong> <span class="divider"> | </span></span> Blackstone Group is in advanced discussions to buy Acrisure, the insurance brokerage, in a deal that could value it at over $2 billion including debt, Reuters reports, citing people familiar with the matter. <br /><span class="kicker"><a href="//www.reuters.com/article/us-acrisure-m-a-blackstone-exclusive-idUSKCN0YT2QA?feedType=RSS&#038;feedName=innovationNews"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Activist Investors Have a New Favorite Target: REITs" src="https://static01.nyt.com/images/2016/06/07/business/08activistreit/08activistreit-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Activist Investors Have a New Favorite Target: REITs</strong> <span class="divider"> | </span></span> Once a relatively quiet backwater, real estate investment trusts are increasingly being shaken up by investors seeking to squeeze out value.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/08/realestate/commercial/activist-investors-have-a-new-favorite-target-reits.html">Square Feet &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/06/08/realestate/commercial/recent-commercial-real-estate-transactions.html">Recent Commercial Real Estate Transactions</a> <time class="timestamp" data-eastern-timestamp="6:09 PM" datetime="2016-06-07" data-utc-timestamp="1465337381000">6:09 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Salesforce to Invest $50 Million in Start-Ups </strong> <span class="divider"> | </span></span> Salesforce will also create an incubator for early-stage cloud start-ups as part of its push to foster an ecosystem of applications that run on its cloud-computing platform. <br /><span class="kicker"><a href="//www.wsj.com/articles/salesforce-to-invest-50-million-in-startups-launch-incubator-1465327004?mod=pls_whats_news_us_business_f">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Republicansâ Plan to Dismantle Dodd-Frank Rekindles a Debate" src="https://static01.nyt.com/images/2016/06/07/business/cnbc-regs/cnbc-regs-square320.png"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Republicansâ Plan to Dismantle Dodd-Frank Rekindles a Debate</strong> <span class="divider"> | </span></span> Eight years after the financial crisis, easing the oversight of big banks is still on the agenda for some Republicans.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/08/business/dealbook/republicans-plan-to-dismantle-dodd-frank-rekindles-a-debate.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Guy Hands Resumes Legal Fight With Citigroup Over EMI Deal" src="https://static01.nyt.com/images/2016/06/08/business/08DB-EMI/08DB-EMI-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Guy Hands Resumes Legal Fight With Citigroup Over EMI Deal</strong> <span class="divider"> | </span></span> Mr. Hands, the founder of the private equity firm Terra Firma, claims that Citigroup executives misled him before a deal for EMI in 2007.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/08/business/dealbook/guy-hands-resumes-legal-fight-with-citigroup-over-emi-deal.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Sumner Redstone Legal Battle Moves to a Massachusetts Court" src="https://static01.nyt.com/images/2016/06/08/business/08redstone1/08redstone1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sumner Redstone Legal Battle Moves to a Massachusetts Court</strong> <span class="divider"> | </span></span> Two men challenge their dismissals from the trust that will eventually control Sumner Redstoneâs companies, which include CBS and Viacom.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/08/business/media/sumner-redstone-legal-battle-moves-to-a-massachusetts-court.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/06/07/business/media/national-amusements-alters-viacom-bylaws-to-stymie-sale-of-paramount.html">National Amusements Alters Viacom Bylaws to Stymie Sale of Paramount</a> <time class="timestamp" data-eastern-timestamp="7:40 PM" datetime="2016-06-06" data-utc-timestamp="1465256434000">7:40 PM</time></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/06/07/business/media/sumner-redstones-viacom.html">Questions Surround Sumner Redstoneâs New Team of Representatives</a> <time class="timestamp" data-eastern-timestamp="10:32 AM" datetime="2016-06-06" data-utc-timestamp="1465223531000">10:32 AM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Two More Top Law Firms Raise Associatesâ Pay</strong> <span class="divider"> | </span></span> Now, three firms are increasing their pay scales after a nine-year drought for elite junior lawyers.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/08/business/dealbook/two-more-top-law-firms-raise-associates-pay.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Longtime U.S. Prosecutor to Join Covington &amp; Burling" src="https://static01.nyt.com/images/2016/06/08/business/08DB-DOOR/08DB-DOOR-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Longtime U.S. Prosecutor to Join Covington &amp; Burling</strong> <span class="divider"> | </span></span> The prosecutor, Arlo Devlin-Brown, went after Wall Street giants like SAC Capital before leading the United States attorneyâs public corruption unit.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/08/business/dealbook/longtime-us-prosecutor-to-join-covington-burling.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Oklahoma Police Find No Evidence of McClendon Suicide </strong> <span class="divider"> | </span></span> Oklahoma City police said on Tuesday that an inquiry had found no evidence suggesting that Aubrey McClendon, the former chief executive of Chesapeake Energy, committed suicide when he died in a car crash in March, but acknowledged that his state of mind at the time was unknowable.<br /><span class="kicker"><a href="//www.reuters.com/article/us-chesapeake-energy-mcclendon-idUSKCN0YT2OD">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Valeant Reports First-Quarter Loss and Cuts Its Forecast" src="https://static01.nyt.com/images/2016/06/08/business/08valeant/08valeant-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Valeant Reports First-Quarter Loss and Cuts Its Forecast</strong> <span class="divider"> | </span></span> Valeant, the pharmaceuticals company facing questions about its business and accounting practices, said it lost nearly $374 million in the quarter.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/08/business/valeant-q1-earnings.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="E-Trade to Introduce Robo-Advisory Service" src="https://static01.nyt.com/images/2016/06/07/business/08db-robo/08db-robo-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>E-Trade to Introduce Robo-Advisory Service</strong> <span class="divider"> | </span></span> The new service is primarily a âset it and forget itâ approach that uses exchange-traded funds and automatic portfolio updating.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/08/business/dealbook/e-trade-to-introduce-robo-advisory-service.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Greece Secures Bailout Money With Airport Real Estate Deal" src="https://static01.nyt.com/images/2016/06/08/business/08greekairport/08greekairport-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Greece Secures Bailout Money With Airport Real Estate Deal</strong> <span class="divider"> | </span></span> The privatization deal will fulfill a key condition for the money, but it will also displace 3,000 refugees living in a makeshift settlement.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/08/business/international/greece-secures-bailout-money-with-airport-real-estate-deal.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Why Britain Is Edging Toward âBrexitâ" src="https://static01.nyt.com/images/2016/06/07/upshot/07UP-Brexit/07UP-Brexit-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Why Britain Is Edging Toward âBrexitâ</strong> <span class="divider"> | </span></span> Sometimes, one issue can have a big influence on an election. Immigration may turn out to be that issue on June 23.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/08/upshot/why-britain-is-edging-toward-brexit.html">The Upshot &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/06/08/world/europe/britain-brexit-vote-facts.html">Money, Jobs and Sovereignty: Myth vs. Reality Ahead of âBrexitâ Vote</a> </span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/06/08/world/europe/european-union-britain-pew-poll.html">Disenchantment with E.U. Grows, Poll Finds</a> <time class="timestamp" data-eastern-timestamp="6:11 PM" datetime="2016-06-07" data-utc-timestamp="1465337486000">6:11 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/06/08/morning-agenda-dell-ruling-may-not-affect-buyouts-as-much-as-feared/"
+					data-title="Morning Agenda: Dell Ruling May Not Affect Buyouts as Much as Feared"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;The Merger That Wasn&#039;t? | Renaud Laplanche Said to Consider Lending Club Takeover&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/08/morning-agenda-dell-ruling-may-not-affect-buyouts-as-much-as-feared/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":56,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

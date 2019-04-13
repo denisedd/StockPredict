@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004328965"><meta name="author" content="Sei Chong" />
+<meta name="CLMST" content="Sei Chong" />
+<meta name="byl" content="Sei Chong" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1460713564" />
+<meta name="PUD" content="20160415" />
+<meta name="pdate" content="20160415" />
+<meta name="ptime" content="20160415054604" />
+<meta name="utime" content="20160415094604" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-04-15T09:46:04-04:00" />
+<meta name="DISPLAYDATE" content="April 15, 2016" />
+<meta name="dat" content="April 15, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Mayer, Marissa">
+<meta name="des" content="Hedge Funds;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Private Equity;Regulation and Deregulation of Industry;Venture Capital">
+<meta name="org" content="SOFTBANK Corporation;Verizon Communications Inc;Yahoo! Inc">
+<meta name="ticker" content="SOFTBANK Corporation|SFTBF|Other OTC;Verizon Communications Inc|VZ|NYSE;Yahoo! Inc|YHOO|NASDAQ" />
+<meta property="article:tag" content="Mayer Marissa" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="SOFTBANK Corporation" />
+<meta property="article:tag" content="Verizon Communications Inc" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Mayer Marissa,Hedge Funds,Initial Public Offerings,Mergers Acquisitions and Divestitures,Private Equity,Regulation and Deregulation of Industry,Venture Capital,SOFTBANK Corporation,Verizon Communications Inc,Yahoo! Inc,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F04%2F15%2Fmorning-agenda-yahoos-potential-bidders-frustrated-over-lack-of-figures%2F" title="Morning Agenda: Yahoo&#8217;s Potential Bidders Frustrated Over Lack of Figures" />
+<meta name="description" content="Regulators&#8217; Actions Dampen Wall Street&#8217;s Deal Making &#124; BATS Prices I.P.O. at $19 a Share" />
+<meta name="hdl" content="Morning Agenda: Yahoo&#039;s Potential Bidders Frustrated Over Lack of Figures" />
+<meta property="og:title" content="Morning Agenda: Yahoo&#039;s Potential Bidders Frustrated Over Lack of Figures" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/04/15/morning-agenda-yahoos-potential-bidders-frustrated-over-lack-of-figures/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Regulators&#8217; Actions Dampen Wall Street&#8217;s Deal Making &#124; BATS Prices I.P.O. at $19 a Share" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Yahoo&#039;s Potential Bidders Frustrated Over Lack of Figures" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/04/15/morning-agenda-yahoos-potential-bidders-frustrated-over-lack-of-figures/" />
+<meta name="twitter:description" content="Regulators&#8217; Actions Dampen Wall Street&#8217;s Deal Making &#124; BATS Prices I.P.O. at $19 a Share" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Five Banks Seen as Too Big to Fail' href='//news.blogs.nytimes.com/2016/04/14/morning-agenda-five-banks-seen-as-too-big-to-fail/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/04/15/what-were-reading-145/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/04/15/morning-agenda-yahoos-potential-bidders-frustrated-over-lack-of-figures/' />
+<link rel='shortlink' href='//nyti.ms/1SjdUv9' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/04/15/morning-agenda-yahoos-potential-bidders-frustrated-over-lack-of-figures/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Yahoo&#039;s Potential Bidders Frustrated Over Lack of Figures - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4592 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Yahoo&#8217;s Potential Bidders Frustrated Over Lack of Figures        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/04/15/morning-agenda-yahoos-potential-bidders-frustrated-over-lack-of-figures/"
+	 data-title="Morning Agenda: Yahoo&#8217;s Potential Bidders Frustrated Over Lack of Figures"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Regulators&#039; Actions Dampen Wall Street&#039;s Deal Making | BATS Prices I.P.O. at $19 a Share&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/04/15/morning-agenda-yahoos-potential-bidders-frustrated-over-lack-of-figures/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="April 15, 2016 5:46 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Yahoo&#8217;s Potential Bidders Frustrated Over Lack of Figures</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Sei Chong			</address>
+			<!-- date published --><time class="dateline " datetime="2016-04-15T09:46:04+00:00" itemprop="datePublished">April 15, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">April 15, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4592 post type-post status-publish hentry category-dealbook tag-hedge-funds tag-initial-public-offerings tag-mayer-marissa tag-mergers-acquisitions-and-divestitures tag-private-equity tag-regulation-and-deregulation-of-industry tag-softbank-corporation tag-venture-capital tag-verizon-communications-inc tag-yahoo-inc per-mayer-marissa des-hedge-funds des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-private-equity des-regulation-and-deregulation-of-industry des-venture-capital org-softbank-corporation org-verizon-communications-inc org-yahoo-inc" id="post-4592">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Yahoo&#8217;s Potential Bidders Frustrated Over Lack of Figures</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Sei Chong                </span>
+                <!-- date published --><time class="dateline " datetime="2016-04-15T09:46:04+00:00" itemprop="datePublished">April 15, 2016 5:46 am</time>
+			<!-- date updated --><span class="visually-hidden updated">April 15, 2016 5:46 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/04/15/morning-agenda-yahoos-potential-bidders-frustrated-over-lack-of-figures/" data-title="Morning Agenda: Yahoo&#8217;s Potential Bidders Frustrated Over Lack of Figures" data-description="Regulators&#039; Actions Dampen Wall Street&#039;s Deal Making | BATS Prices I.P.O. at $19 a Share">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>YAHOOâS POTENTIAL BIDDERS FRUSTRATED OVER LACK OF FIGURES</strong> <span class="divider"> | </span></span> As Yahoo gets ready to field bids for its core Internet business, potential suitors are wondering just what, exactly, is for sale, <a href="//www.nytimes.com/2016/04/15/business/dealbook/yahoos-suitors-uncoverfewfinancial-details.html"> Vindu Goel and Michael J. de la Merced write in DealBook</a>. Yahoo executives have informed potential bidders about the companyâs <a href="//www.nytimes.com/2016/04/07/technology/yahoo-paints-grim-financial-picture-as-deadline-for-bids-nears.html"> pessimistic financial outlook for this year</a>, but they have <b> refused to reveal projections for 2017 or answer questions about crucial parts of the business</b>. </p>
+<p class="story-body-text" itemprop="articleBody">âA 90-slide presentation shown to potential Yahoo bidders is dense with figures, but even people familiar with the companyâs operations <b> have struggled to make sense of them</b>,â Mr. Goel and Mr. de la Merced write. âAt the same time, Yahoo <b> devoted just a couple of slides to important strategies</b>, like its costly Hail Mary project to create an entirely new mobile search experience to leapfrog competitors like Google, Apple and Amazon.â </p>
+<p class="story-body-text" itemprop="articleBody">Yahooâs reluctance to share information has led to <b> speculation that the business is worse than the company has publicly disclosed</b>, which makes prospective bidders nervous. Monday is the deadline to submit bids, and Marissa Mayer, the chief executive, is likely to be asked about the bidding process on Tuesday, when Yahoo reports its quarterly earnings. Mr. Goel and Mr. de la Merced list who might be interested in Yahoo and who might pass: </p>
+<p class="story-body-text" itemprop="articleBody"><b> Likely to bid:</b> <b> Verizon Communications</b>, which has publicly expressed interest in buying Yahooâs core Internet business and merging it with its AOL division, plans to press forward with a bid, people briefed on the matter said. <b> The Daily Mail</b>, a British tabloid newspaper and website, said publicly that it had considered joining with potential investors, including one or more private equity firms, for a bid. The <b> private equity firm TPG</b> plans to make a solo bid in the first round, according to a person briefed on the matter.</p>
+<p class="story-body-text" itemprop="articleBody"><b> Unlikely to bid:</b> <b>Google</b> considered making an offer but is unlikely to proceed because it fears any deal would draw antitrust scrutiny, according to people briefed on the companyâs thinking. <b> AT&#038;T, CBS</b> and the investment firms <b>Silver Lake, Kohlberg Kravis Roberts and General Atlantic</b> are unlikely to bid, according to others briefed on their plans. <b> SoftBank</b>, the Japanese telecommunications giant that controls Yahoo Japan, does not plan to bid despite press reports to the contrary.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>REGULATORSâ ACTIONS DAMPEN WALL STREETâS DEAL MAKING</strong> <span class="divider"> | </span></span> Lawyers and bankers who handle blockbuster deals are feeling the chill from Washington as uncertainty over what regulators will approve dampens deal-making activity, <a href="//www.nytimes.com/2016/04/15/business/dealbook/the-winds-from-washington-chill-wall-streets-deal-making.html"> Leslie Picker writes in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody">One lawyer described <b> a depression that set over mergers and acquisitions</b> since regulators moved last week to block the Halliburton-Baker Hughes deal and introduced new rules to discourage American companies from moving overseas for tax purposes. A banker told Ms. Picker that <b> Wall Street had come to a grinding halt</b>. The advisers, who requested anonymity so as not to be seen at odds with the governmentâs decisions, say that during an election year, the <b> big, politically unpopular deals</b> may just have to wait.</p>
+<p class="story-body-text" itemprop="articleBody"> Almost <b> $340 billion worth of mergers have been withdrawn in 2016</b>, according to data compiled by Dealogic. Of the 26 deals pulled so far this year, including the Pfizer-Allergan merger, <b> the average deal size is $13 billion</b>, according to Dealogic. But that doesnât mean that deals have gone away. So far this year, <b>$282 billion worth of newly signed deals</b> have been announced, but thatâs over 2,800 deals, with <b> an average size of $100 million</b>. </p>
+<p class="story-body-text" itemprop="articleBody"> <b> âThe gargantuan deals, theyâre harder;</b> thereâs no question in my mind,â said Robert A. Profusek, who heads Jones Dayâs global mergers and acquisitions practice. âThe government has been tougher, but they would say: <b> âThatâs because you guys have been jamming these giant deals at us.</b> What do you expect us to do?â â </p>
+<p class="story-body-text" itemprop="articleBody"> Yet <b> bankers still see opportunities</b> even in this environment, Ms. Picker writes. Pharmaceutical stocks rose after the $152 billion Allergan-Pfizer merger was terminated last week as investors speculated which companies would become the next targets. And the slower growth and cheap financing that drove the deal-making frenzy last year have not gone away. <b> âI wouldnât call it a day yet on the M.&#038;A. wave,â</b> Mr. Profusek said.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b> Citigroup</b> holds its earnings conference call at 11 a.m. <b> Charles L. Evans</b>, president of the Federal Reserve Bank of Chicago, speaks at a JPMorgan Chase investor seminar at 12:50 p.m. The University of Michigan will release its <b> initial estimate of consumer sentiment in April</b> at 10 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BATS PRICES I.P.O. AT $19 A SHARE</strong> <span class="divider"> | </span></span> BATS Global Marketsâ second attempt at an initial public offering raised $252.7 million worth of shares at a price of $19 apiece, <a href="//www.nytimes.com/2016/04/15/business/dealbook/bats-tries-again-with-ipo-on-its-own-exchange.html"> Leslie Picker reports in DealBook</a>. That represents the <b> high end of the range</b> that the company had been marketing. BATS also <b> increased the number of shares to be sold</b> in the offering. </p>
+<p class="story-body-text" itemprop="articleBody">BATSâs investors sold <b> 13.3 million shares</b> in the offering. BATS did not receive any of the proceeds from the I.P.O. The I.P.O. price puts the <b> companyâs market value at $1.8 billion</b>, based on 95.7 million shares outstanding.</p>
+<p class="story-body-text" itemprop="articleBody">The shares, listed on BATSâs own exchange, which is based in Lenexa, Kan., are expected to begin trading on Friday under the ticker symbol BATS. The company is mindful of the <b> technical malfunctions that occurred during its first attempt to go public</b> in March 2012, which affected not just the trading of BATSâs own stock but also Appleâs. The errors caused the shares to be halted, the trades to be canceled and BATS to withdraw its first offering. This time around, BATS has <b> streamlined its servers</b> and <b> conducted 50,000 tests</b> for its auction system to handle the volume. If successful, the initial public offering <b>would be the biggest this year</b> so far.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:sei.chong@nytimes.com">sei.chong@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Carlyle Group Said to Be in Talks for Halliburton and Baker Hughes Assets</strong> <span class="divider"> | </span></span> The Carlyle Group is in talks to buy a package of oilfield services businesses from Halliburton and Baker Hughes that could be valued at more than $7 billion, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/halliburton-baker-hughes-in-talks-to-sell-assets-to-carlyle-group-1460658525"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Valeant Said to Ask Banks to Help It Review Asset Sale Options</strong> <span class="divider"> | </span></span> Valeant Pharmaceuticals has brought in investment banks including Goldman Sachs and Centerview Partners to review its options amid interest from buyout firms and other companies in a number of its businesses, Reuters reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/us-valeant-investmentbanks-idUSKCN0XB2TJ"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Chinaâs Growing Ardor for Overseas Shopping" src="https://static01.nyt.com/images/2016/04/15/business/db-chinaviews1/db-chinaviews1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinaâs Growing Ardor for Overseas Shopping</strong> <span class="divider"> | </span></span> A surge in Chinese buyers, many of them unknown in the West, requires a new level of due diligence because the logic of some deals is hard to follow, Rob Cox writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/15/business/dealbook/chinas-growing-ardor-for-overseas-shopping.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="A Tough Year for Banking Takes Shape" src="https://static01.nyt.com/images/2016/04/15/business/db-banks1/db-banks1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Tough Year for Banking Takes Shape</strong> <span class="divider"> | </span></span> The banks struggled with declining oil prices, low interest rates and choppy financial markets in the first quarter.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/15/business/dealbook/bank-of-america-and-wells-fargo-earnings.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Goldman Sachs Said to Seek Deep Cost Cuts</strong> <span class="divider"> | </span></span> Goldman Sachs is embarking on its biggest cost-cutting push in years as it tries to weather a slump in trading and deal making, Bloomberg reports, citing two people with knowledge of the effort.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-15/goldman-s-blankfein-said-to-demand-deepest-cost-cuts-in-years"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Bankâs Co-Head of M.&#038;A. Said to Resign</strong> <span class="divider"> | </span></span> Deutsche Bankâs co-head of mergers and acquisitions in the Americas, Anthony Whittemore, has resigned from the investment bank, Reuters reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/us-deutsche-bank-moves-whittemore-idUSKCN0XB2VH"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JPMorgan Chase Takes Stake in Global X</strong> <span class="divider"> | </span></span> JPMorgan Chaseâs asset management arm said that it had taken a passive, minority stake in Global X Management, an exchange-traded fund provider in New York, Reuters reports.  <br /><span class="kicker"><a href="//www.reuters.com/article/us-jpmorgan-globalx-etf-idUSKCN0XB1GA"> REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Malware Steals $4 Million From Banks in U.S. and Canada</strong> <span class="divider"> | </span></span> IBM researchers said that they have discovered a new type of malicious software that has been used to attack customers of 22 United States banks and two in Canada, resulting in the theft of roughly $4 million in the first few days of April, The Wall Street Journal reports.<br /><span class="kicker"><a href="//www.wsj.com/articles/new-malware-steals-4-million-at-u-s-canada-banks-1460670829"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="BlackRock, Hurt by Volatile Markets, Reports Slide in Profit" src="https://static01.nyt.com/images/2016/04/15/business/cnbc-blackrock/cnbc-blackrock-square320.png"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BlackRock, Hurt by Volatile Markets, Reports Slide in Profit</strong> <span class="divider"> | </span></span> For the first quarter, BlackRock said that its net earnings declined to $711 million, compared with $830 million in the quarter a year ago.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/15/business/dealbook/blackrock-hurt-by-volatile-markets-reports-slide-inprofit.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>MBK Partners Said to Seek $4 Billion for Buyout Fund</strong> <span class="divider"> | </span></span> The Asian private equity firm MBK Partners is seeking to raise up to $4 billion for a new buyout fund, The Wall Street Journal reports, citing people familiar with the situation.<br /><span class="kicker"><a href="//www.wsj.com/articles/asian-private-equity-firm-plans-big-4-billion-buyout-fund-1460698033"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Steven A. Cohen Opens Hedge Fund Firm</strong> <span class="divider"> | </span></span> Steven A. Cohen, chief executive of Point72 Asset Management, is listed as the owner of a new hedge fund firm, Stamford Harbor Capital, but said in a regulatory filing  that he would  ânot act in a supervisory capacity,â The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/steven-cohen-eyes-return-to-hedge-fund-world-1460667588"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tudor Investment Clients Said to Ask Return of $1 Billion</strong> <span class="divider"> | </span></span> Tudor Investment Corporation clients have asked to pull more than $1 billion from the hedge fund firm after three years of lackluster returns, Bloomberg reports, citing two people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-14/tudor-investors-ask-to-pull-more-than-1-billion-from-firm"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Bear Stearns Emails Show Its Financing Breaking Away" src="https://static01.nyt.com/images/2016/04/15/business/db-streetscene2/db-streetscene2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bear Stearns Emails Show Its Financing Breaking Away</strong> <span class="divider"> | </span></span> In the summer of 2007 Bear liquidated two hedge funds, setting in motion a loss of confidence that ultimately decimated the firm, William D. Cohan writes in the Street Scene column.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/15/business/dealbook/bear-stearns-emails-show-its-financing-breaking-away.html">Street Scene &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Venture Capital Funding Falls in First Quarter</strong> <span class="divider"> | </span></span> Financing for American start-ups in the first quarter fell 25 percent from the fourth quarter to $13.9 billion, the largest quarterly decline on record since the dot-com bust, according to data from Dow Jones VentureSource. <br /><span class="kicker"><a href="//www.wsj.com/articles/startup-investors-hit-the-brakes-1460676478"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CIA-Backed Fund Said to Invest in Social Media Mining Start-Ups</strong> <span class="divider"> | </span></span> Among 38 previously undisclosed companies receiving investments from In-Q-Tel, the CIA-backed venture capital firm, several focus on social media mining and surveillance, according to a document obtained by The Intercept.<br /><span class="kicker"><a href="https://theintercept.com/2016/04/14/in-undisclosed-cia-investments-social-media-mining-looms-large/">THE INTERCEPT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="House Democrats Call for Curbs on Required Arbitration" src="https://static01.nyt.com/images/2015/11/01/business/dealbook/01arbitration-mobile/01arbitration-mobile-thumbStandard-v2.png"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>House Democrats Call for Curbs on Required Arbitration</strong> <span class="divider"> | </span></span> Legislators urged curtailment of a practice in which judges and juries are supplanted by arbitrators in disputes between companies and consumers.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/15/business/dealbook/house-democrats-call-for-curbs-on-required-arbitration.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="How Regulators Mess With Bankersâ Minds, and Why Thatâs Good" src="https://static01.nyt.com/images/2016/04/15/upshot/15UP-Minsky/15UP-Minsky-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>How Regulators Mess With Bankersâ Minds, and Why Thatâs Good</strong> <span class="divider"> | </span></span> Not communicating to banks exactly what they need to do to get their bankruptcy plans to pass muster is frustrating, confusing and part of the plan, Peter Eavis writes in The Upshot.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/15/upshot/how-regulators-mess-with-bankers-minds-and-why-thats-good.html">The Upshot &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/04/14/business/dealbook/living-wills-of-5-banks-fail-to-pass-muster.html">Regulators Warn 5 Top Banks They Are Still Too Big to Fail</a> </span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Thousands of âUnderwaterâ Borrowers to Get Relief</strong> <span class="divider"> | </span></span> The Federal Housing Finance Agency announced the step as part of a package of measures to reduce foreclosures.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/15/business/thousands-of-underwater-borrowers-to-get-relief.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Bernie Sanders Takes on Wall Street With âArt of the Stealâ Ad" src="https://static01.nyt.com/images/2016/04/14/us/elections/adwatch-sanders-steal-1460654201616/adwatch-sanders-steal-1460654201616-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bernie Sanders Takes on Wall Street With âArt of the Stealâ Ad</strong> <span class="divider"> | </span></span> The Democratic candidate comes after the financial industry in its home market â with a tongue-in-cheek tweak of Donald J. Trump.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/15/us/politics/bernie-sanders-takes-on-wall-street-with-art-of-the-steal-ad.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sumner Redstone Wonât Have to Give Deposition in Competency Suit</strong> <span class="divider"> | </span></span> A judge reaffirmed the ruling ahead of a scheduled trial in a mental capacity suit filed by Manuela Herzer, the ailing media mogulâs former companion.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/15/business/media/sumner-redstone-wont-have-to-give-deposition-in-competency-suit.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/04/15/morning-agenda-yahoos-potential-bidders-frustrated-over-lack-of-figures/"
+					data-title="Morning Agenda: Yahoo&#8217;s Potential Bidders Frustrated Over Lack of Figures"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Regulators&#039; Actions Dampen Wall Street&#039;s Deal Making | BATS Prices I.P.O. at $19 a Share&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/04/15/morning-agenda-yahoos-potential-bidders-frustrated-over-lack-of-figures/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":66,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

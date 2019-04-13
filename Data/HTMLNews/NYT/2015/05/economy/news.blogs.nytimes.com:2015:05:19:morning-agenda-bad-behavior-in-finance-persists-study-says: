@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003691982"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1432035121" />
+<meta name="PUD" content="20150519" />
+<meta name="pdate" content="20150519" />
+<meta name="ptime" content="20150519073201" />
+<meta name="utime" content="20150519113201" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-05-19T11:32:01-04:00" />
+<meta name="DISPLAYDATE" content="May 19, 2015" />
+<meta name="dat" content="May 19, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Banking and Financial Institutions;Crime and Criminals;Economic Conditions and Trends;European Sovereign Debt Crisis (2010- );Financial Brokers;Frauds and Swindling;Greece;Hedge Funds;Mergers, Acquisitions and Divestitures;Regulation and Deregulation of Industry;Venture Capital;Wages and Salaries">
+<meta name="org" content="New York Stock Exchange;University of Notre Dame">
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Crime and Criminals" />
+<meta property="article:tag" content="Economic Conditions and Trends" />
+<meta property="article:tag" content="European Sovereign Debt Crisis (2010- )" />
+<meta property="article:tag" content="Financial Brokers" />
+<meta property="article:tag" content="Frauds and Swindling" />
+<meta property="article:tag" content="Greece" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Wages and Salaries" />
+<meta property="article:tag" content="New York Stock Exchange" />
+<meta property="article:tag" content="University of Notre Dame" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Banking and Financial Institutions,Crime and Criminals,Economic Conditions and Trends,European Sovereign Debt Crisis (2010- ),Financial Brokers,Frauds and Swindling,Greece,Hedge Funds,Mergers Acquisitions and Divestitures,Regulation and Deregulation of Industry,Venture Capital,Wages and Salaries,New York Stock Exchange,University of Notre Dame,DealBook" />
+<meta name="news_keywords" content="Banking and Finance,Crime,Economy,Euro Crisis,Fraud,Hedge fund,Mergers and Acquistions,NYSE,Regulation and Deregulation,Stockbroker,University of Notre Dame,Venture capital,Wages and salaries" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F05%2F19%2Fmorning-agenda-bad-behavior-in-finance-persists-study-says%2F" title="Morning Agenda: Bad Behavior in Finance Persists, Study Says" />
+<meta name="description" content="Bad Behavior in Finance Persists, Study Says &#124; Wall Street Bounces Back &#124; Years of Complaints Finally Catch Up to Broker &#124; Economic Uncertainty Rattles Greeks" />
+<meta name="hdl" content="Morning Agenda: Bad Behavior in Finance Persists, Study Says" />
+<meta property="og:title" content="Morning Agenda: Bad Behavior in Finance Persists, Study Says" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/05/19/morning-agenda-bad-behavior-in-finance-persists-study-says/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Bad Behavior in Finance Persists, Study Says &#124; Wall Street Bounces Back &#124; Years of Complaints Finally Catch Up to Broker &#124; Economic Uncertainty Rattles Greeks" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Bad Behavior in Finance Persists, Study Says" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/05/19/morning-agenda-bad-behavior-in-finance-persists-study-says/" />
+<meta name="twitter:description" content="Bad Behavior in Finance Persists, Study Says &#124; Wall Street Bounces Back &#124; Years of Complaints Finally Catch Up to Broker &#124; Economic Uncertainty Rattles Greeks" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Why Hedge Funds are Closing' href='//news.blogs.nytimes.com/2015/05/18/morning-agenda-why-hedge-funds-are-closing/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/05/19/what-were-reading-56/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/05/19/morning-agenda-bad-behavior-in-finance-persists-study-says/' />
+<link rel='shortlink' href='//nyti.ms/1IO0oZ6' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/05/19/morning-agenda-bad-behavior-in-finance-persists-study-says/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Bad Behavior in Finance Persists, Study Says - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2425 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Bad Behavior in Finance Persists, Study Says        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/05/19/morning-agenda-bad-behavior-in-finance-persists-study-says/"
+	 data-title="Morning Agenda: Bad Behavior in Finance Persists, Study Says"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Bad Behavior in Finance Persists, Study Says | Wall Street Bounces Back | Years of Complaints Finally Catch Up to Broker | Economic Uncertainty Rattles Greeks &lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/05/19/morning-agenda-bad-behavior-in-finance-persists-study-says/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 19, 2015 7:32 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Bad Behavior in Finance Persists, Study Says</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-05-19T11:32:01+00:00" itemprop="datePublished">May 19, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">May 19, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2425 post type-post status-publish hentry category-dealbook tag-banking-and-financial-institutions tag-crime-and-criminals tag-economic-conditions-and-trends tag-european-sovereign-debt-crisis-2010 tag-financial-brokers tag-frauds-and-swindling tag-greece tag-hedge-funds tag-mergers-acquisitions-and-divestitures tag-new-york-stock-exchange tag-regulation-and-deregulation-of-industry tag-university-of-notre-dame tag-venture-capital tag-wages-and-salaries des-banking-and-financial-institutions des-crime-and-criminals des-economic-conditions-and-trends des-european-sovereign-debt-crisis-2010 des-financial-brokers des-frauds-and-swindling des-greece des-hedge-funds des-mergers-acquisitions-and-divestitures des-regulation-and-deregulation-of-industry des-venture-capital des-wages-and-salaries org-new-york-stock-exchange org-university-of-notre-dame news_keywords-banking-and-finance news_keywords-crime news_keywords-economy news_keywords-euro-crisis news_keywords-fraud news_keywords-hedge-fund news_keywords-mergers-and-acquistions news_keywords-nyse news_keywords-regulation-and-deregulation news_keywords-stockbroker news_keywords-university-of-notre-dame news_keywords-venture-capital-2 news_keywords-wages-and-salaries-2" id="post-2425">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Bad Behavior in Finance Persists, Study Says</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-05-19T11:32:01+00:00" itemprop="datePublished">May 19, 2015 7:32 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 19, 2015 7:32 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/05/19/morning-agenda-bad-behavior-in-finance-persists-study-says/" data-title="Morning Agenda: Bad Behavior in Finance Persists, Study Says" data-description="Bad Behavior in Finance Persists, Study Says | Wall Street Bounces Back | Years of Complaints Finally Catch Up to Broker | Economic Uncertainty Rattles Greeks ">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BAD BEHAVIOR IN FINANCE PERSISTS, STUDY SAYS</strong> <span class="divider"> | </span></span> In some ways, Wall Street has cleaned up its act after the 2008 financial crisis, with firms carrying much less risk and banks increasing their capital requirements. Yet the ethos of the finance industry remains worrisome, according to a new study, <a href="//www.nytimes.com/2015/05/19/business/dealbook/many-on-wall-street-say-it-remains-untamed.html"> Andrew Ross Sorkin writes in the DealBook column</a>. </p>
+<p class="story-body-text" itemprop="articleBody">Two years ago, Mr. Sorkin wrote about <a href="//dealbook.nytimes.com/2013/07/15/on-wall-st-a-culture-of-greed-wont-let-go/">a study on Wall Street ethics</a> by the law firm Labaton Sucharow, which often represents whistle-blowers in the finance industry. That study raised alarms about finance industry insidersâ lax attitudes toward wrongdoing. This year, the University of Notre Dame expanded the study commissioned by Labaton Sucharow to more than 1,200 traders, portfolio managers, investment bankers and hedge fund professionals both in the United States and Britain. The new studyâs results â<b>appear even more noteworthy today</b> for the sheer number of individuals who continue to say the ethics of the industry remain unchanged since the crisis (a third said that, by the way),â Mr. Sorkin writes. </p>
+<p class="story-body-text" itemprop="articleBody">In the earlier study, the law firm found that a significant number of respondents (23 percent) said that âthey had observed or had firsthand knowledge of wrongdoing in the workplace.â In the study to be released Tuesday, about a third of the people who said they made more than $500,000 annually said they âhave witnessed or have firsthand knowledge of wrongdoing in the workplace.â If the culture of reckless risk taking hasnât changed much since the financial crisis, not all the blame should be put on Wall Street, however. âOn virtually every question, those in Britain seem to indicate that ethics problems could be even more widespread there,â Mr. Sorkin writes. The reportâs authors said, <b>âRespondents from the U.K. are either more willing to commit a crime they could get away with â or are more frank about it.â</b><br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>WALL STREET BOUNCES BACK</strong> <span class="divider"> | </span></span> If the financial crisis didnât change the ethos of Wall Street, it also didnât make much of a dent in the finance sector as a whole, <a href="//www.nytimes.com/2015/05/19/upshot/wall-street-is-back-almost-as-big-as-ever.html">Neil Irwin writes in The Upshot</a>. On many measures â the pay gap between Wall Street and the average worker, office vacancy rates, deal-making fees, employee numbers and profits â <b>the American financial industry is nearly back to where it was before the crisis</b>.  âEverybody thought in 2008 it was the end of the world,â said Noah Schwarz, a partner at the executive recruitment firm Korn Ferry. âItâs been a long time, but in the last 18 months or so youâve seen a real shift for the better.â </p>
+<p class="story-body-text" itemprop="articleBody">However, Mr. Irwin notes that <b>not everyone agrees that the recovery is for the better</b>. Last week, the International Monetary Fund released a report arguing that the financial sector in several major countries, including the United States, was too large. Also, experts like Stephen Cecchetti, an economist at the Brandeis International Business School, have found that a very large financial sector tends to precede weaker growth in productivity. âWhen pay on Wall Street is so high relative to the rest of the economy, youâre creating incentives for people to go into that industry that may not be the best for society over all,â Mr. Cecchetti said.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>YEARS OF COMPLAINTS FINALLY CATCH UP TO BROKER </strong> <span class="divider"> | </span></span> Rooting out bad behavior in the finance industry takes more than just alerting regulators to fraudulent activity, as the case of Jerry A. Cicolani Jr. shows, <a href="//www.nytimes.com/2015/05/19/business/dealbook/years-of-overlooked-red-flags-catch-up-to-stockbroker.html"> Susan Antilla writes in DealBook</a>. For Mr. Cicolani, a stockbroker, it took 69 customer disputes filed over the last 13 years before he was barred from the business. On May 1, he pleaded guilty to two criminal counts, including one count of selling unregistered securities. In the meantime, 39 investors lost $7 million, according to the F.B.I. </p>
+<p class="story-body-text" itemprop="articleBody">Many of the victims <b>place the blame on regulators like the Financial Industry Regulatory Authority</b>, the industry-funded regulatory group, which didnât take any tough action against Mr. Cicolani even though it had looked into the complaints against him. The New York Stock Exchange also investigated Mr. Cicolani but didnât sanction him. Last week, Finra announced that it had revamped its guidelines to increase fines against bad actors and has recommended more onerous sanctions for fraud or the sale of unsuitable products.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> A number of retailers report earnings today, including <b> Walmart, Home Depot, TJX and Etsy</b>.  <b>JPMorgan Chase</b> and <b>Morgan Stanley</b> hold their annual meetings. <b>Marissa Mayer</b>, Yahooâs chief executive, speaks at the JPMorgan Chase Global Technology, Media and Telecom Conference in Boston at 8:40 a.m. <b> Nelson Peltz</b> of Trian Fund Management will be speaking at the Electrical Products Group conference in Florida at 8:15 a.m. <b>Christine Lagarde</b>, the managing director of the International Monetary Fund, <b>Jacob J. Lew</b>, the secretary of the Treasury, and <b>George Soros</b> are among the speakers at the Bretton Woods Committee annual meeting in Washington. Commerce Department data on <b>housing starts in April</b> is out at 8:30 a.m. </p>
+<p class="story-body-text" itemprop="articleBody"><b> On the Hill:</b> Mr. Lew will preside over a 2:30 p.m. meeting of the <b>Financial Stability Oversight Council</b> at the Treasury Department, which will also include <b>Janet L. Yellen</b>, the Federal Reserve chairwoman. The House subcommittee on financial institutions and consumer credit will hold a hearing titled <b>âProtecting Critical Infrastructure: How the Financial Sector Addresses Cyber Threatsâ</b> at 1 p.m.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ECONOMIC UNCERTAINTY RATTLES GREEKS</strong> <span class="divider"> | </span></span> Over the past five years, the average Greek citizen has endured government budget cuts and other austerity measures demanded by Greeceâs creditors. Now, <a href="//www.nytimes.com/2015/05/19/world/europe/for-greeks-uncertainty-on-next-paycheck-and-countrys-future.html"> Jim Yardley writes in The New York Times</a>, the country is âreeling from a different condition: <b>economic uncertainty</b>.â As negotiations between Greece and its European creditors drag on, George Kavvathas, president of one of Greeceâs largest associations of small-business owners, said the uncertainty about what comes next has been destructive. He predicted that <b>8,500 small businesses would close during the first six months of this year</b>. âThe average person doesnât know if weâll remain in the euro or go to the drachma,â he said. âThey donât know what the deal will entail and how bad the measures will be.â<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Endo International to Pay $8.05 Billion for Par Pharmaceutical" src="https://static01.nyt.com/images/2015/05/18/business/cnbc-endo/cnbc-endo-square320.png"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Endo International to Pay $8.05 Billion for Par Pharmaceutical</strong> <span class="divider"> | </span></span> The deal would create a specialty pharmaceutical company that would be one of the five largest generic drug makers based on sales in the United States.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/19/business/dealbook/endo-international-to-pay-8-05-billion-for-par-pharmaceutical.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: TPGâs $8 Billion Drug Sale a Rare Development</strong> <span class="divider"> | </span></span> With the sale of Par Pharmaceutical, the buyout firm will generate an eightfold return on its investment in three years.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/19/business/dealbook/tpgs-8-billion-drug-sale-a-rare-development.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Lane Bryant Parent to Buy Ann Taylor for $2.16 Billion" src="https://static01.nyt.com/images/2015/05/19/business/19DB-ANN/19DB-ANN-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lane Bryant Parent to Buy Ann Taylor for $2.16 Billion</strong> <span class="divider"> | </span></span> Ascena, the owner of Lane Bryant and Dressbarn, struck a deal to acquire the parent company of Ann Taylor and Loft, which had been under pressure to seek a sale.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/19/business/dealbook/ann-taylor-parent-to-be-bought-for-2-16-billion.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/05/19/business/daily-stock-market-activity.html">Wall St. Ticks Upward as Investors Consider Deal News</a> <time class="timestamp" data-eastern-timestamp="10:00 AM" datetime="2015-05-18" data-utc-timestamp="1431957600000">10:00 AM</time><span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BGC Partners Continues Spree With Deal to Buy Real Estate Firm</strong> <span class="divider"> | </span></span> The brokerage firm BGC Partners said it had acquired Excess Space Retail Services, a specialist in helping companies get rid of their unused space.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/19/business/dealbook/bgc-partners-continues-spree-with-deal-to-buy-real-estate-firm.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Mongolia and Rio Tinto in Deal to Build Copper Mine</strong> <span class="divider"> | </span></span> The agreement paves the way to resume a delayed $5 billion copper mine that is expected to underpin growth of the country and the miner, Reuters reports. <br /><span class="kicker"><a href="//www.nytimes.com/2015/05/20/business/international/mongolia-and-rio-tinto-in-deal-to-build-copper-mine.html"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Yahoo C.E.O. Explains Why Merger With AOL Didnât Happen</strong> <span class="divider"> | </span></span> âSome people on the outside saw similarities betweenâ Yahoo and AOL, Marissa Mayer, Yahooâs chief executive, said in an interview at a Fortune event on Monday night. âWe didnât.â<br /><span class="kicker"><a href="https://fortune.com/2015/05/18/marissa-mayer-why-yahoo-aol-never-happened/"> FORTUNE </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tiger Global to Revamp Management</strong> <span class="divider"> | </span></span> The changes will come as two partners â Feroz Dewan and Caleb Watts â are set to depart.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/19/business/dealbook/tiger-global-to-revamp-management.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Icahnâs Letter to Apple Illustrated in 3 Charts</strong> <span class="divider"> | </span></span> Carl C. Icahnâs 2,200-word letter to Apple, in which he says the companyâs shares are extremely undervalued, can be distilled into three charts created by Quartz.<br /><span class="kicker"><a href="//qz.com/407041/carl-icahns-latest-love-letter-to-apple-distilled-into-three-charts/"> QUARTZ </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Bank Said to Put Asia Corporate Finance Heads on Leave</strong> <span class="divider"> | </span></span> Deutsche Bank has put both its co-heads of corporate finance in Asia on leave, Bloomberg News reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-05-19/deutsche-bank-said-to-put-asia-corporate-finance-heads-on-leave-i9uqzwit"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hedge Funds Rush to Buy Shares in Online Chinese Retailer</strong> <span class="divider"> | </span></span> Hedge funds held 44 percent of the American depositary shares of JD.com, a Chinese retailer, in the first quarter, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-05-18/tiger-cubs-lead-hedge-fund-stampede-into-china-s-red-hot-jd-com"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Flipkart Said to Be Valued at $15 Billion After Raising $550 Million</strong> <span class="divider"> | </span></span> Flipkart has raised $550 million from some of its existing investors in a deal that puts the valuation of the Indian online retailer at about $15 billion, The Wall Street Journal reports, citing a person familiar with the deal.<br /><span class="kicker"><a href="//www.wsj.com/articles/flipkart-valued-at-15-billion-after-latest-funding-1432021294?mod=ST1"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Exchange Operators Worry About an Extra Second</strong> <span class="divider"> | </span></span> Traders and exchange officials in the United States are concerned that the leap second, which will be added June 30, may cause problems in trading, The Wall Street Journal reports.<br /><span class="kicker"><a href="//www.wsj.com/articles/markets-are-jumpy-over-coming-leap-second-1431988248"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Supreme Court Bolsters Protections for 401(k) Investors</strong> <span class="divider"> | </span></span> The Supreme Court ruling said companies managing 401(k) retirement plans had a duty to monitor investments, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/high-court-ruling-adds-protections-for-investors-in-401-k-plans-1431974139"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bernie Sanders to Propose Taxing Trades</strong> <span class="divider"> | </span></span> Bernie Sanders, the independent senator from Vermont, is set to propose on Tuesday a tax on stock transactions to finance tuition at four-year public colleges and universities, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/politics/articles/2015-05-18/bernie-sanders-wants-to-tax-stock-trades-to-pay-for-free-college"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>India Said to Ignore Warnings About Tax on Foreign Funds</strong> <span class="divider"> | </span></span> A dispute with overseas investors over the imposition of the minimum alternate tax could have been avoided if the Indian government had acted on warnings from its tax officials, Reuters reports. <br /><span class="kicker"><a href="//in.reuters.com/article/2015/05/19/india-tax-idINKBN0O40H920150519"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/05/19/morning-agenda-bad-behavior-in-finance-persists-study-says/"
+					data-title="Morning Agenda: Bad Behavior in Finance Persists, Study Says"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Bad Behavior in Finance Persists, Study Says | Wall Street Bounces Back | Years of Complaints Finally Catch Up to Broker | Economic Uncertainty Rattles Greeks &lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/05/19/morning-agenda-bad-behavior-in-finance-persists-study-says/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":63,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

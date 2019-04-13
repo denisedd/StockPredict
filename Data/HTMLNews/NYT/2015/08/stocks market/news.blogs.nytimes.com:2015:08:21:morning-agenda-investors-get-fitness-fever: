@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003866946"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1440155094" />
+<meta name="PUD" content="20150821" />
+<meta name="pdate" content="20150821" />
+<meta name="ptime" content="20150821070454" />
+<meta name="utime" content="20150821110454" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-08-21T11:04:54-04:00" />
+<meta name="DISPLAYDATE" content="August 21, 2015" />
+<meta name="dat" content="August 21, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Christie, Christopher J;New Jersey">
+<meta name="des" content="Addyi (Drug);Anbang Insurance Group Co;Artificial Intelligence;Banking and Financial Institutions;China;Credit Scores;Currency;European Sovereign Debt Crisis (2010- );Exercise;Federal Reserve System;Gold;Hedge Funds;Initial Public Offerings;Interest Rates;Mergers, Acquisitions and Divestitures;Renminbi (Currency);Shenzhen Stock Exchange;Taxation;Uber Technologies Inc;Viagra (Drug)">
+<meta name="org" content="Deutsche Bank AG;Elections;Eurozone;GlaxoSmithKline PLC;Novartis AG;Peltz, Nelson;Royal Bank of Scotland PLC;Sprout Pharmaceuticals Inc;Sysco Corporation;Valeant Pharmaceuticals International Inc;Wells Fargo &amp; Company">
+<meta name="geo" content="Greece;Tsipras, Alexis">
+<meta name="ticker" content="Deutsche Bank AG|DB|NYSE;Novartis AG|NVS|NYSE;Sysco Corporation|SYY|NYSE;Valeant Pharmaceuticals International Inc|VRX|NYSE;Wells Fargo & Company|WFC|NYSE" />
+<meta property="article:tag" content="Christie Christopher J" />
+<meta property="article:tag" content="New Jersey" />
+<meta property="article:tag" content="Addyi (Drug)" />
+<meta property="article:tag" content="Anbang Insurance Group Co" />
+<meta property="article:tag" content="Artificial Intelligence" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Credit Scores" />
+<meta property="article:tag" content="Currency" />
+<meta property="article:tag" content="European Sovereign Debt Crisis (2010- )" />
+<meta property="article:tag" content="Exercise" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Gold" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Interest Rates" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Renminbi (Currency)" />
+<meta property="article:tag" content="Shenzhen Stock Exchange" />
+<meta property="article:tag" content="Taxation" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="Viagra (Drug)" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Elections" />
+<meta property="article:tag" content="Eurozone" />
+<meta property="article:tag" content="GlaxoSmithKline PLC" />
+<meta property="article:tag" content="Novartis AG" />
+<meta property="article:tag" content="Peltz Nelson" />
+<meta property="article:tag" content="Royal Bank of Scotland PLC" />
+<meta property="article:tag" content="Sprout Pharmaceuticals Inc" />
+<meta property="article:tag" content="Sysco Corporation" />
+<meta property="article:tag" content="Valeant Pharmaceuticals International Inc" />
+<meta property="article:tag" content="Wells Fargo &amp; Company" />
+<meta property="article:tag" content="Greece" />
+<meta property="article:tag" content="Tsipras Alexis" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Christie Christopher J,New Jersey,Addyi (Drug),Anbang Insurance Group Co,Artificial Intelligence,Banking and Financial Institutions,China,Credit Scores,Currency,European Sovereign Debt Crisis (2010- ),Exercise,Federal Reserve System,Gold,Hedge Funds,Initial Public Offerings,Interest Rates,Mergers Acquisitions and Divestitures,Renminbi (Currency),Shenzhen Stock Exchange,Taxation,Uber Technologies Inc,Viagra (Drug),Deutsche Bank AG,Elections,Eurozone,GlaxoSmithKline PLC,Novartis AG,Peltz Nelson,Royal Bank of Scotland PLC,Sprout Pharmaceuticals Inc,Sysco Corporation,Valeant Pharmaceuticals International Inc,Wells Fargo &amp; Company,Greece,Tsipras Alexis,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F08%2F21%2Fmorning-agenda-investors-get-fitness-fever%2F" title="Morning Agenda: Investors Get Fitness Fever" />
+<meta name="description" content="Valeant Buys Maker of &#8216;Female Viagra&#8217; Drug &#124; Fresh Greek Elections &#124; The Global Sell-Off" />
+<meta name="hdl" content="Morning Agenda: Investors Get Fitness Fever" />
+<meta property="og:title" content="Morning Agenda: Investors Get Fitness Fever" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/08/21/morning-agenda-investors-get-fitness-fever/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Valeant Buys Maker of &#8216;Female Viagra&#8217; Drug &#124; Fresh Greek Elections &#124; The Global Sell-Off" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Investors Get Fitness Fever" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/08/21/morning-agenda-investors-get-fitness-fever/" />
+<meta name="twitter:description" content="Valeant Buys Maker of &#8216;Female Viagra&#8217; Drug &#124; Fresh Greek Elections &#124; The Global Sell-Off" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Slow Inflation Makes Fed Cautious Over Rates' href='//news.blogs.nytimes.com/2015/08/20/morning-agenda-slow-inflation-makes-fed-cautious-over-rates/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/08/21/what-were-reading-83/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/08/21/morning-agenda-investors-get-fitness-fever/' />
+<link rel='shortlink' href='//nyti.ms/1NqaaUK' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/08/21/morning-agenda-investors-get-fitness-fever/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Investors Get Fitness Fever - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3056 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Investors Get Fitness Fever        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/08/21/morning-agenda-investors-get-fitness-fever/"
+	 data-title="Morning Agenda: Investors Get Fitness Fever"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Valeant Buys Maker of &#039;Female Viagra&#039; Drug | Fresh Greek Elections | The Global Sell-Off&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/08/21/morning-agenda-investors-get-fitness-fever/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="August 21, 2015 7:04 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Investors Get Fitness Fever</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-08-21T11:04:54+00:00" itemprop="datePublished">August 21, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">August 21, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3056 post type-post status-publish hentry category-dealbook tag-addyi-drug tag-anbang-insurance-group-co tag-artificial-intelligence tag-banking-and-financial-institutions tag-china tag-christie-christopher-j tag-credit-scores tag-currency tag-deutsche-bank-ag tag-elections tag-european-sovereign-debt-crisis-2010 tag-eurozone tag-exercise tag-federal-reserve-system tag-glaxosmithkline-plc tag-gold tag-greece tag-hedge-funds tag-initial-public-offerings tag-interest-rates tag-mergers-acquisitions-and-divestitures tag-new-jersey tag-novartis-ag tag-peltz-nelson tag-renminbi-currency tag-royal-bank-of-scotland-plc tag-shenzhen-stock-exchange tag-sprout-pharmaceuticals-inc tag-sysco-corporation tag-taxation tag-tsipras-alexis tag-uber-technologies-inc tag-valeant-pharmaceuticals-international-inc tag-viagra-drug tag-wells-fargo-company per-christie-christopher-j per-new-jersey des-addyi-drug des-anbang-insurance-group-co des-artificial-intelligence des-banking-and-financial-institutions des-china des-credit-scores des-currency des-european-sovereign-debt-crisis-2010 des-exercise des-federal-reserve-system des-gold des-hedge-funds des-initial-public-offerings des-interest-rates des-mergers-acquisitions-and-divestitures des-renminbi-currency des-shenzhen-stock-exchange des-taxation des-uber-technologies-inc des-viagra-drug org-deutsche-bank-ag org-elections org-eurozone org-glaxosmithkline-plc org-novartis-ag org-peltz-nelson org-royal-bank-of-scotland-plc org-sprout-pharmaceuticals-inc org-sysco-corporation org-valeant-pharmaceuticals-international-inc org-wells-fargo-company geo-greece geo-tsipras-alexis" id="post-3056">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Investors Get Fitness Fever</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-08-21T11:04:54+00:00" itemprop="datePublished">August 21, 2015 7:04 am</time>
+			<!-- date updated --><span class="visually-hidden updated">August 21, 2015 7:04 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/08/21/morning-agenda-investors-get-fitness-fever/" data-title="Morning Agenda: Investors Get Fitness Fever" data-description="Valeant Buys Maker of &#039;Female Viagra&#039; Drug | Fresh Greek Elections | The Global Sell-Off">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>INVESTORS GET FITNESS FEVER</strong> <span class="divider"> | </span></span> The self-help therapy pedaling session held in dim lighting to the sound of a primal  dance beat has developed a cultlike following.  <b>Now the craze has spread</b>  from Victoriaâs Secret models and hedge fund wives to Wall Street financiers, who want to ride to big bucks on the back of SoulCycleâs initial public offering, <a href="//www.nytimes.com/2015/08/21/business/investors-hope-to-ride-swell-of-soulcycle-enthusiasm-in-coming-ipo.html?ref=dealbook&#038;_r=0">Julie Creswell reports in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody">SoulCycle started out as a single studio in Manhattan in 2006. Now it operates 41 locations nationwide. It is  <b>fueled by wealthy investors</b>, including the billionaire real estate mogul Stephen M. Ross, who owns the health club chain Equinox, which acquired a majority stake in SoulCycle in 2011.</p>
+<p class="story-body-text" itemprop="articleBody">Julie Rice and Elizabeth Cutler,  <b>the co-founders, have already largely cashed out</b>. They each received a payout of nearly $90 million in the spring when Equinox increased its stake. </p>
+<p class="story-body-text" itemprop="articleBody">The spinning phenomenon has set off a boom in fitness boutiques, whose  <b>backers also happen to be some of their best customers</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Flywheel Sports, a New York competitor,  has received funding from the family of Lew Frankfort, Coachâs former chief executive, as well as from the private equity firm Catterton Partners.</p>
+<p class="story-body-text" itemprop="articleBody">âA lot of  <b>private investors are also our consumers</b>,â said Ed Kinnaly, the chief executive. âWe have a lot of financial industry folks, Wall Street or hedge fund executives, who are looking for a great workout in a short amount of time.â</p>
+<p class="story-body-text" itemprop="articleBody">Peloton Cycle sells $2,000 stationary bikes for home use and then streams unlimited live classes into homes for $39 a month. It counts  Tiger Global Management among its investors. âWe are right now  <b>targeting affluent users</b>,â said John Foley, who founded Peloton Cycle. âIf we sold only to the top 5 percent, we would have a $5 to $10 billion business.â Barryâs Bootcamp, the cardio and strength training program that claims to âshockâ the body at the cost of $34 a session, has also sold a stake to a private equity firm. </p>
+<p class="story-body-text" itemprop="articleBody">All of these fitness centers are after  <b>people with money, as well as calories, to burn</b>.<br />
+And their ambitions go beyond a 45-minute class. SoulCycleâs initial public offering prospectus says it hopes to expand to 250 studios in the United States alone, as well as reaching clients at home and selling a workout clothing line. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>VALEANT BUYS MAKER OF âFEMALE VIAGRAâ DRUG</strong> <span class="divider"> | </span></span> Sprout Pharmaceuticals, which on Tuesday won regulatory approval for the first pill to aid a womanâs sex drive, will be  <b>bought by Valeant Pharmaceuticals International for about $1 billion in cash</b>, <a href="//www.nytimes.com/2015/08/21/business/dealbook/valeant-pharmaceuticals-to-buy-sprout-maker-of-addyi-female-viagra-drug.html?ref=dealbook">Andrew Pollack and Chad Bray report in DealBook</a>.<br />
+The deal will bring a sizable return for investors in Sprout, which is privately held and has 34 employees. A total of about $100 million has been invested in Sprout since its formation in 2011. </p>
+<p class="story-body-text" itemprop="articleBody">The company was set up by Robert and Cindy Whitehead, a couple with a long history in the pharmaceutical industry. They used it to acquire the  <b>female libido drug, Addyi,</b>  after the Food and Drug Administration decided not to approve it and its previous owner abandoned it. </p>
+<p class="story-body-text" itemprop="articleBody">Valeant, known for growing through acquisitions, said Sprout would be the core of a  <b>new business focusing on womenâs health</b>. J. Michael Pearson, the chief executive of Valeant, said that Sprout was approached three or four weeks ago after an advisory committee had recommended that the drug be approved, but that Valeant had waited until the approval actually passed before signing a deal. </p>
+<p class="story-body-text" itemprop="articleBody">âI thought this would be a drug that a lot of pharmaceutical companies would not want to pursue, given  <b>the controversial nature of it</b>,â he said, adding that would mean Valeant could pay a reasonable price. Addyi has been controversial in part because of a lobbying campaign for its approval. It had also been rejected twice before. </p>
+<p class="story-body-text" itemprop="articleBody">Valeant will pay  <b>$500 million in cash initially</b>  and another $500 million in the first quarter of next year. Investors in Sprout will be entitled to a share of future profits based on the achievement of certain milestones.</p>
+<p class="story-body-text" itemprop="articleBody">Although a lack of sexual desire is estimated to affect one in 10 women,  <b>Addyiâs commercial prospects are uncertain</b>. Addyi is not supposed to be used by women who drink alcohol, which could significantly curb sales. It is also not clear how many insurers will pay for the drug, which might be deemed by some as a lifestyle product rather than a treatment for a medical condition. Addyi is expected to cost about $400 a month without insurance.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Pearson of Valeant said that  <b>if health plans paid for male erectile dysfunction drugs</b>  like Viagra, it would be difficult for them not to also pay for Addyi.</p>
+<p class="story-body-text" itemprop="articleBody">Sprout will be a bargain for Valeant if the pill meets sales expectations, <a href="//www.nytimes.com/2015/08/21/business/dealbook/female-viagra-poses-challenges-for-buyer-valeant.html?ref=dealbook">Robert Cyran writes in Breakingviews</a>.  But the drug is  <b>not very effective, has some worrisome side effects</b> and could be subject to regulatory restrictions that may crimp sales. Mr. Cyran also points out that during the F.D.A.âs approval process, Sprout promised not to advertise the drug on television or radio for 18 months. All these limits, he says, may leave Valeant with a bitter pill. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FRESH GREEK ELECTIONS</strong> <span class="divider"> | </span></span> Prime Minister Alexis Tsipras of Greece called for  <b>new national elections</b> in a bid to consolidate power and press ahead with the bailout plan, <a href="//www.nytimes.com/2015/08/21/world/europe/greek-prime-minister-alexis-tsipras-to-call-new-elections-minister-says.html?ref=business">Niki Kitsantonis and Jim Yardley report in The New York Times</a>. Officials said he would seek to schedule the vote for Sept. 20. </p>
+<p class="story-body-text" itemprop="articleBody">âYour vote will determine if we represented you courageously in talks with the creditors, if this agreement is enough for us to emerge from the crisis,â Mr. Tsipras said in a nationally televised address. </p>
+<p class="story-body-text" itemprop="articleBody">The prime minister has been  <b>considering an election for weeks</b> after Syriza factions split over his embracing the latest bailout plan. </p>
+<p class="story-body-text" itemprop="articleBody">The deal gave Greece billions of euros in new aid from other eurozone countries, which it used to repay existing debt. This included a payment on government bonds held by the European Central Bank, which would have put Greece into default. Greece  <b>narrowly avoided another crisis</b>  by making the payment on the day it was due, <a href="//www.nytimes.com/2015/08/21/business/international/greece-bailout-debt.html">Jack Ewing reports in The New York Times</a>. </p>
+<p class="story-body-text" itemprop="articleBody">Elected in January as an anti-austerity renegade pledging to get a better deal for Greece,  <b>Mr. Tsipras has since reversed course</b> and agreed to a new bailout program, which infuriated Syrizaâs far left. It was passed only with the help of opposition parties. </p>
+<p class="story-body-text" itemprop="articleBody">The  <b>resulting defections</b> raised the possibility that Mr. Tsipras would not have the support to prevail in a parliamentary test of confidence in his leadership â a possibility he avoided by calling for new elections. </p>
+<p class="story-body-text" itemprop="articleBody">Analysts had thought elections might be postponed until October, after the first review of Greeceâs progress under the new bailout. </p>
+<p class="story-body-text" itemprop="articleBody">It remains unclear whether Mr. Tsiprasâs call for  <b>snap elections might further destabilize the economy</b> in the short term. Yields on Greek bonds rose on Thursday, an indication that investors see more economic risk as the country heads into elections. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Tsipras is betting that  <b>votersâ weariness of more instability</b>  will garner him enough support to form a new government without hard-line dissenters on the left. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>John Deere</b> holds a conference call on its third-quarter results at 10 a.m.  <b> Meg Whitman</b>, chief executive of Hewlett-Packard, is a guest on CNBC at 9:05 a.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>THE GLOBAL SELL-OFF</strong> <span class="divider"> | </span></span> Stock markets around the world plummeted on Thursday as the  <b>shocks from Chinaâs devaluation and fears about the health of the global economy</b> continued to reverberate, <a href="//www.nytimes.com/2015/08/21/business/china-woes-send-stocks-into-tailspin.html?ribbon-ad-idx=5&#038;rref=business&#038;module=Ribbon&#038;version=origin&#038;region=Header&#038;action=click&#038;contentCollection=Business%20Day&#038;pgtype=article">Peter Eavis reports in DealBook</a>. The sell-off then continued for a second day on Friday, deepening across Asia, <a href="//www.nytimes.com/2015/08/22/business/dealbook/global-markets-fall-for-second-day.html">Neil Gough writes in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody">The biggest source of concern appears to be Chinaâs economy. The country surprised the world last week by changing the way it manages its currency. Many analysts viewed the devaluation partly as a desire to stimulate the countryâs economy by making Chinese goods cheaper in other currencies. But it stoked suspicions that  <b>Chinaâs economic situation may be worse than its official figures show</b>. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Investors are also fretting over whether the Federal Reserve</b>  will raise rates soon. Minutes from the July meeting were released this week and showed that officials were wary about global growth prospects before Chinaâs devaluation. </p>
+<p class="story-body-text" itemprop="articleBody">The sell-off on Thursday was compounded by  <b>new data on Friday showing weakness in the Chinese economy</b>. Output in the manufacturing sector contracted in the first three weeks of August at the fastest pace since the depths of the financial crisis. </p>
+<p class="story-body-text" itemprop="articleBody">Chinese shares led the rout on Friday morning with stocks in the  <b>Shanghai and Shenzhen exchanges both falling</b> by as much as 5 percent in afternoon trading. The Nikkei 225 closed down 3 percent. All freely traded Asian currencies had weakened against the dollar except for the yen. </p>
+<p class="story-body-text" itemprop="articleBody">Gold, a popular asset in times of uncertainty, rose more than 1 percent in afternoon trading.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Novartis to Buy Multiple Sclerosis Drug From Glaxo for $1 Billion</strong> <span class="divider"> | </span></span> The experimental drug ofatumumab would bolster the Swiss pharmaceutical companyâs portfolio of multiple sclerosis treatments.<br /><span class="kicker"><a href="//www.nytimes.com/2015/08/22/business/dealbook/novartis-buys-glaxo-drug-for-1-billion.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinese Insurance Group Said to Be in Talks Over Novo Banco Sale</strong> <span class="divider"> | </span></span> Portugalâs central bank is in talks with Chinaâs Anbang Insurance Group to sell Novo Banco, the Portuguese bank created out of the failed lender Banco EspÃ­rito Santo, The Wall Street Journal reports, citing a person familiar with the bidding process.<br /><span class="kicker"><a href="//www.wsj.com/articles/chinese-insurance-group-in-talks-over-novo-banco-sale-1440082353?mod=asia_home"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Heaven Hill Brands Buys Deep Eddy Vodka</strong> <span class="divider"> | </span></span> Heaven Hill Brands, the privately held owner of Evan Williams Bourbon, said it acquired Deep Eddy Vodka, which has doubled its volume annually since its introduction in 2010.<br /><span class="kicker"><a href="//www.wsj.com/articles/heaven-hill-brands-buys-deep-eddy-vodka-1440107007?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Wells Fargo Said to Scale Back London Asset-Backed Debt Team</strong> <span class="divider"> | </span></span> The bank is downsizing its European asset-backed securities business and merging it with its credit team, Bloomberg News reports, citing three people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-08-20/wells-fargo-said-to-scale-back-european-asset-backed-debt-team"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Bank Said to Chase RBSâs Customers</strong> <span class="divider"> | </span></span> Germanyâs biggest bank has formed a committee, known informally as the âhaggisâ team after the Scottish offal dish, to poach the Royal Bank of Scotlandâs biggest customers as the lender retreats from commercial banking outside of Britain, Bloomberg News reports, citing two people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-08-20/deutsche-bank-haggis-team-chases-cash-flow-clients-rbs-gave-up"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Nelson Peltz Picks Up Seats on Syscoâs Board Days After Buying a Stake" src="https://static01.nyt.com/images/2015/08/21/business/21DB-Peltz/21DB-Peltz-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Nelson Peltz Picks Up Seats on Syscoâs Board Days After Buying a Stake</strong> <span class="divider"> | </span></span> The food supplier Sysco added two seats to its board to accommodate the activist investor Nelson Peltz and another executive at Trian Fund Management.<br /><span class="kicker"><a href="//www.nytimes.com/2015/08/21/business/activist-investor-picks-up-seats-on-syscos-board-days-after-buying-a-stake.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Jeffrey Ubben Buys Minority Stake in United Talent Agency</strong> <span class="divider"> | </span></span> The agency will use the investment of undisclosed size from the activist hedge fund operator for expansion, including the acquisition of a music agency.<br /><span class="kicker"><a href="//www.nytimes.com/2015/08/21/business/media/jeffrey-ubben-buys-minority-stake-in-united-talent-agency.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hedge Fund Gains $100 Million in Two Days on China Bet</strong> <span class="divider"> | </span></span> A Carlyle Group hedge fund that anticipated a sudden currency-policy shift in China gained roughly $100 million in two days last week, a sign of how some bearish bets on its economy are starting to pay off.<br /><span class="kicker"><a href="//www.wsj.com/articles/hedge-fund-gains-100-million-in-two-days-on-bearish-china-bet-1440136499?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>How the âMillisecond Marketâ Can Deter Tech I.P.O.s</strong> <span class="divider"> | </span></span> The malaise of newly minted public tech companies is making executives ask, âDoes it make sense for companies with a long-term thesis to be exposed to a millisecond market?â<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/9e4915d0-47b3-11e5-b3b2-1672f710807b.html?ftcamp=published_links%2Frss%2Fmarkets%2Ffeed%2F%2Fproduct#axzz3jK73pysS"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uber Could Reach $10.8 Billion in Bookings in 2015</strong> <span class="divider"> | </span></span> Uberâs global bookings are projected to rise nearly threefold to $10.84 billion this year and reach $26.12 billion the next, according to a recent presentation for potential investors seen by Reuters.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2015/08/21/business/21reuters-uber-tech-fundraising.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Robot Intelligence Race Heats Up</strong> <span class="divider"> | </span></span> Fanuc, the worldâs largest maker of automation equipment, announced a $7.3 million investment in the artificial intelligence start-up Preferred Networks.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-08-21/fanuc-invests-in-startup-as-robot-intelligence-race-heats-up"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Credit Scores Are Rising, and Becoming More Visible</strong> <span class="divider"> | </span></span> Wider access to free credit scores could be a factor in pushing the national average FICO score to its highest level in at least 10 years.<br /><span class="kicker"><a href="//www.nytimes.com/2015/08/22/your-money/credit-scores-are-rising-and-becoming-more-visible.html">Your Money Adviser &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New Jersey Paid $720 Million to Exit All Swaps Under Christie</strong> <span class="divider"> | </span></span> New Jersey has terminated all of its interest rate swap agreements under Governor Chris Christie, paying banks $720 million to unravel $4.2 billion of swaps and wiping from its books a potentially big, unpredictable liquidity risk.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/08/20/us-usa-new-jersey-swaps-idUSKCN0QP29520150820?feedType=RSS&#038;feedName=topNews"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The British Taxman Is Coming </strong> <span class="divider"> | </span></span> British authorities are vowing to crackdown on tax dodgers to  prove the system does not favor the rich and famous.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/3fa2fd16-42bd-11e5-b98b-87c7270955cf.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3jK73pysS"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Gay Couples Are Eligible for Social Security Benefits, U.S. Decides</strong> <span class="divider"> | </span></span> The Justice Department said the Social Security Administration would apply the Supreme Courtâs June ruling declaring marriage a constitutional right retroactively.<br /><span class="kicker"><a href="//www.nytimes.com/2015/08/21/business/gay-couples-are-eligible-for-benefits-us-decides.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/08/21/morning-agenda-investors-get-fitness-fever/"
+					data-title="Morning Agenda: Investors Get Fitness Fever"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Valeant Buys Maker of &#039;Female Viagra&#039; Drug | Fresh Greek Elections | The Global Sell-Off&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/08/21/morning-agenda-investors-get-fitness-fever/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":49,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

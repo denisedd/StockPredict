@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004180119"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1454324273" />
+<meta name="PUD" content="20160201" />
+<meta name="pdate" content="20160201" />
+<meta name="ptime" content="20160201055753" />
+<meta name="utime" content="20160201162033" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-02-01T16:20:33-05:00" />
+<meta name="DISPLAYDATE" content="February 1, 2016" />
+<meta name="dat" content="February 1, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Iran;Schneiderman, Eric T;Securities and Exchange Commission">
+<meta name="des" content="Initial Public Offerings;Short Selling">
+<meta name="org" content="Barclays PLC;Bear Stearns Cos;Credit and Debt;Credit Suisse Group AG;Foxconn Technology;Goldman Sachs Group Inc;HSBC Holdings PLC.;Sharp Corporation;The Blackstone Group">
+<meta name="geo" content="China;Data Storage;Hedge Funds;Iraq;Oil (Petroleum) and Gasoline;Philippines;Ponzi and Pyramid Schemes;Puerto Rico;Renminbi (Currency);Wall Street (Manhattan, NY)">
+<meta name="ticker" content="Barclays PLC|BCS|NYSE;Credit Suisse Group AG|CS|NYSE;Goldman Sachs Group Inc|GS|NYSE;HSBC Holdings PLC.|HSBC|NYSE" />
+<meta property="article:tag" content="Iran" />
+<meta property="article:tag" content="Schneiderman Eric T" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Short Selling" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="Bear Stearns Cos" />
+<meta property="article:tag" content="Credit and Debt" />
+<meta property="article:tag" content="Credit Suisse Group AG" />
+<meta property="article:tag" content="Foxconn Technology" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="HSBC Holdings PLC." />
+<meta property="article:tag" content="Sharp Corporation" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Data Storage" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Iraq" />
+<meta property="article:tag" content="Oil (Petroleum) and Gasoline" />
+<meta property="article:tag" content="Philippines" />
+<meta property="article:tag" content="Ponzi and Pyramid Schemes" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="Renminbi (Currency)" />
+<meta property="article:tag" content="Wall Street (Manhattan NY)" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Iran,Schneiderman Eric T,Securities and Exchange Commission,Initial Public Offerings,Short Selling,Barclays PLC,Bear Stearns Cos,Credit and Debt,Credit Suisse Group AG,Foxconn Technology,Goldman Sachs Group Inc,HSBC Holdings PLC.,Sharp Corporation,The Blackstone Group,China,Data Storage,Hedge Funds,Iraq,Oil (Petroleum) and Gasoline,Philippines,Ponzi and Pyramid Schemes,Puerto Rico,Renminbi (Currency),Wall Street (Manhattan NY),DealBook" />
+<meta name="news_keywords" content="China,Iraq,Philippines" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F02%2F01%2Fmorning-agenda-barclays-and-credit-suisse-to-settle-dark-pool-inquiries%2F" title="Morning Agenda: Barclays and Credit Suisse to Settle &#8216;Dark Pool&#8217; Inquiries" />
+<meta name="description" content="Puerto Rico Proposes Plan to Delay Debt Payments &#124; Goldman&#8217;s Role as Lender in Short Sales" />
+<meta name="hdl" content="Morning Agenda: Barclays and Credit Suisse to Settle &#039;Dark Pool&#039; Inquiries" />
+<meta property="og:title" content="Morning Agenda: Barclays and Credit Suisse to Settle &#039;Dark Pool&#039; Inquiries" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/02/01/morning-agenda-barclays-and-credit-suisse-to-settle-dark-pool-inquiries/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Puerto Rico Proposes Plan to Delay Debt Payments &#124; Goldman&#8217;s Role as Lender in Short Sales" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Barclays and Credit Suisse to Settle &#039;Dark Pool&#039; Inquiries" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/02/01/morning-agenda-barclays-and-credit-suisse-to-settle-dark-pool-inquiries/" />
+<meta name="twitter:description" content="Puerto Rico Proposes Plan to Delay Debt Payments &#124; Goldman&#8217;s Role as Lender in Short Sales" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/01/29/what-were-reading-125/' />
+<link rel='next' title='Morning Agenda: Heresy on Wall Street' href='//news.blogs.nytimes.com/2016/02/02/morning-agenda-heresy-on-wall-street/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/02/01/morning-agenda-barclays-and-credit-suisse-to-settle-dark-pool-inquiries/' />
+<link rel='shortlink' href='//nyti.ms/1Klalkq' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/02/01/morning-agenda-barclays-and-credit-suisse-to-settle-dark-pool-inquiries/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Barclays and Credit Suisse to Settle &#039;Dark Pool&#039; Inquiries - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4163 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Barclays and Credit Suisse to Settle &#8216;Dark Pool&#8217; Inquiries        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/02/01/morning-agenda-barclays-and-credit-suisse-to-settle-dark-pool-inquiries/"
+	 data-title="Morning Agenda: Barclays and Credit Suisse to Settle &#8216;Dark Pool&#8217; Inquiries"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Puerto Rico Proposes Plan to Delay Debt Payments | Goldman&#039;s Role as Lender in Short Sales&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/02/01/morning-agenda-barclays-and-credit-suisse-to-settle-dark-pool-inquiries/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="February 1, 2016 5:57 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Barclays and Credit Suisse to Settle &#8216;Dark Pool&#8217; Inquiries</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-02-01T10:57:53+00:00" itemprop="datePublished">February 1, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">February 1, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4163 post type-post status-publish hentry category-dealbook tag-barclays-plc tag-bear-stearns-cos tag-china tag-credit-and-debt tag-credit-suisse-group-ag tag-data-storage tag-foxconn-technology tag-goldman-sachs-group-inc tag-hedge-funds tag-hsbc-holdings-plc tag-initial-public-offerings tag-iran tag-iraq tag-oil-petroleum-and-gasoline tag-philippines tag-ponzi-and-pyramid-schemes tag-puerto-rico tag-renminbi-currency tag-schneiderman-eric-t tag-securities-and-exchange-commission tag-sharp-corporation tag-short-selling-2 tag-the-blackstone-group tag-wall-street-manhattan-ny per-iran per-schneiderman-eric-t per-securities-and-exchange-commission des-initial-public-offerings des-short-selling org-barclays-plc org-bear-stearns-cos org-credit-and-debt org-credit-suisse-group-ag org-foxconn-technology org-goldman-sachs-group-inc org-hsbc-holdings-plc org-sharp-corporation org-the-blackstone-group geo-china geo-data-storage geo-hedge-funds geo-iraq geo-oil-petroleum-and-gasoline geo-philippines geo-ponzi-and-pyramid-schemes geo-puerto-rico geo-renminbi-currency geo-wall-street-manhattan-ny news_keywords-china news_keywords-iraq news_keywords-philippines" id="post-4163">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Barclays and Credit Suisse to Settle &#8216;Dark Pool&#8217; Inquiries</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-02-01T10:57:53+00:00" itemprop="datePublished">February 1, 2016 5:57 am</time>
+			<!-- date updated --><span class="visually-hidden updated">February 1, 2016 5:57 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/02/01/morning-agenda-barclays-and-credit-suisse-to-settle-dark-pool-inquiries/" data-title="Morning Agenda: Barclays and Credit Suisse to Settle &#8216;Dark Pool&#8217; Inquiries" data-description="Puerto Rico Proposes Plan to Delay Debt Payments | Goldman&#039;s Role as Lender in Short Sales">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BARCLAYS AND CREDIT SUISSE TO SETTLE âDARK POOLâ INQUIRIES</strong> <span class="divider"> | </span></span> Barclays and Credit Suisse will pay a combined <b>$154.3 million to settle allegations</b> that they misrepresented their private stock trading services, </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/02/01/business/dealbook/barclays-and-credit-suisse-to-settle-dark-pool-inquiries.html?ref=business">Liz Moyer reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">The systems, known as dark pools, were supposed to offer a haven from predatory trading behavior. </p>
+<p class="story-body-text" itemprop="articleBody">Barclays told clients that it monitored for high-speed trading activities in its dark pool, but did not. It also favored high-speed traders on the platform, so <b>traditional traders found themselves facing âthe most aggressive and predatory high-speed traders,â</b> according to the New York attorney general, Eric T. Schneiderman. </p>
+<p class="story-body-text" itemprop="articleBody">An investigation also focused on Credit Suisseâs Crossfinder and Light Pool trading sites. The bankâs marketing materials said customers were supposed to be able to avoid trading with high-speed firms, which would be tagged as opportunistic traders. <b>The system instead rated some high-speed firms as nonopportunistic and did not block others</b>, as it said it would. Credit Suisse also did not keep track of participants in its dark pool as often as it said it did.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Schneiderman said Credit Suisse made its dark pool a priority by sending it trade orders instead of sending them to other trading sites. It <b>secretly allowed two high-speed trading firms to trade directly with its other customer orders through an undisclosed order matching platform</b> and did not fully disclose that it transmitted confidential client information outside its dark pool, he said. </p>
+<p class="story-body-text" itemprop="articleBody">Barclays will admit in the settlement that it misled customers and violated securities laws, the New York attorney generalâs office said. The bank is paying $70 million and has <b>agreed to appoint an independent monitor for its electronic trading operations</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Credit Suisse, which was not sued, is paying $60 million, <b>as well as $24.3 million in disgorgement and interest</b> to the Securities and Exchange Commission over trading violations.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PUERTO RICO PROPOSES PLAN TO DELAY DEBT PAYMENTS</strong> <span class="divider"> | </span></span> Puerto Rico proposed a broad debt exchange program on Friday that would <b>slow down the payments it owes</b> on its $72 billion debt,<br />
+<a HREF="//www.nytimes.com/2016/01/30/business/dealbook-puerto-rico-proposes-plan-to-delay-its-debt-payments-to-free-up-cash.html?ref=dealbook">Mary Williams Walsh reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">The terms, <a href="//www.wsj.com/articles/puerto-rico-plans-debt-exchange-offer-friday-1454032261">earlier reported by The Wall Street Journal</a>, called for the islandâs creditors to exchange securities that they now hold for one of two new classes of bonds, both of which would delay payments of principal and interest. <b>The plan would give Puerto Ricoâs government enough cash to keep providing essential services as it tries to restore economic growth.</b> </p>
+<p class="story-body-text" itemprop="articleBody">The first class of new bonds would not begin repaying principal for five years. Then it <b>would pay investors 5 percent interest</b> â a relatively low rate intended to reflect the higher security of the new bonds. </p>
+<p class="story-body-text" itemprop="articleBody">The second class would not begin to repay principal for 10 years and <b>would pay interest according to how well the islandâs economy responds</b> to the governmentâs economic reform measures, according to a person with knowledge of the proposal. </p>
+<p class="story-body-text" itemprop="articleBody">It was unclear Friday afternoon whether creditors were tempted by the offer, but the deal would most likely help creditors whose bonds could be worthless if the island defaults on them. <b>It might be less attractive to those whose bonds would have priority in a legal fight</b> â the kind of fight that Puerto Rico would have a better chance of winning in bankruptcy.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> Data on <b>consumer spending in December</b> will be published at 8:30 a.m. The <b>ISM manufacturing report</b> will be published at 10 a.m. <b>Stanley Fischer</b>, the vice chairman of the Federal Reserve, will speak on Bloomberg Television at 1 p.m. <b>Alphabet</b> will hold a conference call on its latest quarterly results at 4:30 p.m. <b>Yahoo</b> will discuss its fourth-quarter and full-year earnings at 5 p.m. on Tuesday.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>GOLDMANâS ROLE AS A LENDER IN SHORT SALES</strong> <span class="divider"> | </span></span> A case that the S.E.C. filed against Goldman Sachs on Jan. 14 merits close study, despite involving a relatively small fine of $15 million, because <b>it sheds light on the secretive and profitable arena of securities lending and short-selling</b>, </p>
+<p class="story-body-text" itemprop="articleBody"><a HREF="//www.nytimes.com/2016/01/31/business/case-sheds-light-on-goldmans-role-as-lender-in-short-sales.html?ref=dealbook">Gretchen Morgenson writes in the Fair Game column.</a></p>
+<p class="story-body-text" itemprop="articleBody">The firm settled the matter without admitting to or denying the S.E.C.âs allegations. </p>
+<p class="story-body-text" itemprop="articleBody">The case tells us a lot about one of the most important duties that Wall Street firms perform for their clients â executing trades for hedge funds and other large investors. When these clients want to bet against a companyâs stock, they rely on brokerage firms to locate the shares they must borrow and deliver to a buyer. </p>
+<p class="story-body-text" itemprop="articleBody">Selling stock short without first locating the shares for delivery is known as naked shorting â a violation of an S.E.C. rule. The regulator said Goldman advised its clients that it had performed crucial services for them when it often had not. <b>Its failure means that some clients were unknowingly breaching this rule.</b></p>
+<p class="story-body-text" itemprop="articleBody">Goldman violated the rule from November 2008 through mid-2013, the S.E.C. said.</p>
+<p class="story-body-text" itemprop="articleBody">This meant that <b>some customers were very likely paying for a service that the firm wasnât providing</b>. </p>
+<p class="story-body-text" itemprop="articleBody"><b>The cost of borrowing shares can be considerable under normal circumstances</b>, but they rocket when there is more demand by investors to short a companyâs stock than there is stock to borrow. Clients may have to pay 25 percent or more of the tradeâs value to secure the shares. Some of Goldmanâs customers may now be able to recover damages from the firm, securities lawyers say. </p>
+<p class="story-body-text" itemprop="articleBody">âThe S.E.C. settlement concerns the provision of locates,â said Michael DuVally, a Goldman spokesman, âand Goldman does not charge its clients for locates. As is common industry practice, clients are only charged if they establish a short position. <b>The S.E.C. order noted that Goldmanâs rate of fails to deliver remained low.</b>&#8220;</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Foxconn Confident of Winning Bid for Sharp</strong> <span class="divider"> | </span></span> Terry Gou, the chairman of Foxconn, said that he was confident that his company would win the bid to take control of Sharp after he met with Sharp management at their headquarters in Osaka, Japan, this weekend. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-01-31/foxconn-s-gou-confident-of-winning-bid-to-take-control-of-sharp">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstone Starts Sale Process for Chinese Tech Outsourcing Firm</strong> <span class="divider"> | </span></span> Blackstone has hired Morgan Stanley to run a sale process for the company, Pactera, after receiving unsolicited expressions of interest from buyers and could be offering it for up to $1 billion, The Wall Street Journal reports, citing people familiar with the situation. <br /><span class="kicker"><a href="//www.wsj.com/articles/blackstone-shops-chinese-tech-outsourcing-firm-pactera-to-potential-buyers-1454304684?mod=rss_markets_main"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Philippine Companies Become Big Deal Makers</strong> <span class="divider"> | </span></span> Bumper earnings at Philippine companies, which had almost no track record of foreign takeovers and were criticized as too conservative and inward-focused, have helped fund $6 billion in overseas acquisitions since 2014. <br /><span class="kicker"><a href="//www.wsj.com/articles/philippines-companies-formerly-fusty-become-big-dealmakers-1454268605?mod=asia_home"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HSBC Is Said to Freeze Salaries and Hiring in 2016</strong> <span class="divider"> | </span></span> Europeâs largest lender, HSBC, is imposing a hiring and pay freeze globally in 2016 as part of its cost-cutting drive, two sources familiar with the matter told Reuters.<br /><span class="kicker"><a href="//www.reuters.com/article/us-hsbc-pay-idUSKCN0V90P2">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="A Comic Take on Wall Street by an Ex-Bear Stearns Executive" src="https://static01.nyt.com/images/2016/02/01/business/1SHERRY/1SHERRY-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Comic Take on Wall Street by an Ex-Bear Stearns Executive</strong> <span class="divider"> | </span></span> The executive, Maureen Sherry, has written a book about a womanâs trip through the financial crisis. A movie is planned.<br /><span class="kicker"><a href="//www.nytimes.com/2016/02/01/business/media/a-comic-take-on-wall-street-by-an-ex-bear-stearns-executive.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Regulators Help Iranian Banks Come in from the Cold </strong> <span class="divider"> | </span></span> British regulators are trying to help three Iranian-owned banks reintegrate into the financial system after years of international sanctions by deploying a unit meant to encourage start-up banks to gain regulatory approval and start operations by allocating specific resources to them.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/54144ec2-c692-11e5-b3b1-7b2481276e45.html"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JPMorgan Introduces Trial Project for Blockchain</strong> <span class="divider"> | </span></span> JPMorgan Chase has begun a trial project using blockchain as it seeks to lead banking-industry efforts to cut the cost and hassle of trading.<br />
+<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/2d3f9296-c5ef-11e5-b3b1-7b2481276e45.html#axzz3ysmruDCj"> THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>U.S. Hedge Funds Mount New Attacks on Chinaâs Currency </strong> <span class="divider"> | </span></span> Some of the biggest names in the hedge fund industry are piling up bets against the renminbi, setting up a showdown between Wall Street and the leaders of the worldâs second-largest economy.<br /><span class="kicker"><a href="//www.wsj.com/articles/currency-war-u-s-hedge-funds-mount-new-attacks-on-chinas-yuan-1454236202"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>I.P.O. Could Value Countryside Properties at $1.6 Billion</strong> <span class="divider"> | </span></span> The British home builder, which is majority owned by the private equity firm Oaktree Capital Management, expects to price its initial public offering this month.<br /><span class="kicker"><a href="//www.nytimes.com/2016/02/02/business/dealbook/countryside-ipo.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China Company Accused of Fleecing Investors of $7.6 Billion</strong> <span class="divider"> | </span></span> Police arrested the maverick founder of China&#8217;s largest online finance business on suspicion of fleecing 900,000 investors of $7.6 billion, in what could be the biggest financial fraud in Chinese history.<br /><span class="kicker"><a href="//www.nytimes.com/aponline/2016/02/01/world/asia/ap-as-china-fake-investments.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="For Victims, an Overloaded Court System Brings Pain and Delays" src="https://static01.nyt.com/images/2016/01/31/nyregion/01delays5/01delays5-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>For Victims, an Overloaded Court System Brings Pain and Delays</strong> <span class="divider"> | </span></span> Alfredo Allen had irreversible brain damage after being stabbed at his Brooklyn high school, and it took 41 court dates for the case against his attacker to be closed.<br /><span class="kicker"><a href="//www.nytimes.com/2016/02/01/nyregion/for-victims-an-overloaded-court-system-brings-pain-and-delays.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="U.S. and Europe Fail to Meet Deadline for Data Transfer Deal" src="https://static01.nyt.com/images/2016/01/29/technology/digitaldatalisty-onlinehistory/digitaldatalisty-onlinehistory-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>U.S. and Europe Fail to Meet Deadline for Data Transfer Deal</strong> <span class="divider"> | </span></span> Officials were far apart on Sunday over a trans-Atlantic pact that international companies must rely on to move digital data between the regions.<br /><span class="kicker"><a href="//www.nytimes.com/2016/02/01/technology/us-european-data-transfer-deal.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/interactive/2016/01/29/technology/data-privacy-policy-us-europe.html">How Europe Protects Your Online Data Differently Than the U.S. </a> </span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="New Technologies Give Government Ample Means to Track Suspects, Study Finds" src="https://static01.nyt.com/images/2016/02/01/world/ENCRYPTION/ENCRYPTION-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New Technologies Give Government Ample Means to Track Suspects, Study Finds</strong> <span class="divider"> | </span></span> Fears that encrypted communication will prevent agencies from tracking terrorists are overstated, according to a study that included current and former intelligence officials.<br /><span class="kicker"><a href="//www.nytimes.com/2016/02/01/us/politics/new-technologies-give-government-ample-means-to-track-suspects-study-finds.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Battered by War, Iraq Now Faces Calamity From Dropping Oil Prices" src="https://static01.nyt.com/images/2016/01/27/world/xxiraq-web2/xxiraq-web2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Battered by War, Iraq Now Faces Calamity From Dropping Oil Prices</strong> <span class="divider"> | </span></span> The country depends on oil for 90 percent of its revenue. Now, it faces crippling budget cuts and increasing difficulty paying government workers.<br /><span class="kicker"><a href="//www.nytimes.com/2016/02/01/world/middleeast/battered-by-war-iraq-now-faces-calamity-from-dropping-oil-prices.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="In Iran, New Battle Brews Over Contracts With Foreign Oil Giants" src="https://static01.nyt.com/images/2016/01/19/world/19Oil-web/19Oil-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>In Iran, New Battle Brews Over Contracts With Foreign Oil Giants</strong> <span class="divider"> | </span></span> The battle is threatening to complicate government efforts to attract desperately needed foreign investment, two weeks after the lifting of sanctions.<br /><span class="kicker"><a href="//www.nytimes.com/2016/02/01/world/middleeast/iran-sanctions-oil-investment.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+<div id="addendums" class="addendums"><div class="story-addendum theme-correction"><strong>Correction: February 1, 2016</strong> <br>An earlier version of this article misstated that date of Yahoo's earnings. They will be reported on Tuesday.</div></div></div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/02/01/morning-agenda-barclays-and-credit-suisse-to-settle-dark-pool-inquiries/"
+					data-title="Morning Agenda: Barclays and Credit Suisse to Settle &#8216;Dark Pool&#8217; Inquiries"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Puerto Rico Proposes Plan to Delay Debt Payments | Goldman&#039;s Role as Lender in Short Sales&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/02/01/morning-agenda-barclays-and-credit-suisse-to-settle-dark-pool-inquiries/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":51,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004098687"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1450350044" />
+<meta name="PUD" content="20151217" />
+<meta name="pdate" content="20151217" />
+<meta name="ptime" content="20151217060044" />
+<meta name="utime" content="20151217110044" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-12-17T11:00:44-05:00" />
+<meta name="DISPLAYDATE" content="December 17, 2015" />
+<meta name="dat" content="December 17, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Macri, Mauricio">
+<meta name="des" content="Argentina;Banking and Financial Institutions;Bankruptcies;Bitcoin (Currency);Currency;Federal Budget (US);Federal Taxes (US);Interest Rates;Junk Bonds;Mutual Funds;News and News Media;Switzerland">
+<meta name="org" content="Airbus Industrie;Anheuser-Busch InBev NV;AstraZeneca PLC;Avon Products Inc;Barclays PLC;Baxalta Inc.;Beijing (China);Bloomberg LP;Canadian Pacific Railway Ltd;Carlyle Group LP;Cerberus Capital Management;Federal Reserve System;Forbes Media LLC;Hilton Worldwide Holdings Inc;Initial Public Offerings;KKR &amp; Co LP;Norfolk Southern Corporation;Puerto Rico;Securities and Exchange Commission;Shire PLC;UBS AG">
+<meta name="geo" content="Adelson, Sheldon G;Las Vegas (Nev)">
+<meta name="ticker" content="Anheuser-Busch InBev NV|BUD|NYSE;Avon Products Inc|AVP|NYSE;Barclays PLC|BCS|NYSE;Canadian Pacific Railway Ltd|CP|NYSE;Hilton Worldwide Holdings Inc|HLT|NYSE;Norfolk Southern Corporation|NSC|NYSE;Shire PLC|SHPG|NASDAQ;UBS AG|UBS|NYSE" />
+<meta property="article:tag" content="Macri Mauricio" />
+<meta property="article:tag" content="Argentina" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Bankruptcies" />
+<meta property="article:tag" content="Bitcoin (Currency)" />
+<meta property="article:tag" content="Currency" />
+<meta property="article:tag" content="Federal Budget (US)" />
+<meta property="article:tag" content="Federal Taxes (US)" />
+<meta property="article:tag" content="Interest Rates" />
+<meta property="article:tag" content="Junk Bonds" />
+<meta property="article:tag" content="Mutual Funds" />
+<meta property="article:tag" content="News and News Media" />
+<meta property="article:tag" content="Switzerland" />
+<meta property="article:tag" content="Airbus Industrie" />
+<meta property="article:tag" content="Anheuser-Busch InBev NV" />
+<meta property="article:tag" content="AstraZeneca PLC" />
+<meta property="article:tag" content="Avon Products Inc" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="Baxalta Inc." />
+<meta property="article:tag" content="Beijing (China)" />
+<meta property="article:tag" content="Bloomberg LP" />
+<meta property="article:tag" content="Canadian Pacific Railway Ltd" />
+<meta property="article:tag" content="Carlyle Group LP" />
+<meta property="article:tag" content="Cerberus Capital Management" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Forbes Media LLC" />
+<meta property="article:tag" content="Hilton Worldwide Holdings Inc" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="KKR &amp; Co LP" />
+<meta property="article:tag" content="Norfolk Southern Corporation" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Shire PLC" />
+<meta property="article:tag" content="UBS AG" />
+<meta property="article:tag" content="Adelson Sheldon G" />
+<meta property="article:tag" content="Las Vegas (Nev)" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Macri Mauricio,Argentina,Banking and Financial Institutions,Bankruptcies,Bitcoin (Currency),Currency,Federal Budget (US),Federal Taxes (US),Interest Rates,Junk Bonds,Mutual Funds,News and News Media,Switzerland,Airbus Industrie,Anheuser-Busch InBev NV,AstraZeneca PLC,Avon Products Inc,Barclays PLC,Baxalta Inc.,Beijing (China),Bloomberg LP,Canadian Pacific Railway Ltd,Carlyle Group LP,Cerberus Capital Management,Federal Reserve System,Forbes Media LLC,Hilton Worldwide Holdings Inc,Initial Public Offerings,KKR &amp; Co LP,Norfolk Southern Corporation,Puerto Rico,Securities and Exchange Commission,Shire PLC,UBS AG,Adelson Sheldon G,Las Vegas (Nev),DealBook" />
+<meta name="news_keywords" content="Bankruptcy,Currency" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F12%2F17%2Fmorning-agenda-janet-yellens-new-risk-manager-role%2F" title="Morning Agenda:  Janet Yellen&#8217;s New Risk Manager Role" />
+<meta name="description" content="Third Avenue Reaches Deal With S.E.C. &#124; Argentina Set to Devalue Its Currency" />
+<meta name="hdl" content="Morning Agenda:  Janet Yellen&#039;s New Risk Manager Role" />
+<meta property="og:title" content="Morning Agenda:  Janet Yellen&#039;s New Risk Manager Role" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/12/17/morning-agenda-janet-yellens-new-risk-manager-role/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Third Avenue Reaches Deal With S.E.C. &#124; Argentina Set to Devalue Its Currency" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda:  Janet Yellen&#039;s New Risk Manager Role" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/12/17/morning-agenda-janet-yellens-new-risk-manager-role/" />
+<meta name="twitter:description" content="Third Avenue Reaches Deal With S.E.C. &#124; Argentina Set to Devalue Its Currency" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: All Eyes on the Federal Reserve' href='//news.blogs.nytimes.com/2015/12/16/morning-agenda-all-eyes-on-the-federal-reserve/' />
+<link rel='next' title='Morning Agenda: Shkreli Indictment Portrays His Small-Time Fraud' href='//news.blogs.nytimes.com/2015/12/18/morning-agenda-shkreli-indictment-portrays-his-small-time-fraud/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/12/17/morning-agenda-janet-yellens-new-risk-manager-role/' />
+<link rel='shortlink' href='//nyti.ms/229LDsZ' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/12/17/morning-agenda-janet-yellens-new-risk-manager-role/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda:  Janet Yellen&#039;s New Risk Manager Role - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3875 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda:  Janet Yellen&#8217;s New Risk Manager Role        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/12/17/morning-agenda-janet-yellens-new-risk-manager-role/"
+	 data-title="Morning Agenda:  Janet Yellen&#8217;s New Risk Manager Role"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Third Avenue Reaches Deal With S.E.C. | Argentina Set to Devalue Its Currency&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/12/17/morning-agenda-janet-yellens-new-risk-manager-role/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="December 17, 2015 6:00 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda:  Janet Yellen&#8217;s New Risk Manager Role</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-12-17T11:00:44+00:00" itemprop="datePublished">December 17, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">December 17, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3875 post type-post status-publish hentry category-dealbook tag-adelson-sheldon-g tag-airbus-industrie tag-anheuser-busch-inbev-nv tag-argentina tag-astrazeneca-plc tag-avon-products-inc tag-banking-and-financial-institutions tag-bankruptcies tag-barclays-plc tag-baxalta-inc tag-beijing-china tag-bitcoin-currency tag-bloomberg-lp tag-canadian-pacific-railway-ltd tag-carlyle-group-lp tag-cerberus-capital-management tag-currency tag-federal-budget-us tag-federal-reserve-system tag-federal-taxes-us tag-forbes-media-llc tag-hilton-worldwide-holdings-inc tag-initial-public-offerings tag-interest-rates tag-junk-bonds tag-kkr-co-lp tag-las-vegas-nev tag-macri-mauricio tag-mutual-funds tag-news-and-news-media tag-norfolk-southern-corporation tag-puerto-rico tag-securities-and-exchange-commission tag-shire-plc tag-switzerland tag-ubs-ag per-macri-mauricio des-argentina des-banking-and-financial-institutions des-bankruptcies des-bitcoin-currency des-currency des-federal-budget-us des-federal-taxes-us des-interest-rates des-junk-bonds des-mutual-funds des-news-and-news-media des-switzerland org-airbus-industrie org-anheuser-busch-inbev-nv org-astrazeneca-plc org-avon-products-inc org-barclays-plc org-baxalta-inc org-beijing-china org-bloomberg-lp org-canadian-pacific-railway-ltd org-carlyle-group-lp org-cerberus-capital-management org-federal-reserve-system org-forbes-media-llc org-hilton-worldwide-holdings-inc org-initial-public-offerings org-kkr-co-lp org-norfolk-southern-corporation org-puerto-rico org-securities-and-exchange-commission org-shire-plc org-ubs-ag geo-adelson-sheldon-g geo-las-vegas-nev news_keywords-bankruptcy news_keywords-currency" id="post-3875">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda:  Janet Yellen&#8217;s New Risk Manager Role</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-12-17T11:00:44+00:00" itemprop="datePublished">December 17, 2015 6:00 am</time>
+			<!-- date updated --><span class="visually-hidden updated">December 17, 2015 6:00 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/12/17/morning-agenda-janet-yellens-new-risk-manager-role/" data-title="Morning Agenda:  Janet Yellen&#8217;s New Risk Manager Role" data-description="Third Avenue Reaches Deal With S.E.C. | Argentina Set to Devalue Its Currency">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JANET YELLENâS NEW RISK MANAGER ROLE</strong> <span class="divider"> | </span></span> The Federal Reserve raised short-term interest rates for the first time in almost a decade yesterday, a move that was both widely anticipated yet closely scrutinized, <a href="//www.nytimes.com/2015/12/17/business/economy/fed-interest-rates.html?hp&#038;action=click&#038;pgtype=Homepage&#038;clickSource=story-heading&#038;module=first-column-region&#038;region=top-news&#038;WT.nav=top-news">Binyamin Appelbaum reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">Rates were raised to a range of 0.25 percent to 0.5 percent. Fed officials emphasized that they <b>intended to raise rates gradually</b>, about one percentage point a year for the next three years. </p>
+<p class="story-body-text" itemprop="articleBody">âThe economic recovery has clearly come a long way, although it is not complete,â the Fedâs chairwoman, Janet L. Yellen, said at a news conference. She added that the decision was a sign of <b>how much the economy had improved</b>. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Financial markets took the news calmly</b>, as the Standard &#038; Poorâs 500-stock index rose 1.5 percent and the yield on two-year Treasuries closed above 1 percent for the first time since April 2010. European and Asian markets also rose after the decision, as <a href="//www.wsj.com/articles/global-stocks-rally-after-fed-interest-rate-decision-1450344500">The Wall Street Journal reports.</a></p>
+<p class="story-body-text" itemprop="articleBody">Investors still debated <b>whether a rate increase could create more turbulence</b>, <a href="//www.nytimes.com/2015/12/17/business/dealbook/with-feds-interest-rate-move-a-test-of-the-stock-markets.html?hp&#038;action=click&#038;pgtype=Homepage&#038;clickSource=story-heading&#038;module=first-column-region&#038;region=top-news&#038;WT.nav=top-news">Peter Eavis reports in DealBook.</a> A broad pullback on Wall Street could restrict the flow of credit into the economy and a decline in stocks could damage the financial standing of households. </p>
+<p class="story-body-text" itemprop="articleBody">The Fed watches for signs of such disruption and Ms. Yellen said on Wednesday that the central bank would take that into account. As <a href="//www.nytimes.com/2015/12/17/upshot/janet-yellens-new-hat-risk-manager.html?hp&#038;action=click&#038;pgtype=Homepage&#038;clickSource=story-heading&#038;module=first-column-region&#038;region=top-news&#038;WT.nav=top-news">Neil Irwin notes in The Upshot,</a> Ms. Yellen has just stepped into her <b>new role of risk manager</b>. </p>
+<p class="story-body-text" itemprop="articleBody">If the struggling global economy holds back the United States more than expected and inflation continues to lag, the Fed may have to reverse course. But, as Ms. Yellen discussed on Wednesday, she also had to <b>avoid pushing rates up sharply when the economy was at real risk of overheating</b> and creating even more disruption.<br />
+Fed officials hope that a gradual tightening now will make miscalibrations less likely.</p>
+<p class="story-body-text" itemprop="articleBody">Ms. Yellen will also have to conduct some <b>risk management in the background</b>. She cannot make decisions unilaterally so she will have to keep her colleagues on board with her policies. </p>
+<p class="story-body-text" itemprop="articleBody">The Fed would also want to <b>avoid making a major policy pivot in the heat of a presidential campaign</b>. The hope was that they would not have to make any major moves just when an action could become a political football.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>THIRD AVENUE REACHES DEAL WITH S.E.C.</strong> <span class="divider"> | </span></span> Third Avenue Management reached an agreement with the Securities and Exchange Commission that makes official its <b>bar on investors taking their money out of a stricken bond fund</b>,<br />
+<a href="//www.nytimes.com/2015/12/17/business/dealbook/junk-bond-fund-that-barred-investor-redemptions-reaches-deal-with-sec.html?ref=dealbook">Landon Thomas Jr. reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">The fundâs portfolio is made up of hard-to-sell corporate bonds either in bankruptcy or emerging from it, which makes it impossible to meet mounting redemption demands. </p>
+<p class="story-body-text" itemprop="articleBody">Under the agreement, the remaining assets will be transferred from a liquidating trust back into the original mutual fund structure. Remaining investors can track the fundâs value on a daily basis. The return of investor assets could still take a year or more. </p>
+<p class="story-body-text" itemprop="articleBody">The after-the-fact agreement <b>showed how fast events have moved</b>. The fund felt that it did not have the time to wait for official approval before the shutdown, people briefed on the discussions said. </p>
+<p class="story-body-text" itemprop="articleBody">Bond funds with similar investment strategies have also experienced a fall in their net assets, but <b>there has not been a broader panic</b>. Analysts have noted that Third Avenueâs credit fund was an outlier because it had a much higher proportion of assets in private equity-like investments, which cannot be readily converted into cash.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The Federal Reserve Bank of Philadelphia will release its latest <b>manufacturing business outlook survey</b> at 8:30 a.m. Data on weekly <b>unemployment insurance claims</b> will be released at 8:30 a.m. <b>General Mills</b> will hold a conference call to discuss its second-quarter earnings at 8:30 a.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ARGENTINA SET TO DEVALUE ITS CURRENCY</strong> <span class="divider"> | </span></span> Mauricio Macri, Argentinaâs new president, has rushed to bring in sweeping market-oriented changes intended to revive the ailing economy. As part of that, the finance minister, Alfonso Prat-Gay, <b>scrapped currency controls, a move that is expected to lead to a plunge in the peso</b>, </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2015/12/17/world/americas/argentina-set-to-devalue-its-currency.html?login=email&#038;ref=world&#038;mtrref=www.nytimes.com">Jonathan Gilbert reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">âLifting these barriers that have halted the economy for many years will kick it along the path to growth,â Mr. Prat-Gay told reporters. </p>
+<p class="story-body-text" itemprop="articleBody">Although the move is intended to help bolster the economy, a <b>devaluation is likely to lead to hardship for many Argentines</b> as prices shoot up.</p>
+<p class="story-body-text" itemprop="articleBody">Economists have long warned that the <b>overvalued peso</b>, which was tightly administered by the central bank under Cristina FernÃ¡ndez de Kirchner, made the nation uncompetitive and thwarted foreign investment. </p>
+<p class="story-body-text" itemprop="articleBody">Mrs. Kirchner, who had seen the <b>gains of devaluation undermined by inflation</b>, left another devaluation to her successor because the political cost was too high, said GastÃ³n Rossi, a former deputy economy minister and director of a consultancy in Buenos Aires.</p>
+<p class="story-body-text" itemprop="articleBody">Economists expect Mr. Macriâs changes to end in a <b>recession or anemic growth next year</b>, followed by a rebound in 2017.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="AstraZeneca to Acquire Majority Stake in Acerta Pharma" src="https://static01.nyt.com/images/2015/12/18/world/18db-Astrazeneca-web/18db-Astrazeneca-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AstraZeneca to Acquire Majority Stake in Acerta Pharma</strong> <span class="divider"> | </span></span> The deal would be the latest by a pharmaceutical company in what has been a record year for mergers, driven in part by transactions in the health care sector.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/18/business/dealbook/astrazeneca-to-acquire-majority-stake-in-acerta-pharma.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Sheldon AdelsonÂ Said to Be Buyer of Las Vegas Review-Journal" src="https://static01.nyt.com/images/2015/12/17/business/17paper_web1/17paper_web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sheldon AdelsonÂ Said to Be Buyer of Las Vegas Review-Journal</strong> <span class="divider"> | </span></span> The revelation solves a riddle that had fascinated those in political and news media circles since the sale was announced last week.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/17/business/media/sheldon-adelson-las-vegas-review-journal.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Canadian Pacific Adds Financial Incentive in Quest for Norfolk Southern</strong> <span class="divider"> | </span></span> Canadian Pacific Railway is offering a contingent-value right for each Norfolk Southern share, which it said would be paid if the value of the shares declined during a prolonged regulatory review. It said the contingent rights could be worth as much as $3.4 billion.<br /><span class="kicker"><a href="//www.wsj.com/articles/canadian-pacific-railway-boosts-offer-for-norfolk-southern-1450276867?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Cerberus Nears Deal to Buy 80% of Avonâs North American Business for $170 Million</strong> <span class="divider"> | </span></span> Cerberus Capital Management is nearing a deal to buy 80 percent of Avonâs North American business and take a nearly 17 percent stake in the famed cosmetics company, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/cerberus-nears-deal-to-buy-80-of-avons-north-american-business-for-170-million-1450330951"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hilton to Spin Off Hotel Properties Into Real-Estate Investment Trust</strong> <span class="divider"> | </span></span> Hilton has sought the blessing of the Internal Revenue Service for the transaction, which would involve a large number of the hotels it owns, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/hilton-to-spin-off-hotel-properties-into-real-estate-investment-trust-1450300095?mod=pls_whats_news_us_business_f">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Shaw Communications to Buy Wind Mobile for $1.16 Billion</strong> <span class="divider"> | </span></span> Canadaâs Shaw Communications said on Wednesday that it had agreed to buy Wind Mobile, the countryâs fourth-largest wireless provider, in a deal that gives it a much-needed presence in the cellular market.<br /><span class="kicker"><a href="//www.reuters.com/article/us-wind-mobile-corp-m-a-shaw-comms-idUSKBN0TZ37K20151217?feedType=RSS&#038;feedName=innovationNews"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Standoff Over Shireâs Pursuit of Baxalta Said to Near End</strong> <span class="divider"> | </span></span> Shire, the drug maker based in Dublin, expects to either strike a deal with the biotechnology firm, Baxalta, or walk away âreasonably soon,â The Wall Street Journal reports, citing a person close to the deal.<br /><span class="kicker"><a href="//www.wsj.com/articles/standoff-over-shires-pursuit-of-baxalta-nears-an-end-1450294929?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Breakingviews: Huge Beer Mergerâs Cast-Offs Could Attract a Private Buyer" src="https://static01.nyt.com/images/2015/09/17/business/db-budweiser-2008/db-budweiser-2008-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Huge Beer Mergerâs Cast-Offs Could Attract a Private Buyer</strong> <span class="divider"> | </span></span> Selling off Peroni and Grolsch could bring $1.2 billion for the combined Anheuser-Busch InBev and SABMiller and ease antitrust approval, John Foley writes.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/17/business/dealbook/huge-beer-mergers-cast-offs-could-attract-a-private-buyer.html">Breakingviews &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/11/12/business/dealbook/anheuser-busch-inbev-sabmiller-deal.html">Anheuser-Busch InBev Completes Agreement for SABMiller</a> <time class="timestamp" data-eastern-timestamp="7:34 PM" datetime="2015-11-11" data-utc-timestamp="1447288465000">7:34 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bloomberg to Buy Barclays Index Business for $787 Million</strong> <span class="divider"> | </span></span> The deal is the latest by Barclays as it seeks to reshape itself by selling underperforming businesses and focusing on its core operations.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/17/business/dealbook/bloomberg-to-buy-barclays-index-business-for-787-million.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Irrepressible Dealmaker</strong> <span class="divider"> | </span></span> Lars Windhorst presided over the collapse of two companies but he is trying to rebuild his reputation in the London. Both his supporters and detractors are asking, âWhere does the money come from?â<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/cf7f48b4-9f41-11e5-8613-08e211ea5317.html#axzz3uSnL5H3s"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Former UBS Employees Punished For Forex Rigging</strong> <span class="divider"> | </span></span> A Swiss regulator has temporarily banned six former UBS Group employees from the financial industry and reprimanded a handful of others, as global investigations into foreign-exchange rate manipulation move toward a close.<br /><span class="kicker"><a href="//www.wsj.com/articles/finma-bans-six-former-ubs-employees-over-fx-rigging-1450345293"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Group Aims to Build Public Network for Blockchain Applications</strong> <span class="divider"> | </span></span> Blockchain, the Bitcoin-linked software ledger that is promoted as a way to speed up and simplify how transactions are recorded, won the backing of finance and technology companies like IBM, Wells Fargo and the London Stock Exchange Group.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-12-17/blockchain-lures-ibm-wells-fargo-to-develop-transaction-network"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Swiss Banks Name Holders of Dormant Accounts Worth $45 Million</strong> <span class="divider"> | </span></span> The Swiss Bankers Association posted information online including the names, nationalities and last-known residences of some 2,600 owners of safe-deposit boxes and accounts that have remained untouched for 60 years or more.<br /><span class="kicker"><a href="//www.wsj.com/articles/swiss-banks-name-holders-of-dormant-accounts-worth-45-million-1450283532?mod=rss_markets_main"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Airbus Shortlists Carlyle and K.K.R. for Electronics Unit Sale</strong> <span class="divider"> | </span></span> The sale of the defense electronics unit is part of a plan by Airbus to dispose of assets with combined revenues of about $2.2 billion, following a decision to focus on civil and military aeronautical and space assets in the face of low defense spending in Europe.<br /><span class="kicker"><a href="//www.reuters.com/article/us-airbus-group-electronics-bidder-idUSKBN0TZ2FV20151216?feedType=RSS&#038;feedName=innovationNews"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="BATS Exchange to Try Again at an I.P.O." src="https://static01.nyt.com/images/2015/12/17/business/db-bats-web1/db-bats-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BATS Exchange to Try Again at an I.P.O.</strong> <span class="divider"> | </span></span> Since technology problems forced BATS to pull its offering in 2012, the exchange has faced new competitive threats and increased regulatory scrutiny.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/17/business/dealbook/bats-exchange-to-try-again-at-an-ipo.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bank of Zhengzhou Raises $656 Million in Hong Kong I.P.O.</strong> <span class="divider"> | </span></span> The Chinese commercial lender Bank of Zhengzhou raised $656 million in its Hong Kong initial public offering on Wednesday, after pricing the deal at the bottom end of an indicative range, The Wall Street Journal reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/bank-of-zhengzhou-raises-656-million-in-hong-kong-ipo-1450260716"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Governor of Puerto Rico Warns of Looming Default" src="https://static01.nyt.com/images/2015/12/17/business/17DB-RICO/17DB-RICO-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Governor of Puerto Rico Warns of Looming Default</strong> <span class="divider"> | </span></span> Gov. Alejandro GarcÃ­a Padilla said the commonwealth would possibly begin missing payments as soon as New Yearâs Day unless Congress allowed it to restructure its debts.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/17/business/dealbook/governor-of-puerto-rico-warns-of-looming-default-without-bankruptcy-plan.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Volkswagen Loans Investigated by E.U. Anti-Fraud Office" src="https://static01.nyt.com/images/2015/12/17/business/17volkswagen-web/17volkswagen-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Volkswagen Loans Investigated by E.U. Anti-Fraud Office</strong> <span class="divider"> | </span></span> Officials are looking into whether the German carmaker misused funds from the European Investment Bank to develop cleaner engines.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/17/business/international/volkswagen-fraud-office-investigation.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Integrated Whale Media Hits Back at Forbes Family</strong> <span class="divider"> | </span></span> The Chinese owners of Forbes magazine have asked a United States court to dismiss the Forbes familyâs lawsuit against them, arguing allegations made in October of payment default and corporate abuse are without merit.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/5147d73e-a420-11e5-873f-68411a84f346.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3uSnL5H3s"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Beijing Investigates Architects of Stock Market Rescue</strong> <span class="divider"> | </span></span> Communist Party investigators are examining whether officials inside the China Securities Regulatory Commission used their knowledge of the rescue effort to enrich their friends or themselves, The Wall Street Journal reports, citing agency officials familiar with the inquiry.<br /><span class="kicker"><a href="//www.wsj.com/articles/beijing-probes-architects-of-stock-market-rescue-1450332001"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="The Mutual Fund Equivalent of Bankruptcy" src="https://static01.nyt.com/images/2015/12/12/business/12DB-FUND/12DB-FUND-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Mutual Fund Equivalent of Bankruptcy</strong> <span class="divider"> | </span></span> The liquidation of a Third Avenue Management fund may prompt re-examination of whether mutual funds might be systemically important in some circumstances.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/17/business/dealbook/the-mutual-fund-equivalent-of-bankruptcy.html">In Debt &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Budget Deal Raises Spending, and the Deficit, Through Tax Breaks" src="https://static01.nyt.com/images/2015/12/17/us/17CONG-web/17CONG-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Budget Deal Raises Spending, and the Deficit, Through Tax Breaks</strong> <span class="divider"> | </span></span> The $1.1 trillion measure makes some tax breaks permanent, increasing the deficit by $500 billion, and it surpasses previous spending limits by $66 billion.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/17/us/politics/budget-deal-raises-spending-and-the-deficit-through-tax-breaks.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/12/17/morning-agenda-janet-yellens-new-risk-manager-role/"
+					data-title="Morning Agenda:  Janet Yellen&#8217;s New Risk Manager Role"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Third Avenue Reaches Deal With S.E.C. | Argentina Set to Devalue Its Currency&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/12/17/morning-agenda-janet-yellens-new-risk-manager-role/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":54,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

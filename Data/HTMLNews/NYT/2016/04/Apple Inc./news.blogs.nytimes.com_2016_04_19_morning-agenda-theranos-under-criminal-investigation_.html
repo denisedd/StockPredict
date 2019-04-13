@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004342537"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1461060783" />
+<meta name="PUD" content="20160419" />
+<meta name="pdate" content="20160419" />
+<meta name="ptime" content="20160419061303" />
+<meta name="utime" content="20160419101303" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-04-19T10:13:03-04:00" />
+<meta name="DISPLAYDATE" content="April 19, 2016" />
+<meta name="dat" content="April 19, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Holmes, Elizabeth (1984- );Low Jho (1981- );Singer, Paul E;Warren, Kelcy (1955- )">
+<meta name="des" content="Banking and Financial Institutions;Credit and Debt;Law and Legislation;Mergers, Acquisitions and Divestitures;Regulation and Deregulation of Industry;Securities and Commodities Violations;Subprime Mortgage Crisis;Suits and Litigation (Civil)">
+<meta name="org" content="1Malaysia Development Berhad (1MDB);7-Eleven;Alibaba Group Holding Ltd;Alipay;China Investment Corp;Energy Transfer Equity LP;Financial Stability Oversight Council;Food and Drug Administration;Hearst Corp;House Financial Services Committee;Latham &amp; Watkins LLP;Milan (Soccer Team);Morgan Stanley;Net-A-Porter;Williams Companies Inc">
+<meta name="geo" content="Argentina;Europe;Great Britain">
+<meta name="ticker" content="Energy Transfer Equity LP|ETE|NYSE;Morgan Stanley|MS|NYSE;Williams Companies Inc|WMB|NYSE" />
+<meta property="article:tag" content="Holmes Elizabeth (1984- )" />
+<meta property="article:tag" content="Low Jho (1981- )" />
+<meta property="article:tag" content="Singer Paul E" />
+<meta property="article:tag" content="Warren Kelcy (1955- )" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Credit and Debt" />
+<meta property="article:tag" content="Law and Legislation" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Securities and Commodities Violations" />
+<meta property="article:tag" content="Subprime Mortgage Crisis" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="1Malaysia Development Berhad (1MDB)" />
+<meta property="article:tag" content="7-Eleven" />
+<meta property="article:tag" content="Alibaba Group Holding Ltd" />
+<meta property="article:tag" content="Alipay" />
+<meta property="article:tag" content="China Investment Corp" />
+<meta property="article:tag" content="Energy Transfer Equity LP" />
+<meta property="article:tag" content="Financial Stability Oversight Council" />
+<meta property="article:tag" content="Food and Drug Administration" />
+<meta property="article:tag" content="Hearst Corp" />
+<meta property="article:tag" content="House Financial Services Committee" />
+<meta property="article:tag" content="Latham &amp; Watkins LLP" />
+<meta property="article:tag" content="Milan (Soccer Team)" />
+<meta property="article:tag" content="Morgan Stanley" />
+<meta property="article:tag" content="Net-A-Porter" />
+<meta property="article:tag" content="Williams Companies Inc" />
+<meta property="article:tag" content="Argentina" />
+<meta property="article:tag" content="Europe" />
+<meta property="article:tag" content="Great Britain" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Holmes Elizabeth (1984- ),Low Jho (1981- ),Singer Paul E,Warren Kelcy (1955- ),Banking and Financial Institutions,Credit and Debt,Law and Legislation,Mergers Acquisitions and Divestitures,Regulation and Deregulation of Industry,Securities and Commodities Violations,Subprime Mortgage Crisis,Suits and Litigation (Civil),1Malaysia Development Berhad (1MDB),7-Eleven,Alibaba Group Holding Ltd,Alipay,China Investment Corp,Energy Transfer Equity LP,Financial Stability Oversight Council,Food and Drug Administration,Hearst Corp,House Financial Services Committee,Latham &amp; Watkins LLP,Milan (Soccer Team),Morgan Stanley,Net-A-Porter,Williams Companies Inc,Argentina,Europe,Great Britain,DealBook" />
+<meta name="news_keywords" content="7-Eleven,Alipay,Argentina,Europe,Net-A-Porter" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F04%2F19%2Fmorning-agenda-theranos-under-criminal-investigation%2F" title="Morning Agenda: Theranos Under Criminal Investigation" />
+<meta name="description" content="Troubled Pipeline Deal Gets Messier &#124; Argentina Re-Enters International Bond Markets" />
+<meta name="hdl" content="Morning Agenda: Theranos Under Criminal Investigation" />
+<meta property="og:title" content="Morning Agenda: Theranos Under Criminal Investigation" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/04/19/morning-agenda-theranos-under-criminal-investigation/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Troubled Pipeline Deal Gets Messier &#124; Argentina Re-Enters International Bond Markets" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Theranos Under Criminal Investigation" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/04/19/morning-agenda-theranos-under-criminal-investigation/" />
+<meta name="twitter:description" content="Troubled Pipeline Deal Gets Messier &#124; Argentina Re-Enters International Bond Markets" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Crude Plunges After Oil Exporters Fail to Agree' href='//news.blogs.nytimes.com/2016/04/18/morning-agenda-crude-plunges-after-oil-exporters-fail-to-agree/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/04/19/what-were-reading-146/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/04/19/morning-agenda-theranos-under-criminal-investigation/' />
+<link rel='shortlink' href='//nyti.ms/1pdBfkg' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/04/19/morning-agenda-theranos-under-criminal-investigation/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Theranos Under Criminal Investigation - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4605 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Theranos Under Criminal Investigation        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/04/19/morning-agenda-theranos-under-criminal-investigation/"
+	 data-title="Morning Agenda: Theranos Under Criminal Investigation"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Troubled Pipeline Deal Gets Messier | Argentina Re-Enters International Bond Markets&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/04/19/morning-agenda-theranos-under-criminal-investigation/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="April 19, 2016 6:13 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Theranos Under Criminal Investigation</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-04-19T10:13:03+00:00" itemprop="datePublished">April 19, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">April 19, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4605 post type-post status-publish hentry category-dealbook tag-1malaysia-development-berhad-1mdb tag-7-eleven tag-alibaba-group-holding-ltd tag-alipay tag-argentina tag-banking-and-financial-institutions tag-china-investment-corp tag-credit-and-debt tag-energy-transfer-equity-lp tag-europe tag-financial-stability-oversight-council tag-food-and-drug-administration tag-great-britain tag-hearst-corp tag-holmes-elizabeth-1984 tag-house-financial-services-committee tag-latham-watkins-llp tag-law-and-legislation tag-low-jho-1981 tag-mergers-acquisitions-and-divestitures tag-milan-soccer-team tag-morgan-stanley tag-net-a-porter tag-regulation-and-deregulation-of-industry tag-securities-and-commodities-violations tag-singer-paul-e tag-subprime-mortgage-crisis tag-suits-and-litigation-civil tag-warren-kelcy-1955 tag-williams-companies-inc per-holmes-elizabeth-1984 per-low-jho-1981 per-singer-paul-e per-warren-kelcy-1955 des-banking-and-financial-institutions des-credit-and-debt des-law-and-legislation des-mergers-acquisitions-and-divestitures des-regulation-and-deregulation-of-industry des-securities-and-commodities-violations des-subprime-mortgage-crisis des-suits-and-litigation-civil org-1malaysia-development-berhad-1mdb org-7-eleven org-alibaba-group-holding-ltd org-alipay org-china-investment-corp org-energy-transfer-equity-lp org-financial-stability-oversight-council org-food-and-drug-administration org-hearst-corp org-house-financial-services-committee org-latham-watkins-llp org-milan-soccer-team org-morgan-stanley org-net-a-porter org-williams-companies-inc geo-argentina geo-europe geo-great-britain news_keywords-7-eleven news_keywords-alipay news_keywords-argentina news_keywords-europe news_keywords-net-a-porter" id="post-4605">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Theranos Under Criminal Investigation</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-04-19T10:13:03+00:00" itemprop="datePublished">April 19, 2016 6:13 am</time>
+			<!-- date updated --><span class="visually-hidden updated">April 19, 2016 6:13 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/04/19/morning-agenda-theranos-under-criminal-investigation/" data-title="Morning Agenda: Theranos Under Criminal Investigation" data-description="Troubled Pipeline Deal Gets Messier | Argentina Re-Enters International Bond Markets">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>THERANOS UNDER CRIMINAL INVESTIGATION</strong> <span class="divider"> | </span></span> The blood-testing laboratory Theranos said that <b>federal officials were conducting a criminal inquiry</b> into the company,<br />
+<a href="//www.nytimes.com/2016/04/19/business/theranos-sec-justice-department-investigation.html?ref=business">Reed Abelson and Andrew Pollack report in The New York Times</a>.<br />
+In a note to outside partners, it also said that it was under investigation by the Securities and Exchange Commission. </p>
+<p class="story-body-text" itemprop="articleBody">It is not facing any formal accusations. </p>
+<p class="story-body-text" itemprop="articleBody">The United States attorneyâs office in San Francisco declined to comment, as did the S.E.C. Theranos would not give any more detail on the inquiries, but it said the investigations started after The <a href="//www.wsj.com/articles/theranos-has-struggled-with-blood-tests-1444881901">Wall Street Journal</a> published an article questioning the companyâs technology. </p>
+<p class="story-body-text" itemprop="articleBody">Theranos said it was cooperating with regulators, and the letter to its partners  said some investigations into the company, including one by the Food and Drug Administration, had closed. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Medicare officials are still looking into the company and deciding whether to revoke certification of its prime laboratory in California.</b> The founder, Elizabeth Holmes, and the chief operating officer could be barred from the industry for two years.<br />
+Medicare had inspected the lab and found deficiencies. They said one of these could have posed âimmediate jeopardy to patient health and safety.â</p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.bloomberg.com/news/articles/2016-04-18/theranos-is-under-investigation-by-sec-u-s-attorney-s-office">Bloomberg</a> and <a href="//www.wsj.com/articles/theranos-is-subject-of-criminal-probe-by-u-s-1461019055">The Wall Street Journal</a> had earlier reported on the memo to outside investors.</p>
+<p class="story-body-text" itemprop="articleBody"> Walgreens Boots Alliance and the New York State Department of Health have received subpoenas seeking documents and testimony about representations made by Theranos, The Journal reported, citing people familiar with the matter. <b>Some of these people said that investigators were examining whether Theranos misled government officials.</b> </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TROUBLED PIPELINE DEAL GETS MESSIER</strong> <span class="divider"> | </span></span> The deal to merge Williams Companies into Energy Transfer Equity, once worth $38 billion, has hit yet another obstacle, <a href="//www.nytimes.com/2016/04/19/business/dealbook/already-troubled-pipeline-deal-gets-hung-up-onbasic-provision.html?ref=dealbook">Leslie Picker writes in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Energy Transfer said in a filing that its law firm, Latham &#038; Watkins, would not deliver a so-called 721 opinion. Section 721 is a rudimentary provision for transferring assets into a partnership and typically does not create any issues in a transaction. <b>The two companies are required under the merger agreement to have a tax opinion from each sideâs lawyers for the deal to close.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Energy Transfer declined to comment, while Williams and Latham &#038; Watkins did not respond to requests for comment after business hours. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Energy Transfer had already made several attempts to sever the pending deal.</b> The disclosure pushed its stock up 10 percent on Monday. Shares in Williams sank 5 percent. </p>
+<p class="story-body-text" itemprop="articleBody">Energy Transfer and its chairman, Kelcy Warren, have tried to scuttle the merger, reducing estimates for how much the merger could affect earnings and threatening layoffs at Williamsâs headquarters. A private placement also gave certain Energy Transfer unit holders, notably Mr. Warren, preferential treatment in case the companyâs distributions, similar to dividends, were cut. This led Williams to file lawsuits against Energy Transfer and Mr. Warren, arguing that they <b>breached the merger agreement.</b> </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> The <b>Active-Passive Investor Summit</b> starts at 8:25 a.m. Data on <b>new residential construction</b> during March will be released at 8:30 a.m.<br />
+The <b>Securities and Exchange Commission Compliance Outreach Seminar</b> starts at 8:30 a.m. <b>Goldman Sachs</b> will publish its first-quarter financial results at 7:30 a.m. and follow with a conference call at 9:30 a.m. <b>Johnson &#038; Johnson</b> will hold a conference call on its first-quarter earnings at 8:30 a.m.  The House Financial Services Committee will hold a hearing on <b>terrorism financing</b>  at 10 a.m. <b>Yahooâs and Intelâs</b>  latest quarterly earnings will be published at 5 p.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ARGENTINA RE-ENTERS INTERNATIONAL BOND MARKETS </strong> <span class="divider"> | </span></span> Argentina returned to global bond markets after a 15-year hiatus,<br />
+<a href="//www.nytimes.com/2016/04/19/business/dealbook/argentina-re-enters-international-bond-markets.html?ref=dealbook&#038;login=google">Jonathan Gilbert reports in DealBook</a>. The country unveiled the <b>biggest sovereign issuance by an emerging-market nation in two decades</b> as a prolonged feud with hedge funds in New York came to an end. </p>
+<p class="story-body-text" itemprop="articleBody">The cash raised from its sale of $10 billion to $15 billion of bonds will go toward <b>paying off a small number of creditors</b>, including Paul E. Singer. Argentina is seen as risky so it needs to pay higher rates on the bonds than some of its neighbors have done in recent years. </p>
+<p class="story-body-text" itemprop="articleBody">Alfonso Prat-Gay, the finance minister, had described the demand for the bonds as âawesome.â </p>
+<p class="story-body-text" itemprop="articleBody">The bonds are expected to attract broad interest.<br />
+âIt wonât be very problematic for the government to get the $15 billion,â Miguel Kiguel, an economist and former deputy finance secretary, wrote in El Cronista, a local business newspaper.</p>
+<p class="story-body-text" itemprop="articleBody">The bond sale was expected to close on Tuesday, with the creditors receiving their money by Friday. <b>The payment to the creditors is expected to total about $10.5 billion.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Some have questioned the countryâs decision to cede to the creditors, saying it paved the way for them to extort other countries. </p>
+<p class="story-body-text" itemprop="articleBody">Argentina has included clauses in the new bonds intended to protect it from similar lawsuits in the future in case of another default. If a majority of creditors agree to a restructuring, in theory everybody must conform.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Anheuser-Busch InBev Accepts Asahiâs Offer for Peroni and Grolsch" src="https://static01.nyt.com/images/2016/04/20/world/20db-abinbev/20db-abinbev-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Anheuser-Busch InBev Accepts Asahiâs Offer for Peroni and Grolsch</strong> <span class="divider"> | </span></span> Anheuser-Busch has moved to sell some assets as it seeks to ease regulatory concerns about its merger with SABMiller.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/20/business/dealbook/anheuser-busch-inbev-accepts-asahis-offer-for-peroni-and-grolsch.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Yoox Net-a-Porter Sells Stake to Middle Eastern Retail Giant</strong> <span class="divider"> | </span></span> The e-commerce group has set its sights on the Middle East, selling a stake of 100 million euros, or $113 million, to Alabbar Enterprises in Dubai.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/20/business/dealbook/yoox-net-a-porter-sells-stake-to-middle-easternretail-giant.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>YP Plans First-Round Bid for Yahoo</strong> <span class="divider"> | </span></span> YP Holdings, the digital advertising business of what was formerly called Yellowpages.com, planned to submit a bid to merge with Yahoo, Bloomberg News reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-18/yp-said-to-plan-offer-for-yahoo-as-it-explores-strategic-options">BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China Sovereign Fund Said to Seek Control of Yum Brands Unit</strong> <span class="divider"> | </span></span> A consortium backed by the sovereign fund China Investment Corporation has expressed interest in buying Yum Brands in China in a deal worth $7 billion to $8 billion, Bloomberg News reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-19/china-sovereign-fund-said-to-seek-control-of-8-billion-yum-unit"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Verizon and Hearst Agree to Buy Complex Media</strong> <span class="divider"> | </span></span> Verizon Communications and Hearst said they had agreed to acquire Complex Media, an online publisher that caters to young men, in a deal that valued Complex at $250 million to $300 million, The Wall Street Journal reports, citing people familiar with the matter. <br /><span class="kicker"><a href="//www.wsj.com/articles/verizon-hearst-near-a-major-investment-in-complex-media-1461013443">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinese-Led Group to Buy Iconic Australian Cattle Rancher</strong> <span class="divider"> | </span></span> A Chinese-led group agreed to buy S. Kidman &#038; Company, Australiaâs most iconic cattle company, in a deal valued at more than 370 million Australian dollars, or about $288 million, after partnering with local investors.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-19/chinese-led-group-to-buy-australia-s-most-iconic-cattle-rancher">BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Baidu Chief Said to Consider Buying Italian Soccer Club</strong> <span class="divider"> | </span></span> Robin Li, chief executive of the Chinese search giant Baidu, is reportedly negotiating to purchase the bulk of outstanding shares in A.C. Milan, a Series A soccer club, for $792 million, The Nikkei Asian Review reports, citing local news reports.<br /><span class="kicker"><a href="//asia.nikkei.com/Business/AC/Baidu-CEO-may-buy-AC-Milan-soccer-club">NIKKEI ASIAN REVIEW </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Morgan Stanleyâs Weak Quarter Bodes Poorly for Full Year" src="https://static01.nyt.com/images/2016/02/12/business/db-morgan-web1/db-morgan-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Morgan Stanleyâs Weak Quarter Bodes Poorly for Full Year</strong> <span class="divider"> | </span></span> The bankâs $1.1 billion quarterly profit amounts to an annualized return on equity of just 6.2 percent, well short of its 10 percent target, Antony Currie writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/19/business/dealbook/morgan-stanleys-weakquarter-bodes-poorly-for-full-year.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hedge Fund Leverage Faces New Scrutiny by Regulator</strong> <span class="divider"> | </span></span> The Financial Stability Oversight Council announced  that it would form an interagency group to focus on analyzing data and studying risk factors such as counterparty exposures and trading strategies.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-18/hedge-fund-leverage-faces-new-scrutiny-by-top-finance-regulator">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Banca Popolare di Vicenza Sets I.P.O. Price Range </strong> <span class="divider"> | </span></span> Banca Popolare di Vicenza will offer stock at up to 3 euros, or $3.4, apiece as it seeks to raise as much as $2 billion to ensure its survival.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-19/pop-vicenza-sets-ipo-price-range-as-italy-bank-seeks-2-billion">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Alipay Owner Said to Start I.P.O. Process as Soon as 2016</strong> <span class="divider"> | </span></span> Alibaba Groupâs finance affiliate is planning an initial public offering on Shanghaiâs main board in what could be Chinaâs highest initial public offering valuation since 2010, Bloomberg News reports, citing two people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-18/alipay-owner-said-to-start-shanghai-ipo-process-as-soon-as-2016">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Bill Campbell, Coach of Silicon Valley Stars, Dies at 75" src="https://static01.nyt.com/images/2016/04/19/business/19campbell-obit/19campbell-obit-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bill Campbell, Coach of Silicon Valley Stars, Dies at 75</strong> <span class="divider"> | </span></span> Mr. Campbell, who advised the likes of Steve Jobs at Apple and Larry Page at Google, helped shape the technology industry.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/19/business/bill-campbell-coach-of-silicon-valley-stars-dies-at-75.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="General Mills and 7-Eleven Join the Venture Capital Crowd" src="https://static01.nyt.com/images/2016/04/19/business/19db-venture2/19db-venture2-square320-v3.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>General Mills and 7-Eleven Join the Venture Capital Crowd</strong> <span class="divider"> | </span></span> Through the funds, companies scout for new products or services and business partners, but critics say the funds contribute to inflated valuations.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/19/business/dealbook/general-mills-and-7-elevenjoin-the-venture-capital-crowd.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="When Lies Are Allowed in a Business Deal" src="https://static01.nyt.com/images/2016/04/19/business/db-whitecollar1/db-whitecollar1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>When Lies Are Allowed in a Business Deal</strong> <span class="divider"> | </span></span> Appeals courts have ruled that it is not unusual for parties to conceal their true goals. In other words, no one tells the truth when negotiating a deal, Peter J. Henning writes in White Collar Watch.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/19/business/dealbook/when-lies-are-allowed-in-a-business-deal.html">White Collar Watch &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Europe Tried to Rein In Google. It Backfired." src="https://static01.nyt.com/images/2016/04/19/business/19googleprivacy/19googleprivacy-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Europe Tried to Rein In Google. It Backfired.</strong> <span class="divider"> | </span></span> Despite mining peopleâs data to earn billions of dollars, the search giant has been given the power to police some of the regionâs tough privacy rules.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/19/technology/google-europe-privacy-watchdog.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Britons Will Be Poorer if They Leave E.U., Government Asserts" src="https://static01.nyt.com/images/2016/04/19/nytnow/19Britain-web/19Britain-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Britons Will Be Poorer if They Leave E.U., Government Asserts</strong> <span class="divider"> | </span></span> Under one situation, the annual economic output would be $6,100 lower per household if Britain left than if it stayed in the bloc, an estimate critics quickly disputed.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/19/world/europe/european-union-brexit.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Malaysia Prime Ministerâs Confidant Said to Have Central Role at 1MDB Fund</strong> <span class="divider"> | </span></span> Jho Low, a Malaysian financier, has been vital to the supposed diversion of 1MDB funds, The Wall Street Journal reports, citing people familiar with investigations.<br /><span class="kicker"><a href="//www.wsj.com/articles/confidant-of-malaysia-prime-minister-had-central-role-at-troubled-fund-1461028765"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Central Banks Forced to Take Their Own Zero-Rates Medicine</strong> <span class="divider"> | </span></span> European and Japanese rate cuts are putting pressure on many central banksâ returns â a source of income used to cover running costs and provide finance ministries with profits on which they have come to rely.<br /><span class="kicker"><a href="//www.ft.com/cms/s/bd131810-056f-11e6-9b51-0fb5e65703ce,Authorised=false.html#axzz46EtqjIla">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Panel Would Make Insurers Help Contain Rising Drug Costs" src="https://static01.nyt.com/images/2016/04/18/us/18medicare-web/18medicare-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Panel Would Make Insurers Help Contain Rising Drug Costs</strong> <span class="divider"> | </span></span> A plan to pare the government share of reimbursement to insurers is part of a package of cost-controlling ideas that will be in a June report to Congress.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/19/us/panel-would-make-insurers-help-contain-rising-drug-costs.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Judge Clears Pimco to Pursue Lawsuit Against A.I.G.</strong> <span class="divider"> | </span></span> A federal judge cleared the way for Pacific Investment Management Company to pursue a California lawsuit accusing American International Group of causing big losses by lying about its subprime mortgage exposure before its 2008 bailout.<br /><span class="kicker"><a href= "//www.reuters.com/article/us-aig-pimco-idUSKCN0XF2QB">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/04/19/morning-agenda-theranos-under-criminal-investigation/"
+					data-title="Morning Agenda: Theranos Under Criminal Investigation"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Troubled Pipeline Deal Gets Messier | Argentina Re-Enters International Bond Markets&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/04/19/morning-agenda-theranos-under-criminal-investigation/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":82,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

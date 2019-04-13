@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003716801"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1433244554" />
+<meta name="PUD" content="20150602" />
+<meta name="pdate" content="20150602" />
+<meta name="ptime" content="20150602072914" />
+<meta name="utime" content="20150602112914" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-06-02T11:29:14-04:00" />
+<meta name="DISPLAYDATE" content="June 2, 2015" />
+<meta name="dat" content="June 2, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Draghi, Mario;Hollande, Francois;Lagarde, Christine;Merkel, Angela">
+<meta name="des" content="Banking and Financial Institutions;Consumer Protection;Data Centers;Dodd-Frank Wall Street Reform and Consumer Protection Act (2010);European Sovereign Debt Crisis (2010- );Hedge Funds;Mergers, Acquisitions and Divestitures;Private Equity;Regulation and Deregulation of Industry;Suicides and Suicide Attempts;Venture Capital">
+<meta name="org" content="Altera Corp;Goldman Sachs Group Inc;House Financial Services Committee;Intel Corporation;Xilinx Inc">
+<meta name="geo" content="Greece">
+<meta name="ticker" content="Altera Corp|ALTR|NASDAQ;Goldman Sachs Group Inc|GS|NYSE;Intel Corporation|INTC|NASDAQ;Xilinx Inc|XLNX|NASDAQ" />
+<meta property="article:tag" content="Draghi Mario" />
+<meta property="article:tag" content="Hollande Francois" />
+<meta property="article:tag" content="Lagarde Christine" />
+<meta property="article:tag" content="Merkel Angela" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Consumer Protection" />
+<meta property="article:tag" content="Data Centers" />
+<meta property="article:tag" content="Dodd-Frank Wall Street Reform and Consumer Protection Act (2010)" />
+<meta property="article:tag" content="European Sovereign Debt Crisis (2010- )" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Suicides and Suicide Attempts" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Altera Corp" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="House Financial Services Committee" />
+<meta property="article:tag" content="Intel Corporation" />
+<meta property="article:tag" content="Xilinx Inc" />
+<meta property="article:tag" content="Greece" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Draghi Mario,Hollande Francois,Lagarde Christine,Merkel Angela,Banking and Financial Institutions,Consumer Protection,Data Centers,Dodd-Frank Wall Street Reform and Consumer Protection Act (2010),European Sovereign Debt Crisis (2010- ),Hedge Funds,Mergers Acquisitions and Divestitures,Private Equity,Regulation and Deregulation of Industry,Suicides and Suicide Attempts,Venture Capital,Altera Corp,Goldman Sachs Group Inc,House Financial Services Committee,Intel Corporation,Xilinx Inc,Greece,DealBook" />
+<meta name="news_keywords" content="Angela Merkel,Banking and Finance,Christine Lagarde,Consumer protection,Data center,Dodd Frank,Euro Crisis,Francois Hollande,Greece,Hedge fund,House Financial Services Committee,Mario Draghi,Mergers and Acquistions,Private equity,Regulation and Deregulation,Suicide,Venture capital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F06%2F02%2Fmorning-agenda-reflections-on-wall-street-culture%2F" title="Morning Agenda: Reflections on Wall Street Culture" />
+<meta name="description" content="Reflections on Wall Street Culture &#124; Urgent Meeting on Greek Crisis &#124; Rising Costs of Chips Spur Semiconductor Mergers &#124; Consumer Advocacy Group Hires Top House Aide" />
+<meta name="hdl" content="Morning Agenda: Reflections on Wall Street Culture" />
+<meta property="og:title" content="Morning Agenda: Reflections on Wall Street Culture" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/06/02/morning-agenda-reflections-on-wall-street-culture/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Reflections on Wall Street Culture &#124; Urgent Meeting on Greek Crisis &#124; Rising Costs of Chips Spur Semiconductor Mergers &#124; Consumer Advocacy Group Hires Top House Aide" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Reflections on Wall Street Culture" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/06/02/morning-agenda-reflections-on-wall-street-culture/" />
+<meta name="twitter:description" content="Reflections on Wall Street Culture &#124; Urgent Meeting on Greek Crisis &#124; Rising Costs of Chips Spur Semiconductor Mergers &#124; Consumer Advocacy Group Hires Top House Aide" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Intel Takeover of Altera Is Expected' href='//news.blogs.nytimes.com/2015/06/01/morning-agenda-intel-takeover-of-altera-is-expected/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/06/02/what-were-reading-60/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/06/02/morning-agenda-reflections-on-wall-street-culture/' />
+<link rel='shortlink' href='//nyti.ms/1HId5km' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/06/02/morning-agenda-reflections-on-wall-street-culture/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Reflections on Wall Street Culture - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2487 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Reflections on Wall Street Culture        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/06/02/morning-agenda-reflections-on-wall-street-culture/"
+	 data-title="Morning Agenda: Reflections on Wall Street Culture"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Reflections on Wall Street Culture | Urgent Meeting on Greek Crisis | Rising Costs of Chips Spur Semiconductor Mergers | Consumer Advocacy Group Hires Top House Aide&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/06/02/morning-agenda-reflections-on-wall-street-culture/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 2, 2015 7:29 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Reflections on Wall Street Culture</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-06-02T11:29:14+00:00" itemprop="datePublished">June 2, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">June 2, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2487 post type-post status-publish hentry category-dealbook tag-altera-corp tag-banking-and-financial-institutions tag-consumer-protection tag-data-centers tag-dodd-frank-wall-street-reform-and-consumer-protection-act-2010 tag-draghi-mario tag-european-sovereign-debt-crisis-2010 tag-goldman-sachs-group-inc tag-greece tag-hedge-funds tag-hollande-francois tag-house-financial-services-committee tag-intel-corporation tag-lagarde-christine tag-mergers-acquisitions-and-divestitures tag-merkel-angela tag-private-equity tag-regulation-and-deregulation-of-industry tag-suicides-and-suicide-attempts tag-venture-capital tag-xilinx-inc per-draghi-mario per-hollande-francois per-lagarde-christine per-merkel-angela des-banking-and-financial-institutions des-consumer-protection des-data-centers des-dodd-frank-wall-street-reform-and-consumer-protection-act-2010 des-european-sovereign-debt-crisis-2010 des-hedge-funds des-mergers-acquisitions-and-divestitures des-private-equity des-regulation-and-deregulation-of-industry des-suicides-and-suicide-attempts des-venture-capital org-altera-corp org-goldman-sachs-group-inc org-house-financial-services-committee org-intel-corporation org-xilinx-inc geo-greece news_keywords-angela-merkel news_keywords-banking-and-finance news_keywords-christine-lagarde news_keywords-consumer-protection-2 news_keywords-data-center news_keywords-dodd-frank news_keywords-euro-crisis news_keywords-francois-hollande news_keywords-greece news_keywords-hedge-fund news_keywords-house-financial-services-committee news_keywords-mario-draghi news_keywords-mergers-and-acquistions news_keywords-private-equity-2 news_keywords-regulation-and-deregulation news_keywords-suicide news_keywords-venture-capital-2" id="post-2487">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Reflections on Wall Street Culture</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-06-02T11:29:14+00:00" itemprop="datePublished">June 2, 2015 7:29 am</time>
+			<!-- date updated --><span class="visually-hidden updated">June 2, 2015 7:29 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/06/02/morning-agenda-reflections-on-wall-street-culture/" data-title="Morning Agenda: Reflections on Wall Street Culture" data-description="Reflections on Wall Street Culture | Urgent Meeting on Greek Crisis | Rising Costs of Chips Spur Semiconductor Mergers | Consumer Advocacy Group Hires Top House Aide">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>REFLECTIONS ON WALL STREET CULTURE</strong> <span class="divider"> | </span></span> Last week, Thomas J. Hughes, a 29-year-old banker at Moelis &#038; Company, was found dead with drugs in his system after falling from a building in Manhattan. In April, Sarvshreshth Gupta, a 24-year-old first-year analyst at Goldman Sachs, was found dead in San Francisco after telling his father about suffering from intense stress. The official cause of death has not yet been determined in either case, but a recent string of deaths among young Wall Street workers have prompted financial firms to re-evaluate their work policiesâ impact on staff members, <a href="//www.nytimes.com/2015/06/02/business/dealbook/reflections-on-stress-and-long-hours-on-wall-street.html"> Andrew Ross Sorkin writes in the DealBook column</a>. Itâs difficult to definitively link a death to a firmâs work conditions, and Mr. Sorkin notes that studies have suggested that financial service employees are at higher risk than those in many other industries. âStill, the string of deaths on Wall Street <b>appears to rise above the level of simple coincidence</b>,â he writes. </p>
+<p class="story-body-text" itemprop="articleBody">Wall Street firms have changed their work policies in recent years, partly out of concern for workersâ stress levels but also to compete better with Silicon Valley for top talent. For example, Goldman Sachs has required that analysts take Saturdays off. âAs the economy has heated up and the deal-making market has improved, however, young bankers are once again working long hours,â Mr. Sorkin writes. âPerversely, young analysts now say that <b>having Saturdays off has often added to their stress</b> because late nights on Sundays have become the norm.â As long as young analysts are expected to work 80 to 100 hours a week, itâs inevitable that some will find the workload too much to handle, he says. âIt is incumbent on the industry to make sure it is doing everything possible to make sure that no one is too overwhelmed,â he writes.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>URGENT MEETING ON GREEK CRISIS</strong> <span class="divider"> | </span></span> Top European leaders met in Berlin on Monday night to discuss what to do about Greece as the cash-starved country faces a loan repayment of â¬300 million, or $329 million, to the International Monetary Fund on Friday, <a href="//www.nytimes.com/2015/06/02/business/international/urgently-assembled-meeting-for-leaders-in-greek-crisis.html"> Liz Alderman, Niki Kitsantonis and Jack Ewing report in The New York Times</a>. The unexpected gathering of the top representatives of Greeceâs creditors included Chancellor Angela Merkel of Germany; President FranÃ§ois Hollande of France; Jean-Claude Juncker, president of the European Commission; Christine Lagarde, the I.M.F. managing director; and Mario Draghi, president of the European Central Bank.</p>
+<p class="story-body-text" itemprop="articleBody">The leaders did not issue a public statement after the meeting. A person with knowledge of the discussions said Ms. Merkel and the other leaders would avoid presenting anything to Greece that looks like an ultimatum, though their eventual proposal would be likely to amount to a <b>last, best offer</b>, with limited scope for negotiation. Greece may be given a deadline to provide an answer, though it was not certain when the deadline would be, the person said.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>RISING COSTS OF CHIPS SPUR SEMICONDUCTOR MERGERS </strong> <span class="divider"> | </span></span> The increasing cost of chip manufacturing is driving Intelâs $16.7 billion purchase of Altera, as well as the other big mergers sweeping the semiconductor industry, <a href="//www.nytimes.com/2015/06/02/business/dealbook/intel-altera-buy-chips-computers-chip-maker.html"> Quentin Hardy and Chad Bray</a> write in DealBook. âTen years ago the cost from designing a new chip to making it a product was $10 million to $50 million,â said Mark Hung, an analyst with Gartner. âToday itâs $100 million to $200 million. Solving weird and challenging physics problems at this small size requires a lot of expensive equipment. Thatâs why thereâs all this M.&#038;A.â (The New York Times compiled <a href="//www.nytimes.com/interactive/2015/06/01/technology/The-Chip-Industry-Consolidates.html"> a list of recent deals</a>.) However, <a href="//www.nytimes.com/2015/06/02/business/dealbook/chip-deals-in-search-of-greater-pricing-power.html"> Richard Beales of Breakingviews questions</a> whether these cost savings will be realized in these mergers. </p>
+<p class="story-body-text" itemprop="articleBody">Besides gaining economies of scale in buying Altera, Intel would benefit in other ways. Alteraâs primary chips would help Intel focus on two of the biggest emerging markets, <b>large data centers and the so-called Internet of Things</b>, or computer-enriched machines that work with other devices, Mr. Hardy and Mr. Bray write. Alteraâs chips can be reprogrammed once they leave the foundry, while Intelâs semiconductors are more powerful but lack that flexibility. âBy <b>combining the two types on a single chip</b>, Intel thinks that by late next year it can start offering its big business customers ways of fine-tuning performance to suit specific needs,â Mr. Hardy and Mr. Bray write. </p>
+<p class="story-body-text" itemprop="articleBody">Now, the question is: Whoâs next to be acquired? Investors are betting that the next deal will involve one of Alteraâs rivals, Xilinx, whose shares rose after about 2 percent after Intel announced its deal for Altera, <a href="//blogs.wsj.com/moneybeat/2015/06/01/in-wake-of-intel-deal-shares-of-altera-competitor-xilinx-rise/"> The Wall Street Journalâs MoneyBeat blog reports</a>.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The auto industry will report <b>motor vehicle sales for May</b>. The Commerce Department will report <b>factory orders data for April</b> at 10 a.m. <b>Lael Brainard</b>, a Federal Reserve governor, speaks on United States economic outlook and monetary policy at the Center for Strategic and International Studies in Washington at 10 a.m. Companies reporting earnings today include <b>Dollar General and Medtronic</b>. Speakers at the <b>Deutsche Bank Global Financial Services Investor Conference</b> include <b>Anshu Jain</b>, the co-chief executive of Deutsche Bank, <b>Gary D. Cohn</b>, president of Goldman Sachs, and <b>Laurence D. Fink</b>,  chief executive of BlackRock.</p>
+<p class="story-body-text" itemprop="articleBody"><b> On the Hill:</b> The Senate Banking Committee holds a hearing titled âPerspectives on the Export-Import Bank of the United Statesâ at 10 a.m.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CONSUMER ADVOCACY GROUP HIRES TOP HOUSE AIDE</strong> <span class="divider"> | </span></span> Better Markets, a group that advocates for more restrictions on Wall Street, has hired a new senior counsel from the top ranks of the Republican-led House Financial Services Committee, <a href="//www.nytimes.com/2015/06/02/business/dealbook/consumer-group-better-markets-hires-away-top-house-aide.html"> Peter Eavis writes in DealBook</a>. Frank Medina was the deputy chief counsel at the committee, whose chairman, Jeb Hensarling, is an outspoken critic of the banking regulations created by the Dodd-Frank Act. At Better Markets, Mr. Medina will take on the roles of senior counsel and director of research and will help support the groupâs positions. </p>
+<p class="story-body-text" itemprop="articleBody">His move to the nonprofit sector comes at a time when Republicans have introduced legislation that aims to change provisions of Dodd-Frank â an effort that has been criticized by groups like Better Markets, Mr. Eavis writes. However, Mr. Medina said in an interview that there was <b>common ground between Republicans and Democrats on important regulatory issues</b>. âI donât think anybody is entirely happy with the act,â Mr. Medina said. âI am here at Better Markets to participate in that dialogue.â<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Value of Deals Hit Record High in May</strong> <span class="divider"> | </span></span> The overall value of deals in American mergers and acquisitions activity totaled $243 billion in May, a new monthly high, according to Dealogic data, The Financial Times reports. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/a0e34690-0874-11e5-b38c-00144feabdc0.html"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Brookfield to Buy Center Parcs U.K. From Blackstone Group</strong> <span class="divider"> | </span></span> Brookfield Property Partners will acquire the operator of five short-stay vacation sites in England, including one in Sherwood Forest.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/03/business/dealbook/brookfield-to-buy-center-parcs-uk-from-blackstone-group.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Time Warner Cable C.F.O. Leaves Company" src="https://static01.nyt.com/images/2015/06/02/business/02minson-web/02minson-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Time Warner Cable C.F.O. Leaves Company</strong> <span class="divider"> | </span></span> The chief financial officer, Arthur Minson Jr., will become president and chief operating officer of the WeWork office space-sharing company.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/02/business/time-warner-cable-cfo-leaves-company.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HSBC Said to Plan Thousands of Job Cuts</strong> <span class="divider"> | </span></span> Stuart Gulliver, HSBCâs chief executive, is set to announce at an investor presentation next week that the bank will cut 10,000 to 20,000 jobs, Sky News reports, citing people at the bank. <br /><span class="kicker"><a href="//news.sky.com/story/1494457/hsbc-poised-to-unveil-thousands-more-job-cuts"> SKY NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Petrobras Seeks to Sell a 100-Year Bond" src="https://static01.nyt.com/images/2015/06/02/business/02db-petrobras-web/02db-petrobras-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Petrobras Seeks to Sell a 100-Year Bond</strong> <span class="divider"> | </span></span> A high yield is expected to be the price the troubled petroleum giant pays to return to the global capital markets.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/02/business/dealbook/petrobras-seeks-to-sell-a-100-year-bond.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ashley Furniture Industries Said to Weigh Sale</strong> <span class="divider"> | </span></span> Several big private equity firms are considering a buyout of Ashley Furniture Industries, which has hired Goldman Sachs to explore a sale, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/ashley-furniture-explores-sale-1433196161"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Early Payouts for Hedge Fund That Took Stakes in Iran Judgment</strong> <span class="divider"> | </span></span> Roni Dersovitz of the hedge fund RD Legal Capital is making millions of dollars from the fundâs bet on a $2 billion judgment against Iran even though it is not clear when the money will be awarded, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/hedge-fund-that-bet-on-bombing-settlement-takes-early-payouts-1433196933"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fitbit to Sell Shares for $14 to $16</strong> <span class="divider"> | </span></span> Fitbit has priced its shares at $14 to $16, the company said in a filing with the Securities and Exchange Commission, The Financial Times reports. <br /><span class="kicker"><a href="//www.ft.com/intl/fastft/332541/fitness-tracker-fitbit-sell-shares-14-16"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>At Home Stores Said to Prepare for I.P.O.</strong> <span class="divider"> | </span></span> At Home Stores has hired Goldman Sachs and Bank of America to prepare for an initial public offering that could value the home decor retailer at around $1 billion, including debt, Reuters reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/06/01/ipo-athome-idUSL1N0U31EM20150601"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Legend Said to Seek $2 Billion I.P.O. in Hong Kong</strong> <span class="divider"> | </span></span> Legend Holdings, the Chinese conglomerate that is the largest shareholder in Lenovo Group, is planning to seek Hong Kong regulatory approval for an initial public offering of as much as $2 billion, The Wall Street reports, citing people with direct knowledge of the deal.<br /><span class="kicker"><a href="//www.wsj.com/articles/chinese-conglomerate-legend-to-seek-hong-kong-ipo-1433201227"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Coupa Software Valuation Surpasses $1 Billion With Latest Funding</strong> <span class="divider"> | </span></span> Coupa Software, a cloud start-up, has closed an $80 million funding round that values Coupa at more than $1 billion, ReCode reports. <br /><span class="kicker"><a href="//recode.net/2015/06/01/cloud-startup-coupa-lands-80-million-round-at-1-billion-plus-valuation/"> RECODE</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Purch Raises $135 Million for Acquisitions</strong> <span class="divider"> | </span></span> Purch, which owns technology content and e-commerce websites, raised $135 million for acquisitions, in one of the larger funding rounds for a digital media operation in recent years, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/digital-media-firm-purch-raises-funds-1433217844"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Regulators Close Sand Hill Exchange</strong> <span class="divider"> | </span></span> Sand Hill Exchange, a Silicon Valley start-up that tried to offer trading in derivatives linked to private tech companies like Uber, has been closed by regulators, the FT Alphaville blog reports. <br /><span class="kicker"><a href="//ftalphaville.ft.com/2015/06/02/2130891/maybe-sand-hill-is-not-the-new-wall-st-after-all/"> FT ALPHAVILLE </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Justices Curb Bankruptcy Filersâ Ability to Have Second Mortgages Canceled </strong> <span class="divider"> | </span></span> The Supreme Court ruled that second mortgages may not be voided if the property is worth less than the mortgage debt.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/02/business/justices-curb-bankruptcy-filers-ability-to-have-second-mortgages-canceled.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/06/02/business/dealbook/supreme-court-ruling-little-help-to-struggling-homeowners.html">Supreme Court Ruling Little Help to Struggling Homeowners</a> <span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Supreme Court Ruling Little Help to Struggling Homeowners" src="https://static01.nyt.com/images/2015/06/01/business/dealbook/dbpix-debt/dbpix-debt-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Supreme Court Ruling Little Help to Struggling Homeowners</strong> <span class="divider"> | </span></span> The court handed banks a victory on Monday but homeowners continue to have no easy way out of the mortgage crisis, Stephen J. Lubben writes in the In Debt column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/02/business/dealbook/supreme-court-ruling-little-help-to-struggling-homeowners.html">In Debt &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Bernanke Says Fed Canât Get Caught Up in Inequality Debate" src="https://static01.nyt.com/images/2015/06/02/upshot/02UP-Applebaum/02UP-Applebaum-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bernanke Says Fed Canât Get Caught Up in Inequality Debate</strong> <span class="divider"> | </span></span> The former Fed chairman expressed uncertainty about the impact of quantitative easing on economic inequality, and said it was beside the point.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/02/upshot/bernanke-says-fed-cant-get-caught-up-in-inequality-debate.html">The Upshot &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="FIFA Case Could Strengthen Justice Dept.âs Global Power" src="https://static01.nyt.com/images/2015/06/02/business/dbpix-wcw/dbpix-wcw-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FIFA Case Could Strengthen Justice Dept.âs Global Power</strong> <span class="divider"> | </span></span> The United States government will have a powerful weapon against international corruption if it is able to successfully use the RICO Act in the latest case involving soccer, Peter J. Henning writes in the White Collar Watch column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/02/business/dealbook/fifa-case-could-strengthen-justice-depts-global-power.html">White Collar Watch &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/06/02/morning-agenda-reflections-on-wall-street-culture/"
+					data-title="Morning Agenda: Reflections on Wall Street Culture"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Reflections on Wall Street Culture | Urgent Meeting on Greek Crisis | Rising Costs of Chips Spur Semiconductor Mergers | Consumer Advocacy Group Hires Top House Aide&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/06/02/morning-agenda-reflections-on-wall-street-culture/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":82,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

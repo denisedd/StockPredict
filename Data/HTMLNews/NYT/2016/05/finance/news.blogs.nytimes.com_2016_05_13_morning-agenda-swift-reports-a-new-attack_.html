@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004404298"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1463133163" />
+<meta name="PUD" content="20160513" />
+<meta name="pdate" content="20160513" />
+<meta name="ptime" content="20160513055243" />
+<meta name="utime" content="20160513095243" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-05-13T09:52:43-04:00" />
+<meta name="DISPLAYDATE" content="May 13, 2016" />
+<meta name="dat" content="May 13, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Boehner, John A;Brown, Scott P;Cameron, David;Cook, Timothy D;Griffin, Kenneth C;Mnuchin, Steven T;Petraeus, David H;Pickens, T Boone Jr;Scaramucci, Anthony;Trump, Donald J;White, Mary Jo;Yellen, Janet L">
+<meta name="des" content="Admissions Standards;Antitrust Laws and Competition Issues;Banking and Financial Institutions;Campaign Finance;Colleges and Universities;Discrimination;Hedge Funds;Insider Trading;Insurance;Law Schools;Mergers, Acquisitions and Divestitures;Presidential Election of 2016;Private Equity;Whistle-Blowers">
+<meta name="org" content="Agricultural Bank of China;Apple Inc;California Public Utilities Commission;Charter Communications Inc;China International Capital Corp;Facebook Inc;Federal Reserve System;Google Inc;HSBC Holdings PLC.;KKR &amp; Co LP;Monsanto Company;Republican Party;Securities and Exchange Commission;Skybridge Capital II LLC;SWIFT(Society for Worldwide Interbank Financial Telecommunication);Time Warner Cable Inc;University of Minnesota">
+<meta name="geo" content="Minnesota">
+<meta property="article:tag" content="Boehner John A" />
+<meta property="article:tag" content="Brown Scott P" />
+<meta property="article:tag" content="Cameron David" />
+<meta property="article:tag" content="Cook Timothy D" />
+<meta property="article:tag" content="Griffin Kenneth C" />
+<meta property="article:tag" content="Mnuchin Steven T" />
+<meta property="article:tag" content="Petraeus David H" />
+<meta property="article:tag" content="Pickens T Boone Jr" />
+<meta property="article:tag" content="Scaramucci Anthony" />
+<meta property="article:tag" content="Trump Donald J" />
+<meta property="article:tag" content="White Mary Jo" />
+<meta property="article:tag" content="Yellen Janet L" />
+<meta property="article:tag" content="Admissions Standards" />
+<meta property="article:tag" content="Antitrust Laws and Competition Issues" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Campaign Finance" />
+<meta property="article:tag" content="Colleges and Universities" />
+<meta property="article:tag" content="Discrimination" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Insider Trading" />
+<meta property="article:tag" content="Insurance" />
+<meta property="article:tag" content="Law Schools" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Presidential Election of 2016" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Whistle-Blowers" />
+<meta property="article:tag" content="Agricultural Bank of China" />
+<meta property="article:tag" content="Apple Inc" />
+<meta property="article:tag" content="California Public Utilities Commission" />
+<meta property="article:tag" content="Charter Communications Inc" />
+<meta property="article:tag" content="China International Capital Corp" />
+<meta property="article:tag" content="Facebook Inc" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Google Inc" />
+<meta property="article:tag" content="HSBC Holdings PLC." />
+<meta property="article:tag" content="KKR &amp; Co LP" />
+<meta property="article:tag" content="Monsanto Company" />
+<meta property="article:tag" content="Republican Party" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Skybridge Capital II LLC" />
+<meta property="article:tag" content="SWIFT(Society for Worldwide Interbank Financial Telecommunication)" />
+<meta property="article:tag" content="Time Warner Cable Inc" />
+<meta property="article:tag" content="University of Minnesota" />
+<meta property="article:tag" content="Minnesota" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Boehner John A,Brown Scott P,Cameron David,Cook Timothy D,Griffin Kenneth C,Mnuchin Steven T,Petraeus David H,Pickens T Boone Jr,Scaramucci Anthony,Trump Donald J,White Mary Jo,Yellen Janet L,Admissions Standards,Antitrust Laws and Competition Issues,Banking and Financial Institutions,Campaign Finance,Colleges and Universities,Discrimination,Hedge Funds,Insider Trading,Insurance,Law Schools,Mergers Acquisitions and Divestitures,Presidential Election of 2016,Private Equity,Whistle-Blowers,Agricultural Bank of China,Apple Inc,California Public Utilities Commission,Charter Communications Inc,China International Capital Corp,Facebook Inc,Federal Reserve System,Google Inc,HSBC Holdings PLC.,KKR &amp; Co LP,Monsanto Company,Republican Party,Securities and Exchange Commission,Skybridge Capital II LLC,SWIFT(Society for Worldwide Interbank Financial Telecommunication),Time Warner Cable Inc,University of Minnesota,Minnesota,DealBook" />
+<meta name="news_keywords" content="Discrimination,Minnesota,Personal finance,Whistleblower" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F05%2F13%2Fmorning-agenda-swift-reports-a-new-attack%2F" title="Morning Agenda: Swift Reports a New Attack" />
+<meta name="description" content="Apple Invests in Uber&#8217;s Rival in China &#124; Minnesota Law School Cuts Admissions &#124; Trump&#8217;s Chief Fund-Raiser Heads Straight to Las Vegas" />
+<meta name="hdl" content="Morning Agenda: Swift Reports a New Attack" />
+<meta property="og:title" content="Morning Agenda: Swift Reports a New Attack" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/05/13/morning-agenda-swift-reports-a-new-attack/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Apple Invests in Uber&#8217;s Rival in China &#124; Minnesota Law School Cuts Admissions &#124; Trump&#8217;s Chief Fund-Raiser Heads Straight to Las Vegas" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Swift Reports a New Attack" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/05/13/morning-agenda-swift-reports-a-new-attack/" />
+<meta name="twitter:description" content="Apple Invests in Uber&#8217;s Rival in China &#124; Minnesota Law School Cuts Admissions &#124; Trump&#8217;s Chief Fund-Raiser Heads Straight to Las Vegas" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Hard Hats for Hedge Funds as Mergers Collapse' href='//news.blogs.nytimes.com/2016/05/12/morning-agenda-hard-hats-for-hedge-funds-as-mergers-collapse/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/05/13/what-were-reading-153/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/05/13/morning-agenda-swift-reports-a-new-attack/' />
+<link rel='shortlink' href='//nyti.ms/1TJY3A7' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/05/13/morning-agenda-swift-reports-a-new-attack/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Swift Reports a New Attack - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4798 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Swift Reports a New Attack        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/05/13/morning-agenda-swift-reports-a-new-attack/"
+	 data-title="Morning Agenda: Swift Reports a New Attack"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Apple Invests in Uber&#039;s Rival in China | Minnesota Law School Cuts Admissions | Trump&#039;s Chief Fund-Raiser Heads Straight to Las Vegas&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/13/morning-agenda-swift-reports-a-new-attack/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 13, 2016 5:52 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Swift Reports a New Attack</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-05-13T09:52:43+00:00" itemprop="datePublished">May 13, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">May 13, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4798 post type-post status-publish hentry category-dealbook tag-admissions-standards tag-agricultural-bank-of-china tag-antitrust-laws-and-competition-issues tag-apple-inc tag-banking-and-financial-institutions tag-boehner-john-a tag-brown-scott-p tag-california-public-utilities-commission tag-cameron-david tag-campaign-finance tag-charter-communications-inc tag-china-international-capital-corp tag-colleges-and-universities tag-cook-timothy-d tag-discrimination tag-facebook-inc tag-federal-reserve-system tag-google-inc tag-griffin-kenneth-c tag-hedge-funds tag-hsbc-holdings-plc tag-insider-trading tag-insurance tag-kkr-co-lp tag-law-schools tag-mergers-acquisitions-and-divestitures tag-minnesota tag-mnuchin-steven-t tag-monsanto-company tag-petraeus-david-h tag-pickens-t-boone-jr tag-presidential-election-of-2016 tag-private-equity tag-republican-party tag-scaramucci-anthony tag-securities-and-exchange-commission tag-skybridge-capital-ii-llc tag-swiftsociety-for-worldwide-interbank-financial-telecommunication tag-time-warner-cable-inc tag-trump-donald-j tag-university-of-minnesota tag-whistle-blowers tag-white-mary-jo tag-yellen-janet-l per-boehner-john-a per-brown-scott-p per-cameron-david per-cook-timothy-d per-griffin-kenneth-c per-mnuchin-steven-t per-petraeus-david-h per-pickens-t-boone-jr per-scaramucci-anthony per-trump-donald-j per-white-mary-jo per-yellen-janet-l des-admissions-standards des-antitrust-laws-and-competition-issues des-banking-and-financial-institutions des-campaign-finance des-colleges-and-universities des-discrimination des-hedge-funds des-insider-trading des-insurance des-law-schools des-mergers-acquisitions-and-divestitures des-presidential-election-of-2016 des-private-equity des-whistle-blowers org-agricultural-bank-of-china org-apple-inc org-california-public-utilities-commission org-charter-communications-inc org-china-international-capital-corp org-facebook-inc org-federal-reserve-system org-google-inc org-hsbc-holdings-plc org-kkr-co-lp org-monsanto-company org-republican-party org-securities-and-exchange-commission org-skybridge-capital-ii-llc org-swiftsociety-for-worldwide-interbank-financial-telecommunication org-time-warner-cable-inc org-university-of-minnesota geo-minnesota news_keywords-discrimination news_keywords-minnesota news_keywords-personal-finance news_keywords-whistleblower" id="post-4798">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Swift Reports a New Attack</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-05-13T09:52:43+00:00" itemprop="datePublished">May 13, 2016 5:52 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 13, 2016 5:52 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/05/13/morning-agenda-swift-reports-a-new-attack/" data-title="Morning Agenda: Swift Reports a New Attack" data-description="Apple Invests in Uber&#039;s Rival in China | Minnesota Law School Cuts Admissions | Trump&#039;s Chief Fund-Raiser Heads Straight to Las Vegas">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SWIFT REPORTS A NEW ATTACK </strong> <span class="divider"> | </span></span> Thieves have found their way into the Swift global bank network as investigators are still trying to solve the $81 million heist from the central bank of Bangladesh,<br />
+<a href="//www.nytimes.com/2016/05/13/business/dealbook/swift-global-bank-network-attack.html?ref=dealbook&#038;_r=0">Michael Corkery reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody"><b>The second attack involved a commercial bank</b>, which Swift declined to identify. In a letter it planned to send to users on Friday, which The New York Times reviewed, Swift warned that the two attacks bore similarities and were likely part of a <b>âwider and highly adaptive campaign targeting banks.â</b> </p>
+<p class="story-body-text" itemprop="articleBody">Banking experts said the attacks might be impossible to solve or trace. Swift said the thieves got their hands on legitimate network credentials, initiated the fraudulent transfers and installed malware on bank computers to disguise their movements. </p>
+<p class="story-body-text" itemprop="articleBody">&#8220;<b>The attackers clearly exhibit a deep and sophisticated knowledge of specific operation controls within the targeted banks</b> â knowledge that may have been gained from malicious insiders or cyberattacks, or a combination of both,âSwift said. It also warned that the gang of thieves may have been able to recruit bank employees to hand over credentials. </p>
+<p class="story-body-text" itemprop="articleBody">Security experts who have studied the attacks said the thieves were probably lurking inside the bank systems for months before they were detected and are likely to strike again. </p>
+<p class="story-body-text" itemprop="articleBody">Swiftâs core messaging system was not breached, but the criminals attacked the banksâ connections to its network. Banks are responsible for maintaining the security of their own connections to Swift and digital criminals have found ways to exploit loopholes in bank security to obtain login credentials and dispatch fraudulent Swift messages. </p>
+<p class="story-body-text" itemprop="articleBody"><b>This second attack suggests a highly sophisticated threat that did not depend on weak digital defenses.</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>APPLE INVESTS IN UBERâS RIVAL IN CHINA</strong> <span class="divider"> | </span></span> Apple has put <b>$1 billion into Didi Chuxing</b>, Chinaâs biggest ride-hailing service, in one of its largest ever strategic investments,<br />
+<a HREF="//www.nytimes.com/2016/05/13/technology/apple-puts-1-billion-in-didi-a-rival-to-uber-in-china.html?hp&#038;action=click&#038;pgtype=Homepage&#038;clickSource=story-heading&#038;module=first-column-region&#038;region=top-news&#038;WT.nav=top-news">Mike Isaac and Vindu Goel report in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">The move into on-demand transportation is unusual for Apple, which has <b>generally been quiet about its deals</b>. It has purchased technology start-ups here and there, and bought Beats for $3 billion in 2014. </p>
+<p class="story-body-text" itemprop="articleBody">Appleâs has also invested in the Chinese company as iPhone sales have flagged in China, and its iBooks and iTunes mobile stores were shut in the country. </p>
+<p class="story-body-text" itemprop="articleBody"><b>âDidi exemplifies the innovation taking place in the iOS developer community in China,â</b> Tim Cook, the chief executive of Apple, said in a statement. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Apple has been working on its own secret car project</b> and certainly has the money to spare. As of March 26, the company said it had nearly $233 billion in cash and marketable securities. </p>
+<p class="story-body-text" itemprop="articleBody">Didi Chuxing, is a major competitor to Uber, which is spending millions to make inroads in the Chinese market. Didi serves close to 300 million users, according to the company. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>MINNESOTA LAW SCHOOL CUTS ADMISSIONS</strong> <span class="divider"> | </span></span> The University of Minnesota has decided to shrink enrollment to <b>preserve its national standing as a top law school</b> even as some are arguing for broader inclusion of students who would fall outside the schoolâs admissions parameters, </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/05/13/business/dealbook/minnesota-law-school-facing-waning-interest-cuts-admissions.html?ref=dealbook">Elizabeth Olson reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody"><b>Applications to law schools have plummeted nationwide</b> and the Great Lakes region has been hit particularly hard, an effect amplified by the number of accredited law schools in the area. The regionâs rapidly aging population and the loss of its traditional manufacturing activity have eroded an economic base that could support a âstrongly upwardly mobile middle class of the kind that sustains high-level educational activity,â David Barnhizer, a professor emeritus at Cleveland-Marshall College of Law, wrote in a research paper. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Minnesota has had one of the largest declines in applicants among the top 20 law schools, but no one knows why.</b> </p>
+<p class="story-body-text" itemprop="articleBody">David Wippman, the dean of the University of Minnesota Law School, has already overseen a shrinking first-year class, offsetting the loss in tuition income with more public subsidies. He said the school was trying to determine why applications for the course were dropping and was trying to identify students more precisely, while publicizing more broadly. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Wippman had to decide whether to admit students with lower scores, but a surplus of graduates who do not find jobs can eviscerate a law schoolâs reputation. Raising tuition was not an option with so many students wary of taking on high debt. The school was also facing competition from others in its hometown.</p>
+<p class="story-body-text" itemprop="articleBody">So the school opted for fewer students. It can at least tap into taxpayer funding, and almost three-quarters of its first-year students are from out of state and pay higher tuition fees. It has also shed staff and left openings unfilled. </p>
+<p class="story-body-text" itemprop="articleBody"><b>The execution of Mr. Wippmanâs strategies fall to his successor</b>, Garry W. Jenkins, a law professor from Ohio State University Moritz College of Law. Mr. Jenkins has experience as a former chief operating officer and general counsel of the Goldman Sachs Foundation. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> Data on <b>retail sales during April</b> will be published at 8:30 a.m. The <b>University of Michigan consumer survey</b> for May will be published at 10 a.m. <b>John C. Williams</b>, the president of the Federal Reserve Bank of San Francisco, will speak at the Sacramento Economic Forum, which starts at 1 p.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TRUMPâS CHIEF FUND-RAISER HEADS STRAIGHT TO LAS VEGAS</strong> <span class="divider"> | </span></span> Steven Mnuchin has not wasted any time looking for big-money donors. He headed to the SkyBridge Alternatives Conference, or SALT, to meet with hedge fund managers less than a week after being recruited by Donald J. Trump,<br />
+<a HREF="//www.nytimes.com/2016/05/13/business/dealbook/donald-trumps-chief-fund-raiser-heads-straight-for-las-vegas.html?ref=dealbook">Alexandra Stevenson reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody"><b>Mr. Mnuchin sat with Scott Brown</b>, the former Republican senator from Massachusetts, as he shook hands with prospective Trump donors. He also a attended a dinner that included the billionaire hedge fund manager Kenneth C. Griffin, David H. Petraeus, the former C.I.A. director and John A. Boehner, the former House speaker. </p>
+<p class="story-body-text" itemprop="articleBody">Presidential politics was the main topic in the speeches delivered onstage, at the closed-door meetings and at the Champagne-filled after-hours events.<br />
+But for many on Wall Street, it would be <b>awkward to publicly support Mr. Trump</b>, in light of his broadsides against the hedge fund industry. Many in the financial world said they would never support a Democratic candidate but have also publicly objected to Mr. Trump. Even Anthony Scaramucci, who runs the investment firm SkyBridge Capital and who last week publicly endorsed Mr. Trump, has been one of Mr. Trumpâs loudest critics. </p>
+<p class="story-body-text" itemprop="articleBody">But <b>Mr. Scaramucci took a different tone at SALT</b>, saying that Mr. Trump was âsaying cuckoo-la-la things to insult the intelligentsia because what heâs discovered is that the average American, the red-meat eating Middle American, loves the swipes at the know-it-alls and I think Donald Trump is enjoying doing that.â </p>
+<p class="story-body-text" itemprop="articleBody">The oil tycoon T. Boone Pickens said that he expected most Republicans to fall in line and back Mr. Trump eventually. He told an audience of money managers on Wednesday that he <b>agreed with Mr. Trumpâs proposal to ban Muslims unless they were vetted.</b> </p>
+<p class="story-body-text" itemprop="articleBody">In private and public, hedge fund managers at the conference in Las Vegas have expressed concern that the possibility of Mr. Trump as president could pose a <b>risk to the economy and markets.</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Bayer-Monsanto Tie-Up Could Be a Bitter Pill</strong> <span class="divider"> | </span></span> Bayer would be buying a company at the center of the fight against genetically modified crops in Europe, Olaf Storbeck and Kevin Allison write in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/13/business/dealbook/a-bayer-monsanto-tie-up-could-be-a-bitter-pill.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>California Approves Deal Between Charter and Time Warner Cable </strong> <span class="divider"> | </span></span> Charter Communications said its proposal to buy Time Warner Cable was approved by the California Public Utilities Commission, overcoming the last hurdle to completing the deal. <br /><span class="kicker"><a href="//www.reuters.com/article/us-twc-m-a-charter-communi-idUSKCN0Y32M6">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>R.B.S. Will Not Face Charges Over Rights Issue in 2008</strong> <span class="divider"> | </span></span> Scottish prosecutors said there was âinsufficient evidenceâ to pursue senior figures at the bank over the raising of about $17 billion just before its rescue.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/13/business/dealbook/scotland-rbs-decline-criminal-charges.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Another Company With a Cause: Is Google Just Being a Good Citizen?" src="https://static01.nyt.com/images/2016/05/12/upshot/12UP-Loans/12UP-Loans-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Another Company With a Cause: Is Google Just Being a Good Citizen?</strong> <span class="divider"> | </span></span> With its move on payday loans, it joins other powerful players like Facebook and PayPal in taking a stand on social issues, but deepens concerns about overreach.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/13/upshot/googles-payday-loan-move-exemplifies-new-corporate-advocacy.html">The Upshot &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Review: In âMoney Monster,â a Broke Investor Holds a Grudge and a Gun" src="https://static01.nyt.com/images/2016/05/13/arts/13MONSTER/13MONSTER-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Review: In âMoney Monster,â a Broke Investor Holds a Grudge and a Gun</strong> <span class="divider"> | </span></span> George Clooney plays a financial news talk-show host, and Julia Roberts is his producer in this self-assured hostage drama.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/13/movies/review-in-money-monster-review-george-clooney-julia-roberts-jodie-foster.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Standard Life Chief Says Rivals Should Take Pay Cuts</strong> <span class="divider"> | </span></span> Keith Skeoch, the chief executive, asked for a cut to the maximum amount he could be awarded under the investment groupâs 2016 long-term incentive plan, which was set up when he stepped into his post last year.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/8a3b40a0-1859-11e6-b197-a4af20d5575e.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz48Jb2apWm">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HSBC Said to Hire 175 Compliance Employees</strong> <span class="divider"> | </span></span> HSBC is hiring 175 people for the financial crime compliance team at its British consumer bank, which will eventually be isolated from its trading business, Bloomberg reports, citing people familiar with the plan.<br />
+<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-12/hsbc-said-to-hire-175-compliance-staff-for-u-k-ring-fenced-bank">BLOOMBERG  </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Beijing Investment Bank Bolsters Deals Team</strong> <span class="divider"> | </span></span> The bank, China International Capital Corporation, which is advising ChemChina on the Syngenta deal, is expanding its mergers and acquisitions business to capitalize on Chinese firmsâ pursuit of overseas assets.<br /><span class="kicker"><a href="//www.reuters.com/article/us-china-m-a-cicc-idUSKCN0Y40DI?feedType=RSS&#038;feedName=innovationNews">REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Jack Treynor, Who Pioneered Modern Investment Theory, Dies at 86</strong> <span class="divider"> | </span></span> Mr. Treynorâs insights into risk and return underpin theories for investment pricing and shaped the field of quantitative finance. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-12/jack-treynor-who-pioneered-modern-investment-theory-dies-at-86">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>K.K.R. Said to Plan Mexico City Office </strong> <span class="divider"> | </span></span> Kohlberg Kravis Roberts is planning to open an office in Mexico City as it seeks to start a local fund, Bloomberg reports, citing a person familiar with the matter. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-12/kkr-said-to-plan-to-open-mexico-city-office-in-fundraising-push"> BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Big Insurers Send a Wake-Up Call to Hedge Fund Investors" src="https://static01.nyt.com/images/2016/05/13/business/13STEWART/13STEWART-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Big Insurers Send a Wake-Up Call to Hedge Fund Investors</strong> <span class="divider"> | </span></span> The high-reward, low-risk promises of hedge funds failed to materialize, and many insurance companies are unwinding their positions, James B. Stewart writes in Common Sense.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/13/business/big-insurers-send-a-wake-up-call-to-hedge-fund-investors.html">Common Sense &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Privacy Rules Shouldnât Handcuff the S.E.C." src="https://static01.nyt.com/images/2016/05/13/opinion/13whiteWeb/13whiteWeb-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Privacy Rules Shouldnât Handcuff the S.E.C.</strong> <span class="divider"> | </span></span> A new bill would deprive government agencies of important tools to fight crime. Our solution would respect privacy without harming our mandate, Mary Jo White, the chairwoman of the Securities and Exchange Commission, writes in a New York Times op-ed.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/13/opinion/privacy-rules-shouldnt-handcuff-the-sec.html">Op-Ed Contributor &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Ascap Settles Justice Department Inquiry Over Licensing" src="https://static01.nyt.com/images/2016/05/13/business/13ASCAP/13ASCAP-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ascap Settles Justice Department Inquiry Over Licensing</strong> <span class="divider"> | </span></span> The music licensing agency agreed to pay $1.75 million after an investigation found that some licensing deals violated its rules.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/13/business/media/ascap-settles-justice-department-inquiry-over-licensing.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Former Banker Sentenced in Insider Trading Case in Britain</strong> <span class="divider"> | </span></span> Martyn Dodgson, a former investment banker, was sentenced to four-and-a-half years in prison after being convicted on an insider trading charge.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/13/business/dealbook/former-banker-sentenced-in-insider-trading-case-in-britain.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Democratic Lawmakers Say Fed Should Increase Its Diversity</strong> <span class="divider"> | </span></span> âGiven the critical linkage between monetary policy and the experiences of hardworking Americans, the importance of ensuring that such positions are filled by persons that reflect and represent the interests of our diverse country, cannot be understated,â reads a letter to the chairwoman of the Federal Reserve, Janet L. Yellen.<br /><span class="kicker"><a href="//www.wsj.com/articles/democratic-legislators-criticize-fed-over-leadership-diversity-1463068801?mod=pls_whats_news_us_business_f">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinese State-Owned Bank Must Face Whistleblower Claim in the United States </strong> <span class="divider"> | </span></span> A Manhattan federal judge on Thursday revived a whistle-blower claim by a former chief compliance officer for the Agricultural Bank of China who claimed that the bank discriminated on the basis of her whistle-blowing and her gender in her $8 million discrimination lawsuit.<br /><span class="kicker"><a href="//www.reuters.com/article/agbank-china-whistleblower-idUSL2N1892HI?feedType=RSS&#038;feedName=USLegal">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Antitrust in the Age of Amazon" src="https://static01.nyt.com/images/2016/05/13/business/13retail-web1/13retail-web1-square320-v3.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Antitrust in the Age of Amazon</strong> <span class="divider"> | </span></span> Pens matter. Ink does not. The blocking of the Staples-Office Depot union illustrates the complications the age of Amazon has created in the retail industry.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/13/business/office-depot-staples-merger-antitrust-amazon.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Brooklyn Judge Will Not Force Facebookâs Silence on Subpoenas</strong> <span class="divider"> | </span></span> Prosecutors wanted to keep Facebook from telling users about 15 subpoenas of their data. But a judge refused, saying the need for them was not specific enough.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/13/technology/brooklyn-judge-will-not-force-facebooks-silence-on-subpoenas.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="David Cameron Leads a Call to Thwart Financial Corruption" src="https://static01.nyt.com/images/2016/05/13/world/13Britain-web/13Britain-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>David Cameron Leads a Call to Thwart Financial Corruption</strong> <span class="divider"> | </span></span> Mr. Cameron, representing Britain, outlined measures to fight offshore tax evasion as he met with Secretary of State John Kerry and other leaders in London.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/13/world/europe/britain-cameron-corruption.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>âHow Women Decide,â by Therese Huston</strong> <span class="divider"> | </span></span> Stereotypes surround womenâs decisions and how their choices are perceived.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/15/books/review/how-women-decide-by-therese-huston.html">Nonfiction &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/05/13/morning-agenda-swift-reports-a-new-attack/"
+					data-title="Morning Agenda: Swift Reports a New Attack"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Apple Invests in Uber&#039;s Rival in China | Minnesota Law School Cuts Admissions | Trump&#039;s Chief Fund-Raiser Heads Straight to Las Vegas&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/13/morning-agenda-swift-reports-a-new-attack/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":51,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

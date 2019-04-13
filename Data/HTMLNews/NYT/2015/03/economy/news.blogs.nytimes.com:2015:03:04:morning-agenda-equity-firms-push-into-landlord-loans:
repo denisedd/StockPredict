@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/news/Morning Agenda: Equity Firms Push Into Landlord Loans ( 20150304 )" />
+<meta name="communityAssetURL" content="//news.blogs.nytimes.com/2015/03/04/morning-agenda-equity-firms-push-into-landlord-loans/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003549775"><meta name="author" content="Sydney Ember" />
+<meta name="CLMST" content="Sydney Ember" />
+<meta name="byl" content="Sydney Ember" />
+<meta name="article:author" content="//topics.nytimes.com/top/reference/timestopics/people/e/sydney_ember/index.html" /><meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1425472262" />
+<meta name="PUD" content="20150304" />
+<meta name="pdate" content="20150304" />
+<meta name="ptime" content="20150304073102" />
+<meta name="utime" content="20150304123102" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-03-04T12:31:02-05:00" />
+<meta name="DISPLAYDATE" content="March 4, 2015" />
+<meta name="dat" content="March 4, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F03%2F04%2Fmorning-agenda-equity-firms-push-into-landlord-loans%2F" title="Morning Agenda: Equity Firms Push Into Landlord Loans" />
+<meta name="description" content="Three big private equity firms are providing loans to investor-landlords. &#124; Citigroup is selling its subprime consumer loan unit. &#124; Private equity payouts leave the rest of Wall Street in the dust. &#124; Profit at Standard Chartered slides" />
+<meta name="hdl" content="Morning Agenda: Equity Firms Push Into Landlord Loans" />
+<meta property="og:title" content="Morning Agenda: Equity Firms Push Into Landlord Loans" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/03/04/morning-agenda-equity-firms-push-into-landlord-loans/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Three big private equity firms are providing loans to investor-landlords. &#124; Citigroup is selling its subprime consumer loan unit. &#124; Private equity payouts leave the rest of Wall Street in the dust. &#124; Profit at Standard Chartered slides" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Equity Firms Push Into Landlord Loans" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/03/04/morning-agenda-equity-firms-push-into-landlord-loans/" />
+<meta name="twitter:description" content="Three big private equity firms are providing loans to investor-landlords. &#124; Citigroup is selling its subprime consumer loan unit. &#124; Private equity payouts leave the rest of Wall Street in the dust. &#124; Profit at Standard Chartered slides" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/03/03/what-were-reading-34/' />
+<link rel='next' title='Morning Agenda: Etsy Files for I.P.O.' href='//news.blogs.nytimes.com/2015/03/05/morning-agenda-etsy-files-for-i-p-o/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/03/04/morning-agenda-equity-firms-push-into-landlord-loans/' />
+<link rel='shortlink' href='//nyti.ms/1BH17IY' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/03/04/morning-agenda-equity-firms-push-into-landlord-loans/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Equity Firms Push Into Landlord Loans - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2041 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Equity Firms Push Into Landlord Loans        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/03/04/morning-agenda-equity-firms-push-into-landlord-loans/"
+	 data-title="Morning Agenda: Equity Firms Push Into Landlord Loans"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Three big private equity firms are providing loans to investor-landlords. | Citigroup is selling its subprime consumer loan unit. | Private equity payouts leave the rest of Wall Street in the dust. | Profit at Standard Chartered slides&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/03/04/morning-agenda-equity-firms-push-into-landlord-loans/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="March 4, 2015 7:31 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+		<button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Equity Firms Push Into Landlord Loans</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Sydney Ember			</address>
+			<!-- date published --><time class="dateline " datetime="2015-03-04T12:31:02+00:00" itemprop="datePublished">March 4, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">March 4, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2041 post type-post status-publish hentry category-dealbook" id="post-2041">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Equity Firms Push Into Landlord Loans</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Sydney Ember                </span>
+                <!-- date published --><time class="dateline " datetime="2015-03-04T12:31:02+00:00" itemprop="datePublished">March 4, 2015 7:31 am</time>
+			<!-- date updated --><span class="visually-hidden updated">March 4, 2015 7:31 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/03/04/morning-agenda-equity-firms-push-into-landlord-loans/" data-title="Morning Agenda: Equity Firms Push Into Landlord Loans" data-description="Three big private equity firms are providing loans to investor-landlords. | Citigroup is selling its subprime consumer loan unit. | Private equity payouts leave the rest of Wall Street in the dust. | Profit at Standard Chartered slides">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong> EQUITY FIRMS PUSH INTO LANDLORD LOANS</strong> <span class="divider"> | </span></span> In the aftermath of the financial crisis, large private equity firms spent tens of billions of dollars buying foreclosed homes across the United States to operate them as rental properties. Now, three big firms â the Blackstone Group, Colony Capital and Cerberus Capital Management â are providing loans to smaller investors who are looking to do something similar, <a href="//www.nytimes.com/2015/03/04/business/equity-firms-are-lending-to-landlords-signaling-a-shift.html">Matthew Goldstein reports in DealBook</a>. These firms are betting that so-called landlord loans to small and midsize investors will become the next big opportunity to profit from the rebound in the United States housing market. </p>
+<p class="story-body-text" itemprop="articleBody">The private equity firms are providing financing indirectly to hundreds of real estate funds buying single-family homes, Mr. Goldstein writes. Over the last year, subsidiaries and affiliates of all three private equity firms have <b>lent collectively about $1.5 billion</b> to smaller residential real estate investors, enhancing the capability of these firms to scoop up distressed single-family homes, said people briefed on the matter. All three firms are preparing to bundle those loans into bonds. The first securitization of landlord loans is expected to come to market in the next few weeks with Deutsche Bank taking the lead underwriting role, these same people said.</p>
+<p class="story-body-text" itemprop="articleBody">The private equity firms see a <b>rising demand for landlord loans</b>, which can range from as little as $500,000 to $50 million, given that smaller- to midsize real estate investment firms historically have had to rely mainly on cash raised to make purchases, Mr. Goldstein adds. What is more, Blackstone, Cerberus and Colony are entering a market with little competition because most of the banks that did make loans to investor-landlords left the market during the financial crisis. But <b>housing advocates are concerned</b> that landlord loans from private equity firms could fuel the purchase of homes by investors that are ill-equipped to manage rental properties. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CITIGROUP TO SELL ITS SUBPRIME LENDER</strong> <span class="divider"> | </span></span> Citigroup is selling OneMain Financial, its subprime consumer loan unit, to Springleaf Holdings, another large subprime lender, for $4.25 billion, <a href="//www.nytimes.com/2015/03/04/business/dealbook/citigroup-to-sell-its-subprime-lender-onemain-to-springleaf-for-4-25-billion.html">Michael Corkery writes in DealBook</a>. The sale, which  Citigroup had contemplated since shortly after the financial crisis and announced on Tuesday, is expected to net the giant bank a $1 billion profit. </p>
+<p class="story-body-text" itemprop="articleBody">The unit had been highly lucrative for the bank, which could borrow money at low interest rates, then charge double-digit rates on the loans. But the business did not fit with Citigroupâs long-term plan to focus on providing banking services to more affluent customers in the United States. The sale of OneMain highlights a broader trend of subprime lending migrating to nonbanks like Springleaf, Mr. Corkery writes. A former unit of the giant insurer American International Group, Springleaf is now one of the largest subprime consumer lenders in the country.</p>
+<p class="story-body-text" itemprop="articleBody">âLosing OneMain deprives Citigroup of much-needed earnings,â <a href="//www.nytimes.com/2015/03/04/business/dealbook/citigroup-to-benefit-from-losing-its-most-profitable-unit.html">Antony Currie of Reuters Breakingviews writes</a>. But in the end, he adds, Citigroup will benefit from losing the unit because the deal will give it a shot of income, free up capital and remove a distraction.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BIG PAY FOR PRIVATE EQUITY CHIEFS</strong> <span class="divider"> | </span></span> When it comes to big paydays, private equity chiefs leave their Wall Street brethren in the dust, <a href="//www.nytimes.com/2015/03/04/business/dealbook/private-equity-payouts-leave-the-rest-of-wall-st-in-the-dust.html">DealBookâs William Alden writes</a>. Take Lloyd C. Blankfein, the chief executive of Goldman Sachs, who earned roughly $30 million in 2014, including his salary, bonus and dividends. Although the sum is staggering, it pales next to the $690 million that Stephen A. Schwarzman, the chief executive and co-founder of the private equity giant Blackstone Group, received last year.</p>
+<p class="story-body-text" itemprop="articleBody">âThe gulf between the earnings of the two men illustrates the power of dividend income for private equityâs top brass. Mr. Schwarzman and his private equity rivals at Kohlberg Kravis Roberts, Apollo Global Management and the Carlyle Group retain large stakes in their firms after founding them,â Mr. Alden writes. On the other hand, Mr. Blankfein owns less than 1 percent of Goldmanâs shares, and dividends were a relatively small slice of his overall take. The big private equity firms were able to generate large amounts of cash last year by selling their holdings during a buoyant stock market, providing hefty payouts to their founders that came in the forms of so-called distributions.</p>
+<p class="story-body-text" itemprop="articleBody">The private equity chieftains also stand out for the way they pay taxes, Mr. Alden writes. Bank chief executives are taxed at ordinary rates on their salaries and bonuses, but those in private equity pay the 23.8 percent federal capital gains tax rate on the bulk of their earnings. That is because most private equity profit derives from income on the firmâs investments, a source known as carried interest, or carry. In Blackstoneâs case, roughly 60 percent of the firmâs income in 2014 came from investment sources and would be subject to capital gains taxes, according to a person briefed on the matter. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The <b>ADP employment report</b> comes out at 8:15 a.m. Gallupâs <b>job creation index</b> is released at 8:30 a.m. The Markit <b>purchasing managersâ index for services</b> is released at 9:45 a.m. The Institute for Supply Management <b>nonmanufacturing index</b> comes out at 10 a.m. The Fedâs regular report on economic activity across the country, a report known as the <b>beige book</b>, is out at 2 p.m.</p>
+<p class="story-body-text" itemprop="articleBody"><b>On the Hill</b>: Treasury Secretary <b>Jacob J. Lew</b> testifies before the House Appropriations Committeeâs financial services subcommittee about the Treasury Departmentâs budget at 2 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong> STANDARD CHARTERED PROFIT SLIDES</strong> <span class="divider"> | </span></span> The British bank Standard Chartered, which generates most of its earnings in Asia, said on Wednesday that profit fell 37 percent in 2014, <a href="//www.nytimes.com/2015/03/05/business/dealbook/standard-chartered-profit-fell-37-percent-in-2014.html">Chad Bray reports in DealBook</a>. It cited higher charges for bad loans and other credit risks, an accounting charge on its Korean business and a previously announced settlement with the United States authorities, among other headwinds. Peter Sands, the bankâs departing chief executive, said he and other executive directors who serve on the bankâs board of directors would not be taking bonuses this year.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Sands said that the lender had <b>sacrificed some profit as it moved to cut costs</b>, reshape its operations and focus on less risky businesses. The bank said it was targeting cost reductions of $1.8 billion over the next three years, would cut another 2,000 jobs in its retail operations this year and would further reduce the risk in its loan portfolios and business lines. The lender cut 2,000 jobs in its retail operations in 2014. Last week, Standard Chartered announced that it planned to shake up its leadership, which included the departures of Mr. Sands, who had been chief executive since 2006; its chairman; and several long-serving directors.</p>
+<p class="story-body-text" itemprop="articleBody">For the year that ended Dec. 31, Standard Chartered said profit declined to $2.51 billion, from $3.99 billion in 2013. The bank said that impairments for loans and other credit risks had jumped 33 percent to $2.14 billion in 2014, from $1.62 billion in the previous year. The bankâs operating income, which is similar to revenue in the United States, declined 2 percent to $18.2 billion in 2014, from $18.7 billion in the prior year.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact: <a href="https://www.twitter.com/melbournecoal">@melbournecoal</a> | <a href="mailto:sydney.ember@nytimes.com">E-mail</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Government to Sell Eurostar Stake for $1.16 Billion</strong> <span class="divider"> | </span></span> A consortium that includes Caisse de DÃ©pÃ´t et Placement du QuÃ©bec and Hermes Infrastructure will buy the governmentâs 40 percent stake in the rail operator.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/05/business/dealbook/eurostar-stake-sale-british-government.html"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Big Investor in BPI of Portugal Seeks to Derail CaixaBank Bid</strong> <span class="divider"> | </span></span> Isabel dos Santos, the daughter of the president of Angola, is pushing for the bank to merge with a domestic rival, Millennium BCP.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/04/business/dealbook/big-investor-in-bpi-of-portugal-seeks-to-derail-caixabank-bid.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bristol-Myers Squibb Enters Drug Licensing Deal With Danish Biotechnology Firm</strong> <span class="divider"> | </span></span> Under the deal, Bavarian Nordic could receive as much as $975 million to license its advanced prostate cancer treatment, Prostvac.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/05/business/dealbook/bristol-myers-squibb-enters-drug-licensing-deal-with-danish-biotechnology-firm.html"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Box to Acquire Mobile Security Start-Up Subspace</strong> <span class="divider"> | </span></span> The data storage provider Box, which went public earlier this year, has reached a deal to buy Subspace, a seven-person start-up that helps companies secure mobile devices, ReCode reports. Subspace will shut down by April 3 and all of its employees will join Box. Financial terms of the deal were not disclosed.<br /><span class="kicker"><a href="//recode.net/2015/03/03/boxs-first-post-ipo-deal-is-for-mobile-security-startup-subspace/"> RECODE </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bob Evans Farms Opts Not to Spin Off Prepared Food Business </strong> <span class="divider"> | </span></span> Bob Evans Farms said on Tuesday that it would not pursue a sale or spinoff of its foods unit and had hired JPMorgan Chase to advise on strategic options for its real estate, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/bob-evans-farms-opts-not-to-spin-off-prepared-food-business-1425419461"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bank of Englandâs Chief Currency Dealer Fired for Rule Breaches</strong> <span class="divider"> | </span></span> Mark Carney, the bankâs governor, said the executive was dismissed for actions that âcouldâve brought the bankâs reputation into disrepute.â<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/04/business/dealbook/bank-of-englands-chief-currency-dealer-fired-for-rule-breaches.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Pension Funds Trail Individuals in Embracing Index Funds</strong> <span class="divider"> | </span></span> As more individuals pour money into index funds, institutions like pension funds and endowments have been slower to follow suit. <br /><span class="kicker"><a href="//www.nytimes.com/2015/03/04/business/pension-funds-trail-individuals-in-embracing-index-funds.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Shadow Banks Could Take $11 Billion Annual Profit, Goldman Says </strong> <span class="divider"> | </span></span> The United States shadow banking system could take at least $11 billion of annual profit away from traditional lenders as competition intensifies over the next five years, according to analysts at Goldman Sachs.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-03-04/shadow-banks-could-take-11-billion-annual-profit-goldman-says"> BLOOMBERG BUSINESS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Yellen Scolds Wall Street on Culture</strong> <span class="divider"> | </span></span> Janet L. Yellen, the chairwoman of the Federal Reserve, expressed concerns about the state of Wall Streetâs culture and ethics in prepared remarks for an event in New York on Tuesday night, The Wall Street Journal writes.<br /><span class="kicker"><a href="//on.wsj.com/1AFdQqc"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Barclays Has More to Do to Turn Itself Around</strong> <span class="divider"> | </span></span> The bank has cut investment bank bonuses by a quarter. But with returns in the unit lower last year, Barclays may have to shrink the division further, Dominic Elliott of Reuters Breakingviews writes.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/04/business/dealbook/barclays-has-more-to-do-to-turn-itself-around.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hellman &#038; Friedman and Fortress Said to Prepare Bid for ICBPI of Italy</strong> <span class="divider"> | </span></span> The private equity firm Hellman &#038; Friedman and the asset manager Fortress Investment Group are said to be poised to make a joint bid for  ICBPI, an Italian bank services provider, Reuters reports, citing unidentified sources familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/03/us-icbpi-m-a-hellman-friedman-idUSKBN0LZ2IG20150303"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DuPont Rejects Trianâs Request for Universal Ballot </strong> <span class="divider"> | </span></span> DuPont has rejected a request from the billionaire Nelson Peltz and his investment firm, Trian Fund Management, to use what is known as a universal ballot in an impending vote on directors, The Wall Street Journal reports. A universal ballot would put Trianâs four nominees and DuPontâs full 13-member board on the same paper document sent to shareholders.<br /><span class="kicker"><a href="//on.wsj.com/1Eepyzt"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Jana Partners Said to Be Up 6.7% in February</strong> <span class="divider"> | </span></span> The activist hedge fund Jana Partners is said to have reported a 6.7 percent gain in its flagship fund last month after losing 4.6 percent in January, Reuters writes, citing an investor in the fund.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/03/hedgefunds-returns-idUSL1N0W521120150303"> REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Refresco Gerber Plans I.P.O. in Amsterdam</strong> <span class="divider"> | </span></span> The decision to pursue an initial public offering in Amsterdam follows the Dutch drink bottlerâs announcement last year that it planned to explore forming a new capital structure to support its future growth plans.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/04/business/dealbook/refresco-gerber-plans-ipo-in-amsterdam.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Actavis Sells $21 Billion of Bonds </strong> <span class="divider"> | </span></span> The pharmaceutical company Actavis sold the second-biggest corporate bond offering ever on Tuesday, with a $21 billion deal driven by investorsâ desire for returns as interest rates remain low, The Wall Street Journal reports. Actavis plans to use the money to help pay for its $66 billion acquisition of Allergan, the Botox maker.<br /><span class="kicker"><a href="//on.wsj.com/1EcFGBB"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Xero of New Zealand Delays I.P.O. Plans</strong> <span class="divider"> | </span></span> Xero, a developer of online accounting software based in New Zealand, has pushed back plans for a United States stock listing to the beginning of 2016, at the earliest, after raising $110.8 million from venture capital firms, Reuters writes.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/04/us-xero-ipo-idUSKBN0M00CI20150304"> REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fiat Chrysler Sees High Demand for Ferrari Offering</strong> <span class="divider"> | </span></span> Sergio Marchionne, the chief executive of Fiat Chrysler Automobiles, said on Tuesday that the company could sell more than 10 percent of Ferrari, the Italian luxury sports car maker, in a planned initial public offering, given high demand, Reuters reports.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/03/us-autoshow-geneva-ferrari-sales-idUSKBN0LZ1IW20150303"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong> Nextdoor Social Network Digs Deep Into Neighborhoods</strong> <span class="divider"> | </span></span> The start-up, which is poised to announce that it has raised $110 million in venture capital, sees opportunities in its more than 53,000 microcommunities.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/04/technology/nextdoor-a-start-up-social-network-digs-deep-into-neighborhoods.html?ref=business"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>At Geneva Auto Show, Worry About Silicon Valley</strong> <span class="divider"> | </span></span> There is palpable nervousness among automakers that the car industry could be next in line for disruption by Silicon Valley.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/04/business/international/at-geneva-auto-show-worry-about-silicon-valley.html">NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>India Cuts Benchmark Interest Rates Again</strong> <span class="divider"> | </span></span> In a surprise move, Indiaâs central bank lowered its benchmark interest rate by 0.25 percentage point, to 7.5 percent, on Wednesday, its second cut this year, citing weakness in parts of its economy and easing inflation, Reuters writes.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/05/business/international/india-cuts-benchmark-rate-by-0-25-percentage-point.html"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Petraeus Reaches Plea Deal Over Giving Classified Data to His Lover </strong> <span class="divider"> | </span></span> The move allows David H. Petraeus, the best-known military commander of his generation, who currently holds a senior position at the private equity firm Kohlberg Kravis Roberts, to avoid a high-profile trial where embarrassing details about his affair would have been made public.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/04/us/petraeus-plea-deal-over-giving-classified-data-to-lover.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Black Jobless Rates Remain High, but Fed Canât Do Much to Help</strong> <span class="divider"> | </span></span> The particular challenges facing black workers cannot be solved by monetary policy and, in fact, are an illustration of its limits, Binyamin Appelbaum writes for The Upshot.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/04/upshot/black-jobless-rates-remain-high-but-fed-cant-do-much-to-help.html"> NYT</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+								<button class="button comments-button  theme-speech-bubble"></button>
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/03/04/morning-agenda-equity-firms-push-into-landlord-loans/"
+					data-title="Morning Agenda: Equity Firms Push Into Landlord Loans"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Three big private equity firms are providing loans to investor-landlords. | Citigroup is selling its subprime consumer loan unit. | Private equity payouts leave the rest of Wall Street in the dust. | Profit at Standard Chartered slides&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/03/04/morning-agenda-equity-firms-push-into-landlord-loans/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":50,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

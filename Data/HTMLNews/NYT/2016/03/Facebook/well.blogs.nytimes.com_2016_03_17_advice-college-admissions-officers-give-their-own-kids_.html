@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-well section-health"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/well/Advice College Admissions Officers Give Their Own Kids ( 20160317 )" />
+<meta name="communityAssetURL" content="//well.blogs.nytimes.com/2016/03/17/advice-college-admissions-officers-give-their-own-kids/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004276600"><meta name="author" content="Jennifer Wallace and Lisa Heffernan" />
+<meta name="CLMST" content="Jennifer Wallace and Lisa Heffernan" />
+<meta name="byl" content="Jennifer Wallace and Lisa Heffernan" />
+<meta name="GBLC" content="Family;Featured">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1458211508" />
+<meta name="PUD" content="20160317" />
+<meta name="pdate" content="20160317" />
+<meta name="ptime" content="20160317064508" />
+<meta name="utime" content="20160317153034" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-03-17T15:30:34-04:00" />
+<meta name="DISPLAYDATE" content="March 17, 2016" />
+<meta name="dat" content="March 17, 2016" />
+<meta itemprop="articleSection" property="article:section" content="Health" />
+<meta name="CG" content="Health" />
+<meta name="SCG" content="well" />
+<meta name="BN" content="well" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Colleges and Universities">
+<meta property="article:tag" content="Colleges and Universities" />
+<meta property="article:tag" content="Family" />
+<meta property="article:tag" content="Featured" />
+<meta name="keywords" content="Colleges and Universities,Family,Featured" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fwell.blogs.nytimes.com%2F2016%2F03%2F17%2Fadvice-college-admissions-officers-give-their-own-kids%2F" title="Advice College Admissions Officers Give Their Own Kids" />
+<meta name="description" content="Admissions officers tell their own children that high school is far more than just a pathway to college &#8212; it&#8217;s a time for maturation, self-discovery, learning and fun." />
+<meta name="hdl" content="Advice College Admissions Officers Give Their Own Kids" />
+<meta property="og:title" content="Advice College Admissions Officers Give Their Own Kids" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//well.blogs.nytimes.com/2016/03/17/advice-college-admissions-officers-give-their-own-kids/" />
+<meta property="og:site_name" content="Well" />
+<meta property="og:description" content="Admissions officers tell their own children that high school is far more than just a pathway to college &#8212; it&#8217;s a time for maturation, self-discovery, learning and fun." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/03/08/science/simmons-deans-family/simmons-deans-family-facebookJumbo-v2.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2016/03/08/science/simmons-deans-family/simmons-deans-family-thumbLarge-v2.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Advice College Admissions Officers Give Their Own Kids" />
+<meta name="twitter:url" content="//well.blogs.nytimes.com/2016/03/17/advice-college-admissions-officers-give-their-own-kids/" />
+<meta name="twitter:description" content="Admissions officers tell their own children that high school is far more than just a pathway to college &#8212; it&#8217;s a time for maturation, self-discovery, learning and fun." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2016/03/08/science/simmons-deans-family/simmons-deans-family-thumbLarge-v2.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2016/03/08/science/simmons-deans-family/simmons-deans-family-thumbLarge-v2.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@nytimeswell">
+<link rel='prev' title='Ask Well: Pregnancy and Back Pain' href='//well.blogs.nytimes.com/2016/03/17/ask-well-pregnancy-and-back-pain/' />
+<link rel='next' title='Most Dangerous Time at the Hospital? It May Be When You Leave' href='//well.blogs.nytimes.com/2016/03/17/most-dangerous-time-at-the-hospital-it-may-be-when-you-leave/' />
+<link rel='canonical' href='//well.blogs.nytimes.com/2016/03/17/advice-college-admissions-officers-give-their-own-kids/' />
+<link rel='shortlink' href='//nyti.ms/22ozkIv' />
+<link rel='https://github.com/WP-API/WP-API' href='//well.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/well/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//well.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/health/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/well/2016/03/17/advice-college-admissions-officers-give-their-own-kids/" />
+<meta name="dfp-ad-unit-path" content="health/well/family" /><meta name="categories" content="family" />			<title>Advice College Admissions Officers Give Their Own Kids - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/well.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-115613 blog-universal nyt-blog-well" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'Health', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//well.blogs.nytimes.com">
+                Well            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Advice College Admissions Officers Give Their Own Kids        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//well.blogs.nytimes.com/2016/03/17/advice-college-admissions-officers-give-their-own-kids/"
+	 data-title="Advice College Admissions Officers Give Their Own Kids"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Admissions officers tell their own children that high school is far more than just a pathway to college -- itâs a time for maturation, self-discovery, learning and fun. &lt;/span&gt;&lt;a href=&quot;//well.blogs.nytimes.com/2016/03/17/advice-college-admissions-officers-give-their-own-kids/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="March 17, 2016 6:45 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="well" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+		<div class="element1">
+	<div id="logo" ><a href="//well.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=Health" title="Go to Well Home"><img src="https://static01.nyt.com/images/blogs_v5/well/well_post.png" alt="Well - Tara Parker-Pope on Health"/></a></div>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//well.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Well">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-115613 post type-post status-publish hentry category-family tag-colleges-and-universities des-colleges-and-universities splitPostView" id="post-115613">
+	<header class="postHeader">
+				<div class="postKicker">
+			<span class="kicker"><a href="//well.blogs.nytimes.com/category/family/?module=BlogCategory&version=Blog Post&action=Click&contentCollection=Health&pgtype=Blogs&region=Header">Family</a></span>
+		</div>
+				<h1 itemprop="headline" class="entry-title">Advice College Admissions Officers Give Their Own Kids</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Jennifer Wallace and Lisa Heffernan			</address>
+			<!-- date published --><time class="dateline " datetime="2016-03-17T10:45:08+00:00" itemprop="datePublished">March 17, 2016 6:45 am</time>
+			<!-- date updated --><span class="visually-hidden updated">March 17, 2016 6:45 am</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//well.blogs.nytimes.com/2016/03/17/advice-college-admissions-officers-give-their-own-kids/" data-title="Advice College Admissions Officers Give Their Own Kids" data-description="Admissions officers tell their own children that high school is far more than just a pathway to college -- itâs a time for maturation, self-discovery, learning and fun. ">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody">While most parents find the college process stressful and bewildering, we interviewed some who have a unique perspective: admissions officers who are also the parents of teenagers and college students themselves. They know that while parents canât control where their child is admitted, they can influence whether their teenager views the college process as stressful and frustrating or as an exciting time filled with opportunity.  </p>
+<p class="story-body-text" itemprop="articleBody">These admissions officers tell their own children that high school is far more than just a pathway to college &#8212; itâs a time for maturation, self-discovery, learning and fun. They encourage their teens to embrace activities and courses that reflect who they genuinely are, not who they think colleges want them to be. </p>
+<p class="story-body-text" itemprop="articleBody">We interviewed admissions officers at Allegheny College, Georgia Tech, Kenyon College, M.I.T., Penn State, Vanderbilt, U.C.L.A., U.N.C.-Chapel Hill and the University of Richmond. Every one of them emphasized the importance of their child finding a college that fits, not the other way around. </p>
+<p class="story-body-text" itemprop="articleBody">With throngs of high school juniors about to embark on college visits over their spring breaks, here is their advice. (Interviews have been edited and condensed.)</p>
+<hr />
+<p class="story-body-text" itemprop="articleBody"><strong>Diane Anci, vice president for enrollment management and dean of admissions and financial aid, Kenyon College</strong></p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2016/03/02/health/motherlode_deans/motherlode_deans-articleInline.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2016/03/02/health/motherlode_deans/motherlode_deans-articleInline.jpg" src="https://static01.nyt.com/images/2016/03/02/health/motherlode_deans/motherlode_deans-articleInline.jpg" id="100000004246714" width="190" height="127" alt=""   /><meta itemprop="height" content="127"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text"></span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Braddley Addams</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">&#8220;Before the college brochures make their way into our house, I plan to ask my son a series of questions that I hope will help him define the type of collegiate environment in which he will be most happy and do his best work. Knowing who you are provides a protective armor in a process that can be overwhelming. Not only are you inundated with communication from the colleges, everyone you know has an opinion of what is a good college and what is not, and they feel very free to express it. Itâs empowering for a teen to be able to say, &#8216;Iâm the kind of person whoâ¦&#8217; &#8221; </p>
+<p class="story-body-text" itemprop="articleBody">Here are some of the questions she plans to ask her own kid:</p>
+<ul>
+<li>Do you like the idea of being the smartest student in your class or surrounded by really smart kids?</li>
+<li>Is it important to find a specific course of study or to have a wide range of options?</li>
+<li>Do you like the idea of meeting five new people a day or finding five people who will be your friends for life?</li>
+<li>Are you drawn to familiar people and places or are you excited by a new region, meeting students from across the nation and around the world?</li>
+<li>Do you prefer to work in a highly collaborative environment or are you energized by competition?</li>
+</ul>
+<hr />
+<p class="story-body-text" itemprop="articleBody"><strong>Clark Brigger, executive director for undergraduate admissions, Penn State University</strong></p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2016/03/08/science/brigger-deans-family/brigger-deans-family-articleInline-v4.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2016/03/08/science/brigger-deans-family/brigger-deans-family-articleInline-v4.jpg" src="https://static01.nyt.com/images/2016/03/08/science/brigger-deans-family/brigger-deans-family-articleInline-v4.jpg" id="100000004252933" width="190" height="141" alt=""   /><meta itemprop="height" content="141"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text"></span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> </span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">&#8220;I tell my kids, &#8216;Do not wait for the deadline to submit your applications.&#8217; There&#8217;s a rule in our house that I pay for the applications completed before Labor Day, but after that, my children are responsible for the fees. Getting those applications in early is the best way to reduce stress senior year. I want them to do well in their academic courses and extracurricular activities and to enjoy that last year of high school. Why spend it struggling with applications?&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">&#8220;As an admissions officer, when that deadline comes around, I see a huge spike in applications. That&#8217;s when the procrastinators send them in. It&#8217;s advantageous to get ahead of the bubble. Think about it strategically: there are thousands of applications and essays to get through. If you get yours in early, the reader may be more relaxed and in a better mood at that point in the process.&#8221;</p>
+<hr />
+<p class="story-body-text" itemprop="articleBody"><strong>Doug Christiansen, vice provost for university enrollment affairs, dean of admissions and financial aid, Vanderbilt University</strong></p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2016/03/08/science/christiansen-deans-family/christiansen-deans-family-articleInline-v2.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2016/03/08/science/christiansen-deans-family/christiansen-deans-family-articleInline-v2.jpg" src="https://static01.nyt.com/images/2016/03/08/science/christiansen-deans-family/christiansen-deans-family-articleInline-v2.jpg" id="100000004252985" width="190" height="127" alt=""   /><meta itemprop="height" content="127"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text"></span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> </span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">An essential lesson of the college process is learning to make and manage big life decisions and weather setbacks, says Mr. Christiansen. âAs parents we know that our kids may not get accepted everywhere they apply. I advise students to complete all of their applications ahead of the early decision news [when] they are in a positive frame of mind. It is far easier to rebound from disappointment and proceed when you have a game plan already in place.â</p>
+<p class="story-body-text" itemprop="articleBody">âWhen a rejection letter arrives, I see parents who canât even move on because they are so mad at the school. But that is not letting the child move on. Then it is almost like the next school they get admitted to and may attend is a disappointment. Instead, tell your child: âIt didnât work, it is their loss, youâre wonderful, now what do we need to do to go forward?ââ </p>
+<hr />
+<p class="story-body-text" itemprop="articleBody"><strong>Youlonda Copeland-Morgan, associate vice chancellor, enrollment management, University of California, Los Angeles</strong></p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2016/03/07/health/deans/deans-articleInline-v2.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2016/03/07/health/deans/deans-articleInline-v2.jpg" src="https://static01.nyt.com/images/2016/03/07/health/deans/deans-articleInline-v2.jpg" id="100000004256806" width="190" height="253" alt=""   /><meta itemprop="height" content="253"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text"></span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> </span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">&#8220;Community service is an expectation in our household. We raised our kids to understand that they have a responsibility to make their community better and to give back. My job was to make sure intellectually that they understood the value of community service and why it was important. I think community service should come from the heart. Itâs important that students donât engage in community service because somebody else wants them to. Find something you are passionate about, or you are interested in if you are too young to know what your passions are.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">&#8220;We would talk a lot with our sons about leadership opportunities, and I think thatâs the area where we had to give them more guidance. We would say to our sons: Where do you think you can be of greater help? Whatâs going on at your school, what are the issues? What are the things you like to do where you could provide leadership? With the church thereâs a youth group: Youâve been a part of this group for a long time; do you think it is time for you to step up and do something different? This matters in your college application.&#8221;</p>
+<hr />
+<p class="story-body-text" itemprop="articleBody"><strong>Stephen Farmer, vice provost for enrollment and undergraduate admissions, University of North Carolina, Chapel Hill</strong></p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2016/03/02/health/motherlode_dean2/motherlode_dean2-articleInline.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2016/03/02/health/motherlode_dean2/motherlode_dean2-articleInline.jpg" src="https://static01.nyt.com/images/2016/03/02/health/motherlode_dean2/motherlode_dean2-articleInline.jpg" id="100000004246716" width="190" height="107" alt=""   /><meta itemprop="height" content="107"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text"></span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> </span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">âWhen my son was applying to schools, I never read his essay. Parents can sometimes do more harm than good with the essay. My advice to students is to first show your essay to a friend and ask, âCan you hear my voice in this? Could you pick my essay from a stack of 200?â The essay doesnât have to be about something life-changing or confessional. Smaller topics, written well, almost always work best.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">âMy wife and I have tried to give our kids some air and room to breathe growing up. We never checked their homework or felt like their schooling was a family project. It was their life and their work &#8212; we provided guidance. In the end, our kids need our love more than they need our direction about college. If that direction gets in the way of the love, itâs not helpful and itâs not worth it.â</p>
+<hr />
+<p class="story-body-text" itemprop="articleBody"><strong>Cornell B. LeSane II, vice president for enrollment and dean of admissions, Allegheny College</strong></p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2016/03/08/science/LeSane-deans-family/LeSane-deans-family-articleInline-v3.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2016/03/08/science/LeSane-deans-family/LeSane-deans-family-articleInline-v3.jpg" src="https://static01.nyt.com/images/2016/03/08/science/LeSane-deans-family/LeSane-deans-family-articleInline-v3.jpg" id="100000004252879" width="190" height="319" alt=""   /><meta itemprop="height" content="319"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text"></span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> </span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">&#8220;My daughter, now a high school senior, has been the driver of the process. Sure, there have been times when I&#8217;ve been the backseat driver: Are you sure, and have you thought about this or that? As a parent, it&#8217;s impossible not to do that. But you need to allow them to find their way.&#8221; </p>
+<p class="story-body-text" itemprop="articleBody">&#8220;As an admissions officer, I&#8217;ve had parents tell me, &#8216;Oh, we missed a deadline &#8212; that&#8217;s my fault.&#8217; At that point I&#8217;m thinking &#8212; just how interested is the student in our school? I&#8217;m not a fan of parents taking over the process. Let the students be the drivers, let them take ownership. Parents should be a great sounding board, but they should not be the ones filling out the applications.&#8221;</p>
+<hr />
+<p class="story-body-text" itemprop="articleBody"><strong>Stuart Schmill, dean of admissions, Massachusetts Institute of Technology</strong></p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2016/03/08/science/schmill-deans-family/schmill-deans-family-articleInline.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2016/03/08/science/schmill-deans-family/schmill-deans-family-articleInline.jpg" src="https://static01.nyt.com/images/2016/03/08/science/schmill-deans-family/schmill-deans-family-articleInline.jpg" id="100000004252954" width="190" height="265" alt=""   /><meta itemprop="height" content="265"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text"></span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Donna Coveney</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">âWhat I tell students, and my own kids, is that you donât have to take every advanced class. My high school daughter, for example, is taking advanced math and science courses but chose not to take advanced English and history. You should challenge yourself. For some students this might mean taking the most advanced classes, but it also might mean taking the most advanced classes appropriate for that student, and not spreading themselves too thin.â</p>
+<p class="story-body-text" itemprop="articleBody">Applicants do not need to tick off a laundry list of engagement in every field, like art, music, sports, Mr. Schmill explains. âM.I.T., and other highly selective colleges, want students who prioritize quality over quantity.â Mr. Schmill offers high school students this litmus test when choosing extracurricular activities: âIf you couldnât write about this on your college application, would you still do it?â If the answer is âno,â then you shouldnât be doing it.â </p>
+<hr />
+<p class="story-body-text" itemprop="articleBody"><strong>Laura Simmons, assistant director, undergraduate admissions, Georgia Institute of Technology</strong></p>
+<div class="w190 right"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2016/03/08/science/simmons-deans-family/simmons-deans-family-articleInline-v2.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2016/03/08/science/simmons-deans-family/simmons-deans-family-articleInline-v2.jpg" src="https://static01.nyt.com/images/2016/03/08/science/simmons-deans-family/simmons-deans-family-articleInline-v2.jpg" id="100000004253011" width="190" height="199" alt=""   /><meta itemprop="height" content="199"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text"></span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> </span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">âFor our children, itâs important to earn some money in the summer, so they can do things like put gas in the car. As an admissions officer, that plays right into what I am looking for in the admission process: Iâm not looking for students to have done any particular activity in the summer; but instead, Iâm looking to see how students grew from whatever they undertook. I do see students who are doing magnificent research and that is a great thing. And I see students, like my daughter, who are working as a lifeguard at the pool all summer, and they are both learning from those experiences.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">âThere are some majors here where, if students donât have any connection to that major, itâs hard for us to predict if they will be successful in it. But in some cases that experience can also come from something they did during the school year. My daughter, for example, is interested in journalism and communications, and she writes during the school year. Over the summer, we donât feel she needs to do more.â</p>
+<hr />
+<p class="story-body-text" itemprop="articleBody"><strong>Gil Villanueva, associate vice president and dean of admission, University of Richmond </strong></p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2016/03/08/science/villanueva-deans-family/villanueva-deans-family-articleInline-v2.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2016/03/08/science/villanueva-deans-family/villanueva-deans-family-articleInline-v2.jpg" src="https://static01.nyt.com/images/2016/03/08/science/villanueva-deans-family/villanueva-deans-family-articleInline-v2.jpg" id="100000004252842" width="190" height="157" alt=""   /><meta itemprop="height" content="157"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text"></span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> </span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">&#8220;As my son prepares his college list, I&#8217;m going to hand him a spreadsheet. Across the top will be the schools, and down the side will be the list of things he feels are most important to him in a college. When he visits these schools and does his research, he&#8217;ll fill in the spreadsheet, and it will be a nice road map for him. At some point, once you visit two or three schools in a day or five schools a week, they begin to blend, and you definitely want some bread crumbs to remind you of where you&#8217;ve been.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">&#8220;On the same spreadsheet, I&#8217;ll have him track what I call the âthree ratesâ for each college. The first is the retention rate: Are students returning as sophomores? Because if they are, then I make the argument that they have had a very good experience, their needs are met. Next is the graduation rate. A fifth year or a sixth year in a college represents forgone income or time that you are not in graduate school &#8212; and you are not going to get that back. The last rate is the placement rate or âstudent outcomes.â What are students doing six months, a year or five years after graduation? Are they employed, are they in graduate school, what type of companies or organizations do they work for? The three rates gives parents and students peace of mind that theyâve done their research.&#8221; </p>
+<p class="story-body-text" itemprop="articleBody"><em><br />
+<a href="//www.jenniferbwallace.com"> Jennifer Breheny Wallace</a> is a freelance writer based in New York and the mother of three children. You can follow her on Twitter <a href="https://www.twitter.com/wallacejennieb">@Wallacejennieb</a> </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//grownandflown.com/">Lisa Heffernan</a>  is the author of three business books, including a New York Times business best seller, and writes about parenting during the high school and college years at Grown and Flown. You can find her on <a href="https://www.facebook.com/grownandflown/">Facebook</a>. </em></p>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//well.blogs.nytimes.com/2016/03/17/advice-college-admissions-officers-give-their-own-kids/" data-title="Advice College Admissions Officers Give Their Own Kids" data-description="Admissions officers tell their own children that high school is far more than just a pathway to college -- itâs a time for maturation, self-discovery, learning and fun. ">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//well.blogs.nytimes.com/2016/03/17/ask-well-pregnancy-and-back-pain/" title="Ask Well: Pregnancy and Back Pain">
+				Ask Well: Pregnancy and Back Pain			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//well.blogs.nytimes.com/2016/03/17/most-dangerous-time-at-the-hospital-it-may-be-when-you-leave/" title="Most Dangerous Time at the Hospital? It May Be When You Leave">
+				Most Dangerous Time at the Hospital? It May Be When You Leave			</a>
+					</li>
+	</ul>
+</div>
+<div id="nytint-qa-well-widget" class="nytint-qa-widget module qaModule noContent">
+  <a class="nytint-qa-module-header" href="//well.blogs.nytimes.com/ask/well/questions"><h4 class="moduleHeader">Ask Well</h4></a>
+  <div class="nytint-qa-header-spacer">&nbsp;</div>
+  <p class="summary">Your health questions answered by Times journalists and&nbsp;experts.</p>
+  <form action="/svc/int/qa/questions/well/submit" method="POST" id="nytint-qa-ask-form" class="qaQuestionForm">
+    <!-- askbox.jst rendered here -->
+    <!-- these lines replaced by jst render--><div id="nytint-qa-question-box">
+      <!-- these lines replaced by jst render--><textarea name="question" class="textarea qaTextarea nytint-qa-form-element" id="nytint-qa-question-input" placeholder="What would you like to know?" disabled="disabled"></textarea>
+    <!-- these lines replaced by jst render--></div>
+  </form>
+  <div class="nytint-qa-recent-questions-wrapper clearfix nytint-qa-hidden">
+    <div class="nytint-qa-liner">
+      <h5><!-- (Recent/Related Questions) filled by javascript from nytqa.recent_questions.js --></h5>
+      <div class="nytint-qa-seemore">
+        <p><a href="//well.blogs.nytimes.com/ask/well/questions/yours" title="Your questions">Your Questions</a> | <a href="//well.blogs.nytimes.com/ask/well/questions">All &raquo;</a></p>
+      </div>
+      <ul class="nytint-qa-recent-questions clearfix">
+        <!-- question views get rendered into here -->
+      </ul>
+    </div>
+  </div>
+    <link href="https://int.nyt.com/applications/qa/assets/well-f0b8f674afd653cf65ff12f13234cb39.css" media="screen" rel="stylesheet" type="text/css" />
+    <script>
+  var NYTD = NYTD || {};
+      NYTD.NYTINT = NYTD.NYTINT || {};
+      NYTD.NYTINT.QA = NYTD.NYTINT.QA || {};
+      NYTD.NYTINT.QA.app_root_path = "/ask/";
+      NYTD.NYTINT.QA.svc_root_path = "/svc/int/qa/";
+      NYTD.NYTINT.QA.event_root_url = "/ask/well/questions";
+      NYTD.NYTINT.QA.event_slug = "well";
+      NYTD.NYTINT.QA.A_COL_FORM = false;
+  </script>
+    <script src="https://int.nyt.com/applications/qa/assets/well_base-7dc69e7a081837e27503446314bb2b89.js" type="text/javascript"></script>
+  <script src="https://int.nyt.com/applications/qa/assets/well_widget-2fbcafade4829875da7ba7c9cd2ced3c.js" type="text/javascript"></script>
+    <script>
+  require(['foundation/main'], function (Foundation) {
+    require(['nytint/qa/well_widget'], function () {});
+  });
+  </script>
+</div>
+
+<div id="nyt_featured_posts-11" class="module nocontent widget_nyt_featured_posts"><h4 class="moduleHeader"></h4>			<div class="subColumn-2">	<div class="column">
+		<div class="entry">
+						<div class="w190">
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">
+					<img src="https://static01.nyt.com/images/2016/08/31/well/family/well-family-exerciseask/well-family-exerciseask-articleInline.jpg" width="190" height="126" />
+				</a>
+			</div>
+			<div class="w600 hidden">
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">
+					<img src="https://static01.nyt.com/images/2016/08/31/well/family/well-family-exerciseask/well-family-exerciseask-videoSixteenByNine600.jpg" width="224" height="126" />
+				</a>
+			</div>
+						<h6 class="kicker">
+				<a href="//well.blogs.nytimes.com/category/ask-well/">Ask Well</a>
+			</h6>
+						<h5>
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">Can You Safely Lose Weight While Breast-Feeding?</a>
+							</h5>
+		</div><!--end of entry-->
+	</div><!--end of column-->
+						<div class="column lastColumn">
+		<div class="entry">
+						<div class="w190">
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">
+					<img src="https://static01.nyt.com/images/2016/08/29/science/well-klass-smallpenis/well-klass-smallpenis-articleInline.jpg" width="190" height="126" />
+				</a>
+			</div>
+			<div class="w600 hidden">
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">
+					<img src="https://static01.nyt.com/images/2016/08/29/science/well-klass-smallpenis/well-klass-smallpenis-videoSixteenByNine600.jpg" width="224" height="126" />
+				</a>
+			</div>
+						<h6 class="kicker">
+				<a href="//well.blogs.nytimes.com/category/family/the-checkup/">The Checkup</a>
+			</h6>
+						<h5>
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">As Boys Get Fatter, Parents Worry One Body Part Is Too Small</a>
+							</h5>
+		</div><!--end of entry-->
+	</div><!--end of column-->
+		</div><!--end of sub-column2--></div><div id="nyt_promo_widget-14" class="module nocontent widget_nyt_promo_widget"><!-- Regilite iFrame 20140820 ~dj.paris -->
+<style>
+#regilite-bigad {
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding:10px;
+  height:250px;
+}
+#regilite-bigad h1 {
+  font-family: "nyt-franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 0 15px 10px;
+  font-size: 16px;
+  line-height: 18px;
+}
+#regilite-bigad h1 a {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+#regi-image img {
+  display: block;
+  float: left;
+  padding: 0 10px;
+  width: 50px;
+}
+p#regi-copy {
+  font-size: 12px; 
+  line-height: 16px; 
+  margin: 0;
+  font-family: Georgia, "Times New Roman", sans-serif;
+  color: #333;
+  text-align: left;
+  padding: 0 10px 15px 0;
+}
+#regiframe-wrapper {
+  padding: 0 10px;
+}
+#regiframe-wrapper iframe {
+  border: 0;
+  width: 280px;
+  height: 180px;
+}
+</style>
+  
+
+  
+<div id="regilite-bigad">
+  <h1>
+   Sign Up for the Running Email
+  </h1>
+
+  <div id="regi-image">
+    <img src="https://static01.nyt.com/marketing/newsletters/images/Running_75.jpg" alt="Running Newsletter">
+  </div>
+
+  <p id="regi-copy">Get Well's Running email for practical tips, expert advice, exclusive content and a bit of motivation delivered to your inbox every week to help you on your running journey. Coming soon.</p>
+
+  <div id="regiframe-wrapper">
+    <iframe title="regilite" src="https://regilite.nytimes.com/regilite?product=RU&theme=Transparent&landing=true&addSlot=true&app=newsletter&sourceApp=nyt-v5&title=Running"></iframe>
+  </div>
+</div>
+
+<span class="adxInfo" style="display:none;">campaign: %%CAMP%% -- %%CAMP_UID%%, creative: %%ADID%% -- %%AD_UID%%, page: %%PAGE%%, targetedPage: %%TARGETEDPAGE%%, position: %%POS%%</span>
+</div>		<div class="module ad" id="MiddleRight"></div>
+        <div id="nyt_feed_in_flat_tabs-6" class="module nocontent widget_nyt_feed_in_flat_tabs">		<h4 class="moduleHeader left">Times Health</h4>
+		<div id="tabWidget-nyt_feed_in_flat_tabs-6" class="tabAutoLoad">
+			<div class="tabsContainer">
+				<ul class="tabs right">
+										<li class="selected">
+							<a href="javascript:void(0);">Most Viewed</a>
+						</li>
+												<li class="">
+							<a href="javascript:void(0);">Most E-mailed</a>
+						</li>
+										</ul>
+		   </div>
+		<div class="tabContent">
+	<div class="blog-story">
+		<ul class="refer">
+					<li>
+				<a href="//well.blogs.nytimes.com/2016/02/17/which-type-of-exercise-is-best-for-the-brain/">Which Type of Exercise Is Best for the Brain?</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2013/10/03/well-quiz-the-mind-behind-the-eyes/">Can You Read People&#8217;s Emotions?</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2011/01/28/how-meditation-may-change-the-brain/">How Meditation May Change the Brain</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2015/11/10/ask-well-the-health-benefits-of-meditation/">Ask The Health Benefits of Meditation</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2010/12/15/phys-ed-the-benefits-of-exercising-before-breakfast/">Phys Ed: The Benefits of Exercising Before Breakfast</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2015/07/07/dog-needs-a-walk-theres-an-app-for-that/">Dog Needs a Walk? There&#8217;s an App for That</a>
+			</li>
+					</ul>
+	</div>
+</div>
+		<div class="tabContent">
+	<div class="blog-story">
+		<ul class="refer">
+				</ul>
+	</div>
+</div>
+				</div>
+	</div>
+			<div class="module ad" id="Box1"></div>
+        <div id="nyt_blog_social_media-4" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-double ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">Well on</span></span>
+</h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/nytimeswell" title="Follow nytimeswell on Twitter">Twitter</a></li><li class="blog-fw-facebook double"><a href="https://facebook.com/WellNYT" title="Follow WellNYT on Facebook">Facebook</a></li></ul>
+</div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-39',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":68,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

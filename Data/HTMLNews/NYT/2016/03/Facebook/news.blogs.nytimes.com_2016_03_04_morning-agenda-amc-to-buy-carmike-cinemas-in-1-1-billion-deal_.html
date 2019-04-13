@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004251082"><meta name="author" content="Sei Chong" />
+<meta name="CLMST" content="Sei Chong" />
+<meta name="byl" content="Sei Chong" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1457090215" />
+<meta name="PUD" content="20160304" />
+<meta name="pdate" content="20160304" />
+<meta name="ptime" content="20160304061655" />
+<meta name="utime" content="20160304111655" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-03-04T11:16:55-05:00" />
+<meta name="DISPLAYDATE" content="March 4, 2016" />
+<meta name="dat" content="March 4, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Antitrust Laws and Competition Issues;Banking and Financial Institutions;Hedge Funds;Legal Profession;Mergers, Acquisitions and Divestitures;Minorities;Private Equity;Regulation and Deregulation of Industry;Shale;Venture Capital">
+<meta name="org" content="AMC Entertainment Holding Inc.;Carmike Cinemas Inc;New York University;Tumi Holdings Inc.">
+<meta name="ticker" content="Carmike Cinemas Inc|CKEC|NASDAQ" />
+<meta property="article:tag" content="Antitrust Laws and Competition Issues" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Legal Profession" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Minorities" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Shale" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="AMC Entertainment Holding Inc." />
+<meta property="article:tag" content="Carmike Cinemas Inc" />
+<meta property="article:tag" content="New York University" />
+<meta property="article:tag" content="Tumi Holdings Inc." />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Antitrust Laws and Competition Issues,Banking and Financial Institutions,Hedge Funds,Legal Profession,Mergers Acquisitions and Divestitures,Minorities,Private Equity,Regulation and Deregulation of Industry,Shale,Venture Capital,AMC Entertainment Holding Inc.,Carmike Cinemas Inc,New York University,Tumi Holdings Inc.,DealBook" />
+<meta name="news_keywords" content="Minorities,Shale" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F03%2F04%2Fmorning-agenda-amc-to-buy-carmike-cinemas-in-1-1-billion-deal%2F" title="Morning Agenda: AMC to Buy Carmike Cinemas in $1.1 Billion Deal" />
+<meta name="description" content="Shale Pioneer Doubled Down on Deals to the End &#124; Samsonite to Buy Tumi for $1.8 Billion &#124; A Law School Opens Doors to a Rarefied Realm" />
+<meta name="hdl" content="Morning Agenda: AMC to Buy Carmike Cinemas in $1.1 Billion Deal" />
+<meta property="og:title" content="Morning Agenda: AMC to Buy Carmike Cinemas in $1.1 Billion Deal" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/03/04/morning-agenda-amc-to-buy-carmike-cinemas-in-1-1-billion-deal/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Shale Pioneer Doubled Down on Deals to the End &#124; Samsonite to Buy Tumi for $1.8 Billion &#124; A Law School Opens Doors to a Rarefied Realm" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: AMC to Buy Carmike Cinemas in $1.1 Billion Deal" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/03/04/morning-agenda-amc-to-buy-carmike-cinemas-in-1-1-billion-deal/" />
+<meta name="twitter:description" content="Shale Pioneer Doubled Down on Deals to the End &#124; Samsonite to Buy Tumi for $1.8 Billion &#124; A Law School Opens Doors to a Rarefied Realm" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Rattling the Framework of Postcrisis Regulation' href='//news.blogs.nytimes.com/2016/03/03/morning-agenda-rattling-the-framework-of-postcrisis-regulation/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/03/04/what-were-reading-133/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/03/04/morning-agenda-amc-to-buy-carmike-cinemas-in-1-1-billion-deal/' />
+<link rel='shortlink' href='//nyti.ms/1TXNZaE' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/03/04/morning-agenda-amc-to-buy-carmike-cinemas-in-1-1-billion-deal/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: AMC to Buy Carmike Cinemas in $1.1 Billion Deal - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4351 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: AMC to Buy Carmike Cinemas in $1.1 Billion Deal        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/03/04/morning-agenda-amc-to-buy-carmike-cinemas-in-1-1-billion-deal/"
+	 data-title="Morning Agenda: AMC to Buy Carmike Cinemas in $1.1 Billion Deal"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Shale Pioneer Doubled Down on Deals to the End | Samsonite to Buy Tumi for $1.8 Billion | A Law School Opens Doors to a Rarefied Realm&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/03/04/morning-agenda-amc-to-buy-carmike-cinemas-in-1-1-billion-deal/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="March 4, 2016 6:16 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: AMC to Buy Carmike Cinemas in $1.1 Billion Deal</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Sei Chong			</address>
+			<!-- date published --><time class="dateline " datetime="2016-03-04T11:16:55+00:00" itemprop="datePublished">March 4, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">March 4, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4351 post type-post status-publish hentry category-dealbook tag-amc-entertainment-holding-inc tag-antitrust-laws-and-competition-issues tag-banking-and-financial-institutions tag-carmike-cinemas-inc tag-hedge-funds tag-legal-profession tag-mergers-acquisitions-and-divestitures tag-minorities tag-new-york-university tag-private-equity tag-regulation-and-deregulation-of-industry tag-shale tag-tumi-holdings-inc tag-venture-capital des-antitrust-laws-and-competition-issues des-banking-and-financial-institutions des-hedge-funds des-legal-profession des-mergers-acquisitions-and-divestitures des-minorities des-private-equity des-regulation-and-deregulation-of-industry des-shale des-venture-capital org-amc-entertainment-holding-inc org-carmike-cinemas-inc org-new-york-university org-tumi-holdings-inc news_keywords-minorities news_keywords-shale" id="post-4351">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: AMC to Buy Carmike Cinemas in $1.1 Billion Deal</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Sei Chong                </span>
+                <!-- date published --><time class="dateline " datetime="2016-03-04T11:16:55+00:00" itemprop="datePublished">March 4, 2016 6:16 am</time>
+			<!-- date updated --><span class="visually-hidden updated">March 4, 2016 6:16 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/03/04/morning-agenda-amc-to-buy-carmike-cinemas-in-1-1-billion-deal/" data-title="Morning Agenda: AMC to Buy Carmike Cinemas in $1.1 Billion Deal" data-description="Shale Pioneer Doubled Down on Deals to the End | Samsonite to Buy Tumi for $1.8 Billion | A Law School Opens Doors to a Rarefied Realm">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AMC TO BUY CARMIKE CINEMAS IN $1.1 BILLION DEAL</strong> <span class="divider"> | </span></span> AMC Entertainment would create the largest movie theater chain in the United States with its purchase of Carmike Cinemas, <a href="//www.nytimes.com/2016/03/04/business/dealbook/amc-deal-for-carmike-would-create-biggest-us-theater-chain.html"> Michael J. de la Merced and Michael Cieply write in DealBook</a>. AMC, whose controlling investor is Wang Jianlin of Chinaâs Dalian Wanda Group, said Thursday that it will pay <b> $737 million in cash</b>, or $30 a share, up 19 percent from Carmikeâs closing price on Thursday. Including the assumption of Carmikeâs debt, the transaction is valued at about $1.1 billion, which is the <b> biggest deal by AMC since it returned to the public markets</b> in a 2013 stock sale, Mr. de la Merced and Mr. Cieply report. </p>
+<p class="story-body-text" itemprop="articleBody"> Together, AMC and Carmike will have <b> over 600 theaters and 8,380 screens</b>. Currently, the countryâs largest movie theater chain is the Regal Entertainment Group, which operated 7,361 screens and 572 theaters as of the end of 2015. AMC is second, with 5,426 screens, and has a strong presence in large cities like New York. Carmike has most of its 2,954 screens in midsize cities. </p>
+<p class="story-body-text" itemprop="articleBody"> AMC estimated that the purchase of Carmike would allow it to <b> cut about $35 million in costs</b>. The deal is expected to close by the end of year if Carmike shareholders and regulators approve.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SHALE PIONEER DOUBLED DOWN ON DEALS TO THE END</strong> <span class="divider"> | </span></span> Even though Aubrey McClendon was under severe financial and legal pressures, the founder of American Energy Partners never stopped trying to spread the shale boom that he pioneered, <a href="//www.nytimes.com/2016/03/04/business/energy-environment/aubrey-mcclendon-restless-and-reckless-wildcatter-was-deal-making-to-the-end.html"> Clifford Krauss writes in DealBook</a>. One example of Mr. McClendonâs penchant for high-stakes deals is his <b> joint venture with Argentinaâs national oil company</b> to develop a shale field in Patagonia, which was signed in January. Not only was he doubling down on an energy deal at a time of low oil and gas prices, but he was doing business in a country where usually only oil giants like Exxon Mobil had previously dared to invest. </p>
+<p class="story-body-text" itemprop="articleBody"> <b> âMr. McClendon was nothing if not restless and reckless,â</b> Mr. Krauss writes. As chief executive at Chesapeake Energy, Mr. McClendon took a personal stake in the companyâs wells and then used those investments as collateral for up to $1.1 billion in loans to himself. Friends said Mr. McClendon usually talked on his phone while driving because he was always trying to multitask and often neglected to use his seatbelt, which was the case Wednesday morning when he died after crashing into a bridge at high speed in Oklahoma City. </p>
+<p class="story-body-text" itemprop="articleBody"> He was indicted Tuesday on charges of conspiring with two unnamed companies to fix prices of leases in Oklahoma, but Mr. McClendonâs friends say he knew the indictment was coming. <b>âAubrey always believed that he could change the future,â </b> said Tom Price, a former Chesapeake senior vice president and a friend of Mr. McClendonâs, who said he continued making deals even when he knew he was being investigated by the Justice Department. âHe was a guy who was always willing to charge the hill. He believed in himself so thoroughly.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SAMSONITE AGREES TO BUY TUMI FOR $1.8 BILLION</strong> <span class="divider"> | </span></span> Samsonite said on Thursday that it would buy Tumi Holdings, a maker of high-end luggage with a cult following, for about $1.8 billion, <a href="//www.nytimes.com/2016/03/04/business/dealbook/samsonite-to-buy-tumi-for-1-8-billion.html"> Michael J. de la Merced reports in DealBook</a>. Samsonite will pay $26.75 a share in cash, 32 percent higher than the closing price of Tumiâs stock on Wednesday. </p>
+<p class="story-body-text" itemprop="articleBody">The purchase of Tumi is one of the largest acquisitions by Samsonite, which went public in Hong Kong in 2011. Samsonite said in a statement that it would expand Tumiâs reach in Asia and Europe. Tumi had $548 million in sales last year, up 4 percent from the previous year.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> At 8:30 a.m., the Labor Department is scheduled to release its report on the nationâs <b> hiring and unemployment for February</b> and the Commerce Department will report <b> international trade data for January</b>. Companies reporting earnings include <b> Staples</b>, which will hold its conference call at 8 a.m. <b> Robert S. Kaplan</b>, president of the Federal Reserve Bank of Dallas and a nonvoting member of the Federal Open Market Committee, will speak about monetary policy at 1 p.m. <b> Christine Lagarde</b>, the International Monetary Fundâs managing director, speaks about âDemographic Change and Economic Well-Being: The Role of Fiscal Policyâ at the Massachusetts Institute of Technology at 4 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A LAW SCHOOL OPENS DOORS TO A RAREFIED REALM</strong> <span class="divider"> | </span></span> Damaris HernÃ¡ndezâs recent promotion as a partner in Cravath, Swaine &#038; Moore, the law firmâs first Latina in that position, is an acknowledgement of her hard work and talent, <a href=" //www.nytimes.com/2016/03/04/business/dealbook/law-firms-first-latina-partner-with-boost-from-nyu-program.html"> Elizabeth Olson writes in DealBook</a>. But her route on the partnership track âalso reveals <b> how much more complex the journey is for minorities and women</b> than for the white men who overwhelmingly dominate the firms.â </p>
+<p class="story-body-text" itemprop="articleBody"> Over the last decade and a half, Ms. HernÃ¡ndez and 100 others from disadvantaged backgrounds who attended the New York University School of Law have received support from <b> a scholarship program called AnBryce</b> that paid their full tuition and gave them access to a network of federal judges, law firm partners and even Supreme Court justices. âThe program aims at economic diversity,â said Anthony Welters, a 1977 N.Y.U. law school graduate who is executive vice president of the health care company the UnitedHealth Group. âItâs not just giving cash. Itâs more than academic credentials. It takes a hell of a lot to become a successful lawyer. These students can compete; <b> they just have to know the rules of the road</b>.â </p>
+<p class="story-body-text" itemprop="articleBody"> Those rules are crucial to securing jobs at premier law firms. African-American and Latino lawyers are scarce at the partner level, hovering around 2 percent for each group. Ms. HernÃ¡ndez is joining a select group since about a few dozen Hispanic women are partners at firms that have 500 to 700 lawyers each. âWhen I was the only one of color or the only woman in the room, I had the confidence to believe in my ability,â said Ms. HernÃ¡ndez, 36, describing the advantages of the program to her. âWhen you are the first, you need someone to have your back.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:sei.chong@nytimes.com">sei.chong@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Foxconn Said to Be Close to Completing Deal for Sharp</strong> <span class="divider"> | </span></span> Foxconn and Sharp are aiming to sign their $6 billion takeover agreement as early as Monday after deciding the deal wonât require major changes, Bloomberg News reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-04/foxconn-said-close-to-finalizing-deal-approved-by-sharp-s-board"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Robert Diamond Said to Seek Investors for Barclaysâs Africa Assets</strong> <span class="divider"> | </span></span> Mr. Diamond, the former Barclays chief executive, has held preliminary talks with investors over the purchase of Barclaysâs African operations outside South Africa, The Financial Times reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/81c98d48-e16b-11e5-8d9b-e88a2a889797.html"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Perseus Books Sells Distribution Unit to Ingram</strong> <span class="divider"> | </span></span> The deal comes a few days after Perseus sold its publishing business to the Hachette Book Group.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/04/business/perseus-books-sells-distribution-unit-to-ingram.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Goldman and Bank of America Said to Plan Job Cuts</strong> <span class="divider"> | </span></span> Goldman Sachs will eliminate more than 5 percent of traders and salespeople in its fixed-income business, and Bank of America will dismiss about 150 trading and investment banking employees next week, Bloomberg News reports, citing people briefed on the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-04/goldman-bofa-dismiss-traders-after-getting-taste-of-16-markets"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Goldman Sachs Expands Philanthropic Fund to Younger Workers" src="https://static01.nyt.com/images/2016/01/21/business/db-goldman-web1/db-goldman-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Goldman Sachs Expands Philanthropic Fund to Younger Workers</strong> <span class="divider"> | </span></span> Some millennials have still been having a hard time finding a sense of purpose underneath their pitch books and spreadsheets.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/04/business/dealbook/goldman-sachs-expands-philanthropic-fund-to-younger-workers.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Carlyle Said to Explore Sale of Pool Maker</strong> <span class="divider"> | </span></span> Carlyle Group is considering a sale of Zodiac Pool Solutions, hoping a deal will value the American swimming pool and spa equipment maker at more than $800 million, including debt, Reuters reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/zodiacpoolsolutions-ma-idUSL2N16B2DI"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>How Elliott Made a Fortune Off Argentine Debt</strong> <span class="divider"> | </span></span> Elliott Management Corporation made 10 to 15 times what it paid for some Argentine debt by buying at a steep discount millions of dollars in bonds that earned 101 percent interest per year, The Wall Street Journal explains.<br /><span class="kicker"><a href="//blogs.wsj.com/moneybeat/2016/03/03/how-elliott-earned-billions-on-argentine-bonds-at-101-interest/"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Four Hedge Funds File Appeal in Argentine Bond Case</strong> <span class="divider"> | </span></span> The four hedge funds that reached a $4.65 billion settlement with Argentina over the nationâs defaulted bonds have each filed an appeal, which may complicate a final resolution of the 15-year legal battle, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-04/hedge-funds-in-4-65-billion-argentina-bond-accord-file-appeal"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Elliott Discloses Stake in Qlik Technologies" src="https://static01.nyt.com/images/2016/03/04/business/db-qlik1/db-qlik1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Elliott Discloses Stake in Qlik Technologies</strong> <span class="divider"> | </span></span> The hedge fund said in a regulatory filing that it had begun talks with Qlikâs management about strategic moves, including a potential sale.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/04/business/dealbook/elliott-discloses-stake-in-qlik-technologies.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ambac Financial Gets Pressed to Make a Move</strong> <span class="divider"> | </span></span> Buying up claims can help the company, but doing so too quickly could hinder the bond insurerâs ability to meet other liabilities, Antony Currie writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/05/business/dealbook/ambac-financial-gets-pressed-to-make-a-move.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Snapchat Said to Raise $175 Million at Same Valuation</strong> <span class="divider"> | </span></span> Snapchat has raised $175 million from Fidelity Investments at the same $16 billion valuation from one year ago, The Wall Street Journal reports, citing a person familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/snapchat-raises-175-million-from-fidelity-at-flat-valuation-1457053070"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DoorDash C.E.O. Denies Raising Funds at Lower Valuation</strong> <span class="divider"> | </span></span> In an interview with Quartz, Tony Xu, the chief executive of DoorDash, a food delivery start-up, denied that his company had raised money at a lower valuation and said that entrepreneurs shouldnât pay attention to valuations.<br /><span class="kicker"><a href="//qz.com/629957/doordashs-ceo-insists-that-entrepreneurs-shouldnt-care-about-valuations/"> QUARTZ </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Mutual Funds Pulling Back from Tech Investments</strong> <span class="divider"> | </span></span> Mutual funds are growing wary of the tech sector, cutting the value of their start-up investments at an accelerating pace and making fewer new investments, The Wall Street Journal reports.<br /><span class="kicker"><a href="//www.wsj.com/articles/mutual-funds-sour-on-startup-investments-1457043892"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Facebook to Pay Millions of Pounds More in British Taxes</strong> <span class="divider"> | </span></span> Facebook is set to pay millions of pounds more in tax in Britain after a major overhaul of its tax structure, the BBC reports. <br /><span class="kicker"><a href="//www.bbc.com/news/business-35724308"> BBC </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fed to Reveal Plan to Limit Banksâ Exposure to Counterparties</strong> <span class="divider"> | </span></span> The Federal Reserve is expected to issue a revised proposal on Friday that seeks to restrain how quickly risk can spread among the countryâs biggest banks, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/fed-to-unveil-new-rules-aimed-at-corralling-banks-risk-1457051332"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Obama Nominates Two Candidates for Regulatory Agency</strong> <span class="divider"> | </span></span> President Obama nominated Brian Quintenz, a Republican, and Chris Brummer, a Democrat, to join the Commodity Futures Trading Commission, The Hill reports.<br /><span class="kicker"><a href="//thehill.com/policy/finance/271671-obama-nominates-pair-to-join-cftc"> THE HILL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/03/04/morning-agenda-amc-to-buy-carmike-cinemas-in-1-1-billion-deal/"
+					data-title="Morning Agenda: AMC to Buy Carmike Cinemas in $1.1 Billion Deal"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Shale Pioneer Doubled Down on Deals to the End | Samsonite to Buy Tumi for $1.8 Billion | A Law School Opens Doors to a Rarefied Realm&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/03/04/morning-agenda-amc-to-buy-carmike-cinemas-in-1-1-billion-deal/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":64,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-bits section-technology"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-bits section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-bits section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-bits section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/bits/The Incredible Shrinking Tech Spending Projections ( 20140701 )" />
+<meta name="communityAssetURL" content="//bits.blogs.nytimes.com/2014/07/01/the-incredible-shrinking-tech-spending-projections/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000002974811"><meta name="author" content="Quentin Hardy" />
+<meta name="CLMST" content="Quentin Hardy" />
+<meta name="byl" content="Quentin Hardy" />
+<meta name="article:author" content="//topics.nytimes.com/top/reference/timestopics/people/h/quentin_hardy/index.html" /><meta name="GBLC" content="">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1404212452" />
+<meta name="PUD" content="20140701" />
+<meta name="pdate" content="20140701" />
+<meta name="ptime" content="20140701070052" />
+<meta name="utime" content="20140701234420" />
+<meta property="article:modified_time" itemprop="dateModified" content="2014-07-01T23:44:20-04:00" />
+<meta name="DISPLAYDATE" content="July 1, 2014" />
+<meta name="dat" content="July 1, 2014" />
+<meta itemprop="articleSection" property="article:section" content="Technology" />
+<meta name="CG" content="Technology" />
+<meta name="SCG" content="bits" />
+<meta name="BN" content="bits" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Cloud Computing">
+<meta name="org" content="Gartner Inc">
+<meta name="ticker" content="Gartner Inc|IT|NYSE" />
+<meta property="article:tag" content="Cloud Computing" />
+<meta property="article:tag" content="Gartner Inc" />
+<meta property="article:tag" content="Uncategorized" />
+<meta name="keywords" content="Cloud Computing,Gartner Inc,Uncategorized" />
+<meta name="news_keywords" content="Cloud computing" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fbits.blogs.nytimes.com%2F2014%2F07%2F01%2Fthe-incredible-shrinking-tech-spending-projections%2F" title="The Incredible Shrinking Tech Spending Projections" />
+<meta name="description" content="It&#8217;s something of a ritual: On Monday, an analyst firm lowered its projection for information technology spending. Gartner&#8217;s projection change isn&#8217;t about economic weakness, however, but the tech we&#8217;re using, and how we use it." />
+<meta name="hdl_p" content="Spending Is Now Harder to Predict" />
+<meta name="hdl" content="The Incredible Shrinking Tech Spending Projections" />
+<meta property="og:title" content="The Incredible Shrinking Tech Spending Projections" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//bits.blogs.nytimes.com/2014/07/01/the-incredible-shrinking-tech-spending-projections/" />
+<meta property="og:site_name" content="Bits Blog" />
+<meta property="og:description" content="It&#8217;s something of a ritual: On Monday, an analyst firm lowered its projection for information technology spending. Gartner&#8217;s projection change isn&#8217;t about economic weakness, however, but the tech we&#8217;re using, and how we use it." />
+<meta property="og:image" content="https://static01.nyt.com/images/2014/07/01/business/01bits-it/01bits-it-videoSixteenByNine600.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2014/07/01/business/01bits-it/01bits-it-thumbLarge.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="The Incredible Shrinking Tech Spending Projections" />
+<meta name="twitter:url" content="//bits.blogs.nytimes.com/2014/07/01/the-incredible-shrinking-tech-spending-projections/" />
+<meta name="twitter:description" content="It&#8217;s something of a ritual: On Monday, an analyst firm lowered its projection for information technology spending. Gartner&#8217;s projection change isn&#8217;t about economic weakness, however, but the tech we&#8217;re using, and how we use it." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2014/07/01/business/01bits-it/01bits-it-thumbLarge.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2014/07/01/business/01bits-it/01bits-it-thumbLarge.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@nytimesbits">
+<link rel='prev' title='Supreme Court Rejects Google&#8217;s Street View Appeal' href='//bits.blogs.nytimes.com/2014/06/30/supreme-court-rejects-googles-street-view-appeal/' />
+<link rel='next' title='Twitter Names Ex-Goldman Banker Anthony Noto as Chief Financial Officer' href='//bits.blogs.nytimes.com/2014/07/01/twitter-names-ex-goldman-banker-anthony-noto-as-chief-financial-officer/' />
+<link rel='canonical' href='//bits.blogs.nytimes.com/2014/07/01/the-incredible-shrinking-tech-spending-projections/' />
+<link rel='shortlink' href='//nyti.ms/1mEnthE' />
+<link rel='https://github.com/WP-API/WP-API' href='//bits.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/bits/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//bits.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/technology/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/bits/2014/07/01/the-incredible-shrinking-tech-spending-projections/" />
+<meta name="dfp-ad-unit-path" content="technology/bits" />			<title>The Incredible Shrinking Tech Spending Projections - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/bits.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-159778 blog-universal nyt-blog-bits" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'Technology', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//bits.blogs.nytimes.com">
+                Bits            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        The Incredible Shrinking Tech Spending Projections        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//bits.blogs.nytimes.com/2014/07/01/the-incredible-shrinking-tech-spending-projections/"
+	 data-title="The Incredible Shrinking Tech Spending Projections"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;It&#039;s something of a ritual: On Monday, an analyst firm lowered its projection for information technology spending. Gartner&#039;s projection change isn&#039;t about economic weakness, however, but the tech we&#039;re using, and how we use it.&lt;/span&gt;&lt;a href=&quot;//bits.blogs.nytimes.com/2014/07/01/the-incredible-shrinking-tech-spending-projections/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 1, 2014 7:00 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="bits" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+		<div class="element1">
+	<a href="//bits.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=Technology"><div id="logo" class="archived-blog-post"><div class="w75 left site-header-logo"><img src="https://static01.nyt.com/images/blogs_v3/bits/bits75.gif" alt="Bits"/></div><div class="site-title">Bits</div><div class="site-description">Business, Innovation, Technology, Society</div></div></a>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//bits.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Bits">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-159778 post type-post status-publish hentry tag-cloud-computing tag-gartner-inc des-cloud-computing org-gartner-inc news_keywords-cloud-computing-2 splitPostView" id="post-159778">
+	<header class="postHeader">
+				<div class="postKicker">
+					</div>
+				<h1 itemprop="headline" class="entry-title">The Incredible Shrinking Tech Spending Projections</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Quentin Hardy			</address>
+			<!-- date published --><time class="dateline " datetime="2014-07-01T11:00:52+00:00" itemprop="datePublished">July 1, 2014 7:00 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 1, 2014 7:00 am</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div class="w592"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2014/07/01/business/01bits-it/01bits-it-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2014/07/01/business/01bits-it/01bits-it-tmagArticle.jpg" src="https://static01.nyt.com/images/2014/07/01/business/01bits-it/01bits-it-tmagArticle.jpg" id="100000002974563" width="592" height="394" alt="In a report issued Monday, Gartner said that global IT spending would be $3.7 trillion in 2014, an increase that&#039;s considerably less than what it had projected for the year previously."   /><meta itemprop="height" content="394"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">In a report issued Monday, Gartner said that global IT spending would be $3.7 trillion in 2014, an increase that's considerably less than what it had projected for the year previously.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Gretchen Ertl for The New York Times</span></figcaption></figure></div>
+<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//bits.blogs.nytimes.com/2014/07/01/the-incredible-shrinking-tech-spending-projections/" data-title="The Incredible Shrinking Tech Spending Projections" data-description="It&#039;s something of a ritual: On Monday, an analyst firm lowered its projection for information technology spending. Gartner&#039;s projection change isn&#039;t about economic weakness, however, but the tech we&#039;re using, and how we use it.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody">Summer is flying by â Gartner has already trimmed its annual projections for worldwide information technology spending. </p>
+<p class="story-body-text" itemprop="articleBody">Why this keeps happening, however, is a story of something very particular: In the current tech transition, analysts are scrambling to figure out how money and technology need now work together.</p>
+<p class="story-body-text" itemprop="articleBody">âFrankly, itâs gotten extremely difficult,â said John-David Lovelock, research vice president at Gartner. âThe things we looked at in 2009 or 2010 arenât the things weâre seeing now. â</p>
+<p class="story-body-text" itemprop="articleBody">In a <a href="//www.gartner.com/newsroom/id/2783517 ">report</a> issued Monday, the analysis firm said that global IT spending would be $3.7 trillion in 2014, a 2.1 percent increase from last year. This time a year ago, Gartner <a href="//www.gartner.com/newsroom/id/2537815">thought</a> that 2014 would see a 4.1 percent increase. </p>
+<p class="story-body-text" itemprop="articleBody">How fast things are changing could be seen in one surprising note deep inside the report. Gartner said average revenue per user for voice telecommunications (what our ancestors knew as âphone callsâ) would fall 10 percent a year through 2018. A year ago, Gartner said only that the effect of people moving away from phone calls to things like free Skype calls or texting was âmixed.â</p>
+<p class="story-body-text" itemprop="articleBody">The report also said that IT spending was flat in 2013, at $3.673 trillion. A year ago, it had forecast that spending would be up 2.0 percent. In July 2012, Gartner <a href="//www.gartner.com/newsroom/id/2074815">posited</a> that 2013 would see a 4.4 percent rise. That same report also overestimated the spending for 2012 by a full percentage point.</p>
+<p class="story-body-text" itemprop="articleBody">Pointing out these shortfalls is not meant to be a knock on Gartner. In May, IDC <a href="//www.idc.com/getdoc.jsp?containerId=prUS24865914 ">lowered</a> its forecast of global IT spending growth to 4.1 percent, from 4.6 percent. An IDC representative did not respond to messages about whether it would be further revising its forecast.</p>
+<p class="story-body-text" itemprop="articleBody">Nor does it mean that analysts are nonstop optimists: Following the 2008-9 financial crisis, Gartner actually <a href="//www.gartner.com/newsroom/id/1735214 ">underestimated</a> how quickly companies would start spending again as they recovered.</p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2014/07/01/technology/01bits-it2/01bits-it2-articleInline.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2014/07/01/technology/01bits-it2/01bits-it2-articleInline.jpg" src="https://static01.nyt.com/images/2014/07/01/technology/01bits-it2/01bits-it2-articleInline.jpg" id="100000002974564" width="190" height="284" alt="John-David Lovelock, research vice president at Gartner."   /><meta itemprop="height" content="284"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text">John-David Lovelock, research vice president at Gartner.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> </span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">The change that is making his job hard, Mr. Lovelock said, is how quickly we are moving to what he called âthe Third Ageâ of IT.</p>
+<p class="story-body-text" itemprop="articleBody">In his view, the first age, from about 1980 to 2000, was one of âIT craftsmanship â we were building computer systems, moving off paper-based payroll and accounting with massive IT departments.â</p>
+<p class="story-body-text" itemprop="articleBody">Next, Mr. Lovelock said, was âIT industrialization. It was all about how we can optimize efficiency.â That began in 2000, and is starting to end. </p>
+<p class="story-body-text" itemprop="articleBody">In the so-called Third Age, âweâre moving to a world of digital-based businesses,â the analyst said. âTechnology isnât serving an existing business, itâs dictating what a business is.â That is one reason tech spending still grows overall even as it gets cheaper in so many ways: It is needed in more places.</p>
+<p class="story-body-text" itemprop="articleBody">Some of the changes in buying would seem relatively easy to spot, like the move from personal computers to tablets, or from computer servers and software to cloud computing systems. </p>
+<p class="story-body-text" itemprop="articleBody">Below the surface, however, things are more complex. Tablets are generally more expensive than basic PCs, for example, but they permit a vastly larger number of organizational systems and can be used with cloud systems in many ways. There are few new buyers for high-end tablets and smartphones, meaning there is increased competition for less expensive devices.  </p>
+<p class="story-body-text" itemprop="articleBody">Over years of paying subscriptions, cloud software can seemingly cost as much as a software license, but using a cloud service can make it easier for companies to cut staff or redeploy workers to making new kinds of software. Cloud-based data storage is seeing lots of price cutting, too, and the big players are <a href="//www.nytimes.com/2014/06/26/technology/google-microsoft-and-others-delve-deeper-into-cloud-storage-for-businesses.html ">scrambling</a> to add features.</p>
+<p class="story-body-text" itemprop="articleBody">What is striking is that, in a period of reasonably modest but stable business conditions for most of the big developed economies, technology spending seems to require less capital than even people close to the matter assume. How it gets used, from sensors to the biggest data centers, may be an even bigger mystery.</p>
+<p class="story-body-text" itemprop="articleBody">âIt comes down to a much earlier commoditization than we projected,â Mr. Lovelock said. That will end eventually, he said, perhaps more out of hope than evidence. </p>
+<p class="story-body-text" itemprop="articleBody">âIt has to stabilize,â he said. âPeople will realize they can only take price cutting so far.â </p>
+<footer class="story-footer">
+    <div class="story-meta">
+	<p class="story-print-citation">A version of this article appears in print on 07/07/2014, on page <span itemprop="printSection">B</span><span itemprop="printPage">5</span> of the <span itemprop="printEdition">NewYork</span> edition with the headline: Spending Is Now Harder to Predict.</p>    </div>
+</footer>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//bits.blogs.nytimes.com/2014/07/01/the-incredible-shrinking-tech-spending-projections/" data-title="The Incredible Shrinking Tech Spending Projections" data-description="It&#039;s something of a ritual: On Monday, an analyst firm lowered its projection for information technology spending. Gartner&#039;s projection change isn&#039;t about economic weakness, however, but the tech we&#039;re using, and how we use it.">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//bits.blogs.nytimes.com/2014/06/30/supreme-court-rejects-googles-street-view-appeal/" title="Supreme Court Rejects Google&#039;s Street View Appeal">
+				Supreme Court Rejects Google&#8217;s Street View Appeal			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//bits.blogs.nytimes.com/2014/07/01/twitter-names-ex-goldman-banker-anthony-noto-as-chief-financial-officer/" title="Twitter Names Ex-Goldman Banker Anthony Noto as Chief Financial Officer">
+				Twitter Names Ex-Goldman Banker Anthony Noto as Chief Financial Officer			</a>
+					</li>
+	</ul>
+</div>
+<div id="nyt_promo_widget-10" class="module nocontent widget_nyt_promo_widget"><div style="font-family: nyt-franklin, arial, sans-serif; padding-top: 12px; font-size: 14px; line-height: 17px;">
+Visit the <a href="//nytimes.com/technology" style="font-weight: 600;">Technology section</a> for complete coverage of the industry. <a href="//nytimes.com/technology" style="font-family: nyt-franklin, arial, sans-serif; font-weight: 600;">Â»</a>
+</div></div>		<div class="module ad" id="MiddleRight"></div>
+        		<div class="module ad" id="Box3"></div>
+        		<div class="module ad" id="Box1"></div>
+        <div id="nyt_blog_social_media-5" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-single ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">us on</span></span>
+<span class="blog-fw-specific-followmessage"><span class="blog-fw-username"><a href="https://twitter.com/nytimesbits" title="Follow @nytimesbits on twitter">@nytimesbits</a></span> on <span class="blog-fw-twitter">twitter</span></span></h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/nytimesbits" title="Follow nytimesbits on Twitter">Twitter</a></li></ul>
+<p class="blog-fw-followbutton"><a href="https://twitter.com/nytimesbits" title="Follow @nytimesbits on twitter">Follow</a></p></div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-9',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":76,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004475052"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1466071449" />
+<meta name="PUD" content="20160616" />
+<meta name="pdate" content="20160616" />
+<meta name="ptime" content="20160616060409" />
+<meta name="utime" content="20160616100409" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-06-16T10:04:09-04:00" />
+<meta name="DISPLAYDATE" content="June 16, 2016" />
+<meta name="dat" content="June 16, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Bharara, Preet;Black, Leon D;Chan, Priscilla;Dauman, Philippe P;Denton, Nick;Koskinen, John A;Picasso, Pablo;Redstone, Sumner M;Zuckerberg, Mark E">
+<meta name="des" content="Art;Banking and Financial Institutions;Extortion and Blackmail;Health Insurance and Managed Care;Hedge Funds;Insider Trading;Mergers, Acquisitions and Divestitures;Pensions and Retirement Plans;Sovereign Wealth Funds;Venture Capital">
+<meta name="org" content="Airbnb;Chan Zuckerberg Initiative LLC;DraftKings Inc;FanDuel.com;Federal Reserve System;FireEye Inc;Gawker.com;Goldman Sachs Group Inc;Hillhouse Capital Group;Internal Revenue Service;International Court of Justice (UN);SOFTBANK Corporation;Supercell;Tencent Holdings Ltd;Viacom Inc;Visium Asset Management LP">
+<meta name="ticker" content="Goldman Sachs Group Inc|GS|NYSE;SOFTBANK Corporation|SFTBF|Other OTC;Viacom Inc|VIAB|NASDAQ" />
+<meta property="article:tag" content="Bharara Preet" />
+<meta property="article:tag" content="Black Leon D" />
+<meta property="article:tag" content="Chan Priscilla" />
+<meta property="article:tag" content="Dauman Philippe P" />
+<meta property="article:tag" content="Denton Nick" />
+<meta property="article:tag" content="Koskinen John A" />
+<meta property="article:tag" content="Picasso Pablo" />
+<meta property="article:tag" content="Redstone Sumner M" />
+<meta property="article:tag" content="Zuckerberg Mark E" />
+<meta property="article:tag" content="Art" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Extortion and Blackmail" />
+<meta property="article:tag" content="Health Insurance and Managed Care" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Insider Trading" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Pensions and Retirement Plans" />
+<meta property="article:tag" content="Sovereign Wealth Funds" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Airbnb" />
+<meta property="article:tag" content="Chan Zuckerberg Initiative LLC" />
+<meta property="article:tag" content="DraftKings Inc" />
+<meta property="article:tag" content="FanDuel.com" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="FireEye Inc" />
+<meta property="article:tag" content="Gawker.com" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Hillhouse Capital Group" />
+<meta property="article:tag" content="Internal Revenue Service" />
+<meta property="article:tag" content="International Court of Justice (UN)" />
+<meta property="article:tag" content="SOFTBANK Corporation" />
+<meta property="article:tag" content="Supercell" />
+<meta property="article:tag" content="Tencent Holdings Ltd" />
+<meta property="article:tag" content="Viacom Inc" />
+<meta property="article:tag" content="Visium Asset Management LP" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Bharara Preet,Black Leon D,Chan Priscilla,Dauman Philippe P,Denton Nick,Koskinen John A,Picasso Pablo,Redstone Sumner M,Zuckerberg Mark E,Art,Banking and Financial Institutions,Extortion and Blackmail,Health Insurance and Managed Care,Hedge Funds,Insider Trading,Mergers Acquisitions and Divestitures,Pensions and Retirement Plans,Sovereign Wealth Funds,Venture Capital,Airbnb,Chan Zuckerberg Initiative LLC,DraftKings Inc,FanDuel.com,Federal Reserve System,FireEye Inc,Gawker.com,Goldman Sachs Group Inc,Hillhouse Capital Group,Internal Revenue Service,International Court of Justice (UN),SOFTBANK Corporation,Supercell,Tencent Holdings Ltd,Viacom Inc,Visium Asset Management LP,DealBook" />
+<meta name="news_keywords" content="Airbnb,Art,FanDuel.com,Gawker.com,Supercell" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F06%2F16%2Fmorning-agenda-visium-hedge-fund-managers-charged-with-insider-trading%2F" title="Morning Agenda: Visium Hedge Fund Managers Charged With Insider Trading" />
+<meta name="description" content="Tencent Nears Deal to Buy Maker of Clash of Clans &#124; Investors Bypass Private Equity" />
+<meta name="hdl" content="Morning Agenda: Visium Hedge Fund Managers Charged With Insider Trading" />
+<meta property="og:title" content="Morning Agenda: Visium Hedge Fund Managers Charged With Insider Trading" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/06/16/morning-agenda-visium-hedge-fund-managers-charged-with-insider-trading/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Tencent Nears Deal to Buy Maker of Clash of Clans &#124; Investors Bypass Private Equity" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Visium Hedge Fund Managers Charged With Insider Trading" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/06/16/morning-agenda-visium-hedge-fund-managers-charged-with-insider-trading/" />
+<meta name="twitter:description" content="Tencent Nears Deal to Buy Maker of Clash of Clans &#124; Investors Bypass Private Equity" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: MSCI Holds Off Adding China to Emerging Markets Benchmark' href='//news.blogs.nytimes.com/2016/06/15/morning-agenda-msci-holds-off-adding-china-to-emerging-markets-benchmark/' />
+<link rel='next' title='Morning Agenda:  A Who&#8217;s Who of Financiers Expected at Trump Fund-Raiser' href='//news.blogs.nytimes.com/2016/06/17/morning-agenda-a-whos-who-of-financiers-expected-at-trump-fund-raiser/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/06/16/morning-agenda-visium-hedge-fund-managers-charged-with-insider-trading/' />
+<link rel='shortlink' href='//nyti.ms/1WOx2T8' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/06/16/morning-agenda-visium-hedge-fund-managers-charged-with-insider-trading/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Visium Hedge Fund Managers Charged With Insider Trading - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5067 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Visium Hedge Fund Managers Charged With Insider Trading        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/06/16/morning-agenda-visium-hedge-fund-managers-charged-with-insider-trading/"
+	 data-title="Morning Agenda: Visium Hedge Fund Managers Charged With Insider Trading"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Tencent Nears Deal to Buy Maker of Clash of Clans | Investors Bypass Private Equity&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/16/morning-agenda-visium-hedge-fund-managers-charged-with-insider-trading/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 16, 2016 6:04 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Visium Hedge Fund Managers Charged With Insider Trading</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-06-16T10:04:09+00:00" itemprop="datePublished">June 16, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">June 16, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5067 post type-post status-publish hentry category-dealbook tag-airbnb tag-art tag-banking-and-financial-institutions tag-bharara-preet tag-black-leon-d tag-chan-zuckerberg-initiative-llc tag-chan-priscilla tag-dauman-philippe-p tag-denton-nick tag-draftkings-inc tag-extortion-and-blackmail tag-fanduel-com tag-federal-reserve-system tag-fireeye-inc tag-gawker-com tag-goldman-sachs-group-inc tag-health-insurance-and-managed-care tag-hedge-funds tag-hillhouse-capital-group tag-insider-trading tag-internal-revenue-service tag-international-court-of-justice-un tag-koskinen-john-a tag-mergers-acquisitions-and-divestitures tag-pensions-and-retirement-plans tag-picasso-pablo tag-redstone-sumner-m tag-softbank-corporation tag-sovereign-wealth-funds tag-supercell tag-tencent-holdings-ltd tag-venture-capital tag-viacom-inc tag-visium-asset-management-lp tag-zuckerberg-mark-e per-bharara-preet per-black-leon-d per-chan-priscilla per-dauman-philippe-p per-denton-nick per-koskinen-john-a per-picasso-pablo per-redstone-sumner-m per-zuckerberg-mark-e des-art des-banking-and-financial-institutions des-extortion-and-blackmail des-health-insurance-and-managed-care des-hedge-funds des-insider-trading des-mergers-acquisitions-and-divestitures des-pensions-and-retirement-plans des-sovereign-wealth-funds des-venture-capital org-airbnb org-chan-zuckerberg-initiative-llc org-draftkings-inc org-fanduel-com org-federal-reserve-system org-fireeye-inc org-gawker-com org-goldman-sachs-group-inc org-hillhouse-capital-group org-internal-revenue-service org-international-court-of-justice-un org-softbank-corporation org-supercell org-tencent-holdings-ltd org-viacom-inc org-visium-asset-management-lp news_keywords-airbnb news_keywords-art news_keywords-fanduel-com news_keywords-gawker-com news_keywords-supercell" id="post-5067">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Visium Hedge Fund Managers Charged With Insider Trading</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-06-16T10:04:09+00:00" itemprop="datePublished">June 16, 2016 6:04 am</time>
+			<!-- date updated --><span class="visually-hidden updated">June 16, 2016 6:04 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/06/16/morning-agenda-visium-hedge-fund-managers-charged-with-insider-trading/" data-title="Morning Agenda: Visium Hedge Fund Managers Charged With Insider Trading" data-description="Tencent Nears Deal to Buy Maker of Clash of Clans | Investors Bypass Private Equity">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>VISIUM HEDGE FUND MANAGERS CHARGED WITH INSIDER TRADING</strong> Federal authorities filed criminal and civil securities charges against three current and former traders at Visium Asset Management, a multibillion-dollar hedge fund focused on health care, <a href="//www.nytimes.com/2016/06/16/business/dealbook/visium-hedge-fund-managers-charged-with-insider-trading.html?ref=dealbook&amp;_r=0">Alexandra Stevenson reports in DealBook</a>. Prosecutors said that <strong>the fund had an inside view of the drug approval process at the Food and Drug Administration that gave it trading windfalls of $32 million.</strong></p>
+<p class="story-body-text" itemprop="articleBody">Gordon Johnston, a former deputy director of the office of generic drugs who became a consultant, is accused of leveraging his F.D.A. contacts and abusing his role at the Generic Drug Trade Association, to glean information on behalf of Sanjay Valvani, one of Visium&#8217;s top portfolio managers. The authorities said Mr. Johnston arranged speaking panels and teleconferences between F.D.A. officials and generic drug manufacturers to discuss issues that directly concerned his hedge fund client.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Mr. Valvani was able to reap nearly $32 million in illicit gains based on information about coming approvals for a generic version of a drug that helps prevent blood clots</strong>, according to court filings. Prosecutors also accused Mr. Valvani of passing on the tips to Christopher Plaford, a former colleague.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Plaford has pleaded guilty to trading on illegal tips. Mr. Johnston has also pleaded guilty and they are both cooperating with the government.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Valvani&#8217;s lawyer, Barry H. Berke, said his client was innocent. &#8220;The prosecution of Mr. Valvani is yet another example of this United States attorney&#8217;s office stretching the facts and law to try to transform entirely innocent trading decisions into a crime,&#8221; he said.</p>
+<p class="story-body-text" itemprop="articleBody">The networks used by hedge funds to get an investing edge were the focus of a crackdown by Preet Bharara, the United States attorney in Manhattan, that resulted in the convictions of more than 80 traders, consultants and analysts.</p>
+<p class="story-body-text" itemprop="articleBody">Although Mr. Bharara&#8217;s office was dealt a blow when a federal appellate court overturned two prominent convictions from 2014, <strong>it has gained momentum again in the last month.<br />
+</strong><br />
+<strong>TENCENT NEARS DEAL TO BUY MAKER OF CLASH OF CLANS</strong> Tencent is near a deal to buy Supercell, the Finnish game company that makes Clash of Clans, <a href="//www.nytimes.com/2016/06/16/business/dealbook/tencent-nears-deal-to-buy-supercell-maker-of-clash-of-clans.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160616">Michael J. de la Merced and Nick Wingfield report in DealBook</a>. A person briefed on the matter said <strong>the transaction would value the company at more than $9 billion.</strong></p>
+<p class="story-body-text" itemprop="articleBody">Tencent, with a market value of about $211 billion, controls the messaging service WeChat as well as a number of online games hosted on its QQ portal. A deal for Supercell would be <strong>the biggest takeover by any of China&#8217;s so-called BAT trio</strong> of Baidu, Alibaba and Tencent, according to data from Standard &amp; Poor&#8217;s Global Market Intelligence.</p>
+<p class="story-body-text" itemprop="articleBody">Supercell has produced a string of hits like Clash of Clans, Hay Day and Clash Royale. It reported revenue of $2.33 billion for 2015, up from $1.78 billion the previous year. Its earnings before interest, tax, depreciation and amortization also rose to $964 million, from $592 million. Tencent is already China&#8217;s dominant online game company, accounting for about 32 percent of revenue from China&#8217;s online game market in 2015, according to the research firm Niko Partners.</p>
+<p class="story-body-text" itemprop="articleBody">Under the terms of the proposed deal, <strong>Tencent would buy the roughly 73 percent stake in Supercell that is held by SoftBank</strong>, the Japanese telecommunications provider, said a person briefed on the discussions. Supercell&#8217;s founders would remain at the company.</p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.wsj.com/articles/tencent-nears-deal-to-buy-majority-stake-in-supercell-from-softbank-1466007064?nl=dealbook&amp;emc=edit_dlbkam_20160616">The Wall Street Journal</a>, which earlier reported the discussions, said that Tencent was <strong>also in discussions with financial investors, like Hillhouse Capital Group of Beijing, to join the deal as co-investors.</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>ON THE AGENDA Oracle</strong> will hold a call on its latest earnings at 5 p.m.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>INVESTORS BYPASS PRIVATE EQUITY</strong> Sovereign wealth funds, pension funds and even private families have been flexing their deal-making muscles and taking stakes in companies themselves, <a href="//www.nytimes.com/2016/06/16/business/dealbook/bypassing-private-equity-to-get-a-slice-of-the-big-deal.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160616">Leslie Picker reports in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>These so-called emerging buyers are looking for investment gains without paying management fees to private equity firms.</strong> Over the last year and a half, they bought about 17 percent of the assets sold by private equity firms, up from 2 percent in 2007, according to Goldman Sachs data. They were even more active as buyers than private equity firms themselves.</p>
+<p class="story-body-text" itemprop="articleBody">They are investing in every sector around the world. Saudi Arabia&#8217;s main investment fund took a $3.5 billion stake in Uber this month. JAB Holding Company, the investment arm of the Reimann family in Germany, led the acquisition of Keurig Green Mountain for about $14 billion in March.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>The risks, however, are higher for these newcomers</strong> because they do not have the same people to find and vet deals that a private equity firm or a bank would have. But banks are stepping in &#8211; Goldman Sachs plans to expand its financial sponsors group to focus more on emerging buyers.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Emerging buyers are also taking steps to make their internal deal-making departments more professional.</strong> Three years ago, Abu Dhabi&#8217;s sovereign fund created its own group, which now has 15 people, to focus on direct investments.</p>
+<p class="story-body-text" itemprop="articleBody">Emerging buyers are also making deals in conjunction with private equity firms, <strong>a practice known as co-investing</strong>. This gives private equity firms access to a larger pool of capital to make bigger acquisitions, while it allows investors, whom they call limited partners, to pay few or no fees. Of 140 limited partners surveyed last year by PricewaterhouseCoopers, 73 percent said they had co-invested in at least one deal.</p>
+<p class="story-body-text" itemprop="articleBody"><em>Contact <a href="mailto:amie.tsang@nytimes.commes.com">amie.tsang@nytimes.com</a></em></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/?nl=dealbook&amp;emc=edit_dlbkam_20160616">MERGERS &amp; ACQUISITIONS Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>A FanDuel-DraftKings Merger Might Be Worth a Chance</strong> There would be some obvious savings from turning two daily fantasy sports sites into one big one, Jennifer Saba writes in Breakingviews.<br />
+<a href="//www.nytimes.com/2016/06/16/business/dealbook/a-fanduel-draftkings-merger-might-be-worth-a-chance.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>FireEye Said to Have Rebuffed Takeover Offers</strong> FireEye, the online security company, turned down at least two suitors, Bloomberg reports, citing people with knowledge of the matter. One of the potential buyers was Symantec.<br />
+<a href="//www.bloomberg.com/news/articles/2016-06-15/fireeye-said-to-have-rebuffed-multiple-recent-takeover-proposals?nl=dealbook&amp;emc=edit_dlbkam_20160616">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Envision and AmSurg Health Care Companies to Merge</strong> Envision Healthcare Holdings and AmSurg agreed to merge in a deal that would create a company worth about $10 billion.<br />
+<a href="//www.wsj.com/articles/envision-healthcare-amsurg-to-merge-1466022361?mod=pls_whats_news_us_business_f&amp;nl=dealbook&amp;emc=edit_dlbkam_20160616">THE WALL STREET JOURNAL<br />
+</a><br />
+<a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">INVESTMENT BANKING Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Business Booms for a Certain Breed of Wall Street Banker</strong> Turnaround experts are in demand, and banks like Lazard, Guggenheim Partners and Perella Weinberg Partners are hiring.<br />
+<a href="//www.bloomberg.com/news/articles/2016-06-15/for-one-breed-of-wall-street-bankers-business-is-booming-again?nl=dealbook&amp;emc=edit_dlbkam_20160616">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><em>For the latest updates, go to </em><a href="//www.nytimes.com/pages/business/dealbook/index.html"><em>NYTimes.com/DealBook</em></p>
+<p class="story-body-text" itemprop="articleBody"></a><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">PRIVATE EQUITY Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Picasso Sculpture in Dispute Goes to Leon Black; Rival Owner to Receive Compensation</strong> The Gagosian had bought the piece from Maya Widmaier-Picasso in 2015 and sold it to Mr. Black; but the Qatari royal family said it bought the work in 2014.<br />
+<a href="//www.nytimes.com/2016/06/16/arts/design/picasso-bust-settlement-leon-black.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">VENTURE CAPITAL Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Didi Chuxing&#8217;s $28 Billion Valuation Shows High Price of China&#8217;s Ride-Sharing Market</strong> The car-hailing app brought in $7.3 billion in its latest fund-raising round, giving it a valuation of almost half that of Uber, its main rival in China.<br />
+<a href="//www.nytimes.com/2016/06/17/business/international/china-didi-chuxing.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Zuckerberg Venture Makes Its First Investment</strong> The Chan Zuckerberg Initiative, formed by the Facebook founder Mark Zuckerberg and his wife, Priscilla Chan, plans to announce an investment in Andela, a start-up based in New York that trains software developers in Nigeria and Kenya.<br />
+<a href="//www.wsj.com/articles/zuckerbergs-venture-to-invest-in-startup-andela-1466049783?mod=pls_whats_news_us_business_f&amp;nl=dealbook&amp;emc=edit_dlbkam_20160616">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Airbnb Adds $1 Billion to War Chest for Expansion</strong> Airbnb secured a $1 billion debt facility from some of the largest banks in the United States to help develop new services and fund growth initiatives, Bloomberg reports, citing people familiar with the matter.<br />
+<a href="//www.bloomberg.com/news/articles/2016-06-16/airbnb-said-to-get-1-billion-debt-facility-from-big-u-s-banks?nl=dealbook&amp;emc=edit_dlbkam_20160616">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">LEGAL/REGULATORY Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Are Financial Markets Too Complacent About the Global Economy?</strong> Despite plenty of reasons to reflect anxiety, they&#8217;ve remained fairly calm.<br />
+<a href="//www.nytimes.com/2016/06/16/upshot/are-financial-markets-too-complacent-about-the-global-economy.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Fed Holds Interest Rates Steady and Plans Slower Increases</strong> The central bank, which entered the year planning to raise rates four times, has scaled back those plans as economic growth has disappointed expectations.<br />
+<a href="//www.nytimes.com/2016/06/16/business/economy/federal-reserve-interest-rates-janet-yellen.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">NYT Â»</a><br />
+<strong>The Fed Is Learning Just How Hard the Exit From Easy Money Will Be</strong> If markets could talk, they&#8217;d be saying to the chairwoman of the Fed, Janet Yellen: &#8220;We don&#8217;t think you&#8217;ll raise interest rates as much as you say you will.&#8221;<br />
+<a href="//www.nytimes.com/2016/06/16/upshot/the-fed-is-learning-just-how-hard-the-exit-from-easy-money-will-be.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>European Interest Rates Are Not as Low as They Look</strong> Negative rates may seem strange, but when adjusting for inflation, companies are still not getting cheap loans.<br />
+<a href="//www.nytimes.com/2016/06/16/upshot/european-interest-rates-are-not-as-low-as-they-look.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Redstone Says in a Letter He No Longer Trusts Viacom&#8217;s Chief</strong> Sumner Redstone said in an emailed letter that he longer trusts Viacom&#8217;s chief, Philippe Dauman, or the company&#8217;s board.<br />
+<a href="//www.nytimes.com/2016/06/16/business/media/redstone-says-in-a-letter-he-no-longer-trusts-viacoms-chief.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Gawker Founder Nick Denton Confident of Company&#8217;s Future</strong> Mr. Denton expressed hope in a new owner, and the possibility that the court penalty will be reduced on appeal.<br />
+<a href="//www.nytimes.com/2016/06/16/business/media/gawker-founder-nick-denton-confident-of-companys-future.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Iran Files Complaint to Recover $2 Billion</strong> &#8220;The government of the Islamic Republic of Iran officially complained about America to the International Court of Justice for the confiscation and theft of $2 billion of the property of the central bank,&#8221; President Hassan Rouhani said.<br />
+<a href="//www.reuters.com/article/us-iran-politics-court-idUSKCN0Z12EU?nl=dealbook&amp;emc=edit_dlbkam_20160616">REUTERS</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>House Panel Recommends Censure of I.R.S. Commissioner</strong> The Oversight and Government Reform Committee recommended that the House censure the commissioner, John A. Koskinen, accusing him of betraying the trust of Congress and the public.<br />
+<a href="//www.nytimes.com/2016/06/16/us/politics/house-panel-recommends-censure-of-irs-commissioner.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Why the I.R.S. Fails to Crack the Small-Business Tax Nut</strong> The government has been trying to figure out how small-business owners can be persuaded to report their earnings more accurately. More audits may not be the answer.<br />
+<a href="//www.nytimes.com/2016/06/16/business/smallbusiness/why-the-irs-fails-to-crack-the-small-business-tax-nut.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">NYT Â» </a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Expiration Date on China&#8217;s Promises Stokes Unease in Hong Kong Housing</strong> Most banks have yet to formulate mortgage policies beyond 2047, when an agreement guaranteeing the city a high degree of autonomy runs out.<br />
+<a href="//www.nytimes.com/2016/06/16/world/asia/hong-kong-housing-mortgages-2047.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>To Secure Loans, Chinese Women Supply Perilous Collateral: Nude Photos</strong> Women are sending photos of themselves to peer-to-peer lenders, who then sometimes blackmail them when they cannot pay high interest rates, Chinese state news media reported.<br />
+<a href="//www.nytimes.com/2016/06/16/world/asia/to-secure-loans-chinese-women-supply-perilous-collateral-nude-photos.html?nl=dealbook&amp;emc=edit_dlbkam_20160616">NYT Â»</a></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/06/16/morning-agenda-visium-hedge-fund-managers-charged-with-insider-trading/"
+					data-title="Morning Agenda: Visium Hedge Fund Managers Charged With Insider Trading"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Tencent Nears Deal to Buy Maker of Clash of Clans | Investors Bypass Private Equity&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/16/morning-agenda-visium-hedge-fund-managers-charged-with-insider-trading/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":65,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

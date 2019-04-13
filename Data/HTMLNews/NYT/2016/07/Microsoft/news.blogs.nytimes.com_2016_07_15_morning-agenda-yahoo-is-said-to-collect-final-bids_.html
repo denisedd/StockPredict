@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004532294"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1468577023" />
+<meta name="PUD" content="20160715" />
+<meta name="pdate" content="20160715" />
+<meta name="ptime" content="20160715060343" />
+<meta name="utime" content="20160715100343" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-07-15T10:03:43-04:00" />
+<meta name="DISPLAYDATE" content="July 15, 2016" />
+<meta name="dat" content="July 15, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Buffett, Warren E;Mayer, Marissa;Trump, Donald J">
+<meta name="des" content="Antitrust Laws and Competition Issues;Banking and Financial Institutions;Genetically Modified Food (GMOs);Initial Public Offerings;Law and Legislation;Law Schools;Legal Profession;Mergers, Acquisitions and Divestitures;Mutual Funds;Private Equity;Regulation and Deregulation of Industry;Student Loans;Venture Capital;Web Browsers">
+<meta name="org" content="AT&amp;T Inc;Bank of England;BASF SE;Bayer AG;Berkshire Hathaway Inc;BlackRock Inc;Citigroup Inc;Google Inc;JPMorgan Chase &amp; Company;Line Corp;Microsoft Corp;Monsanto Company;Oncor Incorporated;Orrick Herrington &amp; Sutcliffe;Quicken Loans Inc;Unicredito Italiano SpA;Verizon Communications Inc;Wells Fargo &amp; Company;Xerox Corporation;Yahoo! Inc">
+<meta name="geo" content="Silicon Valley (Calif)">
+<meta name="ticker" content="AT&T Inc|T|NYSE;BASF SE|BASFY|Other OTC;Bayer AG|BAYRY|Other OTC;Berkshire Hathaway Inc|BRK.A|NYSE;BlackRock Inc|BLK|NYSE;Citigroup Inc|C|NYSE;JPMorgan Chase & Company|JPM|NYSE;Microsoft Corp|MSFT|NASDAQ;Monsanto Company|MON|NYSE;Verizon Communications Inc|VZ|NYSE;Wells Fargo & Company|WFC|NYSE;Xerox Corporation|XRX|NYSE;Yahoo! Inc|YHOO|NASDAQ" />
+<meta property="article:tag" content="Buffett Warren E" />
+<meta property="article:tag" content="Mayer Marissa" />
+<meta property="article:tag" content="Trump Donald J" />
+<meta property="article:tag" content="Antitrust Laws and Competition Issues" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Genetically Modified Food (GMOs)" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Law and Legislation" />
+<meta property="article:tag" content="Law Schools" />
+<meta property="article:tag" content="Legal Profession" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Mutual Funds" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Student Loans" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Web Browsers" />
+<meta property="article:tag" content="AT&amp;T Inc" />
+<meta property="article:tag" content="Bank of England" />
+<meta property="article:tag" content="BASF SE" />
+<meta property="article:tag" content="Bayer AG" />
+<meta property="article:tag" content="Berkshire Hathaway Inc" />
+<meta property="article:tag" content="BlackRock Inc" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="Google Inc" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="Line Corp" />
+<meta property="article:tag" content="Microsoft Corp" />
+<meta property="article:tag" content="Monsanto Company" />
+<meta property="article:tag" content="Oncor Incorporated" />
+<meta property="article:tag" content="Orrick Herrington &amp; Sutcliffe" />
+<meta property="article:tag" content="Quicken Loans Inc" />
+<meta property="article:tag" content="Unicredito Italiano SpA" />
+<meta property="article:tag" content="Verizon Communications Inc" />
+<meta property="article:tag" content="Wells Fargo &amp; Company" />
+<meta property="article:tag" content="Xerox Corporation" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="Silicon Valley (Calif)" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Buffett Warren E,Mayer Marissa,Trump Donald J,Antitrust Laws and Competition Issues,Banking and Financial Institutions,Genetically Modified Food (GMOs),Initial Public Offerings,Law and Legislation,Law Schools,Legal Profession,Mergers Acquisitions and Divestitures,Mutual Funds,Private Equity,Regulation and Deregulation of Industry,Student Loans,Venture Capital,Web Browsers,AT&amp;T Inc,Bank of England,BASF SE,Bayer AG,Berkshire Hathaway Inc,BlackRock Inc,Citigroup Inc,Google Inc,JPMorgan Chase &amp; Company,Line Corp,Microsoft Corp,Monsanto Company,Oncor Incorporated,Orrick Herrington &amp; Sutcliffe,Quicken Loans Inc,Unicredito Italiano SpA,Verizon Communications Inc,Wells Fargo &amp; Company,Xerox Corporation,Yahoo! Inc,Silicon Valley (Calif),DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F07%2F15%2Fmorning-agenda-yahoo-is-said-to-collect-final-bids%2F" title="Morning Agenda: Yahoo Is Said to Collect Final Bids" />
+<meta name="description" content="Firms Offer to Help New Lawyers Pay Student Debt &#124; Bayer Raises Bid for Monsanto" />
+<meta name="hdl" content="Morning Agenda: Yahoo Is Said to Collect Final Bids" />
+<meta property="og:title" content="Morning Agenda: Yahoo Is Said to Collect Final Bids" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/07/15/morning-agenda-yahoo-is-said-to-collect-final-bids/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Firms Offer to Help New Lawyers Pay Student Debt &#124; Bayer Raises Bid for Monsanto" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Yahoo Is Said to Collect Final Bids" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/07/15/morning-agenda-yahoo-is-said-to-collect-final-bids/" />
+<meta name="twitter:description" content="Firms Offer to Help New Lawyers Pay Student Debt &#124; Bayer Raises Bid for Monsanto" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: The First Woman to Lead Cravath, Swaine &amp; Moore' href='//news.blogs.nytimes.com/2016/07/14/morning-agenda-the-first-woman-to-lead-cravath-swaine-moore/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/07/15/what-were-reading-171/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/07/15/morning-agenda-yahoo-is-said-to-collect-final-bids/' />
+<link rel='shortlink' href='//nyti.ms/29UPPsh' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/07/15/morning-agenda-yahoo-is-said-to-collect-final-bids/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Yahoo Is Said to Collect Final Bids - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5291 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Yahoo Is Said to Collect Final Bids        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/07/15/morning-agenda-yahoo-is-said-to-collect-final-bids/"
+	 data-title="Morning Agenda: Yahoo Is Said to Collect Final Bids"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Firms Offer to Help New Lawyers Pay Student Debt | Bayer Raises Bid for Monsanto&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/15/morning-agenda-yahoo-is-said-to-collect-final-bids/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 15, 2016 6:03 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Yahoo Is Said to Collect Final Bids</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-07-15T10:03:43+00:00" itemprop="datePublished">July 15, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">July 15, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5291 post type-post status-publish hentry category-dealbook tag-antitrust-laws-and-competition-issues tag-att-inc tag-bank-of-england tag-banking-and-financial-institutions tag-basf-se tag-bayer-ag tag-berkshire-hathaway-inc tag-blackrock-inc tag-buffett-warren-e tag-citigroup-inc tag-genetically-modified-food-gmos tag-google-inc tag-initial-public-offerings tag-jpmorgan-chase-company tag-law-and-legislation tag-law-schools tag-legal-profession tag-line-corp tag-mayer-marissa tag-mergers-acquisitions-and-divestitures tag-microsoft-corp tag-monsanto-company tag-mutual-funds tag-oncor-incorporated tag-orrick-herrington-sutcliffe tag-private-equity tag-quicken-loans-inc tag-regulation-and-deregulation-of-industry tag-silicon-valley-calif tag-student-loans tag-trump-donald-j tag-unicredito-italiano-spa tag-venture-capital tag-verizon-communications-inc tag-web-browsers tag-wells-fargo-company tag-xerox-corporation tag-yahoo-inc per-buffett-warren-e per-mayer-marissa per-trump-donald-j des-antitrust-laws-and-competition-issues des-banking-and-financial-institutions des-genetically-modified-food-gmos des-initial-public-offerings des-law-and-legislation des-law-schools des-legal-profession des-mergers-acquisitions-and-divestitures des-mutual-funds des-private-equity des-regulation-and-deregulation-of-industry des-student-loans des-venture-capital des-web-browsers org-att-inc org-bank-of-england org-basf-se org-bayer-ag org-berkshire-hathaway-inc org-blackrock-inc org-citigroup-inc org-google-inc org-jpmorgan-chase-company org-line-corp org-microsoft-corp org-monsanto-company org-oncor-incorporated org-orrick-herrington-sutcliffe org-quicken-loans-inc org-unicredito-italiano-spa org-verizon-communications-inc org-wells-fargo-company org-xerox-corporation org-yahoo-inc geo-silicon-valley-calif" id="post-5291">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Yahoo Is Said to Collect Final Bids</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-07-15T10:03:43+00:00" itemprop="datePublished">July 15, 2016 6:03 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 15, 2016 6:03 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/07/15/morning-agenda-yahoo-is-said-to-collect-final-bids/" data-title="Morning Agenda: Yahoo Is Said to Collect Final Bids" data-description="Firms Offer to Help New Lawyers Pay Student Debt | Bayer Raises Bid for Monsanto">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>YAHOO IS SAID TO COLLECT FINAL BIDS</strong> Final bids for Yahoo&#8217;s core internet business are due Monday, <a href="//www.nytimes.com/2016/07/15/business/dealbook/yahoo-is-said-to-collect-final-bids-as-auction-nears-its-end.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">Vindu Goel and Michael J. de la Merced report in DealBook</a>. The board is set to make a decision soon afterward, according to people briefed on the process.</p>
+<p class="story-body-text" itemprop="articleBody">The sale of the business, which includes Yahoo&#8217;s search, email, advertising and media operations, brings an end to a largely unsuccessful effort to turn around the company, and several rounds of bidding, during which <strong>Yahoo&#8217;s business has continued to deteriorate.</strong></p>
+<p class="story-body-text" itemprop="articleBody">The bidders include the telecommunications giants Verizon Communications and AT&amp;T, several private equity firms and a Quicken Loans co-founder, Dan Gilbert, who is getting financial backing from Warren E. Buffett&#8217;s Berkshire Hathaway. The offers will vary depending what assets are included, but Wall Street expects the business to fetch as much as $6 billion, including intellectual property and land.</p>
+<p class="story-body-text" itemprop="articleBody">Several bidders acknowledged that they had run into what one called &#8220;hairy&#8221; issues, but <strong>no deal breakers have emerged so far.</strong></p>
+<p class="story-body-text" itemprop="articleBody">The sale has, however, been slowed by some unpleasant revelations about expensive decisions made by Marissa Mayer, the chief executive. The biggest surprise was Yahoo telling bidders in June that <strong>they could be on the hook for more than $1 billion in immediate payments to Mozilla</strong>, which makes the Firefox web browser.</p>
+<p class="story-body-text" itemprop="articleBody">In 2014, Yahoo promised to pay Mozilla at least $375 million a year to make Yahoo the default search engine on Firefox &#8211; about $100 million more than Google was paying for similar prominent, according to Yahoo and Mozilla filings. Ms. Mayer personally negotiated a provision that gave Mozilla unusual leverage to demand all remaining payments upfront if Yahoo were sold, according to people briefed on the terms of the contract. Mozilla would have to show that the change in Yahoo&#8217;s ownership was hurting the Mozilla brand and degrading the search experience, said people briefed on the terms.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Any winning bidder would be under pressure to continue Ms. Mayer&#8217;s heavy investments in search</strong>, which she championed despite the long odds of success against Google.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Bidders are also trying to determine how much they have to pay out in severance</strong> if they cut staff. Ms. Mayer and the board have handed out hefty stock awards to keep Yahoo employees from jumping ship.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>FIRMS OFFER TO HELP NEW LAWYERS PAY STUDENT DEBT</strong> Law firms are starting to contribute cash to help their newly hired lawyers meet monthly payments on education loans that can be as large as a mortgage payment on a house, <a href="//www.nytimes.com/2016/07/15/business/dealbook/firms-offer-cash-to-help-new-lawyers-pay-student-debt.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160715">Elizabeth Olson reports in DealBook</a>. Some law firms already help their junior lawyers refinance with lower-interest loans, but others are going a step further.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Orrick, Herrington &amp; Sutcliffe</strong>, a large firm founded in San Francisco that specializes in technology, energy and infrastructure law, plans to announce on Friday that it will contribute a monthly amount to its new associates to offset accumulated education debt.</p>
+<p class="story-body-text" itemprop="articleBody">Other firms are beginning to embrace the idea, too, seeing debt as a big worry for their entry-level lawyers. <strong>Ward and Smith</strong>, a 91-person regional law firm based in New Bern, N.C., is introducing a similar student loan repayment benefit to help its new lawyers tackle their debt.</p>
+<p class="story-body-text" itemprop="articleBody">Ward and Smith is working with Gradifi Inc., a Boston company that tailors student loan payment programs for companies and, increasingly, for law firms. Tim DeMello, the founder and chief executive of Gradifi, said that <strong>an additional 20 law firms are looking at starting the benefit this year.</strong></p>
+<p class="story-body-text" itemprop="articleBody">&#8220;More firms are likely to adopt this benefit because they need to compete to attract and retain lawyers and to present themselves in ways that attract and retain clients,&#8221; said Jack Zaremski, founder and president of Hanover Legal Personnel Services.</p>
+<p class="story-body-text" itemprop="articleBody">Companies in other sectors, like the mutual fund giant Fidelity and the accounting firm PricewaterhouseCoopers already have loan repayment programs to attract and retain millennial employees.</p>
+<p class="story-body-text" itemprop="articleBody">Orrick is offering $100 a month for starting lawyers for 18 months. After that, the junior lawyers will be eligible to receive a bonus from the firm. The program, which starts Sept. 1, is being offered to associates who are on the track to becoming partners as well as to those who choose the less intensive career associate track.</p>
+<p class="story-body-text" itemprop="articleBody">&#8220;<strong>It&#8217;s pretty rare that someone comes here with no debt</strong>,&#8221; said Siobhan A. Handley, Orrick&#8217;s chief talent officer, who worked with Social Finance Inc. to devise the firm&#8217;s tuition benefit. &#8220;With fewer students choosing law schools, fewer law school grads choosing big firms, and women leaving the profession faster than men, we wanted to distinguish ourselves in the market,&#8221; she added.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Graduates arrive at law firms with an average of $185,000 in student debt</strong>, compared with $75,000 a decade ago, Mark Kantrowitz, a higher-education expert who tracks student debt, estimates.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>The programs are not without drawbacks</strong>. Law firm contributions are taxed as earnings and economists point out that they benefit one class of employees, the debtors, over others. They also draw from the same employee benefit pool that could be used to augment other benefits like health insurance.<br />
+<strong>ON THE AGENDA</strong> Citigroup and Wells Fargo will publish their second-quarter results at 8 a.m.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>BAYER RAISES BID FOR MONSANTO</strong> The German industrial giant Bayer raised its all-cash takeover bid for Monsanto on Thursday, <a href="//www.nytimes.com/2016/07/15/business/dealbook/bayer-raises-takeover-bid-for-monsanto.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160715">Michael J. de la Merced reports in DealBook</a>. <strong>It increased its offer to $125 a share from $122 a share.</strong></p>
+<p class="story-body-text" itemprop="articleBody">Bayer&#8217;s new offer &#8211; still the largest takeover bid by a German company &#8211; comes after weeks of discussions between the two companies. Monsanto rejected Bayer&#8217;s initial bid and has held discussions with another big chemical maker, BASF.</p>
+<p class="story-body-text" itemprop="articleBody">&#8220;We are convinced that this transaction is the best opportunity available to provide Monsanto shareholders with highly attractive, immediate and certain value,&#8221; Werner Baumann, Bayer&#8217;s chief executive, said in a statement.</p>
+<p class="story-body-text" itemprop="articleBody">Bayer said its offer was not subject to financing, with loans that would be provided by five major banks. <strong>It also proposed a $1.5 billion breakup fee if the merger ran afoul of government regulators.</strong></p>
+<p class="story-body-text" itemprop="articleBody">The two companies operate on separate sides of the agriculture business &#8211; Monsanto is known for its genetically modified crop seeds, while Bayer makes pesticides and aspirin &#8211; but <strong>regulators may scrutinize the deal closely to see if it would put more pricing pressure on farmers.</strong></p>
+<p class="story-body-text" itemprop="articleBody">Monsanto said it would review the new offer. Shares of Monsanto were up 2.3 percent in midday trading on Thursday, though at $103.55 they were still well below the offer, suggesting some investor skepticism.<br />
+Contact <strong><a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></strong><br />
+<a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/?nl=dealbook&amp;emc=edit_dlbkam_20160715"><strong>MERGERS &amp; ACQUISITIONS Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Berkshire Hathaway Said to Bid for Oncor Electric Delivery</strong> Warren Buffett&#8217;s Berkshire Hathaway submitted a bid for Oncor Electric Delivery, Texas&#8217;s biggest transmission operator, Bloomberg reports, citing people familiar with the talks.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-14/berkshire-hathaway-said-to-be-among-leading-bidders-for-oncor?nl=dealbook&amp;emc=edit_dlbkam_20160715">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Xerox Rejects Deal With R.R. Donnelley</strong> The Xerox board reviewed the proposal with its advisers before telling R.R. Donnelley Thursday that it was not interested, believing that its own plan to split was less risky, The Wall Street Journal reports, citing people familiar with the matter.<br />
+<a href="//www.wsj.com/articles/xerox-rejects-proposed-merger-deal-with-r-r-donnelley-1468545630?nl=dealbook&amp;emc=edit_dlbkam_20160715">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160715"><strong>INVESTMENT BANKING Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>JPMorgan Chase Has Strong Quarter as Earnings Top Estimates</strong> The bank said that it was seeing broad demand for loans from consumers and businesses in the United States.<br />
+<a href="//www.nytimes.com/2016/07/15/business/dealbook/jpmorgan-chase-has-strong-quarter-as-earnings-top-estimates.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>UniCredit Calls for E.U. Leniency Over Italian Bank Bailouts</strong> Jean-Pierre Mustier, the new head of UniCredit, Italy&#8217;s biggest bank, has called for the European Union to take a more lenient stance on rescuing the country&#8217;s troubled banking sector, saying Brussels should look to a contentious French government rescue of Alstom in 2004 as a model.<br />
+<a href="//www.ft.com/cms/s/0/32e724de-49c5-11e6-b387-64ab0a67014c.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct&amp;nl=dealbook&amp;emc=edit_dlbkam_20160715#axzz4EN6jkj4O">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Rescued Regional Italian Banks Attract Buyers&#8217; Interest</strong> Atlante, a government-sponsored bank rescue fund, has received tentative offers from several bidders on the sale of the regional banks Banca Popolare di Vicenza and Veneto Banca, The Financial Times reports, citing senior bankers.<br />
+<a href="//www.ft.com/cms/s/0/4b877450-49ff-11e6-8d68-72e9211e86ab.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct&amp;nl=dealbook&amp;emc=edit_dlbkam_20160715#axzz4EN6jkj4O">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Rich Asians Turning More to Private Banks</strong> About a quarter of high-net-worth investors in Asia were clients of private banks as of May, up from 10 percent three years ago, according to a study published by East &amp; Partners Asia, based in Singapore.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-15/rich-asians-seen-turning-more-to-private-banks-as-brexit-bites?nl=dealbook&amp;emc=edit_dlbkam_20160715">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><em>For the latest updates, go to <a href="//www.nytimes.com/pages/business/dealbook/index.html">NYTimes.com/DealBook</a></em></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160715"><strong>PRIVATE EQUITY Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Venture Capitalist to Join Blackstone Board</strong> The venture capitalist Jim Breyer will join Blackstone&#8217;s board, bringing it up to 12 members.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-14/blackstone-adds-venture-capitalist-breyer-to-board-of-directors?nl=dealbook&amp;emc=edit_dlbkam_20160715">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>BlackRock Reports Dip in Quarterly Profit</strong> Despite the decline, the company&#8217;s assets under management &#8211; a telling financial indicator &#8211; grew 4 percent, ending the quarter at $4.9 trillion.<br />
+<a href="//www.nytimes.com/2016/07/15/business/dealbook/blackrock-reports-dip-in-quarterly-profit.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">I.P.O./OFFERINGS Â»</a></strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Line Rises in Initial Public Offering, Cheering Skittish Tech Industry</strong> The strong debut of Line, a Japanese messaging service, in New York breaks a dry spell for technology start-ups.<br />
+<a href="//www.nytimes.com/2016/07/15/business/dealbook/line-ipo.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160715"><strong>VENTURE CAPITAL Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Silicon Valley Writes a Protest Letter Against Trump</strong> Calling American innovation &#8220;the envy of the world,&#8221; more than 140 tech leaders let out a collective howl at what a Trump presidency might do to tech.<br />
+<a href="//www.nytimes.com/2016/07/15/technology/silicon-valley-writes-a-protest-letter-against-trump.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>For Trump, Business Leaders Are More Elites to Resist</strong> Donald Trump&#8217;s embrace of economic policies that are anathema to members of the Business Roundtable is seen as a betrayal of bedrock Republican principles, James B. Stewart writes in Common Sense.<br />
+<a href="//www.nytimes.com/2016/07/15/business/for-trump-business-leaders-are-more-elites-to-resist.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160715"><strong>LEGAL/REGULATORY Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Microsoft Wins Appeal on Overseas Data Searches</strong> The United States Court of Appeals for the Second Circuit reversed a ruling that Microsoft must turn over email stored in a data center in Dublin.<br />
+<a href="//www.nytimes.com/2016/07/15/technology/microsoft-wins-appeal-on-overseas-data-searches.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>What China&#8217;s Economic Growth Figures Mean</strong> China on Friday reported its second-quarter economic growth figures. The numbers are among the world&#8217;s most closely watched, but data from the country are notoriously questionable.<br />
+<a href="//www.nytimes.com/2016/07/15/business/international/china-gdp-economic-growth.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>As China&#8217;s Economy Slows, Beijing&#8217;s Growth Push Loses Punch</strong> High debt and a glut of unneeded factories are hindering the government&#8217;s traditional effort to use spending and lending to spur more activity.<br />
+<a href="//www.nytimes.com/2016/07/16/business/international/china-gdp-growth-stimulus.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">NYT Â» </a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>New York City Pension Fund to Divest Itself of Gun Retailer Stock</strong> The fund is selling shares in Dick&#8217;s Sporting Goods, Cabela&#8217;s, and Big 5 Sporting Goods, worth $10.5 million as of mid-June.<br />
+<a href="//www.nytimes.com/2016/07/15/business/dealbook/new-york-city-pension-fund-to-divest-itself-of-gun-retailer-stock.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Philip May, a Financier Who May Find It Harder to Be Low Key</strong> The spouse of Britain&#8217;s new first gentleman is likely to face a brighter spotlight and harsher scrutiny for his ties to the world of finance.<br />
+<a href="//www.nytimes.com/2016/07/15/business/international/philip-may-a-financier-who-may-find-it-harder-to-be-low-key.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Bank of England Holds Key Interest Rate Steady Despite Uncertainty</strong> Over &#8216;Brexit&#8217; The British central bank signaled that it could lower the rate as soon as August in a bid to bolster the country&#8217;s economy.<br />
+<a href="//www.nytimes.com/2016/07/15/business/dealbook/bank-of-england-interest-rates.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Google&#8217;s Antitrust Charges in Europe Need Quick Action</strong> The European Commission&#8217;s newest charges add more time to the clock, a disadvantage in the ever-shifting tech market, Robert Cyran writes in Breakingviews.<br />
+<a href="//www.nytimes.com/2016/07/15/business/dealbook/googles-antitrust-charges-in-europe-need-quick-action.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>G.M.O. Labeling Bill Gains House Approval</strong> The bill would require companies to indicate that foods have genetically engineered ingredients, but disagreement remains over how that would be done.<br />
+<a href="//www.nytimes.com/2016/07/15/business/gmo-labeling-bill-gains-house-approval.html?nl=dealbook&amp;emc=edit_dlbkam_20160715">NYT Â»Â </a></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/07/15/morning-agenda-yahoo-is-said-to-collect-final-bids/"
+					data-title="Morning Agenda: Yahoo Is Said to Collect Final Bids"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Firms Offer to Help New Lawyers Pay Student Debt | Bayer Raises Bid for Monsanto&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/15/morning-agenda-yahoo-is-said-to-collect-final-bids/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":55,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

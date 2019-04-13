@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004295447"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1459159406" />
+<meta name="PUD" content="20160328" />
+<meta name="pdate" content="20160328" />
+<meta name="ptime" content="20160328060326" />
+<meta name="utime" content="20160328103931" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-03-28T10:39:31-04:00" />
+<meta name="DISPLAYDATE" content="March 28, 2016" />
+<meta name="dat" content="March 28, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Alaburda, Anna">
+<meta name="des" content="Bitcoin (Currency);Hedge Funds;Law Schools;Microsoft Corp;Shareholder Rights and Activism;Virtual Currency;Yahoo! Inc">
+<meta name="org" content="Foxconn Technology;International Business Machines Corporation;JPMorgan Chase &amp; Company;Sharp Corporation">
+<meta name="ticker" content="International Business Machines Corporation|IBM|NYSE;JPMorgan Chase & Company|JPM|NYSE;Sharp Corporation|SHCAY|Other OTC" />
+<meta property="article:tag" content="Alaburda Anna" />
+<meta property="article:tag" content="Bitcoin (Currency)" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Law Schools" />
+<meta property="article:tag" content="Microsoft Corp" />
+<meta property="article:tag" content="Shareholder Rights and Activism" />
+<meta property="article:tag" content="Virtual Currency" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="Foxconn Technology" />
+<meta property="article:tag" content="International Business Machines Corporation" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="Sharp Corporation" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Alaburda Anna,Bitcoin (Currency),Hedge Funds,Law Schools,Microsoft Corp,Shareholder Rights and Activism,Virtual Currency,Yahoo! Inc,Foxconn Technology,International Business Machines Corporation,JPMorgan Chase &amp; Company,Sharp Corporation,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F03%2F28%2Fmorning-agenda-ethereum-challenges-bitcoin%2F" title="Morning Agenda: Ethereum Challenges Bitcoin" />
+<meta name="description" content="Yahoo and the Buyback Mirage &#124; Law Graduate Who Sued Her School Loses at Trial" />
+<meta name="hdl" content="Morning Agenda: Ethereum Challenges Bitcoin" />
+<meta property="og:title" content="Morning Agenda: Ethereum Challenges Bitcoin" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/03/28/morning-agenda-ethereum-challenges-bitcoin/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Yahoo and the Buyback Mirage &#124; Law Graduate Who Sued Her School Loses at Trial" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Ethereum Challenges Bitcoin" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/03/28/morning-agenda-ethereum-challenges-bitcoin/" />
+<meta name="twitter:description" content="Yahoo and the Buyback Mirage &#124; Law Graduate Who Sued Her School Loses at Trial" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/03/25/what-were-reading-139/' />
+<link rel='next' title='Morning Agenda: Private Equity Executive Accused of Faking Investments' href='//news.blogs.nytimes.com/2016/03/29/morning-agenda-private-equity-executive-accused-of-faking-investments/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/03/28/morning-agenda-ethereum-challenges-bitcoin/' />
+<link rel='shortlink' href='//nyti.ms/1qaOtiM' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/03/28/morning-agenda-ethereum-challenges-bitcoin/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Ethereum Challenges Bitcoin - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4477 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Ethereum Challenges Bitcoin        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/03/28/morning-agenda-ethereum-challenges-bitcoin/"
+	 data-title="Morning Agenda: Ethereum Challenges Bitcoin"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Yahoo and the Buyback Mirage | Law Graduate Who Sued Her School Loses at Trial&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/03/28/morning-agenda-ethereum-challenges-bitcoin/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="March 28, 2016 6:03 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Ethereum Challenges Bitcoin</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-03-28T10:03:26+00:00" itemprop="datePublished">March 28, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">March 28, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4477 post type-post status-publish hentry category-dealbook tag-alaburda-anna tag-bitcoin-currency tag-foxconn-technology tag-hedge-funds tag-international-business-machines-corporation tag-jpmorgan-chase-company tag-law-schools tag-microsoft-corp tag-shareholder-rights-and-activism tag-sharp-corporation tag-virtual-currency tag-yahoo-inc per-alaburda-anna des-bitcoin-currency des-hedge-funds des-law-schools des-microsoft-corp des-shareholder-rights-and-activism des-virtual-currency des-yahoo-inc org-foxconn-technology org-international-business-machines-corporation org-jpmorgan-chase-company org-sharp-corporation" id="post-4477">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Ethereum Challenges Bitcoin</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-03-28T10:03:26+00:00" itemprop="datePublished">March 28, 2016 6:03 am</time>
+			<!-- date updated --><span class="visually-hidden updated">March 28, 2016 6:03 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/03/28/morning-agenda-ethereum-challenges-bitcoin/" data-title="Morning Agenda: Ethereum Challenges Bitcoin" data-description="Yahoo and the Buyback Mirage | Law Graduate Who Sued Her School Loses at Trial">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ETHEREUM CHALLENGES BITCOIN</strong> <span class="divider"> | </span></span> A new virtual gold rush is under way. Ethereum, a rival to Bitcoin, has soared in value and <b>climbed 1,000 percent over the last three months</b>,<br />
+<a href="//www.nytimes.com/2016/03/28/business/dealbook/ethereum-a-virtual-currency-enables-transactions-that-rival-bitcoins.html?ref=dealbook">Nathaniel Popper reports in DealBook</a>. Ethereumâs rise has attracted attention from giants like JPMorgan Chase, Microsoft and IBM.  </p>
+<p class="story-body-text" itemprop="articleBody">At the same time, Bitcoin has struggled as its community has been riven with divisions, which has slowed down transactions and driven businesses toward alternative currencies. </p>
+<p class="story-body-text" itemprop="articleBody">Ethereum, like Bitcoin, is built on a blockchain in which every transaction is recorded publicly, offering the possibility of money and assets being exchanged more quickly and cheaply. Ethereum has also won fans with additional promises to provide a way to create online markets and programmable transactions known as smart contracts.  </p>
+<p class="story-body-text" itemprop="articleBody"><b>The capabilities of the system have made it fascinating to executives</b> â many corporations have created their own Ethereum networks with private blockchains, independent of the public system, which could detract from the value of the individual unit in the Ethereum system, known as an Ether.</p>
+<p class="story-body-text" itemprop="articleBody">The value of an Ether has soared as high as $12 from about $1 since the beginning of the year, bringing the value of all existing Ether to over $1 billion at times. </p>
+<p class="story-body-text" itemprop="articleBody">The first full public version of the Ethereum software was recently released, but it could yet face the same technical and legal problems that have affected Bitcoin. </p>
+<p class="story-body-text" itemprop="articleBody">Advocates for Bitcoin have argued that Ethereum will face more security problems because its software is more complex. <b>It is also less tested and has faced fewer attacks than Bitcoin.</b> </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>YAHOO AND THE BUYBACK MIRAGE</strong> <span class="divider"> | </span></span> Why do so many stockholders cheer when a company announces that it is buying back shares when it can be hazardous to its long-term financial health?<br />
+<a href="//www.nytimes.com/2016/03/27/business/in-yahoo-another-example-of-the-buyback-mirage.html?ref=dealbook">Gretchen Morgenson asks in Fair Game</a>. </p>
+<p class="story-body-text" itemprop="articleBody">Not all repurchase programs are bad, but the harmful probably outnumber the beneficial. <b>And buybacks make earnings look better on a per-share basis, but have no effect on overall profit growth.</b> </p>
+<p class="story-body-text" itemprop="articleBody">The crucial flaw in buybacks is that <b>they reward sellers of a companyâs stock over its long-term holders</b>, Ms. Morgenson writes.</p>
+<p class="story-body-text" itemprop="articleBody">Yahoo bought back $6.6 billion of shares from 2008 to 2014, according to Robert L. Colby, a retired investment professional and developer of an equity valuation service. These purchases increased Yahooâs earnings per share about 16 percent annually, on average, but growth in overall net profits came in at about 11 percent annually. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Colby estimates that if Yahoo had invested the same amount of money in its operations, it would have had to generate only a 3.2 percent after-tax return to produce overall net profit growth of 16 percent annually over those years.<br />
+And <b>the buybacks provided only a one-time benefit.</b> </p>
+<p class="story-body-text" itemprop="articleBody">This analysis may be of interest to Starboard Value, which nominated directors to replace Yahooâs entire board on Thursday. </p>
+<p class="story-body-text" itemprop="articleBody">Starboardâs move means only one thing, <a href="//www.nytimes.com/2016/03/25/business/dealbook/challenge-to-yahoos-board-makes-a-sale-more-certain.html?ref=dealbook">Steven Davidoff Solomon writes in Deal Professor</a>. <b>The race is on to sell Yahoo.</b> </p>
+<p class="story-body-text" itemprop="articleBody">But it is a silly situation. Yahooâs directors are now trying to run an auction and reach a deal before they are thrown out. At the same time, Starboard is trying to unseat the board so it can cut the same deal. The groups are separated only by the fact that the hedge fund investors donât trust the directors to cut a good deal.<br />
+Yahoo has had a trust issue for years, Mr. Davidoff Solomon writes. As a result, some are even gossiping about whether Yahoo is taking the sale process seriously. </p>
+<p class="story-body-text" itemprop="articleBody">Yahoo may be in a tricky situation with this hedge fund, but it is  <b>hardly alone in buying back stock.</b> </p>
+<p class="story-body-text" itemprop="articleBody">A group of institutional investors, the Shareholder Forum, will convene soon to examine the benefits of buybacks. âYou really have to ask why a companyâs board decides to return a big chunk of capital instead of replacing managers with ones who can figure out how to develop the operations,â said Gary Lutin, who oversees the forum. <b>âIf the board doesnât think itâs worth investing in the companyâs future, how can a shareholder justify continuing to hold the stock, or voting for directors whoâve given up?â</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The Commerce Department will publish data on  <b>personal consumption and income</b> for February at 8:30 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>LAW GRADUATE WHO SUED HER SCHOOL LOSES AT TRIAL</strong> <span class="divider"> | </span></span> A jury in San Diego rejected claims by Anna Alaburda that the Thomas Jefferson School of Law enticed her to enroll by using misleading graduate employment figures,<br />
+<a href="//www.nytimes.com/2016/03/25/business/dealbook/law-graduate-who-sued-her-school-loses-at-trial.html?ref=dealbook">Elizabeth Olson reports in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Ms. Alaburda, 37, had <b>argued that the school reported a higher percentage of its graduates landed jobs after graduation than was actually case</b> and that her choice of school was based on bogus data. </p>
+<p class="story-body-text" itemprop="articleBody">She had amassed more than $150,000 in debt, but had been unable to find a full-time, salaried job as a lawyer. </p>
+<p class="story-body-text" itemprop="articleBody">A jury voted nine to three to reject her claims. </p>
+<p class="story-body-text" itemprop="articleBody">Thomas Jefferson stood by its employment figures, but argued that <b>earning a law degree was not a guarantee of a well-paying job.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Other law school graduates have tried to hold law schools to account. About 15 such lawsuits were derailed before they reached the jury. Ms. Alaburda, who invoked California state fraud protections, was the first to get her case before a jury. </p>
+<p class="story-body-text" itemprop="articleBody">Entry-level legal jobs began to shrink after the 2008 economic slowdown, and the American Bar Association has been taking steps to require law schools to be more open about postgraduate job placement. <b>But critics said the juryâs decision let schools off the hook.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Brian A. Procel, Ms. Alaburdaâs lawyer, said the school did not reveal that its employment figures included such work as pool cleaner, waitress or sales clerk, and that they were based on a small sample of graduates. </p>
+<p class="story-body-text" itemprop="articleBody">Thomas Jefferson employees said they did not understand the importance of the employment data and that the school was a nonprofit institution offering opportunities to students who might not have other options to attend law school. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Procel said these assertions were contradicted by correspondence indicating that <b>law school employees knew that the employment figures affected the law schoolâs national ranking.</b> </p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Dell to Sell I.T. Services Unit to Japanâs N.T.T. </strong> <span class="divider"> | </span></span> NTT Data, a unit of Japanâs former telephone monopoly, agreed to buy technology services businesses from Dell for $3.055 billion.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-28/japan-s-ntt-to-buy-dell-systems-for-3-055-billion"> bloomberg news</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sharp and Foxconn Talks Continue </strong> <span class="divider"> | </span></span> Hon Hai Precision Industry, Foxconn Technology Groupâs flagship company, on Sunday said that it would hold a board meeting on March 30 as scheduled and that negotiations to acquire the troubled Japanese electronics maker Sharp were ongoing.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-27/hon-hai-denies-reports-sharp-bailout-deal-to-be-signed-march-31"> bloomberg news </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sinochem Plans to Create Worldâs Largest Listed Rubber Company</strong> <span class="divider"> | </span></span> In the latest example of Chinaâs hunt for global commodities assets, the state-owned Sinochem International made an offer to buy Halcyon Agri  that valued the Singapore-based company at 450 million Singapore dollars, or about $328.4 million. <br /><span class="kicker"><a href="//www.wsj.com/articles/sinochem-plans-to-create-largest-listed-rubber-company-1459129602"> the wall street journal</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Italian Banksâ Tie-Up Paves Way for Consolidation </strong> <span class="divider"> | </span></span> Banca Popolare di Milano and Banco Popolare are merging to create the countryâs third-largest banking group by market capitalization with 170 billion euros in assets, just as the Italian banking sector is coming under strain.<br />
+<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/d30f634e-f408-11e5-96db-fc683b5e52db.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz44AYszmcF">the financial times</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ben Gray to Leave TPG Capital in Asia</strong> <span class="divider"> | </span></span> Mr. Gray, the co-head of TPG in Asia, will leave at the end of year and is said to be setting up his own Australia-focused investment firm.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/28/business/dealbook/ben-gray-to-leave-tpg-capital-in-asia.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Avon Nears Deal With Activist Investors to Avoid Proxy Fight</strong> <span class="divider"> | </span></span> Avon plans to announce as early as Monday that it has reached an agreement with Barington Capital Group and NuOrion Partners that will allow them to approve a new independent director for the companyâs board, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/avon-nears-deal-with-activist-investors-to-avoid-proxy-fight-1459119874"> the wall street journal </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hedge Fund Invasion of U.S. Treasuries Puts Bond Traders at Risk</strong> <span class="divider"> | </span></span> SociÃ©tÃ© GÃ©nÃ©rale and Commerzbank say that hedge funds, which often use borrowed money and jump in and out of trades at a momentâs notice, will increase the chances of sudden shocks in the worldâs de facto haven market.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-27/hedge-fund-invasion-of-u-s-treasuries-puts-bond-traders-at-risk">bloomberg news </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hedge Funds for Retail Class Face Regulatory Reckoning</strong> <span class="divider"> | </span></span> Managers of alternative mutual funds, which rely on derivatives to bet on and against shifts in global markets, say a proposal by the Securities and Exchange Commission would force them to scale back their strategies dramatically. <br /><span class="kicker"><a href="//www.wsj.com/articles/hedge-funds-for-retail-class-face-regulatory-reckoning-1459137603?mod=asia_home">the wall street journal </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Third Point Warns Seven &#038; i Over Nepotism</strong> <span class="divider"> | </span></span> Toshifumi Suzuki, the chief executive of Seven &#038; i Holdings, has chronic health problems, and investors fear he may try to name his son to lead SevenâEleven Japan and eventually become president of Seven &#038; i, Daniel Loeb, the founder of Third Point, wrote in a letter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-27/loeb-s-third-point-urges-seven-i-to-avoid-nepotism-picking-ceo">bloomberg news </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Japanese I.P.O.s Struggle to Gain Ground</strong> <span class="divider"> | </span></span> The tougher times are partly a consequence of a rout in Japanese equities that sent the benchmark Topix index to the worst start to a year on record and weighed on investorsâ ability to free up funds to buy new offerings.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-27/woes-descend-on-japanese-ipos-as-stocks-tank-at-start-of-trading"> bloomberg news</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="A Supreme Court Pioneer, Now Making Her Mark on Video Games" src="https://static01.nyt.com/images/2016/03/26/multimedia/27icivic/27icivic-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Supreme Court Pioneer, Now Making Her Mark on Video Games</strong> <span class="divider"> | </span></span> Justice Sandra Day OâConnor said she had never played video games until a few years ago. But now she is using them to teach students valuable civics lessons.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/28/technology/sandra-day-oconnor-supreme-court-video-games.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Charterâs $67 Billion Cable Merger Hinges on the Cord Cutters" src="https://static01.nyt.com/images/2016/03/28/business/28charter-subpic/26cable-subpic-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Charterâs $67 Billion Cable Merger Hinges on the Cord Cutters</strong> <span class="divider"> | </span></span> Charter Communications is poised to gain Federal Communications Commission approval to join with Time Warner Cable and Bright House Networks, and streaming looms large in the deal.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/28/business/media/charters-67-billion-cable-merger-hinges-on-the-cord-cutters.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Merrick Garland Is a Deft Navigator of Washingtonâs Legal Circles" src="https://static01.nyt.com/images/2016/03/27/us/27GARLAND/27GARLAND-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Merrick Garland Is a Deft Navigator of Washingtonâs Legal Circles</strong> <span class="divider"> | </span></span> Judge Merrick B. Garland, President Obamaâs Supreme Court nominee, has advanced as a centrist in a city where ambition is often rewarded when accompanied by partisan loyalty.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/27/us/politics/merrick-garland-obama-supreme-court-nominee.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="California Nears Deal to Adopt a $15 State Minimum Wage" src="https://static01.nyt.com/images/2016/03/28/us/28california-JP/28california-JP-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>California Nears Deal to Adopt a $15 State Minimum Wage</strong> <span class="divider"> | </span></span> If approved, the wage would increase incrementally from $10 over the next six years. A similar measure is also being considered in New York.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/28/us/california-nears-deal-to-adopt-a-15-state-minimum-wage.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Asian Infrastructure Investment Bank Not Looking for Trouble, President Says</strong> <span class="divider"> | </span></span> Jin Liqun, the president of the Asian Infrastructure Investment Bank, compared the China-ledbank to a new restaurant, saying it is up to customers, not the other restaurants, to decide its relevance.<br /><span class="kicker"><a href="//www.wsj.com/articles/aiib-not-looking-for-trouble-president-says-1458896738?mod=asia_home"> the wall street journal</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Forget the New iPhone. For Apple, Itâs All About the Dollar." src="https://static01.nyt.com/images/2016/03/27/business/27STRATEGIES/27STRATEGIES-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Forget the New iPhone. For Apple, Itâs All About the Dollar.</strong> <span class="divider"> | </span></span> When the dollar strengthens, sales of iPhones abroad are worth less in American currency, hurting profits and knocking down share prices, Jeff Sommer writes in Strategies.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/27/your-money/forget-the-new-iphone-for-apple-its-all-about-the-dollar.html">Strategies &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="When Not Paying Attention Pays Off" src="https://static01.nyt.com/images/2016/03/27/your-money/27LIST/27LIST-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>When Not Paying Attention Pays Off</strong> <span class="divider"> | </span></span> Re-evaluating your investment portfolio too frequently can lead to lower returns in the long run, John List writes in Your Money.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/27/your-money/when-not-paying-attention-pays-off.html">Special Section &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="How Buyers React When Prices Rise and Fall" src="https://static01.nyt.com/images/2016/03/27/your-money/27HASTINGS/27HASTINGS-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>How Buyers React When Prices Rise and Fall</strong> <span class="divider"> | </span></span> People overreact to price or income changes within a category like gasoline, working to save or splurge more than they would for a similar change in overall income.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/27/your-money/how-buyers-react-when-prices-rise-and-fall.html">Special Section &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/03/28/morning-agenda-ethereum-challenges-bitcoin/"
+					data-title="Morning Agenda: Ethereum Challenges Bitcoin"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Yahoo and the Buyback Mirage | Law Graduate Who Sued Her School Loses at Trial&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/03/28/morning-agenda-ethereum-challenges-bitcoin/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":47,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

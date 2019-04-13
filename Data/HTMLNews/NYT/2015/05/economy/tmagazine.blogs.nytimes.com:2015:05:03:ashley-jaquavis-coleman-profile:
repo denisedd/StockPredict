@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" lang="en-US" itemscope xmlns:og="//opengraphprotocol.org/schema/">
+<head profile="//gmpg.org/xfn/11"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Ashley and JaQuavis Coleman: Kiss Kiss Bang Bang</title>
+<link rel="shortcut icon" href="https://static01.nyt.com/packages/images/blogs/tmagazine/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="https://static01.nyt.com/js/common.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/app/lib/NYTD/0.0.1/tabset.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/common.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/memberTools.js"></script>
+<!--[if lt IE 9]>
+<script src="https://static01.nyt.com/js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="https://static01.nyt.com/js/common/screen/modifyNavigationDisplay.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/tabsetoverlayrevealer.js"></script>
+<!--[if lt IE 7]><script defer type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/pngfix.js"></script><![endif]-->
+<script type="text/JavaScript">
+// <![CDATA[
+var nyt_google_hints = "";
+var nyt_google_ad_channel = "bl_t-magazine";
+// ]]>
+</script>
+<script type="text/JavaScript">
+NYTD.Blogs.Ads = {};function processBlogsAds(data) { NYTD.Blogs.Ads = data.ads; }
+</script>
+<script type="text/javascript">
+if ((document.referrer).indexOf("nytimes.com") !== -1) {var nyt_doc_referrer = 'nytimes.com;';}else {var nyt_doc_referrer = '';}
+document.write( '<script id="adxScript" src="'+ '//www.nytimes.com' +'/adx/bin/adxrun.html?v=3&jsonp=processBlogsAds&page=' + 'blog.nytimes.com/tmagazine/post&positions=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&query=qstring&keywords='+ encodeURIComponent(nyt_doc_referrer) +';A-list;celebrity;chic;collections;concierge;design;designers;fashion;first+class;gossip;hotel;jet+set;luxury;models;New+York+Times;restaurant;runway;shopping;style;T+Magazine;travel;Men&#039;s+wear;Women&#039;s+wear;arts_and_letters;culture;t-spring-travel-2015;Coleman+Ashley+(1985-+);Coleman+JaQuavis;Blacks;Books+and+Literature;Flint+(Mich);Arts+and+Letters;Culture;T+Spring+Travel+2015;_featured;' + '"' + '>' + '</' + 'script>');
+</script>
+<script type="text/javascript" src="https://static01.nyt.com/js/common/sharetools/2.0/shareTools.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/app/save/crossPlatformSave.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/blogscrnr.js"></script>
+<link rel="stylesheet" type="text/css" href="https://static01.nyt.com/css/blogs/3.1/screen/themes/tmagazine/style.css" media="screen" />
+<meta name="channels" content="NytNow" />
+<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/tmagazine/Ashley and JaQuavis Coleman: Kiss Kiss Bang Bang ( 20150503 )" />
+<meta name="communityAssetURL" content="//tmagazine.blogs.nytimes.com/2015/05/03/ashley-jaquavis-coleman-profile/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta name="author" content="Jody Rosen" />
+<meta name="CLMST" content="Jody Rosen" />
+<meta name="byl" content="Jody Rosen" />
+<meta name="GBLC" content="Arts and Letters;Culture;T Spring Travel 2015">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1430677842" />
+<meta name="PUD" content="20150503" />
+<meta name="pdate" content="20150503" />
+<meta name="ptime" content="20150503143042" />
+<meta name="utime" content="20150504173236" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-05-04T17:32:36-04:00" />
+<meta name="DISPLAYDATE" content="May 3, 2015" />
+<meta name="dat" content="May 3, 2015" />
+<meta itemprop="articleSection" property="article:section" content="T:Style" />
+<meta name="CG" content="T:Style" />
+<meta name="SCG" content="tmagazine" />
+<meta name="BN" content="tmagazine" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Coleman, Ashley (1985- );Coleman, JaQuavis">
+<meta name="des" content="Blacks;Books and Literature">
+<meta name="geo" content="Flint (Mich)">
+<meta property="article:tag" content="Coleman Ashley (1985- )" />
+<meta property="article:tag" content="Coleman JaQuavis" />
+<meta property="article:tag" content="Blacks" />
+<meta property="article:tag" content="Books and Literature" />
+<meta property="article:tag" content="Flint (Mich)" />
+<meta property="article:tag" content="Arts and Letters" />
+<meta property="article:tag" content="Culture" />
+<meta property="article:tag" content="T Spring Travel 2015" />
+<meta property="article:tag" content="_featured" />
+<meta name="keywords" content="Coleman Ashley (1985- ),Coleman JaQuavis,Blacks,Books and Literature,Flint (Mich),Arts and Letters,Culture,T Spring Travel 2015,_featured" />
+<meta name="news_keywords" content="Ashley Coleman,Blacks,Books,Flint Michigan,JaQuavisColeman" />
+<meta name="description" content="Urban fiction, or street lit, has been snubbed by the publishing industry and scorned by black intellectuals. Yet these authors may just be the most successful literary couple in America." />
+<meta name="hdl_p" content="Kiss Kiss Bang Bang" />
+<meta name="hdl" content="Ashley and JaQuavis Coleman: Kiss Kiss Bang Bang" />
+<meta property="og:title" content="Ashley and JaQuavis Coleman: Kiss Kiss Bang Bang" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//tmagazine.blogs.nytimes.com/2015/05/03/ashley-jaquavis-coleman-profile/" />
+<meta property="og:site_name" content="T Magazine" />
+<meta property="og:description" content="Urban fiction, or street lit, has been snubbed by the publishing industry and scorned by black intellectuals. Yet these authors may just be the most successful literary couple in America." />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-1/17travel-arena-streetlit-1-facebookJumbo-v2.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-1/17travel-arena-streetlit-1-thumbLarge-v2.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Ashley and JaQuavis Coleman: Kiss Kiss Bang Bang" />
+<meta name="twitter:url" content="//tmagazine.blogs.nytimes.com/2015/05/03/ashley-jaquavis-coleman-profile/" />
+<meta name="twitter:description" content="Urban fiction, or street lit, has been snubbed by the publishing industry and scorned by black intellectuals. Yet these authors may just be the most successful literary couple in America." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-1/17travel-arena-streetlit-1-thumbLarge-v2.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-1/17travel-arena-streetlit-1-thumbLarge-v2.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@https://twitter.com/tmagazine">
+<script src="https://static01.nyt.com/js/app/lib/jquery/jquery-1.6.2.min.js" type="text/javascript"></script><script src="https://static01.nyt.com/js/EmbeddedComments/embeddedComments.js" type="text/javascript"></script>
+<link rel='prev' title='Miuccia&#8217;s Museum Opens' href='//tmagazine.blogs.nytimes.com/2015/05/02/fondazione-prada-museum-milan/' />
+<link rel='next' title='Burpee Nights' href='//tmagazine.blogs.nytimes.com/2015/05/04/new-york-gyms-night/' />
+<link rel='canonical' href='//tmagazine.blogs.nytimes.com/2015/05/03/ashley-jaquavis-coleman-profile/' />
+<link rel='shortlink' href='//tmagazine.blogs.nytimes.com/?p=297859' />
+<link rel='https://github.com/WP-API/WP-API' href='//tmagazine.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/tmagazine/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//tmagazine.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/t-magazine/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/tmagazine/2015/05/03/ashley-jaquavis-coleman-profile/" />
+<style type="text/css">
+address {font-style: normal;display: inline;}.story-meta-footer span + time {border: 0;}.story-meta-footer .kicker + time, .story-meta-footer .kicker + span {border-left: 1px solid #ccc;}.has-kicker .byline {border-left: 1px solid #ccc;padding: 0 5px 0 8px;}figure {    margin: 0px;}.credit {    display: inline;}.visually-hidden {    border: 0;    clip: rect(0 0 0 0);    height: 1px;    margin: -1px;    overflow: hidden;    padding: 0;    position: absolute;    width: 1px;}.entry-content .story-addendum {    color: #333;    font-style: italic;    font-size: 1rem;    line-height: 1.4375rem;    font-weight: 400;    font-family: georgia,"times new roman",times,serif;    margin-bottom: 1em;    max-width: 540px;}.entry-content .story-footer {    margin-top: 24px;    margin-bottom: 45px;}.entry-content .story-footer .story-notes p {    font-size: .875rem;    line-height: 1.125rem;    font-weight: 500;    font-family: "nyt-franklin", arial, helvetica, sans-serif;    margin-bottom: 14px;}.entry-content .story-footer:before {    content: "";    width: 60px;    height: 1px;    display: inline-block;    background-color: #000;    margin: 0 0 13px;}.entry-content .story-print-citation {    font-size: .6875rem;    line-height: .9375rem;    font-weight: 300;    font-family: "nyt-franklin", arial, helvetica, sans-serif;    color: #999;}body.single article.hentry {    padding: 15px 10px 0;}.fullScreenSlideShow #fullScreenWrapper {    z-index: 10000000;}figure .image {    margin-bottom: 7px;}figure .credit {    font-size: 1em;line-height: 1.2em;}.caption {    font-size: 1.2em;}body.blogHome.nyt-blog-tmagazine .hfeed .hentry:first-child,body.blogAuthor.nyt-blog-tmagazine .hfeed div:first-child+ .hentry {    margin-top: 0px!important;    padding-top: 0px!important;    background:none;}body.blogAuthor.nyt-blog-tmagazine .hfeed div:first-child+ .hentry,body.blogCategories.nyt-blog-tmagazine .hfeed div:first-child+ .hentry {    background:none;}body.blogHome.nyt-blog-tmagazine .hfeed .hentry,body.blogAuthor.nyt-blog-tmagazine .hfeed .hentry {    margin-top: 40px;    padding-top: 40px;}body.blogCategories.nyt-blog-tmagazine .resultsLabel,body.blogAuthor.nyt-blog-tmagazine .resultsLabel,body.blogTags.nyt-blog-tmagazine .resultsLabel {    margin-left: 15px;    margin-top: 15px;    border-bottom: 1px solid #e2e2e2;    padding-bottom: 15px;}body.nyt-blog-tmagazine #aCol .nav .next {    margin-left: 135px;}body.nyt-blog-tmagazine .entry-content .related-coverage {    margin-bottom: 1em;}body.nyt-blog-tmagazine .entry-content .related-coverage h6.kicker {    margin-bottom:5px;}body.nyt-blog-tmagazine .entry-content .related-coverage li {    margin-bottom: 0;}body.nyt-blog-tmagazine #cCol .nav .next {    margin-left: 45px;}body.nyt-blog-tmagazine #cCol .nav li {    max-width: 110px;}body.nyt-blog-tmagazine #aCol .nav li {    max-width: 190px;}body.nyt-blog-tmagazine .nav li a {    overflow: hidden;}body.nyt-blog-tmagazine.wideAd #aCol .nav .element1, body.nyt-blog-tmagazine.wideAd #aCol .nav .element2 {    width: 50%;}body.nyt-blog-tmagazine.wideAd #aCol .nav ul {    background: url("https://static01.nyt.com/images/layout/vertical_rule.gif") repeat-y center;}body.nyt-blog-tmagazine.wideAd #aCol .nav .next {    margin-left: 182px;}body.nyt-blog-tmagazine.wideAd #aCol .nav .w75 {    display: none;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo {    margin: 0 0 20px;    padding: 22px 22px 10px;    background: #f9f9f9;    overflow: hidden;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo .w190 {    float: right;    margin: 0 0 10px;    padding: 0;    width: auto;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo img {    width: 155px;    height: 103px;    margin: 0 0 0 10px;    padding: 0;    display: block !important;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo .nyt-article-byline {    margin-bottom: 4px;    font-size: 10px;    line-height: 13px;    font-weight: 500;    color: #808080;    font-family: arial;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo h4 {    font-size: 17px;    line-height: 21px;    font-weight: 500;    margin-bottom: 5px;    font-family: georgia;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo h4 a {    color: #000;    text-decoration: none;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo h4 a:hover {    color: #f00;    text-decoration: underline;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo .nyt-article-summary {    font-size: 13px;    line-height: 18px;    margin-bottom: 0;    font-family: georgia;    font-style: italic;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module {    border-bottom: 1px solid #000;    border-top: 1px solid #000;    padding: 10px 0 10px 0;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module .entry {    padding: 10px 0 0 0;    text-align: left;    border: none;}body.nyt-blog-tmagazine #aCol .postHeader .postSubHeader {    text-align: center;    margin-bottom: 5px;}body.nyt-blog-tmagazine #aCol .postHeader .postSubHeader .post-kicker {    text-transform: uppercase;    font-weight: bold;    font-size: 11px;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module {    border-bottom: 1px solid #000;    border-top: 1px solid #000;    padding: 10px 0 10px 0;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module .entry {    padding: 10px 0 0 0;    text-align: left;    border: none;}body.nyt-blog-tmagazine .entry-content .w190 .entry h6.kicker {    font-weight: 700;    margin-bottom: 5px;}body.nyt-blog-tmagazine .entry-content .w190 .entry h5 {    margin-bottom: 3px;}body.nyt-blog-tmagazine .entry-content .w190 .entry p.summary,body.nyt-blog-tmagazine .entry-content .w190 ul li {    font-family: arial;    font-size: 1.2em;    line-height: 1.5em;}body.nyt-blog-tmagazine .entry-content .w190 ul li a {    font-size: 0.9em;}body.nyt-blog-tmagazine .postMetaHeader .byline {    text-transform: uppercase;}body.nyt-blog-tmagazine.wideAd .w480,body.nyt-blog-tmagazine.wideAd .w592,body.nyt-blog-tmagazine.wideAd .w480 img,body.nyt-blog-tmagazine.wideAd .w592 img,body.nyt-blog-tmagazine.wideAd .videoplayerContainer,body.nyt-blog-tmagazine.wideAd .videoplayerContainer object,body.nyt-blog-tmagazine.wideAd .nytd-player-poster {height: 266px !important;}</style>
+</head>
+<body id=culture class="single postid-297859 blogPost  blog-universal nyt-blog-tmagazine" data-env="production" data-region="ewr1">
+<!-- Header1 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header1 != "undefined" ){document.write(NYTD.Blogs.Ads.Header1.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header1 != "undefined" ) { NYTD.jQuery("#Header1").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Header1"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Header1&query=qstring&keywords=?"></a></noscript>
+<!-- Header2 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header2 != "undefined" ){document.write(NYTD.Blogs.Ads.Header2.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header2 != "undefined" ) { NYTD.jQuery("#Header2").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Header2"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Header2&query=qstring&keywords=?"></a></noscript>
+<!-- Header3 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header3 != "undefined" ){document.write(NYTD.Blogs.Ads.Header3.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header3 != "undefined" ) { NYTD.jQuery("#Header3").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Header3"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Header3&query=qstring&keywords=?"></a></noscript>
+<a name="top"></a>
+<div id="shell" class="wrap">
+  <div id="PushDown" class="leaderboard ad clearfix">
+    <script type="text/javascript">
+      if ((typeof adxpos_PushDown == "undefined") || (typeof adxads[adxpos_PushDown] == "undefined") ) {
+        if ( $( "PushDown") ) {
+          $( "PushDown").hide();
+        }
+      }
+      if ((typeof adxpos_PushDown != "undefined") && (typeof adxads[adxpos_PushDown] != "undefined") ){
+        document.write(adxads[adxpos_PushDown]);
+      }
+    </script>
+  </div>
+  <div id="masthead-nav" class="wrap">
+    <div id="masthead">
+      <h2>
+        <a href="//www.nytimes.com/pages/t-magazine/index.html">
+          Go Back To Home
+        </a>
+      </h2>
+    </div>
+    <div class="navigation" id="topNav">
+      <ul id="mainNavigation" class="flush">
+        <li class="firstItem">
+          <a href="//www.nytimes.com/pages/t-magazine/womens-fashion/index.html">
+            Women's Fashion
+          </a>
+        </li>
+        <li class="secondItem">
+          <a href="//www.nytimes.com/pages/t-magazine/mens-fashion/index.html">
+            Men's Fashion
+          </a>
+        </li>
+        <li class="thirdItem">
+          <a href="//www.nytimes.com/pages/t-magazine/design/index.html">
+            Design
+          </a>
+        </li>
+        <li class="fourthItem">
+          <a href="//www.nytimes.com/pages/t-magazine/travel/index.html">
+            Travel
+          </a>
+        </li>
+        <li class="fifthItem">
+          <a href="//www.nytimes.com/pages/t-magazine/food/index.html">
+            Food
+          </a>
+        </li>
+        <li class="sixthItem">
+          <a href="//www.nytimes.com/pages/t-magazine/culture/index.html">
+            Culture
+          </a>
+        </li>
+        <li class="lastItem">
+          <a href="//www.nytimes.com/gst/tmagazine/video/index.html">
+            Video
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="masthead-nav-divider" class="singleRuleDivider">
+  </div>
+  <div class="searchModule">
+    <div class="insetV">
+      <div class="inlineSearchControl">
+        <form method="get" action="https://query.nytimes.com/search/tmagazine" enctype="application/x-www-form-urlencoded">
+          <input type="text" id="searchQuery" name="query" size="" value="SEARCH" class="text" onblur="if (this.value=='')this.value='SEARCH';" onfocus="if (this.value=='SEARCH')this.value='';">
+          <input type="image" src="//static01.nyt.com/images/tmagazine/buttons/search-button.gif" alt="Search" title="Search" id="searchSubmit">
+        </form>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+// <![CDATA[
+if ((typeof NYTD.Blogs.Ads != "undefined") && (typeof NYTD.Blogs.Ads.XXL != "undefined") ) {$(document.body).addClassName( "wideAd");}
+// ]]>
+</script><hr />
+<!-- Here is the start of everything good -->
+<div id="tmagazine" class="spanAC blog wrap">
+<div id="aCol">
+<hr />	<div id="content" class="hfeed">
+	<article class="post-297859 post type-post status-publish hentry category-arts_and_letters category-culture category-t-spring-travel-2015 category-featured per-coleman-ashley-1985 per-coleman-jaquavis des-blacks des-books-and-literature geo-flint-mich news_keywords-ashley-coleman news_keywords-blacks news_keywords-books news_keywords-flint-michigan news_keywords-jaquaviscoleman" id="post-297859">
+<header class="postHeader">
+    <div class="postSubHeader"><span class="post-kicker"><a href="//tmagazine.blogs.nytimes.com/category/arts_and_letters/?module=BlogCategory&version=Blog Post&action=Click&contentCollection=T:Style&pgtype=Blogs&region=Header">Arts and Letters</a></span>
+</div>
+	<h1 itemprop="headline" class="entry-title">Ashley and JaQuavis Coleman: Kiss Kiss Bang Bang</h1>		<div class="postMetaHeader story-meta-footer centeredText has-kicker">
+		<span class="kicker"><a href="//tmagazine.blogs.nytimes.com/category/culture/">Culture</a></span>
+				<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+			By Jody Rosen		</address>
+		<!-- date published --><time class="dateline " datetime="2015-05-03T18:30:42-04:00" itemprop="datePublished">May 3, 2015 2:30 pm</time>
+			<!-- date updated --><span class="visually-hidden updated">May 3, 2015 2:30 pm</span><span class="postMetaHeaderCommentCount commentCount hidden">
+					<a class="commentCountLink icon commentIcon" href="//tmagazine.blogs.nytimes.com/2015/05/03/ashley-jaquavis-coleman-profile/"></a>
+				</span>	</div>
+</header>
+<div class="entry-content">
+    <p class="story-body-text" itemprop="articleBody"><em>Urban fiction, or street lit, has been snubbed by the publishing industry and scorned by black intellectuals. Yet these authors may just be the most successful literary couple in America.</em></p>
+<div class="w592"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-1/17travel-arena-streetlit-1-tmagArticle-v2.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-1/17travel-arena-streetlit-1-tmagArticle-v2.jpg" src="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-1/17travel-arena-streetlit-1-tmagArticle-v2.jpg" id="100000003652109" width="592" height="395" alt="JaQuavis and Ashley Coleman, who fell in love as teenagers in Flint, Mich., and whose novels chronicle a hardscrabble world they know well."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">JaQuavis and Ashley Coleman, who fell in love as teenagers in Flint, Mich., and whose novels chronicle a hardscrabble world they know well.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Andreas Joseph</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">THE WRITERS <a href="//www.ashleyjaquavis.com">ASHLEY AND JAQUAVIS COLEMAN</a> know the value of a good curtain-raiser. The couple have co-authored dozens of novels, and they like to start them with a bang: a headlong action sequence, a blast of violence or sex that rocks readers back on their heels. But the Colemans concede they would be hard-pressed to dream up anything more gripping than their own real-life opening scene.</p>
+<p class="story-body-text" itemprop="articleBody">In the summer of 2001, JaQuavis Coleman was a 16-year-old foster child in Flint, Mich., the former auto-manufacturing mecca that had devolved, in the wake of General Motors&#8217; plant closures, into one of the country&#8217;s most dangerous cities, with a decimated economy and a violent crime rate more than three times the national average. When JaQuavis was 8, social services had removed him from his mother&#8217;s home. He spent years bouncing between foster families. At 16, JaQuavis was also a businessman: a crack dealer with a network of street-corner peddlers in his employ.<span id="more-297859"></span></p>
+<p class="story-body-text" itemprop="articleBody">One day that summer, JaQuavis met a fellow dealer in a parking lot on Flint&#8217;s west side. He was there to make a bulk sale of a quarter-brick, or &#8220;nine-piece&#8221; â a nine-ounce parcel of cocaine, with a street value of about $11,000. In the middle of the transaction, JaQuavis heard the telltale chirp of a walkie-talkie. His customer, he now realized, was an undercover policeman. JaQuavis jumped into his car and spun out onto the road, with two unmarked police cars in pursuit. He didn&#8217;t want to get into a high-speed chase, so he whipped his car into a church parking lot and made a run for it, darting into an alleyway behind a row of small houses, where he tossed the quarter-brick into some bushes. When JaQuavis reached the small residential street on the other side of the houses, he was greeted by the police, who handcuffed him and went to search behind the houses where, they told him, they were certain he had ditched the drugs. JaQuavis had been dealing since he was 12, had amassed more than $100,000 and had never been arrested. Now, he thought: It&#8217;s over.</p>
+<p class="story-body-text" itemprop="articleBody">But when the police looked in the bushes, they couldn&#8217;t find any cocaine. They interrogated JaQuavis, who denied having ever possessed or sold drugs. They combed the backyard alley some more. After an hour of fruitless efforts, the police were forced to unlock the handcuffs and release their suspect.</p>
+<p class="story-body-text" itemprop="articleBody">JaQuavis was baffled by the turn of events until the next day, when he received a phone call. The previous afternoon, a 15-year-old girl had been sitting in her home on the west side of Flint when she heard sirens. She looked out of the window of her bedroom, and watched a young man throw a package in the bushes behind her house. She recognized him. He was a high school classmate â a handsome, charismatic boy whom she had admired from afar. The girl crept outside and grabbed the bundle, which she hid in her basement. &#8220;I have something that belongs to you,&#8221; Ashley Snell told JaQuavis Coleman when she reached him by phone. &#8220;You wanna come over here and pick it up?&#8221;</p>
+<div class="w362"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-2/17travel-arena-streetlit-2-tmagSF.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-2/17travel-arena-streetlit-2-tmagSF.jpg" src="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-2/17travel-arena-streetlit-2-tmagSF.jpg" id="100000003652122" width="362" height="478" alt="Three of the nearly 50 works of urban fiction published by the Colemans over the last decade, often featuring drug deals, violence, sex and a brash kind of feminism."   /><meta itemprop="height" content="478"><meta itemprop="width" content="362"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Three of the nearly 50 works of urban fiction published by the Colemans over the last decade, often featuring drug deals, violence, sex and a brash kind of feminism.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Marko Metzinger</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">In the Colemans&#8217; first novel, &#8220;<a href="//www.amazon.com/Dirty-Money-Urban-Ashley-JaQuavis/dp/162286400X">Dirty Money</a>&#8221; (2005), they told a version of this story. The outline was the same: the drug deal gone bad, the dope chucked in the bushes, the fateful phone call. To the extent that the authors took poetic license, it was to tone down the meet-cute improbability of the true-life events. In &#8220;Dirty Money,&#8221; the girl, Anari, and the crack dealer, Maurice, circle each other warily for a year or so before coupling up. But the facts of Ashley and JaQuavis&#8217;s romance outstripped pulp fiction. They fell in love more or less at first sight, moved into their own apartment while still in high school and were married in 2008. &#8220;We were together from the day we met,&#8221; Ashley says. &#8220;I don&#8217;t think we&#8217;ve spent more than a week apart in total over the past 14 years.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">That partnership turned out to be creative and entrepreneurial as well as romantic. Over the past decade, the Colemans have published nearly 50 books, sometimes as solo writers, sometimes under pseudonyms, but usually as collaborators with a byline that has become a trusted brand: &#8220;Ashley &#038; JaQuavis.&#8221; They are marquee stars of urban fiction, or street lit, a genre whose inner-city settings and lurid mix of crime, sex and sensationalism have earned it comparisons to gangsta rap. The emergence of street lit is one of the big stories in recent American publishing, a juggernaut that has generated huge sales by catering to a readership â young, black and, for the most part, female â that historically has been ill-served by the book business. But the genre is also widely maligned. Street lit is subject to a kind of triple snobbery: scorned by literati who look down on genre fiction generally, ignored by a white publishing establishment that remains largely indifferent to black books and disparaged by African-American intellectuals for poor writing, coarse values and trafficking in racial stereotypes.</p>
+<p class="story-body-text" itemprop="articleBody">But if a certain kind of cultural prestige is shut off to the Colemans, they have reaped other rewards. They&#8217;ve built a large and loyal fan base, which gobbles up the new Ashley &#038; JaQuavis titles that arrive every few months. Many of those books are sold at street-corner stands and other off-the-grid venues in African-American neighborhoods, a literary gray market that doesn&#8217;t register a blip on best-seller tallies. Yet the Colemans&#8217; most popular series now regularly crack the trade fiction best-seller lists of The New York Times and Publishers Weekly. For years, the pair had no literary agent; they sold hundreds of thousands of books without banking a penny in royalties. Still, they have earned millions of dollars, almost exclusively from cash-for-manuscript deals negotiated directly with independent publishing houses. In short, though little known outside of the world of urban fiction, the Colemans are one of America&#8217;s most successful literary couples, a distinction they&#8217;ve achieved, they insist, because of their work&#8217;s gritty authenticity and their devotion to a primal literary virtue: the power of the ripping yarn.</p>
+<p class="story-body-text" itemprop="articleBody">&#8220;When you read our books, you&#8217;re gonna realize: âAshley &#038; JaQuavis are storytellers,&#8217;â&#8221; says Ashley. &#8220;Our tales will get your heart pounding.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">THE COLEMANS&#8217; HOME BASE â the cottage from which they operate their cottage industry â is a spacious four-bedroom house in a genteel suburb about 35 miles north of downtown Detroit. The house is plush, but when I visited this past winter, it was sparsely appointed. The couple had just recently moved in, and had only had time to fully furnish the bedroom of their 4-year-old son, Quaye.</p>
+<p class="story-body-text" itemprop="articleBody">In conversation, Ashley and JaQuavis exude both modesty and bravado: gratitude for their good fortune and bootstrappers&#8217; pride in having made their own luck. They talk a lot about their time in the trenches, the years they spent as a drug dealer and &#8220;ride-or-die girl&#8221; tandem. In Flint they learned to &#8220;grind hard.&#8221; Writing, they say, is merely a more elevated kind of grind.</p>
+<p class="story-body-text" itemprop="articleBody">&#8220;Instead of hitting the block like we used to, we hit the laptops,&#8221; says Ashley. &#8220;I know what every word is worth. So while I&#8217;m writing, I&#8217;m like: âOkay, there&#8217;s a hundred dollars. There&#8217;s a thousand dollars. There&#8217;s five thousand dollars.&#8217;â&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">They maintain a rigorous regimen. They each try to write 5,000 words per day, five days a week. The writers stagger their shifts: JaQuavis goes to bed at 7 p.m. and wakes up early, around 3 or 4 in the morning, to work while his wife and child sleep. Ashley writes during the day, often in libraries or at Starbucks.</p>
+<p class="story-body-text" itemprop="articleBody">They divide the labor in other ways. Chapters are divvied up more or less equally, with tasks assigned according to individual strengths. (JaQuavis typically handles character development. Ashley loves writing murder scenes.) The results are stitched together, with no editorial interference from one author in the other&#8217;s text. The real work, they contend, is the brainstorming. The Colemans spend weeks mapping out their plot-driven books â long conversations that turn into elaborate diagrams on dry-erase boards. &#8220;JaQuavis and I are so close, it makes the process real easy,&#8221; says Ashley. &#8220;Sometimes when I&#8217;m thinking of something, a plot point, he&#8217;ll say it out loud, and I&#8217;m like: âWait â did I say that?&#8217;â&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Their collaboration developed by accident, and on the fly. Both were bookish teenagers. Ashley read lots of Judy Blume and John Grisham; JaQuavis liked Shakespeare, Richard Wright and &#8220;Atlas Shrugged.&#8221; (Their first official date was at a Borders bookstore, where Ashley bought &#8220;The Coldest Winter Ever,&#8221; the Sister Souljah novel often credited with kick-starting the contemporary street-lit movement.) In 2003, Ashley, then 17, was forced to terminate an ectopic pregnancy. She was bedridden for three weeks, and to provide distraction and boost her spirits, JaQuavis challenged his girlfriend to a writing contest. &#8220;She just wasn&#8217;t talking. She was laying in bed. I said, âYou know what? I bet you I could write a better book than you.&#8217; My wife is real competitive. So I said, âYo, all right, $500 bet.&#8217; And I saw her eyes spark, like, âWhat?! You can&#8217;t write no better book than me!&#8217; So I wrote about three chapters. She wrote about three chapters. Two days later, we switched.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">The result, hammered out in a few days, would become &#8220;Dirty Money.&#8221; Two years later, when Ashley and JaQuavis were students at Ferris State University in Western Michigan, they sold the manuscript to Urban Books, a street-lit imprint founded by the best-selling author Carl Weber. At the time, JaQuavis was still making his living selling drugs. When Ashley got the phone call informing her that their book had been bought, she assumed they&#8217;d hit it big, and flushed more than $10,000 worth of cocaine down the toilet. Their advance was a mere $4,000.</p>
+<div class="w362"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-3/17travel-arena-streetlit-3-tmagSF.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-3/17travel-arena-streetlit-3-tmagSF.jpg" src="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-3/17travel-arena-streetlit-3-tmagSF.jpg" id="100000003652123" width="362" height="516" alt="The roots of street lit, found in the midcentury detective novels of Chester Himes and the â60s and â70s âghetto fictionâ of Iceberg Slim and Donald Goines."   /><meta itemprop="height" content="516"><meta itemprop="width" content="362"></div><figcaption class="caption" itemprop="description"><span class="caption-text">The roots of street lit, found in the midcentury detective novels of Chester Himes and the â60s and â70s âghetto fictionâ of Iceberg Slim and Donald Goines.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Marko Metzinger</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">Those advances would soon increase, eventually reaching five and six figures. The Colemans built their career, JaQuavis says, in a manner that made sense to him as a veteran dope peddler: by flooding the street with product. From the start, they were prolific, churning out books at a rate of four or five a year. Their novels made their way into stores; the now-defunct chain Waldenbooks, which had stores in urban areas typically bypassed by booksellers, was a major engine of the street-lit market. But Ashley and JaQuavis took advantage of distribution channels established by pioneering urban fiction authors such as Teri Woods and Vickie Stringer, and a network of street-corner tables, magazine stands, corner shops and bodegas. Like rappers who establish their bona fides with gray-market mixtapes, street-lit authors use this system to circumnavigate industry gatekeepers, bringing their work straight to the genre&#8217;s core readership. But urban fiction has other aficionados, in less likely places. &#8220;Our books are so popular in the prison system,&#8221; JaQuavis says. &#8220;We&#8217;re banned in certain penitentiaries. Inmates fight over the books â there are incidents, you know? I have loved ones in jail, and they&#8217;re like: &#8216;Yo, your books can&#8217;t come in here. It&#8217;s against the rules.&#8217;â&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">The appeal of the Colemans&#8217; work is not hard to fathom. The books are formulaic and taut; they deliver the expected goods efficiently and exuberantly. The titles telegraph the contents: &#8220;<a href="//www.amazon.com/Diary-Of-A-Street-Diva/dp/1601621418">Diary of a Street Diva</a>,&#8221; &#8220;<a href="//www.amazon.com/Kiss-Bang-Urban-Books/dp/1601624913">Kiss Kiss, Bang Bang</a>,&#8221; &#8220;<a href="//www.amazon.com/Murderville-First-Trilogy/dp/1936399008">Murderville</a>.&#8221; The novels serve up a stream of explicit sex and violence in a slangy, tangy, profane voice. In Ashley &#038; JaQuavis&#8217;s books people don&#8217;t get killed: they get &#8220;popped,&#8221; &#8220;laid out,&#8221; get their &#8220;cap twisted back.&#8221; The smut is constant, with emphasis on the earthy, sticky, olfactory particulars. Romance novel clichÃ©s â shuddering orgasms, heroic carnal feats, superlative sexual skill sets â are rendered in the Colemans&#8217; punchy patois.</p>
+<p class="story-body-text" itemprop="articleBody">Subtlety, in other words, isn&#8217;t Ashley &#038; JaQuavis&#8217;s forte. But their books do have a grainy specificity. In &#8220;<a href="//www.goodreads.com/book/show/5953477-the-cartel">The Cartel</a>&#8221; (2008), the first novel in the Colemans&#8217; best-selling saga of a Miami drug syndicate, they catch the sights and smells of a crack workshop in a housing project: the nostril-stinging scent of cocaine and baking soda bubbling on stovetops; the teams of women, stripped naked except for hospital masks so they can&#8217;t pilfer the merchandise, &#8220;cutting up the cooked coke on the round wood table.&#8221; The subject matter is dark, but the Colemans&#8217; tone is not quite noir. Even in the grimmest scenes, the mood is high-spirited, with the writers palpably relishing the lewd and gory details: the bodies writhing in boudoirs and crumpling under volleys of bullets, the geysers of blood and other bodily fluids.</p>
+<p class="story-body-text" itemprop="articleBody">The luridness of street lit has made it a flashpoint, inciting controversy reminiscent of the hip-hop culture wars of the 1980s and &#8217;90s. But the street-lit debate touches deeper historical roots, reviving decades-old arguments in black literary circles about the mandate to uplift the race and present wholesome images of African-Americans. In 1928, W.âE.âB. Du Bois slammed the &#8220;licentiousness&#8221; of &#8220;<a href="//www.goodreads.com/book/show/999816.Home_to_Harlem">Home to Harlem</a>,&#8221; Claude McKay&#8217;s rollicking novel of Harlem nightlife. McKay&#8217;s book, Du Bois wrote, &#8220;for the most part nauseates me, and after the dirtier parts of its filth I feel distinctly like taking a bath.&#8221; Similar sentiments have greeted 21st-century street lit. In a 2006 New York Times Op-Ed essay, the journalist and author Nick Chiles decried &#8220;the sexualization and degradation of black fiction.&#8221; African-American bookstores, Chiles complained, are &#8220;overrun with novels that .â.â. appeal exclusively to our most prurient natures â as if these nasty books were pairing off back in the stockrooms like little paperback rabbits and churning out even more graphic offspring that make Ralph Ellison books cringe into a dusty corner.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Copulating paperbacks aside, it&#8217;s clear that the street-lit debate is about more than literature, touching on questions of paternalism versus populism, and on middle-class anxieties about the black underclass. &#8220;It&#8217;s part and parcel of black elites&#8217; efforts to define not only a literary tradition, but a racial politics,&#8221; said Kinohi Nishikawa, an assistant professor of English and African-American Studies at Princeton University. &#8220;There has always been a sense that because African-Americans&#8217; opportunities to represent themselves are so limited in the first place, any hint of criminality or salaciousness would necessarily be a knock on the entire racial politics. One of the pressing debates about African-American literature today is: If we can&#8217;t include writers like Ashley &#038; JaQuavis, to what extent is the foundation of our thinking about black literature faulty? Is it just a literature for elites? Or can it be inclusive, bringing urban fiction under the purview of our umbrella term &#8216;African-American literature&#8217;?&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Defenders of street lit note that the genre has a pedigree: a tradition of black pulp fiction that stretches from <a href="//www.goodreads.com/author/show/4392029.Chester_Himes">Chester Himes</a>, the midcentury author of hardboiled Harlem detective stories, to the 1960s and &#8217;70s &#8220;ghetto fiction&#8221; of Iceberg Slim and Donald Goines, to the current wave of urban fiction authors. Others argue for street lit as a social good, noting that it attracts a large audience that might otherwise never read at all. Scholars like Nishikawa link street lit to recent studies showing increased reading among African-Americans. A 2014 Pew Research Center report found that a greater percentage of black Americans are book readers than whites or Latinos.</p>
+<p class="story-body-text" itemprop="articleBody">For their part, the Colemans place their work in the broader black literary tradition. &#8220;You have Maya Angelou, Alice Walker, James Baldwin â all of these traditional black writers, who wrote about the struggles of racism, injustice, inequality,&#8221; says Ashley. &#8220;We&#8217;re writing about the struggle as it happens now. It&#8217;s just a different struggle. I&#8217;m telling my story. I&#8217;m telling the struggle of a black girl from Flint, Michigan, who grew up on welfare.&#8221;</p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-4/17travel-arena-streetlit-4-articleInline.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-4/17travel-arena-streetlit-4-articleInline.jpg" src="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-arena-streetlit-4/17travel-arena-streetlit-4-articleInline.jpg" id="100000003652124" width="190" height="285" alt="The Colemans in their new four-bedroom house in the northern suburbs of Detroit."   /><meta itemprop="height" content="285"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text">The Colemans in their new four-bedroom house in the northern suburbs of Detroit.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Courtesy of Ashley and JaQuavis Coleman</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">Perhaps there is a high-minded case to be made for street lit. But the virtues of Ashley &#038; JaQuavis&#8217;s work are more basic. Their novels do lack literary polish. The writing is not graceful; there are passages of clunky exposition and sex scenes that induce guffaws and eye rolls. But the pleasure quotient is high. The books flaunt a garish brand of feminism, with women characters cast not just as vixens, but also as gangsters â cold-blooded killers, &#8220;murder mamas.&#8221; The stories are exceptionally well-plotted. &#8220;The Cartel&#8221; opens by introducing its hero, the crime boss Carter Diamond; on page 9, a gunshot spatters Diamond&#8217;s brain across the interior of a police cruiser. The book then flashes back seven years and begins to hurtle forward again â a bullet train, whizzing readers through shifting alliances, romantic entanglements and betrayals, kidnappings, shootouts with Haitian and Dominican gangsters, and a cliffhanger closing scene that leaves the novel&#8217;s heroine tied to a chair in a basement, gruesomely tortured to the edge of death. Ashley &#038; JaQuavis&#8217;s books are not Ralph Ellison, certainly, but they build up quite a head of steam. They move.</p>
+<p class="story-body-text" itemprop="articleBody">The Colemans are moving themselves these days. They recently signed a deal with St. Martin&#8217;s Press, which will bring out the next installment in the &#8220;Cartel&#8221; series as well as new solo series by both writers. The St. Martin&#8217;s deal is both lucrative and legitimizing â a validation of Ashley and JaQuavis&#8217;s work by one of publishing&#8217;s most venerable houses. The Colemans&#8217; ambitions have grown, as well. A recent trilogy, &#8220;Murderville,&#8221; tackles human trafficking and the blood-diamond industry in West Africa, with storylines that sweep from Sierra Leone to Mexico to Los Angeles. Increasingly, Ashley &#038; JaQuavis are leaning on research â traveling to far-flung settings and hitting the books in the libraries â and spending less time mining their own rough-and-tumble past.</p>
+<p class="story-body-text" itemprop="articleBody">But Flint remains a source of inspiration. One evening not long ago, JaQuavis led me on a tour of his hometown: a popular roadside bar; the parking lot where he met the undercover cop for the ill-fated drug deal; Ashley&#8217;s old house, the site of his almost-arrest. He took me to a ramshackle vehicle repair shop on Flint&#8217;s west side, where he worked as a kid, washing cars. He showed me a bathroom at the rear of the garage, where, at age 12, he sneaked away to inspect the first &#8220;boulder&#8221; of crack that he ever sold. A spray-painted sign on the garage wall, which JaQuavis remembered from his time at the car wash, offered words of warning:</p>
+<p class="story-body-text" itemprop="articleBody"><webonly>WHAT EVERY YOUNG MAN SHOULD KNOW<br />
+ABOUT USING A GUN:<br />
+MURDER .â.â. 30 Years<br />
+ARMED ROBBERY .â.â. 15 Years<br />
+ASSAULT .â.â. 15 Years<br />
+RAPE .â.â. 20 Years<br />
+POSSESSION .â.â. 5 Years<br />
+JACKING .â.â. 20 YEARS</webonly></p>
+<p class="story-body-text" itemprop="articleBody">&#8220;We still love Flint, Michigan,&#8221; JaQuavis says. &#8220;It&#8217;s so seedy, so treacherous. But there&#8217;s some heart in this city. This is where it all started, selling books out the box. In the days when we would get those little $40,000 advances, they&#8217;d send us a couple boxes of books for free. We would hit the streets to sell our books, right out of the car trunk. It was a hustle. It still is.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">One old neighborhood asset that the Colemans have not shaken off is swagger. &#8220;My wife is the best female writer in the game,&#8221; JaQuavis told me. &#8220;I believe I&#8217;m the best male writer in the game. I&#8217;m sleeping next to the best writer in the world. And she&#8217;s doing the same.&#8221;</p>
+    <footer class="story-footer">
+    <div class="story-meta">
+        <p class="story-print-citation">A version of this article appears in print on 05/17/2015, on page <span itemprop="printSection">M2</span><span itemprop="printPage">104</span> of the <span itemprop="printEdition">NewYork</span> edition with the headline: Kiss Kiss Bang Bang.</p>    </div>
+</footer>
+</div>
+</article>
+<div class="entry-meta">
+        <div class="shareTools shareToolsThemeClassic shareToolsThemeClassicHorizontal articleShareToolsBottom " data-shares="facebook|,twitter|,google|,save,email,showall|Share,print" data-url="//tmagazine.blogs.nytimes.com/2015/05/03/ashley-jaquavis-coleman-profile/" data-title="Ashley and JaQuavis Coleman: Kiss Kiss Bang Bang" data-description="Urban fiction, or street lit, has been snubbed by the publishing industry and scorned by black intellectuals. Yet these authors may just be the most successful literary couple in America."></div>
+    </div><!-- end .entry-meta -->		<hr />
+		<div class="w75 left"><img src="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-look-prada/17travel-look-prada-thumbStandard.jpg" width="75" height="75"></div><div class="w75 right"><img src="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-look-gyms/17travel-look-gyms-thumbStandard.jpg" width="75" height="75"></div>	<div class="module box nav">
+		<ul class="opposingFloatControl wrap">
+			<li class="element1">
+								<span class="previous">Previous Post</span>
+				<!-- date published --><time class="dateline " datetime="2015-05-02T12:15:05-04:00" itemprop="datePublished">May 2, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">May 2, 2015</span>				<a href="//tmagazine.blogs.nytimes.com/2015/05/02/fondazione-prada-museum-milan/" title="Miuccia&#8217;s Museum Opens">Miuccia&#8217;s Museum Opens</a>
+							</li>
+			<li class="element2">
+								<span class="next">Next Post</span>
+				<!-- date published --><time class="dateline " datetime="2015-05-04T13:00:26-04:00" itemprop="datePublished">May 4, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">May 4, 2015</span>				<a href="//tmagazine.blogs.nytimes.com/2015/05/04/new-york-gyms-night/" title="Burpee Nights">Burpee Nights</a>
+							</li>
+		</ul>
+	</div>
+<!-- community comments -->
+<a id="postComment"></a>
+<div id="commentsContainer" class="commentsContainer"></div>
+<script type="text/javascript">
+NYTD.jQuery(document).ready(function ($) {
+   NYTD.commentsInstance = new EmbeddedComments($, 'NYTD.commentsInstance' );
+   NYTD.commentsInstance.init({configName: 'default'});
+});
+</script>
+	</div> <!-- end content -->
+	<div id="google_ads_aCol">
+<!-- SponLink2 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink2 != "undefined" ){document.write(NYTD.Blogs.Ads.SponLink2.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink2 != "undefined" ) { NYTD.jQuery("#SponLink2").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=SponLink2"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=SponLink2&query=qstring&keywords=?"></a></noscript>
+</div>
+</div><!-- end aCol -->
+<div id="cCol">
+<div id="blog-index">
+	<a href="//www.nytimes.com/blogs/" title="Blogs - The New York Times">All NYTimes.com Blogs Â»</a>
+</div>
+<div class="w50 left"><img src="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-look-prada/17travel-look-prada-thumbStandard.jpg" width="50" height="50"></div><div class="w50 right"><img src="https://static01.nyt.com/images/2015/05/17/t-magazine/17travel-look-gyms/17travel-look-gyms-thumbStandard.jpg" width="50" height="50"></div>	<div class="module box nav">
+		<ul class="opposingFloatControl wrap">
+			<li class="element1">
+								<span class="previous">Previous Post</span>
+								<a href="//tmagazine.blogs.nytimes.com/2015/05/02/fondazione-prada-museum-milan/" title="Miuccia&#8217;s Museum Opens">Miuccia&#8217;s Museum Opens</a>
+							</li>
+			<li class="element2">
+								<span class="next">Next Post</span>
+								<a href="//tmagazine.blogs.nytimes.com/2015/05/04/new-york-gyms-night/" title="Burpee Nights">Burpee Nights</a>
+							</li>
+		</ul>
+	</div>
+<div class=" module ad" id="XXL">
+	<!-- XXL position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.XXL != "undefined" ){document.write(NYTD.Blogs.Ads.XXL.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.XXL != "undefined" ) { NYTD.jQuery("#XXL").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=XXL"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=XXL&query=qstring&keywords=?"></a></noscript>
+</div>
+	    <div class='box module ad nocontent' id="MiddleRight">
+			<div class='bigAdContainer'>
+				<!-- MiddleRight position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.MiddleRight != "undefined" ){document.write(NYTD.Blogs.Ads.MiddleRight.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.MiddleRight != "undefined" ) { NYTD.jQuery("#MiddleRight").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=MiddleRight"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=MiddleRight&query=qstring&keywords=?"></a></noscript>
+			</div>
+	    </div>
+	    	<div class='box module ad nocontent' id="Box1">
+	<!-- Box1 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Box1 != "undefined" ){document.write(NYTD.Blogs.Ads.Box1.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Box1 != "undefined" ) { NYTD.jQuery("#Box1").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Box1"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Box1&query=qstring&keywords=?"></a></noscript>
+	</div>
+	<div id="google_ads" class="box module ad">
+<!-- SponLink position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink != "undefined" ){document.write(NYTD.Blogs.Ads.SponLink.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink != "undefined" ) { NYTD.jQuery("#SponLink").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=SponLink"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=SponLink&query=qstring&keywords=?"></a></noscript>
+</div>
+</div><!-- end cCol --></div><!-- end blog wrap --><div id="footer" class="singleRule">
+	<div class="opposingFloatControl wrap">
+		<div class="element1">
+			<ul id="footerNavigation" class="flush">
+				<li class="firstItem">
+					<a href="//www.nytimes.com">NYTIMES.COM</a></li>
+				<li class="secondItem">
+					<a href="//www.nytimes.com/ref/membercenter/help/infoservdirectory.html">CONTACT US</a>
+				</li>
+				<li class="thirdItem">
+					<a href="//nytmediakit.com/">MEDIA KIT</a>
+				</li>
+				<li class="fourthItem">
+					<a href="//www.nytimes.com/ref/membercenter/help/privacysummary.html">PRIVACY POLICY</a>
+				</li>
+				<li class="lastItem">
+					<a href="//www.nytco.com/">THE NEW YORK TIMES COMPANY</a>
+				</li>
+			</ul>
+		</div>
+		<div class="element2">
+			<div id="footerLogo">
+				<a href="//www.nytimes.com/pages/t-magazine/index.html">The New York Times Style Magazine</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div> <!-- end page --><!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-23',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":21,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

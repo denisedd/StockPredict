@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004439893"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1464345252" />
+<meta name="PUD" content="20160527" />
+<meta name="pdate" content="20160527" />
+<meta name="ptime" content="20160527063412" />
+<meta name="utime" content="20160527103412" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-05-27T10:34:12-04:00" />
+<meta name="DISPLAYDATE" content="May 27, 2016" />
+<meta name="dat" content="May 27, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Denton, Nick;Redstone, Sumner M;Thiel, Peter A;Trump, Donald J;Yellen, Janet L">
+<meta name="des" content="Android (Operating System);Appointments and Executive Changes;Arbitration, Conciliation and Mediation;Banking and Financial Institutions;Copyrights and Copyright Violations;Cyberattacks and Hackers;Google Phone;Initial Public Offerings;Legal Profession;Mergers, Acquisitions and Divestitures;News and News Media;Open-Source Software;Robberies and Thefts;Start-ups;Suits and Litigation (Civil);Venture Capital">
+<meta name="org" content="1Malaysia Development Berhad (1MDB);Apple Inc;Axa SA;Bank of America Corporation;Blockchain;China National Chemical Corp;Citigroup Inc;Federal Reserve System;FireEye Inc;Gawker.com;Houlihan Lokey Inc.;JPMorgan Chase &amp; Company;Konecranes Inc;Koninklijke Philips Electronics NV;Lending Club;McDonald&#039;s Corporation;Oracle Corporation;Prosper Marketplace Inc;Snapchat Inc;SWIFT(Society for Worldwide Interbank Financial Telecommunication);Symantec Corporation;TPG Capital;Valeant Pharmaceuticals International Inc;Verizon Communications Inc;Yahoo! Inc;Zoomlion Heavy Industry Science &amp; Technology Development Co Ltd">
+<meta name="geo" content="North Korea">
+<meta name="ticker" content="Apple Inc|AAPL|NASDAQ;Axa SA|AXAHY|Other OTC;Bank of America Corporation|BAC|NYSE;Citigroup Inc|C|NYSE;JPMorgan Chase & Company|JPM|NYSE;Koninklijke Philips Electronics NV|PHG|NYSE;McDonald's Corporation|MCD|NYSE;Oracle Corporation|ORCL|NYSE;Symantec Corporation|SYMC|NASDAQ;Valeant Pharmaceuticals International Inc|VRX|NYSE;Verizon Communications Inc|VZ|NYSE;Yahoo! Inc|YHOO|NASDAQ" />
+<meta property="article:tag" content="Denton Nick" />
+<meta property="article:tag" content="Redstone Sumner M" />
+<meta property="article:tag" content="Thiel Peter A" />
+<meta property="article:tag" content="Trump Donald J" />
+<meta property="article:tag" content="Yellen Janet L" />
+<meta property="article:tag" content="Android (Operating System)" />
+<meta property="article:tag" content="Appointments and Executive Changes" />
+<meta property="article:tag" content="Arbitration Conciliation and Mediation" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Copyrights and Copyright Violations" />
+<meta property="article:tag" content="Cyberattacks and Hackers" />
+<meta property="article:tag" content="Google Phone" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Legal Profession" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="News and News Media" />
+<meta property="article:tag" content="Open-Source Software" />
+<meta property="article:tag" content="Robberies and Thefts" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="1Malaysia Development Berhad (1MDB)" />
+<meta property="article:tag" content="Apple Inc" />
+<meta property="article:tag" content="Axa SA" />
+<meta property="article:tag" content="Bank of America Corporation" />
+<meta property="article:tag" content="Blockchain" />
+<meta property="article:tag" content="China National Chemical Corp" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="FireEye Inc" />
+<meta property="article:tag" content="Gawker.com" />
+<meta property="article:tag" content="Houlihan Lokey Inc." />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="Konecranes Inc" />
+<meta property="article:tag" content="Koninklijke Philips Electronics NV" />
+<meta property="article:tag" content="Lending Club" />
+<meta property="article:tag" content="McDonald&#039;s Corporation" />
+<meta property="article:tag" content="Oracle Corporation" />
+<meta property="article:tag" content="Prosper Marketplace Inc" />
+<meta property="article:tag" content="Snapchat Inc" />
+<meta property="article:tag" content="SWIFT(Society for Worldwide Interbank Financial Telecommunication)" />
+<meta property="article:tag" content="Symantec Corporation" />
+<meta property="article:tag" content="TPG Capital" />
+<meta property="article:tag" content="Valeant Pharmaceuticals International Inc" />
+<meta property="article:tag" content="Verizon Communications Inc" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="Zoomlion Heavy Industry Science &amp; Technology Development Co Ltd" />
+<meta property="article:tag" content="North Korea" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Denton Nick,Redstone Sumner M,Thiel Peter A,Trump Donald J,Yellen Janet L,Android (Operating System),Appointments and Executive Changes,Arbitration Conciliation and Mediation,Banking and Financial Institutions,Copyrights and Copyright Violations,Cyberattacks and Hackers,Google Phone,Initial Public Offerings,Legal Profession,Mergers Acquisitions and Divestitures,News and News Media,Open-Source Software,Robberies and Thefts,Start-ups,Suits and Litigation (Civil),Venture Capital,1Malaysia Development Berhad (1MDB),Apple Inc,Axa SA,Bank of America Corporation,Blockchain,China National Chemical Corp,Citigroup Inc,Federal Reserve System,FireEye Inc,Gawker.com,Houlihan Lokey Inc.,JPMorgan Chase &amp; Company,Konecranes Inc,Koninklijke Philips Electronics NV,Lending Club,McDonald&#039;s Corporation,Oracle Corporation,Prosper Marketplace Inc,Snapchat Inc,SWIFT(Society for Worldwide Interbank Financial Telecommunication),Symantec Corporation,TPG Capital,Valeant Pharmaceuticals International Inc,Verizon Communications Inc,Yahoo! Inc,Zoomlion Heavy Industry Science &amp; Technology Development Co Ltd,North Korea,DealBook" />
+<meta name="news_keywords" content="Blockchain,Gawker.com,Startup" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F05%2F27%2Fmorning-agenda-north-korea-linked-to-attacks-on-banks%2F" title="Morning Agenda: North Korea Linked to Attacks on Banks" />
+<meta name="description" content="Google Wins Copyright Dispute With Oracle &#124; Court Rules Against Imposed Arbitration &#124; Gawker&#8217;s Founder Criticizes Campaign Against Company" />
+<meta name="hdl" content="Morning Agenda: North Korea Linked to Attacks on Banks" />
+<meta property="og:title" content="Morning Agenda: North Korea Linked to Attacks on Banks" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/05/27/morning-agenda-north-korea-linked-to-attacks-on-banks/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Google Wins Copyright Dispute With Oracle &#124; Court Rules Against Imposed Arbitration &#124; Gawker&#8217;s Founder Criticizes Campaign Against Company" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: North Korea Linked to Attacks on Banks" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/05/27/morning-agenda-north-korea-linked-to-attacks-on-banks/" />
+<meta name="twitter:description" content="Google Wins Copyright Dispute With Oracle &#124; Court Rules Against Imposed Arbitration &#124; Gawker&#8217;s Founder Criticizes Campaign Against Company" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Peter Thiel&#8217;s Secret War With Gawker' href='//news.blogs.nytimes.com/2016/05/26/morning-agenda-peter-thiels-secret-war-with-gawker/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/05/27/what-were-reading-157/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/05/27/morning-agenda-north-korea-linked-to-attacks-on-banks/' />
+<link rel='shortlink' href='//nyti.ms/1TGAvlQ' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/05/27/morning-agenda-north-korea-linked-to-attacks-on-banks/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: North Korea Linked to Attacks on Banks - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4913 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: North Korea Linked to Attacks on Banks        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/05/27/morning-agenda-north-korea-linked-to-attacks-on-banks/"
+	 data-title="Morning Agenda: North Korea Linked to Attacks on Banks"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Google Wins Copyright Dispute With Oracle | Court Rules Against Imposed Arbitration | Gawker&#039;s Founder Criticizes Campaign Against Company&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/27/morning-agenda-north-korea-linked-to-attacks-on-banks/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 27, 2016 6:34 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: North Korea Linked to Attacks on Banks</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-05-27T10:34:12+00:00" itemprop="datePublished">May 27, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">May 27, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4913 post type-post status-publish hentry category-dealbook tag-1malaysia-development-berhad-1mdb tag-android-operating-system tag-apple-inc tag-appointments-and-executive-changes tag-arbitration-conciliation-and-mediation tag-axa-sa tag-bank-of-america-corporation tag-banking-and-financial-institutions tag-blockchain tag-china-national-chemical-corp tag-citigroup-inc tag-copyrights-and-copyright-violations tag-cyberattacks-and-hackers tag-denton-nick tag-federal-reserve-system tag-fireeye-inc tag-gawker-com tag-google-phone tag-houlihan-lokey-inc tag-initial-public-offerings tag-jpmorgan-chase-company tag-konecranes-inc tag-koninklijke-philips-electronics-nv tag-legal-profession tag-lending-club tag-mcdonalds-corporation tag-mergers-acquisitions-and-divestitures tag-news-and-news-media tag-north-korea tag-open-source-software tag-oracle-corporation tag-prosper-marketplace-inc tag-redstone-sumner-m tag-robberies-and-thefts tag-snapchat-inc tag-start-ups tag-suits-and-litigation-civil tag-swiftsociety-for-worldwide-interbank-financial-telecommunication tag-symantec-corporation tag-thiel-peter-a tag-tpg-capital tag-trump-donald-j tag-valeant-pharmaceuticals-international-inc tag-venture-capital tag-verizon-communications-inc tag-yahoo-inc tag-yellen-janet-l tag-zoomlion-heavy-industry-science-technology-development-co-ltd per-denton-nick per-redstone-sumner-m per-thiel-peter-a per-trump-donald-j per-yellen-janet-l des-android-operating-system des-appointments-and-executive-changes des-arbitration-conciliation-and-mediation des-banking-and-financial-institutions des-copyrights-and-copyright-violations des-cyberattacks-and-hackers des-google-phone des-initial-public-offerings des-legal-profession des-mergers-acquisitions-and-divestitures des-news-and-news-media des-open-source-software des-robberies-and-thefts des-start-ups des-suits-and-litigation-civil des-venture-capital org-1malaysia-development-berhad-1mdb org-apple-inc org-axa-sa org-bank-of-america-corporation org-blockchain org-china-national-chemical-corp org-citigroup-inc org-federal-reserve-system org-fireeye-inc org-gawker-com org-houlihan-lokey-inc org-jpmorgan-chase-company org-konecranes-inc org-koninklijke-philips-electronics-nv org-lending-club org-mcdonalds-corporation org-oracle-corporation org-prosper-marketplace-inc org-snapchat-inc org-swiftsociety-for-worldwide-interbank-financial-telecommunication org-symantec-corporation org-tpg-capital org-valeant-pharmaceuticals-international-inc org-verizon-communications-inc org-yahoo-inc org-zoomlion-heavy-industry-science-technology-development-co-ltd geo-north-korea news_keywords-blockchain news_keywords-gawker-com news_keywords-startup" id="post-4913">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: North Korea Linked to Attacks on Banks</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-05-27T10:34:12+00:00" itemprop="datePublished">May 27, 2016 6:34 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 27, 2016 6:34 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/05/27/morning-agenda-north-korea-linked-to-attacks-on-banks/" data-title="Morning Agenda: North Korea Linked to Attacks on Banks" data-description="Google Wins Copyright Dispute With Oracle | Court Rules Against Imposed Arbitration | Gawker&#039;s Founder Criticizes Campaign Against Company">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>NORTH KOREA LINKED TO ATTACKS ON BANKS</strong> <span class="divider"> | </span></span> Security researchers have tied several online breaches at Asian banks to North Korea,<br />
+<a href="//www.nytimes.com/2016/05/27/business/dealbook/north-korea-linked-to-digital-thefts-from-global-banks.html?ref=dealbook">Nicole Perlroth and Michael Corkery report in DealBook.</a> The digital security firm Symantec said that in three recent attacks, <b>the thieves used a rare piece of code that had been seen in only two previous cases</b> â the hacking attack on Sony Pictures in 2014 and attacks on banks and media companies in South Korea the year before. </p>
+<p class="story-body-text" itemprop="articleBody">Symantec researchers said the evidence linked an attack at a bank in the Philippines last October with attacks on Tien Phong Bank in Vietnam in December and another in February that resulted in the theft of $81 million from the central bank of Bangladesh. </p>
+<p class="story-body-text" itemprop="articleBody">Eric Chien, a security researcher at Symantec who found the code used across the attacks, said it was <b>the first time that a nation had used online attacks for financial gain.</b> </p>
+<p class="story-body-text" itemprop="articleBody">The attacks raised alarm bells because the thieves gained access to Swift, which is considered the worldâs most secure payment messaging system. It is used by 11,000 banks and companies to move money between countries, making it a tempting target. Swift itself had warned of a coordinated assault on banks, although it stressed that it was the banksâ connections to its networks, rather than the network itself, that were breached. </p>
+<p class="story-body-text" itemprop="articleBody">The possibility that Pyongyang had turned to digital theft was not surprising.<b> North Koreaâs economy has been ravaged by sanctions and food shortages.</b> Its gross domestic product was estimated to be $12 billion to $40 billion, compared with South Koreaâs $1.4 trillion. </p>
+<p class="story-body-text" itemprop="articleBody">âIf you presume itâs North Korea, $1 billion is almost 10 percent of their G.D.P.,â Mr. Chien said. <b>âThis is not small change for them.â</b> </p>
+<p class="story-body-text" itemprop="articleBody">There is <b>no evidence to date that the thieves have gone after large American or European banks</b>, though new possible attacks are being reported weekly. Last week, evidence emerged that Banco del Austro, an Ecuadorean bank, was infiltrated by hackers who were able to sneak into the Swift network.</p>
+<p class="story-body-text" itemprop="articleBody">FireEye, the security firm investigating the intrusion on Bangladeshâs central bank, is looking at several more undisclosed cases where banksâ systems were compromised, <a href="//www.wsj.com/articles/bangladesh-hack-investigators-examining-several-more-cyber-attacks-in-asia-1464275417?mod=asia_home">The Wall Street Journal reports</a>, citing a person familiar with the matter. The suspected attacks involved eight other banks, all of which are in Asia. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Analysts worry that the breaches could hold back global finance</b>; larger banks may become reluctant or even refuse to transact with smaller banks in the developing world unless they have assurances that their networks would not be compromised.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>GOOGLE WINS COPYRIGHT DISPUTE WITH ORACLE</strong> <span class="divider"> | </span></span> A judged ruled in Googleâs favor in a legal dispute with Oracle over software used to power most of the worldâs smartphones,<br />
+<a href="//www.nytimes.com/2016/05/27/technology/google-oracle-copyright-code.html?hp&#038;action=click&#038;pgtype=Homepage&#038;clickSource=story-heading&#038;module=first-column-region&#038;region=top-news&#038;WT.nav=top-news">Nick Wingfield and Quentin Hardy report in The New York Times.</a> </p>
+<p class="story-body-text" itemprop="articleBody">Oracle contended that Google used copyrighted material in the software code for the Android mobile phone operating system. Oracle asked for $9 billion from Google. Google said it had made fair use of that code and owed nothing.  </p>
+<p class="story-body-text" itemprop="articleBody">Software developers, who operate in the same way Google did when it comes to open-source software, cheered the victory. Open-source products are released, often with some restrictions, for anyone to use and modify. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Chris Dixon, a technology investor with Andreessen Horowitz, called it âgreat news for progress and innovation.â</b> </p>
+<p class="story-body-text" itemprop="articleBody">Android relies in part on Java, an open-source software language the Oracle acquired when it bought Sun Microsystems for $7.4 billion in 2010.  <b>Oracle accused Google executives of violating Oracleâs copyright by using aspects of Java without permission.</b> </p>
+<p class="story-body-text" itemprop="articleBody">The courtroom fight  could offer clarity on legal rules surrounding open-source technology, which is used in everything from smartphones and digital recording devices to the software that runs many of the worldâs biggest data centers. <b>People who worked with open-source technology had feared that a victory for Oracle would lead to other similar demands.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Dorian Daley, Oracleâs general counsel, said the company planned to appeal. âWe strongly believe that Google developed Android by illegally copying core Java technology to rush into the mobile device market,â she said in a statement. </p>
+<p class="story-body-text" itemprop="articleBody">Some lawyers cautioned against viewing the verdict as a green light for the type of software development that Google practiced, saying that an <b>earlier federal appeals court decision validated the idea that A.P.I.s can be copyrighted.</b></p>
+<p class="story-body-text" itemprop="articleBody">âI think what youâre still going to see is a lot more attention paid to securing approval to use other copyrights before the fact,â  said Christopher Carani, a lawyer at McAndrews, Held &#038; Malloy.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>COURT RULES AGAINST IMPOSED ARBITRATION</strong> <span class="divider"> | </span></span> A federal appeals court ruled the companies cannot force their employees to sign away their right to band together in legal actions,<br />
+<a href="//www.nytimes.com/2016/05/27/business/dealbook/court-rules-companies-cannot-impose-illegal-arbitration-clauses.html?ref=dealbook">Jessica Silver-Greenberg and Noam Scheiber report in DealBook.</a> <b>The decision was a major  victory for American workers and opened up an opportunity for the Supreme Court to weigh in.</b> </p>
+<p class="story-body-text" itemprop="articleBody">In its opinion, the United States Court of Appeals for the Seventh Circuit in Chicago said that Epic Systems, a health care software provider in Verona, Wis., violated federal labor law when it required its workers to bring disputes individually to arbitration. </p>
+<p class="story-body-text" itemprop="articleBody">The court said that <b>by preventing employees from joining together in a collective action, the arbitration clause ran afoul of a critical piece of the National Labor Relations Act, a landmark 1935 law that gave workers the right to unionize and engage in concerted action.</b></p>
+<p class="story-body-text" itemprop="articleBody">The decision directly conflicts with an earlier decision by an appeals court in Louisiana and the split could prompt the Supreme Court to wade back into the fray. </p>
+<p class="story-body-text" itemprop="articleBody">In a pair of decisions in 2011 and 2013, the Supreme Court blessed the use of arbitration in a case pushed by a group of credit card companies. The credit card companies turned to a 1925 federal law that formalized arbitration as a means for companies to hash out their disputes with one another.</p>
+<p class="story-body-text" itemprop="articleBody">Courts across the country have largely upheld arbitration clauses, deferring to the Supreme Court, which ruled that the Federal Arbitration Act beat even federal laws.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> The Commerce Department will publish the first revision of its estimate for <b>first-quarter economic growth</b> at 8:30 a.m. <b>Janet L. Yellen</b>, the chairwoman of the Federal Reserve, will receive the Radcliffe Medal at Harvard in Cambridge, Mass., at 12:30 p.m. The presentation will be followed by a discussion with Gregory Mankiw, a professor of economics at Harvard.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>GAWKERâS FOUNDER CRITICIZES CAMPAIGN AGAINST COMPANY</strong> <span class="divider"> | </span></span> Nick Denton, the founder and majority owner of Gawker, has published an open letter to Peter Thiel, calling him <b>âthin-skinnedâ and a âcomic book villain,â</b><br />
+<a href="//www.nytimes.com/2016/05/27/business/dealbook/gawker-sale-peter-thiel.html">Katie Rogers and Michael J. de la Merced report in DealBook.</a> Mr. Denton challenged Mr Thiel, who this week revealed that he was funding several lawsuits against Gawker, to a public debate about the role of journalism in society. </p>
+<p class="story-body-text" itemprop="articleBody">âThis vindictive decade-long campaign is quite out of proportion to the hurt you claim,â Mr. Denton wrote. He issued a play-by-play account of past stories that drew Mr. Thielâs ire and of two defamation lawsuits currently pending against Gawker, <b>criticizing what he characterized as an inability by Silicon Valley figures to accept criticism by journalists.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Denton assured Mr. Thiel that Gawkerâs journalists would be reporting on his involvement in lawsuits against the company. </p>
+<p class="story-body-text" itemprop="articleBody">Gawker also acknowledged that it had recently hired Mark Patricof, a senior banker at the firm Houlihan Lokey, to provide financial advice. Houlihan Lokey is known for its mergers and corporate restructuring expertise, but <b>the company refused to address reports that a potential buyer had emerged.</b></p>
+<p class="story-body-text" itemprop="articleBody">Gawkerâs strategic review is in its early stages and Mr. Denton has not decided on how to proceed, according to people with direct knowledge of the plans. <b>The company had considered potential offers  this year that were as high as $350 million</b>, said people with direct knowledge of the matter. </p>
+<p class="story-body-text" itemprop="articleBody">Questions about whether press freedom is in danger have also been raised, <a href="//www.nytimes.com/2016/05/27/business/media/thiel-gawker-fight-raises-concerns-about-press-freedom.html?hp&#038;action=click&#038;pgtype=Homepage&#038;clickSource=story-heading&#038;module=second-column-region&#038;region=top-news&#038;WT.nav=top-news">Ms. Rogers and John Herrman report in The New York Times. </a> </p>
+<p class="story-body-text" itemprop="articleBody">Some journalists felt that Mr. Thielâs political views and <b>his connection with Donald J. Trump could be worrisome as Mr. Trump has made comments about changing libel laws to make it easier to sue news outlets.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Others still debated <b>whether it was appropriate for outside parties to fund lawsuits in the way Mr. Thiel did</b>. Marc Andreessen, a Silicon Valley venture capitalist, wrote on Twitter that âGreenpeace and Sierra Club, among many other progressive groups, routinely fund other plaintiffsâ lawsuits.â </p>
+<p class="story-body-text" itemprop="articleBody">Legal experts maintained that regardless of the sources of funding, cases would still succeed or fall based on their merits, <a href="//www.nytimes.com/2016/05/27/business/revenge-and-the-future-of-media-finances.html">Barry Meier writes in The Times.</a> Lawsuits financed by third parties are legal. Business groups have claimed that outside investing helps fuel frivolous litigations, but others see it as a boon for plaintiffs without resources to take on deep-pocketed defendants.  </p>
+<p class="story-body-text" itemprop="articleBody">The news also raised debate among Times readers. âIt sends a message to other media outlets to watch who and what theyâre writing stories about,â Superamerickson of Minneapolis wrote. <b>âDonât investigate rich people or youâll get shut down.â</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AXA to Sell SunLife and British Pensions Business to Phoenix</strong> <span class="divider"> | </span></span> The sale is the latest move in AXAâs efforts to exit the life insurance and savings business in Britain.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/28/business/dealbook/axa-sunlife-pension-britain-sale-phoenix.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Zoomlion Drops Pursuit of Terex, the Crane and Heavy Equipment Maker</strong> <span class="divider"> | </span></span> The announcement came after Terex decided to sell its materials handling and ports solutions business to Konecranes for about $1.3 billion.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/28/business/dealbook/zoomlion-terex-konecranes.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Verizon Turns to Former Yahoo Bankers </strong> <span class="divider"> | </span></span> Verizon Communications is working on its bid for Yahooâs core assets with Bank of America, which was one of the Internet companyâs top advisers until last year, Reuters reports, citing people familiar with the matter. <br /><span class="kicker"><a href="//www.reuters.com/article/us-yahoo-m-a-verizon-exclusive-idUSKCN0YI001?feedType=RSS&#038;feedName=innovationNews">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Rethinking Appleâs Recipe for Success</strong> <span class="divider"> | </span></span> An aging iPhone, a tepid stock price and a pile of idle cash could make even a mediocre idea, like making a bid for Time Warner, look awfully tempting, Robert Cyran writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/27/business/dealbook/rethinking-apples-recipe-for-success.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Valeant Rejected Joint Takeover Approach From Takeda and TPG</strong> <span class="divider"> | </span></span> The approach came a month or two ago, before Valeant named Joseph Papa as its new chief executive, and didnât include a firm price, The Wall Street Journal reports, citing people familiar with the matter. <br /><span class="kicker"><a href="//www.wsj.com/articles/valeant-rejected-joint-takeover-approach-from-takeda-tpg-1464304905">THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ChemChina Said to Be Interested in SGL Carbon of Germany </strong> <span class="divider"> | </span></span> Ren Jianxin, the chairman of ChemChina, has held talks with Juergen Koehler, the chief executive of SGL, and Susanne Klatten, who owns 27 percent of the companyâs shares, Reuters reports, citing the German Manager Magazin. <br /><span class="kicker"><a href="//www.reuters.com/article/us-sgl-m-a-chemchina-idUSKCN0YI0SG?feedType=RSS&#038;feedName=innovationNews">REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lending Club Turns to Citigroup to Reassure Investors </strong> <span class="divider"> | </span></span> Lending Club is in talks with Citigroup about the New York bankâs buying or providing financing for future loans made by the online platform, The Wall Street Journal reports, citing people familiar with the discussions.<br /><span class="kicker"><a href="//www.wsj.com/articles/lendingclub-talking-with-citigroup-about-loan-purchases-1464302078">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Prosper Said to Be Exploring Its Options Under Scrutiny </strong> <span class="divider"> | </span></span> Prosper Marketplace has hired JPMorgan Chase to explore its options, including selling equity in the company, The Financial Times reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/d35f18dc-235e-11e6-9d4d-c11776a5124d.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz49RqW64ok"> THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Santander Pilots Blockchain Payments App </strong> <span class="divider"> | </span></span> Santander is aiming to become the first bank in Britain to use the blockchain to enable customers to make faster and cheaper international payments. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/2df2f65c-234f-11e6-9d4d-c11776a5124d.html">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Carlyleâs Financial Services Head Is Said to Resign </strong> <span class="divider"> | </span></span> Olivier Sarkozy, Carlyleâs head of financial services and the half-brother of the former French president Nicolas Sarkozy, has resigned, but will continue as a senior adviser, Bloomberg reports, citing people with knowledge of the move.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-26/carlyle-financial-services-head-sarkozy-said-to-resign-from-firm">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Philips Lighting Valued at $3.3 Billion in I.P.O.</strong> <span class="divider"> | </span></span> Philips, the Dutch electronics giant, announced plans in 2014 to spin off the lighting business as it focuses on health care and technology.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/27/business/dealbook/philips-lighting-valued-at-3-3-billion-in-ipo.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Communications Start-Up Files for I.P.O. </strong> <span class="divider"> | </span></span> Twilio, the communications start-up based in San Francisco, is the first private company valued by venture capitalists at $1 billion to file for an initial public offering since the data storage hardware vendor Nutanix filed in December. <br /><span class="kicker"><a href="//www.wsj.com/articles/communications-startup-twilio-files-for-ipo-1464286535?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Snapchat Raises $1.8 Billion From Private Investors" src="https://static01.nyt.com/images/2016/05/27/business/27SNAPCHAT/27SNAPCHAT-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Snapchat Raises $1.8 Billion From Private Investors</strong> <span class="divider"> | </span></span> Over the last year, investors like Alibaba have bought stakes in Snapchat. Alibaba agreed to invest $200 million at a valuation of $15 billion.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/27/technology/snapchat-raises-1-8-billion-from-private-investors.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Vitamins Join the âClean Labelâ Bandwagon" src="https://static01.nyt.com/images/2016/05/25/business/26VITAMIN-1/26VITAMIN-1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Vitamins Join the âClean Labelâ Bandwagon</strong> <span class="divider"> | </span></span> Ritual, a start-up, is introducing a multivitamin that is vegan, mostly free of genetically engineered ingredients and tailored to todayâs diets.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/27/business/vitamins-join-the-clean-label-bandwagon.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Brendan McGuire, Prosecutor in Terrorism Cases, to Join Private Law Firm</strong> <span class="divider"> | </span></span> Mr. McGuire, who spent a decade in the United States attorneyâs office for the Southern District of New York, will become a partner at WilmerHale.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/27/business/dealbook/brendan-mcguire-prosecutor-in-terrorism-cases-to-join-private-law-firm.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Redstoneâs Great-Grandchildren Added to Suit" src="https://static01.nyt.com/images/2016/05/27/business/27REDSTONE/27REDSTONE-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Redstoneâs Great-Grandchildren Added to Suit</strong> <span class="divider"> | </span></span> The children were added because they are among the beneficiaries of the trust that will control his empire after he dies or is declared incompetent.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/27/business/media/viacom-directors-add-redstones-great-grandchildren-to-suit.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/05/26/business/media/a-complicated-legal-battle-over-sumner-redstones-mental-acuity.html">A Complicated Legal Battle Over Sumner Redstoneâs Mental Acuity</a> </span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="French Tax Officials Turn Hungry Eye to McDonaldâs" src="https://static01.nyt.com/images/2016/05/27/business/EUMCDONALDS/EUMCDONALDS-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>French Tax Officials Turn Hungry Eye to McDonaldâs</strong> <span class="divider"> | </span></span> France, seeking to crack down on tax avoidance by American multinational corporations, raided McDonaldâs offices last week, the company confirmed.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/27/business/french-tax-officials-turn-hungry-eye-to-mcdonalds.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Theranos Faces Another Class-Action Lawsuit</strong> <span class="divider"> | </span></span> The second suit accuses Theranos of breaching its contract with customers and false advertising.  <br /><span class="kicker"><a href="//www.theverge.com/2016/5/26/11787884/theranos-second-class-action-lawsuit-casey-jones">THE VERGE </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>United States Firm Files Class Action Against Brazilian Steelmaker </strong> <span class="divider"> | </span></span> Gerdau, based in Porto Alegre, is the latest Brazilian company with shares traded in the United States to face a lawsuit over securities fraud as a result of Brazilian corruption investigations. <br /><span class="kicker"><a href="//www.reuters.com/article/brazil-gerdau-br-classaction-idUSL2N18N1H4">REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Malaysiaâs Investigation of 1MDB Said to Be Flawed </strong> <span class="divider"> | </span></span> Investigations ordered by Malaysiaâs leader into graft allegations at the state-development fund 1MDB have been undermined by political pressure and a lack of transparency, The Wall Street Journal reports, citing documents and interviews with people involved.<br /><span class="kicker"><a href="//www.wsj.com/articles/in-malaysian-1mdb-probes-some-evidence-wasnt-examined-1464295749">THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/05/27/morning-agenda-north-korea-linked-to-attacks-on-banks/"
+					data-title="Morning Agenda: North Korea Linked to Attacks on Banks"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Google Wins Copyright Dispute With Oracle | Court Rules Against Imposed Arbitration | Gawker&#039;s Founder Criticizes Campaign Against Company&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/27/morning-agenda-north-korea-linked-to-attacks-on-banks/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":48,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

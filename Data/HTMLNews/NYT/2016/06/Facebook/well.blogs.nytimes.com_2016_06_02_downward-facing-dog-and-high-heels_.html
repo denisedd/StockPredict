@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-well section-health"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/well/Longevity Pose: Teaching Yoga at Age 97 ( 20160602 )" />
+<meta name="communityAssetURL" content="//well.blogs.nytimes.com/2016/06/02/downward-facing-dog-and-high-heels/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004450464"><meta name="author" content="Corey Kilgannon" />
+<meta name="CLMST" content="Corey Kilgannon" />
+<meta name="byl" content="Corey Kilgannon" />
+<meta name="article:author" content="//topics.nytimes.com/top/reference/timestopics/people/k/corey_kilgannon/index.html" /><meta name="GBLC" content="Aging;Featured;Move">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1464900638" />
+<meta name="PUD" content="20160602" />
+<meta name="pdate" content="20160602" />
+<meta name="ptime" content="20160602165038" />
+<meta name="utime" content="20160623215155" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-06-23T21:51:55-04:00" />
+<meta name="DISPLAYDATE" content="June 2, 2016" />
+<meta name="dat" content="June 2, 2016" />
+<meta itemprop="articleSection" property="article:section" content="Health" />
+<meta name="CG" content="Health" />
+<meta name="SCG" content="well" />
+<meta name="BN" content="well" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Dancing;Yoga">
+<meta name="ttl" content="America&#039;s Got Talent (TV Program)"/>
+<meta property="article:tag" content="Dancing" />
+<meta property="article:tag" content="Yoga" />
+<meta property="article:tag" content="America&#039;s Got Talent (TV Program)" />
+<meta property="article:tag" content="Aging" />
+<meta property="article:tag" content="Featured" />
+<meta property="article:tag" content="Move" />
+<meta name="keywords" content="Dancing,Yoga,America&#039;s Got Talent (TV Program),Aging,Featured,Move" />
+<meta name="news_keywords" content="Dance,Yoga" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fwell.blogs.nytimes.com%2F2016%2F06%2F02%2Fdownward-facing-dog-and-high-heels%2F" title="Longevity Pose: Teaching Yoga at Age 97" />
+<meta name="description" content="At 97, Tao Porchon-Lynch is still teaching yoga, enjoying wine, driving and entering dance contests." />
+<meta name="hdl_p" content="Longevity Pose" />
+<meta name="hdl" content="Longevity Pose: Teaching Yoga at Age 97" />
+<meta property="og:title" content="Longevity Pose: Teaching Yoga at Age 97" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//well.blogs.nytimes.com/2016/06/02/downward-facing-dog-and-high-heels/" />
+<meta property="og:site_name" content="Well" />
+<meta property="og:description" content="At 97, Tao Porchon-Lynch is still teaching yoga, enjoying wine, driving and entering dance contests." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/06/05/nyregion/05CHARACTER/05CHARACTER-facebookJumbo.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2016/06/05/nyregion/05CHARACTER/05CHARACTER-thumbLarge.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Longevity Pose: Teaching Yoga at Age 97" />
+<meta name="twitter:url" content="//well.blogs.nytimes.com/2016/06/02/downward-facing-dog-and-high-heels/" />
+<meta name="twitter:description" content="At 97, Tao Porchon-Lynch is still teaching yoga, enjoying wine, driving and entering dance contests." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2016/06/05/nyregion/05CHARACTER/05CHARACTER-thumbLarge.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2016/06/05/nyregion/05CHARACTER/05CHARACTER-thumbLarge.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@nytimeswell">
+<link rel='prev' title='An Artist Takes On Cancer' href='//well.blogs.nytimes.com/2016/06/02/an-artist-takes-on-cancer/' />
+<link rel='next' title='After a Stroke at Age 30, Making Our Own Luck' href='//well.blogs.nytimes.com/2016/06/03/the-luck-you-make/' />
+<link rel='canonical' href='//well.blogs.nytimes.com/2016/06/02/downward-facing-dog-and-high-heels/' />
+<link rel='shortlink' href='//nyti.ms/1WyxKn6' />
+<link rel='https://github.com/WP-API/WP-API' href='//well.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/well/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//well.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/health/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/well/2016/06/02/downward-facing-dog-and-high-heels/" />
+<meta name="dfp-ad-unit-path" content="health/well/aging" /><meta name="categories" content="aging-well,move" />			<title>Longevity Pose: Teaching Yoga at Age 97 - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/well.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-118718 blog-universal nyt-blog-well" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'Health', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//well.blogs.nytimes.com">
+                Well            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Longevity Pose: Teaching Yoga at Age 97        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//well.blogs.nytimes.com/2016/06/02/downward-facing-dog-and-high-heels/"
+	 data-title="Longevity Pose: Teaching Yoga at Age 97"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;At 97, Tao Porchon-Lynch is still teaching yoga, enjoying wine, driving and entering dance contests.&lt;/span&gt;&lt;a href=&quot;//well.blogs.nytimes.com/2016/06/02/downward-facing-dog-and-high-heels/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 2, 2016 4:50 pm">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="well" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+		<div class="element1">
+	<div id="logo" ><a href="//well.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=Health" title="Go to Well Home"><img src="https://static01.nyt.com/images/blogs_v5/well/well_post.png" alt="Well - Tara Parker-Pope on Health"/></a></div>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//well.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Well">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-118718 post type-post status-publish hentry category-aging-well category-move tag-americas-got-talent-tv-program tag-dancing tag-yoga des-dancing des-yoga ttl-americas-got-talent-tv-program news_keywords-dance news_keywords-yoga splitPostView" id="post-118718">
+	<header class="postHeader">
+				<div class="postKicker">
+			<span class="kicker"><a href="//well.blogs.nytimes.com/category/move/?module=BlogCategory&version=Blog Post&action=Click&contentCollection=Health&pgtype=Blogs&region=Header">Move</a></span>
+		</div>
+				<h1 itemprop="headline" class="entry-title">Longevity Pose: Teaching Yoga at Age 97</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Corey Kilgannon			</address>
+			<!-- date published --><time class="dateline " datetime="2016-06-02T20:50:38+00:00" itemprop="datePublished">June 2, 2016 4:50 pm</time>
+			<!-- date updated --><span class="visually-hidden updated">June 2, 2016 4:50 pm</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div class="w592"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2016/06/05/nyregion/05CHARACTER/05CHARACTER-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2016/06/05/nyregion/05CHARACTER/05CHARACTER-tmagArticle.jpg" src="https://static01.nyt.com/images/2016/06/05/nyregion/05CHARACTER/05CHARACTER-tmagArticle.jpg" id="100000004449540" width="592" height="394" alt="Tao Porchon-Lynch teaches a yoga class in Scarsdale, N.Y. âI havenât finished learning,â says Ms. Porchon-Lynch, who is 97. âMy students are my teachers.â"   /><meta itemprop="height" content="394"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Tao Porchon-Lynch teaches a yoga class in Scarsdale, N.Y. âI havenât finished learning,â says Ms. Porchon-Lynch, who is 97. âMy students are my teachers.â</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Gregg Vigliotti for The New York Times</span></figcaption></figure></div>
+<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//well.blogs.nytimes.com/2016/06/02/downward-facing-dog-and-high-heels/" data-title="Longevity Pose: Teaching Yoga at Age 97" data-description="At 97, Tao Porchon-Lynch is still teaching yoga, enjoying wine, driving and entering dance contests.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody">Tao Porchon-Lynch, 97, breezed into her regular Wednesday evening yoga class in a brightly colored outfit: stretch pants, sleeveless top, flowing scarf and three-inch heels.</p>
+<p class="story-body-text" itemprop="articleBody">She put down a mat, folded her long, limber legs into a lotus position, and began teaching her zillionth session. Softly, she guided the 15 or so students through stretching and strengthening moves, and meditative breathing.</p>
+<p class="story-body-text" itemprop="articleBody">The group, at the JCC of Mid-Westchester in Scarsdale, ranged from rank beginners to 20-year veterans of Ms. Porchon-Lynchâs classes, which she has been teaching for decades. She walked the room, adjusting poses, as her students shifted from dog to cobra to camel.</p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.taoporchon-lynch.com/about.html" target="_blank">Ms. Porchon-Lynch</a> herself moved through the poses with no apparent effort. At one point, she suspended herself above the floor, supported by her arms.</p>
+<p class="story-body-text" itemprop="articleBody">âFeel your whole body singing out, and hold,â she instructed.</p>
+<p class="story-body-text" itemprop="articleBody">âThe ladder of life will take you to your inner self,â said Ms. Porchon-Lynch, who said that before the class, she had knocked out two hours of ballroom dancing.</p>
+<p class="story-body-text" itemprop="articleBody">âI did the bolero, tango, mambo, samba, cha-cha and, of course, swing dancing,â she said.</p>
+<p class="story-body-text" itemprop="articleBody">After the class, she slipped back into her heels â modest height, by Tao standards. Six-inch stilettos are more her speed because the lift helps the flow of energy from the inner feet up through the body, she said.</p>
+<p class="story-body-text" itemprop="articleBody">Back at her apartment in White Plains, she pointed to a photo of herself being dipped dramatically by a dance partner in a competition.</p>
+<p class="story-body-text" itemprop="articleBody">âHe was 70 years younger than me,â she crowed. When Ms. Porchon-Lynch was in her 80s she began competitive ballroom dancing and competing widely, even <a href="https://www.youtube.com/watch?v=xauVlSaaraA" target="_blank">appearing on</a> âAmericaâs Got Talent.â</p>
+<p class="story-body-text" itemprop="articleBody">âIâm very silly. I havenât grown up yet,â she said. Then she sat and described her âI was thereâ life story, a march through history that rivaled a Hollywood film.</p>
+<p class="story-body-text" itemprop="articleBody">She said she was raised by an uncle and aunt in Pondicherry, India, after her mother died giving birth to her on a ship in the English Channel in 1918 toward the end of World War I.</p>
+<p class="story-body-text" itemprop="articleBody">At age 8, she began practicing yoga when few women did, and she traveled widely as a child with her uncle, a rail line designer.</p>
+<p class="story-body-text" itemprop="articleBody">Her father, she said, came from a French family that owned vineyards in the South of France, and she moved there as World War II approached. She and an aunt hid refugees from the Nazis as part of the French Resistance.</p>
+<p class="story-body-text" itemprop="articleBody">In London, she entertained troops as a cabaret dancer, and after the war she began modeling and acting in Paris, she said.</p>
+<p class="story-body-text" itemprop="articleBody">She spoke of English lessons with <a href="//topics.nytimes.com/top/reference/timestopics/people/c/noel_coward/index.html" target="_blank">NoÃ«l Coward</a>, and hobnobbing with the likes of Marlene <a href="//www.nytimes.com/learning/general/onthisday/bday/1227.html" target="_blank">Dietrich</a> and Ernest <a href="//www.nytimes.com/topic/person/ernest-hemingway" target="_blank">Hemingway</a>.</p>
+<p class="story-body-text" itemprop="articleBody">She said she had acted in Indian films and around 1950 was signed by Metro-Goldwyn-Mayer and had bit roles in big films such as âShow Boatâ and âThe Last Time I Saw Paris.â</p>
+<p class="story-body-text" itemprop="articleBody">She had stories about marching with <a href="//www.nytimes.com/topic/person/mohandas-k-gandhi" target="_blank">Mohandas K. Gandhi</a> and, years later, with the Rev. Dr. <a href="//www.nytimes.com/topic/person/martin-luther-king-jr" target="_blank">Martin Luther King Jr.</a> and attending demonstrations with <a href="//topics.nytimes.com/top/reference/timestopics/people/d/charles_de_gaulle/index.html" target="_blank">Charles d</a><a href="//topics.nytimes.com/top/reference/timestopics/people/d/charles_de_gaulle/index.html" target="_blank">e Gaulle</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Ms. Porchon-Lynch said she had studied yoga over the years with prominent teachers such as Sri Aurobindo, <a href="//www.nytimes.com/2002/04/30/world/indra-devi-102-dies-taught-yoga-to-stars-and-leaders.html" target="_blank">Indra Devi</a> and B. K. S. Iyengar and taught yoga to many actors in Hollywood.</p>
+<p class="story-body-text" itemprop="articleBody">Even after three hip replacement surgeries, she still drives her Smart car daily and travels widely to teach yoga.</p>
+<p class="story-body-text" itemprop="articleBody">âI havenât finished learning,â she said. âMy students are my teachers.â</p>
+<p class="story-body-text" itemprop="articleBody">Ms. Porchon-Lynch, a longtime widow with no children, attributed her longevity to keeping her vortexes of energy flowing with âthe fire of life,â and waking up each morning with the positive attitude that each day will be your best.</p>
+<p class="story-body-text" itemprop="articleBody">âWhatever you put in your mind materializes,â she said. âWithin yourself, thereâs an energy, but unless you use it, it dissipates. And thatâs when you get old.â</p>
+<p class="story-body-text" itemprop="articleBody">Five hours of sleep a night is plenty, she said.</p>
+<p class="story-body-text" itemprop="articleBody">âThere is so much to do and think about,â said Ms. Porchon-Lynch, a lifelong vegetarian and a wine enthusiast who still enjoys imbibing.</p>
+<p class="story-body-text" itemprop="articleBody">At the JCC class, she took her students through sun salutation movements and told them, âRemember, the sun salutation means that the dawn is breaking over the whole universe.â</p>
+<p class="story-body-text" itemprop="articleBody">Finally, she talked them through a wind-down period of relaxing meditation.</p>
+<p class="story-body-text" itemprop="articleBody">âBring your consciousness back down to the physical plane,â she said. âMay the light of the union of all things join our mind, our body and our spirit.â</p>
+<p class="story-body-text" itemprop="articleBody">â</p>
+<p class="story-body-text" itemprop="articleBody"><strong>The Particulars</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Name</strong> Tao Porchon-Lynch</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Age</strong> 97</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Who She Is</strong> Yoga teacher and competitive dancer</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Where Sheâs From</strong> Pondicherry, India</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Telling Detail</strong> She was called the oldest yoga teacher in the world by The Guinness Book of World Records in 2012 when she was 93.</p>
+<p class="story-body-text" itemprop="articleBody">â</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Related:</strong></p>
+<ul>
+<li><a href="//well.blogs.nytimes.com/2016/04/22/at-100-still-running-for-her-life/">At 100, Still Running for Her Life</a></li>
+<li><a href="//well.blogs.nytimes.com/2016/05/20/who-you-calling-cheerleader/">Who You Calling Cheerleader?</a></li>
+<li><a href="//well.blogs.nytimes.com/2016/04/07/sweat-smart/">Walk, Jog or Dance: Itâs All Good for the Aging Brain</a></li>
+</ul>
+<p class="story-body-text" itemprop="articleBody"><strong>For more fitness, food and wellness news, follow us on <a href="https://www.facebook.com/WellNYT">Facebook</a> and <a href="https://www.twitter.com/NYTimesWell">Twitter</a>, or sign up for our <a href="//www.nytimes.com/newsletters/healthupdate">newsletter.</a></strong></p>
+<footer class="story-footer">
+    <div class="story-meta">
+	<p class="story-print-citation">A version of this article appears in print on 06/05/2016, on page <span itemprop="printSection">MB</span><span itemprop="printPage">4</span> of the <span itemprop="printEdition">NewYork</span> edition with the headline: Longevity Pose.</p>    </div>
+</footer>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//well.blogs.nytimes.com/2016/06/02/downward-facing-dog-and-high-heels/" data-title="Longevity Pose: Teaching Yoga at Age 97" data-description="At 97, Tao Porchon-Lynch is still teaching yoga, enjoying wine, driving and entering dance contests.">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//well.blogs.nytimes.com/2016/06/02/an-artist-takes-on-cancer/" title="An Artist Takes On Cancer">
+				An Artist Takes On Cancer			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//well.blogs.nytimes.com/2016/06/03/the-luck-you-make/" title="After a Stroke at Age 30, Making Our Own Luck">
+				After a Stroke at Age 30, Making Our Own Luck			</a>
+					</li>
+	</ul>
+</div>
+<div id="nytint-qa-well-widget" class="nytint-qa-widget module qaModule noContent">
+  <a class="nytint-qa-module-header" href="//well.blogs.nytimes.com/ask/well/questions"><h4 class="moduleHeader">Ask Well</h4></a>
+  <div class="nytint-qa-header-spacer">&nbsp;</div>
+  <p class="summary">Your health questions answered by Times journalists and&nbsp;experts.</p>
+  <form action="/svc/int/qa/questions/well/submit" method="POST" id="nytint-qa-ask-form" class="qaQuestionForm">
+    <!-- askbox.jst rendered here -->
+    <!-- these lines replaced by jst render--><div id="nytint-qa-question-box">
+      <!-- these lines replaced by jst render--><textarea name="question" class="textarea qaTextarea nytint-qa-form-element" id="nytint-qa-question-input" placeholder="What would you like to know?" disabled="disabled"></textarea>
+    <!-- these lines replaced by jst render--></div>
+  </form>
+  <div class="nytint-qa-recent-questions-wrapper clearfix nytint-qa-hidden">
+    <div class="nytint-qa-liner">
+      <h5><!-- (Recent/Related Questions) filled by javascript from nytqa.recent_questions.js --></h5>
+      <div class="nytint-qa-seemore">
+        <p><a href="//well.blogs.nytimes.com/ask/well/questions/yours" title="Your questions">Your Questions</a> | <a href="//well.blogs.nytimes.com/ask/well/questions">All &raquo;</a></p>
+      </div>
+      <ul class="nytint-qa-recent-questions clearfix">
+        <!-- question views get rendered into here -->
+      </ul>
+    </div>
+  </div>
+    <link href="https://int.nyt.com/applications/qa/assets/well-f0b8f674afd653cf65ff12f13234cb39.css" media="screen" rel="stylesheet" type="text/css" />
+    <script>
+  var NYTD = NYTD || {};
+      NYTD.NYTINT = NYTD.NYTINT || {};
+      NYTD.NYTINT.QA = NYTD.NYTINT.QA || {};
+      NYTD.NYTINT.QA.app_root_path = "/ask/";
+      NYTD.NYTINT.QA.svc_root_path = "/svc/int/qa/";
+      NYTD.NYTINT.QA.event_root_url = "/ask/well/questions";
+      NYTD.NYTINT.QA.event_slug = "well";
+      NYTD.NYTINT.QA.A_COL_FORM = false;
+  </script>
+    <script src="https://int.nyt.com/applications/qa/assets/well_base-7dc69e7a081837e27503446314bb2b89.js" type="text/javascript"></script>
+  <script src="https://int.nyt.com/applications/qa/assets/well_widget-2fbcafade4829875da7ba7c9cd2ced3c.js" type="text/javascript"></script>
+    <script>
+  require(['foundation/main'], function (Foundation) {
+    require(['nytint/qa/well_widget'], function () {});
+  });
+  </script>
+</div>
+
+<div id="nyt_featured_posts-11" class="module nocontent widget_nyt_featured_posts"><h4 class="moduleHeader"></h4>			<div class="subColumn-2">	<div class="column">
+		<div class="entry">
+						<div class="w190">
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">
+					<img src="https://static01.nyt.com/images/2016/08/31/well/family/well-family-exerciseask/well-family-exerciseask-articleInline.jpg" width="190" height="126" />
+				</a>
+			</div>
+			<div class="w600 hidden">
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">
+					<img src="https://static01.nyt.com/images/2016/08/31/well/family/well-family-exerciseask/well-family-exerciseask-videoSixteenByNine600.jpg" width="224" height="126" />
+				</a>
+			</div>
+						<h6 class="kicker">
+				<a href="//well.blogs.nytimes.com/category/ask-well/">Ask Well</a>
+			</h6>
+						<h5>
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">Can You Safely Lose Weight While Breast-Feeding?</a>
+							</h5>
+		</div><!--end of entry-->
+	</div><!--end of column-->
+						<div class="column lastColumn">
+		<div class="entry">
+						<div class="w190">
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">
+					<img src="https://static01.nyt.com/images/2016/08/29/science/well-klass-smallpenis/well-klass-smallpenis-articleInline.jpg" width="190" height="126" />
+				</a>
+			</div>
+			<div class="w600 hidden">
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">
+					<img src="https://static01.nyt.com/images/2016/08/29/science/well-klass-smallpenis/well-klass-smallpenis-videoSixteenByNine600.jpg" width="224" height="126" />
+				</a>
+			</div>
+						<h6 class="kicker">
+				<a href="//well.blogs.nytimes.com/category/family/the-checkup/">The Checkup</a>
+			</h6>
+						<h5>
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">As Boys Get Fatter, Parents Worry One Body Part Is Too Small</a>
+							</h5>
+		</div><!--end of entry-->
+	</div><!--end of column-->
+		</div><!--end of sub-column2--></div><div id="nyt_promo_widget-14" class="module nocontent widget_nyt_promo_widget"><!-- Regilite iFrame 20140820 ~dj.paris -->
+<style>
+#regilite-bigad {
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding:10px;
+  height:250px;
+}
+#regilite-bigad h1 {
+  font-family: "nyt-franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 0 15px 10px;
+  font-size: 16px;
+  line-height: 18px;
+}
+#regilite-bigad h1 a {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+#regi-image img {
+  display: block;
+  float: left;
+  padding: 0 10px;
+  width: 50px;
+}
+p#regi-copy {
+  font-size: 12px; 
+  line-height: 16px; 
+  margin: 0;
+  font-family: Georgia, "Times New Roman", sans-serif;
+  color: #333;
+  text-align: left;
+  padding: 0 10px 15px 0;
+}
+#regiframe-wrapper {
+  padding: 0 10px;
+}
+#regiframe-wrapper iframe {
+  border: 0;
+  width: 280px;
+  height: 180px;
+}
+</style>
+  
+
+  
+<div id="regilite-bigad">
+  <h1>
+   Sign Up for the Running Email
+  </h1>
+
+  <div id="regi-image">
+    <img src="https://static01.nyt.com/marketing/newsletters/images/Running_75.jpg" alt="Running Newsletter">
+  </div>
+
+  <p id="regi-copy">Get Well's Running email for practical tips, expert advice, exclusive content and a bit of motivation delivered to your inbox every week to help you on your running journey. Coming soon.</p>
+
+  <div id="regiframe-wrapper">
+    <iframe title="regilite" src="https://regilite.nytimes.com/regilite?product=RU&theme=Transparent&landing=true&addSlot=true&app=newsletter&sourceApp=nyt-v5&title=Running"></iframe>
+  </div>
+</div>
+
+<span class="adxInfo" style="display:none;">campaign: %%CAMP%% -- %%CAMP_UID%%, creative: %%ADID%% -- %%AD_UID%%, page: %%PAGE%%, targetedPage: %%TARGETEDPAGE%%, position: %%POS%%</span>
+</div>		<div class="module ad" id="MiddleRight"></div>
+        <div id="nyt_feed_in_flat_tabs-6" class="module nocontent widget_nyt_feed_in_flat_tabs">		<h4 class="moduleHeader left">Times Health</h4>
+		<div id="tabWidget-nyt_feed_in_flat_tabs-6" class="tabAutoLoad">
+			<div class="tabsContainer">
+				<ul class="tabs right">
+										<li class="selected">
+							<a href="javascript:void(0);">Most Viewed</a>
+						</li>
+												<li class="">
+							<a href="javascript:void(0);">Most E-mailed</a>
+						</li>
+										</ul>
+		   </div>
+		<div class="tabContent">
+	<div class="blog-story">
+		<ul class="refer">
+					<li>
+				<a href="//well.blogs.nytimes.com/2016/02/17/which-type-of-exercise-is-best-for-the-brain/">Which Type of Exercise Is Best for the Brain?</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2013/10/03/well-quiz-the-mind-behind-the-eyes/">Can You Read People&#8217;s Emotions?</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2011/01/28/how-meditation-may-change-the-brain/">How Meditation May Change the Brain</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2015/11/10/ask-well-the-health-benefits-of-meditation/">Ask The Health Benefits of Meditation</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2010/12/15/phys-ed-the-benefits-of-exercising-before-breakfast/">Phys Ed: The Benefits of Exercising Before Breakfast</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2015/07/07/dog-needs-a-walk-theres-an-app-for-that/">Dog Needs a Walk? There&#8217;s an App for That</a>
+			</li>
+					</ul>
+	</div>
+</div>
+		<div class="tabContent">
+	<div class="blog-story">
+		<ul class="refer">
+				</ul>
+	</div>
+</div>
+				</div>
+	</div>
+			<div class="module ad" id="Box1"></div>
+        <div id="nyt_blog_social_media-4" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-double ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">Well on</span></span>
+</h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/nytimeswell" title="Follow nytimeswell on Twitter">Twitter</a></li><li class="blog-fw-facebook double"><a href="https://facebook.com/WellNYT" title="Follow WellNYT on Facebook">Facebook</a></li></ul>
+</div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-39',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":60,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

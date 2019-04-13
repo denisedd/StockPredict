@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003581375"><meta name="author" content="Sydney Ember" />
+<meta name="CLMST" content="Sydney Ember" />
+<meta name="byl" content="Sydney Ember" />
+<meta name="article:author" content="//topics.nytimes.com/top/reference/timestopics/people/e/sydney_ember/index.html" /><meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1426763865" />
+<meta name="PUD" content="20150319" />
+<meta name="pdate" content="20150319" />
+<meta name="ptime" content="20150319071745" />
+<meta name="utime" content="20150319111745" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-03-19T11:17:45-04:00" />
+<meta name="DISPLAYDATE" content="March 19, 2015" />
+<meta name="dat" content="March 19, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F03%2F19%2Fmorning-agenda-jana-partners-sells-stake%2F" title="Morning Agenda: Jana Partners Sells Stake" />
+<meta name="description" content="Jana Partners sells a 20 percent stake to an investment firm. &#124; Markets cheer the Fed&#8217;s statement on rates. &#124; BlackRock has a new breed of E.T.F. &#124; A top Wall Street lawyer blasts the regulatory environment." />
+<meta name="hdl" content="Morning Agenda: Jana Partners Sells Stake" />
+<meta property="og:title" content="Morning Agenda: Jana Partners Sells Stake" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/03/19/morning-agenda-jana-partners-sells-stake/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Jana Partners sells a 20 percent stake to an investment firm. &#124; Markets cheer the Fed&#8217;s statement on rates. &#124; BlackRock has a new breed of E.T.F. &#124; A top Wall Street lawyer blasts the regulatory environment." />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Jana Partners Sells Stake" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/03/19/morning-agenda-jana-partners-sells-stake/" />
+<meta name="twitter:description" content="Jana Partners sells a 20 percent stake to an investment firm. &#124; Markets cheer the Fed&#8217;s statement on rates. &#124; BlackRock has a new breed of E.T.F. &#124; A top Wall Street lawyer blasts the regulatory environment." />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What Weâre Reading' href='//news.blogs.nytimes.com/2015/03/18/what-were-reading-38/' />
+<link rel='next' title='Morning Agenda: Bank of New York Mellon in Settlement' href='//news.blogs.nytimes.com/2015/03/20/morning-agenda-bank-of-new-york-mellon-in-settlement/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/03/19/morning-agenda-jana-partners-sells-stake/' />
+<link rel='shortlink' href='//nyti.ms/1Cwtudj' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/03/19/morning-agenda-jana-partners-sells-stake/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Jana Partners Sells Stake - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2110 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Jana Partners Sells Stake        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/03/19/morning-agenda-jana-partners-sells-stake/"
+	 data-title="Morning Agenda: Jana Partners Sells Stake"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Jana Partners sells a 20 percent stake to an investment firm. | Markets cheer the Fed&#039;s statement on rates. | BlackRock has a new breed of E.T.F. | A top Wall Street lawyer blasts the regulatory environment.&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/03/19/morning-agenda-jana-partners-sells-stake/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="March 19, 2015 7:17 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Jana Partners Sells Stake</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Sydney Ember			</address>
+			<!-- date published --><time class="dateline " datetime="2015-03-19T11:17:45+00:00" itemprop="datePublished">March 19, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">March 19, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2110 post type-post status-publish hentry category-dealbook" id="post-2110">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Jana Partners Sells Stake</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Sydney Ember                </span>
+                <!-- date published --><time class="dateline " datetime="2015-03-19T11:17:45+00:00" itemprop="datePublished">March 19, 2015 7:17 am</time>
+			<!-- date updated --><span class="visually-hidden updated">March 19, 2015 7:17 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/03/19/morning-agenda-jana-partners-sells-stake/" data-title="Morning Agenda: Jana Partners Sells Stake" data-description="Jana Partners sells a 20 percent stake to an investment firm. | Markets cheer the Fed&#039;s statement on rates. | BlackRock has a new breed of E.T.F. | A top Wall Street lawyer blasts the regulatory environment.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JANA PARTNERS SELLS STAKE</strong> <span class="divider"> | </span></span> Dyal Capital Partners, the private equity unit of Neuberger Berman Group, agreed on Wednesday to buy a 20 percent stake in the activist hedge fund Jana Partners, <a href="//www.nytimes.com/2015/03/19/business/dealbook/investment-firm-buys-stake-in-activist-hedge-fund-jana-partners.html?ref=dealbook">Alexandra Stevenson writes in DealBook</a>. The stake will be passive, meaning Dyal will not have a say in Jana Partnersâ day-to-day operations.</p>
+<p class="story-body-text" itemprop="articleBody">The deal with Dyal Capital <b>took several months of negotiation</b> and is the first such deal for Jana Partners. The hedge fund, which manages $11 billion, is known for taking stakes in companies and pressuring management to change, a tactic that is rising in popularity and is now an accepted part of Wall Street. The fund has been behind activist campaigns in companies across America, including the supermarket chain Safeway, PetSmart and Hertz, the car rental company. Jana also recently took a stake in Computer Sciences.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>MARKETS CHEER FED STATEMENT ON RATES</strong> <span class="divider"> | </span></span> The Federal Reserve on Wednesday moved to the verge of raising interest rates for the first time since the economy fell into recession more than seven years ago but suggested it might not do so until well into the second half of the year, <a href="//www.nytimes.com/2015/03/19/business/economy/fed-interest-rates-fomc-meeting.html?ref=dealbook">Binyamin Appelbaum writes in The New York Times</a>. In a statement released after a two-day meeting of its policy-making committee, the Fed said that it would consider raising its benchmark rate as early as June, and it removed from the statement a promise that it would be âpatient.â</p>
+<p class="story-body-text" itemprop="articleBody">Investors celebrated the news, sending the Standard &#038; Poor&#8217;s 500-stock index up 1.2 percent to close at 2,099.50. Bond prices also jumped, driving the yield on the benchmark 10-year Treasury bond to its largest one-day decline since October. The yield fell 0.11 points to 1.945 percent. On Thursday, <a href="//www.reuters.com/article/2015/03/19/us-markets-global-idUSKBN0ME02J20150319">Asian markets climbed</a>, posting their biggest gains in 18 months. <a href="//www.bloomberg.com/news/articles/2015-03-19/european-index-futures-little-changed-as-investors-consider-fed">European stocks surged</a> in early trading to their highest level since 2000. </p>
+<p class="story-body-text" itemprop="articleBody">The Fed <b>also released economic forecasts</b> by its senior officials that showed they now thought the unemployment rate could still fall significantly without triggering higher inflation. That conveyed an impression that Fed officials may feel less urgency about raising interest rates so soon. âJust because we removed the word patient from the statement doesnât mean weâre going to be impatient,â Janet L. Yellen, the Fedâs chairwoman, said at a news conference after the statementâs release. </p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BLACKROCKâS NEW BREED OF E.T.F.</strong> <span class="divider"> | </span></span> Exchange-traded fund have been a hit with passive investors for years. Now, BlackRock is introducing a new type of bond E.T.F. that aims to âblend the best of active investing (security selection) with index investing (cost and consistency),â <a href="//www.nytimes.com/2015/03/19/business/dealbook/blackrocks-new-breed-of-exchange-traded-bond-fund-prizes-stability-over-swagger.html?ref=dealbook">Landon Thomas Jr. writes in DealBook</a>. Of the financial inventions in the history of Wall Street, few have been as successful as E.T.F.s, which hardly existed 15 years ago and now, at $2 trillion, make up close to 15 percent of the mutual fund industry.</p>
+<p class="story-body-text" itemprop="articleBody">BlackRockâs iShares division has become a crucial profit driver for the fund company, accounting for close to a quarter of its $4.6 trillion assets under management. âThe rush into E.T.F.s has come at a time when the performance records of mutual fund portfolio managers, especially on the equity side, have been poor,â Mr. Thomas writes. According to Morningstar, 74 percent of equity mutual funds trailed their benchmark index last year. For that reason, <b>the bulk of E.T.F. flows have been into large funds</b> that track stock indexes. Bond E.T.F.s have also grown in size in recent years, though the numbers have been smaller.</p>
+<p class="story-body-text" itemprop="articleBody">BlackRockâs new fund, called United States Fixed Income Balanced Risk, will invest in an equal split of corporate bonds, which will benefit if rates spike upward, and Treasury securities, which will protect the fund if rates fall. âBecause these funds target a specific area of demand in the market but follow an index, they are seen by their champions as joining the <b>best aspects of active and passive fund management</b>,â Mr. Thomas writes. âYet because the cult of the bond manager still holds sway, there have been few if any quasi-active bond funds that have thrived.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> Weekly <b>jobless claims</b> are out at 8:30 a.m. The <b>index of leading indicators</b> is released at 10 a.m. <b>Apple</b> becomes part of the Dow Jones Industrial Average, replacing AT&#038;T.</p>
+<p class="story-body-text" itemprop="articleBody"><b>On the Hill</b>: The <b>Senate Banking Committee</b> holds a hearing titled âExamining the Regulatory Regime for Regional Banksâ at 10 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TOP LAWYER BLASTS REGULATORY ENVIRONMENT</strong> <span class="divider"> | </span></span> H. Rodgin Cohen, the senior chairman of the law firm Sullivan &#038; Cromwell, who has represented many of the big banks, said on Wednesday that the regulatory environment was âthe most tension-filled, confrontational and skeptical of any time in my professional career,â <a href="//www.wsj.com/articles/top-wall-street-lawyer-slams-regulatory-environment-1426718956?mod=WSJ_hp_LEFTWhatsNewsCollection">The Wall Street Journal writes</a>. Mr. Cohen blamed the fight over so-called regulatory capture, in which regulators get too close to the banks they are supposed to oversee. Speaking at a banking legal conference in Phoenix, Mr. Cohen said fears about the phenomenon were overblown.</p>
+<p class="story-body-text" itemprop="articleBody">âRecently, this supposition of regulatory capture has become as pervasive as it is false,â Mr. Cohen said at the conference, which was sponsored by the Securities Industry and Financial Markets Association, one of Wall Streetâs main trade groups. âI have never experienced a situation that an examiner was so close to an institution that the examiner went easy on that institution.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact: <a href="https://www.twitter.com/melbournecoal">@melbournecoal</a> | <a href="mailto:sydney.ember@nytimes.com">E-mail</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deal Makers Less Upbeat About M.&amp;.A. Growth</strong> <span class="divider"> | </span></span> In a survey, 54 percent of deal makers say they believe that 2015 will surpass last year in terms of mergers activity, down from 78 percent last year.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/19/business/dealbook/deal-makers-less-upbeat-about-ma-growth.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Holcim and Lafarge Said to Move Forward on Deal Talks</strong> <span class="divider"> | </span></span> Holcim and Lafarge are said to be making progress in last-ditch talks to save their $40 billion cement merger, Bloomberg Business writes, citing unidentified people familiar with the matter. A preliminary agreement on adjusted financial terms and leadership changes could be reached as early as today, the people said.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-03-18/lafarge-holcim-said-to-mull-lafont-as-co-chairman-to-save-merger-i7eo1weg"> BLOOMBERG BUSINESS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ocwen to Sell Servicing Rights to Walter Unit</strong> <span class="divider"> | </span></span> Ocwen Financial said it was selling residential mortgage servicing rights worth $9.6 billion to a subsidiary of Walter Investment Management, Reuters writes.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/18/us-ocwen-financial-greentreeloanservicin-idUSKBN0ME21G20150318"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Microsemi to Acquire Vitesse Semiconductor for $389 Million</strong> <span class="divider"> | </span></span> The deal, through a cash tender offer of $5.28 a share, represents a further consolidation in the chip-making industry.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/19/business/dealbook/microsemi-to-acquire-vitesse-semiconductor-for-389-million.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Rakuten Acquires U.S. EBook Platform</strong> <span class="divider"> | </span></span> The Japanese online retailer Rakuten is buying the United States eBook company OverDrive for about $410 million in a push into the American market and the sharing economy, Reuters writes.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/19/us-overdrive-m-a-rakuten-idUSKBN0MF0EN20150319"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Interparfums Poised to Acquire Rochas</strong> <span class="divider"> | </span></span> Interparfums said on Thursday that it would buy the perfumes and fashion company Rochas from Procter &#038; Gamble for $108 million, Reuters writes.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/19/us-interparfums-rochas-idUSKBN0MF0O120150319"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Neither Simon Nor Macerich Can Claim High Road in Mall Bid</strong> <span class="divider"> | </span></span> The offer by the mall owner Simon may not be as generous as it claims. But the response of the target, Macerich, is the more disingenuous, Jeffrey Goldfarb of Reuters Breakingviews writes.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/19/business/neither-simon-nor-macerich-can-claim-high-road-in-mall-bid.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Banks Struggle to Unload Oil Loans </strong> <span class="divider"> | </span></span> Citigroup, Goldman Sachs, UBS and other big banks face tens of millions of dollars in losses on loans they made to energy companies last year as investors remain wary of the energy sectorâs risk, The Wall Street Journal reports.<br /><span class="kicker"><a href="//on.wsj.com/1B2yPDV"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fortescue, Big Iron Ore Miner, Pulls $2.5 Billion Debt Sale</strong> <span class="divider"> | </span></span> Amid falling prices for iron ore, Fortescue Metals finds the markets ânot favorable.&#8221;<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/19/business/dealbook/fortescue-big-iron-ore-miner-pulls-2-5-billion-debt-sale.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Auto Trader Group Is Valued at $3.5 Billion in London I.P.O.</strong> <span class="divider"> | </span></span> Funds advised by the European private-equity firm Apax Partners bought out its joint venture partner last year and renamed the company Auto Trader.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/20/business/dealbook/auto-trader-group-is-valued-at-3-5-billion-in-london-ipo.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>U.S. to Examine Leveraged Loans More Frequently</strong> <span class="divider"> | </span></span> The increased focus on banksâ loan portfolios âcomes as regulators push to rein in banks that are heavily involved in providing leveraged loans, which are made to highly indebted companies and often fund corporate buyouts by private equity firms,â The Wall Street Journal writes.<br /><span class="kicker"><a href="//blogs.wsj.com/privateequity/2015/03/18/u-s-to-examine-leveraged-loans-more-frequently/?mod=WSJBlog&#038;mod=DealsMain"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lone Star Said to Plan Bid for ICBPI of Italy</strong> <span class="divider"> | </span></span> The private equity firm Lone Star is said to be one of four bidders expected to bid for the Italian banking services provider ICBPI by a March 23 deadline, Reuters reports, citing unidentified people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/18/icbpi-ma-idUSL6N0WK4JM20150318"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Progressive Group Takes Aim at Hedge Fund Managers</strong> <span class="divider"> | </span></span> Hedge Clippers, a group backed by several liberal community organizing groups, is looking to show how hedge fund billionaires like Daniel S. Loeb affect the political system with big campaign donations and undermine progressive causes, The New York Observer writes. <br /><span class="kicker"><a href="//observer.com/2015/03/progressive-group-takes-aim-at-hedge-fund-managers/"> NEW YORK OBSERVER </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Philips to Spin Off Lighting Business in I.P.O.</strong> <span class="divider"> | </span></span> The move comes after the Dutch electronics giantâs plans to separate itself into two companies: one focused on health care and technology, and another on lighting.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/20/business/dealbook/philips-to-spin-off-lighting-business-in-ipo.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PlayBuzz Rides Quizzes and Lists to $16 Million in Financing</strong> <span class="divider"> | </span></span> A partner at the venture capital fund 83North, which led the round of investment, said that his firm had been drawn to PlayBuzz because it provided a means for any website to attract readers.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/19/business/media/playbuzz-rides-quizzes-and-lists-to-16-million-in-financing.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bank of America Must Allow Shareholder Vote on Breakup, S.E.C. Says</strong> <span class="divider"> | </span></span> Bank of America must allow shareholders to vote on a proposal that calls for the company to consider spinning off its investment banking business, the Securities and Exchange Commission said in a decision on March 17, which was seen by Reuters.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/18/us-sec-bankofamerica-shareholders-idUSKBN0ME2X720150318"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Eike Batista Is Fined by Brazilian Regulator Over Securities Violations" src="https://static01.nyt.com/images/2015/03/19/business/19DBPIX-BATISTA/19DBPIX-BATISTA-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Eike Batista Is Fined by Brazilian Regulator Over Securities Violations</strong> <span class="divider"> | </span></span> Mr. Batista was fined 1.4 million reais ($437,000), making it the first time he has been sanctioned for his activities in his collapsed business empire.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/19/business/dealbook/eike-batista-is-fined-by-brazilian-regulator-over-securities-violations.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Warnings Raised of a Greek Exit From the Euro" src="https://static01.nyt.com/images/2015/03/19/business/grexit-web1/grexit-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Warnings Raised of a Greek Exit From the Euro</strong> <span class="divider"> | </span></span> Concerns about a withdrawal from the euro currency union come as the war of words heats up between Greece and its creditors.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/19/business/international/warnings-raised-of-a-greek-exit-from-the-euro.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Law School Proximity Matters for Partner Prospects, Study Finds</strong> <span class="divider"> | </span></span> Geographical proximity to a major legal market may be a good predictor of âbig lawâ career success, a new study shows.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/19/business/dealbook/law-school-proximity-matters-for-partner-prospects-study-finds.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/03/19/morning-agenda-jana-partners-sells-stake/"
+					data-title="Morning Agenda: Jana Partners Sells Stake"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Jana Partners sells a 20 percent stake to an investment firm. | Markets cheer the Fed&#039;s statement on rates. | BlackRock has a new breed of E.T.F. | A top Wall Street lawyer blasts the regulatory environment.&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/03/19/morning-agenda-jana-partners-sells-stake/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":49,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

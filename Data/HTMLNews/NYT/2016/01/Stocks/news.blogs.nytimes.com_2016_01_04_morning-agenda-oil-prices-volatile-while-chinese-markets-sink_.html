@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004123712"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1451906742" />
+<meta name="PUD" content="20160104" />
+<meta name="pdate" content="20160104" />
+<meta name="ptime" content="20160104062542" />
+<meta name="utime" content="20160104112543" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-01-04T11:25:43-05:00" />
+<meta name="DISPLAYDATE" content="January 4, 2016" />
+<meta name="dat" content="January 4, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Banking and Financial Institutions;European Union;Federal Reserve System;Income Inequality;Insurance;Start-ups">
+<meta name="org" content="Alibaba Group Holding Ltd;Baxalta Inc.;China;Initial Public Offerings;Iran;Mergers, Acquisitions and Divestitures;Oil (Petroleum) and Gasoline;Organization of the Petroleum Exporting Countries;Pfizer Inc;Puerto Rico;Saudi Arabia;Shire PLC;Uber Technologies Inc">
+<meta name="ticker" content="Pfizer Inc|PFE|NYSE;Shire PLC|SHPG|NASDAQ" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Income Inequality" />
+<meta property="article:tag" content="Insurance" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Alibaba Group Holding Ltd" />
+<meta property="article:tag" content="Baxalta Inc." />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Iran" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Oil (Petroleum) and Gasoline" />
+<meta property="article:tag" content="Organization of the Petroleum Exporting Countries" />
+<meta property="article:tag" content="Pfizer Inc" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="Saudi Arabia" />
+<meta property="article:tag" content="Shire PLC" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Banking and Financial Institutions,European Union,Federal Reserve System,Income Inequality,Insurance,Start-ups,Alibaba Group Holding Ltd,Baxalta Inc.,China,Initial Public Offerings,Iran,Mergers Acquisitions and Divestitures,Oil (Petroleum) and Gasoline,Organization of the Petroleum Exporting Countries,Pfizer Inc,Puerto Rico,Saudi Arabia,Shire PLC,Uber Technologies Inc,DealBook" />
+<meta name="news_keywords" content="Personal finance,Startup" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F01%2F04%2Fmorning-agenda-oil-prices-volatile-while-chinese-markets-sink%2F" title="Morning Agenda: Oil Prices Volatile While Chinese Markets Sink" />
+<meta name="description" content="A Standout Year for Deals &#124; Puerto Rico Default &#124; John Angelo Dies" />
+<meta name="hdl" content="Morning Agenda: Oil Prices Volatile While Chinese Markets Sink" />
+<meta property="og:title" content="Morning Agenda: Oil Prices Volatile While Chinese Markets Sink" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/01/04/morning-agenda-oil-prices-volatile-while-chinese-markets-sink/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="A Standout Year for Deals &#124; Puerto Rico Default &#124; John Angelo Dies" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Oil Prices Volatile While Chinese Markets Sink" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/01/04/morning-agenda-oil-prices-volatile-while-chinese-markets-sink/" />
+<meta name="twitter:description" content="A Standout Year for Deals &#124; Puerto Rico Default &#124; John Angelo Dies" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/01/01/what-were-reading-117/' />
+<link rel='next' title='Morning Agenda:  A Growing Conflict in Wall St. Buyouts' href='//news.blogs.nytimes.com/2016/01/05/morning-agenda-a-growing-conflict-in-wall-st-buyouts/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/01/04/morning-agenda-oil-prices-volatile-while-chinese-markets-sink/' />
+<link rel='shortlink' href='//nyti.ms/1RlcE7C' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/01/04/morning-agenda-oil-prices-volatile-while-chinese-markets-sink/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Oil Prices Volatile While Chinese Markets Sink - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3961 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Oil Prices Volatile While Chinese Markets Sink        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/01/04/morning-agenda-oil-prices-volatile-while-chinese-markets-sink/"
+	 data-title="Morning Agenda: Oil Prices Volatile While Chinese Markets Sink"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;A Standout Year for Deals | Puerto Rico Default | John Angelo Dies&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/01/04/morning-agenda-oil-prices-volatile-while-chinese-markets-sink/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="January 4, 2016 6:25 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Oil Prices Volatile While Chinese Markets Sink</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-01-04T11:25:42+00:00" itemprop="datePublished">January 4, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">January 4, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3961 post type-post status-publish hentry category-dealbook tag-alibaba-group-holding-ltd tag-banking-and-financial-institutions tag-baxalta-inc tag-china tag-european-union tag-federal-reserve-system tag-income-inequality tag-initial-public-offerings tag-insurance tag-iran tag-mergers-acquisitions-and-divestitures tag-oil-petroleum-and-gasoline tag-organization-of-the-petroleum-exporting-countries tag-pfizer-inc tag-puerto-rico tag-saudi-arabia tag-shire-plc tag-start-ups tag-uber-technologies-inc des-banking-and-financial-institutions des-european-union des-federal-reserve-system des-income-inequality des-insurance des-start-ups org-alibaba-group-holding-ltd org-baxalta-inc org-china org-initial-public-offerings org-iran org-mergers-acquisitions-and-divestitures org-oil-petroleum-and-gasoline org-organization-of-the-petroleum-exporting-countries org-pfizer-inc org-puerto-rico org-saudi-arabia org-shire-plc org-uber-technologies-inc news_keywords-personal-finance news_keywords-startup" id="post-3961">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Oil Prices Volatile While Chinese Markets Sink</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-01-04T11:25:42+00:00" itemprop="datePublished">January 4, 2016 6:25 am</time>
+			<!-- date updated --><span class="visually-hidden updated">January 4, 2016 6:25 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/01/04/morning-agenda-oil-prices-volatile-while-chinese-markets-sink/" data-title="Morning Agenda: Oil Prices Volatile While Chinese Markets Sink" data-description="A Standout Year for Deals | Puerto Rico Default | John Angelo Dies">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>OIL PRICES VOLATILE WHILE CHINESE MARKETS SINK</strong> <span class="divider"> | </span></span> Investors started the year by steering away from risk. <b>Oil prices rose after Saudi Arabia cut diplomatic ties with Iran</b> on Sunday, <a href="//www.bloomberg.com/news/articles/2016-01-03/oil-surges-as-saudis-cut-ties-with-iran-after-embassy-attacked">Bloomberg reports</a>. The Middle East accounts for about 30 percent of global oil output. West Texas intermediate crude gained as much as 3.5 percent before slipping again, after a 1.2 percent advance on the final trading day of 2015.   </p>
+<p class="story-body-text" itemprop="articleBody">Saudi Arabiaâs move came after the execution of an outspoken Shiite cleric, Sheikh Nimr al-Nimr, led to <b>criticism from Iranian leaders and protesters storming the Saudi Embassy in Tehran</b>. Iranian diplomats were given 48 hours to leave the kingdom, <a href="//www.nytimes.com/2016/01/04/world/middleeast/iran-saudi-arabia-execution-sheikh-nimr.html?hp&#038;action=click&#038;pgtype=Homepage&#038;clickSource=story-heading&#038;module=first-column-region&#038;region=top-news&#038;WT.nav=top-news">Ben Hubbard reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">Ric Spooner, a chief analyst at CMC Markets in Sydney, Australia, told Bloomberg that although there was no immediate threat to production, <b>markets were pricing in increased risk as they anticipated the problems escalating</b>. Iran plans to raise exports once international sanctions are lifted and Saudi Arabia produced 10.25 million barrels a day in December, according to Bloomberg data. </p>
+<p class="story-body-text" itemprop="articleBody">Chinaâs CSI 300 index of blue-chip shares fell 7 percent, after disappointing manufacturing data and further depreciation of the renminbi, <a href="//www.nytimes.com/2016/01/05/business/international/stocks-asia-markets-china.html">Paul Mozur reports in DealBook</a>. <b>The drop prompted a halt in trading</b> on the first day that circuit breakers were put into place.<br />
+Almost every market in Asia fell on Monday in response to the weakness in China and geopolitical instability. </p>
+<p class="story-body-text" itemprop="articleBody">The yen and gold strengthened as <b>investors sought haven assets</b>, <a href="//www.bloomberg.com/news/articles/2016-01-03/yen-rises-as-investors-monitor-saudi-tension-stocks-signal-drop">Bloomberg reports</a>. The yen reached the strongest level since October, putting pressure on automakers like Toyota and Nissan that earn the bulk over their revenues in foreign currencies, while gold jumped 0.8 percent after an annual decline in 2015. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A STANDOUT YEAR FOR DEALS</strong> <span class="divider"> | </span></span> Last year was one for the record books with $4.7 trillion in deals announced, but it was <b>characterized by deals worth more than $5 billion and complex financial structures</b>,<br />
+<a href="//www.nytimes.com/2016/01/04/business/dealbook/a-standout-year-for-deals-in-volume-and-complexity.html?ref=business">Leslie Picker reports in DealBook.</a> Executives stretched beyond textbook-style acquisitions to complete deals and financing was cheap with interest rates low and growth slow. </p>
+<p class="story-body-text" itemprop="articleBody">Pfizer and Allergan sought to merge, effectively through a tax inversion. Dow Chemical and DuPont agreed to merge and then split. Anheuser-Busch InBevâs acquisition of SABMiller required several divestitures in an effort to keep regulators happy. Other takeovers included such <b>rare instruments as tracking stocks and contingent value rights</b>. </p>
+<p class="story-body-text" itemprop="articleBody">The shift also coincided with <b>activist investors pushing companies to explore more moves and options</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Investors helped open the deal-making floodgates, by sending stock prices higher when deals were announced. âThis acceptance has given companies the opportunity to find creative ways to generate value,â said Michael Carr, the global co-head of the mergers and acquisition group at Goldman Sachs. But stock prices did not rise as much in the second half of the year as the <b>synergies were less obvious</b> and investors became less comfortable with them. </p>
+<p class="story-body-text" itemprop="articleBody">Bankers and lawyers agree that the year ahead will continue to be busy. Many industries have seen consolidation among the top companies in the sector and <b>competitors could now seek more unique and creative methods for deals of their own</b> that will avoid regulatory issues. </p>
+<p class="story-body-text" itemprop="articleBody">See the top ranks of deals and advisers <a href="//www.nytimes.com/2016/01/04/business/dealbook/a-standout-year-for-deals-in-volume-and-complexity.html?ref=business">in full here.</a></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PUERTO RICO DEFAULT </strong> <span class="divider"> | </span></span> Puerto Rico is <b>increasingly likely to face lawsuits</b> from its creditors after defaulting on principal and interest payments on bonds,<br />
+<a HREF="//www.nytimes.com/2015/12/31/business/dealbook/puerto-rico-says-it-will-default-on-some-bonds.html?ref=dealbook">Mary Williams Walsh reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Gov. Alejandro GarcÃ­a Padilla said last week that the island <b>would default on nearly $174 million of payments</b>. He noted that only some of the payments would be halted immediately. They include $35.9 million due to holders of bonds issued by its Infrastructure Financing Authority and $1.4 million due to holders of its Public Finance Corporations bonds. </p>
+<p class="story-body-text" itemprop="articleBody">The government said it would <b>divert $174 million from lower-grade bonds</b> to pay holders of the legally protected general obligation bonds in a diversion known as a clawback. This technically amounts to a default, but some of those creditors were not to see a difference in their payments on Jan. 1. </p>
+<p class="story-body-text" itemprop="articleBody">General obligation bonds have a top priority under Puerto Ricoâs Constitution and defaulting on them could set off a constitutional crisis. The bondholders  were set to receive the full $328.7 million they were owed on Friday. </p>
+<p class="story-body-text" itemprop="articleBody">The governor said that some investors whose bonds are part of the clawback would still receive the full amounts expected on Friday because enough money had been sent already to bond trustees to cover the most imminent payments. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. GarcÃ­a Padilla said the rising tide of <b>defaults would make restructuring talks more difficult</b> as some investors would be forced to make unexpected sacrifices to help other investors. </p>
+<p class="story-body-text" itemprop="articleBody">The Treasury said in a statement on Wednesday that the default demonstrated âthe gravity of the commonwealthâs fiscal crisis and the need for Congress to act now.â </p>
+<p class="story-body-text" itemprop="articleBody">It continued: &#8220;<b>Puerto Rico is at a dead end, shifting funds from one creditor to pay another</b> and diverting money from already-depleted pension funds to pay both current bills and debt service.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The <b>Manufacturing ISM Report on Business</b> will be released at 10 a.m. <b>John C. Williams</b>, the president of the Federal Reserve Bank of San Francisco, will take part in a panel discussion of macroprudential policies by central banks at the American Economic Association annual meeting at 5:30 p.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JOHN ANGELO DIES</strong> <span class="divider"> | </span></span> John Angelo, who helped found Angelo, Gordon &#038; Coompany, has died at the age of 74, <a href="//www.bloomberg.com/news/articles/2016-01-03/john-angelo-who-co-founded-angelo-gordon-co-dies-at-74">Bloomberg News reports.</a> <b>He died on Jan. 1 after a long fight with cancer</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Angelo <b>oversaw the New York investment firm for 27 years</b> as it accumulated $26 billion in assets under management. He first worked the bond floor at the New York Stock Exchange in 1966 before moving to Bear Stearns. </p>
+<p class="story-body-text" itemprop="articleBody">He also <b>worked at L.F. Rothschild</b>, where he became a partner, then vice chairman and a member of the board. It was there that he worked with Michael Gordon, with whom he would establish Angelo, Gordon &#038; Company. </p>
+<p class="story-body-text" itemprop="articleBody">Under his leadership, the investment firm built a business to meet the financing needs of North American energy companies and invested early in Chelsea Market, which helped transform the meatpacking district. </p>
+<p class="story-body-text" itemprop="articleBody">He had graduated from St. Lawrence University in New York, where he gave a speech to graduates last May, <b>saying that his career had been marked by âcreative destructionâ</b> and advising students that, âIn life you have to keep moving to stay ahead. Donât stand still.â </p>
+<p class="story-body-text" itemprop="articleBody">He is survived by his wife, Judy, and their three children, Jack, Jesse and Kate. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Shire Said to Be in Advanced Talks to Buy Baxalta</strong> <span class="divider"> | </span></span> Shire is in advanced talks to acquire Baxalta for about $32 billion in cash and stock, excluding debt, Bloomberg News reports, citing people familiar with the matter. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-01-03/shire-said-in-advanced-talks-to-acquire-u-s-drugmaker-baxalta"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Raine Group Finds Deals for Clients, and Itself" src="https://static01.nyt.com/images/2016/01/04/business/04db-raine/04db-raine-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Raine Group Finds Deals for Clients, and Itself</strong> <span class="divider"> | </span></span> Quiet, huge transactions include selling a $400 million stake in the parent of the Manchester City soccer team to China Media.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/04/business/dealbook/raine-group-finds-deals-for-clients-and-itself.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New World to Prepare Buyout Offer for $7 Billion China Unit</strong> <span class="divider"> | </span></span> New World Development, controlled by the family of the Hong Kong billionaire Cheng Yu-tung, is planning an offer to take its $7 billion China unit private, Bloomberg News reports, citing a person with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-01-04/new-world-said-to-prepare-buyout-offer-for-7-billion-china-unit"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New Insurance Rules in Europe Could Lead to a Surge in Deals</strong> <span class="divider"> | </span></span> The rules reward well-diversified insurers with lower capital requirements so the sector is expected to consolidate as larger insurers look to diversify further and smaller insurers with specialized businesses seek to combine.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/c916be6a-aa38-11e5-9700-2b669a5aeb83.html#axzz3wEx4s4r5"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Shifting Who Bails Out Troubled Banks in Europe" src="https://static01.nyt.com/images/2016/01/04/business/04dixon/04dixon-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Shifting Who Bails Out Troubled Banks in Europe</strong> <span class="divider"> | </span></span> The European Union has wasted so much taxpayer money on bailing out banks in recent years that it is right to try to get investors to help foot the bill, Hugo Dixon writes in his column the Political Economy.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/04/business/international/shifting-who-bails-out-troubled-banks-in-europe.html">Political Economy &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Big Banks Start to Embrace Start-Ups</strong> <span class="divider"> | </span></span> Large banks are choosing to embrace up-and-coming lenders and are turning to them to lift small business lending. <br /><span class="kicker"><a href="//www.wsj.com/articles/big-banks-start-to-embrace-startups-1451874204?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Oil-Rich but Cash-Dry Companies Turn to Wall Street </strong> <span class="divider"> | </span></span> Publicly traded North American oil and gas producers sold roughly $19 billion of new stock last year, a record that helped the domestic industry keep its rigs running despite scarce credit and collapsing revenue.<br /><span class="kicker"><a href="//www.wsj.com/articles/meet-the-energy-sectors-rainmaker-1451853469"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Aim Stock Market Bruised By a Lack of New Issues</strong> <span class="divider"> | </span></span> Britainâs junior market was hit by a slowdown in fresh issues, the loss of a number of mining companies and oil and gas explorers and the departure of Chinese companies after nominated advisers withdrew support.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/600a43ea-afc1-11e5-b955-1a1d298b6250.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3wEx4s4r5"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Uberâs No-Holds-Barred Expansion Strategy Fizzles in Germany" src="https://static01.nyt.com/images/2016/01/04/business/04UBERGERMANY/04UBERGERMANY-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uberâs No-Holds-Barred Expansion Strategy Fizzles in Germany</strong> <span class="divider"> | </span></span> The ride-hailing company has retreated from several German cities. Its withdrawal from Frankfurt offers a case study of what went wrong.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/04/technology/ubers-no-holds-barred-expansion-strategy-fizzles-in-germany.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Alibabaâs Finance Arm Said to Seek at Least $1.5 Billion</strong> <span class="divider"> | </span></span> Alibaba Group Holdingâs finance affiliate is seeking at least 10 billion renminbi, or about $1.5 billion, in a second round of fund-raising before a planned initial public offering, Bloomberg News reports, citing a person familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-01-04/alibaba-s-finance-arm-said-to-seek-at-least-1-5-billion">BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinaâs Tech Sector Likely to Face Tougher 2016</strong> <span class="divider"> | </span></span> The harsher fund-raising environment is prompting entrepreneurs to tighten spending and consider merging with rivals, investors and bankers say.<br /><span class="kicker"><a href="//www.wsj.com/articles/chinas-tech-sector-likely-faces-tougher-sledding-in-2016-1451849404"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tech Start-Ups Face New Pressure on Valuations</strong> <span class="divider"> | </span></span> Tougher private fund-raising conditions could make it more difficult for start-ups to avoid initial public offerings in 2016 if they need to raise money and they could face a chilly reception, investors and bankers say.<br /><span class="kicker"><a href="//www.wsj.com/articles/tech-startups-face-fresh-pressure-on-valuations-1451817991"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Accounting Rule Maker Proposes to Curb What Companies Must Disclose</strong> <span class="divider"> | </span></span> A regulatory change that would allow companies more discretion in deciding what is âmaterialâ information elicits concern among investors and auditors, Gretchen Morgenson writes in the Fair Game column.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/03/business/fasb-proposes-to-curb-what-companies-must-disclose.html">Fair Game &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fedâs Tools âProved Effectiveâ in Raising Short-Term Interest Rates</strong> <span class="divider"> | </span></span> âOne possible concern about our unconventional policies has eased recently, as the Fedâs normalization tools proved effective in raising the federal-funds rate following our meeting two and a half weeks ago,â said Stanley Fischer, the vice chairman of the Federal Reserve.<br /><span class="kicker"><a href="//www.wsj.com/articles/fischer-feds-tools-proved-effective-in-raising-short-term-interest-rates-1451844954"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Economists Take Aim at Wealth Inequality</strong> <span class="divider"> | </span></span> At the annual meeting of the American Economic Association, what was once mainly an issue among players on the margins of the profession is taking center stage.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/04/business/economy/economists-take-aim-at-wealth-inequality.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Door to U.S. for Chinese Investors</strong> <span class="divider"> | </span></span> New stock-purchase apps are opening a path to financial markets in the United States for the Chinese middle class, which is seeking profitable places to put money. <br /><span class="kicker"><a href="//www.wsj.com/articles/chinese-investors-get-door-to-u-s-1451868537?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/01/04/morning-agenda-oil-prices-volatile-while-chinese-markets-sink/"
+					data-title="Morning Agenda: Oil Prices Volatile While Chinese Markets Sink"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;A Standout Year for Deals | Puerto Rico Default | John Angelo Dies&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/01/04/morning-agenda-oil-prices-volatile-while-chinese-markets-sink/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":68,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

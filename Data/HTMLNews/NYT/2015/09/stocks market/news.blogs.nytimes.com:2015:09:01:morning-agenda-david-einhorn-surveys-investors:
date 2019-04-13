@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003884670"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1441106125" />
+<meta name="PUD" content="20150901" />
+<meta name="pdate" content="20150901" />
+<meta name="ptime" content="20150901071525" />
+<meta name="utime" content="20150901111525" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-09-01T11:15:25-04:00" />
+<meta name="DISPLAYDATE" content="September 1, 2015" />
+<meta name="dat" content="September 1, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Moynihan, Brian T;Thiel, Peter A">
+<meta name="des" content="Banking and Financial Institutions;Bitcoin (Currency);China;Copper, Brass and Bronze;Fugger, Jacob (1459-1525);Greenlight Capital Re Ltd;Hedge Funds;Popes;Stocks and Bonds">
+<meta name="org" content="Argentina;AstraZeneca PLC;Bank of America Corporation;Bank of New York Mellon Corporation;Mergers, Acquisitions and Divestitures;Musk, Elon;RadioShack Corporation;Securities and Exchange Commission;Tesla Motors Inc;Valeant Pharmaceuticals International Inc;Whirlpool Corporation">
+<meta name="geo" content="Silicon Valley (Calif)">
+<meta name="ticker" content="Bank of America Corporation|BAC|NYSE;Bank of New York Mellon Corporation|BK|NYSE;RadioShack Corporation|RSH|NYSE;Valeant Pharmaceuticals International Inc|VRX|NYSE;Whirlpool Corporation|WHR|NYSE" />
+<meta property="article:tag" content="Moynihan Brian T" />
+<meta property="article:tag" content="Thiel Peter A" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Bitcoin (Currency)" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Copper Brass and Bronze" />
+<meta property="article:tag" content="Fugger Jacob (1459-1525)" />
+<meta property="article:tag" content="Greenlight Capital Re Ltd" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Popes" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Argentina" />
+<meta property="article:tag" content="AstraZeneca PLC" />
+<meta property="article:tag" content="Bank of America Corporation" />
+<meta property="article:tag" content="Bank of New York Mellon Corporation" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Musk Elon" />
+<meta property="article:tag" content="RadioShack Corporation" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Tesla Motors Inc" />
+<meta property="article:tag" content="Valeant Pharmaceuticals International Inc" />
+<meta property="article:tag" content="Whirlpool Corporation" />
+<meta property="article:tag" content="Silicon Valley (Calif)" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Moynihan Brian T,Thiel Peter A,Banking and Financial Institutions,Bitcoin (Currency),China,Copper Brass and Bronze,Fugger Jacob (1459-1525),Greenlight Capital Re Ltd,Hedge Funds,Popes,Stocks and Bonds,Argentina,AstraZeneca PLC,Bank of America Corporation,Bank of New York Mellon Corporation,Mergers Acquisitions and Divestitures,Musk Elon,RadioShack Corporation,Securities and Exchange Commission,Tesla Motors Inc,Valeant Pharmaceuticals International Inc,Whirlpool Corporation,Silicon Valley (Calif),DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F09%2F01%2Fmorning-agenda-david-einhorn-surveys-investors%2F" title="Morning Agenda: David Einhorn Surveys Investors" />
+<meta name="description" content="Dreamers and the Defiant &#124; China Cracks Down on &#8216;Spreading Rumors&#8217;" />
+<meta name="hdl" content="Morning Agenda: David Einhorn Surveys Investors" />
+<meta property="og:title" content="Morning Agenda: David Einhorn Surveys Investors" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/09/01/morning-agenda-david-einhorn-surveys-investors/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Dreamers and the Defiant &#124; China Cracks Down on &#8216;Spreading Rumors&#8217;" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: David Einhorn Surveys Investors" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/09/01/morning-agenda-david-einhorn-surveys-investors/" />
+<meta name="twitter:description" content="Dreamers and the Defiant &#124; China Cracks Down on &#8216;Spreading Rumors&#8217;" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Challenges on All Sides for the Fed' href='//news.blogs.nytimes.com/2015/08/31/morning-agenda-challenges-on-all-sides-for-the-fed/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/09/01/what-were-reading-86/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/09/01/morning-agenda-david-einhorn-surveys-investors/' />
+<link rel='shortlink' href='//nyti.ms/1MZK6hX' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/09/01/morning-agenda-david-einhorn-surveys-investors/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: David Einhorn Surveys Investors - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3139 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: David Einhorn Surveys Investors        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/09/01/morning-agenda-david-einhorn-surveys-investors/"
+	 data-title="Morning Agenda: David Einhorn Surveys Investors"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Dreamers and the Defiant | China Cracks Down on &#039;Spreading Rumors&#039;&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/09/01/morning-agenda-david-einhorn-surveys-investors/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="September 1, 2015 7:15 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: David Einhorn Surveys Investors</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-09-01T11:15:25+00:00" itemprop="datePublished">September 1, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">September 1, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3139 post type-post status-publish hentry category-dealbook tag-argentina tag-astrazeneca-plc tag-bank-of-america-corporation tag-bank-of-new-york-mellon-corporation tag-banking-and-financial-institutions tag-bitcoin-currency tag-china tag-copper-brass-and-bronze tag-fugger-jacob-1459-1525 tag-greenlight-capital-re-ltd tag-hedge-funds tag-mergers-acquisitions-and-divestitures tag-moynihan-brian-t tag-musk-elon tag-popes tag-radioshack-corporation tag-securities-and-exchange-commission tag-silicon-valley-calif tag-stocks-and-bonds tag-tesla-motors-inc tag-thiel-peter-a tag-valeant-pharmaceuticals-international-inc tag-whirlpool-corporation per-moynihan-brian-t per-thiel-peter-a des-banking-and-financial-institutions des-bitcoin-currency des-china des-copper-brass-and-bronze des-fugger-jacob-1459-1525 des-greenlight-capital-re-ltd des-hedge-funds des-popes des-stocks-and-bonds org-argentina org-astrazeneca-plc org-bank-of-america-corporation org-bank-of-new-york-mellon-corporation org-mergers-acquisitions-and-divestitures org-musk-elon org-radioshack-corporation org-securities-and-exchange-commission org-tesla-motors-inc org-valeant-pharmaceuticals-international-inc org-whirlpool-corporation geo-silicon-valley-calif" id="post-3139">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: David Einhorn Surveys Investors</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-09-01T11:15:25+00:00" itemprop="datePublished">September 1, 2015 7:15 am</time>
+			<!-- date updated --><span class="visually-hidden updated">September 1, 2015 7:15 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/09/01/morning-agenda-david-einhorn-surveys-investors/" data-title="Morning Agenda: David Einhorn Surveys Investors" data-description="Dreamers and the Defiant | China Cracks Down on &#039;Spreading Rumors&#039;">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DAVID EINHORN SURVEYS INVESTORS</strong> <span class="divider"> | </span></span> David Einhorn has a reputation as one of the savviest stock pickers on Wall Street, but even he has not been spared in the recent market turmoil. This year is shaping up to be one of  <b>the worst in the history of his hedge fund</b>. People briefed on the matter say the Greenlight Capital fund was down 5.3 percent in August and down 14 percent for the year. And Mr. Einhorn has been trying to find out what his investors think about the fund,  <a href="//www.nytimes.com/2015/09/01/business/dealbook/greenlight-capital-down-14-for-year-david-einhorn-surveys-investors.html?ref=dealbook">Alexandra Stevenson and Matthew Goldstein report in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">This year, Mr. Einhornâs firm had retained an outside consulting firm to  <b>conduct a survey of investors</b>, according to people briefed on the matter. The firm started contacting Greenlightâs investors several weeks ago to conduct phone interviews, and gauge their thoughts about the hedge fund and its accessibility. </p>
+<p class="story-body-text" itemprop="articleBody">It is not clear what Mr. Einhorn intends to do with the results. He has conducted surveys from time to time before and a person briefed on the matter said the timing of the survey had nothing to do with the fundâs recent performance. Still, it is a sign of how hedge fund managers, even famous ones like Mr. Einhorn,  <b>need to be sensitive to their investors</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Einhorn said in July that his investment in SunEdison was the âonly significant winner,â but even its stock took a sharp dive in August. Along with gold, General Motors and Apple rank among his biggest long positions and both have had  <b>uneven returns in recent months</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Some investors speculate that Mr. Einhorn might be managing too much money and  <b>his firm is not as nimble as it once was</b>, making it more difficult to exit losing positions. The poor results come after Mr. Einhorn opened the doors of his firm to new investors, raising money for the first time in years. </p>
+<p class="story-body-text" itemprop="articleBody">Other investors are willing to give Mr. Einhorn the benefit of the doubt, noting that the firm has generated an  <b>annualized return of just over 19 percent since it opened for business</b>  in 1996. August was also a torrid month for other hedge funds.  </p>
+<p class="story-body-text" itemprop="articleBody">In his most recent note to investors, Mr. Einhorn made an  <b>appeal to investors to sit tight</b>, signing off with a quote from the inventor Thomas A. Edison.</p>
+<p class="story-body-text" itemprop="articleBody">âA diamond is a piece of coal that stuck to the job,â Mr. Einhorn wrote.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DREAMERS AND THE DEFIANT</strong> <span class="divider"> | </span></span> This relentless summer of business news has left little time for other reading, but if you have time in what is left of it, Andrew Ross Sorkin has a list of the best business books this year. âIâm obsessed with business books, especially ones that provide <b>insight into the people behind the companies and inventions that drive the global economy</b>,â <a href="//www.nytimes.com/2015/09/01/business/dealbook/end-of-summer-reading-dreamers-and-the-defiant.html?ref=dealbook">Mr. Sorkin writes in the DealBook column</a>. </p>
+<p class="story-body-text" itemprop="articleBody"> Top of the list is Ashlee Vanceâs <b>âElon Musk: Tesla, SpaceX and the Quest for a Fantastic Future.â</b> Questions may remain about the sustainability of Mr. Muskâs business, but this biography gives a glimpse of what keeps the 44-year-old South African dreamer going. It is also reveals that he had a difficult childhood with an abusive father. Says a schoolmate of Mr. Musk: âHonestly, there were just no signs that he was going to be a billionaire.â</p>
+<p class="story-body-text" itemprop="articleBody"> Mr. Sorkin also recommends, <b>âThe Richest Man Who Ever Lived: The Life and Times of Jacob Fugger,â</b> by Greg Steinmetz. Jacob Fugger, a German banker in the 15th century, âcould have been a Russian oligarch, a Latin American telecoms boss or an American railroad baron from the 19th century,â Mr. Steinmetz says. The grandson of a peasant, Mr. Fugger cornered the copper market in Europe and then became one of the worldâs most influential bankers, counting even the pope as a client. </p>
+<p class="story-body-text" itemprop="articleBody"> If youâre aiming to create your own billion-dollar start-up, or you just want to understand Silicon Valley, Mr. Sorkin recommends Peter Thielâs <b>âZero to One: Notes on Startups, or How to Build the Future.â</b> One of the venture capitalistâs rules is to never invest in a company that pays its C.E.O. more than $150,000. He thinks a âcash-poorâ executive will be hungrier to create value and it sets a good example to the rest of the company. </p>
+<p class="story-body-text" itemprop="articleBody"> Mr. Sorkinâs other recommendation range from an <b>examination of Fannie Mae and Freddie Mac</b>, to a look about the transformation of the television industry, to a book on the financial machinations behind modern baseball. He also recommends Nathaniel Popperâs <b>fly-on-the-wall narrative of Bitcoinâs origins</b> and the memoir of Bill Browder, an early hedge-fund investor in Russia, which reads like a John Grisham thriller. </p>
+<p class="story-body-text" itemprop="articleBody"> All of these books, Mr. Sorkin says, give readers an understanding of the <b>human drama behind every business saga.</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The Institute for Supply Management releases Augustâs   <b>manufacturing report</b>  at 10 a.m.  Data on  <b>construction spending in July</b>  will be released at 10 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CHINA CRACKS DOWN ON âSPREADING RUMORSâ</strong> <span class="divider"> | </span></span> The Chinese Ministry of Public Security announced that it had punished at least 197 people in recent days for âspreading rumorsâ online, <a href="//www.nytimes.com/2015/09/01/world/asia/china-punishes-nearly-200-over-rumors-about-stocks-blasts-and-parade.html?ref=dealbook&#038;assetType=nyt_now">Edward Wong reports in The New York Times</a>. The <b>so-called rumors related to uncertainty in Chinaâs stock market</b>, the explosion in Tianjin and the parade scheduled for Thursday to commemorate the 70th anniversary of the end of World War II. Xinhua, the state-run news agency, reported that the ministryâs actions were the core of a âspecial campaignâ by the police.</p>
+<p class="story-body-text" itemprop="articleBody"> One of the most prominent targets of the recent campaign was Wang Xiaolu, a reporter for a respected business magazine, Caijing. He was compelled to make a confession on television in which he said he had written <b>a âsensationalâ and âirresponsibleâ article on the stock market</b>. Chinese authorities have increasingly used confessions on the state network to humiliate detainees and to use as a warning for others. </p>
+<p class="story-body-text" itemprop="articleBody"> Mr. Wang wrote an article published on July 20, reporting that the China Securities Regulatory Commission was seeking to withdraw funds from the stock market. He was detained by police on Aug. 25. Caijing issued a statement saying it did not know why he had been detained. Xinhua <b>said his report had caused âabnormal fluctuationsâ in the stock market</b>.</p>
+<p class="story-body-text" itemprop="articleBody"> Along with Mr. Wang, several financial officials and executives were <b>detained last week for contributing to stock market volatility</b> and have been dealt with by âcriminal compulsory measures,â according to Xinhua. Those detained include Liu Shufan, an official with the China Securities Regulatory Commission, and four executives from Citic Securities Company, the countryâs leading securities dealer.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Prospective Buyers of GE Capital Reportedly Narrowed Down to 3</strong> <span class="divider"> | </span></span> Sankaty Advisors, Lone Star and HNA Group are said to be the final participants in an auction of the Australian commercial lending and leasing businesses of GE Capital.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/02/business/dealbook/ge-capital-buyers-narrowed-to-sankaty-lone-star-hna.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Valeant Strikes Psoriasis-Drug Pact With AstraZeneca</strong> <span class="divider"> | </span></span> Canadaâs Valeant Pharmaceuticals has struck a deal with AstraZeneca for the rights to sell the psoriasis treatment brodalumab. It said it would pay AstraZeneca $100 million up front, with another $170 million in prelaunch milestones and up to $175 million following the drugâs introduction.<br /><span class="kicker"><a href="//www.wsj.com/articles/valeant-strikes-psoriasis-drug-pact-with-astra-1441091580?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Battle for the British Stove</strong> <span class="divider"> | </span></span> Whirlpool, the worldâs biggest home appliance company, is set to battle Middleby for Britainâs Aga Rangemaster, the maker of stoves synonymous with affluent British middle-class country life.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/09/01/us-aga-rangemaster-m-a-whirlpool-idUSKCN0R12TQ20150901"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bwin.Party Gets New Bid Proposal From 888</strong> <span class="divider"> | </span></span> Bwin.party Digital Entertainment said it got a revised takeover proposal from 888 Holdings, the latest twist in a bidding contest for the online gaming company.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-09-01/bwin-party-gets-new-bid-proposal-from-888-in-takeover-contest"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Stakes Are High as Big Four Push for M&#038;A Work</strong> <span class="divider"> | </span></span> As new opportunities in traditional audit and tax work have reached a plateau, the âBig Fourâ â Deloitte, EY, KPMG and PwC â have turned to management consulting and mergers and acquisitions for growth.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/741a5ba2-4f33-11e5-8642-453585f2cfcd.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3kMuOmFHR"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China Seeks to Bolster M&#038;A, Dividends and Buybacks</strong> <span class="divider"> | </span></span> China will encourage listed companies to conduct mergers and acquisitions, buy back shares when prices are low and pay higher cash dividends as the government extends efforts to bolster share prices.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-08-31/china-to-boost-m-a-cash-divs-shr-buybacks-by-listed-cos-csrc"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>M&#038;A Stays Hot</strong> <span class="divider"> | </span></span> Last weekâs stock-market turmoil caused stomachs to churn on trading floors, but it didnât stop executives and investment bankers from announcing several large deals.<br /><span class="kicker"><a href="//blogs.wsj.com/moneybeat/2015/08/31/ma-stays-hot-a-look-at-the-numbers/?mod=MarketsMain"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Shareholders Want Bank of America to Separate Roles of Chairman and C.E.O.</strong> <span class="divider"> | </span></span> The California Public Employeesâ Retirement System and California State Teachersâ Retirement System joined the drive for Bank of America shareholders to oppose a corporate bylaw change that would let Brian Moynihan serve as both chief executive and chairman.<br /><span class="kicker"><a href="//www.wsj.com/articles/calpers-calstrs-want-bank-of-america-to-separate-roles-of-chairman-ceo-1441068335?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blythe Masters Tells Banks the Blockchain Changes Everything</strong> <span class="divider"> | </span></span> âYou should be taking this technology as seriously as you should have been taking the development of the Internet in the early 1990s,â the former JPMorgan banker explains. âItâs analogous to email for money.â<br /><span class="kicker"><a href="//www.bloomberg.com/news/features/2015-09-01/blythe-masters-tells-banks-the-blockchain-changes-everything"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BNY Catches Up With Pricing Backlog</strong> <span class="divider"> | </span></span> Bank of New York Mellon said it had finished working through a backlog of mutual and exchange-traded fund-pricing issues before the market opened on Monday, ending a weeklong struggle by the company to provide accurate asset values to about 1,200 funds.<br /><span class="kicker"><a href="//www.wsj.com/articles/bank-of-new-york-mellon-clears-pricing-backlog-for-mutual-funds-etfs-1441029131?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Slowing Growth Exposes Chinese Banksâ Debt Debris</strong> <span class="divider"> | </span></span> Although overall bad debt levels remain relatively low, continued deterioration threatens to reverse years of profit growth, Peter Thal Larsen writes.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/01/business/dealbook/slowing-growth-exposes-chinese-banks-debt-debris.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Court Rules Against Seizure of Assets at Argentinaâs Central Bank</strong> <span class="divider"> | </span></span> The decision was a reversal of a district-court ruling that would have opened the sovereign nationâs reserves to hedge funds that sought to declare Banco Central de la Republica Argentina an âalter egoâ of the South American nation.<br /><span class="kicker"><a href="//www.wsj.com/articles/argentina-creditors-cant-seize-assets-of-central-bank-court-rules-1441040165?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>RadioShack Creditors Sue Hedge Fund Standard General</strong> <span class="divider"> | </span></span> The lawsuit also names Wells Fargo and the former chief executive officer Joseph Magnacca, saying they helped Standard General take over the company at creditorsâ expense.<br /><span class="kicker"><a href="//www.wsj.com/articles/radioshack-creditors-sue-hedge-fund-standard-general-1441051525?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Asia Hedge Fund Start-Ups Slow</strong> <span class="divider"> | </span></span> Hedge fund launches in Asia are on track to decline for the third straight year as equity market volatility prompts investors in the region to pare risk.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-08-31/asia-hedge-fund-startups-slow-as-market-gyrations-curb-appetite"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>William Ackmanâs Tennis ProtÃ©gÃ© Makes U.S. Open Debut</strong> <span class="divider"> | </span></span> The hedge-fund billionaire William Ackman has amassed a fortune by recognizing potential, so it made perfect sense to pledge his financial support when he saw young Frances Tiafoe on a tennis court.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-08-31/bill-ackman-s-tennis-protege-climbs-rankings-to-make-open-debut"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Democrats Pressure S.E.C. to Force Disclosure of Political Spending</strong> <span class="divider"> | </span></span> More than 40 Democratic senators signed a letter Monday urging the Securities and Exchange Commission Chairwoman Mary Jo White to require that public companies disclose their spending on political campaigns.<br /><span class="kicker"><a href="//www.bloomberg.com/politics/articles/2015-08-31/democrats-pressure-sec-to-force-disclosure-of-political-spending"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="A Wild Month on Wall St. Ends Quietly " src="https://static01.nyt.com/images/2015/09/01/business/01MARKETS/01MARKETS-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Wild Month on Wall St. Ends Quietly </strong> <span class="divider"> | </span></span> Augustâs turbulence interrupted an unusually long period of tranquillity, but some analysts found reasons to believe that the markets may have found a bottom.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/01/business/a-wild-month-on-wall-st-ends-quietly.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/09/01/business/energy-environment/oil-futures-rise-8-in-3rd-gain-in-a-row.html">Oil Futures Rise 8% in 3rd Gain in a Row</a> <span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/09/01/morning-agenda-david-einhorn-surveys-investors/"
+					data-title="Morning Agenda: David Einhorn Surveys Investors"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Dreamers and the Defiant | China Cracks Down on &#039;Spreading Rumors&#039;&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/09/01/morning-agenda-david-einhorn-surveys-investors/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":46,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

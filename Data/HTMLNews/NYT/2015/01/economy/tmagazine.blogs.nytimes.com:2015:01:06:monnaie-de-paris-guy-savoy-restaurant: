@@ -1,0 +1,369 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" lang="en-US" itemscope xmlns:og="//opengraphprotocol.org/schema/">
+<head profile="//gmpg.org/xfn/11"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Long a Walled-Off Secret, the Paris Mint Transforms Into a Dining and Art Destination </title>
+<link rel="shortcut icon" href="https://static01.nyt.com/packages/images/blogs/tmagazine/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="https://static01.nyt.com/js/common.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/app/lib/NYTD/0.0.1/tabset.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/common.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/memberTools.js"></script>
+<!--[if lt IE 9]>
+<script src="https://static01.nyt.com/js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="https://static01.nyt.com/js/common/screen/modifyNavigationDisplay.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/tabsetoverlayrevealer.js"></script>
+<!--[if lt IE 7]><script defer type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/pngfix.js"></script><![endif]-->
+<script type="text/JavaScript">
+// <![CDATA[
+var nyt_google_hints = "";
+var nyt_google_ad_channel = "bl_t-magazine";
+// ]]>
+</script>
+<script type="text/JavaScript">
+NYTD.Blogs.Ads = {};function processBlogsAds(data) { NYTD.Blogs.Ads = data.ads; }
+</script>
+<script type="text/javascript">
+if ((document.referrer).indexOf("nytimes.com") !== -1) {var nyt_doc_referrer = 'nytimes.com;';}else {var nyt_doc_referrer = '';}
+document.write( '<script id="adxScript" src="'+ '//www.nytimes.com' +'/adx/bin/adxrun.html?v=3&jsonp=processBlogsAds&page=' + 'blog.nytimes.com/tmagazine/post&positions=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&query=qstring&keywords='+ encodeURIComponent(nyt_doc_referrer) +';A-list;celebrity;chic;collections;concierge;design;designers;fashion;first+class;gossip;hotel;jet+set;luxury;models;New+York+Times;restaurant;runway;shopping;style;T+Magazine;travel;Men&#039;s+wear;Women&#039;s+wear;culture;letter-from-france;Savoy+Guy;Art;Factories+and+Manufacturing;Restaurants;Louvre+Museum;Monnaie+de+Paris;Paris+(France);Culture;Letter+From+France;Travel;_featured;' + '"' + '>' + '</' + 'script>');
+</script>
+<script type="text/javascript" src="https://static01.nyt.com/js/common/sharetools/2.0/shareTools.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/app/save/crossPlatformSave.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/blogscrnr.js"></script>
+<link rel="stylesheet" type="text/css" href="https://static01.nyt.com/css/blogs/3.1/screen/themes/tmagazine/style.css" media="screen" />
+<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/tmagazine/Long a Walled-Off Secret, the Paris Mint Transforms Into a Dining and Art Destination  ( 20150106 )" />
+<meta name="communityAssetURL" content="//tmagazine.blogs.nytimes.com/2015/01/06/monnaie-de-paris-guy-savoy-restaurant/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta name="author" content="Elaine Sciolino" />
+<meta name="CLMST" content="Elaine Sciolino" />
+<meta name="byl" content="Elaine Sciolino" />
+<meta name="article:author" content="//topics.nytimes.com/top/reference/timestopics/people/s/elaine_sciolino/index.html" /><meta name="GBLC" content="Culture;Letter From France;Travel">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1420552816" />
+<meta name="PUD" content="20150106" />
+<meta name="pdate" content="20150106" />
+<meta name="ptime" content="20150106090016" />
+<meta name="utime" content="20150106215807" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-01-06T21:58:07-05:00" />
+<meta name="DISPLAYDATE" content="January 6, 2015" />
+<meta name="dat" content="January 6, 2015" />
+<meta itemprop="articleSection" property="article:section" content="T:Style" />
+<meta name="CG" content="T:Style" />
+<meta name="SCG" content="tmagazine" />
+<meta name="BN" content="tmagazine" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Savoy, Guy">
+<meta name="des" content="Art;Factories and Manufacturing;Restaurants">
+<meta name="org" content="Louvre Museum;Monnaie de Paris">
+<meta name="geo" content="Paris (France)">
+<meta property="article:tag" content="Savoy Guy" />
+<meta property="article:tag" content="Art" />
+<meta property="article:tag" content="Factories and Manufacturing" />
+<meta property="article:tag" content="Restaurants" />
+<meta property="article:tag" content="Louvre Museum" />
+<meta property="article:tag" content="Monnaie de Paris" />
+<meta property="article:tag" content="Paris (France)" />
+<meta property="article:tag" content="Culture" />
+<meta property="article:tag" content="Letter From France" />
+<meta property="article:tag" content="Travel" />
+<meta property="article:tag" content="_featured" />
+<meta name="keywords" content="Savoy Guy,Art,Factories and Manufacturing,Restaurants,Louvre Museum,Monnaie de Paris,Paris (France),Culture,Letter From France,Travel,_featured" />
+<meta name="news_keywords" content="Art,Guy Savoy,Louvre Museum,Manufacturing,Monnaie de Paris,Paris France,Restaurant" />
+<meta name="description" content="The grand Monnaie de Paris &#8212; which still produces commemorative coins &#8212; is undergoing a face-lift, hosting exhibits and Guy Savoy&#8217;s forthcoming flagship restaurant." />
+<meta name="hdl_p" content="Letter From France: Money Man" />
+<meta name="hdl" content="Long a Walled-Off Secret, the Paris Mint Transforms Into a Dining and Art Destination " />
+<meta property="og:title" content="Long a Walled-Off Secret, the Paris Mint Transforms Into a Dining and Art Destination " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//tmagazine.blogs.nytimes.com/2015/01/06/monnaie-de-paris-guy-savoy-restaurant/" />
+<meta property="og:site_name" content="T Magazine" />
+<meta property="og:description" content="The grand Monnaie de Paris &#8212; which still produces commemorative coins &#8212; is undergoing a face-lift, hosting exhibits and Guy Savoy&#8217;s forthcoming flagship restaurant." />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-C17M/06france-sciolino-slide-C17M-facebookJumbo.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-C17M/06france-sciolino-slide-C17M-thumbLarge.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Long a Walled-Off Secret, the Paris Mint Transforms Into a Dining and Art Destination " />
+<meta name="twitter:url" content="//tmagazine.blogs.nytimes.com/2015/01/06/monnaie-de-paris-guy-savoy-restaurant/" />
+<meta name="twitter:description" content="The grand Monnaie de Paris &#8212; which still produces commemorative coins &#8212; is undergoing a face-lift, hosting exhibits and Guy Savoy&#8217;s forthcoming flagship restaurant." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-C17M/06france-sciolino-slide-C17M-thumbLarge.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-C17M/06france-sciolino-slide-C17M-thumbLarge.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@https://twitter.com/tmagazine">
+<script src="https://static01.nyt.com/js/app/lib/jquery/jquery-1.6.2.min.js" type="text/javascript"></script><script src="https://static01.nyt.com/js/EmbeddedComments/embeddedComments.js" type="text/javascript"></script>
+<link rel='prev' title='In Madrid, a New Restaurant Features a Rotating Cast of Regional Chefs' href='//tmagazine.blogs.nytimes.com/2015/01/05/the-table-by-madrid-restaurant/' />
+<link rel='next' title='Lena Dunham in Cut-Out Creatures of the Wind' href='//tmagazine.blogs.nytimes.com/2015/01/06/lena-dunham-girls-premiere-creatures-of-the-wind/' />
+<link rel='canonical' href='//tmagazine.blogs.nytimes.com/2015/01/06/monnaie-de-paris-guy-savoy-restaurant/' />
+<link rel='shortlink' href='//tmagazine.blogs.nytimes.com/?p=288650' />
+<link rel='https://github.com/WP-API/WP-API' href='//tmagazine.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/tmagazine/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//tmagazine.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/t-magazine/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/tmagazine/2015/01/06/monnaie-de-paris-guy-savoy-restaurant/" />
+<style type="text/css">
+address {font-style: normal;display: inline;}.story-meta-footer span + time {border: 0;}.story-meta-footer .kicker + time, .story-meta-footer .kicker + span {border-left: 1px solid #ccc;}.has-kicker .byline {border-left: 1px solid #ccc;padding: 0 5px 0 8px;}figure {    margin: 0px;}.credit {    display: inline;}.visually-hidden {    border: 0;    clip: rect(0 0 0 0);    height: 1px;    margin: -1px;    overflow: hidden;    padding: 0;    position: absolute;    width: 1px;}.entry-content .story-addendum {    color: #333;    font-style: italic;    font-size: 1rem;    line-height: 1.4375rem;    font-weight: 400;    font-family: georgia,"times new roman",times,serif;    margin-bottom: 1em;    max-width: 540px;}.entry-content .story-footer {    margin-top: 24px;    margin-bottom: 45px;}.entry-content .story-footer .story-notes p {    font-size: .875rem;    line-height: 1.125rem;    font-weight: 500;    font-family: "nyt-franklin", arial, helvetica, sans-serif;    margin-bottom: 14px;}.entry-content .story-footer:before {    content: "";    width: 60px;    height: 1px;    display: inline-block;    background-color: #000;    margin: 0 0 13px;}.entry-content .story-print-citation {    font-size: .6875rem;    line-height: .9375rem;    font-weight: 300;    font-family: "nyt-franklin", arial, helvetica, sans-serif;    color: #999;}body.single article.hentry {    padding: 15px 10px 0;}.fullScreenSlideShow #fullScreenWrapper {    z-index: 10000000;}figure .image {    margin-bottom: 7px;}figure .credit {    font-size: 1em;line-height: 1.2em;}.caption {    font-size: 1.2em;}body.blogHome.nyt-blog-tmagazine .hfeed .hentry:first-child,body.blogAuthor.nyt-blog-tmagazine .hfeed div:first-child+ .hentry {    margin-top: 0px!important;    padding-top: 0px!important;    background:none;}body.blogAuthor.nyt-blog-tmagazine .hfeed div:first-child+ .hentry,body.blogCategories.nyt-blog-tmagazine .hfeed div:first-child+ .hentry {    background:none;}body.blogHome.nyt-blog-tmagazine .hfeed .hentry,body.blogAuthor.nyt-blog-tmagazine .hfeed .hentry {    margin-top: 40px;    padding-top: 40px;}body.blogCategories.nyt-blog-tmagazine .resultsLabel,body.blogAuthor.nyt-blog-tmagazine .resultsLabel,body.blogTags.nyt-blog-tmagazine .resultsLabel {    margin-left: 15px;    margin-top: 15px;    border-bottom: 1px solid #e2e2e2;    padding-bottom: 15px;}body.nyt-blog-tmagazine #aCol .nav .next {    margin-left: 135px;}body.nyt-blog-tmagazine .entry-content .related-coverage {    margin-bottom: 1em;}body.nyt-blog-tmagazine .entry-content .related-coverage h6.kicker {    margin-bottom:5px;}body.nyt-blog-tmagazine .entry-content .related-coverage li {    margin-bottom: 0;}body.nyt-blog-tmagazine #cCol .nav .next {    margin-left: 45px;}body.nyt-blog-tmagazine #cCol .nav li {    max-width: 110px;}body.nyt-blog-tmagazine #aCol .nav li {    max-width: 190px;}body.nyt-blog-tmagazine .nav li a {    overflow: hidden;}body.nyt-blog-tmagazine.wideAd #aCol .nav .element1, body.nyt-blog-tmagazine.wideAd #aCol .nav .element2 {    width: 50%;}body.nyt-blog-tmagazine.wideAd #aCol .nav ul {    background: url("https://static01.nyt.com/images/layout/vertical_rule.gif") repeat-y center;}body.nyt-blog-tmagazine.wideAd #aCol .nav .next {    margin-left: 182px;}body.nyt-blog-tmagazine.wideAd #aCol .nav .w75 {    display: none;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo {    margin: 0 0 20px;    padding: 22px 22px 10px;    background: #f9f9f9;    overflow: hidden;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo .w190 {    float: right;    margin: 0 0 10px;    padding: 0;    width: auto;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo img {    width: 155px;    height: 103px;    margin: 0 0 0 10px;    padding: 0;    display: block !important;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo .nyt-article-byline {    margin-bottom: 4px;    font-size: 10px;    line-height: 13px;    font-weight: 500;    color: #808080;    font-family: arial;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo h4 {    font-size: 17px;    line-height: 21px;    font-weight: 500;    margin-bottom: 5px;    font-family: georgia;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo h4 a {    color: #000;    text-decoration: none;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo h4 a:hover {    color: #f00;    text-decoration: underline;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo .nyt-article-summary {    font-size: 13px;    line-height: 18px;    margin-bottom: 0;    font-family: georgia;    font-style: italic;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module {    border-bottom: 1px solid #000;    border-top: 1px solid #000;    padding: 10px 0 10px 0;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module .entry {    padding: 10px 0 0 0;    text-align: left;    border: none;}body.nyt-blog-tmagazine #aCol .postHeader .postSubHeader {    text-align: center;    margin-bottom: 5px;}body.nyt-blog-tmagazine #aCol .postHeader .postSubHeader .post-kicker {    text-transform: uppercase;    font-weight: bold;    font-size: 11px;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module {    border-bottom: 1px solid #000;    border-top: 1px solid #000;    padding: 10px 0 10px 0;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module .entry {    padding: 10px 0 0 0;    text-align: left;    border: none;}body.nyt-blog-tmagazine .entry-content .w190 .entry h6.kicker {    font-weight: 700;    margin-bottom: 5px;}body.nyt-blog-tmagazine .entry-content .w190 .entry h5 {    margin-bottom: 3px;}body.nyt-blog-tmagazine .entry-content .w190 .entry p.summary,body.nyt-blog-tmagazine .entry-content .w190 ul li {    font-family: arial;    font-size: 1.2em;    line-height: 1.5em;}body.nyt-blog-tmagazine .entry-content .w190 ul li a {    font-size: 0.9em;}body.nyt-blog-tmagazine .postMetaHeader .byline {    text-transform: uppercase;}body.nyt-blog-tmagazine.wideAd .w480,body.nyt-blog-tmagazine.wideAd .w592,body.nyt-blog-tmagazine.wideAd .w480 img,body.nyt-blog-tmagazine.wideAd .w592 img,body.nyt-blog-tmagazine.wideAd .videoplayerContainer,body.nyt-blog-tmagazine.wideAd .videoplayerContainer object,body.nyt-blog-tmagazine.wideAd .nytd-player-poster {height: 266px !important;}</style>
+</head>
+<body id=culture class="single postid-288650 blogPost  blog-universal nyt-blog-tmagazine" data-env="production" data-region="ewr1">
+<!-- Header1 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header1 != "undefined" ){document.write(NYTD.Blogs.Ads.Header1.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header1 != "undefined" ) { NYTD.jQuery("#Header1").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Header1"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Header1&query=qstring&keywords=?"></a></noscript>
+<!-- Header2 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header2 != "undefined" ){document.write(NYTD.Blogs.Ads.Header2.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header2 != "undefined" ) { NYTD.jQuery("#Header2").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Header2"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Header2&query=qstring&keywords=?"></a></noscript>
+<!-- Header3 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header3 != "undefined" ){document.write(NYTD.Blogs.Ads.Header3.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header3 != "undefined" ) { NYTD.jQuery("#Header3").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Header3"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Header3&query=qstring&keywords=?"></a></noscript>
+<a name="top"></a>
+<div id="shell" class="wrap">
+  <div id="PushDown" class="leaderboard ad clearfix">
+    <script type="text/javascript">
+      if ((typeof adxpos_PushDown == "undefined") || (typeof adxads[adxpos_PushDown] == "undefined") ) {
+        if ( $( "PushDown") ) {
+          $( "PushDown").hide();
+        }
+      }
+      if ((typeof adxpos_PushDown != "undefined") && (typeof adxads[adxpos_PushDown] != "undefined") ){
+        document.write(adxads[adxpos_PushDown]);
+      }
+    </script>
+  </div>
+  <div id="masthead-nav" class="wrap">
+    <div id="masthead">
+      <h2>
+        <a href="//www.nytimes.com/pages/t-magazine/index.html">
+          Go Back To Home
+        </a>
+      </h2>
+    </div>
+    <div class="navigation" id="topNav">
+      <ul id="mainNavigation" class="flush">
+        <li class="firstItem">
+          <a href="//www.nytimes.com/pages/t-magazine/womens-fashion/index.html">
+            Women's Fashion
+          </a>
+        </li>
+        <li class="secondItem">
+          <a href="//www.nytimes.com/pages/t-magazine/mens-fashion/index.html">
+            Men's Fashion
+          </a>
+        </li>
+        <li class="thirdItem">
+          <a href="//www.nytimes.com/pages/t-magazine/design/index.html">
+            Design
+          </a>
+        </li>
+        <li class="fourthItem">
+          <a href="//www.nytimes.com/pages/t-magazine/travel/index.html">
+            Travel
+          </a>
+        </li>
+        <li class="fifthItem">
+          <a href="//www.nytimes.com/pages/t-magazine/food/index.html">
+            Food
+          </a>
+        </li>
+        <li class="sixthItem">
+          <a href="//www.nytimes.com/pages/t-magazine/culture/index.html">
+            Culture
+          </a>
+        </li>
+        <li class="lastItem">
+          <a href="//www.nytimes.com/gst/tmagazine/video/index.html">
+            Video
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="masthead-nav-divider" class="singleRuleDivider">
+  </div>
+  <div class="searchModule">
+    <div class="insetV">
+      <div class="inlineSearchControl">
+        <form method="get" action="https://query.nytimes.com/search/tmagazine" enctype="application/x-www-form-urlencoded">
+          <input type="text" id="searchQuery" name="query" size="" value="SEARCH" class="text" onblur="if (this.value=='')this.value='SEARCH';" onfocus="if (this.value=='SEARCH')this.value='';">
+          <input type="image" src="//static01.nyt.com/images/tmagazine/buttons/search-button.gif" alt="Search" title="Search" id="searchSubmit">
+        </form>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+// <![CDATA[
+if ((typeof NYTD.Blogs.Ads != "undefined") && (typeof NYTD.Blogs.Ads.XXL != "undefined") ) {$(document.body).addClassName( "wideAd");}
+// ]]>
+</script><hr />
+<!-- Here is the start of everything good -->
+<div id="tmagazine" class="spanAC blog wrap">
+<div id="aCol">
+<hr />	<div id="content" class="hfeed">
+	<article class="post-288650 post type-post status-publish hentry category-culture category-letter-from-france category-travel category-featured per-savoy-guy des-art des-factories-and-manufacturing des-restaurants org-louvre-museum org-monnaie-de-paris geo-paris-france news_keywords-art news_keywords-guy-savoy news_keywords-louvre-museum news_keywords-manufacturing news_keywords-monnaie-de-paris news_keywords-paris-france-2 news_keywords-restaurant" id="post-288650">
+<header class="postHeader">
+    <div class="postSubHeader"><span class="post-kicker"><a href="//tmagazine.blogs.nytimes.com/category/letter-from-france/?module=BlogCategory&version=Blog Post&action=Click&contentCollection=T:Style&pgtype=Blogs&region=Header">Letter From France</a></span>
+</div>
+	<h1 itemprop="headline" class="entry-title">Long a Walled-Off Secret, the Paris Mint Transforms Into a Dining and Art Destination</h1>		<div class="postMetaHeader story-meta-footer centeredText has-kicker">
+		<span class="kicker"><a href="//tmagazine.blogs.nytimes.com/category/culture/">Culture</a>,  <a href="//tmagazine.blogs.nytimes.com/category/travel/">Travel</a></span>
+				<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+			By Elaine Sciolino		</address>
+		<!-- date published --><time class="dateline " datetime="2015-01-06T14:00:16-05:00" itemprop="datePublished">January 6, 2015 9:00 am</time>
+			<!-- date updated --><span class="visually-hidden updated">January 6, 2015 9:00 am</span><span class="postMetaHeaderCommentCount commentCount hidden">
+					<a class="commentCountLink icon commentIcon" href="//tmagazine.blogs.nytimes.com/2015/01/06/monnaie-de-paris-guy-savoy-restaurant/"></a>
+				</span>	</div>
+</header>
+<div class="entry-content">
+    <div class="w592"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-C17M/06france-sciolino-slide-C17M-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-C17M/06france-sciolino-slide-C17M-tmagArticle.jpg" src="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-C17M/06france-sciolino-slide-C17M-tmagArticle.jpg" id="100000003431403" width="592" height="395" alt="The Monnaie, or Mint, of Paris, as seen from the Seine."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">The Monnaie, or Mint, of Paris, as seen from the Seine.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Marlene Awaad for The New York Times</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">The three-Michelin-starred chef Guy Savoy is impatient. A 4,300-square-foot space at the top of the Monnaie de Paris â one of the city&#8217;s most beautiful buildings â is scheduled to open this spring as the reincarnation of his <a href="//www.guysavoy.com/">flagship restaurant</a> on the other side of town. But the kitchen has no refrigerators and only partial electrical and heating systems. Buckets of water and cans of paint line the floors. Some of the light fixtures have not been installed. Paintings have not been hung.</p>
+<p class="story-body-text" itemprop="articleBody">During a recent visit, Savoy roared through the empty spaces with the same air of authority that marks his reign over his kitchens. Frustrated that the windows in the main dining room were still being stripped of paint, he ripped off the protective paper covering one of them and threw it wide open to reveal the reason he decided to move his restaurant here. Before him was a front-and-center view of the Seine with the Louvre on the other side of the river, the Pont Neuf to the right, the Pont des Arts to the left and the Square du Vert-Galant, a pointy spit of land at the tip of the Ãle de la CitÃ©, straight ahead. The booksellers on the riverbank below seemed almost close enough to touch. <span id="more-288650"></span></p>
+<div class="w592"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-Z88I/06france-sciolino-slide-Z88I-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-Z88I/06france-sciolino-slide-Z88I-tmagArticle.jpg" src="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-Z88I/06france-sciolino-slide-Z88I-tmagArticle.jpg" id="100000003431405" width="592" height="395" alt="The chef Guy Savoy, whose new flagship restaurant will be located at the Monnaie de Paris, takes in the view from the building."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">The chef Guy Savoy, whose new flagship restaurant will be located at the Monnaie de Paris, takes in the view from the building.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Marlene Awaad for The New York Times</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">&#8220;Ah, look at this! Itâs Paris at your feet!&#8221; he said. &#8220;There are many beautiful views on the world, but none, none like this one! The first time I saw it, it was like an electric shock. I said, &#8216;I have to be here.'&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">The Monnaie de Paris â the French Mint â is unlike any other hallowed institution in Paris, and the installation of one of France&#8217;s marquee chefs here is part of its ongoing transformation. Founded in 864 by Charles the Bald, the grandson of Charlemagne, it is both the oldest institution in France and the oldest factory in Paris. The current building was redesigned and rebuilt in the 18th century and sits on a vast three-acre site on the Quai de Conti. Artisans have turned out coins, medals and decorations in the ateliers here since 1775. Once, all of the coins of the realm were produced here; though France&#8217;s official currency coins have been struck in the Monnaie de Paris&#8217;s factory at Pessac near Bordeaux since 1973, commemorative coins, jewelry, artwork and honorary medals like those of the Legion of Honor are still made here in Paris.</p>
+<div class="w592"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-5JRO/06france-sciolino-slide-5JRO-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-5JRO/06france-sciolino-slide-5JRO-tmagArticle.jpg" src="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-5JRO/06france-sciolino-slide-5JRO-tmagArticle.jpg" id="100000003431537" width="592" height="395" alt="Artisans have manufactured currency in the Monnaie&#039;s current building since 1775; medals, commemorative coins and other special items are still produced on the premises."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Artisans have manufactured currency in the Monnaie's current building since 1775; medals, commemorative coins and other special items are still produced on the premises.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> From left: Courtesy of Monnaie de Paris; Marlene Awaad for The New York Times (2)</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">The Monnaie de Paris has long been a little-known and little-visited jewel. With a long, graying, neo-classical stone faÃ§ade that could benefit from a cleaning, it does not proclaim its secrets to outsiders. But it merits a visit for a peek at its grand stone staircase, decorated with medallions and laurel wreaths, alone.</p>
+<p class="story-body-text" itemprop="articleBody">In 2011, the Monnaie launched an ambitious project called &#8220;MÃ©taLmorphoses,&#8221; with the goal of becoming a must-see cultural, commercial and gastronomic destination for visitors. Almost 70 million euros have been privately raised for the renovation. The first step was to open a show last October by the American artist Paul McCarthy, &#8220;Chocolate Factory,&#8221; in which workers and performers produced a surfeit of naughty chocolate figurines of Santa Claus. The show, which closed last Sunday, was set in the elaborate Salle Guillaume DuprÃ© reception room and was described as &#8220;an absurd performance in pursuit of a nonviable economy&#8221;; the site smelled like chocolate; the figurines â made from a chocolate chosen by Savoy â were for sale.</p>
+<div class="w592"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-3KOZ/06france-sciolino-slide-3KOZ-tmagArticle-v2.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-3KOZ/06france-sciolino-slide-3KOZ-tmagArticle-v2.jpg" src="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-3KOZ/06france-sciolino-slide-3KOZ-tmagArticle-v2.jpg" id="100000003431404" width="592" height="395" alt="The building recently hosted an installationÂ by the American artist Paul McCarthy, âChocolate Factory,â in which real chocolate Santa figurines were produced and sold onsite."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">The building recently hosted an installationÂ by the American artist Paul McCarthy, âChocolate Factory,â in which real chocolate Santa figurines were produced and sold onsite.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Marlene Awaad for The New York Times</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">Eventually, there will be exhibits culled from the Monnaie&#8217;s permanent collection of 200,000 objects. The 17th-century Mansart townhouse on the site, which has been restored, will be open to the public next year. Savoy will open a brasserie called MetaLcafÃ© in an interior courtyard. When there is enough money, the 22,000-square-foot garden will be replanted and pedestrian streets created. Luxury shops featuring French-made goods and a concept store will be installed in the courtyards and on the new pedestrian streets for both casual visitors and serious collectors.</p>
+<p class="story-body-text" itemprop="articleBody">&#8220;Historically, the Monnaie de Paris has been closed in on itself, sort of like Fort Knox in the United States,&#8221; said Christophe Beaux, its president. &#8220;But it is the only active factory still operating within the city limits of Paris. We have 150 artisans and metalworkers here. Our goal is to open this beautiful beast to the world.&#8221; Currently, only 10 percent of the Monnaie site is open to the public; historically, only 20,000 people have visited every year (the numbers went up with the McCarthy exhibit to 1,000 visitors per day during the McCarthy exhibit). Beaux wants to increase annual visits to 500,000 â and for all this to happen by 2016. But work on the project has been slow. The opening of the restaurant Guy Savoy, for example, is already three years behind schedule, the result of French bureaucratic wrangling, environmental and aesthetic concerns and the discovery of massive quantities of lead in the paint and the pipes.</p>
+<div class="w592"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-L7KZ/06france-sciolino-slide-L7KZ-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-L7KZ/06france-sciolino-slide-L7KZ-tmagArticle.jpg" src="https://static01.nyt.com/images/2015/01/06/t-magazine/06france-sciolino-slide-L7KZ/06france-sciolino-slide-L7KZ-tmagArticle.jpg" id="100000003431408" width="592" height="395" alt="Left: A grand ballroom at the Monnaie de Paris. Right: a rendering of the future garden."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Left: A grand ballroom at the Monnaie de Paris. Right: a rendering of the future garden.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> From left: Gilles Targat; ArteLab Factory</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">Savoy, who has invested more than $2 million of his own funds in the restaurant project, is so confident it will open soon that he used the Quai de Conti address on his annual New Year&#8217;s card for 2015. His current location, on the rue Troyon near the Arc de Triomphe, will be turned into a restaurant specializing in seafood; last month he opened an oyster bar in a sliver of a space across the street. When his new restaurant opens, it will be decorated with paintings, photographs and sculptures from the private collection of FranÃ§ois Pinault, the French business magnate and art collector, Mr. Savoy said. Pinault, like Savoy, fell in love with the site. &#8220;Everyone told me, &#8216;It&#8217;s madness, you are crazy, crazy, crazy to move here,'&#8221; Savoy said. &#8220;But all great things happen in difficulty, no?&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Beaux is even more enthusiastic. &#8220;It may sound pretentious,&#8221; he said. &#8220;But the Monnaie de Paris is the Sleeping Beauty of France.&#8221;</p>
+<div id="addendums" class="addendums"><div class="story-addendum theme-correction"><strong>Correction: January 6, 2015</strong> <br>An earlier version of this post, due to an editing error, misstated some facts about the size of the garden at the Monnaie de Paris and the use of the funds allocated for the site's renovation. While the garden is 22,000 feet in size, it is not the size of two football fields; and though 70 million euros have been raised for the renovation, not all of the money has been spent. </div></div>    <footer class="story-footer">
+    <div class="story-meta">
+        <p class="story-print-citation">A version of this article appears in print on 01/11/2015, on page <span itemprop="printSection">ST</span><span itemprop="printPage">3</span> of the <span itemprop="printEdition">NewYork</span> edition with the headline: Letter From France: Money Man.</p>    </div>
+</footer>
+</div>
+</article>
+<div class="entry-meta">
+        <div class="shareTools shareToolsThemeClassic shareToolsThemeClassicHorizontal articleShareToolsBottom " data-shares="facebook|,twitter|,google|,save,email,showall|Share,print" data-url="//tmagazine.blogs.nytimes.com/2015/01/06/monnaie-de-paris-guy-savoy-restaurant/" data-title="Long a Walled-Off Secret, the Paris Mint Transforms Into a Dining and Art Destination " data-description="The grand Monnaie de Paris â which still produces commemorative coins â is undergoing a face-lift, hosting exhibits and Guy Savoy&#039;s forthcoming flagship restaurant."></div>
+    </div><!-- end .entry-meta -->		<hr />
+		<div class="w75 left"><img src="https://static01.nyt.com/images/2015/01/05/t-magazine/05madrid-lobrano-1/05madrid-lobrano-1-thumbStandard.jpg" width="75" height="75"></div><div class="w75 right"><img src="https://static01.nyt.com/images/2015/01/06/t-magazine/06dunham-koh/06dunham-koh-thumbStandard.jpg" width="75" height="75"></div>	<div class="module box nav">
+		<ul class="opposingFloatControl wrap">
+			<li class="element1">
+								<span class="previous">Previous Post</span>
+				<!-- date published --><time class="dateline " datetime="2015-01-05T23:00:54-05:00" itemprop="datePublished">January 5, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">January 5, 2015</span>				<a href="//tmagazine.blogs.nytimes.com/2015/01/05/the-table-by-madrid-restaurant/" title="In Madrid, a New Restaurant Features a Rotating Cast of Regional Chefs">In Madrid, a New Restaurant Features a Rotating Cast of Regional Chefs</a>
+							</li>
+			<li class="element2">
+								<span class="next">Next Post</span>
+				<!-- date published --><time class="dateline " datetime="2015-01-06T19:30:39-05:00" itemprop="datePublished">January 6, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">January 6, 2015</span>				<a href="//tmagazine.blogs.nytimes.com/2015/01/06/lena-dunham-girls-premiere-creatures-of-the-wind/" title="Lena Dunham in Cut-Out Creatures of the Wind ">Lena Dunham in Cut-Out Creatures of the Wind </a>
+							</li>
+		</ul>
+	</div>
+<!-- community comments -->
+<a id="postComment"></a>
+<div id="commentsContainer" class="commentsContainer"></div>
+<script type="text/javascript">
+NYTD.jQuery(document).ready(function ($) {
+   NYTD.commentsInstance = new EmbeddedComments($, 'NYTD.commentsInstance' );
+   NYTD.commentsInstance.init({configName: 'default'});
+});
+</script>
+	</div> <!-- end content -->
+	<div id="google_ads_aCol">
+<!-- SponLink2 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink2 != "undefined" ){document.write(NYTD.Blogs.Ads.SponLink2.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink2 != "undefined" ) { NYTD.jQuery("#SponLink2").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=SponLink2"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=SponLink2&query=qstring&keywords=?"></a></noscript>
+</div>
+</div><!-- end aCol -->
+<div id="cCol">
+<div id="blog-index">
+	<a href="//www.nytimes.com/blogs/" title="Blogs - The New York Times">All NYTimes.com Blogs Â»</a>
+</div>
+<div class="w50 left"><img src="https://static01.nyt.com/images/2015/01/05/t-magazine/05madrid-lobrano-1/05madrid-lobrano-1-thumbStandard.jpg" width="50" height="50"></div><div class="w50 right"><img src="https://static01.nyt.com/images/2015/01/06/t-magazine/06dunham-koh/06dunham-koh-thumbStandard.jpg" width="50" height="50"></div>	<div class="module box nav">
+		<ul class="opposingFloatControl wrap">
+			<li class="element1">
+								<span class="previous">Previous Post</span>
+								<a href="//tmagazine.blogs.nytimes.com/2015/01/05/the-table-by-madrid-restaurant/" title="In Madrid, a New Restaurant Features a Rotating Cast of Regional Chefs">In Madrid, a New Restaurant Features a Rotating Cast of Regional Chefs</a>
+							</li>
+			<li class="element2">
+								<span class="next">Next Post</span>
+								<a href="//tmagazine.blogs.nytimes.com/2015/01/06/lena-dunham-girls-premiere-creatures-of-the-wind/" title="Lena Dunham in Cut-Out Creatures of the Wind ">Lena Dunham in Cut-Out Creatures of the Wind </a>
+							</li>
+		</ul>
+	</div>
+<div class=" module ad" id="XXL">
+	<!-- XXL position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.XXL != "undefined" ){document.write(NYTD.Blogs.Ads.XXL.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.XXL != "undefined" ) { NYTD.jQuery("#XXL").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=XXL"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=XXL&query=qstring&keywords=?"></a></noscript>
+</div>
+	    <div class='box module ad nocontent' id="MiddleRight">
+			<div class='bigAdContainer'>
+				<!-- MiddleRight position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.MiddleRight != "undefined" ){document.write(NYTD.Blogs.Ads.MiddleRight.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.MiddleRight != "undefined" ) { NYTD.jQuery("#MiddleRight").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=MiddleRight"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=MiddleRight&query=qstring&keywords=?"></a></noscript>
+			</div>
+	    </div>
+	    	<div class='box module ad nocontent' id="Box1">
+	<!-- Box1 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Box1 != "undefined" ){document.write(NYTD.Blogs.Ads.Box1.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Box1 != "undefined" ) { NYTD.jQuery("#Box1").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Box1"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Box1&query=qstring&keywords=?"></a></noscript>
+	</div>
+	<div id="google_ads" class="box module ad">
+<!-- SponLink position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink != "undefined" ){document.write(NYTD.Blogs.Ads.SponLink.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink != "undefined" ) { NYTD.jQuery("#SponLink").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=SponLink"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=SponLink&query=qstring&keywords=?"></a></noscript>
+</div>
+</div><!-- end cCol --></div><!-- end blog wrap --><div id="footer" class="singleRule">
+	<div class="opposingFloatControl wrap">
+		<div class="element1">
+			<ul id="footerNavigation" class="flush">
+				<li class="firstItem">
+					<a href="//www.nytimes.com">NYTIMES.COM</a></li>
+				<li class="secondItem">
+					<a href="//www.nytimes.com/ref/membercenter/help/infoservdirectory.html">CONTACT US</a>
+				</li>
+				<li class="thirdItem">
+					<a href="//nytmediakit.com/">MEDIA KIT</a>
+				</li>
+				<li class="fourthItem">
+					<a href="//www.nytimes.com/ref/membercenter/help/privacysummary.html">PRIVACY POLICY</a>
+				</li>
+				<li class="lastItem">
+					<a href="//www.nytco.com/">THE NEW YORK TIMES COMPANY</a>
+				</li>
+			</ul>
+		</div>
+		<div class="element2">
+			<div id="footerLogo">
+				<a href="//www.nytimes.com/pages/t-magazine/index.html">The New York Times Style Magazine</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div> <!-- end page --><!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-23',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":22,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

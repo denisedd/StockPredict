@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004278941"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1458295388" />
+<meta name="PUD" content="20160318" />
+<meta name="pdate" content="20160318" />
+<meta name="ptime" content="20160318060308" />
+<meta name="utime" content="20160318100308" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-03-18T10:03:08-04:00" />
+<meta name="DISPLAYDATE" content="March 18, 2016" />
+<meta name="dat" content="March 18, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Hayes, Tom">
+<meta name="des" content="Hedge Funds;Initial Public Offerings;Keystone Pipeline System;Legal Profession;Libor (London Interbank Offered Rate);Mergers, Acquisitions and Divestitures;Natural Gas;Oil Sands;Shareholder Rights and Activism;TransCanada Corporation">
+<meta name="org" content="Alphabet Inc;Apple Inc;Columbia Pipeline Group Inc.;Credit Suisse Group AG;Federal Reserve Bank of New York;Justice Department;Organization for Economic Cooperation and Development;Pensions and Retirement Plans;Robots and Robotics;TOSHIBA Corporation;Tribune Publishing Company">
+<meta name="geo" content="Australia">
+<meta name="ticker" content="Apple Inc|AAPL|NASDAQ;Columbia Pipeline Group Inc.|CPGX|NYSE;Credit Suisse Group AG|CS|NYSE;TOSHIBA Corporation|TOSBF|Other OTC;Tribune Publishing Company|TPUB|NYSE" />
+<meta property="article:tag" content="Hayes Tom" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Keystone Pipeline System" />
+<meta property="article:tag" content="Legal Profession" />
+<meta property="article:tag" content="Libor (London Interbank Offered Rate)" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Natural Gas" />
+<meta property="article:tag" content="Oil Sands" />
+<meta property="article:tag" content="Shareholder Rights and Activism" />
+<meta property="article:tag" content="TransCanada Corporation" />
+<meta property="article:tag" content="Alphabet Inc" />
+<meta property="article:tag" content="Apple Inc" />
+<meta property="article:tag" content="Columbia Pipeline Group Inc." />
+<meta property="article:tag" content="Credit Suisse Group AG" />
+<meta property="article:tag" content="Federal Reserve Bank of New York" />
+<meta property="article:tag" content="Justice Department" />
+<meta property="article:tag" content="Organization for Economic Cooperation and Development" />
+<meta property="article:tag" content="Pensions and Retirement Plans" />
+<meta property="article:tag" content="Robots and Robotics" />
+<meta property="article:tag" content="TOSHIBA Corporation" />
+<meta property="article:tag" content="Tribune Publishing Company" />
+<meta property="article:tag" content="Australia" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Hayes Tom,Hedge Funds,Initial Public Offerings,Keystone Pipeline System,Legal Profession,Libor (London Interbank Offered Rate),Mergers Acquisitions and Divestitures,Natural Gas,Oil Sands,Shareholder Rights and Activism,TransCanada Corporation,Alphabet Inc,Apple Inc,Columbia Pipeline Group Inc.,Credit Suisse Group AG,Federal Reserve Bank of New York,Justice Department,Organization for Economic Cooperation and Development,Pensions and Retirement Plans,Robots and Robotics,TOSHIBA Corporation,Tribune Publishing Company,Australia,DealBook" />
+<meta name="news_keywords" content="Australia" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F03%2F18%2Fmorning-agenda-transcanada-to-buy-columbia-pipeline-group%2F" title="Morning Agenda: TransCanada to Buy Columbia Pipeline Group" />
+<meta name="description" content="Public Pension Promises Exceed Ability to Pay &#124; Google Puts Boston Dynamics On Sale" />
+<meta name="hdl" content="Morning Agenda: TransCanada to Buy Columbia Pipeline Group" />
+<meta property="og:title" content="Morning Agenda: TransCanada to Buy Columbia Pipeline Group" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/03/18/morning-agenda-transcanada-to-buy-columbia-pipeline-group/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Public Pension Promises Exceed Ability to Pay &#124; Google Puts Boston Dynamics On Sale" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: TransCanada to Buy Columbia Pipeline Group" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/03/18/morning-agenda-transcanada-to-buy-columbia-pipeline-group/" />
+<meta name="twitter:description" content="Public Pension Promises Exceed Ability to Pay &#124; Google Puts Boston Dynamics On Sale" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Ackman Cuts His Mondelez Stake' href='//news.blogs.nytimes.com/2016/03/17/morning-agenda-ackman-cuts-his-mondelez-stake/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/03/18/what-were-reading-137/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/03/18/morning-agenda-transcanada-to-buy-columbia-pipeline-group/' />
+<link rel='shortlink' href='//nyti.ms/1UFZzr6' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/03/18/morning-agenda-transcanada-to-buy-columbia-pipeline-group/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: TransCanada to Buy Columbia Pipeline Group - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4434 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: TransCanada to Buy Columbia Pipeline Group        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/03/18/morning-agenda-transcanada-to-buy-columbia-pipeline-group/"
+	 data-title="Morning Agenda: TransCanada to Buy Columbia Pipeline Group"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Public Pension Promises Exceed Ability to Pay | Google Puts Boston Dynamics On Sale&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/03/18/morning-agenda-transcanada-to-buy-columbia-pipeline-group/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="March 18, 2016 6:03 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: TransCanada to Buy Columbia Pipeline Group</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-03-18T10:03:08+00:00" itemprop="datePublished">March 18, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">March 18, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4434 post type-post status-publish hentry category-dealbook tag-alphabet-inc tag-apple-inc tag-australia tag-columbia-pipeline-group-inc tag-credit-suisse-group-ag tag-federal-reserve-bank-of-new-york tag-hayes-tom tag-hedge-funds tag-initial-public-offerings tag-justice-department tag-keystone-pipeline-system tag-legal-profession tag-libor-london-interbank-offered-rate tag-mergers-acquisitions-and-divestitures tag-natural-gas tag-oil-sands tag-organization-for-economic-cooperation-and-development tag-pensions-and-retirement-plans tag-robots-and-robotics tag-shareholder-rights-and-activism tag-toshiba-corporation tag-transcanada-corporation tag-tribune-publishing-company per-hayes-tom des-hedge-funds des-initial-public-offerings des-keystone-pipeline-system des-legal-profession des-libor-london-interbank-offered-rate des-mergers-acquisitions-and-divestitures des-natural-gas des-oil-sands des-shareholder-rights-and-activism des-transcanada-corporation org-alphabet-inc org-apple-inc org-columbia-pipeline-group-inc org-credit-suisse-group-ag org-federal-reserve-bank-of-new-york org-justice-department org-organization-for-economic-cooperation-and-development org-pensions-and-retirement-plans org-robots-and-robotics org-toshiba-corporation org-tribune-publishing-company geo-australia news_keywords-australia" id="post-4434">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: TransCanada to Buy Columbia Pipeline Group</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-03-18T10:03:08+00:00" itemprop="datePublished">March 18, 2016 6:03 am</time>
+			<!-- date updated --><span class="visually-hidden updated">March 18, 2016 6:03 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/03/18/morning-agenda-transcanada-to-buy-columbia-pipeline-group/" data-title="Morning Agenda: TransCanada to Buy Columbia Pipeline Group" data-description="Public Pension Promises Exceed Ability to Pay | Google Puts Boston Dynamics On Sale">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TRANSCANADA TO BUY COLUMBIA PIPELINE GROUP</strong> <span class="divider"> | </span></span> TransCanada will buy the Columbia Pipeline Group <b>for $10.2 billion</b> after failing to obtain approval for its Keystone XL oil sands pipeline,<br />
+<a href="//www.nytimes.com/2016/03/18/business/dealbook/transcanada-to-buy-columbia-pipeline-group-in-10-2-billion-deal.html?ref=dealbook">Ian Austen reports in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Russ Girling, the chief executive of TransCanada, said that the all-cash deal was âa rare, attractive opportunity that <b>will create one of North Americaâs largest natural gas businesses</b>.â The completed deal would leave TransCanada with ownership of about 57,000 miles of gas pipelines. </p>
+<p class="story-body-text" itemprop="articleBody">Columbia, which is based in Houston, is regulated, eliminating the possibility of sharp growth during expansionary times, but also <b>easing pressure to cut fees in a depressed energy market</b>. Mr. Girling said the combined company would have contracts or revenue of 23 billion Canadian dollars guaranteed by regulations.</p>
+<p class="story-body-text" itemprop="articleBody">TransCanada has been hurt by the Obama administrationâs decision not to grant a permit for Keystone XL, which was intended to bring oil sands production to refineries on the Gulf Coast. It has a backup plan for its oil sands business in an all-Canadian pipeline called Energy East. But like Keystone XL, Energy East has become a politically volatile project. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Gas recovered in the Northeast through fracking has been taking some markets from Canadian natural gas</b> that TransCanada delivers to North American customers. As natural gas from fracking has grown more important, Columbia has reversed a pipeline that traditionally moved gas from the Gulf Coast to the Midwest. That line will now carry gas south from the Northeast. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PUBLIC PENSION PROMISES EXCEED ABILITY TO PAY</strong> <span class="divider"> | </span></span> Researchers at Citigroup say that across the developed world, governments have promised much more than they are likely to be able to pay to current and future retirees,<br />
+<a href="//www.nytimes.com/2016/03/18/business/dealbook/study-finds-public-pension-promises-exceed-ability-to-pay.html?ref=dealbook">Mary Williams Walsh writes in DealBook</a>. <b>They also have not revealed the disparity to investors who bought government bonds</b> and whose investments could be at risk, according to the Citigroup report. </p>
+<p class="story-body-text" itemprop="articleBody">Twenty countries in the Organization for Economic Cooperation and Development have <b>promised their retirees $78 trillion and much of it is unfunded</b>, according to the study. The total is close to twice the national debt of those 20 countries and the pension obligations are ânot on government balance sheets,â Citigroup said. </p>
+<p class="story-body-text" itemprop="articleBody">âItâs not going to be, for most cities and states, some enormous collision or explosion,â said  Charles E. F. Millard, head of pension relations at Citigroup.<br />
+He expects many of these countries to keep struggling, cutting services and raising taxes. </p>
+<p class="story-body-text" itemprop="articleBody"><b>The report recommends that governments disclose the amounts promised to retirees</b>, but officials are loath to do that because they believe it will harm their credit ratings and drive up borrowing costs. </p>
+<p class="story-body-text" itemprop="articleBody">The issue of disclosure is particularly contentious in Washington where Republican members of Congress are planning to introduce a bill that would require states and local governments to measure their pension obligations using the method used to price municipal bonds, rather than actuarial numbers. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The Federal Reserve Bank of New Yorkâs conference on <b>supervising large and complex financial institutions</b> will start at 9 a.m. <b>James B.  Bullard</b>, president of the Federal Reserve Bank of St. Louis, will give the keynote speech at the European Central Bankâs international research forum on monetary policy at 2:30 p.m. Fox Business Network introduces <b>Wall Street Week</b>, a new program hosted by Anthony Scaramucci and Gary Kaminsky, at 8 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>GOOGLE PUTS BOSTON DYNAMICS ON SALE</strong> <span class="divider"> | </span></span> Boston Dynamicsâ videos of robots trudging through the snow and being pushed over may have entranced viewers, but not enough to convince its human owners that it would generate real revenue. Executives at Googleâs parent company, Alphabet, have decided to sell Boston Dynamics as <b>it is not likely to produce a marketable product in the next few years</b>, <a href="//www.bloomberg.com/news/articles/2016-03-17/google-is-said-to-put-boston-dynamics-robotics-unit-up-for-sale">Bloomberg News reports</a>, citing two people familiar with the plans. </p>
+<p class="story-body-text" itemprop="articleBody">Possible buyers include Toyotaâs research institute and Amazon, which makes robots for its fulfillment centers, according to the Bloomberg report. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Google bought Boston Dynamics during a spending spree in robotics about three years ago.</b> The initiative was led by Andy Rubin, who left the company in October 2014. After this the robot initiative was plagued by leadership changes, failed collaborations and an unsuccessful search for a new leader. Boston Dynamics executives were reluctant to work with Googleâs other robot engineers, according to a person familiar with the group. </p>
+<p class="story-body-text" itemprop="articleBody"><b>The tensions spilled into recorded meetings and emails published on a Google worker forum.</b> The documents were made available to Bloomberg News, which reported that Aaron Edsinger, director of robotics at Google in San Francisco, said he had been trying to create a low-cost electric quadruped robot with Boston Dynamics, but there was âa bit of a brick wall around the division.â </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Delawareâs Chief Justice Speaks Out on Big Mergers and Investors</strong> <span class="divider"> | </span></span> The justice, Leo Strine Jr., is critical of the pending merger-and-breakup of Dow Chemical and DuPont.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/18/business/dealbook/delawares-chief-justice-speaks-out-on-big-mergers-and-investors.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Tribune Publishing Wins Auction for Orange County Register" src="https://static01.nyt.com/images/2016/03/18/business/18tribune/18tribune-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tribune Publishing Wins Auction for Orange County Register</strong> <span class="divider"> | </span></span> Shortly after the results were announced, the Justice Department said it would seek to block the sale on monopoly grounds.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/18/business/media/tribune-publishing-wins-auction-for-orange-county-register.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Li Ka-shingâs Hutchison May Sell Stake in Phone Carrier Three</strong> <span class="divider"> | </span></span> In a regulatory filing, CK Hutchison said that if such a sale occurred, proceeds would help fund its $15 billion purchase of another British phone operator, O2, which regulators are reviewing.<br /><span class="kicker"><a href="//www.wsj.com/articles/li-ka-shings-hutchison-may-sell-stake-in-u-k-phone-carrier-three-1458208111"> the wall street journal </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SFR Said to Pay Up to $4.5 Billion for Bouygues Telecom Assets</strong> <span class="divider"> | </span></span> The French billionaire Patrick Drahi is set to pay as much as â¬4 billion, or about $4.5 billion, as part of a deal that will carve up Bouyguesâs telecommunications unit, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/sfr-to-pay-up-to-4-5-billion-for-bouygues-telecom-assets-1458234899?mod=pls_whats_news_us_business_f"> the wall street journal</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Time for Credit Suisse to Rethink Its Strategy</strong> <span class="divider"> | </span></span> Tidjane Thiam, the chief executive of the Swiss bank, had a grand plan to change the bankâs focus, but events have overtaken him, Dominic Elliott writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/18/business/dealbook/time-for-credit-suisse-to-rethink-its-strategy.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Despite Turbulence, Shareholder Activism Is Forecast to Stay Strong" src="https://static01.nyt.com/images/2016/03/18/business/-18db-mergers/-18db-mergers-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Despite Turbulence, Shareholder Activism Is Forecast to Stay Strong</strong> <span class="divider"> | </span></span> Roger C. Altman, executive chairman of Evercore, said activist campaigns were often successful, as boards have become ârisk averse.â<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/18/business/dealbook/despite-turbulence-shareholder-activism-is-forecast-to-stay-strong.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>2 Senate Democrats Introduce Bill to Curb Activist Hedge Funds</strong> <span class="divider"> | </span></span> The bill, by Senator Tammy Baldwin of Wisconsin and Senator Jeffrey A. Merkley of Oregon, would shorten the number of days that activists have to disclose newly acquired shares in a company.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/18/business/dealbook/2-senate-democrats-introduce-bill-to-curb-activist-hedge-funds.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China Start-Up Seeks I.P.O. in Australia as Early as 2016</strong> <span class="divider"> | </span></span> Juwai.com, a property search engine that lists real estate around the world for Chinese buyers, is raising funds from institutional investors and strategic partners before selling shares in a public offering at the end of the year or early 2017, Charles Pittar, the chief executive, said.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-18/china-startup-juwai-seeks-ipo-in-australia-as-early-as-year-end"> bloomberg news </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>WiseTech I.P.O. Set to Be One of Australiaâs Biggest Technology Listings</strong> <span class="divider"> | </span></span> WiseTech Global said that it had lodged a prospectus with the countryâs securities regulator for an initial public offering that could have it list with a market value of more than 1 billion Australian dollars, or about $764.8 million.<br /><span class="kicker"><a href="//www.wsj.com/articles/wisetech-ipo-set-to-be-one-of-australias-biggest-technology-listings-1458269356"> the wall street journal</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fed Lawyer Who Helped Bail Out, and Regulate, Wall St. Will Retire</strong> <span class="divider"> | </span></span> The lawyer, Thomas C. Baxter Jr., who helped devise both Wall Street bailouts and enforcement actions against banks that broke the law, plans to leave the New York Fed in September.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/18/business/dealbook/fed-lawyer-who-helped-bail-out-and-regulate-wall-st-will-retire.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Former Chicago Fed Employee Guilty of Theft of Secret Documents</strong> <span class="divider"> | </span></span> The former employee, Jeffrey Cho, 35, faces up to one year in federal prison for taking 35 confidential financial documents from the bank as he was leaving it for a new job.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/18/business/dealbook/former-chicago-fed-employee-guilty-of-theft-of-secret-documents.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Apple Encryption Engineers, if Ordered to Unlock iPhone, Might Resist" src="https://static01.nyt.com/images/2016/03/18/business/18apple/18apple-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Apple Encryption Engineers, if Ordered to Unlock iPhone, Might Resist</strong> <span class="divider"> | </span></span> The potential resistance adds a wrinkle to a very public fight over access to an iPhone used by one of the San Bernardino attackers.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/18/technology/apple-encryption-engineers-if-ordered-to-unlock-iphone-might-resist.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="J. Walter Thompson Chief Resigns After Suit Accuses Him of Bias" src="https://static01.nyt.com/images/2016/03/18/business/18jwt/18jwt-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>J. Walter Thompson Chief Resigns After Suit Accuses Him of Bias</strong> <span class="divider"> | </span></span> The executive, Gustavo Martinez, was accused of subjecting employees to racist and sexist behavior in a lawsuit filed by the ad agencyâs chief communications officer.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/18/business/media/gustavo-martinez-ceo-j-walter-thompson-wpp-advertising-agency-resigns.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Toshiba U.S. Units Said to Be Under Investigation </strong> <span class="divider"> | </span></span> The  Asahi Shimbun newspaper reported that Toshiba was considering a $1.8 billion writedown for Westinghouse, its nuclear power unit, while the company confirmed that authorities were examining the accounting at its units in the United States.<br /><span class="kicker"><a href="//www.reuters.com/article/us-toshiba-accounting-idUSKCN0WK02J"> reuters </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Convicted Libor Trader Says He Lost Â£1 Million of Own Savings</strong> <span class="divider"> | </span></span> Tom Hayes, the former UBS trader serving an 11-year sentence for manipulating the  London interbank offered rate, known as Libor, gave evidence in a hearing over how much Britainâs Serious Fraud Office can confiscate as the reported proceeds of crime.<br />
+<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/bdbc2f9c-ec54-11e5-888e-2eadd5fbc4a4.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz42qc0ohDe">the financial times </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/03/18/morning-agenda-transcanada-to-buy-columbia-pipeline-group/"
+					data-title="Morning Agenda: TransCanada to Buy Columbia Pipeline Group"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Public Pension Promises Exceed Ability to Pay | Google Puts Boston Dynamics On Sale&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/03/18/morning-agenda-transcanada-to-buy-columbia-pipeline-group/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":55,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

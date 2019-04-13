@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004022503"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1446807658" />
+<meta name="PUD" content="20151106" />
+<meta name="pdate" content="20151106" />
+<meta name="ptime" content="20151106060058" />
+<meta name="utime" content="20151106110058" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-11-06T11:00:58-05:00" />
+<meta name="DISPLAYDATE" content="November 6, 2015" />
+<meta name="dat" content="November 6, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Botox (Drug);Drugs (Pharmaceuticals);Frauds and Swindling;Initial Public Offerings;Interest Rates">
+<meta name="org" content="AstraZeneca PLC;Bank of England;Barclays PLC;European Central Bank;Exxon Mobil Corp;Federal Reserve Bank of New York;Goldman Sachs Group Inc;Pfizer Inc;Securities and Exchange Commission;Standard Chartered Bank PLC;UniRush LLC;Wells Fargo &amp; Company">
+<meta name="geo" content="Brazil;Expedia Inc;Macquarie Group;Towers Watson and Company">
+<meta name="ticker" content="Barclays PLC|BCS|NYSE;Exxon Mobil Corp|XOM|NYSE;Goldman Sachs Group Inc|GS|NYSE;Pfizer Inc|PFE|NYSE;Wells Fargo & Company|WFC|NYSE" />
+<meta property="article:tag" content="Botox (Drug)" />
+<meta property="article:tag" content="Drugs (Pharmaceuticals)" />
+<meta property="article:tag" content="Frauds and Swindling" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Interest Rates" />
+<meta property="article:tag" content="AstraZeneca PLC" />
+<meta property="article:tag" content="Bank of England" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="European Central Bank" />
+<meta property="article:tag" content="Exxon Mobil Corp" />
+<meta property="article:tag" content="Federal Reserve Bank of New York" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Pfizer Inc" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Standard Chartered Bank PLC" />
+<meta property="article:tag" content="UniRush LLC" />
+<meta property="article:tag" content="Wells Fargo &amp; Company" />
+<meta property="article:tag" content="Brazil" />
+<meta property="article:tag" content="Expedia Inc" />
+<meta property="article:tag" content="Macquarie Group" />
+<meta property="article:tag" content="Towers Watson and Company" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Botox (Drug),Drugs (Pharmaceuticals),Frauds and Swindling,Initial Public Offerings,Interest Rates,AstraZeneca PLC,Bank of England,Barclays PLC,European Central Bank,Exxon Mobil Corp,Federal Reserve Bank of New York,Goldman Sachs Group Inc,Pfizer Inc,Securities and Exchange Commission,Standard Chartered Bank PLC,UniRush LLC,Wells Fargo &amp; Company,Brazil,Expedia Inc,Macquarie Group,Towers Watson and Company,DealBook" />
+<meta name="news_keywords" content="AstraZeneca,Bank of England,Barclays,Botox,Brazil,European Central Bank,Exxon Mobil,Federal Reserve Bank of New York,Fraud,Interest rate,IPO,Pfizer,Pharmaceuticals,RushCard,SEC,Standard Chartered Bank,Wells Fargo &amp;" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F11%2F06%2Fmorning-agenda-former-traders-found-guilty-in-libor-case%2F" title="Morning Agenda: Former Traders Found Guilty in Libor Case" />
+<meta name="description" content="Goldman Tries New Policies to Keep Its Junior Bankers &#124; Allergan Plays Coy Over Pfizer Talks" />
+<meta name="hdl" content="Morning Agenda: Former Traders Found Guilty in Libor Case" />
+<meta property="og:title" content="Morning Agenda: Former Traders Found Guilty in Libor Case" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/11/06/morning-agenda-former-traders-found-guilty-in-libor-case/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Goldman Tries New Policies to Keep Its Junior Bankers &#124; Allergan Plays Coy Over Pfizer Talks" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Former Traders Found Guilty in Libor Case" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/11/06/morning-agenda-former-traders-found-guilty-in-libor-case/" />
+<meta name="twitter:description" content="Goldman Tries New Policies to Keep Its Junior Bankers &#124; Allergan Plays Coy Over Pfizer Talks" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: The Bitcoin Resurgence' href='//news.blogs.nytimes.com/2015/11/05/morning-agenda-the-bitcoin-resurgence/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/11/06/what-were-reading-104/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/11/06/morning-agenda-former-traders-found-guilty-in-libor-case/' />
+<link rel='shortlink' href='//nyti.ms/1kyiplP' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/11/06/morning-agenda-former-traders-found-guilty-in-libor-case/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Former Traders Found Guilty in Libor Case - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3578 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Former Traders Found Guilty in Libor Case        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/11/06/morning-agenda-former-traders-found-guilty-in-libor-case/"
+	 data-title="Morning Agenda: Former Traders Found Guilty in Libor Case"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Goldman Tries New Policies to Keep Its Junior Bankers | Allergan Plays Coy Over Pfizer Talks&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/11/06/morning-agenda-former-traders-found-guilty-in-libor-case/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="November 6, 2015 6:00 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Former Traders Found Guilty in Libor Case</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-11-06T11:00:58+00:00" itemprop="datePublished">November 6, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">November 6, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3578 post type-post status-publish hentry category-dealbook tag-astrazeneca-plc tag-bank-of-england tag-barclays-plc tag-botox-drug tag-brazil tag-drugs-pharmaceuticals tag-european-central-bank tag-expedia-inc tag-exxon-mobil-corp tag-federal-reserve-bank-of-new-york tag-frauds-and-swindling tag-goldman-sachs-group-inc tag-initial-public-offerings tag-interest-rates tag-macquarie-group tag-pfizer-inc tag-securities-and-exchange-commission tag-standard-chartered-bank-plc tag-towers-watson-and-company tag-unirush-llc tag-wells-fargo-company des-botox-drug des-drugs-pharmaceuticals des-frauds-and-swindling des-initial-public-offerings des-interest-rates org-astrazeneca-plc org-bank-of-england org-barclays-plc org-european-central-bank org-exxon-mobil-corp org-federal-reserve-bank-of-new-york org-goldman-sachs-group-inc org-pfizer-inc org-securities-and-exchange-commission org-standard-chartered-bank-plc org-unirush-llc org-wells-fargo-company geo-brazil geo-expedia-inc geo-macquarie-group geo-towers-watson-and-company news_keywords-astrazeneca news_keywords-bank-of-england news_keywords-barclays news_keywords-botox news_keywords-brazil news_keywords-european-central-bank news_keywords-exxon-mobil news_keywords-federal-reserve-bank-of-new-york news_keywords-fraud news_keywords-interest-rate news_keywords-ipo news_keywords-pfizer news_keywords-pharmaceuticals news_keywords-rushcard news_keywords-sec news_keywords-standard-chartered-bank news_keywords-wells-fargo" id="post-3578">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Former Traders Found Guilty in Libor Case</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-11-06T11:00:58+00:00" itemprop="datePublished">November 6, 2015 6:00 am</time>
+			<!-- date updated --><span class="visually-hidden updated">November 6, 2015 6:00 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/11/06/morning-agenda-former-traders-found-guilty-in-libor-case/" data-title="Morning Agenda: Former Traders Found Guilty in Libor Case" data-description="Goldman Tries New Policies to Keep Its Junior Bankers | Allergan Plays Coy Over Pfizer Talks">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FORMER TRADERS FOUND GUILTY IN LIBOR CASE</strong> <span class="divider"> | </span></span> A jury found two former Rabobank traders guilty on <b>28 counts of fraud and conspiracy</b> related to the manipulation of  Libor, a benchmark interest rate,<br />
+<a href="//www.nytimes.com/2015/11/06/business/dealbook/two-former-traders-found-guilty-in-libor-manipulation-case.html?ref=dealbook">Randall Smith reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">They were the <b>first convictions in the United States</b> stemming from the global investigation into the rigging of the London interbank offered rate, which is used to set interest rates on mortgages, credit cards and loans. </p>
+<p class="story-body-text" itemprop="articleBody">Prosecutors said Anthony Allen and Anthony Conti had conspired to <b>submit bogus rates</b> to be used in calculating Libor, to help other Rabobank traders make more money on trades. </p>
+<p class="story-body-text" itemprop="articleBody">The defendantsâ lawyers argued that although emails made it appear that they had acquiesced to requests to make higher or lower submissions, they were <b>merely being polite</b> and their submissions were made in good faith. </p>
+<p class="story-body-text" itemprop="articleBody">âIt is not a crime to receive a request,â Mr. Allenâs lawyer said. &#8220;<b>Saying O.K. is not a crime.</b> Submitting a fraudulent rate is a crime.â </p>
+<p class="story-body-text" itemprop="articleBody">Although the trial of Mr. Allen and Mr. Conti rested on the complicated technicalities of how Libor is calculated, the jurors took a lively interest in the specifics of the case. One said it seemed <b>obvious that there was interference</b> in the rate-setting. </p>
+<p class="story-body-text" itemprop="articleBody">More than a half-dozen banks, including Rabobank, have <b>paid more than $10 billion</b> to settle charges with regulators and law enforcement agencies that they conspired to rig Libor.</p>
+<p class="story-body-text" itemprop="articleBody">The Justice Department has been trying to counter criticism that it has been <b>reluctant to bring cases</b> against Wall Street executives. The conviction may embolden prosecutors still weighing whether to bring cases against individuals. </p>
+<p class="story-body-text" itemprop="articleBody">The Justice Department has criminally <b>charged an additional 11 individuals</b> in the Libor investigations. Four have pleaded guilty.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>GOLDMAN TRIES NEW POLICIES TO KEEP ITS JUNIOR BANKERS </strong> <span class="divider"> | </span></span> The bank has already increased salaries and given young investment bankers Saturdays off. Now Goldman Sachs is making organizational changes to make it <b>less tempting to leave</b>,<br />
+<a href="//www.nytimes.com/2015/11/06/business/dealbook/goldman-sachs-rolls-out-new-policies-to-retain-junior-bankers.html?ref=dealbook">Leslie Picker reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Over the last decade, it has become more common for analysts to <b>leave investment banking after two years</b> for private equity, hedge funds or the corporate world. </p>
+<p class="story-body-text" itemprop="articleBody">In the hope of keeping them a little longer, Goldman Sachs is going to use technology to <b>get rid of some of the mundane work</b> related to financial deal-making that is often assigned to Ivy League graduates new to Goldman. </p>
+<p class="story-body-text" itemprop="articleBody">It is also starting a <b>12-month rotation program</b> after analysts complete their first two years, so that they are exposed  to other parts of the business. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Promotions to associate</b> and the pay rises that come with them will also be sped up.</p>
+<p class="story-body-text" itemprop="articleBody">âIt all speaks to what I say at the highest level for a continued need for us to be very <b>thoughtful about how we manage human capital</b>, train them, provide learning experience and how weâre transparent about their career trajectories and opportunities they have,â said David Solomon, co-head of investment banking. </p>
+<p class="story-body-text" itemprop="articleBody">He said there were âtangible resultsâ in the bankâs efforts to retain people after it started focusing on keeping younger bankers happy. </p>
+<p class="story-body-text" itemprop="articleBody">The investment banking industry has <b>come under criticism recently</b> for its grueling pace, especially after some highly publicized suicides among junior bankers. The pressures of the job have also led to many young bankers leaving for careers elsewhere.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The <b>October jobs report</b> will be released at 8:30 a.m. The International Monetary Fund panel on <b>âPolicy Lessons and the Future of Unconventional Monetary Policyâ</b> starts at 4:15 p.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ALLERGAN PLAYS COY OVER PFIZER TALKS</strong> <span class="divider"> | </span></span> Allergan is in talks with Pfizer to create the largest drugmaker in the world, but at a research and development day in California, the chief executive, Brent Saunders, eviscerated <b>the strategies of big pharmaceutical groups</b>, <a href="//www.ft.com/intl/cms/s/0/0434a218-837f-11e5-8e80-1574112844fd.html#axzz3qeqAU0fk">The Financial Times reports.</a></p>
+<p class="story-body-text" itemprop="articleBody">Mr. Saunders emphasized the different approach that his company had taken to its rivals. Instead of funding early-stage research in its own laboratories, it was employing an <b>âopen scienceâ approach</b> â buying drugs from smaller, innovative biotechnology companies. </p>
+<p class="story-body-text" itemprop="articleBody">âThere has been an amazing shift in the paradigm of <b>where innovation comes from</b>, and we are building at Allergan a system to capture and take advantage of this,â Mr Saunders said.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Saunders may well have been trying to push up Pfizerâs offer price, but his rhetoric led investors to question <b>why Allergan would consider merging</b>.  </p>
+<p class="story-body-text" itemprop="articleBody">Some large Allergan shareholders have already <b>expressed their concern</b>, pointing to Mr. Saundersâ belief that the stock is undervalued. Some also say the company could take on more debt to continue its spending spree, buying up more companies. </p>
+<p class="story-body-text" itemprop="articleBody">One unnamed shareholder told The Financial Times that the company would be <b>foolish to accept less than $400 a share</b>. âThe high $300s are well within their grasp without Pfizer,â the person said. âIf they accept anything below $400, it is hard to see it as compelling.â</p>
+<p class="story-body-text" itemprop="articleBody">Allergan shares closed at $308 on Wednesday, far below their peak of $339 in August, before the sector started slipping.</p>
+<p class="story-body-text" itemprop="articleBody">Analysts have interpreted the friendly nature of the talks as a sign that Mr. Saunders has been assured that he will lead the company and continue the âopen scienceâ strategy. Mr. Saunders declined to discuss the matter, but The Financial Times said that <b>âhe did not sound like he was about to write a resignation letter.â</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AstraZeneca Agrees to Buy ZS Pharma for $2.7 Billion</strong> <span class="divider"> | </span></span> The transaction is expected to improve AstraZenecaâs pipeline of treatments for cardiovascular and metabolic diseases.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/07/business/dealbook/astrazeneca-agrees-to-buy-zs-pharma-for-2-7-billion.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Expedia Expands Into Airbnbâs Market With HomeAway Deal</strong> <span class="divider"> | </span></span> HomeAway lacks the urban clout of its better-known rival, but merging with its new parent will help, Antony Currie writes.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/dealbook/expedia-expands-into-airbnbs-market-with-homeaway-deal.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>I.S.S. Recommends Shareholders Reject Willis-Towers Watson Merger</strong> <span class="divider"> | </span></span> Institutional Shareholder Services said shareholders were being asked to accept too low a price given Towers Watsonâs strong balance sheet and the growth prospects of its valuable health exchange business<br /><span class="kicker"><a href="//www.wsj.com/articles/iss-recommends-shareholders-reject-willis-towers-watson-merger-1446780734?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Macquarie Sets Up Brazil Infrastructure Fund</strong> <span class="divider"> | </span></span> The Australian bankâs new fund comes as opportunities are seen for foreign investors in infrastructure projects.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/dealbook/macquarie-sets-up-brazil-infrastructure-fund.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>European Regulators Provide Details on Next Stress Tests</strong> <span class="divider"> | </span></span> The assessments will examine the financial strength of 53 of the regionâs largest lenders, including 39 that are supervised by the European Central Bank.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/dealbook/european-banking-authority-stress-tests.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New Barclays Chief Buys $10 Million of Bankâs Shares</strong> <span class="divider"> | </span></span> James Staley, a former top executive at JPMorgan Chase, was named to lead the British lender last month and will assume the role on Dec. 1.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/dealbook/jes-staley-barclays-shares.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Why Barclays May Want to Mull a Move to the U.S.</strong> <span class="divider"> | </span></span> HSBC caused an uproar by suggesting that it might move its headquarters to Hong Kong. But it makes more sense for Barclays, its London-based peer, to move to New York, George Hay and Dominic Elliott write.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/dealbook/why-barclays-may-want-to-mull-a-move-to-the-us.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Shares of Standard Chartered Take a Hit</strong> <span class="divider"> | </span></span> Fitch Ratings downgraded Standard Charteredâs credit rating to A+ from AA- and analysts at Macquarie said a planned capital raising of $5.1 billion may be insufficient.<br /><span class="kicker"><a href="//www.wsj.com/articles/standard-chartered-shares-take-further-battering-1446738359?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Wells Fargo to Pay $81.6 Million in Bankruptcy Settlement</strong> <span class="divider"> | </span></span> Wells Fargo has agreed to pay $81.6 million to settle claims that it failed to notify thousands of bankrupt homeowners that it was increasing their mortgage payments in violation of federal bankruptcy law.<br /><span class="kicker"><a href="//www.wsj.com/articles/wells-fargo-to-pay-81-6-million-in-bankruptcy-settlement-1446754185?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>I.P.O. Euphoria Wears Off for Japan Post </strong> <span class="divider"> | </span></span> Shares in the Japan Post units that made their market debut on Wednesday â Japan Post Bank, Japan Post Insurance and the parent company, Japan Post Holdings â declined modestly on Friday, though brokers warned that the market could undergo a more substantial sell-off soon.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/08d5d9ea-843d-11e5-8e80-1574112844fd.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3qbjug4IZ"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chief of New York Fed Calls for Improved Wall Street Culture</strong> <span class="divider"> | </span></span> To improve big banksâ reputations, the chief, William C. Dudley, told bankers to focus less on searching for âbad applesâ than on overhauling their companiesâ culture.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/dealbook/new-york-fed-chief-calls-for-improved-wall-street-culture.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Former Goldman Employee Pleads Guilty in Leak Case</strong> <span class="divider"> | </span></span> A day earlier, a former employee at the Federal Reserve Bank of New York pleaded guilty to an identical charge in the same case.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/dealbook/former-goldman-employee-pleads-guilty-in-leak-case.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/dealbook/goldman-sachs-rolls-out-new-policies-to-retain-junior-bankers.html">Goldman Sachs Rolls Out New Policies to Retain Junior Bankers</a> <time class="timestamp" data-eastern-timestamp="4:07 PM" datetime="2015-11-05" data-utc-timestamp="1446757631000">4:07 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Regulator Censures Credit Suisse and Law Firms Over Bumi Deal</strong> <span class="divider"> | </span></span> The British regulator faulted advisers to the deal for failing to seek its view on whether two parties were âacting in concertâ as part of the agreement.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/dealbook/regulators-censure-credit-suisse-and-law-firms-over-bumi-deal.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Forbes Sues Consortium That Bought It" src="https://static01.nyt.com/images/2015/11/06/business/06DB-FORBES/06DB-FORBES-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Forbes Sues Consortium That Bought It</strong> <span class="divider"> | </span></span> The consortium, Integrated Whale Media, bought a majority stake in Forbes Media last year, but Forbes now says that Integrated has defaulted.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/dealbook/forbes-sues-integrated-whale-media-over-deal.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Senators Seek Information About RushCardâs Breakdown</strong> <span class="divider"> | </span></span> The technical issues that prevented thousands of customers from gaining access to their money has also gained the attention of regulators.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/dealbook/senators-seek-information-about-rushcards-breakdown.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Inquiry Weighs Whether Exxon Lied on Climate" src="https://static01.nyt.com/images/2015/11/06/science/06Exxon-sub/06Exxon-sub-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Inquiry Weighs Whether Exxon Lied on Climate</strong> <span class="divider"> | </span></span> The sweeping inquiry, by the attorney general of New York, focuses on whether the oil company lied to the public and investors over the risks of climate change.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/science/exxon-mobil-under-investigation-in-new-york-over-climate-statements.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/11/07/science/more-oil-companies-could-join-exxon-mobil-as-focus-of-climate-investigations.html">More Oil Companies Could Join Exxon Mobil as Focus of Climate Investigationsââ</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Boeing to Pay $57 Million to Settle Suit Over Retirement Plan</strong> <span class="divider"> | </span></span> Boeing was accused of charging excessive fees and choosing higher-cost investment offerings in its 401(k) plan.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/dealbook/boeing-to-pay-57-million-to-settle-suit-over-retirement-plan.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Congress Split on Tapping Fed or Banks to Fund Roads</strong> <span class="divider"> | </span></span> The Senate planned to raise money by paring back a bank dividend members see as obsolete, but the House wants to drain the Federal Reserveâs rainy-day fund instead. Critics say both ideas are wrongheaded.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/congress-split-on-tapping-fed-or-banks-to-fund-roads.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New Start Nears for National Stock Exchange</strong> <span class="divider"> | </span></span> The National Stock Exchange, founded as the Cincinnati Stock Exchange in 1885, has submitted a final rule filing with the Securities and Exchange Commission and could restart trading as early as December.<br /><span class="kicker"><a href="//www.wsj.com/articles/new-start-near-for-130-year-old-national-stock-exchange-1446750714?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>S.E.C. Charges Scottish Trader for Twitter Fraud</strong> <span class="divider"> | </span></span> According to the Securities and Exchange Commission, James Alan Craig of Scotland, created two Twitter accounts made to look like the real accounts of two research groups, Muddy Waters and Citron. He then âtweeted multiple false statementsâ saying two companies were under investigation.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/03f828a0-8420-11e5-8e80-1574112844fd.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3qbjug4IZ">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Central Banker Hints at a Rate Rise</strong> <span class="divider"> | </span></span> âWould I rather have the majority of the British people thinking that rates are likely to go up in the next year, which is the case today? Yes I would, because that is reasonably prudent behavior, given the progress this economy is making,â said Mark Carney, the governor of the Bank of England.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-11-05/carney-says-it-s-prudent-to-expect-u-k-rate-increase-in-2016
+"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/11/06/morning-agenda-former-traders-found-guilty-in-libor-case/"
+					data-title="Morning Agenda: Former Traders Found Guilty in Libor Case"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Goldman Tries New Policies to Keep Its Junior Bankers | Allergan Plays Coy Over Pfizer Talks&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/11/06/morning-agenda-former-traders-found-guilty-in-libor-case/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":52,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

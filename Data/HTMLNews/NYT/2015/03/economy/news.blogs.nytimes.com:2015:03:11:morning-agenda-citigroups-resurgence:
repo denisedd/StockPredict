@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/news/Morning Agenda: Citigroup's Resurgence ( 20150311 )" />
+<meta name="communityAssetURL" content="//news.blogs.nytimes.com/2015/03/11/morning-agenda-citigroups-resurgence/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003565402"><meta name="author" content="Sydney Ember" />
+<meta name="CLMST" content="Sydney Ember" />
+<meta name="byl" content="Sydney Ember" />
+<meta name="article:author" content="//topics.nytimes.com/top/reference/timestopics/people/e/sydney_ember/index.html" /><meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1426071944" />
+<meta name="PUD" content="20150311" />
+<meta name="pdate" content="20150311" />
+<meta name="ptime" content="20150311070544" />
+<meta name="utime" content="20150311110545" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-03-11T11:05:45-04:00" />
+<meta name="DISPLAYDATE" content="March 11, 2015" />
+<meta name="dat" content="March 11, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F03%2F11%2Fmorning-agenda-citigroups-resurgence%2F" title="Morning Agenda: Citigroup&#8217;s Resurgence" />
+<meta name="description" content="Citigroup&#8217;s traders and investment bankers have come roaring back since the financial crisis. &#124; Credit Suisse gets a risk expert in new chief. &#124; Emerging markets are losing their luster. &#124; Former JPMorgan executive joins a Bitcoin start-up." />
+<meta name="hdl" content="Morning Agenda: Citigroup&#039;s Resurgence" />
+<meta property="og:title" content="Morning Agenda: Citigroup&#039;s Resurgence" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/03/11/morning-agenda-citigroups-resurgence/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Citigroup&#8217;s traders and investment bankers have come roaring back since the financial crisis. &#124; Credit Suisse gets a risk expert in new chief. &#124; Emerging markets are losing their luster. &#124; Former JPMorgan executive joins a Bitcoin start-up." />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Citigroup&#039;s Resurgence" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/03/11/morning-agenda-citigroups-resurgence/" />
+<meta name="twitter:description" content="Citigroup&#8217;s traders and investment bankers have come roaring back since the financial crisis. &#124; Credit Suisse gets a risk expert in new chief. &#124; Emerging markets are losing their luster. &#124; Former JPMorgan executive joins a Bitcoin start-up." />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/03/10/what-were-reading-36/' />
+<link rel='next' title='Morning Agenda: U.S. Banks Pass Fed Tests' href='//news.blogs.nytimes.com/2015/03/12/morning-agenda-u-s-banks-pass-fed-tests/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/03/11/morning-agenda-citigroups-resurgence/' />
+<link rel='shortlink' href='//nyti.ms/1D4BDH1' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/03/11/morning-agenda-citigroups-resurgence/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Citigroup&#039;s Resurgence - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2075 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Citigroup&#8217;s Resurgence        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/03/11/morning-agenda-citigroups-resurgence/"
+	 data-title="Morning Agenda: Citigroup&#8217;s Resurgence"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Citigroup&#039;s traders and investment bankers have come roaring back since the financial crisis. | Credit Suisse gets a risk expert in new chief. | Emerging markets are losing their luster. | Former JPMorgan executive joins a Bitcoin start-up.&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/03/11/morning-agenda-citigroups-resurgence/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="March 11, 2015 7:05 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+		<button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Citigroup&#8217;s Resurgence</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Sydney Ember			</address>
+			<!-- date published --><time class="dateline " datetime="2015-03-11T11:05:44+00:00" itemprop="datePublished">March 11, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">March 11, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2075 post type-post status-publish hentry category-dealbook" id="post-2075">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Citigroup&#8217;s Resurgence</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Sydney Ember                </span>
+                <!-- date published --><time class="dateline " datetime="2015-03-11T11:05:44+00:00" itemprop="datePublished">March 11, 2015 7:05 am</time>
+			<!-- date updated --><span class="visually-hidden updated">March 11, 2015 7:05 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/03/11/morning-agenda-citigroups-resurgence/" data-title="Morning Agenda: Citigroup&#8217;s Resurgence" data-description="Citigroup&#039;s traders and investment bankers have come roaring back since the financial crisis. | Credit Suisse gets a risk expert in new chief. | Emerging markets are losing their luster. | Former JPMorgan executive joins a Bitcoin start-up.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CITIGROUPâS RESURGENCE</strong> <span class="divider"> | </span></span> Seven years after Citigroup teetered on the brink, the bankâs traders and investment bankers have come roaring back, <a href="//www.nytimes.com/2015/03/11/business/dealbook/citigroups-roaring-revival-on-wall-street.html">Peter Eavis writes in DealBook</a>. The bankâs resurgence on Wall Street, which has involved acquiring huge amounts of derivatives, comes as many of its rivals pull back in the face of new regulations intended to make the financial system safer. But even as the bank has surged ahead, it has not trumpeted its comeback. Instead, its most senior executives have largely emphasized streamlining operations that have little to do with Wall Street, like agreeing to sell a unit that focuses on subprime loans.</p>
+<p class="story-body-text" itemprop="articleBody">Citigroupâs investment bank is no longer involved in the toxic activities that were most dangerous to the bankâs health, Mr. Eavis writes. The bank also has higher levels of capital, the financial buffer that reflects a bankâs ability to absorb losses. Such steps have helped it slowly regain favor with regulators. âStill, figures for Citigroupâs Wall Street operations show a bank that is <b>on something of a tear</b>,â Mr. Eavis adds. The unit that encompasses the firmâs investment bank, for instance, had $1.06 trillion of assets at the end of last year, a 12 percent increase from the level in 2010. </p>
+<p class="story-body-text" itemprop="articleBody">âPerhaps most astonishing is Citigroupâs <b>meteoric growth in derivatives</b>, the financial contracts that allow banks and investors to place bets without actually owning an underlying stock, bond or currency,â even as new rules have persuaded many banks to cut back on the amount of derivatives they hold,â Mr. Eavis writes. Citigroup has flexed its muscles behind the scenes to protect its derivatives business from certain new rules. But the growth of Citigroupâs investment bank and its derivatives business has raised concerns among financial specialists who support tougher regulations.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>RISK EXPERT TO LEAD CREDIT SUISSE</strong> <span class="divider"> | </span></span> Shareholders responded positively on Tuesday after Credit Suisse announced that Tidjane Thiam, the chief executive of the British insurer Prudential, would succeed Brady W. Dougan as chief executive, <a href="//www.nytimes.com/2015/03/11/business/dealbook/credit-suisse-brady-dougan-tidjane-thiam.html?ref=dealbook">Jenny Anderson reports in DealBook</a>. Shares of Prudential slumped 2.6 percent, while shares of Credit Suisse closed up 6.7 percent. The positive reaction reflects the rise of Mr. Thiamâs reputation in London financial circles and expectations that he will change the course of the Swiss bank, which in recent years has had large legal expenses, largely as a result of its role in helping Americans evade taxes. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Thiam, an African francophone, has <b>never worked for an investment bank</b>, though he has completed stints at McKinsey, the World Bank and two insurance companies since 2009. And while it remains to be seen whether  someone with virtually no banking experience can turn around one of the worldâs biggest banks, the need for a leader with Mr. Thiamâs skills and knowledge âspeaks volumes about the state of global banking today,â Ms. Anderson writes. âMore and more, regulation is pushing banking to be more like insurance: cautious and focused on costs and the allocation of capital.â</p>
+<p class="story-body-text" itemprop="articleBody">In interviews on Tuesday, Mr. Thiam <b>played down his lack of experience</b> in investment banking. âIf you talk about investment banking, Prudential has an $800 billion balance sheet, and we deal with exactly the same issues, whether itâs interest rates or markets,â he was quoted as saying on Bloomberg Television. âThere is a lot of overlap.â Still, his lack of ties to the investment bank could mean he will be able to make cuts that Mr. Dougan may have been reluctant to make, Ms. Anderson writes. The change at Credit Suisse will be effective in June.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>EMERGING MARKETS LOSE THEIR LUSTER</strong> <span class="divider"> | </span></span> Once seen as a necessity in portfolios, investments in emerging markets have lately become less appealing because of messy politics and staggering economies, <a href="//www.nytimes.com/2015/03/11/business/dealbook/emerging-markets-lose-their-luster-as-crises-mount.html?ref=dealbook">DealBookâs Landon Thomas Jr. writes</a>. The dollarâs upward climb and the growing acceptance that the Federal Reserve will soon increase interest rates are also causing concern. Now, emerging-market currencies are suffering the consequences. The Turkish lira and the Brazilian real have touched multiyear lows against the dollar and the Russian ruble remains volatile. The Mexican peso and the Indian rupee are also under pressure.</p>
+<p class="story-body-text" itemprop="articleBody">In Brazil, allegations of kickbacks and bribes at Petrobras, the countryâs energy giant, threaten to derail the economy, Mr. Thomas writes. In Russia, a war with Ukraine and President Vladimir V. Putinâs erratic ways â along with a collapse in the price of oil â have rattled investors. In Turkey, the countryâs president has added to existing currency jitters by suggesting that the head of the Turkish central bank is beholden to foreign speculators because he has not lowered interest rates fast enough. And analysts say there are deeper vulnerabilities in these and other emerging markets that will become more acute as the dollar continues to race ahead.</p>
+<p class="story-body-text" itemprop="articleBody">But while currencies have been volatile, capital flows out of emerging markets have <b>not yet approached the levels of a year ago</b>. According to the Institute of International Finance, the trade group for global banks, global flows into emerging markets nearly halved last month, to $12 billion from $23 billion, with money flowing out of Brazil, Ukraine and Thailand and into Indonesia and India. Since the beginning of the year, investors in the worldâs largest emerging-markets investment vehicle, the $38 billion Oppenheimer developing markets fund, have withdrawn just $400 million â an amount by no means indicative of investor panic.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The <b>Treasury budget report</b> for February is released at 2 p.m. The <b>Federal Reserve</b> announces the results of the second stage of its stress tests for big banks.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>EX-JPMORGAN EXECUTIVE GETS INTO BITCOIN</strong> <span class="divider"> | </span></span> Blythe Masters, the former JPMorgan executive who helped introduce credit derivatives in the 1990s, has resurfaced as chief executive of Digital Asset Holdings, a cryptocurrency start-up that aims to use Bitcoinâs underlying technology to streamline financial transactions, <a href="//on.ft.com/1Aer1zn">The Financial Times writes</a>. </p>
+<p class="story-body-text" itemprop="articleBody">Ms. Masters, who left JPMorgan last April, told The Financial Times she did not imagine a world without banks and big governments, but did believe that reducing the frictional cost of financial transactions was âone of the great challenges of our time.â Creditworthy members, like big banks and asset managers, will be admitted to trade among themselves using the start-upâs technology.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact: <a href="https://www.twitter.com/melbournecoal">@melbournecoal</a> | <a href="mailto:sydney.ember@nytimes.com">E-mail</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Brother Industries Offers to Acquire British Printer Maker for $1.55 Billion</strong> <span class="divider"> | </span></span> Domino Printing Sciences, based in Cambridge, said that its board of directors intended to unanimously recommend that shareholders accept the offer.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/12/business/dealbook/brother-industries-offers-to-acquire-domino-printing-sciences.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Google Said to Be in Talks to Buy Indian Start-Up InMobi</strong> <span class="divider"> | </span></span> Google is said to be in initial talks to buy InMobi, a start-up based in Bangalore that helps companies target phones and mobile devices in their advertising, to bolster its offering in the mobile advertising space, Reuters writes, citing an unidentified source with direct knowledge of the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/11/us-google-inmobi-m-a-idUSKBN0M70GO20150311"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ineos to Acquire Stakes in Igas, a Boost to British Shale Gas</strong> <span class="divider"> | </span></span> The chemical giant Ineos said that it would pay $45 million for shares in several sites and that it would agree to finance exploration work.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/11/business/international/ineos-to-acquire-stakes-in-igas-a-boost-to-british-shale-gas.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Verisk Analytics Agrees to Buy Scottish Energy Research Firm</strong> <span class="divider"> | </span></span> The Jersey City-based company said it would pay about $2.8 billion for Wood Mackenzie of Edinburgh.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/11/business/dealbook/verisk-analytics-agrees-to-buy-scottish-energy-research-firm-wood-mackenzie.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Shareholders Approvel Actavis-Allergan Deal</strong> <span class="divider"> | </span></span> Shareholders on Tuesday approved all proposals related to Actavisâs planned $66 billion acquisition of Allergan, the maker of Botox, The Wall Street Journal writes.<br /><span class="kicker"><a href="//www.wsj.com/articles/actavis-allergan-shareholders-approve-66-billion-deal-1426020321"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Zogenix to Sell Painkiller Unit to Pernix Therapeutics</strong> <span class="divider"> | </span></span> Zogenix said on Tuesday that it would sell its Zohydro business to Pernix Therapeutics in a deal that could be worth nearly $400 million, Reuters writes.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/11/us-zogenix-divestiture-idUSKBN0M701B20150311">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>U.S. Judge Recommends No Goldman Gender-Bias Class Action</strong> <span class="divider"> | </span></span> A federal judge on Tuesday recommended against certifying a class-action lawsuit in which current and former female employees at Goldman Sachs accused the bank of gender-based bias in pay and promotions.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2015/03/10/business/10reuters-goldman-bias-lawsuit.html?ref=business"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bain Capital to Buy Security Firm Blue Coat Systems for $2.4 Billion</strong> <span class="divider"> | </span></span> Thoma Bravo, the buyout firm, agreed to sell the company in an all-cash deal after taking it private in 2012 for $1.3 billion.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/11/business/dealbook/bain-capital-to-buy-security-firm-blue-coat-systems-for-2-4-billion.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>K.K.R. Said to Near Deal for Air Medical</strong> <span class="divider"> | </span></span> The private equity firm Kohlberg Kravis Roberts is said to be in advanced talks to acquire the Air Medical Group  in a deal that could value the helicopter ambulance company at around $2 billion, Reuters writes, citing unidentified people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/10/us-airmedical-m-a-kkr-idUSKBN0M61ZJ20150310"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hedge Funds Recorded Strong Recovery in 2014</strong> <span class="divider"> | </span></span> The number of funds increased as did the new money flowing in. Even so, the fundsâ performance lagged the broader stock market.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/11/business/dealbook/hedge-funds-recorded-strong-recovery-in-2014.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Activist Investment Firm Takes Aim at Bank of New York Mellon Chief</strong> <span class="divider"> | </span></span> The activist investment firm Marcato Capital Management is calling for Bank of New York Mellon to cut costs and oust its chairman and chief executive, The Wall Street Journal reports.<br /><span class="kicker"><a href="//on.wsj.com/1EREa6s"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Univision Said to Hire Banks for I.P.O.</strong> <span class="divider"> | </span></span> Univision Communications, the biggest Spanish-language broadcaster in the United States, is said to have hired Goldman Sachs, Morgan Stanley and Deutsche Bank to lead an initial public offering that could raise more than $1 billion and value the company at as much as $20 billion, including debt, Reuters reports, citing unidentified people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/11/us-univision-ipo-idUSKBN0M62I620150311"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Alibaba Said to Be in Funding Talks With Snapdeal of India</strong> <span class="divider"> | </span></span> Alibaba is said to be in discussions with the Indian online marketplace Snapdeal over a potential cash investment, Reuters reports, citing an unidentified person familiar with the negotiations. The move would be Alibabaâs first direct investment in India.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/03/11/us-india-snapdeal-alibaba-idUSKBN0M70Q020150311"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bitcoin Start-Up 21 Secures $116 Million in Financing</strong> <span class="divider"> | </span></span> The Bitcoin start-up 21, which is looking to broaden uses of Bitcoin technology, has raised $116 million from some of the biggest names in venture capital, including Andreessen Horowitz and Khosla Ventures, The Wall Street Journal writes. <br /><span class="kicker"><a href="//on.wsj.com/1E4fsfe">WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="New York Regulator Cracks Down on MoneyMutual" src="https://static01.nyt.com/images/2015/03/10/business/dealbook/dbpix-money/dbpix-money-square320-v2.png"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New York Regulator Cracks Down on MoneyMutual</strong> <span class="divider"> | </span></span> The regulator accused the company and its celebrity face, Montel Williams, of marketing illegal, high-cost loans to New Yorkers.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/11/business/dealbook/ny-regulator-cracks-down-on-moneymutual.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Treasury Urged to Scrutinize Foreign Real Estate Buyers for Money-Laundering Risk </strong> <span class="divider"> | </span></span> Seventeen nonprofits sent a letter to the Treasury Department asking it to require the real estate industry to screen buyers for money-laundering risk.<br /><span class="kicker"><a href="//www.nytimes.com/2015/03/11/business/treasury-urged-to-scrutinize-foreign-real-estate-buyers-for-money-laundering-risk.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+								<button class="button comments-button  theme-speech-bubble"></button>
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/03/11/morning-agenda-citigroups-resurgence/"
+					data-title="Morning Agenda: Citigroup&#8217;s Resurgence"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Citigroup&#039;s traders and investment bankers have come roaring back since the financial crisis. | Credit Suisse gets a risk expert in new chief. | Emerging markets are losing their luster. | Former JPMorgan executive joins a Bitcoin start-up.&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/03/11/morning-agenda-citigroups-resurgence/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":62,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

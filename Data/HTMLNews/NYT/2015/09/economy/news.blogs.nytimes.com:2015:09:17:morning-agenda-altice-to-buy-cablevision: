@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003918232"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1442483221" />
+<meta name="PUD" content="20150917" />
+<meta name="pdate" content="20150917" />
+<meta name="ptime" content="20150917054701" />
+<meta name="utime" content="20150917094701" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-09-17T09:47:01-04:00" />
+<meta name="DISPLAYDATE" content="September 17, 2015" />
+<meta name="dat" content="September 17, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Buffett, Warren E;Drahi, Patrick (1963- );Frank, Barney;Interest Rates;Moynihan, Brian T;United States Economy;Yellen, Janet L">
+<meta name="des" content="Anheuser-Busch InBev NV;Beer;Cable Television;Insider Trading;Mergers, Acquisitions and Divestitures;Telephones and Telecommunications">
+<meta name="org" content="AbbVie Inc;Altice SA;Bank of America Corporation;Cablevision Systems Corporation;California Public Employees Retirement System;Dewey &amp; LeBoeuf;Expedia Inc;Federal Reserve System;General Electric Company;JPMorgan Chase &amp; Company;Molson Coors Brewing Company;News Corporation;Suddenlink Communications;Time Warner Inc">
+<meta name="geo" content="Elliott Management Corp;Puerto Rico;Securities and Exchange Commission">
+<meta name="ticker" content="AbbVie Inc|ABBV|NYSE;Bank of America Corporation|BAC|NYSE;Cablevision Systems Corporation|CVC|NYSE;Expedia Inc|EXPE|NASDAQ;General Electric Company|GE|NYSE;Molson Coors Brewing Company|TAP|NYSE;News Corporation|NWSA|NASDAQ" />
+<meta property="article:tag" content="Buffett Warren E" />
+<meta property="article:tag" content="Drahi Patrick (1963- )" />
+<meta property="article:tag" content="Frank Barney" />
+<meta property="article:tag" content="Interest Rates" />
+<meta property="article:tag" content="Moynihan Brian T" />
+<meta property="article:tag" content="United States Economy" />
+<meta property="article:tag" content="Yellen Janet L" />
+<meta property="article:tag" content="Anheuser-Busch InBev NV" />
+<meta property="article:tag" content="Beer" />
+<meta property="article:tag" content="Cable Television" />
+<meta property="article:tag" content="Insider Trading" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Telephones and Telecommunications" />
+<meta property="article:tag" content="AbbVie Inc" />
+<meta property="article:tag" content="Altice SA" />
+<meta property="article:tag" content="Bank of America Corporation" />
+<meta property="article:tag" content="Cablevision Systems Corporation" />
+<meta property="article:tag" content="California Public Employees Retirement System" />
+<meta property="article:tag" content="Dewey &amp; LeBoeuf" />
+<meta property="article:tag" content="Expedia Inc" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="General Electric Company" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="Molson Coors Brewing Company" />
+<meta property="article:tag" content="News Corporation" />
+<meta property="article:tag" content="Suddenlink Communications" />
+<meta property="article:tag" content="Time Warner Inc" />
+<meta property="article:tag" content="Elliott Management Corp" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Buffett Warren E,Drahi Patrick (1963- ),Frank Barney,Interest Rates,Moynihan Brian T,United States Economy,Yellen Janet L,Anheuser-Busch InBev NV,Beer,Cable Television,Insider Trading,Mergers Acquisitions and Divestitures,Telephones and Telecommunications,AbbVie Inc,Altice SA,Bank of America Corporation,Cablevision Systems Corporation,California Public Employees Retirement System,Dewey &amp; LeBoeuf,Expedia Inc,Federal Reserve System,General Electric Company,JPMorgan Chase &amp; Company,Molson Coors Brewing Company,News Corporation,Suddenlink Communications,Time Warner Inc,Elliott Management Corp,Puerto Rico,Securities and Exchange Commission,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F09%2F17%2Fmorning-agenda-altice-to-buy-cablevision%2F" title="Morning Agenda: Altice to Buy Cablevision" />
+<meta name="description" content="The Fed Cliffhanger &#124; Bank of America&#8217;s Title Bout &#124; Anheuser-Busch InBev Dreams Big" />
+<meta name="hdl" content="Morning Agenda: Altice to Buy Cablevision" />
+<meta property="og:title" content="Morning Agenda: Altice to Buy Cablevision" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/09/17/morning-agenda-altice-to-buy-cablevision/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="The Fed Cliffhanger &#124; Bank of America&#8217;s Title Bout &#124; Anheuser-Busch InBev Dreams Big" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Altice to Buy Cablevision" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/09/17/morning-agenda-altice-to-buy-cablevision/" />
+<meta name="twitter:description" content="The Fed Cliffhanger &#124; Bank of America&#8217;s Title Bout &#124; Anheuser-Busch InBev Dreams Big" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: HP to Cut 30,000 Jobs' href='//news.blogs.nytimes.com/2015/09/16/morning-agenda-hp-to-cut-30000-jobs/' />
+<link rel='next' title='Morning Agenda: Markets Mixed After Fed Decision' href='//news.blogs.nytimes.com/2015/09/18/morning-agenda-markets-mixed-after-fed-decision/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/09/17/morning-agenda-altice-to-buy-cablevision/' />
+<link rel='shortlink' href='//nyti.ms/1KThBDV' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/09/17/morning-agenda-altice-to-buy-cablevision/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Altice to Buy Cablevision - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3260 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Altice to Buy Cablevision        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/09/17/morning-agenda-altice-to-buy-cablevision/"
+	 data-title="Morning Agenda: Altice to Buy Cablevision"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;The Fed Cliffhanger | Bank of America&#039;s Title Bout | Anheuser-Busch InBev Dreams Big&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/09/17/morning-agenda-altice-to-buy-cablevision/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="September 17, 2015 5:47 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Altice to Buy Cablevision</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-09-17T09:47:01+00:00" itemprop="datePublished">September 17, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">September 17, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3260 post type-post status-publish hentry category-dealbook tag-abbvie-inc tag-altice-sa tag-anheuser-busch-inbev-nv tag-bank-of-america-corporation tag-beer tag-buffett-warren-e tag-cable-television tag-cablevision-systems-corporation tag-california-public-employees-retirement-system tag-dewey-leboeuf tag-drahi-patrick-1963 tag-elliott-management-corp tag-expedia-inc tag-federal-reserve-system tag-frank-barney tag-general-electric-company tag-insider-trading tag-interest-rates tag-jpmorgan-chase-company tag-mergers-acquisitions-and-divestitures tag-molson-coors-brewing-company tag-moynihan-brian-t tag-news-corporation tag-puerto-rico tag-securities-and-exchange-commission tag-suddenlink-communications tag-telephones-and-telecommunications tag-time-warner-inc tag-united-states-economy tag-yellen-janet-l per-buffett-warren-e per-drahi-patrick-1963 per-frank-barney per-interest-rates per-moynihan-brian-t per-united-states-economy per-yellen-janet-l des-anheuser-busch-inbev-nv des-beer des-cable-television des-insider-trading des-mergers-acquisitions-and-divestitures des-telephones-and-telecommunications org-abbvie-inc org-altice-sa org-bank-of-america-corporation org-cablevision-systems-corporation org-california-public-employees-retirement-system org-dewey-leboeuf org-expedia-inc org-federal-reserve-system org-general-electric-company org-jpmorgan-chase-company org-molson-coors-brewing-company org-news-corporation org-suddenlink-communications org-time-warner-inc geo-elliott-management-corp geo-puerto-rico geo-securities-and-exchange-commission" id="post-3260">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Altice to Buy Cablevision</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-09-17T09:47:01+00:00" itemprop="datePublished">September 17, 2015 5:47 am</time>
+			<!-- date updated --><span class="visually-hidden updated">September 17, 2015 5:47 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/09/17/morning-agenda-altice-to-buy-cablevision/" data-title="Morning Agenda: Altice to Buy Cablevision" data-description="The Fed Cliffhanger | Bank of America&#039;s Title Bout | Anheuser-Busch InBev Dreams Big">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ALTICE TO BUY CABLEVISION</strong> <span class="divider"> | </span></span> Altice, the European telecommunications giant, agreed on Thursday to buy Cablevision for $17.7 billion, <a href="//www.nytimes.com/2015/09/18/business/dealbook/altice-cablevision-telecommunications-drahi.html">Mark Scott reports in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody"> <b>Altice will pay $34.90 a share in cash</b>, 22 percent higher than Cablevisionâs closing stock price on Wednesday. That represents an equity value of $9.6 billion. To help finance the takeover, Altice will sell additional shares in itself and draw on financing from three major banks, <a href="//www.nytimes.com/2015/09/17/business/international/altice-in-deal-to-take-over-cablevision.html?ref=dealbook&#038;mtrref=www.nytimes.com&#038;assetType=nyt_now"> Michael J. de la Merced and Andrew Ross Sorkin report in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody"> The cable and telecommunications industry is already in a state of upheaval as companies <b>search for more scale and negotiating power</b> with content providers. A takeover of Cablevision, one of the last trophies of the American cable industry, would draw significant concern from regulators, particularly as control of the telecom market shrinks to a few players. </p>
+<p class="story-body-text" itemprop="articleBody"> Altice has already announced its intentions to build a <b>footprint in the United States</b>. It struck a $9.1 billion deal for Suddenlink Communications this spring and considered bidding for Time Warner Cable. Altice would join the top echelon of cable companies in the United States by adding Cablevision and its 3.1 million customers. </p>
+<p class="story-body-text" itemprop="articleBody"> Altice does not intend to create many cost savings by combining Cablevision and Suddenlink, the people briefed on the matter said. But that <b>may change once it digests its acquisitions</b>.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>THE FED CLIFFHANGER</strong> <span class="divider"> | </span></span> A crucial moment is coming up for Janet L Yellen, when the Fedâs policy-making committee announces whether the time has come to raise rates, <a href="//www.nytimes.com/2015/09/17/business/economy/decision-on-interest-rates-hinges-on-priorities-analysts-say.html?ref=business&#038;mtrref=www.nytimes.com">Binyamin Appelbaum writes in The New York Times</a>. After markets churned this summer, Fed officials wondered aloud whether it might sense to hold off raising rates for a few more weeks, <b>turning the September meeting into a cliffhanger.</b> </p>
+<p class="story-body-text" itemprop="articleBody"> Ms. Yellenâs silence has compounded the mystery. In early July, she said âcommunicating with the public is an important part of my job.â The next week, she testified twice before Congress. <b>But for two months, she has said nothing.</b> She will speak for the first time since July on Thursday afternoon. </p>
+<p class="story-body-text" itemprop="articleBody"> The Fed has already kept its benchmark rate <b>near zero much longer than expected</b>. Officials in 2012 agreed to keep rates near zero until the unemployment rate fell below 6.5 percent. It fell to 5.1 percent in August. </p>
+<p class="story-body-text" itemprop="articleBody"> The Fed has maintained a united front in recent months. Ms. Yellen has <b>won unanimous votes to continue the stimulus campaign</b> at each of the committeeâs five meetings so far this year. But here are growing signs of divide over the precise timing.</p>
+<p class="story-body-text" itemprop="articleBody"> If Ms. Yellen does persuade the committee to announce another delay on Thursday, the vote is <b>unlikely to be unanimous</b>. At least one member, Jeffrey M. Lacker, the president of the Federal Reserve Bank of Richmond, has indicated that he would vote in dissent if the committee does not raise rates.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BANK OF AMERICAâS TITLE BOUT</strong> <span class="divider"> | </span></span> Bank of Americaâs top executives and one of its board members have been pounding the pavement from London to Houston, <b>trying to convince shareholders</b> that Brian T. Moynihan should keep his job as both chairman and chief executive, <a href="//www.nytimes.com/2015/09/17/business/dealbook/17db-bank.html?ref=dealbook">Michael Corkery writes in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody"> They have cut a deal to mollify an outspoken critic and enlisted the help of the former Massachusetts congressman Barney Frank, an architect of Wall Streetâs regulatory overhaul. Mr. Frank, who recently joined the board of Signature Bank, a small commercial bank in New York, said the most important oversight of financial companies comes not from its directors but from regulators. <b>âPeople expect too much of boards,â he said.</b> </p>
+<p class="story-body-text" itemprop="articleBody"> The cast of characters involved in the battle includes <b>a Roman Catholic priest</b>, Warren E. Buffett and two giant California pension funds that have mounted an aggressive countercampaign. </p>
+<p class="story-body-text" itemprop="articleBody"> Bank officials say that Mr. Moynihan <b>earned his dual positions</b> by steering the company through costly acquisitions and that there is no evidence that companies perform better with separate chief executives and chairmen. </p>
+<p class="story-body-text" itemprop="articleBody"> The California Public Employeesâ Retirement System and the California State Teachersâ Retirement System argue that an independent chairman <b>would provide better oversight</b> of a bank with a troubled history. </p>
+<p class="story-body-text" itemprop="articleBody"> As many as 40 percent of shareholders are expected to vote against Mr. Moynihan from the outset. The vote, scheduled for Tuesday in Charlotte, N.C., has <b>highlighted the level of discontent over the boardâs decision</b> to overturn a 2009 shareholder vote requiring the bank to have a separate chairman and chief executive. The fight has been an unwelcome distraction for a bank that had just put most of its legal and regulatory troubles behind it.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> The <b>Federal Reserve</b> finishes its two-day monetary policy meeting and will hold a news conference at 2 p.m. </p>
+<p class="story-body-text" itemprop="articleBody">Data on <b>new home construction in August</b> is released at 8:30 a.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ANHEUSER-BUSCH INBEV DREAMS BIG</strong> <span class="divider"> | </span></span> The worldâs largest brewer has approached its rival SABMiller about a potential takeover that would bring some of the worldâs most popular beers under one roof, <a href="//www.nytimes.com/2015/09/17/business/dealbook/anheuser-busch-inbev-takeover-sabmiller.html?ref=dealbook">Chad Bray and Michael J. de la Merced report in DealBook</a>. A merger would bring together two companies with $69 billion in annual revenue and command over <b>30 percent of global beer sales</b>. </p>
+<p class="story-body-text" itemprop="articleBody"> Talks are not yet underway and no offer is on the table; <b>Anheuser-Busch InBev has until Oct. 14</b> to make one, under takeover rules in Britain, where SABMiller is based. </p>
+<p class="story-body-text" itemprop="articleBody"> Anheuser-Busch InBev <b>would probably have to pay more than $103 billion for SABMiller</b>, which owns Miller Lite, Peroni and Grolsch. Its shares surged 20 percent in London trading on Wednesday, giving it a market value of $90 billion. </p>
+<p class="story-body-text" itemprop="articleBody"> Anheuser-Busch InBev, which has Budweiser, Corona and Stella Artois under its roof, would also <b>have to win over the cigarette maker Altria and the Santo Domingos, one of the wealthiest families in Colombia</b>. They own 41 percent of SAB Miller. </p>
+<p class="story-body-text" itemprop="articleBody"> Any deal would bring <b>close scrutiny from antitrust regulators too</b>, <a href="//www.nytimes.com/2015/09/17/business/dealbook/anheuser-busch-inbev-and-sabmiller-merger-could-face-antitrust-hurdles.html">Michael J. de la Merced writes in DealBook</a>. Although the deal would bring obvious benefits, giving Anheuser-Busch InBev more exposure to fast-growing emerging markets, like Colombia and Ecuador, it is likely to prompt investigations from government officials who have already shown skepticism about a number of huge mergers. </p>
+<p class="story-body-text" itemprop="articleBody"> Analysts and investors speculate that should the takeover happen, it would <b>prompt a number of follow-on deals</b>, as the two companies shed assets to win regulatory approval. </p>
+<p class="story-body-text" itemprop="articleBody"> Analysts say that the United States Justice Department is <b>almost certain to demand that MillerCoors be dissolved</b>. SABMiller formed the joint venture with Molson Coors in 2008 to combine their United States operations. </p>
+<p class="story-body-text" itemprop="articleBody"> Trevor Stirling, an analyst at Sanford C. Bernstein &#038; Company, said SAB would also need to divest itself of <b>its 49 percent stake in CR Snow</b>, a Chinese joint venture that owns Snow, the countryâs best-selling beer brand. </p>
+<p class="story-body-text" itemprop="articleBody"> If the deal is successful, SABMiller would probably be subject to the cost-cutting that 3G, the private equity firm that put together Anheuser-Busch InBev, has imposed at other companies. Zero-based budgeting, a system that requires managers to justify all expenses each year, is likely to be put into effect. Staff members will be purged. <b>Any unnecessary expenses will be eliminated.</b> </p>
+<p class="story-body-text" itemprop="articleBody"> 3Gâs motto is âdream bigâ and they have <b>established themselves as one of the most audacious deal makers</b> of the last decade by following through on that, <a href="//www.nytimes.com/2015/09/17/business/dealbook/the-brazilians-behind-the-consolidation-in-beer.html">David Gelles writes in DealBook</a>. In 2010, they acquired Burger King. In 2013, they joined with Warren E. Buffett on a $23 billion takeover of H.J. Heinz. Last year 3G bought Tim Hortonâs and merged it with Burger King; this year they worked with Mr. Buffett again to buy Kraft in a deal worth more than $80 billion. </p>
+<p class="story-body-text" itemprop="articleBody"> Carlos Brito, the chief executive of Anheuser-Busch InBev, has been skilled at cost-cutting, which might <b>give investors the confidence to finance the deal</b>, <a href="//www.nytimes.com/2015/09/17/business/dealbook/a-sabmiller-takeover-would-shake-up-big-industry.html?ref=dealbook">Robert Cole writes in Breakingviews</a>. Mr. Brito has managed to turn nearly 40 percent of its revenue into earnings before interest, taxes, depreciation and amortization in the current year â nearly twice the peer median.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="News Corporation to Buy Unruly for Up to $176 Million" src="https://static01.nyt.com/images/2015/09/17/business/17newscorp-web/17newscorp-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>News Corporation to Buy Unruly for Up to $176 Million</strong> <span class="divider"> | </span></span> The purchase of the video ad technology company underlines the publishing companyâs continued push to remake itself for the digital age.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/17/business/media/news-corporation-to-buy-unruly-for-up-to-176-million.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Green Light for Expedia to Buy Orbitz</strong> <span class="divider"> | </span></span> The Justice Department will not block Expediaâs $1.3 billion purchase of Orbitz, another travel-booking site.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/17/business/antitrust-nod-for-expedia-to-buy-orbitz.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>G.E. Sells $3.7 Billion British Home Loan Portfolio</strong> <span class="divider"> | </span></span> General Electric sold a $3.7 billion portfolio of loans from its British home lending business to private equity-backed Kensington Mortgage as it continues to shrink its financing arm, GE Capital.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/09/16/us-general-electric-divestiture-idUSKCN0RG1YL20150916?feedType=RSS&#038;feedName=innovationNews"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China Electronics Said to Be in Talks to Acquire Atmel</strong> <span class="divider"> | </span></span> China Electronics, the nationâs largest state-owned information technology company, is in preliminary talks to acquire the United States chipmaker Atmel, Bloomberg News reports, citing people with knowledge of the process.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-09-17/china-electronics-corp-said-in-talks-to-acquire-chipmaker-atmel"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Amgen to Buy Dezima Pharma for $300 million</strong> <span class="divider"> | </span></span> Amgen said it would buy the biotechnology company Dezima Pharma, adding another cholesterol drug to its expanding portfolio of treatments for cardiovascular diseases.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/09/16/us-dezimapharma-m-a-amgen-idUSKCN0RG1SO20150916?feedType=RSS&#038;feedName=innovationNews"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Henry Gosebruch, Rising Star at JPMorgan, Is Departing for AbbVie" src="https://static01.nyt.com/images/2015/09/17/business/17db-morgan-web1/17db-morgan-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Henry Gosebruch, Rising Star at JPMorgan, Is Departing for AbbVie</strong> <span class="divider"> | </span></span> Mr. Gosebruch, 42, who was promoted in March to co-head of North American mergers, has been one of the bankâs top deal makers for the pharmaceutical industry.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/17/business/dealbook/henry-gosebruch-rising-star-at-jpmorgan-is-departing-for-abbvie.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Elliott Said to Seek Partner in Taking CDK Global Private</strong> <span class="divider"> | </span></span> The activist hedge fund Elliott Management  is seeking to team up with a private equity firm to take CDK Global private, Reuters reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/09/16/us-cdkglobal-m-a-elliott-idUSKCN0RG2OU20150916?feedType=RSS&#038;feedName=innovationNews"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Lyft Announces Deal With Didi Kuaidi, the Chinese Ride-Hailing Company" src="https://static01.nyt.com/images/2015/09/17/business/17ride-web1/17ride-web1-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lyft Announces Deal With Didi Kuaidi, the Chinese Ride-Hailing Company</strong> <span class="divider"> | </span></span> The partnership will allow Lyft, which is based in San Francisco, to operate in China for the first time.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/17/technology/lyft-announces-deal-with-didi-kuadi-the-chinese-ride-hailing-company.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Stemcentrx Gets $5 Billion Valuation</strong> <span class="divider"> | </span></span> A start-up largely unknown outside biotechnology circles has emerged with a $5 billion valuation and a pipeline of drugs that could give hope to some patients with lethal cancers.<br /><span class="kicker"><a href="//blogs.wsj.com/venturecapital/2015/09/16/peter-thiel-backed-stemcentrx-emerges-with-5-billion-valuation/?mod=WSJBlog"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tech Firms Venture Into Lending</strong> <span class="divider"> | </span></span> Intuit, PayPal and Square are stepping up efforts to mine their data to get into the lending business.<br /><span class="kicker"><a href="//www.wsj.com/articles/tech-firms-venture-into-new-territory-lending-1442438820?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Envoy Raises $3 Million to Help Seniors Live at Home Longer</strong> <span class="divider"> | </span></span> The start-up is tapping into a potentially large market â an estimated 34.2 million American adults have been an unpaid caregiver to someone age 50 or older in the last year. <br /><span class="kicker"><a href="//blogs.wsj.com/venturecapital/2015/09/16/envoy-raises-3-million-to-help-seniors-live-at-home-longer/?mod=WSJBlog"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>S.E.C. May Have Weakened Justice Dept. Stance in Insider Trading Case</strong> <span class="divider"> | </span></span> The Justice Department asked the Supreme Court to review an insider trading case, but an S.E.C. administrative judge might have undercut its argument, Peter J. Henning writes in the White Collar Watch column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/17/business/dealbook/sec-judge-may-have-weakened-justice-dept-stance-in-insider-trading-case.html">White Collar Watch &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Puerto Ricoâs Debt Rescue Plan Called Into Question" src="https://static01.nyt.com/images/2015/09/17/business/17db-rico-web/17db-rico-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Puerto Ricoâs Debt Rescue Plan Called Into Question</strong> <span class="divider"> | </span></span> The planners appeared to have overstated Puerto Ricoâs financial needs, so it is seeking twice what it actually needs in concessions from creditors, a credit analyst said.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/17/business/dealbook/puerto-ricos-debt-rescue-plan-called-into-question.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Dewey &amp; LeBoeuf Accounting Fraud Case Goes to Jury" src="https://static01.nyt.com/images/2015/09/17/business/17DB-DEWEY/17DB-DEWEY-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Dewey &amp; LeBoeuf Accounting Fraud Case Goes to Jury</strong> <span class="divider"> | </span></span> The trial of three former executives of the once-prominent law firm is headed to a verdict â but jurors had plenty of questions for the judge.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/17/business/dewey-leboeuf-accounting-fraud-case-goes-to-jury.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="China Tries to Extract Pledge of Compliance From U.S. Tech Firms" src="https://static01.nyt.com/images/2015/09/17/business/17PLEDGE/17PLEDGE-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China Tries to Extract Pledge of Compliance From U.S. Tech Firms</strong> <span class="divider"> | </span></span> Some have received letters asking for a promise to make their products âsecure and controllable,â a catchphrase that might mean backdoor access to private information.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/17/technology/china-tries-to-extract-pledge-of-compliance-from-us-tech-firms.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Stockbroker Pleads Guilty in Insider Trading Case</strong> <span class="divider"> | </span></span> A stockbroker has admitted to his role in a five-year insider trading scheme that yielded more than $5.6 million in net profits.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/17/business/stockbroker-pleads-guilty-in-insider-trading-case.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Top Deputy to Exit Attorney Generalâs Office</strong> <span class="divider"> | </span></span> Mr. Levy, who was one of Eric T. Schneidermanâs first hires, is returning to the litigation firm Boies, Schiller &#038; Flexner.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/17/business/dealbook/harlan-levy-schneiderman-deputy-is-leaving-attorney-generals-office.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/09/17/morning-agenda-altice-to-buy-cablevision/"
+					data-title="Morning Agenda: Altice to Buy Cablevision"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;The Fed Cliffhanger | Bank of America&#039;s Title Bout | Anheuser-Busch InBev Dreams Big&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/09/17/morning-agenda-altice-to-buy-cablevision/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":48,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

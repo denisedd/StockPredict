@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-well section-health"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/well/How Parents Harnessed the Power of Social Media to Challenge EpiPen Prices ( 20160825 )" />
+<meta name="communityAssetURL" content="//well.blogs.nytimes.com/2016/08/25/how-parents-harnessed-the-power-of-social-media-to-challenge-epipen-prices/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004610727"><meta name="author" content="Tara Parker-Pope" />
+<meta name="CLMST" content="Tara Parker-Pope" />
+<meta name="byl" content="Tara Parker-Pope" />
+<meta name="article:author" content="//topics.nytimes.com/top/reference/timestopics/people/p/tara_parkerpope/index.html" /><meta name="GBLC" content="Family;Live">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1472131690" />
+<meta name="PUD" content="20160825" />
+<meta name="pdate" content="20160825" />
+<meta name="ptime" content="20160825092810" />
+<meta name="utime" content="20160826134714" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-08-26T13:47:14-04:00" />
+<meta name="DISPLAYDATE" content="August 25, 2016" />
+<meta name="dat" content="August 25, 2016" />
+<meta itemprop="articleSection" property="article:section" content="Health" />
+<meta name="CG" content="Health" />
+<meta name="SCG" content="well" />
+<meta name="BN" content="well" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Grassley, Charles E;Klobuchar, Amy">
+<meta name="des" content="Allergies;Asthma;Health Insurance and Managed Care;Medical Devices;Peanuts;Prices (Fares, Fees and Rates);Social Media">
+<meta name="org" content="Mylan Inc">
+<meta name="ticker" content="Mylan Inc|MYL|NASDAQ" />
+<meta property="article:tag" content="Grassley Charles E" />
+<meta property="article:tag" content="Klobuchar Amy" />
+<meta property="article:tag" content="Allergies" />
+<meta property="article:tag" content="Asthma" />
+<meta property="article:tag" content="Health Insurance and Managed Care" />
+<meta property="article:tag" content="Medical Devices" />
+<meta property="article:tag" content="Peanuts" />
+<meta property="article:tag" content="Prices (Fares Fees and Rates)" />
+<meta property="article:tag" content="Social Media" />
+<meta property="article:tag" content="Mylan Inc" />
+<meta property="article:tag" content="Family" />
+<meta property="article:tag" content="Live" />
+<meta name="keywords" content="Grassley Charles E,Klobuchar Amy,Allergies,Asthma,Health Insurance and Managed Care,Medical Devices,Peanuts,Prices (Fares Fees and Rates),Social Media,Mylan Inc,Family,Live" />
+<meta name="news_keywords" content="Allergy,Asthma,Peanut" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fwell.blogs.nytimes.com%2F2016%2F08%2F25%2Fhow-parents-harnessed-the-power-of-social-media-to-challenge-epipen-prices%2F" title="How Parents Harnessed the Power of Social Media to Challenge EpiPen Prices" />
+<meta name="description" content="A few vocal parents harnessed the power of Facebook and Twitter to pressure pharmaceutical firm Mylan to lower its price on EpiPens, a life-saving injection for people with severe allergic reactions." />
+<meta name="hdl_p" content="Parental Revolt on a Drug Price" />
+<meta name="hdl" content="How Parents Harnessed the Power of Social Media to Challenge EpiPen Prices" />
+<meta property="og:title" content="How Parents Harnessed the Power of Social Media to Challenge EpiPen Prices" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//well.blogs.nytimes.com/2016/08/25/how-parents-harnessed-the-power-of-social-media-to-challenge-epipen-prices/" />
+<meta property="og:site_name" content="Well" />
+<meta property="og:description" content="A few vocal parents harnessed the power of Facebook and Twitter to pressure pharmaceutical firm Mylan to lower its price on EpiPens, a life-saving injection for people with severe allergic reactions." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/08/26/science/25EPI1/25EPI1-facebookJumbo.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2016/08/26/science/25EPI1/25EPI1-thumbLarge-v2.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="How Parents Harnessed the Power of Social Media to Challenge EpiPen Prices" />
+<meta name="twitter:url" content="//well.blogs.nytimes.com/2016/08/25/how-parents-harnessed-the-power-of-social-media-to-challenge-epipen-prices/" />
+<meta name="twitter:description" content="A few vocal parents harnessed the power of Facebook and Twitter to pressure pharmaceutical firm Mylan to lower its price on EpiPens, a life-saving injection for people with severe allergic reactions." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2016/08/26/science/25EPI1/25EPI1-thumbLarge-v2.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2016/08/26/science/25EPI1/25EPI1-thumbLarge-v2.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@nytimeswell">
+<link rel='prev' title='For Tennis Elbow, No Such Thing as a Quick Fix' href='//well.blogs.nytimes.com/2016/08/25/for-tennis-elbow-no-such-thing-as-a-quick-fix/' />
+<link rel='next' title='Can We Talk About Your Weight?' href='//well.blogs.nytimes.com/2016/08/25/can-we-talk-about-your-weight/' />
+<link rel='canonical' href='//well.blogs.nytimes.com/2016/08/25/how-parents-harnessed-the-power-of-social-media-to-challenge-epipen-prices/' />
+<link rel='shortlink' href='//nyti.ms/2bCrWV7' />
+<link rel='https://github.com/WP-API/WP-API' href='//well.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/well/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//well.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/health/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/well/2016/08/25/how-parents-harnessed-the-power-of-social-media-to-challenge-epipen-prices/" />
+<meta name="dfp-ad-unit-path" content="health/well/family" /><meta name="categories" content="family,live" />			<title>How Parents Harnessed the Power of Social Media to Challenge EpiPen Prices - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/well.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-121371 blog-universal nyt-blog-well" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'Health', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//well.blogs.nytimes.com">
+                Well            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        How Parents Harnessed the Power of Social Media to Challenge EpiPen Prices        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//well.blogs.nytimes.com/2016/08/25/how-parents-harnessed-the-power-of-social-media-to-challenge-epipen-prices/"
+	 data-title="How Parents Harnessed the Power of Social Media to Challenge EpiPen Prices"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;A few vocal parents harnessed the power of Facebook and Twitter to pressure pharmaceutical firm Mylan to lower its price on EpiPens, a life-saving injection for people with severe allergic reactions.&lt;/span&gt;&lt;a href=&quot;//well.blogs.nytimes.com/2016/08/25/how-parents-harnessed-the-power-of-social-media-to-challenge-epipen-prices/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="August 25, 2016 9:28 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="well" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+		<div class="element1">
+	<div id="logo" ><a href="//well.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=Health" title="Go to Well Home"><img src="https://static01.nyt.com/images/blogs_v5/well/well_post.png" alt="Well - Tara Parker-Pope on Health"/></a></div>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//well.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Well">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-121371 post type-post status-publish hentry category-family category-live tag-allergies tag-asthma tag-grassley-charles-e tag-health-insurance-and-managed-care tag-klobuchar-amy tag-medical-devices tag-mylan-inc tag-peanuts tag-prices-fares-fees-and-rates tag-social-media per-grassley-charles-e per-klobuchar-amy des-allergies des-asthma des-health-insurance-and-managed-care des-medical-devices des-peanuts des-prices-fares-fees-and-rates des-social-media org-mylan-inc news_keywords-allergy news_keywords-asthma news_keywords-peanut" id="post-121371">
+	<header class="postHeader">
+				<div class="postKicker">
+			<span class="kicker"><a href="//well.blogs.nytimes.com/category/family/?module=BlogCategory&version=Blog Post&action=Click&contentCollection=Health&pgtype=Blogs&region=Header">Family</a></span>
+		</div>
+				<h1 itemprop="headline" class="entry-title">How Parents Harnessed the Power of Social Media to Challenge EpiPen Prices</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Tara Parker-Pope			</address>
+			<!-- date published --><time class="dateline " datetime="2016-08-25T13:28:10+00:00" itemprop="datePublished">August 25, 2016 9:28 am</time>
+			<!-- date updated --><span class="visually-hidden updated">August 25, 2016 9:28 am</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div class="w592"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2016/08/26/science/25EPI1/25EPI1-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2016/08/26/science/25EPI1/25EPI1-tmagArticle.jpg" src="https://static01.nyt.com/images/2016/08/26/science/25EPI1/25EPI1-tmagArticle.jpg" id="100000004610636" width="592" height="395" alt="Brooklyn actress Mellini Kantayya started a petition against EpiPen price increases that has garnered more than 70,000 signatures."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Brooklyn actress Mellini Kantayya started a petition against EpiPen price increases that has garnered more than 70,000 signatures.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Hilary Swift for The New York Times</span></figcaption></figure></div>
+<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//well.blogs.nytimes.com/2016/08/25/how-parents-harnessed-the-power-of-social-media-to-challenge-epipen-prices/" data-title="How Parents Harnessed the Power of Social Media to Challenge EpiPen Prices" data-description="A few vocal parents harnessed the power of Facebook and Twitter to pressure pharmaceutical firm Mylan to lower its price on EpiPens, a life-saving injection for people with severe allergic reactions.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody">After Mellini Kantayya, an actress who lives in Brooklyn, chatted with her Facebook friends in July about the high cost of EpiPens, she knew she had to do something.</p>
+<p class="story-body-text" itemprop="articleBody">A friend in Connecticut, the mother of a child with food allergies, was facing a $600 bill for the product, an injector that delivers a lifesaving dose of epinephrine to reverse severe allergic reactions. Ms. Kantayya had also just seen an <a href="https://www.statnews.com/2016/07/06/epipen-prices-allergies/" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.statnews.com/2016/07/06/epipen-prices-allergies/&amp;source=gmail&amp;ust=1472257701732000&amp;usg=AFQjCNHrT8PLr0igaCgMpCCMmmwUAL2fEg">article from the health website STAT</a>, about ambulance crews that could not afford EpiPens because the price had surged by more than 500 percent in recent years.</p>
+<p class="story-body-text" itemprop="articleBody">âIt just felt nefarious,â said Ms. Kantayya, whose health insurance covers the cost of EpiPens for her husband, who has an allergic condition. âJust because weâre not paying for it, weâre still paying for it in terms of social cost,â she said. Then she thought, âWhy donât I do a petition, and maybe something will be done about this.ââ</p>
+<p class="story-body-text" itemprop="articleBody">She went online to Petition2Congress.com, a service that collects signatures and then sends them to designated lawmakers, and created the petition â<a href="//www.petition2congress.com/20720/stop-epipen-price-gouging/" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=//www.petition2congress.com/20720/stop-epipen-price-gouging/&amp;source=gmail&amp;ust=1472257701732000&amp;usg=AFQjCNErxbp2ECIXV23ANZ5dk8lIfClFjQ">Stop the EpiPen Price Gouging</a>,â which went live on<span class="aBn" tabindex="0" data-term="goog_763106851"><span class="aQJ">July 11</span></span>.</p>
+<p class="story-body-text" itemprop="articleBody">Then Ms. Kantayya shared the link with her 836 Facebook friends, with a post that began, âStupid pharmaceutical company!â</p>
+<p class="story-body-text" itemprop="articleBody">What happened next is a lesson in the power of social media to help create a groundswell, particularly among a group as committed and motivated as the parents of children with food allergies, who must often buy multiple pens for home, school and day care. In just 45 days, Ms. Kantayyaâs petition grew from a few dozen signatures to more than 80,000 people who sent more than 121,000 letters to Congress.</p>
+<p class="story-body-text" itemprop="articleBody">The EpiPen price rise has garnered widespread media coverage and led to intense scrutiny of its maker, the pharmaceutical company Mylan, and its chief executive, Heather Bresch. Several public officials, including Hillary Clinton and Senator Bernie Sanders of Vermont, have called on Mylan to lower EpiPen prices. <span class="aBn" tabindex="0" data-term="goog_763106852"><span class="aQJ">On Thursday</span></span> morning, Ms. Bresch, bowing to pressure, <a href="//newsroom.mylan.com/2016-08-25-Mylan-Taking-Immediate-Action-to-Further-Enhance-Access-to-EpiPen-Epinephrine-Injection-USP-Auto-Injector" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=//newsroom.mylan.com/2016-08-25-Mylan-Taking-Immediate-Action-to-Further-Enhance-Access-to-EpiPen-Epinephrine-Injection-USP-Auto-Injector&amp;source=gmail&amp;ust=1472257701732000&amp;usg=AFQjCNG03nT6h_Pb3NaXS4mjiFzorWBGeA">announced that the company would expand</a> its coupon and patient assistance programs to help patients who were facing higher out-of-pocket costs.</p>
+<p class="story-body-text" itemprop="articleBody">So how did the EpiPen come to epitomize unfair drug pricing? While the price of the EpiPen did not increase overnight, data show that Mylan had been steadily increasing prices, first by about 10 percent, twice a year, but more recently in about 15 percent increments. This summer, as parents bought EpiPens for summer camp and back to school, many were paying higher out-of-pocket costs because of high deductibles and co-payments imposed by their insurance companies.</p>
+<p class="story-body-text" itemprop="articleBody">âI think Mylan just pushed it too far,â said Robyn OâBrien of Boulder, Colo., a well-known parent activist and writer with a strong social media following. âIt hit a price point for this year for back to school where parents absolutely revolted.â</p>
+<p class="story-body-text" itemprop="articleBody">One of them was Jennifer Vallez, an illustrator in Ellington, Conn., whose 9-year-old daughter, Lola, has a peanut and tree nut allergy. Because her insurance policy has a $2,000 deductible, her pharmacist told her the cost to refill an EpiPen prescription would be $600.</p>
+<p class="story-body-text" itemprop="articleBody">âItâs just morally so wrong,â said Ms. Vallez, a high school friend of Ms. Kantayya and the second person to sign the petition. She also shared it with her 533 Facebook friends. âI have a lot of friends with children with allergies, so we all are pretty adamant about this kind of stuff and support each other,â she said.</p>
+<p class="story-body-text" itemprop="articleBody">At the same time, Ms. OâBrien, who founded <a href="//www.allergykids.com/" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=//www.allergykids.com/&amp;source=gmail&amp;ust=1472257701732000&amp;usg=AFQjCNHkEQUZJYG8BXIQhByZWhLJoZOX2g">AllergyKids.com</a> and wrote a popular book on the food industry called âThe Unhealthy Truth,â began hearing more concerns about EpiPens from her 165,000 followers on Facebook and Twitter.</p>
+<p class="story-body-text" itemprop="articleBody">âSomething has to be done, so we are doing it,â she wrote on <span class="aBn" tabindex="0" data-term="goog_763106853"><span class="aQJ">July 21</span></span> <a href="https://www.facebook.com/robynobrienUSA/?fref=ts" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.facebook.com/robynobrienUSA/?fref%3Dts&amp;source=gmail&amp;ust=1472257701732000&amp;usg=AFQjCNFfwuvDV06Su1Z_wsJjtALGv5If2Q">on her public Facebook page</a>. âStay tuned and read about the price gouging of American parents.â The post was shared 727 times.</p>
+<p class="story-body-text" itemprop="articleBody">A week later, Georgina Cornago Cipriano, whose son Giovanni died at age 14 as a result of a food allergy, posted an article on Ms. OâBrienâs website about Mylanâs âEpiPen profiteering.â</p>
+<p class="story-body-text" itemprop="articleBody">âHow can they not care?â she asked. âWhat can we do?â Her post was shared 477 times, reaching more than 110,000 people.</p>
+<p class="story-body-text" itemprop="articleBody">Ms. OâBrien continued to press the issue online, as parents began posting receipts showing how much they were paying for EpiPens. One photo showed a Costco pharmacy receipt from Chandler, Ariz., for $1,698.28 that a parent had paid for three boxes of EpiPens, six pens total. A single mother from New Hampshire had a receipt for $925 for a two-pack of EpiPens.</p>
+<p class="story-body-text" itemprop="articleBody">On Aug. 17, both Ms. OâBrien and another parent activist, Becky Bergman of the website <a href="//www.peanutallergymom.com/" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=//www.peanutallergymom.com/&amp;source=gmail&amp;ust=1472257701732000&amp;usg=AFQjCNGfX3veaLjUPSLnueZ_4br_ySD8vA">Peanut Allergy Mom</a>, urged their readers to sign Ms. Kantayyaâs petition. Signatures surged by 10,000, reaching 16,719 by the next day.</p>
+<p class="story-body-text" itemprop="articleBody">And then Ms. OâBrien coined the hashtag #EpiGate, and it stuck. More media outlets began to cover the price increase.</p>
+<p class="story-body-text" itemprop="articleBody">Bernie Sanders <a href="https://www.twitter.com/SenSanders/status/766263360933466112" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.twitter.com/SenSanders/status/766263360933466112&amp;source=gmail&amp;ust=1472257701732000&amp;usg=AFQjCNEPJ_q3TUIp9ycCz0XkglbTXPFQqQ">weighed in on Twitter</a> as he shared a story from NBC: âThereâs no reason an EpiPen, which costs Mylan just a few dollars to make, should cost families more than $600.â It was retweeted 8,789 times and reached nearly 2.8 million people, according to CrowdTangle, a social media tracker.</p>
+<p class="story-body-text" itemprop="articleBody">Ms. OâBrien linked to the petition again, resulting in 972 shares. Signatures soon climbed to 53,000.</p>
+<p class="story-body-text" itemprop="articleBody">By <span class="aBn" tabindex="0" data-term="goog_763106854"><span class="aQJ">Monday</span></span>, the story of overpriced EpiPens was in full force, covered by numerous media outlets, including The New York Times, USA Today and NBCâs âTodayâ show. Senator Charles Grassley, the Iowa Republican who leads the Judiciary Committee, demanded an explanation from Mylan for the price increase. Senator Amy Klobuchar, Democrat of Minnesota, who has a daughter with allergies who carries an EpiPen, called for both a Judiciary Committee inquiry into the pricing and an investigation by the Federal Trade Commission.</p>
+<p class="story-body-text" itemprop="articleBody">Whatâs so unusual about the pricing furor is that it has been orchestrated almost solely by parents and family members of people who use EpiPens. Patient advocacy groups, which typically are vocal on all issues related to food allergies, have been largely silent.</p>
+<p class="story-body-text" itemprop="articleBody">Some of the most prominent groups â <a href="https://www.foodallergy.org/" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=https://www.foodallergy.org/&amp;source=gmail&amp;ust=1472257701732000&amp;usg=AFQjCNG1AePdxbvoFE71M742itDIgxSLCQ">Food Allergy Research &amp; Education</a> (FARE), the <a href="//www.aafa.org/" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=//www.aafa.org/&amp;source=gmail&amp;ust=1472257701732000&amp;usg=AFQjCNFRqeBJgfGWXakD6FYSP178sxqamw">Asthma and Allergy Foundation of America</a> (AAFA) and <a href="//www.allergyasthmanetwork.org/" target="_blank" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=//www.allergyasthmanetwork.org/&amp;source=gmail&amp;ust=1472257701732000&amp;usg=AFQjCNEcIyJpmYitLHJ0ngbEOkE0JZtcXw">Allergy &amp; Asthma Network</a> â have partnerships with Mylan for patient awareness campaigns and other programming. The groups are not required to disclose how much money they receive from the drug company; but Mylan, in its 2015 Social Responsibility report, lists all three as âallies.â</p>
+<p class="story-body-text" itemprop="articleBody">Since 2011, Mylan says, it has provided more than $10 million in funding for âeducational efforts,â such as sponsorships and grants, and has received corporate citizen awards from FARE and the Allergy &amp; Asthma Network.</p>
+<p class="story-body-text" itemprop="articleBody">While the groups have not taken a prominent public stand on the issue, all three say they have been working behind the scenes with Mylan to expand its assistance program to help families obtain EpiPens at a lower out-of-pocket cost.</p>
+<p class="story-body-text" itemprop="articleBody">Tonya Winders, president and chief executive of the Allergy &amp; Asthma Network, said she began meeting with Mylan officials in March to talk about pricing issues. âIâve gone all the way to the C.E.O. of Mylan with the conversation,â she said.</p>
+<p class="story-body-text" itemprop="articleBody">Dr. Cary Sennett, the chief executive of AAFA, said the group met with Mylan earlier this week. âThey know our concerns about pricing and affordability,â he said.</p>
+<footer class="story-footer">
+    <div class="story-meta">
+	<p class="story-print-citation">A version of this article appears in print on 08/26/2016, on page <span itemprop="printSection">A</span><span itemprop="printPage">1</span> of the <span itemprop="printEdition">NewYork</span> edition with the headline: Parental Revolt on a Drug Price.</p>    </div>
+</footer>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//well.blogs.nytimes.com/2016/08/25/how-parents-harnessed-the-power-of-social-media-to-challenge-epipen-prices/" data-title="How Parents Harnessed the Power of Social Media to Challenge EpiPen Prices" data-description="A few vocal parents harnessed the power of Facebook and Twitter to pressure pharmaceutical firm Mylan to lower its price on EpiPens, a life-saving injection for people with severe allergic reactions.">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//well.blogs.nytimes.com/2016/08/25/for-tennis-elbow-no-such-thing-as-a-quick-fix/" title="For Tennis Elbow, No Such Thing as a Quick Fix">
+				For Tennis Elbow, No Such Thing as a Quick Fix			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//well.blogs.nytimes.com/2016/08/25/can-we-talk-about-your-weight/" title="Can We Talk About Your Weight?">
+				Can We Talk About Your Weight?			</a>
+					</li>
+	</ul>
+</div>
+<div id="nytint-qa-well-widget" class="nytint-qa-widget module qaModule noContent">
+  <a class="nytint-qa-module-header" href="//well.blogs.nytimes.com/ask/well/questions"><h4 class="moduleHeader">Ask Well</h4></a>
+  <div class="nytint-qa-header-spacer">&nbsp;</div>
+  <p class="summary">Your health questions answered by Times journalists and&nbsp;experts.</p>
+  <form action="/svc/int/qa/questions/well/submit" method="POST" id="nytint-qa-ask-form" class="qaQuestionForm">
+    <!-- askbox.jst rendered here -->
+    <!-- these lines replaced by jst render--><div id="nytint-qa-question-box">
+      <!-- these lines replaced by jst render--><textarea name="question" class="textarea qaTextarea nytint-qa-form-element" id="nytint-qa-question-input" placeholder="What would you like to know?" disabled="disabled"></textarea>
+    <!-- these lines replaced by jst render--></div>
+  </form>
+  <div class="nytint-qa-recent-questions-wrapper clearfix nytint-qa-hidden">
+    <div class="nytint-qa-liner">
+      <h5><!-- (Recent/Related Questions) filled by javascript from nytqa.recent_questions.js --></h5>
+      <div class="nytint-qa-seemore">
+        <p><a href="//well.blogs.nytimes.com/ask/well/questions/yours" title="Your questions">Your Questions</a> | <a href="//well.blogs.nytimes.com/ask/well/questions">All &raquo;</a></p>
+      </div>
+      <ul class="nytint-qa-recent-questions clearfix">
+        <!-- question views get rendered into here -->
+      </ul>
+    </div>
+  </div>
+    <link href="https://int.nyt.com/applications/qa/assets/well-f0b8f674afd653cf65ff12f13234cb39.css" media="screen" rel="stylesheet" type="text/css" />
+    <script>
+  var NYTD = NYTD || {};
+      NYTD.NYTINT = NYTD.NYTINT || {};
+      NYTD.NYTINT.QA = NYTD.NYTINT.QA || {};
+      NYTD.NYTINT.QA.app_root_path = "/ask/";
+      NYTD.NYTINT.QA.svc_root_path = "/svc/int/qa/";
+      NYTD.NYTINT.QA.event_root_url = "/ask/well/questions";
+      NYTD.NYTINT.QA.event_slug = "well";
+      NYTD.NYTINT.QA.A_COL_FORM = false;
+  </script>
+    <script src="https://int.nyt.com/applications/qa/assets/well_base-7dc69e7a081837e27503446314bb2b89.js" type="text/javascript"></script>
+  <script src="https://int.nyt.com/applications/qa/assets/well_widget-2fbcafade4829875da7ba7c9cd2ced3c.js" type="text/javascript"></script>
+    <script>
+  require(['foundation/main'], function (Foundation) {
+    require(['nytint/qa/well_widget'], function () {});
+  });
+  </script>
+</div>
+
+<div id="nyt_featured_posts-11" class="module nocontent widget_nyt_featured_posts"><h4 class="moduleHeader"></h4>			<div class="subColumn-2">	<div class="column">
+		<div class="entry">
+						<div class="w190">
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">
+					<img src="https://static01.nyt.com/images/2016/08/31/well/family/well-family-exerciseask/well-family-exerciseask-articleInline.jpg" width="190" height="126" />
+				</a>
+			</div>
+			<div class="w600 hidden">
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">
+					<img src="https://static01.nyt.com/images/2016/08/31/well/family/well-family-exerciseask/well-family-exerciseask-videoSixteenByNine600.jpg" width="224" height="126" />
+				</a>
+			</div>
+						<h6 class="kicker">
+				<a href="//well.blogs.nytimes.com/category/ask-well/">Ask Well</a>
+			</h6>
+						<h5>
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">Can You Safely Lose Weight While Breast-Feeding?</a>
+							</h5>
+		</div><!--end of entry-->
+	</div><!--end of column-->
+						<div class="column lastColumn">
+		<div class="entry">
+						<div class="w190">
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">
+					<img src="https://static01.nyt.com/images/2016/08/29/science/well-klass-smallpenis/well-klass-smallpenis-articleInline.jpg" width="190" height="126" />
+				</a>
+			</div>
+			<div class="w600 hidden">
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">
+					<img src="https://static01.nyt.com/images/2016/08/29/science/well-klass-smallpenis/well-klass-smallpenis-videoSixteenByNine600.jpg" width="224" height="126" />
+				</a>
+			</div>
+						<h6 class="kicker">
+				<a href="//well.blogs.nytimes.com/category/family/the-checkup/">The Checkup</a>
+			</h6>
+						<h5>
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">As Boys Get Fatter, Parents Worry One Body Part Is Too Small</a>
+							</h5>
+		</div><!--end of entry-->
+	</div><!--end of column-->
+		</div><!--end of sub-column2--></div><div id="nyt_promo_widget-14" class="module nocontent widget_nyt_promo_widget"><!-- Regilite iFrame 20140820 ~dj.paris -->
+<style>
+#regilite-bigad {
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding:10px;
+  height:250px;
+}
+#regilite-bigad h1 {
+  font-family: "nyt-franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 0 15px 10px;
+  font-size: 16px;
+  line-height: 18px;
+}
+#regilite-bigad h1 a {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+#regi-image img {
+  display: block;
+  float: left;
+  padding: 0 10px;
+  width: 50px;
+}
+p#regi-copy {
+  font-size: 12px; 
+  line-height: 16px; 
+  margin: 0;
+  font-family: Georgia, "Times New Roman", sans-serif;
+  color: #333;
+  text-align: left;
+  padding: 0 10px 15px 0;
+}
+#regiframe-wrapper {
+  padding: 0 10px;
+}
+#regiframe-wrapper iframe {
+  border: 0;
+  width: 280px;
+  height: 180px;
+}
+</style>
+  
+
+  
+<div id="regilite-bigad">
+  <h1>
+   Sign Up for the Running Email
+  </h1>
+
+  <div id="regi-image">
+    <img src="https://static01.nyt.com/marketing/newsletters/images/Running_75.jpg" alt="Running Newsletter">
+  </div>
+
+  <p id="regi-copy">Get Well's Running email for practical tips, expert advice, exclusive content and a bit of motivation delivered to your inbox every week to help you on your running journey. Coming soon.</p>
+
+  <div id="regiframe-wrapper">
+    <iframe title="regilite" src="https://regilite.nytimes.com/regilite?product=RU&theme=Transparent&landing=true&addSlot=true&app=newsletter&sourceApp=nyt-v5&title=Running"></iframe>
+  </div>
+</div>
+
+<span class="adxInfo" style="display:none;">campaign: %%CAMP%% -- %%CAMP_UID%%, creative: %%ADID%% -- %%AD_UID%%, page: %%PAGE%%, targetedPage: %%TARGETEDPAGE%%, position: %%POS%%</span>
+</div>		<div class="module ad" id="MiddleRight"></div>
+        <div id="nyt_feed_in_flat_tabs-6" class="module nocontent widget_nyt_feed_in_flat_tabs">		<h4 class="moduleHeader left">Times Health</h4>
+		<div id="tabWidget-nyt_feed_in_flat_tabs-6" class="tabAutoLoad">
+			<div class="tabsContainer">
+				<ul class="tabs right">
+										<li class="selected">
+							<a href="javascript:void(0);">Most Viewed</a>
+						</li>
+												<li class="">
+							<a href="javascript:void(0);">Most E-mailed</a>
+						</li>
+										</ul>
+		   </div>
+		<div class="tabContent">
+	<div class="blog-story">
+		<ul class="refer">
+					<li>
+				<a href="//well.blogs.nytimes.com/2016/02/17/which-type-of-exercise-is-best-for-the-brain/">Which Type of Exercise Is Best for the Brain?</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2013/10/03/well-quiz-the-mind-behind-the-eyes/">Can You Read People&#8217;s Emotions?</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2011/01/28/how-meditation-may-change-the-brain/">How Meditation May Change the Brain</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2015/11/10/ask-well-the-health-benefits-of-meditation/">Ask The Health Benefits of Meditation</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2010/12/15/phys-ed-the-benefits-of-exercising-before-breakfast/">Phys Ed: The Benefits of Exercising Before Breakfast</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2015/07/07/dog-needs-a-walk-theres-an-app-for-that/">Dog Needs a Walk? There&#8217;s an App for That</a>
+			</li>
+					</ul>
+	</div>
+</div>
+		<div class="tabContent">
+	<div class="blog-story">
+		<ul class="refer">
+				</ul>
+	</div>
+</div>
+				</div>
+	</div>
+			<div class="module ad" id="Box1"></div>
+        <div id="nyt_blog_social_media-4" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-double ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">Well on</span></span>
+</h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/nytimeswell" title="Follow nytimeswell on Twitter">Twitter</a></li><li class="blog-fw-facebook double"><a href="https://facebook.com/WellNYT" title="Follow WellNYT on Facebook">Facebook</a></li></ul>
+</div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-39',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":51,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

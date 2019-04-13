@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003607551"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1427975175" />
+<meta name="PUD" content="20150402" />
+<meta name="pdate" content="20150402" />
+<meta name="ptime" content="20150402074615" />
+<meta name="utime" content="20150402114615" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-04-02T11:46:15-04:00" />
+<meta name="DISPLAYDATE" content="April 2, 2015" />
+<meta name="dat" content="April 2, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Banking and Financial Institutions;Securities and Commodities Violations;Venture Capital">
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Securities and Commodities Violations" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Banking and Financial Institutions,Securities and Commodities Violations,Venture Capital,DealBook" />
+<meta name="news_keywords" content="Banking and Finance,Securities fraud,Venture capital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F04%2F02%2Fmorning-agenda-hsbc-criticized-over-compliance%2F" title="Morning Agenda: HSBC Criticized Over Compliance" />
+<meta name="description" content="HSBC Criticized Over Compliance &#124; Easing Crackdown on Luxury Car Exporters &#124; Success in China Fuels Investor&#8217;s Global Ambitions &#124; Where Wall Street and Silicon Valley Intersect" />
+<meta name="hdl" content="Morning Agenda: HSBC Criticized Over Compliance" />
+<meta property="og:title" content="Morning Agenda: HSBC Criticized Over Compliance" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/04/02/morning-agenda-hsbc-criticized-over-compliance/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="HSBC Criticized Over Compliance &#124; Easing Crackdown on Luxury Car Exporters &#124; Success in China Fuels Investor&#8217;s Global Ambitions &#124; Where Wall Street and Silicon Valley Intersect" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: HSBC Criticized Over Compliance" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/04/02/morning-agenda-hsbc-criticized-over-compliance/" />
+<meta name="twitter:description" content="HSBC Criticized Over Compliance &#124; Easing Crackdown on Luxury Car Exporters &#124; Success in China Fuels Investor&#8217;s Global Ambitions &#124; Where Wall Street and Silicon Valley Intersect" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Simon Property Withdraws Offer For Rival' href='//news.blogs.nytimes.com/2015/04/01/morning-agenda-simon-property-withdraws-offer-for-rival/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/04/03/what-were-reading-43/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/04/02/morning-agenda-hsbc-criticized-over-compliance/' />
+<link rel='shortlink' href='//nyti.ms/1MF5gnv' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/04/02/morning-agenda-hsbc-criticized-over-compliance/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: HSBC Criticized Over Compliance - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2182 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: HSBC Criticized Over Compliance        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/04/02/morning-agenda-hsbc-criticized-over-compliance/"
+	 data-title="Morning Agenda: HSBC Criticized Over Compliance"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;HSBC Criticized Over Compliance | Easing Crackdown on Luxury Car Exporters | Success in China Fuels Investorâs Global Ambitions | Where Wall Street and Silicon Valley Intersect&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/04/02/morning-agenda-hsbc-criticized-over-compliance/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="April 2, 2015 7:46 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: HSBC Criticized Over Compliance</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-04-02T11:46:15+00:00" itemprop="datePublished">April 2, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">April 2, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2182 post type-post status-publish hentry category-dealbook tag-banking-and-financial-institutions tag-securities-and-commodities-violations tag-venture-capital des-banking-and-financial-institutions des-securities-and-commodities-violations des-venture-capital news_keywords-banking-and-finance news_keywords-securities-fraud news_keywords-venture-capital-2" id="post-2182">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: HSBC Criticized Over Compliance</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-04-02T11:46:15+00:00" itemprop="datePublished">April 2, 2015 7:46 am</time>
+			<!-- date updated --><span class="visually-hidden updated">April 2, 2015 7:46 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/04/02/morning-agenda-hsbc-criticized-over-compliance/" data-title="Morning Agenda: HSBC Criticized Over Compliance" data-description="HSBC Criticized Over Compliance | Easing Crackdown on Luxury Car Exporters | Success in China Fuels Investorâs Global Ambitions | Where Wall Street and Silicon Valley Intersect">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HSBC CRITICIZED OVER COMPLIANCE</strong> <span class="divider"> | </span></span> When United States prosecutors found HSBC had facilitated money laundering on behalf of Mexican drug cartels and blacklisted nations like Iran, the British bank avoided criminal prosecution in 2012 by agreeing to overhaul its money-laundering controls. In their latest update, filed in court Wednesday, federal prosecutors say HSBC still has a long way to go, <a href="//www.nytimes.com/2015/04/02/business/dealbook/us-says-hsbc-needs-to-step-up-on-compliance.html">Jessica Silver-Greenberg and Ben Protess write in DealBook.</a> Progress has been âtoo slowâ in some areas, the filing said, which was based on a report by Michael Cherkasky, the independent monitor installed at HSBC. The filing criticized the bank for <b>weaknesses in spotting suspicious transactions</b> and for enabling a <b>corporate culture resistant to change</b>.</p>
+<p class="story-body-text" itemprop="articleBody"> The filing, which alternated between praise and concern, âreflects dueling messages from the Justice Department,â write Ms. Silver-Greenberg and Mr. Protess. âComing at a time when prosecutors are grappling with repeat offenses on Wall Street, the filing underscores the Justice Departmentâs efforts to stem the pattern of corporate recidivism. Yet prosecutors <b>did not take the more aggressive step</b> of extending the five-year deferred-prosecution agreement or singling out culpable employees by name.â</p>
+<p class="story-body-text" itemprop="articleBody"> The six-page filing also offered only a snapshot of the problems that Mr. Cherkasky listed in a confidential 1,000-page report submitted to prosecutors in January. That report offered a more scathing assessment of the bankâs progress, people briefed on the matter said.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>EASING CRACKDOWN ON LUXURY CAR EXPORTERS</strong> <span class="divider"> | </span></span> Federal prosecutors are backing off from a campaign against American exporters that resell luxury cars to overseas markets, mainly to China, reflecting a recent change in the Justice Departmentâs policy, <a href="//www.nytimes.com/2015/04/02/business/dealbook/prosecutors-ease-crackdown-onbuyers-of-china-bound-luxury-cars.html?ref=dealbook&#038;_r=0">Matthew Goldstein writes in DealBook.</a> These small companies were reselling tens of thousands of luxury cars a year to buyers in China and other countries for huge profits before federal authorities began filing civil forfeiture lawsuits in 2013.</p>
+<p class="story-body-text" itemprop="articleBody"> Agents with the Secret Service and the Department of Homeland Security accused the exporters of violating federal law by using straw buyers, or people paid small sums to buy cars, to hide their intentions to sell the vehicles overseas. </p>
+<p class="story-body-text" itemprop="articleBody"> However, in nine states, prosecutors have agreed to return seized cars and money to these exporters after a recent Justice Department review of its asset forfeiture program. âAs a result of this ongoing review, the department is encouraging prosecutors to pursue civil and criminal sanctions for straw-buyer fraud cases that lead to other criminal violations,â Peter Carr, a Justice Department spokesman, said in a statement.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SUCCESS IN CHINA FUELS INVESTORâS GLOBAL AMBITIONS</strong> <span class="divider"> | </span></span> As one of the early backers of Chinese tech giants like Tencent and JD.com, Zhang Lei has a track record of picking companies that can shake up traditional industries, <a href="//www.nytimes.com/2015/04/03/business/the-chinese-billionaire-zhang-lei-spins-research-into-investment-gold.html">writes Alexandra Stevenson in DealBook.</a> Now, Mr. Zhang, who heads the firm Hillhouse Capital Group, is setting his sights across the ocean to find more opportunities. In its most recent deal, Hillhouse formed a joint venture with the Mayo Clinic to bring one of Americaâs best-known health care institutions to China.</p>
+<p class="story-body-text" itemprop="articleBody"> Mr. Zhang represents <b>Chinaâs new entrepreneurial class</b>, consulting Mark Zuckerberg and Jeff Bezos, and visiting with start-ups like Airbnb. âTo his investors â which include the endowments for prestigious universities like M.I.T. and Yale, sovereign wealth funds, and wealthy entrepreneurs â he seems âincapable of making a bad bet,â Ms. Stevenson writes. âBut as Chinaâs economy hits a series of economic road bumps, his next series of investments could define his legacy.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The Labor Department reports <b>weekly unemployment claims</b> at 8:30 a.m. The Commerce Department will release <b>international trade data for February</b> at 8:30 a.m. and <b>data on factory orders for February</b> at 10 a.m. <b>Janet L. Yellen</b>, the Federal Reserve chairwoman, will give the opening remarks at a Federal Reserve conference on economic mobility at 8:40 a.m. in Washington. Stock markets in the United States are closed Friday in observance of Good Friday; the bond markets will be open until noon. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>WHERE WALL STREET AND SILICON VALLEY INTERSECT</strong> <span class="divider"> | </span></span> DealBookâs special section examines the new fund-raising methods and innovations that have emerged in todayâs start-up economy. Some of the highlights include:</p>
+<p class="story-body-text" itemprop="articleBody"> <b><a href="//www.nytimes.com/2015/04/02/business/dealbook/wall-street-and-silicon-valley-form-an-uneasy-alliance.html">Wall Street and Silicon Valley Form an Uneasy Alliance</a></b> Entrepreneurs and venture capitalists have done their best to resist or reduce Wall Streetâs entreaties, but it appears that a new relationship has begun to develop, Andrew Ross Sorkin writes in the DealBook column.</p>
+<p class="story-body-text" itemprop="articleBody"> <b><a href="//www.nytimes.com/2015/04/02/business/dealbook/the-paypal-mafias-golden-touch.html">The PayPal Mafiaâs Golden Touch</a></b> Alumni from the payments company have established a reputation as the best in Silicon Valley at finding and funding the latest hot product or company, writes David Gelles.</p>
+<p class="story-body-text" itemprop="articleBody"> <b><a href="//www.nytimes.com/interactive/2015/04/01/business/dealbook/The-Rise-of-the-Unicorns.html">The Rise of the Unicorns</a></b> Venture capitalists invest in companies in search of breakout hits. This graphic lists some of these rarities, called unicorns, which have grown in size and number as investors chasing returns have bid up their value. </p>
+<p class="story-body-text" itemprop="articleBody"> <b><a href="//www.nytimes.com/2015/04/02/business/dealbook/melinda-gates-cellphones-for-women-aid-ascent-from-poverty.html">Cellphones for Women in Developing Nations Aid Ascent From Poverty</a></b> Digital financial tools can greatly improve lives in poor countries, but it is especially crucial to put them into the hands of women, Melinda Gates of the Bill &#038; Melinda Gates Foundation writes in an essay.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider">| </span></span> <i>There will be no DealBook newsletter on Friday in observance of a market holiday. The newsletter will return on Monday. For the latest news and analysis, please visit <a href="//www.nytimes.com/pages/business/dealbook/index.html">dealbook.nytimes.com</a></i></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Citigroup Said to Be Preparing Sale of Prime Reinsurance </strong> <span class="divider"> | </span></span> Citigroup is preparing to sell Prime Reinsurance Company, a subsidiary created five years ago to ease the spinoff of the life insurer Primerica, Bloomberg News reports, citing unnamed sources.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-04-01/citigroup-said-to-be-preparing-sale-of-prime-reinsurance-unit"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Groupe BollorÃ© Raises Stake In Vivendi</strong> <span class="divider"> | </span></span> Groupe BollorÃ© said Thursday that it had increased its stake in the French media group Vivendi to 12.01 percent, from 10.2 percent, after buying 24.6 million more shares for 568 million euros, or $615 million. <br /><span class="kicker"><a href="//www.wsj.com/articles/groupe-bollore-raises-stake-in-vivendi-1427962522"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Kraftâs Real Calculus in the Deal With Heinz</strong> <span class="divider"> | </span></span> Kraft had a chance to buy Heinz two years ago. Instead, it has ceded control. The quandary is one that shareholders elsewhere have to consider.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/02/business/dealbook/krafts-real-calculus-in-the-deal-with-heinz.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="New Stumble in Trial of Former Goldman Programmer " src="https://static01.nyt.com/images/2015/04/02/business/02DB-TRADING/02DB-TRADING-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New Stumble in Trial of Former Goldman Programmer </strong> <span class="divider"> | </span></span> The long-running case against Sergey Aleynikov, a former Goldman Sachs programmer, is set to begin on Monday after a judge rebuffed a request from the prosecution for a long delay.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/02/business/dealbook/new-stumble-in-trial-of-former-goldman-programmer.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Morgan Stanleyâs James Gorman Gets 25% Raise" src="https://static01.nyt.com/images/2015/01/23/business/dealbook/dbpix-gorman/dbpix-gorman-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Morgan Stanleyâs James Gorman Gets 25% Raise</strong> <span class="divider"> | </span></span> His total compensation of $22.5 million is more than Jamie Dimonâs at JPMorgan Chase but less than Lloyd Blankfeinâs at Goldman Sachs.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/02/business/dealbook/morgan-stanleys-james-gorman-gets-25-raise.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Pimco Sues A.I.G. Over Losses From 2008 Financial Crisis</strong> <span class="divider"> | </span></span> In a lawsuit filed in state court in California, the Pacific Investment Management Company accused American International Group of misleading investors about colossal losing bets on unregulated credit-default swaps and subprime debt before the 2008 financial crisis.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-04-01/pimco-sues-aig-over-losses-from-2008-financial-meltdown"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="560,000-Acre Swath of Florida Land Going on the Market" src="https://static01.nyt.com/images/2015/04/02/business/02DBLAND1/02DBLAND1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>560,000-Acre Swath of Florida Land Going on the Market</strong> <span class="divider"> | </span></span> The largest contiguous parcel of undeveloped private land east of the Mississippi River, owned by Foley Lumber and Land, is expected to bring in $1 billion or more.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/02/business/dealbook/560000-acre-swath-of-florida-land-going-on-the-market.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Financier Lynn Tilton Sues S.E.C. After It Charges Her With Fraud</strong> <span class="divider"> | </span></span> The flamboyant New York financier Lynn Tilton sued the Securities and Exchange Commission on Wednesday, saying the agency violated the Constitution by bringing its case against her and her firm in an in-house administrative proceeding rather than in federal court.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/04/01/sec-tilton-idUSL2N0WY1KC20150401"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="GoDaddy Shares Jump in Market Debut" src="https://static01.nyt.com/images/2015/04/02/business/db-godaddy-web1/db-godaddy-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>GoDaddy Shares Jump in Market Debut</strong> <span class="divider"> | </span></span> The shares opened at $26.15, about 30 percent above the initial public offering price of $20, a dollar more than the top end of the expected range.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/02/business/dealbook/godaddy-shares-jump-in-market-debut.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Bank Shawbrook Valued at $1 Billion in I.P.O.</strong> <span class="divider"> | </span></span> Founded in 2011, Shawbrook is considered a challenger to the larger, more traditional lenders that dominate the banking landscape in Britain.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/02/business/dealbook/british-challenger-bank-shawbrook-valued-at-1-billion-in-ipo.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>London Start-Ups Draw Record Investment </strong> <span class="divider"> | </span></span> Technology companies in London received $628 million in venture capital in the first three months of 2015, the most in any quarter, according to London &#038; Partners, the mayor of Londonâs business development group, The Financial Times reported.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/4157a7c6-d876-11e4-ba53-00144feab7de.html#axzz3Vs2rZhtf"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Index Ventures Raises $706 Million for New Fund</strong> <span class="divider"> | </span></span> The money will enable the venture capital fund to keep investing in start-ups alongside other heavyweights that have raised new funds recently including Andreessen Horowitz and Kleiner Perkins Caufield &#038; Byers.<br /><span class="kicker"><a href="//venturebeat.com/2015/04/01/index-ventures-raises-706m-for-new-growth-fund/"> VENTUREBEAT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>S.E.C. Fires Warning Shot About Confidentiality Agreements</strong> <span class="divider"> | </span></span> The engineering company KBR agreed to pay the agency $130,000 for forcing employees to sign documents that could stifle possible whistle-blowers.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/02/business/dealbook/sec-fires-warning-shot-about-confidentiality-agreements.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>European Regulator Said to Prepare Case Against Google</strong> <span class="divider"> | </span></span> The European Commission, the European Unionâs top antitrust agency, is laying the groundwork to file antitrust charges against Google, The Wall Street Journal reported, citing a person familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/eu-lays-groundwork-for-antitrust-charges-against-google-1427928793"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>C.F.T.C. Accuses Kraft and Mondelez of Manipulating Wheat Prices</strong> <span class="divider"> | </span></span> The companiesâ former corporate parent sought to push down the price of the grain and reaped $5.4 million in illicit profits, the regulator said.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/02/business/dealbook/cftc-accuses-kraft-and-mondelez-of-manipulating-wheat-prices.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Yukos Investors Settle With Rosneft, Russiaâs State Oil Company</strong> <span class="divider"> | </span></span> Rosneft absorbed most of Yukosâs valuable assets after the companyâs founder, Mikhail B. Khodorkovsky, was arrested in 2003.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/02/business/international/yukos-investors-settle-with-rosneft-russias-state-oil-company.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/04/02/morning-agenda-hsbc-criticized-over-compliance/"
+					data-title="Morning Agenda: HSBC Criticized Over Compliance"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;HSBC Criticized Over Compliance | Easing Crackdown on Luxury Car Exporters | Success in China Fuels Investorâs Global Ambitions | Where Wall Street and Silicon Valley Intersect&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/04/02/morning-agenda-hsbc-criticized-over-compliance/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":60,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

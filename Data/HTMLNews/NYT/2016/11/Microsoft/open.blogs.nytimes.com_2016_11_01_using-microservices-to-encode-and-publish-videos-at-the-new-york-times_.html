@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-open section-technology"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-open section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-open section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-open section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/open/Using Microservices to Encode and Publish Videos at The New York Times ( 20161101 )" />
+<meta name="communityAssetURL" content="//open.blogs.nytimes.com/2016/11/01/using-microservices-to-encode-and-publish-videos-at-the-new-york-times/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004741887"><meta name="author" content="Flavio Ribeiro, Francisco Souza, Maxwell Da Silva and Thompson MarzagÃ£o" />
+<meta name="CLMST" content="Flavio Ribeiro, Francisco Souza, Maxwell Da Silva and Thompson MarzagÃ£o" />
+<meta name="byl" content="Flavio Ribeiro, Francisco Souza, Maxwell Da Silva and Thompson MarzagÃ£o" />
+<meta name="GBLC" content="Code;Open Source">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1478010656" />
+<meta name="PUD" content="20161101" />
+<meta name="pdate" content="20161101" />
+<meta name="ptime" content="20161101103056" />
+<meta name="utime" content="20161101143109" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-11-01T14:31:09-04:00" />
+<meta name="DISPLAYDATE" content="November 1, 2016" />
+<meta name="dat" content="November 1, 2016" />
+<meta itemprop="articleSection" property="article:section" content="General" />
+<meta name="CG" content="General" />
+<meta name="SCG" content="open" />
+<meta name="BN" content="open" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Open-Source Software;Software">
+<meta property="article:tag" content="Open-Source Software" />
+<meta property="article:tag" content="Software" />
+<meta property="article:tag" content="Code" />
+<meta property="article:tag" content="Open Source" />
+<meta name="keywords" content="Open-Source Software,Software,Code,Open Source" />
+<meta name="news_keywords" content="Software" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fopen.blogs.nytimes.com%2F2016%2F11%2F01%2Fusing-microservices-to-encode-and-publish-videos-at-the-new-york-times%2F" title="Using Microservices to Encode and Publish Videos at The New York Times" />
+<meta name="description" content="We&#8217;re open sourcing our video transcoding API and video encoding presets, as part of our plan to open source our video encoding and distribution pipeline." />
+<meta name="hdl" content="Using Microservices to Encode and Publish Videos at The New York Times" />
+<meta property="og:title" content="Using Microservices to Encode and Publish Videos at The New York Times" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//open.blogs.nytimes.com/2016/11/01/using-microservices-to-encode-and-publish-videos-at-the-new-york-times/" />
+<meta property="og:site_name" content="Open Blog" />
+<meta property="og:description" content="We&#8217;re open sourcing our video transcoding API and video encoding presets, as part of our plan to open source our video encoding and distribution pipeline." />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_291_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Using Microservices to Encode and Publish Videos at The New York Times" />
+<meta name="twitter:url" content="//open.blogs.nytimes.com/2016/11/01/using-microservices-to-encode-and-publish-videos-at-the-new-york-times/" />
+<meta name="twitter:description" content="We&#8217;re open sourcing our video transcoding API and video encoding presets, as part of our plan to open source our video encoding and distribution pipeline." />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<meta name="twitter:site" content="@nytdevs">
+<link rel='stylesheet' id='wp-syntax-css-css'  href='https://static01.nyt.com/packages/css/blogs/open/wp-syntax.css?ver=1.0' type='text/css' media='all' />
+<link rel='prev' title='We Went to the Grace Hopper Celebration. Here&#8217;s What We&#8217;re Bringing Back' href='//open.blogs.nytimes.com/2016/10/31/we-went-to-the-grace-hopper-celebration-heres-what-were-bringing-back/' />
+<link rel='next' title='Building a Cross Platform 360-degree Video Experience at The New York Times' href='//open.blogs.nytimes.com/2016/11/11/building-a-cross-platform-360-degree-video-experience-at-the-new-york-times/' />
+<link rel='canonical' href='//open.blogs.nytimes.com/2016/11/01/using-microservices-to-encode-and-publish-videos-at-the-new-york-times/' />
+<link rel='shortlink' href='//nyti.ms/2e9Nmtz' />
+<link rel='https://github.com/WP-API/WP-API' href='//open.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/open/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//open.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/technology/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/open/2016/11/01/using-microservices-to-encode-and-publish-videos-at-the-new-york-times/" />
+<meta name="dfp-ad-unit-path" content="general/open" />			<title>Using Microservices to Encode and Publish Videos at The New York Times - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/universal.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-7388 blog-universal nyt-blog-open" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'General', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//open.blogs.nytimes.com">
+                Open            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Using Microservices to Encode and Publish Videos at The New York Times        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//open.blogs.nytimes.com/2016/11/01/using-microservices-to-encode-and-publish-videos-at-the-new-york-times/"
+	 data-title="Using Microservices to Encode and Publish Videos at The New York Times"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;We&#039;re open sourcing our video transcoding API and video encoding presets, as part of our plan to open source our video encoding and distribution pipeline.&lt;/span&gt;&lt;a href=&quot;//open.blogs.nytimes.com/2016/11/01/using-microservices-to-encode-and-publish-videos-at-the-new-york-times/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="November 1, 2016 10:30 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="open" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+		<div class="element1">
+	<a href="//open.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=General"><div id="logo" class="archived-blog-post"><div class="w75 left site-header-logo"><img src="https://static01.nyt.com/images/blogs_v3/open/open75.gif" alt="Open"/></div><div class="site-title">Open</div><div class="site-description">All the Code That&#039;s Fit to Print</div></div></a>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//open.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Open">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-7388 post type-post status-publish hentry category-code category-open-source tag-encoding tag-microservices tag-scaling tag-video des-open-source-software des-software news_keywords-software" id="post-7388">
+	<header class="postHeader">
+				<div class="postKicker">
+					</div>
+				<h1 itemprop="headline" class="entry-title">Using Microservices to Encode and Publish Videos at The New York Times</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Flavio Ribeiro, Francisco Souza, Maxwell Da Silva and Thompson MarzagÃ£o			</address>
+			<!-- date published --><time class="dateline " datetime="2016-11-01T14:30:56+00:00" itemprop="datePublished">November 1, 2016 10:30 am</time>
+			<!-- date updated --><span class="visually-hidden updated">November 1, 2016 10:30 am</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//open.blogs.nytimes.com/2016/11/01/using-microservices-to-encode-and-publish-videos-at-the-new-york-times/" data-title="Using Microservices to Encode and Publish Videos at The New York Times" data-description="We&#039;re open sourcing our video transcoding API and video encoding presets, as part of our plan to open source our video encoding and distribution pipeline.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>Video publishing at The Times is growing</strong><br />
+For the past 10 years, the video publishing lifecycle at The New York Times has relied on vendors and in-house hardware solutions. With our growing investment in video journalism over the past couple of years, weâve found ourselves producing more video content every month, along with supporting new initiatives such as 360-degree video and Virtual Reality. This growth has created the need to migrate to a video publishing platform that could adapt to, and keep up with, the fast pace that our newsroom demands and the continued evolution of our production process. Along with this, we needed a system that could continuously scale in both capacity and features while not compromising on either quality or reliability.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>A solution</strong><br />
+At the beginning of this year, we created a group inside our video engineering team to implement a new solution for the ingesting, encoding, publishing and the syndication of our growing library of video content. The main goal of the team was to implement a job processing pipeline that was vendor agnostic and cloud-based, along with being highly efficient, elastic, and, of course, reliable. Another goal was to make the system as easy to use as possible, removing any hurdles that might get in the way of our video producers publishing their work and distributing it to our platforms and third-party partners. To do that, we decided to leverage the power of a microservices architecture combined with the benefits of the Go programming language. We named this team Media Factory.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>The setup</strong><br />
+The first version of our Media Factory encoding pipeline is being used in production by a select group of beta users at The New York Times, and we are actively working with other teams to fully integrate it within our media publishing system. The minimum viable product consists of these three different parts:</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Acquisition:</strong> After clipping and editing the videos, our video producers, editors, and partners export a final, high-resolution asset usually in <a href="https://en.wikipedia.org/wiki/Apple_ProRes#ProRes_422">ProRes 442</a> format. Our producers then upload the asset to an AWS S3 bucket to get it ready for the transcoding process. We implemented two different upload approaches:</p>
+<ol>
+<li>An internal API that supports multipart uploads, called video-acquisition-api, used from server-side clients, like small scripts or jobs.</li>
+<li>A JavaScript wrapper that uses <a href="https://github.com/TTLabs/EvaporateJS">EvaporateJS</a> to upload files directly from the browser, which is integrated with our internal Content Management System (CMS), <a href="//open.blogs.nytimes.com/2014/06/17/scoop-a-glimpse-into-the-nytimes-cms">Scoop</a>.</li>
+</ol>
+<p class="story-body-text" itemprop="articleBody"><strong>Transcoding:</strong> After the acquisition step is complete, we use another microservice called <a href="https://github.com/NYTimes/video-transcoding-api">video-transcoding-api</a>  to create multiple outputs based on the source file. Currently, we create a single HLS output with six resolutions and bitrates to support adaptive streaming, four different H.264/MP4 outputs, and one VP8/WebM for the benefit of the 1 percent of our users on the Mozilla Firefox browser running on Microsoft Windows XP.</p>
+<p class="story-body-text" itemprop="articleBody">The transcoding service is by far the most crucial part of our workflow. In order to integrate with cloud-based transcoding providers, we decided to design a tiny wrapper containing provider-specific logic. This design gives us great flexibility. We can schedule and trigger jobs based on a set of parameters such as speed, reliability, current availability, or even the price of the encoding operation for a specific provider. For instance, we can transcode <a href="//www.nytimes.com/video/us-politics">news clips</a> (which are time-sensitive) on the fastest, most expensive encoding service, while simultaneously transcoding live action videos, documentaries, and <a href="//www.nytimes.com/video/modern-love">animations</a> (which are not time-sensitive) using lower-cost providers.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Distribution:</strong> The transcoding step transfers the final renditions into another AWS S3 bucket. Since we use a content delivery network (CDN) to deliver the video to our end users, we need a final step to transfer the files from S3 to the CDN (leveraging Asperaâs <a href="//asperasoft.com/technology/transport/fasp">FASP protocol</a> to do so). Once the files are on the CDN, our video journalists are able to publish their content on The New York Times.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Giving back to the community</strong><br />
+Today, we are open sourcing the <a href="https://github.com/NYTimes/video-transcoding-api">video-transcoding-api</a> and the video encoding <a href="https://github.com/NYTimes/video-presets">presets</a> that we use to generate all of our outputs. We are also open sourcing the <a href="https://github.com/NYTimes/encoding-wrapper">encoding-wrapper</a>, which contains a set of Go clients for the services we support and that are used by the video-transcoding-api.</p>
+<p class="story-body-text" itemprop="articleBody">We believe the format we&#8217;ve created will be of particular interest to the open source community. By leveraging the abstractions found in the video-transcoding-api, any developer can write the code necessary to send jobs to any transcoding provider we support without having to rewrite the base preset or the job specification. Sending a job to a different provider is as simple as changing a parameter.</p>
+<p class="story-body-text" itemprop="articleBody">We currently support three popular transcoding providers and plan to add support for more. See a sample preset below, in JSON format:</p>
+<pre>
+{
+  "providers": ["encodingcom", "elementalconductor", "elastictranscoder"],
+  "preset": {
+    "name": "1080p_hls",
+    "description": "1080p HLS",
+    "container": "mp4",
+    "profile": "Main",
+    "profileLevel": "3.1",
+    "rateControl": "VBR",
+    "video": {
+      "height": "1080",
+      "width": "",
+      "codec": "h264",
+      "bitrate": "3700000",
+      "gopSize": "90",
+      "gopMode": "fixed",
+      "interlaceMode": "progressive"
+    },
+    "audio": {
+      "codec": "aac",
+      "bitrate": "64000"
+    }
+  },
+  "outputOptions": {
+    "extension": "m3u8",
+    "label": "1080p"
+  }
+}
+</pre>
+<p class="story-body-text" itemprop="articleBody"><span class="caption">Our philosophy for presets: &#8220;Write once, run anywhere&#8221;</span></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Our future plans</strong><br />
+In order to fulfill our vision of having a fully open sourced video encoding and distribution pipeline, we thought it best to also tackle the issue of actually encoding the video. Weâre officially taking on the development and maintenance of the open source project <a href="https://github.com/snickers/snickers">Snickers</a> to serve this purpose. Weâll not only gain the freedom of deploying our own encoding service anywhere, but weâll also be able to experiment and implement new features that may not be available with existing service providers or and respond to specific requests from our newsroom. A <a href="https://github.com/snickers/snickers/issues/106">few examples</a> on the horizon are the automatic generation of thumbnails and accurate audio transcripts.  </p>
+<p class="story-body-text" itemprop="articleBody">Weâve also turned our sights to fragmented MP4 (fMP4), and weâll be investing some time into fully moving to an HLS-first approach for our on-demand videos. In case you missed it, last June at WWDC 2016, Apple introduced fMP4 to the HLS protocol, making it so now almost all devices and browsers support fMP4 playback natively. This means we can now eliminate the overhead of having to transmux the MPEG-TS segments into fMP4 on the fly when playing videos using our video player (we use <a href="https://github.com/dailymotion/hls.js">hls.js</a> to do this) and instead just concatenate and play fMP4 fragments on our local buffer. </p>
+<p class="story-body-text" itemprop="articleBody">Lastly, content-driven encoding is a trendy topic within the online video community, especially after the release of <a href="https://github.com/netflix/vmaf">VMAF</a>. We are planning to adopt this approach by splitting the content-driven encoding project into two phases:</p>
+<ol>
+<li>Classify our content into four different categories, each with its own preset. For example, animation videos, like the ones we have for our <a href="//www.nytimes.com/video/modern-love">Modern Love</a> show, require fewer bits than our high-motion videos, like some of our <a href="//www.nytimes.com/video/times-documentaries">Times Documentaries</a>, to achieve the same content fidelity.</li>
+<li>Create and integrate an additional microservice within the Media Factory pipeline for the purpose of checking the quality of our outputs using VMAF and triggering new re-encoding jobs with optimized presets.</li>
+</ol>
+<p class="story-body-text" itemprop="articleBody"><strong>Come along with us!</strong><br />
+Our Media Factory team (<a href="https://github.com/dayvson">Maxwell Dayvson da Silva</a>, <a href="https://github.com/saidketchman">Said Ketchman</a>, <a href="https://marzagao.com/">Thompson MarzagÃ£o</a>, <a href="//flavioribeiro.com/">Flavio Ribeiro</a>, <a href="https://github.com/fsouza">Francisco Souza</a> and <a href="https://github.com/scentless-apprentice">Veronica Yurovsky</a>) believes that these projects will help address the encoding challenges faced by many of you in the online video industry. We hope to receive your crucial feedback and generate contributions from the open source community at large.</p>
+<p class="story-body-text" itemprop="articleBody">Check them out:</p>
+<p class="story-body-text" itemprop="articleBody"><a href="https://github.com/NYTimes/video-transcoding-api">https://github.com/NYTimes/video-transcoding-api</a><br />
+<a href="https://github.com/NYTimes/video-presets">https://github.com/NYTimes/video-presets</a><br />
+<a href="https://github.com/NYTimes/encoding-wrapper">https://github.com/NYTimes/encoding-wrapper</a><br />
+<a href="https://github.com/snickers/snickers">https://github.com/snickers/snickers</a></p>
+<p class="story-body-text" itemprop="articleBody">And feel free to ask questions via GitHub Issues in each of the projects!</p>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//open.blogs.nytimes.com/2016/11/01/using-microservices-to-encode-and-publish-videos-at-the-new-york-times/" data-title="Using Microservices to Encode and Publish Videos at The New York Times" data-description="We&#039;re open sourcing our video transcoding API and video encoding presets, as part of our plan to open source our video encoding and distribution pipeline.">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//open.blogs.nytimes.com/2016/10/31/we-went-to-the-grace-hopper-celebration-heres-what-were-bringing-back/" title="We Went to the Grace Hopper Celebration. Here&#039;s What We&#039;re Bringing Back">
+				We Went to the Grace Hopper Celebration. Here&#8217;s What We&#8217;re Bringing Back			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//open.blogs.nytimes.com/2016/11/11/building-a-cross-platform-360-degree-video-experience-at-the-new-york-times/" title="Building a Cross Platform 360-degree Video Experience at The New York Times">
+				Building a Cross Platform 360-degree Video Experience at The New York Times			</a>
+					</li>
+	</ul>
+</div>
+		<div class="module ad" id="MiddleRight"></div>
+        <div id="nyt_about_blog-3" class="module nocontent widget_nyt_about_blog"><h4 class="moduleHeader">About</h4><div class="entry">
+<p class="summary">Open is a blog about code and development written by New York Times developers. We cover everything from our open source projects and APIs to the technology powering our latest products.</p>
+</div>
+</div>		<div class="module archivesModule clearfix nocontent">
+			<h4 class="moduleHeader">Archive</h4>			<select name="archive_chrono" onchange="window.location.href=this.value; this.selectedIndex=this.options[0]">
+				<option class="archiveform_option" value="">Select Month</option>
+					<option value='//open.blogs.nytimes.com/2017/02/'> February 2017 </option>
+	<option value='//open.blogs.nytimes.com/2017/01/'> January 2017 </option>
+	<option value='//open.blogs.nytimes.com/2016/11/'> November 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/10/'> October 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/09/'> September 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/08/'> August 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/07/'> July 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/06/'> June 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/04/'> April 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/02/'> February 2016 </option>
+	<option value='//open.blogs.nytimes.com/2015/12/'> December 2015 </option>
+	<option value='//open.blogs.nytimes.com/2015/11/'> November 2015 </option>
+	<option value='//open.blogs.nytimes.com/2015/08/'> August 2015 </option>
+	<option value='//open.blogs.nytimes.com/2015/04/'> April 2015 </option>
+	<option value='//open.blogs.nytimes.com/2015/03/'> March 2015 </option>
+			</select>
+		</div>
+        <div id="recentposts-2" class="module nocontent widget_recentposts"><h4 class="moduleHeader">Recent Posts</h4>				<div class="entry">
+						<h5><a href="//open.blogs.nytimes.com/2017/02/06/quick-and-statistically-useful-validation-of-page-performance-tweaks/" title="Read: Quick and Statistically Useful Validation of Page Performance Tweaks">Quick and Statistically Useful Validation of Page Performance Tweaks</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//open.blogs.nytimes.com/2017/02/06/quick-and-statistically-useful-validation-of-page-performance-tweaks/"></a>
+				</span>			</h5>
+			<p class="summary">
+			We wanted to share how we measure modest performance changes when a page has many assets of variable speed and complexity that can impact its performance.<a href="//open.blogs.nytimes.com/2017/02/06/quick-and-statistically-useful-validation-of-page-performance-tweaks/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//open.blogs.nytimes.com/2017/01/13/store-grand-opening-wrangling-android-data-loading-and-caching/" title="Read: Store Grand Opening &mdash; Wrangling Android Data Loading and Caching">Store Grand Opening &mdash; Wrangling Android Data Loading and Caching</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//open.blogs.nytimes.com/2017/01/13/store-grand-opening-wrangling-android-data-loading-and-caching/"></a>
+				</span>			</h5>
+			<p class="summary">
+			Today we&#8217;re open-sourcing Store &#8212; a magical middle piece that aims to simplify fetching, parsing, storage, and retrieval of data in your Android application. <a href="//open.blogs.nytimes.com/2017/01/13/store-grand-opening-wrangling-android-data-loading-and-caching/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//open.blogs.nytimes.com/2017/01/12/continuous-deployment-to-google-cloud-platform-with-drone/" title="Read: Continuous Deployment to Google Cloud Platform with Drone">Continuous Deployment to Google Cloud Platform with Drone</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//open.blogs.nytimes.com/2017/01/12/continuous-deployment-to-google-cloud-platform-with-drone/"></a>
+				</span>			</h5>
+			<p class="summary">
+			From our exploratory work, we&#8217;ve come up with two open source plugins to share with the community: drone-gke for Google Container Engine and drone-gae for Google App Engine.<a href="//open.blogs.nytimes.com/2017/01/12/continuous-deployment-to-google-cloud-platform-with-drone/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//open.blogs.nytimes.com/2017/01/10/https-on-nytimes-com/" title="Read: HTTPS on NYTimes.com">HTTPS on NYTimes.com</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//open.blogs.nytimes.com/2017/01/10/https-on-nytimes-com/"></a>
+				</span>			</h5>
+			<p class="summary">
+			We are thrilled to announce that we have begun to enable HTTPS on NYTimes.com, an effort that helps protect the privacy of our readers and ensures the authenticity of our content.<a href="//open.blogs.nytimes.com/2017/01/10/https-on-nytimes-com/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//open.blogs.nytimes.com/2016/11/11/building-a-cross-platform-360-degree-video-experience-at-the-new-york-times/" title="Read: Building a Cross Platform 360-degree Video Experience at The New York Times">Building a Cross Platform 360-degree Video Experience at The New York Times</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//open.blogs.nytimes.com/2016/11/11/building-a-cross-platform-360-degree-video-experience-at-the-new-york-times/"></a>
+				</span>			</h5>
+			<p class="summary">
+			This month, we added support for 360-degree videos into our core news products &#8212; and today, we&#8217;re open sourcing our 360 video framework for iOS and 360 presets.<a href="//open.blogs.nytimes.com/2016/11/11/building-a-cross-platform-360-degree-video-experience-at-the-new-york-times/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+		</div><!-- end Recent Posts side tool -->
+    		<div class="module ad" id="Box1"></div>
+        <div id="nyt_blog_social_media-3" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-single ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">us on</span></span>
+<span class="blog-fw-specific-followmessage"><span class="blog-fw-username"><a href="https://twitter.com/nytdevs" title="Follow @nytdevs on twitter">@nytdevs</a></span> on <span class="blog-fw-twitter">twitter</span></span></h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/nytdevs" title="Follow nytdevs on Twitter">Twitter</a></li></ul>
+<p class="blog-fw-followbutton"><a href="https://twitter.com/nytdevs" title="Follow @nytdevs on twitter">Follow</a></p></div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-130',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":52,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

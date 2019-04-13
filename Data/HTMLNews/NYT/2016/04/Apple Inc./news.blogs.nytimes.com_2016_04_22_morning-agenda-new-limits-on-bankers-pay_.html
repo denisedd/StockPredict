@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004351797"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1461319806" />
+<meta name="PUD" content="20160422" />
+<meta name="pdate" content="20160422" />
+<meta name="ptime" content="20160422061006" />
+<meta name="utime" content="20170918184714" />
+<meta property="article:modified_time" itemprop="dateModified" content="2017-09-18T18:47:14-04:00" />
+<meta name="DISPLAYDATE" content="April 22, 2016" />
+<meta name="dat" content="April 22, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Cohen, Steven A;Pearson, John Michael (1959- );Warren, Elizabeth">
+<meta name="des" content="Automobiles;Banking and Financial Institutions;Bonuses;Credit and Debt;Cyberattacks and Hackers;Dodd-Frank Wall Street Reform and Consumer Protection Act (2010);Fuel Efficiency;Greenhouse Gas Emissions;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Private Equity;Regulation and Deregulation of Industry">
+<meta name="org" content="Apple Inc;Bankruptcies;Blue Coat Systems Inc;Concordia Healthcare Corporation;Daimler AG;European Central Bank;Federal Bureau of Investigation;Internal Revenue Service;Justice Department;Lazard LLC;National Credit Union Administration;SecureWorks;Securities and Exchange Commission;Sunedison Semiconductor Pte Ltd;The Blackstone Group;Uber Technologies Inc;Valeant Pharmaceuticals International Inc;Volkswagen AG;Walgreens Boots Alliance Inc.">
+<meta name="geo" content="China;Saudi Arabia">
+<meta name="ticker" content="Apple Inc|AAPL|NASDAQ;The Blackstone Group|BX|NYSE;Valeant Pharmaceuticals International Inc|VRX|NYSE;Volkswagen AG|VLKAY|Other OTC" />
+<meta property="article:tag" content="Cohen Steven A" />
+<meta property="article:tag" content="Pearson John Michael (1959- )" />
+<meta property="article:tag" content="Warren Elizabeth" />
+<meta property="article:tag" content="Automobiles" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Bonuses" />
+<meta property="article:tag" content="Credit and Debt" />
+<meta property="article:tag" content="Cyberattacks and Hackers" />
+<meta property="article:tag" content="Dodd-Frank Wall Street Reform and Consumer Protection Act (2010)" />
+<meta property="article:tag" content="Fuel Efficiency" />
+<meta property="article:tag" content="Greenhouse Gas Emissions" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Apple Inc" />
+<meta property="article:tag" content="Bankruptcies" />
+<meta property="article:tag" content="Blue Coat Systems Inc" />
+<meta property="article:tag" content="Concordia Healthcare Corporation" />
+<meta property="article:tag" content="Daimler AG" />
+<meta property="article:tag" content="European Central Bank" />
+<meta property="article:tag" content="Federal Bureau of Investigation" />
+<meta property="article:tag" content="Internal Revenue Service" />
+<meta property="article:tag" content="Justice Department" />
+<meta property="article:tag" content="Lazard LLC" />
+<meta property="article:tag" content="National Credit Union Administration" />
+<meta property="article:tag" content="SecureWorks" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Sunedison Semiconductor Pte Ltd" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="Valeant Pharmaceuticals International Inc" />
+<meta property="article:tag" content="Volkswagen AG" />
+<meta property="article:tag" content="Walgreens Boots Alliance Inc." />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Saudi Arabia" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Cohen Steven A,Pearson John Michael (1959- ),Warren Elizabeth,Automobiles,Banking and Financial Institutions,Bonuses,Credit and Debt,Cyberattacks and Hackers,Dodd-Frank Wall Street Reform and Consumer Protection Act (2010),Fuel Efficiency,Greenhouse Gas Emissions,Initial Public Offerings,Mergers Acquisitions and Divestitures,Private Equity,Regulation and Deregulation of Industry,Apple Inc,Bankruptcies,Blue Coat Systems Inc,Concordia Healthcare Corporation,Daimler AG,European Central Bank,Federal Bureau of Investigation,Internal Revenue Service,Justice Department,Lazard LLC,National Credit Union Administration,SecureWorks,Securities and Exchange Commission,Sunedison Semiconductor Pte Ltd,The Blackstone Group,Uber Technologies Inc,Valeant Pharmaceuticals International Inc,Volkswagen AG,Walgreens Boots Alliance Inc.,China,Saudi Arabia,DealBook" />
+<meta name="news_keywords" content="Bonuses,Cars,China,SecureWorks" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F04%2F22%2Fmorning-agenda-new-limits-on-bankers-pay%2F" title="Morning Agenda: New Limits on Bankers&#8217; Pay" />
+<meta name="description" content="Valeant Said to Pick New C.E.O. &#124; 2016&#8217;s First Tech I.P.O." />
+<meta name="hdl" content="Morning Agenda: New Limits on Bankers&#039; Pay" />
+<meta property="og:title" content="Morning Agenda: New Limits on Bankers&#039; Pay" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/04/22/morning-agenda-new-limits-on-bankers-pay/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Valeant Said to Pick New C.E.O. &#124; 2016&#8217;s First Tech I.P.O." />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: New Limits on Bankers&#039; Pay" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/04/22/morning-agenda-new-limits-on-bankers-pay/" />
+<meta name="twitter:description" content="Valeant Said to Pick New C.E.O. &#124; 2016&#8217;s First Tech I.P.O." />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Global Stock Rally' href='//news.blogs.nytimes.com/2016/04/21/morning-agenda-global-stock-rally/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/04/22/what-were-reading-147/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/04/22/morning-agenda-new-limits-on-bankers-pay/' />
+<link rel='shortlink' href='//nyti.ms/1SA0db8' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/04/22/morning-agenda-new-limits-on-bankers-pay/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: New Limits on Bankers&#039; Pay - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4646 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: New Limits on Bankers&#8217; Pay        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/04/22/morning-agenda-new-limits-on-bankers-pay/"
+	 data-title="Morning Agenda: New Limits on Bankers&#8217; Pay"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Valeant Said to Pick New C.E.O. | 2016&#039;s First Tech I.P.O.&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/04/22/morning-agenda-new-limits-on-bankers-pay/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="April 22, 2016 6:10 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: New Limits on Bankers&#8217; Pay</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-04-22T10:10:06+00:00" itemprop="datePublished">April 22, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">April 22, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4646 post type-post status-publish hentry category-dealbook tag-apple-inc tag-automobiles tag-banking-and-financial-institutions tag-bankruptcies tag-blue-coat-systems-inc tag-bonuses tag-china tag-cohen-steven-a tag-concordia-healthcare-corporation tag-credit-and-debt tag-cyberattacks-and-hackers tag-daimler-ag tag-dodd-frank-wall-street-reform-and-consumer-protection-act-2010 tag-european-central-bank tag-federal-bureau-of-investigation tag-fuel-efficiency tag-greenhouse-gas-emissions tag-initial-public-offerings tag-internal-revenue-service tag-justice-department tag-lazard-llc tag-mergers-acquisitions-and-divestitures tag-national-credit-union-administration tag-pearson-john-michael-1959 tag-private-equity tag-regulation-and-deregulation-of-industry tag-saudi-arabia tag-secureworks tag-securities-and-exchange-commission tag-sunedison-semiconductor-pte-ltd tag-the-blackstone-group tag-uber-technologies-inc tag-valeant-pharmaceuticals-international-inc tag-volkswagen-ag tag-walgreens-boots-alliance-inc tag-warren-elizabeth per-cohen-steven-a per-pearson-john-michael-1959 per-warren-elizabeth des-automobiles des-banking-and-financial-institutions des-bonuses des-credit-and-debt des-cyberattacks-and-hackers des-dodd-frank-wall-street-reform-and-consumer-protection-act-2010 des-fuel-efficiency des-greenhouse-gas-emissions des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-private-equity des-regulation-and-deregulation-of-industry org-apple-inc org-bankruptcies org-blue-coat-systems-inc org-concordia-healthcare-corporation org-daimler-ag org-european-central-bank org-federal-bureau-of-investigation org-internal-revenue-service org-justice-department org-lazard-llc org-national-credit-union-administration org-secureworks org-securities-and-exchange-commission org-sunedison-semiconductor-pte-ltd org-the-blackstone-group org-uber-technologies-inc org-valeant-pharmaceuticals-international-inc org-volkswagen-ag org-walgreens-boots-alliance-inc geo-china geo-saudi-arabia news_keywords-bonuses news_keywords-cars news_keywords-china news_keywords-secureworks" id="post-4646">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: New Limits on Bankers&#8217; Pay</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-04-22T10:10:06+00:00" itemprop="datePublished">April 22, 2016 6:10 am</time>
+			<!-- date updated --><span class="visually-hidden updated">April 22, 2016 6:10 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/04/22/morning-agenda-new-limits-on-bankers-pay/" data-title="Morning Agenda: New Limits on Bankers&#8217; Pay" data-description="Valeant Said to Pick New C.E.O. | 2016&#039;s First Tech I.P.O.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>NEW LIMITS ON BANKERSâ PAY</strong> <span class="divider"> | </span></span> It has taken several years, the Dodd-Frank overhaul and bouts of outrage over Wall Street pay, but regulators have released new rules intended to restrict executive pay at big financial institutions,<br />
+<a HREF="//www.nytimes.com/2016/04/22/business/dealbook/wall-st-regulators-propose-stricter-pay-rules-for-bankers.html?ref=dealbook&#038;_r=0">Nathaniel Popper reports in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">The new limits would make the highest-paid employees at the biggest banks <b>wait at least four years to receive parts of their annual pay</b> and, if the proposals are completed, banks would also have to reclaim bonuses from bankers who take risks that lead to big financial losses. </p>
+<p class="story-body-text" itemprop="articleBody">Pay packages have been blamed for encouraging bankers to seek short-term gains and to take unnecessary risks. The new rules are an attempt to make top employees accountable for the longer-term consequences of their risk-taking. </p>
+<p class="story-body-text" itemprop="articleBody">It is already an industry standard to wait three years to release stock-based bonuses, but banks have been less consistent about seizing pay if bankersâ actions lead to losses. Under these new rules, <b>bankers are vulnerable to clawbacks for seven years after pay is received.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Rick Metsger, the vice chairman at the National Credit Union Administration, which was one of the agencies responsible for drafting the rules, said that politicians and the public <b>âwant senior executives at large financial institutions held accountable if their desire for personal enrichment leads to decision-making that results in material losses.â</b> </p>
+<p class="story-body-text" itemprop="articleBody">The public will have until July to comment on the new rules, and the rules are likely to go into effect several months after that. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>VALEANT SAID TO PICK NEW C.E.O.</strong> <span class="divider"> | </span></span> The pharmaceuticals company Valeant is <b>completing a contract with Joseph Papa, the chief executive of Perrigo</b>,<br />
+<a href="//www.wsj.com/articles/valeant-finalizing-contract-with-perrigos-joseph-papa-as-next-ceo-1461292284">The Wall Street Journal reports</a>, citing people familiar with the matter. </p>
+<p class="story-body-text" itemprop="articleBody">Valeant aimed to announce as soon as next week that he would succeed J. Michael Pearson, but the board at <b>Perrigo has not said whether it would allow Mr. Papa to void a noncompete clause in his contract</b>. Valeant considers the overlap between the two companies to be limited and the companies are rarely considered direct competitors, the people said.  </p>
+<p class="story-body-text" itemprop="articleBody">If Mr. Papa was appointed, he would take over a company that has lost some $80 billion in market value since the summer. He has broad industry experience in pharmaceutical companies and wholesalers, which the Valeant <b>board hopes could help mend relations with insurers and pharmacy-benefit managers</b>, who have pulled back on Valeant drugs.</p>
+<p class="story-body-text" itemprop="articleBody">The Journal also reported that people familiar with the matter said that  <b>the board was considering the sale of drug products and assets, in an attempt to restore confidence in the companyâs ability to pay its heavy debt load</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Papaâs move comes at a tricky time for Perrigo, too â it holds its annual meeting on Tuesday so it may have to name an interim successor quickly.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> <b>General Electric</b> will discuss its latest quarterly earnings in a webcast at 8:30 a.m. <b>McDonaldâs</b> will hold a conference call on its first-quarter earnings at 10 a.m. <b>Caterpillarâs</b> earnings call will start at 11 a.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>2016âS FIRST TECH I.P.O.</strong> <span class="divider"> | </span></span> Dellâs cybersecurity unit, SecureWorks, <b>raised $112 million</b> in the first initial public offering of a technology company this year,<br />
+<a href="//www.reuters.com/article/us-secureworks-ipo-idUSKCN0XI2UQ">Reuters reports</a>. </p>
+<p class="story-body-text" itemprop="articleBody">Investor skepticism over its profit margins and prospects meant the company <b>raised less than it had hoped to</b>. SecureWorks priced eight million shares at $14, missing the $15.50 to $17.50 range it had aimed for, Reuters reported a person familiar with the matter saying. The company had initially aimed to price nine million shares.</p>
+<p class="story-body-text" itemprop="articleBody">In the meantime,  SecureWorksâ parent company, Dell, is still waiting for approval of its acquisition of EMC. SecureWorks said the proceeds of the offering would go toward expanding the company, not supporting Dellâs business. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Markets were already jittery over the sector</b> â by this time last year, six technology companies had already priced their initial offerings, raising $1.6 billion, according to Thomson Reuters data. Technology companies such as Nutanix, a storage provider, have put their offerings on hold, while they wait for the market environment to improve. Others have continued with theirs â SoftOptiv Security and Blue Coat Systems have both hired bankers for I.P.O.s expected for this year. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Fierce Bidding War Erupts for French Retailer" src="https://static01.nyt.com/images/2016/04/22/business/22db-darty/22db-darty-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fierce Bidding War Erupts for French Retailer</strong> <span class="divider"> | </span></span> The French retailer Fnac and the French unit of Steinhoff International Holdings dueled on Thursday for Darty, the French electronics and appliance retailer.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/business/dealbook/steinhoffs-conforama-and-fnac-in-bidding-war-for-darty.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstone Said to Consider Buyout of Concordia Healthcare. </strong> <span class="divider"> | </span></span> Blackstone Group is considering a takeover of the listed Canadian pharmaceutical company Concordia Healthcare, Bloomberg News reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-21/blackstone-said-to-weigh-buyout-of-canada-s-concordia-healthcare"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Lazardâs Revenue Declines in Quarter" src="https://static01.nyt.com/images/2014/10/24/business/Lazard/Lazard-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lazardâs Revenue Declines in Quarter</strong> <span class="divider"> | </span></span> The firm said revenue from its financial advisory business fell 12 percent because of fewer transactions closed compared with a year ago.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/business/dealbook/lazards-revenue-declinesin-quarter.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>$10 Billion Loan to Saudi Arabia Carries Risks</strong> <span class="divider"> | </span></span> The Saudi kingdom is enmeshed in a global oil price war while opposing Iran in proxy conflicts in Yemen and Syria, Andy Critchlow writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/business/dealbook/10-billion-loan-to-saudi-arabia-carries-risks.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Bankers in the Age of Bernie: Do They Need Camouflage?" src="https://static01.nyt.com/images/2016/04/21/fashion/21UNBUTTONED-WEB1/21UNBUTTONED-WEB1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bankers in the Age of Bernie: Do They Need Camouflage?</strong> <span class="divider"> | </span></span> The stereotypical uniform of their profession may no longer exist.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/21/fashion/bankers-power-suits-bernie-sanders.html">Unbuttoned &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Blackstone Profit Plummets in First Quarter" src="https://static01.nyt.com/images/2015/09/04/business/04BLACKSTONE-web/04BLACKSTONE-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstone Profit Plummets in First Quarter</strong> <span class="divider"> | </span></span> Investors had expected a drop in results at Blackstone, the private equity giant, because of last yearâs outsize performance.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/business/dealbook/blackstone-profit-plummets-in-first-quarter.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ruling on Pension Fund Debt Could Shake Up Private Equity Industry</strong> <span class="divider"> | </span></span> A judge found that two private equity funds were liable for the pension fund debt of a company they acquired, a ruling that could affect other firms, Libby Lewis writes in Another View.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/business/dealbook/ruling-on-pension-fund-debt-could-shake-up-private-equity-industry.html">Another View &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Pharmaceutical Services Company Prepares I.P.O.</strong> <span class="divider"> | </span></span> Medpace, a pharmaceutical contract research organization, is preparing for an initial public offering in the United States that could value the company at more than $1 billion, including debt, Reuters reports, citing people familiar with the matter.<br />
+<br /><span class="kicker"><a href="//www.reuters.com/article/medpace-ipo-idUSL2N17O1WR?feedType=RSS&#038;feedName=USLegal">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Volkswagen Reaches Deal in U.S. Over Emissions Scandal" src="https://static01.nyt.com/images/2016/04/22/business/22volkswagen4/22volkswagen4-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Volkswagen Reaches Deal in U.S. Over Emissions Scandal</strong> <span class="divider"> | </span></span> Owners of hundreds of thousands of diesel vehicles in the United States will be eligible to have their vehicles bought back or fixed.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/business/international/volkswagen-emissions-settlement.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/interactive/2015/business/international/vw-diesel-emissions-scandal-explained.html">Behind Volkswagen&#8217;s Emissions Scandal</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Daimler to Investigate Its Diesel Emissions in the U.S.</strong> <span class="divider"> | </span></span> At the request of the Justice Department, the German automaker said it was conducting an internal investigation regarding diesel exhaust emissions.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/business/daimler-to-investigate-its-diesel-emissions-in-the-us.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PSA Peugeot CitroÃ«n Raided by Antifraud Officials</strong> <span class="divider"> | </span></span> French antifraud investigators on Thursday raided PSA Peugeot CitroÃ«n as part of an expanding national investigation linked to the Volkswagen emissions scandal.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/eecb1e60-07dc-11e6-b6d3-746f8e9cdd33.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz46EtqjIla">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="A Marriage Gone Bad: Walgreens Struggles to Shake Off Theranos" src="https://static01.nyt.com/images/2016/04/22/business/22STEWART-COPY-1461270776912/22STEWART-1461270776912-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Marriage Gone Bad: Walgreens Struggles to Shake Off Theranos</strong> <span class="divider"> | </span></span> While the legal agreement between Theranos and Walgreens isnât public, legal experts said nearly all such contracts have a termination clause that anticipates something can go wrong, James B. Stewart writes in Common Sense.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/business/a-once-avid-ally-walgreens-is-struggling-to-shake-off-theranos.html">Common Sense &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/04/21/business/dealbook/theranos-under-pressureas-inquiries-mount.html">White Collar Watch: Theranos Under Pressure as Inquiries Mount</a> </span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="SunEdison Files for Bankruptcy Protection" src="https://static01.nyt.com/images/2016/04/22/business/22sunedison/22sunedison-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SunEdison Files for Bankruptcy Protection</strong> <span class="divider"> | </span></span> The renewable energy development company, which grew rapidly in recent years, said it aimed to shed assets to streamline its business.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/business/energy-environment/sunedison-files-for-bankruptcy-protection.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="I.R.S. Fights Back Against House Republicansâ Attacks" src="https://static01.nyt.com/images/2016/04/22/us/22irs-JP/22irs-JP-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>I.R.S. Fights Back Against House Republicansâ Attacks</strong> <span class="divider"> | </span></span> A measure passed Thursday barring bonuses until customer service improves was just one of six anti-I.R.S. measures the House approved this week.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/us/politics/irs-fights-back-against-house-republicans-attacks.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>S.E.C. Extends Test of Investor Safeguards</strong> <span class="divider"> | </span></span>  The Securities and Exchange Commission on Thursday extended a pilot program for rules intended to protect investors during times of market stress, to fine-tune them after they were put to the test during volatility in August.<br />
+<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/eb08652c-0803-11e6-a623-b84d06a39ec2.html?ftcamp=published_links%2Frss%2Fmarkets%2Ffeed%2F%2Fproduct#axzz46EtqjIla">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Elizabeth Warren Attacks S.E.C. Approval of Steven Cohen Fund </strong> <span class="divider"> | </span></span> Senator Elizabeth Warren has accused the regulator of making a âmockeryâ of its mission by permitting the hedge fund manager Steven Cohen to register a new fund.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/e97bd432-07f9-11e6-b6d3-746f8e9cdd33.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz46EtqjIla">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Uber Settles Cases With Concessions, but Drivers Stay Freelancers" src="https://static01.nyt.com/images/2016/04/22/business/22UBER/22UBER-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uber Settles Cases With Concessions, but Drivers Stay Freelancers</strong> <span class="divider"> | </span></span> A settlement will let Uber continue to categorize drivers in California and Massachusetts as independent contractors.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/technology/uber-settles-cases-with-concessions-but-drivers-stay-freelancers.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="E.C.B. Stands Pat at Meeting, but It Explores Next Options" src="https://static01.nyt.com/images/2016/04/22/business/ecb2/ecb2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>E.C.B. Stands Pat at Meeting, but It Explores Next Options</strong> <span class="divider"> | </span></span> After a sweeping series of monetary moves in March, the European Central Bank paused to measure their impact before taking further steps.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/business/international/ecb-interest-rates.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Man Indicted for Bribery Tied to JPMorgan Hacking</strong> <span class="divider"> | </span></span> A Florida man was arrested on suspicion of participating in a bribery scheme intended to support an illegal bitcoin exchange owned by someone accused of hacking attacks on organizations like JPMorgan.<br /><span class="kicker"><a href="//www.reuters.com/article/us-usa-crime-cyberattack-idUSKCN0XI2QB">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lawyer Sentenced to Six Months in Prison for Maxim Deal Fraud</strong> <span class="divider"> | </span></span> Harvey Newkirk, 40, was sentenced to six months in prison for participating in a fraud in which a con man impersonated his successful father to raise money to buy Maxim magazine.<br /><span class="kicker"><a href="//www.reuters.com/article/us-usa-crime-maximmagazine-idUSKCN0XI2KS">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Apple No Longer Immune to Chinaâs Scrutiny of U.S. Tech Firms" src="https://static01.nyt.com/images/2016/04/22/business/22APPLE/22APPLE-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Apple No Longer Immune to Chinaâs Scrutiny of U.S. Tech Firms</strong> <span class="divider"> | </span></span> In an about-face, regulators shut down Appleâs iBooks Store and iTunes Movies six months after they were started in China.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/technology/apple-no-longer-immune-to-chinas-scrutiny-of-us-tech-firms.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="F.B.I. Director Suggests Bill for iPhone Hacking Topped $1.3 Million" src="https://static01.nyt.com/images/2016/04/22/business/22FBI-COPY-1461278847000/22FBI-1461278847000-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>F.B.I. Director Suggests Bill for iPhone Hacking Topped $1.3 Million</strong> <span class="divider"> | </span></span> Previously, the F.B.I. had been unwilling to say how much it paid to look into the iPhone of a gunman in the San Bernardino shootings.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/22/us/politics/fbi-director-suggests-bill-for-iphone-hacking-was-1-3-million.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/04/22/morning-agenda-new-limits-on-bankers-pay/"
+					data-title="Morning Agenda: New Limits on Bankers&#8217; Pay"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Valeant Said to Pick New C.E.O. | 2016&#039;s First Tech I.P.O.&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/04/22/morning-agenda-new-limits-on-bankers-pay/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":58,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004370796"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1461925263" />
+<meta name="PUD" content="20160429" />
+<meta name="pdate" content="20160429" />
+<meta name="ptime" content="20160429062103" />
+<meta name="utime" content="20160429102103" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-04-29T10:21:03-04:00" />
+<meta name="DISPLAYDATE" content="April 29, 2016" />
+<meta name="dat" content="April 29, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Burke, Stephen B;Icahn, Carl C;Katzenberg, Jeffrey;Mallya, Vijay;Ryan, Paul D Jr">
+<meta name="des" content="Banking and Financial Institutions;Bankruptcies;Credit and Debt;Health Insurance and Managed Care;Mergers, Acquisitions and Divestitures;Regulation and Deregulation of Industry">
+<meta name="org" content="AbbVie Inc;Anheuser-Busch InBev NV;Apollo Global Management;Ares Management LLC;Awesomeness TV;Barclays PLC;Centers for Medicare and Medicaid Services;Deutsche Bank AG;DreamWorks Animation SKG Inc;Government Development Bank for Puerto Rico;Medivation Inc;NBCUniversal;PayPal;Sanofi SA;St Jude Medical Inc;Venmo">
+<meta name="geo" content="Puerto Rico">
+<meta name="ticker" content="Anheuser-Busch InBev NV|BUD|NYSE;Barclays PLC|BCS|NYSE;Deutsche Bank AG|DB|NYSE;DreamWorks Animation SKG Inc|DWA|NASDAQ;Sanofi SA|SNY|NYSE;St Jude Medical Inc|STJ|NYSE" />
+<meta property="article:tag" content="Burke Stephen B" />
+<meta property="article:tag" content="Icahn Carl C" />
+<meta property="article:tag" content="Katzenberg Jeffrey" />
+<meta property="article:tag" content="Mallya Vijay" />
+<meta property="article:tag" content="Ryan Paul D Jr" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Bankruptcies" />
+<meta property="article:tag" content="Credit and Debt" />
+<meta property="article:tag" content="Health Insurance and Managed Care" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="AbbVie Inc" />
+<meta property="article:tag" content="Anheuser-Busch InBev NV" />
+<meta property="article:tag" content="Apollo Global Management" />
+<meta property="article:tag" content="Ares Management LLC" />
+<meta property="article:tag" content="Awesomeness TV" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="Centers for Medicare and Medicaid Services" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="DreamWorks Animation SKG Inc" />
+<meta property="article:tag" content="Government Development Bank for Puerto Rico" />
+<meta property="article:tag" content="Medivation Inc" />
+<meta property="article:tag" content="NBCUniversal" />
+<meta property="article:tag" content="PayPal" />
+<meta property="article:tag" content="Sanofi SA" />
+<meta property="article:tag" content="St Jude Medical Inc" />
+<meta property="article:tag" content="Venmo" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Burke Stephen B,Icahn Carl C,Katzenberg Jeffrey,Mallya Vijay,Ryan Paul D Jr,Banking and Financial Institutions,Bankruptcies,Credit and Debt,Health Insurance and Managed Care,Mergers Acquisitions and Divestitures,Regulation and Deregulation of Industry,AbbVie Inc,Anheuser-Busch InBev NV,Apollo Global Management,Ares Management LLC,Awesomeness TV,Barclays PLC,Centers for Medicare and Medicaid Services,Deutsche Bank AG,DreamWorks Animation SKG Inc,Government Development Bank for Puerto Rico,Medivation Inc,NBCUniversal,PayPal,Sanofi SA,St Jude Medical Inc,Venmo,Puerto Rico,DealBook" />
+<meta name="news_keywords" content="Bankruptcy,NBCUniversal,PayPal,Venmo" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F04%2F29%2Fmorning-agenda-bigger-is-better-for-health-care-companies%2F" title="Morning Agenda: Bigger Is Better For Health Care Companies" />
+<meta name="description" content="Washington Haggles as Puerto Rico Deadline Looms &#124; Jeffrey Katzenberg at a Crossroads" />
+<meta name="hdl" content="Morning Agenda: Bigger Is Better For Health Care Companies" />
+<meta property="og:title" content="Morning Agenda: Bigger Is Better For Health Care Companies" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/04/29/morning-agenda-bigger-is-better-for-health-care-companies/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Washington Haggles as Puerto Rico Deadline Looms &#124; Jeffrey Katzenberg at a Crossroads" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Bigger Is Better For Health Care Companies" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/04/29/morning-agenda-bigger-is-better-for-health-care-companies/" />
+<meta name="twitter:description" content="Washington Haggles as Puerto Rico Deadline Looms &#124; Jeffrey Katzenberg at a Crossroads" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Yahoo Gives Starboard Value 4 Board Seats' href='//news.blogs.nytimes.com/2016/04/28/morning-agenda-yahoo-gives-starboard-value-4-board-seats/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/04/29/what-were-reading-149/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/04/29/morning-agenda-bigger-is-better-for-health-care-companies/' />
+<link rel='shortlink' href='//nyti.ms/1N5SKOY' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/04/29/morning-agenda-bigger-is-better-for-health-care-companies/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Bigger Is Better For Health Care Companies - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4690 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Bigger Is Better For Health Care Companies        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/04/29/morning-agenda-bigger-is-better-for-health-care-companies/"
+	 data-title="Morning Agenda: Bigger Is Better For Health Care Companies"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Washington Haggles as Puerto Rico Deadline Looms | Jeffrey Katzenberg at a Crossroads&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/04/29/morning-agenda-bigger-is-better-for-health-care-companies/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="April 29, 2016 6:21 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Bigger Is Better For Health Care Companies</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-04-29T10:21:03+00:00" itemprop="datePublished">April 29, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">April 29, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4690 post type-post status-publish hentry category-dealbook tag-abbvie-inc tag-anheuser-busch-inbev-nv tag-apollo-global-management tag-ares-management-llc tag-awesomeness-tv tag-banking-and-financial-institutions tag-bankruptcies tag-barclays-plc tag-burke-stephen-b tag-centers-for-medicare-and-medicaid-services tag-credit-and-debt tag-deutsche-bank-ag tag-dreamworks-animation-skg-inc tag-government-development-bank-for-puerto-rico tag-health-insurance-and-managed-care tag-icahn-carl-c tag-katzenberg-jeffrey tag-mallya-vijay tag-medivation-inc tag-mergers-acquisitions-and-divestitures tag-nbcuniversal tag-paypal tag-puerto-rico tag-regulation-and-deregulation-of-industry tag-ryan-paul-d-jr tag-sanofi-sa tag-st-jude-medical-inc tag-venmo per-burke-stephen-b per-icahn-carl-c per-katzenberg-jeffrey per-mallya-vijay per-ryan-paul-d-jr des-banking-and-financial-institutions des-bankruptcies des-credit-and-debt des-health-insurance-and-managed-care des-mergers-acquisitions-and-divestitures des-regulation-and-deregulation-of-industry org-abbvie-inc org-anheuser-busch-inbev-nv org-apollo-global-management org-ares-management-llc org-awesomeness-tv org-barclays-plc org-centers-for-medicare-and-medicaid-services org-deutsche-bank-ag org-dreamworks-animation-skg-inc org-government-development-bank-for-puerto-rico org-medivation-inc org-nbcuniversal org-paypal org-sanofi-sa org-st-jude-medical-inc org-venmo geo-puerto-rico news_keywords-bankruptcy news_keywords-nbcuniversal news_keywords-paypal news_keywords-venmo" id="post-4690">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Bigger Is Better For Health Care Companies</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-04-29T10:21:03+00:00" itemprop="datePublished">April 29, 2016 6:21 am</time>
+			<!-- date updated --><span class="visually-hidden updated">April 29, 2016 6:21 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/04/29/morning-agenda-bigger-is-better-for-health-care-companies/" data-title="Morning Agenda: Bigger Is Better For Health Care Companies" data-description="Washington Haggles as Puerto Rico Deadline Looms | Jeffrey Katzenberg at a Crossroads">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BIGGER IS BETTER FOR HEALTH CARE COMPANIES </strong> <span class="divider"> | </span></span> The entire health care industry seems to be following the same playbook, <a href="//www.nytimes.com/2016/04/29/business/dealbook/health-care-companies-see-scale-as-the-only-way-to-compete.html?ref=dealbook">Leslie Picker reports in DealBook.</a> And the advice seems to be to team up with a similar company so that you can become the leading provider and use your clout to negotiate with hospitals and health insurers. </p>
+<p class="story-body-text" itemprop="articleBody"><b>More than $40 billion of deals were announced on Thursday alone.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Abbott will buy <a href="//www.nytimes.com/2016/04/29/business/dealbook/abbott-to-acquire-st-jude-medical-for-25-billion.html">St. Jude Medical</a>, strengthening its position in the market for cardiovascular devices. Sanofi made an <a href="//www.nytimes.com/2016/04/29/business/dealbook/sanofi-france-offers-buy-drug-maker-medivation.html">offer for Medivation</a>, which makes drugs for prostate cancer, and AbbVie got its <a href="//www.nytimes.com/2016/04/29/business/dealbook/abbvie-to-buy-cancer-treatment-start-up.html?ref=dealbook">hands on Stemcentrx</a>, an eight-year-old biotechnology company focused on novel cancer treatments. </p>
+<p class="story-body-text" itemprop="articleBody">Regulation, new methods of payment and record consolidation mean health care companies see little choice but to scale up.</p>
+<p class="story-body-text" itemprop="articleBody">The Centers for Medicare and Medicaid Services have already mandated that payments for different requirements, be they hospital stays or drugs, are bundled together for people getting knee and hip replacements. <b>Similar bundles of payment are expected for cancer and cardiovascular disease as part of a push to make health care more efficient.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Companies are trying to position themselves to be the provider of choice for these bundled deals, but <b>investors did not appear to reward these expensive moves on Thursday.</b> Abbott saw its shares slip and Abbvieâs stock barely rose. The problem for Abbott is that the transaction looks to be destroying value, <a href="//www.nytimes.com/2016/04/29/business/dealbook/investors-question-financial-sense-of-abbott-st-jude-deal.html">Robert Cyran argues in Breakingviews.</a></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>WASHINGTON HAGGLES AS PUERTO RICO DEADLINE LOOMS</strong> <span class="divider"> | </span></span> In December, House Speaker Paul D. Ryan gave lawmakers the first three months of the year to find a responsible solution to Puerto Ricoâs debt crisis and gave the island time to prepare for a May 1 deadline on a $422 million debt payment. The deadline is now imminent, but the <b>Republicans in the House and Democrats in the administration are still haggling over the terms of a rescue,</b><br />
+<a href="//www.nytimes.com/2016/04/30/business/dealbook/washington-still-haggling-as-puerto-rico-debt-deadline-looms.html">Mary Williams Walsh reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">A missed payment would risk further destabilization of the islandâs economy. The May 1 payment consists mainly of principal and interest due from Puerto Ricoâs Government Development Bank.</p>
+<p class="story-body-text" itemprop="articleBody">The bankâs debts are not backed by any taxing power or constitutional guarantee. If it defaults on this payment, <b>its creditors have little legal recourse</b>. Much of the debt is held by credit unions on the island â financial institutions that tend to serve mom-and-pop savers in Puerto Ricoâs poor and remote communities. A default would add to a list of extreme measures that Puerto Rico has already undertaken to stretch its dwindling cash while waiting for a rescue package. </p>
+<p class="story-body-text" itemprop="articleBody">Some people fear that the passage of legislation could be delayed until the island nears a tipping point: <b>a $2 billion debt payment due on July 1.</b> </p>
+<p class="story-body-text" itemprop="articleBody">About $800 million of this is constitutionally guaranteed, giving the payment of it legal priority even over the funding of essential public services, such as ambulances or drinking water. Investors who hold the guaranteed debt say they are <b>prepared to fight to enforce their legal rights.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Ryan may not have known, when he ordered debt relief, how intractable the difference were going to be between Democrats and Republicans, and among classes of creditors intent on avoiding the sort of losses that Detroit bondholders were forced to bear after the city went bankrupt in 2013. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> <b>ExxonMobil</b> will present its first-quarter earnings at 9:30 a.m. Data on <b>personal income and spending</b> during March will be published at 8:30 a.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JEFFREY KATZENBERG AT A CROSSROADS</strong> <span class="divider"> | </span></span> The DreamWorks Animation brand has been indistinguishable from Jeffrey Katzenbergâs identity for the past decade, but his efforts to become the biggest cultural force in Hollywood came to an end this week,<br />
+<a href="//www.nytimes.com/2016/04/29/business/media/dreamworks-animation-comcast-deal-katzenberg.html?ref=business">Brooks Barnes, Emily Steel and Michael Cieply write in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">DreamWorks Animation agreed to sell itself to Comcastâs NBCUniversal for $3.8 billion.<br />
+DreamWorks Animation was the sole remainder of a splashy conglomerate that Mr. Katzenberg had founded with Steven Spielberg and David Geffen. <b>Mr. Katzenberg will receive a payout estimated at $420 million when he steps aside.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Geffen has moved on to philanthropy, while Mr. Spielberg, but Mr. Katzenberg has continued to focus on the grinding task of keeping DreamWorks Animation going. Many are still asking <b>why he called it a day and what he is likely to do next</b>. Mr. Katzenberg initially agreed to speak to a reporter, but changed his mind. A spokesman said that Mr. Katzenberg instead wished the spotlight to shine on Comcast. </p>
+<p class="story-body-text" itemprop="articleBody">Stephen B. Burke, NBCUniversalâs chief executive and senior vice president of Comcast, suggested in a phone interview that Mr. Katzenberg could move into digital media. Others wondered whether he was positioning himself for an ambassadorship should Hillary Clinton win the presidency. </p>
+<p class="story-body-text" itemprop="articleBody"><b>He will retain a business platform.</b> Comcast said that he would serve as chairman of a new entity, DreamWorks New Media, which will be made up of AwesomenessTV, an online studio and distributor of content aimed at teenage girls, and Nova, a unit that uses 3-D animation technology to help companies with marketing campaigns. </p>
+<p class="story-body-text" itemprop="articleBody">At a meeting for DreamWorks Animation employees on Thursday, Mr. Katzenberg was upbeat, according to attendees. </p>
+<p class="story-body-text" itemprop="articleBody">âThis is not a deal that we needed to do, but <b>itâs the deal Iâd always hoped would come along</b>,â he said. Comcast paid more than many people thought DreamWorks Animation was worth after years of hits and misses. </p>
+<p class="story-body-text" itemprop="articleBody">Still, people close to Mr. Katzenberg said he struggled with the decision. He had intended to come along for the ride in previous attempts to sell the company, but Comcast was clear about the savings it wanted to make when it paid such a high price. Mr. Burke acknowledged that the sale was ânot an easy thing for Jeff to grapple with,â adding, <b>âIt is his baby.â</b> </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Anheuser-Busch InBev Offers to Sell More SABMiller Assets in Europe</strong> <span class="divider"> | </span></span> On the block would be SABMillerâs assets in the Czech Republic, Hungary, Poland, Romania and Slovakia as it seeks approval for their merger.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/30/business/dealbook/anheuser-busch-inbev-sabmiller-beer.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ares and Apollo Vying for American Capital </strong> <span class="divider"> | </span></span> Ares Management and Apollo Investment, the business development company of Apollo Global Management, are competing for the assets of American Capital, a private equity and credit investment firm with a market capitalization of $3.8 billion, Reuters reports, citing people familiar with the matter. <br /><span class="kicker"><a href="//www.reuters.com/article/us-americancapital-m-a-exclusive-idUSKCN0XP35S?feedType=RSS&#038;feedName=innovationNews">REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Rovi Said to Be Near a Deal for TiVo </strong> <span class="divider"> | </span></span> Rovi, which provides on-screen guides for pay-TV listings, is near a deal to buy TiVo, the maker of the television recording case, in a deal that could be worth $1 billion, Bloomberg News reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-28/rovi-said-nearing-a-deal-to-acquire-dvr-pioneer-tivo-inc">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong> Casino Guichard-Perrachon Sells Its Vietnamese Unit</strong> <span class="divider"> | </span></span> Casino Guichard-Perrachon agreed to sell Vietnamâs Big C grocery chain to Central Group for  $1.1 billion, extending an Asian divestment program aimed at reducing the French retailerâs debt.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-29/casino-sells-vietnamese-unit-to-central-group-for-1-1-billion">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Utilities Companies Said to Compete for Eniâs Retail Unit </strong> <span class="divider"> | </span></span> Three major European utilities companies are lining up bids for a chunk of the retail gas and power business of the Italian oil major Eni in a deal that could be worth up to $3.4 billion, Reuters reports, citing sources familiar with the matter. <br /><span class="kicker"><a href="//www.reuters.com/article/us-eni-gas-edison-idUSKCN0XP2LQ?feedType=RSS&#038;feedName=innovationNews">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Alere Rejected Abbottâs Request to End Merger </strong> <span class="divider"> | </span></span> Alere, the diagnostic test maker, said its board rejected a request by Abbott to terminate the $5.8 billion deal to buy Alere. <br /><span class="kicker"><a href="//www.reuters.com/article/us-alere-m-a-abbott-idUSKCN0XQ09W?feedType=RSS&#038;feedName=innovationNews">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="R.B.S. Losses Widen After Payment to British Government" src="https://static01.nyt.com/images/2016/04/30/nytnow/30RBS-web/30RBS-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>R.B.S. Losses Widen After Payment to British Government</strong> <span class="divider"> | </span></span> The bank paid $1.7 billion in March to fulfill a condition of its bailout package, which gave the government dividend priority.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/30/business/dealbook/rbs-earnings-q1.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Robert Linton, Steadfast â80s Wall Street Banker, Dies at 90" src="https://static01.nyt.com/images/2016/04/29/business/29linton-obit/29linton-obit-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Robert Linton, Steadfast â80s Wall Street Banker, Dies at 90</strong> <span class="divider"> | </span></span> Mr. Lintonâs Drexel firm pioneered the junk bond industry and came to symbolize the eraâs âgreed is goodâ mentality, until it was swept into a federal inquiry.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/29/business/dealbook/robert-linton-steadfast-80s-wall-street-banker-dies-at-90.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Barclays to Sell Credit Card Business in Portugal and Spain</strong> <span class="divider"> | </span></span> The Spanish online bank Bancopopular-e will buy the Barclaycard consumer payments business in the two countries, in Barclaysâ latest exit from Continental Europe.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/29/business/dealbook/barclays-sell-credit-card-business-spain-portugal.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Head of Deutsche Bank Integrity Committee to Resign </strong> <span class="divider"> | </span></span>  Georg Thoma is to resign from Deutsche Bankâs supervisory board after coming under fire from other board members in a battle over how to deal with the German bankâs past scandals.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/9256f338-0d82-11e6-b41f-0beb7e589515.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz46oyQ65D1">THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Carl Icahn Says He Has Sold His Stake in Apple Over China Concerns" src="https://static01.nyt.com/images/2016/04/29/business/29DB-ICAHN2/29DB-ICAHN2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Carl Icahn Says He Has Sold His Stake in Apple Over China Concerns</strong> <span class="divider"> | </span></span> Mr. Icahn says he is concerned that the Chinese government could make it difficult for Apple to do business in that country.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/29/business/dealbook/carl-icahn-says-he-has-sold-stake-in-apple.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Vijay Mallya, Indian âKing of Good Times,â Dethroned by Debt" src="https://static01.nyt.com/images/2016/04/26/business/26db-india/26db-india-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Vijay Mallya, Indian âKing of Good Times,â Dethroned by Debt</strong> <span class="divider"> | </span></span> The beer-and-airline magnate left the country ahead of creditors, as bad corporate loans hurt the economy and Prime Minister Narendra Modiâs agenda.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/30/business/dealbook/india-vijay-mallya-debt-economy.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Europeâs Case Against Google Might Help Rivals More Than Consumers" src="https://static01.nyt.com/images/2016/04/29/business/29STEWART/29STEWART-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Europeâs Case Against Google Might Help Rivals More Than Consumers</strong> <span class="divider"> | </span></span> The driving force pushing the recent European action against Googleâs search engine was a consortium of corporate rivals, James B. Stewart writes in Common Sense.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/29/business/europes-case-against-google-might-help-rivals-more-than-consumers.html">Common Sense &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Company Behind âAmerican Idolâ Files for Bankruptcy Protection" src="https://static01.nyt.com/images/2016/04/29/arts/29xp-bankruptcy_web1/29xp-bankruptcy_web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Company Behind âAmerican Idolâ Files for Bankruptcy Protection</strong> <span class="divider"> | </span></span> The company, Core Media Group, cited declining ratings and the loss of broadcasting fees and sponsors as among the reasons for the Chapter 11 filing.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/29/business/company-behind-american-idol-files-for-bankruptcy-protection.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Banks Raise Prospect of Court Action Over Fed Dividend Cuts </strong> <span class="divider"> | </span></span> One of Americaâs top banking lobby groups has raised the prospect of suing Congress over its decision last year to cut dividend payments made each year by the Federal Reserve to its member banks.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/2c68d55a-0d91-11e6-b41f-0beb7e589515.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz46oyQ65D1">THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PayPal Says F.T.C. Investigating Venmo </strong> <span class="divider"> | </span></span> The investigation focuses on whether Venmo, PayPalâs free peer-to-peer payment service, engaged in unfair or deceptive trade practices. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-28/paypal-says-federal-trade-commission-investigating-venmo">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Chinese Statistics Bureau Investigated Over âService Feesâ" src="https://static01.nyt.com/images/2016/04/29/business/29chinagraft/29chinagraft-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinese Statistics Bureau Investigated Over âService Feesâ</strong> <span class="divider"> | </span></span> About 300 people in the bureau are being investigated for charging fees for statistics and research, which amounted to about $500,000.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/29/business/international/china-statistics-corruption.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>For Nebraskaâs Poor, Get Sick and Get Sued</strong> <span class="divider"> | </span></span> Nebraska has seen a barrage of debt collection lawsuits because it is cheaper and easier to sue someone there. <br /><span class="kicker"><a href="https://www.propublica.org/article/for-nebraskas-poor-get-sick-and-get-sued?utm_campaign=comms&#038;utm_source=comms-pitch&#038;utm_medium=email&#038;utm_term=debt">PROPUBLICA </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Suit Accuses New York Times Executives of Bias</strong> <span class="divider"> | </span></span> Two women in the advertising department accuse the chief executive of The Times and a vice president of race, age and gender bias.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/29/business/media/suit-accuses-new-york-times-executives-of-bias.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lawsuit Accuses PwC of Discriminating Against Older Job Applicants </strong> <span class="divider"> | </span></span> The lawsuit, filed on Wednesday in federal court, said the accounting company, based in London, does virtually all of its recruiting for entry-level jobs on college campuses to stock its workforce with Millennials.<br /><span class="kicker"><a href="//www.reuters.com/article/pricewaterhouse-lawsuit-age-idUSL2N17V2BU?feedType=RSS&#038;feedName=USLegal">REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Unpaid Annual Taxes Rise to $458 Billion, I.R.S. Reports" src="https://static01.nyt.com/images/2016/04/29/business/29IRS/29IRS-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Unpaid Annual Taxes Rise to $458 Billion, I.R.S. Reports</strong> <span class="divider"> | </span></span> The agency attributed the increase to better estimates, but Senator Orrin G. Hatch called for it âto get smarter about guaranteeing tax compliance.â<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/29/business/unpaid-annual-taxes-rise-to-458-billion-irs-reports.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Why Is Productivity So Weak? Three Theories" src="https://static01.nyt.com/images/2016/04/29/upshot/29UP-SUB-GDP/29UP-SUB-GDP-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Why Is Productivity So Weak? Three Theories</strong> <span class="divider"> | </span></span> The rate of economic output is not increasing much. Or is there work below the surface that will pay big dividends in the future?<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/29/upshot/why-is-productivity-so-weak-three-theories.html">The Upshot &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/04/29/business/economy/us-economy-gdp-q1-growth.html">The Recoveryâs Two Sides: Weak Growth Even as Hiring Surges</a> <time class="timestamp" data-eastern-timestamp="12:12 PM" datetime="2016-04-28" data-utc-timestamp="1461859971000">12:12 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/04/29/morning-agenda-bigger-is-better-for-health-care-companies/"
+					data-title="Morning Agenda: Bigger Is Better For Health Care Companies"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Washington Haggles as Puerto Rico Deadline Looms | Jeffrey Katzenberg at a Crossroads&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/04/29/morning-agenda-bigger-is-better-for-health-care-companies/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":47,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

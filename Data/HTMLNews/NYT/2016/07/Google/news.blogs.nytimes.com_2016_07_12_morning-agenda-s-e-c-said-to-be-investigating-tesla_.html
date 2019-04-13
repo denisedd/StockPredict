@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004525083"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1468319066" />
+<meta name="PUD" content="20160712" />
+<meta name="pdate" content="20160712" />
+<meta name="ptime" content="20160712062426" />
+<meta name="utime" content="20160712102426" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-07-12T10:24:26-04:00" />
+<meta name="DISPLAYDATE" content="July 12, 2016" />
+<meta name="dat" content="July 12, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Curry, Thomas J;Dimon, James;Kashkari, Neel T;Osborne, George;Redstone, Sumner M;Tarullo, Daniel K">
+<meta name="des" content="Automobile Safety Features and Defects;Banking and Financial Institutions;Driverless and Semiautonomous Vehicles;Great Britain Withdrawal from EU (Brexit);Medicare;Mergers, Acquisitions and Divestitures;Money Laundering;Pokemon (Fictional Characters);Real Estate (Commercial);Real Estate and Housing (Residential);Regulation and Deregulation of Industry">
+<meta name="org" content="Banco Santander S.A.;China Vanke Co Ltd;Citigroup Inc;Deutsche Borse AG;European Union;Federal Deposit Insurance Corp;Goldman Sachs Group Inc;HSBC Holdings PLC.;Imperva Inc;Johnson Controls Inc;JPMorgan Chase &amp; Company;London Stock Exchange;Lyft Inc;National Highway Traffic Safety Administration;Polycom Inc;Qatalyst Partners;RR Donnelley &amp; Sons Company;Securities and Exchange Commission;Tata Steel;Tesla Motors Inc;ThyssenKrupp AG;Unicredito Italiano SpA;Volkswagen AG;Xerox Corporation">
+<meta name="ticker" content="Citigroup Inc|C|NYSE;Goldman Sachs Group Inc|GS|NYSE;Johnson Controls Inc|JCI|NYSE;JPMorgan Chase & Company|JPM|NYSE;Polycom Inc|PLCM|NASDAQ;RR Donnelley & Sons Company|RRD|NASDAQ;Tesla Motors Inc|TSLA|NASDAQ;Volkswagen AG|VLKAY|Other OTC;Xerox Corporation|XRX|NYSE" />
+<meta property="article:tag" content="Curry Thomas J" />
+<meta property="article:tag" content="Dimon James" />
+<meta property="article:tag" content="Kashkari Neel T" />
+<meta property="article:tag" content="Osborne George" />
+<meta property="article:tag" content="Redstone Sumner M" />
+<meta property="article:tag" content="Tarullo Daniel K" />
+<meta property="article:tag" content="Automobile Safety Features and Defects" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Driverless and Semiautonomous Vehicles" />
+<meta property="article:tag" content="Great Britain Withdrawal from EU (Brexit)" />
+<meta property="article:tag" content="Medicare" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Money Laundering" />
+<meta property="article:tag" content="Pokemon (Fictional Characters)" />
+<meta property="article:tag" content="Real Estate (Commercial)" />
+<meta property="article:tag" content="Real Estate and Housing (Residential)" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Banco Santander S.A." />
+<meta property="article:tag" content="China Vanke Co Ltd" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="Deutsche Borse AG" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="Federal Deposit Insurance Corp" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="HSBC Holdings PLC." />
+<meta property="article:tag" content="Imperva Inc" />
+<meta property="article:tag" content="Johnson Controls Inc" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="London Stock Exchange" />
+<meta property="article:tag" content="Lyft Inc" />
+<meta property="article:tag" content="National Highway Traffic Safety Administration" />
+<meta property="article:tag" content="Polycom Inc" />
+<meta property="article:tag" content="Qatalyst Partners" />
+<meta property="article:tag" content="RR Donnelley &amp; Sons Company" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Tata Steel" />
+<meta property="article:tag" content="Tesla Motors Inc" />
+<meta property="article:tag" content="ThyssenKrupp AG" />
+<meta property="article:tag" content="Unicredito Italiano SpA" />
+<meta property="article:tag" content="Volkswagen AG" />
+<meta property="article:tag" content="Xerox Corporation" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Curry Thomas J,Dimon James,Kashkari Neel T,Osborne George,Redstone Sumner M,Tarullo Daniel K,Automobile Safety Features and Defects,Banking and Financial Institutions,Driverless and Semiautonomous Vehicles,Great Britain Withdrawal from EU (Brexit),Medicare,Mergers Acquisitions and Divestitures,Money Laundering,Pokemon (Fictional Characters),Real Estate (Commercial),Real Estate and Housing (Residential),Regulation and Deregulation of Industry,Banco Santander S.A.,China Vanke Co Ltd,Citigroup Inc,Deutsche Borse AG,European Union,Federal Deposit Insurance Corp,Goldman Sachs Group Inc,HSBC Holdings PLC.,Imperva Inc,Johnson Controls Inc,JPMorgan Chase &amp; Company,London Stock Exchange,Lyft Inc,National Highway Traffic Safety Administration,Polycom Inc,Qatalyst Partners,RR Donnelley &amp; Sons Company,Securities and Exchange Commission,Tata Steel,Tesla Motors Inc,ThyssenKrupp AG,Unicredito Italiano SpA,Volkswagen AG,Xerox Corporation,DealBook" />
+<meta name="news_keywords" content="Medicare" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F07%2F12%2Fmorning-agenda-s-e-c-said-to-be-investigating-tesla%2F" title="Morning Agenda:  S.E.C. Said to Be Investigating Tesla" />
+<meta name="description" content="Xerox Said to Be in Talks to Buy R.R. Donnelley &#124; Regulator Warning Over Banks&#8217; Property Lending" />
+<meta name="hdl" content="Morning Agenda:  S.E.C. Said to Be Investigating Tesla" />
+<meta property="og:title" content="Morning Agenda:  S.E.C. Said to Be Investigating Tesla" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/07/12/morning-agenda-s-e-c-said-to-be-investigating-tesla/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Xerox Said to Be in Talks to Buy R.R. Donnelley &#124; Regulator Warning Over Banks&#8217; Property Lending" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda:  S.E.C. Said to Be Investigating Tesla" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/07/12/morning-agenda-s-e-c-said-to-be-investigating-tesla/" />
+<meta name="twitter:description" content="Xerox Said to Be in Talks to Buy R.R. Donnelley &#124; Regulator Warning Over Banks&#8217; Property Lending" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda:  Ultimate Fighting Championship to Be Sold' href='//news.blogs.nytimes.com/2016/07/11/morning-agenda-ultimate-fighting-championship-to-be-sold/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/07/12/what-were-reading-170/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/07/12/morning-agenda-s-e-c-said-to-be-investigating-tesla/' />
+<link rel='shortlink' href='//nyti.ms/29M6hLD' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/07/12/morning-agenda-s-e-c-said-to-be-investigating-tesla/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda:  S.E.C. Said to Be Investigating Tesla - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5255 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda:  S.E.C. Said to Be Investigating Tesla        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/07/12/morning-agenda-s-e-c-said-to-be-investigating-tesla/"
+	 data-title="Morning Agenda:  S.E.C. Said to Be Investigating Tesla"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Xerox Said to Be in Talks to Buy R.R. Donnelley | Regulator Warning Over Banks&#039; Property Lending&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/12/morning-agenda-s-e-c-said-to-be-investigating-tesla/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 12, 2016 6:24 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda:  S.E.C. Said to Be Investigating Tesla</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-07-12T10:24:26+00:00" itemprop="datePublished">July 12, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">July 12, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5255 post type-post status-publish hentry category-dealbook tag-automobile-safety-features-and-defects tag-banco-santander-s-a tag-banking-and-financial-institutions tag-china-vanke-co-ltd tag-citigroup-inc tag-curry-thomas-j tag-deutsche-borse-ag tag-dimon-james tag-driverless-and-semiautonomous-vehicles tag-european-union tag-federal-deposit-insurance-corp tag-goldman-sachs-group-inc tag-great-britain-withdrawal-from-eu-brexit tag-hsbc-holdings-plc tag-imperva-inc tag-johnson-controls-inc tag-jpmorgan-chase-company tag-kashkari-neel-t tag-london-stock-exchange tag-lyft-inc tag-medicare tag-mergers-acquisitions-and-divestitures tag-money-laundering tag-national-highway-traffic-safety-administration tag-osborne-george tag-pokemon-fictional-characters tag-polycom-inc tag-qatalyst-partners tag-real-estate-commercial tag-real-estate-and-housing-residential tag-redstone-sumner-m tag-regulation-and-deregulation-of-industry tag-rr-donnelley-sons-company tag-securities-and-exchange-commission tag-tarullo-daniel-k tag-tata-steel tag-tesla-motors-inc tag-thyssenkrupp-ag tag-unicredito-italiano-spa tag-volkswagen-ag tag-xerox-corporation per-curry-thomas-j per-dimon-james per-kashkari-neel-t per-osborne-george per-redstone-sumner-m per-tarullo-daniel-k des-automobile-safety-features-and-defects des-banking-and-financial-institutions des-driverless-and-semiautonomous-vehicles des-great-britain-withdrawal-from-eu-brexit des-medicare des-mergers-acquisitions-and-divestitures des-money-laundering des-pokemon-fictional-characters des-real-estate-commercial des-real-estate-and-housing-residential des-regulation-and-deregulation-of-industry org-banco-santander-s-a org-china-vanke-co-ltd org-citigroup-inc org-deutsche-borse-ag org-european-union org-federal-deposit-insurance-corp org-goldman-sachs-group-inc org-hsbc-holdings-plc org-imperva-inc org-johnson-controls-inc org-jpmorgan-chase-company org-london-stock-exchange org-lyft-inc org-national-highway-traffic-safety-administration org-polycom-inc org-qatalyst-partners org-rr-donnelley-sons-company org-securities-and-exchange-commission org-tata-steel org-tesla-motors-inc org-thyssenkrupp-ag org-unicredito-italiano-spa org-volkswagen-ag org-xerox-corporation news_keywords-medicare" id="post-5255">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda:  S.E.C. Said to Be Investigating Tesla</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-07-12T10:24:26+00:00" itemprop="datePublished">July 12, 2016 6:24 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 12, 2016 6:24 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/07/12/morning-agenda-s-e-c-said-to-be-investigating-tesla/" data-title="Morning Agenda:  S.E.C. Said to Be Investigating Tesla" data-description="Xerox Said to Be in Talks to Buy R.R. Donnelley | Regulator Warning Over Banks&#039; Property Lending">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>S.E.C. SAID TO BE INVESTIGATING TESLA</strong> The Securities and Exchange Commission is investigating whether Tesla Motors breached securities laws by <strong>failing to disclose to investors a fatal crash involving an electric car that was driving itself</strong>, <a href="//www.wsj.com/articles/sec-investigating-tesla-for-possible-securities-law-breach-1468268385?nl=dealbook&amp;emc=edit_dlbkam_20160712">The Wall Street Journal reports</a>, citing a person familiar with the matter. The crash killed the driver, Joshua Brown, who collided with an 18-wheeler that pulled in front of him on a Florida highway in May.</p>
+<p class="story-body-text" itemprop="articleBody">Tesla alerted the National Highway Traffic Safety Administration to the accident and investigated to determine whether the car was using its Autopilot system, but did not disclose the crash to investors in a securities filing. The National Transportation Safety is also investigating whether systemic issues are tied to driverless cars, an agency spokesman said on Monday.</p>
+<p class="story-body-text" itemprop="articleBody">The S.E.C. is examining whether Tesla should have disclosed the accident as a &#8220;material&#8221; event, or a development a reasonable investor would consider important, a person familiar with the matter said.<strong> A Tesla spokeswoman asserted that the crash did not require disclosure to investors.</strong></p>
+<p class="story-body-text" itemprop="articleBody">&#8220;Tesla has not received any communication from the S.E.C. regarding this issue,&#8221; she said. &#8220;Our blog post last week provided the relevant information about this issue.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">The crash happened on May 7 and Tesla learned of it soon afterward. It informed auto safety regulators on May 16. In its security filing for its $2 billion stock sale two days later, the company did not disclose the accident.<br />
+<strong>XEROX SAID TO BE IN TALKS TO BUY R.R. DONNELLEY</strong> Xerox is in talks to buy R.R. Donnelley &amp; Sons, the owner of the Edgar financial statement wire service, <a href="//www.bloomberg.com/news/articles/2016-07-11/xerox-said-in-talks-to-merge-copier-business-with-r-r-donnelley?nl=dealbook&amp;emc=edit_dlbkam_20160712">Bloomberg reports</a>, citing people with knowledge of the matter.</p>
+<p class="story-body-text" itemprop="articleBody">Xerox plans to separate into two companies by the end of the year and <strong>would merge some of R.R. Donnelley with its copier and printer business</strong>. The rest would be merged with its smaller business outsourcing services, people with knowledge of the matter told Bloomberg.</p>
+<p class="story-body-text" itemprop="articleBody">A deal could be announced before Xerox&#8217;s split is completed. <strong>R.R. Donnelley had also announced plans to split into three publicly traded companies, but a deal with Xerox would negate that plan.</strong></p>
+<p class="story-body-text" itemprop="articleBody">Xerox and R.R. Donnelley reportedly saw the opportunity of a merger after the deal between Hewlett Packard Enterprise and Computer Sciences bolstered both companies&#8217; share prices.</p>
+<p class="story-body-text" itemprop="articleBody">Xerox has a market value of about $9.6 billion, while R.R. Donnelley is worth about $3.9 billion.<br />
+<strong>ON THE AGENDA Daniel K. Tarullo</strong>, of the Federal Reserve Board of Governors, will speak at the Center for American Progress in Washington about shadow banking and how the nation can avoid the next crisis at 9 a.m. The House Financial Services Committee will hold a hearing on the <strong>Financial Choice Act</strong> at 10 a.m. and a hearing on <strong>online marketplace lending</strong> at 2 p.m. The president of the Minneapolis Fed,<strong> Neel Kashkari</strong>, will hold a town hall at Northern Michigan University at 5 p.m.<br />
+<strong>REGULATOR WARNING OVER BANKS&#8217; PROPERTY LENDING</strong> Thomas Curry, comptroller of the currency, used a biannual financial risk report to issue a warning over <strong>looser underwriting standards and concentrations in banks&#8217; commercial real estate portfolios</strong>, <a href="//www.ft.com/cms/s/0/02419132-4783-11e6-8d68-72e9211e86ab.html?nl=dealbook&amp;emc=edit_dlbkam_20160712#axzz4E9L3cSDZ">The Financial Times reports</a>.</p>
+<p class="story-body-text" itemprop="articleBody">His alert added to concerns that bubbles may be forming in parts of the country&#8217;s property market.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Mr. Curry suggested that these loans were of greater concern than car loans and lending to already indebted companies.</strong></p>
+<p class="story-body-text" itemprop="articleBody">&#8220;While leveraged lending and auto lending remain concerns, CRE lending and concentration risk management has become an area of emphasis for regulators,&#8221; he said in a speech, referring to commercial real estate lending.<strong> &#8220;Our exams found looser underwriting standards with less-restrictive covenants, extended maturities, longer interest-only periods, limited guarantor requirements, and deficient-stress testing practices.&#8221;</strong></p>
+<p class="story-body-text" itemprop="articleBody">His remarks come after <strong>the Federal Reserve and the Federal Deposit Insurance Corporation said they would pay special attention to banks&#8217; commercial property lending.</strong> In spite of these concerns, banks have been expanding in this area.</p>
+<p class="story-body-text" itemprop="articleBody">Commercial real estate loans originated by banks in the first quarter jumped 44 percent from the same period in 2015 and banks&#8217; share of these loans has risen from over a third in 2014 to more than half in the first quarter of 2016.<br />
+<em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+<p class="story-body-text" itemprop="articleBody"><strong>MERGERS &amp; ACQUISITIONS Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>UniCredit and Santander Scramble to Save Asset Manager Merger</strong> UniCredit of Italy and Banco Santander of Spain are scrambling to save a plan to create one of Europe&#8217;s largest money managers after Britain&#8217;s vote to leave the European Union complicated the outlook for the deal, which is worth 5.3 billion euros, or about $5.9 billion.<br />
+<a href="//www.ft.com/cms/s/0/78990c48-4783-11e6-b387-64ab0a67014c.html?nl=dealbook&amp;emc=edit_dlbkam_20160712#axzz4E4fvddjx">THE FINANCIAL TIMES</a><br />
+<strong>Deutsche BÃ¶rse Lowers Threshold for London Stock Exchange</strong> Merger At least 60 percent of Deutsche BÃ¶rse&#8217;s outstanding shares must be tendered for the deal to be successful, down from 75 percent.<br />
+<a href="//www.nytimes.com/2016/07/12/business/dealbook/deutsche-borse-lowers-threshold-for-london-stock-exchange-merger.html?nl=dealbook&amp;emc=edit_dlbkam_20160712">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Valuation Quirks Help End Proposed Polycom-Mitel Merger</strong> Investors were unimpressed after both companies lost money while under threat from larger rivals like Cisco, Jeffrey Goldfarb writes in Breakingviews.<br />
+<a href="//www.nytimes.com/2016/07/12/business/dealbook/valuation-quirks-help-end-proposed-ploycom-mitel-merger.html?nl=dealbook&amp;emc=edit_dlbkam_20160712">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Online Security Company Said to Work With Qatalyst to Explore Sale</strong> Imperva, an online security company that has been targeted by Elliott Management, hired Qatalyst Partners to explore a sale after receiving unsolicited takeover interest, Bloomberg reports, citing people with knowledge of the matter.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-11/imperva-said-to-be-working-with-qatalyst-to-explore-a-sale?nl=dealbook&amp;emc=edit_dlbkam_20160712">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>ThyssenKrupp Confirms Talks With Tata Steel Over Possible Merger</strong> The German conglomerate ThyssenKrupp confirmed that it is in talks with Tata Steel of India and other steel groups over a potential tie-up, giving the strongest indication yet that the German company would help drive a new wave of expected consolidation in the beleaguered European steel sector.<br />
+<a href="//www.wsj.com/articles/germanys-thyssenkrupp-confirms-talks-with-tata-steel-over-possible-merger-1468255023?mod=asia_home&amp;nl=dealbook&amp;emc=edit_dlbkam_20160712">THE WALL STREET JOURNAL</a><br />
+<strong>Chinese Developer in Talks With Blackstone on Property Purchase</strong> China Vanke said it was working with other partners on a $1.9 billion acquisition of commercial property in China from the American group.<br />
+<a href="//www.nytimes.com/2016/07/13/business/dealbook/vanke-blackstone-china-property.html?nl=dealbook&amp;emc=edit_dlbkam_20160712">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160712"><strong>INVESTMENT BANKING Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Jamie Dimon of JPMorgan: Why We&#8217;re Giving Our Employees a Raise</strong> Wages for many Americans have gone nowhere for too long. So I&#8217;m announcing an increase for 18,000 of my workers.<br />
+<a href="//www.nytimes.com/2016/07/12/opinion/jamie-dimon-why-were-giving-our-employees-a-raise.html?nl=dealbook&amp;emc=edit_dlbkam_20160712">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Goldman Sachs Informs Regulator of 55 More Job Cuts in New York</strong> About half are traders and salesmen in the securities division, with the rest scattered across other units, Bloomberg reports, citing a person briefed on the matter.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-11/goldman-sachs-informs-regulator-of-55-more-job-cuts-in-new-york?nl=dealbook&amp;emc=edit_dlbkam_20160712">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Citi Bolsters Equities Team to Exploit Uncertainty About &#8216;Brexit&#8217;</strong> Citigroup is increasing its European strategic equities team to meet higher client demand for solutions to deal with the financial fallout of the Britain&#8217;s decision to leave the European Union.<br />
+<a href="//www.ft.com/cms/s/0/a4c28fe0-4767-11e6-8d68-72e9211e86ab.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct&amp;nl=dealbook&amp;emc=edit_dlbkam_20160712#axzz4E4fvddjx">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Investors Scan the Murky Waters of Britain&#8217;s Future</strong> As Britain&#8217;s chancellor proclaims a commitment to global free trade, many are skeptical of prospects while alienated from European trading partners.<br />
+<a href="//www.nytimes.com/2016/07/12/business/dealbook/brexit-economy-trade-george-osborne.html?nl=dealbook&amp;emc=edit_dlbkam_20160712">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Osborne Said to Intervene in HSBC Money Laundering Investigation</strong> The British chancellor, George Osborne, sought to help HSBC avoid criminal charges in the United States for money laundering by warning that a heavy-handed approach from the authorities could plunge the global financial system into turmoil, according to a House committee report prepared by the Republicans.<br />
+<a href="//www.ft.com/cms/s/0/2be49f84-47c9-11e6-b387-64ab0a67014c.html?nl=dealbook&amp;emc=edit_dlbkam_20160712#axzz4E4fvddjx">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>For the latest updates, go to <a href="//www.nytimes.com/pages/business/dealbook/index.html">NYTimes.com/DealBook</a></strong></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160712">VENTURE CAPITAL Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>PokÃ©mon Go Brings Augmented Reality to a Mass Audience</strong> PokÃ©mon Go is the work of a start-up, Niantic, which was created inside Google and spun out of the company last year.<br />
+<a href="//www.nytimes.com/2016/07/12/technology/pokemon-go-brings-augmented-reality-to-a-mass-audience.html?nl=dealbook&amp;emc=edit_dlbkam_20160712">NYT Â»</a> | <a href="//www.nytimes.com/2016/07/12/nyregion/pokemon-players-take-their-hunt-to-the-streets-of-new-york.html?nl=dealbook&amp;emc=edit_dlbkam_20160712">POKÃMON PLAYERS TAKE THEIR HUNT TO THE STREETS OF NEW YORK</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Lyft Says It Is Likely to Expand Overseas</strong> John Zimmer, the president and co-founder of Lyft, the second-largest ride-hailing company in the United States, said that the company would &#8220;very likely&#8221; expand to other countries.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-11/lyft-is-very-likely-to-expand-outside-u-s-co-founder-says?nl=dealbook&amp;emc=edit_dlbkam_20160712">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160712"><strong>LEGAL/REGULATORY Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Can We Ignore the Alarm Bells the Bond Market Is Ringing?</strong> Interest rates are ultralow across the globe. Here&#8217;s what that may be telling us about the economic future.<br />
+<a href="//www.nytimes.com/2016/07/12/upshot/can-we-ignore-the-alarm-bells-the-bond-market-is-ringing.html?nl=dealbook&amp;emc=edit_dlbkam_20160712">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Judge Rejects New Trial for Sumner Redstone&#8217;s Ex-Girlfriend</strong> Manuela Herzer, an ex-girlfriend of the media mogul Sumner Redstone, will not be granted a new trial over her lawsuit that challenged the 93-year-old&#8217;s mental competence, a California judge said in a tentative ruling on Monday.<br />
+<a href="//www.nytimes.com/reuters/2016/07/11/us/11reuters-viacom-redstone-herzer.html?nl=dealbook&amp;emc=edit_dlbkam_20160712">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Volkswagen Profits at Risk of Seizure Under German Investigation</strong> German prosecutors widened an investigation into Volkswagen&#8217;s emissions cheating, potentially paving the way for hundreds of millions of euros in penalties on top of the $15.3 billion settlement in the United States.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-11/vw-s-diesel-cheat-profits-risk-seizure-under-german-probe?nl=dealbook&amp;emc=edit_dlbkam_20160712">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Johnson Controls Settles China Corruption Case With S.E.C.</strong> The commission said a Chinese subsidiary of the company used &#8220;sham&#8221; vendors to make $4.9 million in payments to employees of Chinese government-owned shipyards.<br />
+<a href="//www.wsj.com/articles/johnson-controls-settles-china-corruption-case-with-sec-1468276763?mod=asia_home&amp;nl=dealbook&amp;emc=edit_dlbkam_20160712">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Trump and U.S. Chamber of Commerce Pull No Punches on Trade</strong> Policy Differences over trade policies have led to an acrimonious relationship between the business association and the presumptive Republican nominee.<br />
+<a href="//www.nytimes.com/2016/07/12/business/us-chamber-of-commerce-donald-trump.html?nl=dealbook&amp;emc=edit_dlbkam_20160712">NYT Â»Â </a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Obama Offers Ways to Improve His Health Care Law</strong> The president suggested creating a public plan like Medicare to promote competition and criticized pharmaceutical companies for failing to lower drug prices.<br />
+<a href="//www.nytimes.com/2016/07/12/us/politics/affordable-care-act-obamacare.html?nl=dealbook&amp;emc=edit_dlbkam_20160712">NYT Â»</a></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/07/12/morning-agenda-s-e-c-said-to-be-investigating-tesla/"
+					data-title="Morning Agenda:  S.E.C. Said to Be Investigating Tesla"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Xerox Said to Be in Talks to Buy R.R. Donnelley | Regulator Warning Over Banks&#039; Property Lending&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/12/morning-agenda-s-e-c-said-to-be-investigating-tesla/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":50,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

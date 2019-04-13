@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004389687"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1462529793" />
+<meta name="PUD" content="20160506" />
+<meta name="pdate" content="20160506" />
+<meta name="ptime" content="20160506061633" />
+<meta name="utime" content="20160506101633" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-05-06T10:16:33-04:00" />
+<meta name="DISPLAYDATE" content="May 6, 2016" />
+<meta name="dat" content="May 6, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Clinton, Hillary Rodham;Redstone, Sumner M;Trump, Donald J;Warren, Kelcy (1955- );Winklevoss, Cameron;Winklevoss, Tyler;Wright, Craig Steven (1970- )">
+<meta name="des" content="Admissions Standards;Antitrust Laws and Competition Issues;Banking and Financial Institutions;Bitcoin (Currency);Graduate Record Examination (GRE);Hedge Funds;Initial Public Offerings;Legal Profession;Mergers, Acquisitions and Divestitures;Ponzi and Pyramid Schemes;Tests and Examinations">
+<meta name="org" content="Alpha Natural Resources Inc;Cravath Swaine &amp; Moore;Dune Capital Management;Energy Transfer Equity LP;European Union;Federal Reserve Bank of New York;Goldman Sachs Group Inc;Internal Revenue Service;JPMorgan Chase &amp; Company;Latham &amp; Watkins LLP;Law School Admissions Council;Medivation Inc;MetLife Inc;Pfizer Inc;Republican Party;Sanofi SA;SWIFT(Society for Worldwide Interbank Financial Telecommunication);Williams Companies Inc">
+<meta property="article:tag" content="Clinton Hillary Rodham" />
+<meta property="article:tag" content="Redstone Sumner M" />
+<meta property="article:tag" content="Trump Donald J" />
+<meta property="article:tag" content="Warren Kelcy (1955- )" />
+<meta property="article:tag" content="Winklevoss Cameron" />
+<meta property="article:tag" content="Winklevoss Tyler" />
+<meta property="article:tag" content="Wright Craig Steven (1970- )" />
+<meta property="article:tag" content="Admissions Standards" />
+<meta property="article:tag" content="Antitrust Laws and Competition Issues" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Bitcoin (Currency)" />
+<meta property="article:tag" content="Graduate Record Examination (GRE)" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Legal Profession" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Ponzi and Pyramid Schemes" />
+<meta property="article:tag" content="Tests and Examinations" />
+<meta property="article:tag" content="Alpha Natural Resources Inc" />
+<meta property="article:tag" content="Cravath Swaine &amp; Moore" />
+<meta property="article:tag" content="Dune Capital Management" />
+<meta property="article:tag" content="Energy Transfer Equity LP" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="Federal Reserve Bank of New York" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Internal Revenue Service" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="Latham &amp; Watkins LLP" />
+<meta property="article:tag" content="Law School Admissions Council" />
+<meta property="article:tag" content="Medivation Inc" />
+<meta property="article:tag" content="MetLife Inc" />
+<meta property="article:tag" content="Pfizer Inc" />
+<meta property="article:tag" content="Republican Party" />
+<meta property="article:tag" content="Sanofi SA" />
+<meta property="article:tag" content="SWIFT(Society for Worldwide Interbank Financial Telecommunication)" />
+<meta property="article:tag" content="Williams Companies Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Clinton Hillary Rodham,Redstone Sumner M,Trump Donald J,Warren Kelcy (1955- ),Winklevoss Cameron,Winklevoss Tyler,Wright Craig Steven (1970- ),Admissions Standards,Antitrust Laws and Competition Issues,Banking and Financial Institutions,Bitcoin (Currency),Graduate Record Examination (GRE),Hedge Funds,Initial Public Offerings,Legal Profession,Mergers Acquisitions and Divestitures,Ponzi and Pyramid Schemes,Tests and Examinations,Alpha Natural Resources Inc,Cravath Swaine &amp; Moore,Dune Capital Management,Energy Transfer Equity LP,European Union,Federal Reserve Bank of New York,Goldman Sachs Group Inc,Internal Revenue Service,JPMorgan Chase &amp; Company,Latham &amp; Watkins LLP,Law School Admissions Council,Medivation Inc,MetLife Inc,Pfizer Inc,Republican Party,Sanofi SA,SWIFT(Society for Worldwide Interbank Financial Telecommunication),Williams Companies Inc,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F05%2F06%2Fmorning-agenda-donald-trump-names-hedge-fund-manager-as-national-finance-chairman%2F" title="Morning Agenda:  Donald Trump Names Hedge Fund Manager as National Finance Chairman" />
+<meta name="description" content="Energy Transfer Sees a Way Out of Its Deal With Williams &#124; A Tussle Over Law School&#8217;s Acceptance of GRE Test Scores" />
+<meta name="hdl" content="Morning Agenda:  Donald Trump Names Hedge Fund Manager as National Finance Chairman" />
+<meta property="og:title" content="Morning Agenda:  Donald Trump Names Hedge Fund Manager as National Finance Chairman" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/05/06/morning-agenda-donald-trump-names-hedge-fund-manager-as-national-finance-chairman/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Energy Transfer Sees a Way Out of Its Deal With Williams &#124; A Tussle Over Law School&#8217;s Acceptance of GRE Test Scores" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda:  Donald Trump Names Hedge Fund Manager as National Finance Chairman" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/05/06/morning-agenda-donald-trump-names-hedge-fund-manager-as-national-finance-chairman/" />
+<meta name="twitter:description" content="Energy Transfer Sees a Way Out of Its Deal With Williams &#124; A Tussle Over Law School&#8217;s Acceptance of GRE Test Scores" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Consumer Agency Moves to Assert Bank Customers&#8217; Right to Sue' href='//news.blogs.nytimes.com/2016/05/05/morning-agenda-consumer-agency-moves-to-assert-bank-customers-right-to-sue/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/05/06/what-were-reading-151/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/05/06/morning-agenda-donald-trump-names-hedge-fund-manager-as-national-finance-chairman/' />
+<link rel='shortlink' href='//nyti.ms/1Trt8IH' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/05/06/morning-agenda-donald-trump-names-hedge-fund-manager-as-national-finance-chairman/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda:  Donald Trump Names Hedge Fund Manager as National Finance Chairman - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4740 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda:  Donald Trump Names Hedge Fund Manager as National Finance Chairman        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/05/06/morning-agenda-donald-trump-names-hedge-fund-manager-as-national-finance-chairman/"
+	 data-title="Morning Agenda:  Donald Trump Names Hedge Fund Manager as National Finance Chairman"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Energy Transfer Sees a Way Out of Its Deal With Williams | A Tussle Over Law School&#039;s Acceptance of GRE Test Scores&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/06/morning-agenda-donald-trump-names-hedge-fund-manager-as-national-finance-chairman/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 6, 2016 6:16 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda:  Donald Trump Names Hedge Fund Manager as National Finance Chairman</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-05-06T10:16:33+00:00" itemprop="datePublished">May 6, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">May 6, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4740 post type-post status-publish hentry category-dealbook tag-admissions-standards tag-alpha-natural-resources-inc tag-antitrust-laws-and-competition-issues tag-banking-and-financial-institutions tag-bitcoin-currency tag-clinton-hillary-rodham tag-cravath-swaine-moore tag-dune-capital-management tag-energy-transfer-equity-lp tag-european-union tag-federal-reserve-bank-of-new-york tag-goldman-sachs-group-inc tag-graduate-record-examination-gre tag-hedge-funds tag-initial-public-offerings tag-internal-revenue-service tag-jpmorgan-chase-company tag-latham-watkins-llp tag-law-school-admissions-council tag-legal-profession tag-medivation-inc tag-mergers-acquisitions-and-divestitures tag-metlife-inc tag-pfizer-inc tag-ponzi-and-pyramid-schemes tag-redstone-sumner-m tag-republican-party tag-sanofi-sa tag-swiftsociety-for-worldwide-interbank-financial-telecommunication tag-tests-and-examinations tag-trump-donald-j tag-warren-kelcy-1955 tag-williams-companies-inc tag-winklevoss-cameron tag-winklevoss-tyler tag-wright-craig-steven-1970 per-clinton-hillary-rodham per-redstone-sumner-m per-trump-donald-j per-warren-kelcy-1955 per-winklevoss-cameron per-winklevoss-tyler per-wright-craig-steven-1970 des-admissions-standards des-antitrust-laws-and-competition-issues des-banking-and-financial-institutions des-bitcoin-currency des-graduate-record-examination-gre des-hedge-funds des-initial-public-offerings des-legal-profession des-mergers-acquisitions-and-divestitures des-ponzi-and-pyramid-schemes des-tests-and-examinations org-alpha-natural-resources-inc org-cravath-swaine-moore org-dune-capital-management org-energy-transfer-equity-lp org-european-union org-federal-reserve-bank-of-new-york org-goldman-sachs-group-inc org-internal-revenue-service org-jpmorgan-chase-company org-latham-watkins-llp org-law-school-admissions-council org-medivation-inc org-metlife-inc org-pfizer-inc org-republican-party org-sanofi-sa org-swiftsociety-for-worldwide-interbank-financial-telecommunication org-williams-companies-inc" id="post-4740">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda:  Donald Trump Names Hedge Fund Manager as National Finance Chairman</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-05-06T10:16:33+00:00" itemprop="datePublished">May 6, 2016 6:16 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 6, 2016 6:16 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/05/06/morning-agenda-donald-trump-names-hedge-fund-manager-as-national-finance-chairman/" data-title="Morning Agenda:  Donald Trump Names Hedge Fund Manager as National Finance Chairman" data-description="Energy Transfer Sees a Way Out of Its Deal With Williams | A Tussle Over Law School&#039;s Acceptance of GRE Test Scores">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DONALD TRUMP NAMES HEDGE FUND MANAGER AS NATIONAL FINANCE CHAIRMAN</strong> <span class="divider"> | </span></span> Donald J. Trump is turning his attention to the general election and has started reaching out to the Republican establishment as he seeks to unite the party behind his candidacy, <a href="//www.nytimes.com/2016/05/06/us/politics/donald-trump-gop.html">Ashley Parker and Maggie Haberman report in The New York Times.</a> </p>
+<p class="story-body-text" itemprop="articleBody">His team is trying to transform a lean operation into a national presidential campaign apparatus and is <b>still grappling with a rapid expansion</b>. There are persistent reports of tensions between Corey Lewandowski, the campaign manager, and Paul Manafort, the newly installed senior adviser.</p>
+<p class="story-body-text" itemprop="articleBody">The campaign plans to put in place a transition team  to prepare for a Trump administration and <b>has announced Steve Mnuchin, the chairman and chief of Dune Capital Management, as national finance chairman.</b> </p>
+<p class="story-body-text" itemprop="articleBody">âSteven is a professional at the highest level with an extensive and very successful financial background,â Mr. Trump said in a statement. âHe brings unprecedented experience and expertise to a fundraising operation that will benefit the Republican Party and ultimately defeat Hillary Clinton.â </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.bloomberg.com/politics/articles/2016-05-05/trump-names-hedge-fund-manager-as-national-finance-chairman">Bloomberg reports</a> that Mr. Mnuchin said he had been asked to join the campaign after Mr. Trump won the New York primary. âHeâs bringing a lot of people into the party who have not been part of the party in the past,â Mr. Mnuchin said. <b>âDonaldâs appeal is way beyond the traditional political candidates, and what he stands for and represents is a completely new approach.â</b> </p>
+<p class="story-body-text" itemprop="articleBody">The two men have done business together, but Mr. Mnuchin declined to comment further on the nature of their dealings. He said he liked Mr. Trumpâs economic platform, including his plan to simplify the tax code. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Trump had excoriated hedge fund managers for <b>âgetting away with murderâ</b> with their use of the carried interest loophole, which gives private equity firms and hedge fund managers preferential tax treatment. Mr. Mnuchin also declined to comment on that, but he did say he had received calls from fellow hedge fund managers and others on Wall Street expressing their support. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Mnuchin has, like Mr. Trump, <b>given money to the Democrats</b>. He contributed more than $7,000 to Hillary Clintonâs New York Senate bids in 2000 and 2006, according to federal contribution data on OpenSecrets, <a href="//www.politico.com/story/2016/05/trump-names-national-finance-chair-222846">Politico reports.</a> He also contributed $2,000 to Barack Obamaâs 2004 Senate campaign and $2,300 for his presidential bid in 2007. </p>
+<p class="story-body-text" itemprop="articleBody">In all, <b>he has donated more than $120,000 over the past two decades to both Democratic and Republican candidates</b>, with about $64,000 going to Democratic candidates.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ENERGY TRANSFER SEES A WAY OUT OF ITS DEAL WITH WILLIAMS</strong> <span class="divider"> | </span></span> Kelcy Warren, the chief executive of Energy Transfer Equity, thinks he may have found a way to get out of an ironclad merger agreement with Williams Companies, </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/05/06/business/dealbook/energy-transfer-sees-a-way-out-of-its-williams-pipeline-deal.html?ref=dealbook">Leslie Picker reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody"><b>His efforts so far have only got him and the company sued.</b> </p>
+<p class="story-body-text" itemprop="articleBody">The companyâs outside legal adviser, Latham &#038; Watkins, has said it was unable to provide a certain tax opinion, a condition needed to close the deal. So on Thursday, on a conference call to discuss Energy Transferâs quarterly earnings, Mr. Warren said, <b>âWe canât close. We donât have a transaction that can close.â </b></p>
+<p class="story-body-text" itemprop="articleBody">âAbsent substantial restructuring of this transaction, which Energy Transfer has been very willing and actually desiring to do, absent that, we donât have a deal,â he added.</p>
+<p class="story-body-text" itemprop="articleBody"><b>This talk may just be theater.</b> Williams has not received a new proposal from Energy Transfer to restructure the deal, according to people briefed on those discussions. Williams has not received a termination notice either. </p>
+<p class="story-body-text" itemprop="articleBody">Because of the market declines in the energy sector since the deal was signed, Williamsâs assets are now valued at far less than the $6 billion in cash its shareholders would receive from Energy Transfer, according to  Lathamâs argument. This could prompt the Internal Revenue Service to require them to recast the transactions, <b>making the assets suddenly taxable</b>. Cravath, Swaine &#038; Moore, the legal team for Williams, said it did not think recasting was necessary. </p>
+<p class="story-body-text" itemprop="articleBody">Robert Willens, an independent tax consultant said the I.R.S. would focus on the values that existed at the time the deal was signed, in September, as opposed to now.  Mr. Willens said the issues that Latham raised were ânot just totally hogwash,â but did say, âNow that weâre seeing such a dichotomy of opinion between the two law firms, <b>people canât help but think Latham is bending over backward to help their client.â</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> The report on the <b>employment situation for April</b> will be published at 8:30 a.m. The Brookings Institution event on the <b>implications of Britainâs referendum on membership to the European Union</b> will start at 9 a.m. The <b>NYU Stern/New York Fed Conference on Financial Intermediation</b> will also start at 9 a.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A TUSSLE OVER LAW SCHOOLâS ACCEPTANCE OF GRE TEST SCORES</strong> <span class="divider"> | </span></span> Arizona law school began accepting applicants who had taken only the more general GRE graduate admissions exam instead of the traditional Law School Admissions Test this week. The shift has engaged the legal professionâs gatekeepers in a fierce debate,<br />
+<a href="//www.nytimes.com/2016/05/06/business/dealbook/law-schools-acceptance-of-gre-test-scores-provokes-tussle.html?ref=dealbook">Elizabeth Olson reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">The move prompted <b>a scolding from the Law School Admissions Council</b>, which warned that it might expel the school from its network. </p>
+<p class="story-body-text" itemprop="articleBody">On Wednesday, about 150 law school deans, including Martha Minow from Harvard and Robert Post from Yale, <b>expressed their support for Arizona in a letter to the council</b>. They argued that âexperimentation benefits all of usâ and that kicking out Arizona âis unwarranted under the existing rules and sends a terrible message to law schools about experimentation in the admissions process.â </p>
+<p class="story-body-text" itemprop="articleBody">The tussle highlights a <b>growing frustration in legal academia</b>. Some law school deans see the standardized test as an impediment to their reaching new groups of potential applicants who could become law students. Critics of the LSAT say it is less useful than the GRE â it is a written exam and is offered only four times a year. The GRE is given by computer and offered more frequently during the year. </p>
+<p class="story-body-text" itemprop="articleBody">Kathryn Rubino, an editor at the legal industry blog Above the Law, wrote in a post that the law council âhas managed to <b>consolidate quite a bit of the power in the law school admissions game</b>, and they are not looking to share that anytime soon.â</p>
+<p class="story-body-text" itemprop="articleBody">Marc L. Miller, the dean of Arizonaâs law school, said it had received about 30 applications from GRE test-takers, and, so far, it has admitted three of them for the class entering this fall. And there could be more.</p>
+<p class="story-body-text" itemprop="articleBody">He also wrote a letter to the council, noting that curbing the schoolâs admissions policy <b>could raise antitrust issues</b> because restrictions âunreasonably restrain(s) the competition on law school admissions testing market.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sanofi Trades Volleys With Medivation in $9.3 Billion Offer</strong> <span class="divider"> | </span></span> The French drug maker said it believed it had âoverwhelming supportâ from Medivationâs shareholders for a merger, and Medivation still said no.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/06/business/dealbook/sanofi-threatens-to-take-medivation-offer-to-shareholders.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Pfizer Needs Clearer Goals" src="https://static01.nyt.com/images/2016/04/07/business/07DB-PFIZERsub/07DB-PFIZERsub-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Pfizer Needs Clearer Goals</strong> <span class="divider"> | </span></span> As the drug giant weighs its options, setting a strategy would be better than keeping all doors open, Robert Cyran writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/06/business/dealbook/pfizer-needs-clearer-goals.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="NRG Steps Back From Alternative Energy Ventures in Cost-Cutting Effort" src="https://static01.nyt.com/images/2016/05/06/business/06nrg1/06nrg1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>NRG Steps Back From Alternative Energy Ventures in Cost-Cutting Effort</strong> <span class="divider"> | </span></span> The company will pare its presence in its charging business for electric vehicles, and its home solar division will sell future customer agreements it originates to two partners.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/06/business/energy-environment/nrg-steps-back-from-alternative-energy-ventures-in-cost-cutting-effort.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Goldman Sachs Cuts More Jobs in Its Securities Business</strong> <span class="divider"> | </span></span> The latest cuts affected about 100 people this week, The Wall Street Journal reports, citing people familiar with the matter. <br /><span class="kicker"><a href="//www.wsj.com/articles/goldman-sachs-cuts-more-jobs-in-securities-business-1462480928?mod=asia_home">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JPMorgan Names New Global Head of Markets Execution</strong> <span class="divider"> | </span></span> JPMorgan has named David Hudson, its former chief financial officer of global markets, to a new role in charge of market structures where he will âassess emerging trends, technologies, electronic platforms and potential partnerships.â<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/d40e57f4-12ea-11e6-bb40-c30e3bfcf63b.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz47SdTfBfi">THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Shadow Lending Crackdown Seen as Forcing China Banks to Sell Bonds</strong> <span class="divider"> | </span></span> A crackdown on banks hiding bad loans in China looks set to prompt a flood of capital raising just as global investors warn of risks to the financial system.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-05/shadow-lending-crackdown-seen-forcing-china-banks-to-sell-bonds">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Singapore Banks Become a Hotbed for Fintech </strong> <span class="divider"> | </span></span> Singapore, where the government and the financial regulator are taking concrete steps to support innovation, has become a test bed for the use of new technology in Asia.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/7dc5fcb0-1120-11e6-91da-096d89bd2173.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz47SdTfBfi">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>MetLife Cuts Hedge Fund Portfolio </strong> <span class="divider"> | </span></span> Metlife, the life insurance and pensions group, which has about $1.8 billion invested in hedge funds, said Thursday that it would reduce its exposure by about two-thirds over the next two years.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/4640081c-12d3-11e6-91da-096d89bd2173.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz47SdTfBfi">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Leapfrogging the I.P.O. Gridlock</strong> <span class="divider"> | </span></span> Chinese firms looking to jump an extensive line of companies seeking to complete initial public offerings are increasingly going through the backdoor by taking control of companies that already have coveted listing status.<br /><span class="kicker"><a href="//www.reuters.com/article/us-china-ipo-idUSKCN0XW2HV">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sumner Redstone Video Testimony Will Open His Competency Trial</strong> <span class="divider"> | </span></span> The first day will present Mr. Redstone and Philippe Dauman, chief of Viacom, both on video, as well as a psychiatrist who evaluated Mr. Redstone.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/06/business/media/sumner-redstone-video-testimony-will-open-his-competency-trial.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New Rules Requires Banks to Identify Shell Company Owners </strong> <span class="divider"> | </span></span> The Obama administration is issuing a long-delayed rule requiring the financial industry to identify the real owners of companies and proposing a bill that would require companies to report the identities of their owners to the federal government. <br /><span class="kicker"><a href="//www.reuters.com/article/usa-regulations-finance-idUSL2N18302K?feedType=RSS&#038;feedName=USLegal">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Donald Trump Is Coherent on Monetary Policy, but Not on Debt" src="https://static01.nyt.com/images/2016/05/06/upshot/06UP-Fed/06UP-Fed-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Donald Trump Is Coherent on Monetary Policy, but Not on Debt</strong> <span class="divider"> | </span></span> He made an offhand comment that, if taken literally, would amount to threatening to undermine the United Statesâ creditworthiness.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/06/upshot/donald-trump-is-coherent-on-monetary-policy-but-not-on-debt.html">The Upshot &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bangladesh Central Banker to Meet With Fedâs William Dudley and Top Swift Officials</strong> <span class="divider"> | </span></span> Fazle Kabir, governor of Bangladesh Bank, will meet with the president of the Federal Reserve Bank of New York, William Dudley, and senior Swift officials in Basel, Switzerland, on Tuesday in a bid to speed up recovery of $81 million stolen from the South Asian countryâs account at the Fed, a Bangladeshi official said.<br /><span class="kicker"><a href="//www.wsj.com/articles/bangladesh-central-banker-to-meet-with-feds-william-dudley-and-top-swift-officials-1462482883?mod=asia_home">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Australian Ends Effort to Prove He Founded Bitcoin" src="https://static01.nyt.com/images/2016/05/06/business/06db-bitcoin/06db-bitcoin-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Australian Ends Effort to Prove He Founded Bitcoin</strong> <span class="divider"> | </span></span> Craig Steven Wright has claimed to be the creator of the online currency, but on Thursday he withdrew an offer to provide more evidence.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/06/business/dealbook/australian-ends-attempt-to-prove-he-founded-bitcoin.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Regulator Approves Winklevoss Bid to Trade Digital Currency </strong> <span class="divider"> | </span></span> New York State has approved the application of Gemini Trust Company, founded by the investors Tyler and Cameron Winklevoss, to trade the digital currency ether on its bitcoin exchange, Governor Andrew Cuomo announced on Thursday.<br /><span class="kicker"><a href="//www.reuters.com/article/usa-winklevoss-ether-idUSL2N18222Q?feedType=RSS&#038;feedName=USLegal">REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China Warns Asset Managers About âPonzi Schemeâ Risks</strong> <span class="divider"> | </span></span> China is trying to clean up a finance industry troubled by growing failures of investment firms and online lenders. In December, the nationâs biggest-ever Ponzi scheme was exposed after the Internet lender Ezubo reportedly defrauded more than 900,000 people out of the equivalent of $7.6 billion in 18 months.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-06/china-ponzi-warning-to-asset-managers-cites-illicit-cash-pools">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Watchdog Casts Cloud Over Alpha Natural Resources Restructuring </strong> <span class="divider"> | </span></span> The restructuring plan of  the bankrupt Alpha Natural Resources could be held up because a unit of the consulting firm McKinsey  failed to fully disclose connections with potential buyers of the coal minerâs assets, a  bankruptcy watchdog warned this week.<br /><span class="kicker"><a href="//www.reuters.com/article/alpha-ntrl-resc-bankruptcy-sale-idUSL2N1822B6?feedType=RSS&#038;feedName=USLegal">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="âBrexitâ Vote Stokes Fear on the Rock" src="https://static01.nyt.com/images/2016/04/29/nytnow/29Gibraltar-web1/29Gibraltar-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>âBrexitâ Vote Stokes Fear on the Rock</strong> <span class="divider"> | </span></span> Gibraltarâs residents worry that a British departure from the European Union would cut them off from Europe and make them vulnerable to Spain.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/06/world/europe/gibraltar-brexit-vote.html">Memo From Gibraltar &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/05/06/morning-agenda-donald-trump-names-hedge-fund-manager-as-national-finance-chairman/"
+					data-title="Morning Agenda:  Donald Trump Names Hedge Fund Manager as National Finance Chairman"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Energy Transfer Sees a Way Out of Its Deal With Williams | A Tussle Over Law School&#039;s Acceptance of GRE Test Scores&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/06/morning-agenda-donald-trump-names-hedge-fund-manager-as-national-finance-chairman/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":75,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

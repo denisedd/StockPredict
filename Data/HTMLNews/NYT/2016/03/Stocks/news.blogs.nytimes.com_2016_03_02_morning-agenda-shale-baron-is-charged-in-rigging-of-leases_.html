@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004245615"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1456916169" />
+<meta name="PUD" content="20160302" />
+<meta name="pdate" content="20160302" />
+<meta name="ptime" content="20160302055609" />
+<meta name="utime" content="20170918184321" />
+<meta property="article:modified_time" itemprop="dateModified" content="2017-09-18T18:43:21-04:00" />
+<meta name="DISPLAYDATE" content="March 2, 2016" />
+<meta name="dat" content="March 2, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Trump, Donald J">
+<meta name="des" content="Anheuser-Busch InBev NV;Argentina;Beer;Bitcoin (Currency);Bribery and Kickbacks;Dimon, James;Drilling and Boring;Hedge Funds;High-Frequency and Flash Trading;Mortgages;Olympus Corp;Shale;Shareholder Rights and Activism;Stocks and Bonds;Wells Fargo &amp; Company">
+<meta name="org" content="Alibaba Group Holding Ltd;Apollo Global Management L.L.C;Ball Corporation;Barclays PLC;Brazil;Chesapeake Energy Corporation;China;Facebook Inc;Honeywell International Inc;Justice Department;KKR &amp; Co LP;Rexam PLC.;Securities and Exchange Commission;The Blackstone Group;United Technologies Corporation">
+<meta name="geo" content="India">
+<meta name="ticker" content="Barclays PLC|BCS|NYSE;Facebook Inc|FB|NASDAQ;Honeywell International Inc|HON|NYSE;United Technologies Corporation|UTX|NYSE" />
+<meta property="article:tag" content="Trump Donald J" />
+<meta property="article:tag" content="Anheuser-Busch InBev NV" />
+<meta property="article:tag" content="Argentina" />
+<meta property="article:tag" content="Beer" />
+<meta property="article:tag" content="Bitcoin (Currency)" />
+<meta property="article:tag" content="Bribery and Kickbacks" />
+<meta property="article:tag" content="Dimon James" />
+<meta property="article:tag" content="Drilling and Boring" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="High-Frequency and Flash Trading" />
+<meta property="article:tag" content="Mortgages" />
+<meta property="article:tag" content="Olympus Corp" />
+<meta property="article:tag" content="Shale" />
+<meta property="article:tag" content="Shareholder Rights and Activism" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Wells Fargo &amp; Company" />
+<meta property="article:tag" content="Alibaba Group Holding Ltd" />
+<meta property="article:tag" content="Apollo Global Management L.L.C" />
+<meta property="article:tag" content="Ball Corporation" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="Brazil" />
+<meta property="article:tag" content="Chesapeake Energy Corporation" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Facebook Inc" />
+<meta property="article:tag" content="Honeywell International Inc" />
+<meta property="article:tag" content="Justice Department" />
+<meta property="article:tag" content="KKR &amp; Co LP" />
+<meta property="article:tag" content="Rexam PLC." />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="United Technologies Corporation" />
+<meta property="article:tag" content="India" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Trump Donald J,Anheuser-Busch InBev NV,Argentina,Beer,Bitcoin (Currency),Bribery and Kickbacks,Dimon James,Drilling and Boring,Hedge Funds,High-Frequency and Flash Trading,Mortgages,Olympus Corp,Shale,Shareholder Rights and Activism,Stocks and Bonds,Wells Fargo &amp; Company,Alibaba Group Holding Ltd,Apollo Global Management L.L.C,Ball Corporation,Barclays PLC,Brazil,Chesapeake Energy Corporation,China,Facebook Inc,Honeywell International Inc,Justice Department,KKR &amp; Co LP,Rexam PLC.,Securities and Exchange Commission,The Blackstone Group,United Technologies Corporation,India,DealBook" />
+<meta name="news_keywords" content="Beer,India,Mortgage loan,Shale" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F03%2F02%2Fmorning-agenda-shale-baron-is-charged-in-rigging-of-leases%2F" title="Morning Agenda: Shale Baron Is Charged in Rigging of Leases" />
+<meta name="description" content="Tenure Voting Could Shift Power Balance &#124; SABMiller Sells Stake in Top Beer &#124; Even Traders Are Confused by Stock Exchange Prices" />
+<meta name="hdl" content="Morning Agenda: Shale Baron Is Charged in Rigging of Leases" />
+<meta property="og:title" content="Morning Agenda: Shale Baron Is Charged in Rigging of Leases" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/03/02/morning-agenda-shale-baron-is-charged-in-rigging-of-leases/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Tenure Voting Could Shift Power Balance &#124; SABMiller Sells Stake in Top Beer &#124; Even Traders Are Confused by Stock Exchange Prices" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Shale Baron Is Charged in Rigging of Leases" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/03/02/morning-agenda-shale-baron-is-charged-in-rigging-of-leases/" />
+<meta name="twitter:description" content="Tenure Voting Could Shift Power Balance &#124; SABMiller Sells Stake in Top Beer &#124; Even Traders Are Confused by Stock Exchange Prices" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/03/01/what-were-reading-132/' />
+<link rel='next' title='Morning Agenda: Rattling the Framework of Postcrisis Regulation' href='//news.blogs.nytimes.com/2016/03/03/morning-agenda-rattling-the-framework-of-postcrisis-regulation/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/03/02/morning-agenda-shale-baron-is-charged-in-rigging-of-leases/' />
+<link rel='shortlink' href='//nyti.ms/1QKQqYF' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/03/02/morning-agenda-shale-baron-is-charged-in-rigging-of-leases/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Shale Baron Is Charged in Rigging of Leases - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4337 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Shale Baron Is Charged in Rigging of Leases        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/03/02/morning-agenda-shale-baron-is-charged-in-rigging-of-leases/"
+	 data-title="Morning Agenda: Shale Baron Is Charged in Rigging of Leases"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Tenure Voting Could Shift Power Balance | SABMiller Sells Stake in Top Beer | Even Traders Are Confused by Stock Exchange Prices&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/03/02/morning-agenda-shale-baron-is-charged-in-rigging-of-leases/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="March 2, 2016 5:56 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Shale Baron Is Charged in Rigging of Leases</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-03-02T10:56:09+00:00" itemprop="datePublished">March 2, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">March 2, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4337 post type-post status-publish hentry category-dealbook tag-alibaba-group-holding-ltd tag-anheuser-busch-inbev-nv tag-apollo-global-management-l-l-c tag-argentina tag-ball-corporation tag-barclays-plc tag-beer tag-bitcoin-currency tag-brazil tag-bribery-and-kickbacks tag-chesapeake-energy-corporation tag-china tag-dimon-james tag-drilling-and-boring tag-facebook-inc tag-hedge-funds tag-high-frequency-and-flash-trading tag-honeywell-international-inc tag-india tag-justice-department tag-kkr-co-lp tag-mortgages tag-olympus-corp tag-rexam-plc tag-securities-and-exchange-commission tag-shale tag-shareholder-rights-and-activism tag-stocks-and-bonds tag-the-blackstone-group tag-trump-donald-j tag-united-technologies-corporation tag-wells-fargo-company per-trump-donald-j des-anheuser-busch-inbev-nv des-argentina des-beer des-bitcoin-currency des-bribery-and-kickbacks des-dimon-james des-drilling-and-boring des-hedge-funds des-high-frequency-and-flash-trading des-mortgages des-olympus-corp des-shale des-shareholder-rights-and-activism des-stocks-and-bonds des-wells-fargo-company org-alibaba-group-holding-ltd org-apollo-global-management-l-l-c org-ball-corporation org-barclays-plc org-brazil org-chesapeake-energy-corporation org-china org-facebook-inc org-honeywell-international-inc org-justice-department org-kkr-co-lp org-rexam-plc org-securities-and-exchange-commission org-the-blackstone-group org-united-technologies-corporation geo-india news_keywords-beer news_keywords-india news_keywords-mortgage-loan news_keywords-shale" id="post-4337">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Shale Baron Is Charged in Rigging of Leases</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-03-02T10:56:09+00:00" itemprop="datePublished">March 2, 2016 5:56 am</time>
+			<!-- date updated --><span class="visually-hidden updated">March 2, 2016 5:56 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/03/02/morning-agenda-shale-baron-is-charged-in-rigging-of-leases/" data-title="Morning Agenda: Shale Baron Is Charged in Rigging of Leases" data-description="Tenure Voting Could Shift Power Balance | SABMiller Sells Stake in Top Beer | Even Traders Are Confused by Stock Exchange Prices">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SHALE BARON IS CHARGED IN RIGGING OF LEASES</strong> <span class="divider"> | </span></span> The Justice Department charged Aubrey K. McClendon, an Oklahoma wildcatter, with conspiring to suppress the prices paid for oil and natural gas leases, </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/03/02/business/aubrey-mcclendon-is-charged-with-conspiracy-in-oil-and-natural-gas-bidding.html?ref=business">Clifford Krauss reports in The New York Times</a>.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Mr. McClendon is accused of orchestrating a conspiracy in which two oil and gas companies colluded not to bid against each other for the purchase of leases in northwestern Oklahoma from late 2007 to early 2012. </b></p>
+<p class="story-body-text" itemprop="articleBody">The Justice Department said the companies decided who would win the leases and the winner would allot an interest in the leases to the other company. </p>
+<p class="story-body-text" itemprop="articleBody">âHis actions put company profits ahead of the interests of leaseholders entitled to competitive bids for oil and gas rights on their land,â said William J. Baer, assistant attorney general for the antitrust division. </p>
+<p class="story-body-text" itemprop="articleBody">In a statement, <b>Mr. McClendon denied all charges</b> and argued that he has worked to create jobs and help Oklahomaâs economy while providing energy for the country. </p>
+<p class="story-body-text" itemprop="articleBody">âThe charge that has been filed against me today is wrong and unprecedented,â he said. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. McClendon, an audacious chief executive at Chesapeake until he was forced to step down three years ago, became a billionaire as the company aggressively outbid competitors for land leases and drilled highly productive wells in virtually every major shale gas field in the country. </p>
+<p class="story-body-text" itemprop="articleBody">With him at the helm, <b>Chesapeake and a handful of other companies helped turn the United States into an energy exporter</b>  and pioneered hydraulic fracturing in newly explored shale fields. They ended up producing a glut of natural gas that sent them to the brink of bankruptcy as gas prices collapsed. </p>
+<p class="story-body-text" itemprop="articleBody">Chesapeakeâs stock price has been sinking for five years now, especially since it was revealed that Mr. McClendon had taken a personal stake in Chesapeake wells and used it as collateral for up to $1.1 billion in loans used mostly to pay for his share of the cost of drilling those wells. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Gordon Pennoyer, a spokesman for Chesapeake, said the company was cooperating with the antitrust investigation and did not expect to face prosecution or fines related to the matter.</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TENURE VOTING COULD SHIFT POWER BALANCE</strong> <span class="divider"> | </span></span> It is time to consider âtenure voting,â a system in which shareholders accumulate more votes the longer they hold stock,<br />
+<a href="//www.nytimes.com/2016/03/02/business/dealbook/tenure-voting-rewards-the-shareholder-for-sticking-around.html?ref=dealbook">Steven Davidoff Solomon writes in the Deal Professor column</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Dual-class stock is all the rage â <b>some 13.5 percent of initial public offerings included some type of dual-class structure</b>, according to Dealogic. </p>
+<p class="story-body-text" itemprop="articleBody">This creates a culture of âhavesâ and âhave-nots,â where a vote is worth everything or nothing. The founders control the company and wield influence more or less with impunity. </p>
+<p class="story-body-text" itemprop="articleBody">The idea can work well in principle, allowing the founders to look to the long term. And when one share counts for one vote, too often the vote doesnât count. </p>
+<p class="story-body-text" itemprop="articleBody"><b>But neither model reflects an increasingly complicated reality.</b> </p>
+<p class="story-body-text" itemprop="articleBody">In tenure voting, more votes are awarded for a longer holding period with the intention of empowering shareholders who stick with the company. The founders may still have a larger voting bloc, but <b>long-term institutional investors would grow over time, allowing some measured shareholder activism</b>. </p>
+<p class="story-body-text" itemprop="articleBody">There are indications that shareholders value the power to vote too. Googleâs âno voteâ shares, for example, trade at a small discount to its one-vote shares.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SABMILLER SELLS STAKE IN TOP BEER</strong> <span class="divider"> | </span></span> A state-backed brewer agreed to buy out SABMillerâs 49 percent stake in the maker of Snow, the worldâs best-selling beer,<br />
+<a href="//www.nytimes.com/2016/03/02/business/dealbook/sabmiller-said-to-be-in-talks-to-sell-stake-in-snow-brand.html?ref=dealbook">Chad Bray and Michael J. de la Merced report in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Anheuser-Busch InBev is hoping the sale to China Resources Beer will help ease regulatorsâ concerns about its nearly $104 billion merger with SABMiller. <b>The deal values SABMillerâs stake at about $1.6 billion and is one of several transactions being undertaken in order to appease regulators.</b> </p>
+<p class="story-body-text" itemprop="articleBody">SABMiller agreed to sell its stake in MillerCoors in the United States for about $12 billion in November. Asahi Group Holdings of Japan has also agreed to buy Peroni and Grolsch, as well as parts of SABMillerâs European operations, for about $2.8 billion. </p>
+<p class="story-body-text" itemprop="articleBody"><b>All these transactions are contingent on SABMiller and Anheuser-Busch Inbev completing their merger.</b> </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>Exxon Mobilâs</b> analyst meeting starts at 9 a.m. The February <b>ADP National Employment Report</b> will be published at 8:15 a.m.  <b>Madeleine Albright</b>, the former secretary of state, will be on Fox Business at 8:30 a.m. </p>
+<p class="story-body-text" itemprop="articleBody"><b>The Beige Book</b> will be published at 2. p.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>EVEN TRADERS ARE CONFUSED BY STOCK EXCHANGE PRICES</strong> <span class="divider"> | </span></span> Computer-driven American stock markets have become so complex that <b>at any moment in time more than 800 different pricing possibilities are being offered to trading firms across 12 official exchanges</b>, according to a report by the Royal Bank of Canada,<br />
+<a href="//www.nytimes.com/2016/03/02/business/dealbook/stock-exchange-prices-grow-so-convoluted-even-traders-are-confused-study-finds.html?ref=dealbook">Nathaniel Popper writes in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody">The complexity is a result, in part, of the constant jockeying among exchanges to win business from the biggest traders, many of which are so-called high-frequency trading firms that make money by capitalizing on small changes in prices. </p>
+<p class="story-body-text" itemprop="articleBody">RBC Capital Markets, found that the New York Stock Exchange, Nasdaq and other exchanges make frequent small tweaks to their prices, influencing trading behavior in ways that are hard for even sophisticated investors to understand. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Some big mutual fund companies said that before seeing the research even they had not realized how convoluted the system had become.</b> </p>
+<p class="story-body-text" itemprop="articleBody">At one exchange highlighted in the research, EDGX, the pricing tiers, for example, include the âInvestor Tier,â the âUltra Tier,â the âMega-Step-Up Tier 1â and the âMega-Step-Up Tier 2,â among others. These tiers, though, were just the first layer of complication that big investors have to navigate to determine the price of buying or selling a stock. </p>
+<p class="story-body-text" itemprop="articleBody">Because of the hundreds of pricing structures, the brokers actually buying and selling stocks can be given incentives to make decisions that are not in the best interest of clients. <b>The opaque pricing structures can make it nearly impossible for investors and even brokers to determine what they will pay for a given trade.</b></p>
+<p class="story-body-text" itemprop="articleBody">The research is likely to strengthen the hand of IEX, a company that is  asking regulators for approval to become an official stock exchange. </p>
+<p class="story-body-text" itemprop="articleBody">The founders of IEX were the protagonists in the Michael Lewis book âFlash Boysâ and are hoping to provide a more straightforward way to trade stocks. One tool they are proposing is a speed bump to slow down trading.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Hachette Reaches New Deal With Perseus Books" src="https://static01.nyt.com/images/2016/03/02/business/02publish1/02publish1-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hachette Reaches New Deal With Perseus Books</strong> <span class="divider"> | </span></span> Hachette, which sought to buy Perseus Books in a 2014 deal that collapsed, announced that it would buy Perseusâs publishing arm.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/02/business/media/hachette-again-reaches-deal-with-perseus-books.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Honeywell, Facing Resistance, Drops Bid for United Technologies" src="https://static01.nyt.com/images/2016/03/02/business/db-honeywell1/db-honeywell1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Honeywell, Facing Resistance, Drops Bid for United Technologies</strong> <span class="divider"> | </span></span> Honeywell said it was withdrawing its $90 billion takeover offer after its rival steadfastly argued that a union would be blocked by regulators.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/02/business/dealbook/honeywell-facing-resistance-drops-bid-for-united-technologies.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Jack Maâs Ant Financial Said to Be in Talks Over Stake in Business Magazine</strong> <span class="divider"> | </span></span> Alibaba Group Holdingâs financial affiliate is in talks to invest in the Chinese business magazine publisher Caixin Media as billionaire founder Jack Ma expands his media interests, Bloomberg News reports, citing two people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-02/jack-ma-s-ant-financial-said-to-be-in-talks-to-invest-in-caixin-ilacx3gj">bloomberg news </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>L.S.E. and Deutsche BÃ¶rse Do âStreet Sweepâ to Hinder Rivals</strong> <span class="divider"> | </span></span> London Stock Exchange Group and Deutsche BÃ¶rse have gone on a hiring spree for banks in a so-called street sweep, as they try to fend off interlopers to their European exchange merger by hoarding advisers and financing, Bloomberg News reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-01/lse-deutsche-boerse-said-to-do-street-sweep-to-hinder-rivals">bloomberg news </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Apollo and Blackstone Said to Be Among Bidders for Ball and Rexam Assets</strong> <span class="divider"> | </span></span> The assets being sold as part of Ballâs acquisition of Rexam could be valued at about $4 billion based on combined earnings before interest, taxes, depreciation and amortization of $400 million, Bloomberg News reports, citing people familiar with the matter. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-01/apollo-blackstone-said-among-bidders-for-ball-rexam-assets">bloomberg news </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="A Taunt From Dimon That Wells Fargo Would Be Reckless to Heed" src="https://static01.nyt.com/images/2016/01/22/business/22DB-CHASE/22DB-CHASE-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Taunt From Dimon That Wells Fargo Would Be Reckless to Heed</strong> <span class="divider"> | </span></span> A move into investment banking could help Wells Fargo grow globally, but it would push the lender deeper into businesses it does not know well, Jeffrey Goldfarb writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/02/business/dealbook/a-taunt-from-dimon-that-wells-fargo-would-be-reckless-to-heed.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Sallie Krawcheck Joins Board of Software Start-Up" src="https://static01.nyt.com/images/2016/03/02/business/db-krawcheck1/db-krawcheck1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sallie Krawcheck Joins Board of Software Start-Up</strong> <span class="divider"> | </span></span> Ms. Krawcheck, a former Wall Street executive, will be a director at Digital Asset Holdings, which is run by Blythe Masters, a former investment banker.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/02/business/dealbook/sallie-krawcheck-joins-board-of-software-start-up.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Barclays Falls Under S.E.C. Spotlight </strong> <span class="divider"> | </span></span> Barclays became the latest bank to disclose that the Securities and Exchange Commission and the Justice Department authorities are investigating its hiring practices in Asia as part of a wider inquiry into banksâ recruitment of friends and family members of government officials and top executives in the region.<br /><span class="kicker"><a href="//www.wsj.com/articles/barclays-falls-under-sec-spotlight-for-asian-hiring-1456826347"> the wall street journal </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CaixaBank Said to Discuss Increasing Stake in Banco BPI </strong> <span class="divider"> | </span></span> CaixaBank, Spainâs third-largest bank,  is in talks with the Angolan investor Isabel dos Santos to acquire her stake in  Banco BPI of Portugal, Bloomberg News reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-01/caixabank-said-to-be-in-talks-with-dos-santos-over-bpi-stake">bloomberg news </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Investing for Social Returns in India</strong> <span class="divider"> | </span></span> To meet its own goals of becoming a socially responsible investor, the firm has advised Banyan Nation, an Indian recycling start-up that is bringing more Indians into the financial fold by offering them bank accounts and livable wages.<br /><span class="kicker"><a href="//www.wsj.com/articles/investing-for-social-returns-in-india-1456749894?mod=asia_home">wall street journal</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Argentinaâs Hedge Fund Deal Frustrates Small Bondholders" src="https://static01.nyt.com/images/2016/03/02/business/02argentina1jpg/02argentina1jpg-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Argentinaâs Hedge Fund Deal Frustrates Small Bondholders</strong> <span class="divider"> | </span></span> Investors who were once united in their dispute against Argentina appeared to turn against one another during a hearing in Federal District Court.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/02/business/dealbook/argentinas-hedge-fund-deal-frustrates-small-bondholders.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="New York Attorney Generalâs Suit Against Trump University May Proceed, Court Rules" src="https://static01.nyt.com/images/2016/03/02/nyregion/02AGUNIVERSITY/02AGUNIVERSITY-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New York Attorney Generalâs Suit Against Trump University May Proceed, Court Rules</strong> <span class="divider"> | </span></span> Judges of the Appellate Division of State Supreme Court denied Donald J. Trumpâs effort to dismiss the action claiming $40 million in fraud against students.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/02/nyregion/new-york-attorney-generals-suit-against-trump-university-may-proceed-court-rules.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lawmakers Urge Greater Care With Sales of Distressed Mortgages</strong> <span class="divider"> | </span></span> A letter to the Housing and Urban Development secretary called for barring aggressive investors from buying distressed mortgages from housing agencies.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/02/business/dealbook/lawmakers-urge-greater-care-with-sales-of-distressed-mortgages.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Brazil Arrests Facebook Executive in WhatsApp Data Access Case" src="https://static01.nyt.com/images/2016/03/02/business/02facebook/02facebook-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Brazil Arrests Facebook Executive in WhatsApp Data Access Case</strong> <span class="divider"> | </span></span> The arrest of the executive, Diego Dzodan, comes as a debate over the access that law enforcement officials should get to tech companiesâ data has escalated.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/02/technology/brazil-arrests-facebook-executive-in-data-access-case.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Does a Carbon Tax Work? Ask British Columbia" src="https://static01.nyt.com/images/2016/03/02/business/02porter3/02porter3-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Does a Carbon Tax Work? Ask British Columbia</strong> <span class="divider"> | </span></span> A conservative party in the province introduced a carbon tax in 2008. The important lesson for American skeptics is that the policy worked as advertised, Eduardo Porter writes in the Economic Scene.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/02/business/does-a-carbon-tax-work-ask-british-columbia.html">Economic Scene &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Negative-Yield Bonds for the Nimble Investor" src="https://static01.nyt.com/images/2016/03/02/business/db-negativereviews1/db-negativereviews1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Negative-Yield Bonds for the Nimble Investor</strong> <span class="divider"> | </span></span> Negative-yield bonds are worth buying as long as yields keep declining; even small price swings can hurt, Swaha Pattanaik writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/02/business/dealbook/negative-yield-bonds-for-the-nimble-investor.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Olympus Corporation of the Americas to Settle Kickback Charges</strong> <span class="divider"> | </span></span> The United States unit of Olympus admitted it paid bribes to doctors and hospitals to promote sales of its medical devices, and agreed to pay $623.2 million in civil and criminal penalties as part of what prosecutors called the largest-ever settlement under federal antikickback laws.<br /><span class="kicker"><a href="//www.wsj.com/articles/olympus-corp-of-the-americas-to-pay-623-2-million-to-settle-kickback-charges-1456861512?mod=pls_whats_news_us_business_f">the wall street journal</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/03/02/morning-agenda-shale-baron-is-charged-in-rigging-of-leases/"
+					data-title="Morning Agenda: Shale Baron Is Charged in Rigging of Leases"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Tenure Voting Could Shift Power Balance | SABMiller Sells Stake in Top Beer | Even Traders Are Confused by Stock Exchange Prices&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/03/02/morning-agenda-shale-baron-is-charged-in-rigging-of-leases/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":48,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

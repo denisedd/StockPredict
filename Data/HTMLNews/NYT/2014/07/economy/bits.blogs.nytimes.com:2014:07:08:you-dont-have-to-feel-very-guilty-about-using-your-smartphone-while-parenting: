@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-bits section-technology"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-bits section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-bits section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-bits section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="channels" content="NytNow" />
+<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/bits/You Don't Have to Feel Very Guilty About Using Your Smartphone While Parenting ( 20140708 )" />
+<meta name="communityAssetURL" content="//bits.blogs.nytimes.com/2014/07/08/you-dont-have-to-feel-very-guilty-about-using-your-smartphone-while-parenting/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000002987105"><meta name="author" content="Farhad Manjoo" />
+<meta name="CLMST" content="Farhad Manjoo" />
+<meta name="byl" content="Farhad Manjoo" />
+<meta name="article:author" content="//topics.nytimes.com/top/reference/timestopics/people/m/farhad_manjoo/index.html" /><meta name="GBLC" content="State of the Art">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1404817202" />
+<meta name="PUD" content="20140708" />
+<meta name="pdate" content="20140708" />
+<meta name="ptime" content="20140708070002" />
+<meta name="utime" content="20140714002921" />
+<meta property="article:modified_time" itemprop="dateModified" content="2014-07-14T00:29:21-04:00" />
+<meta name="DISPLAYDATE" content="July 8, 2014" />
+<meta name="dat" content="July 8, 2014" />
+<meta itemprop="articleSection" property="article:section" content="Technology" />
+<meta name="CG" content="Technology" />
+<meta name="SCG" content="bits" />
+<meta name="BN" content="bits" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Parenting;Smartphones;Work-Life Balance">
+<meta name="org" content="Boston University">
+<meta property="article:tag" content="Parenting" />
+<meta property="article:tag" content="Smartphones" />
+<meta property="article:tag" content="Work-Life Balance" />
+<meta property="article:tag" content="Boston University" />
+<meta property="article:tag" content="State of the Art" />
+<meta name="keywords" content="Parenting,Smartphones,Work-Life Balance,Boston University,State of the Art" />
+<meta name="news_keywords" content="BU,Parenting,Smartphone,Work-Life Balance" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fbits.blogs.nytimes.com%2F2014%2F07%2F08%2Fyou-dont-have-to-feel-very-guilty-about-using-your-smartphone-while-parenting%2F" title="You Don&#8217;t Have to Feel Very Guilty About Using Your Smartphone While Parenting" />
+<meta name="description" content="A preschool boy has a vacation. And his father finds a way to spend time with him and still get his work done." />
+<meta name="hdl" content="You Don&#039;t Have to Feel Very Guilty About Using Your Smartphone While Parenting" />
+<meta property="og:title" content="You Don&#039;t Have to Feel Very Guilty About Using Your Smartphone While Parenting" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//bits.blogs.nytimes.com/2014/07/08/you-dont-have-to-feel-very-guilty-about-using-your-smartphone-while-parenting/" />
+<meta property="og:site_name" content="Bits Blog" />
+<meta property="og:description" content="A preschool boy has a vacation. And his father finds a way to spend time with him and still get his work done." />
+<meta property="og:image" content="https://static01.nyt.com/images/2014/07/08/technology/08bits-farhad/08bits-farhad-videoSixteenByNine600.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2014/07/08/technology/08bits-farhad/08bits-farhad-thumbLarge.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="You Don&#039;t Have to Feel Very Guilty About Using Your Smartphone While Parenting" />
+<meta name="twitter:url" content="//bits.blogs.nytimes.com/2014/07/08/you-dont-have-to-feel-very-guilty-about-using-your-smartphone-while-parenting/" />
+<meta name="twitter:description" content="A preschool boy has a vacation. And his father finds a way to spend time with him and still get his work done." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2014/07/08/technology/08bits-farhad/08bits-farhad-thumbLarge.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2014/07/08/technology/08bits-farhad/08bits-farhad-thumbLarge.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@nytimesbits">
+<link rel='prev' title='Daily Report: Samsung Forecasts a Profit Decline as Smartphone Sales Ease' href='//bits.blogs.nytimes.com/2014/07/08/daily-report-samsung-forecasts-a-profit-decline-as-smartphone-sales-ease/' />
+<link rel='next' title='Amazon Angles to Attract Hachette&#8217;s Authors to Its Side' href='//bits.blogs.nytimes.com/2014/07/08/amazon-tries-to-woo-authors-in-hachette-dispute/' />
+<link rel='canonical' href='//bits.blogs.nytimes.com/2014/07/08/you-dont-have-to-feel-very-guilty-about-using-your-smartphone-while-parenting/' />
+<link rel='shortlink' href='//nyti.ms/1qRbkxA' />
+<link rel='https://github.com/WP-API/WP-API' href='//bits.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/bits/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//bits.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/technology/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/bits/2014/07/08/you-dont-have-to-feel-very-guilty-about-using-your-smartphone-while-parenting/" />
+<meta name="dfp-ad-unit-path" content="technology/bits" />			<title>You Don&#039;t Have to Feel Very Guilty About Using Your Smartphone While Parenting - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/bits.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-159945 blog-universal nyt-blog-bits" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'Technology', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//bits.blogs.nytimes.com">
+                Bits            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        You Don&#8217;t Have to Feel Very Guilty About Using Your Smartphone While Parenting        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//bits.blogs.nytimes.com/2014/07/08/you-dont-have-to-feel-very-guilty-about-using-your-smartphone-while-parenting/"
+	 data-title="You Don&#8217;t Have to Feel Very Guilty About Using Your Smartphone While Parenting"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;A preschool boy has a vacation. And his father finds a way to spend time with him and still get his work done. &lt;/span&gt;&lt;a href=&quot;//bits.blogs.nytimes.com/2014/07/08/you-dont-have-to-feel-very-guilty-about-using-your-smartphone-while-parenting/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 8, 2014 7:00 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="bits" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+		<div class="element1">
+	<a href="//bits.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=Technology"><div id="logo" class="archived-blog-post"><div class="w75 left site-header-logo"><img src="https://static01.nyt.com/images/blogs_v3/bits/bits75.gif" alt="Bits"/></div><div class="site-title">Bits</div><div class="site-description">Business, Innovation, Technology, Society</div></div></a>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//bits.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Bits">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-159945 post type-post status-publish hentry category-state-of-the-art tag-boston-university tag-parenting tag-smartphones tag-work-life-balance des-parenting-2 des-smartphones des-work-life-balance org-boston-university news_keywords-bu news_keywords-parenting news_keywords-smartphone news_keywords-work-life-balance splitPostView" id="post-159945">
+	<header class="postHeader">
+				<div class="postKicker">
+			<span class="kicker"><a href="//bits.blogs.nytimes.com/category/state-of-the-art/?module=BlogCategory&version=Blog Post&action=Click&contentCollection=Technology&pgtype=Blogs&region=Header">State of the Art</a></span>
+		</div>
+				<h1 itemprop="headline" class="entry-title">You Don&#8217;t Have to Feel Very Guilty About Using Your Smartphone While Parenting</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Farhad Manjoo			</address>
+			<!-- date published --><time class="dateline " datetime="2014-07-08T11:00:02+00:00" itemprop="datePublished">July 8, 2014 7:00 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 8, 2014 7:00 am</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div class="w592"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2014/07/08/technology/08bits-farhad/08bits-farhad-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2014/07/08/technology/08bits-farhad/08bits-farhad-tmagArticle.jpg" src="https://static01.nyt.com/images/2014/07/08/technology/08bits-farhad/08bits-farhad-tmagArticle.jpg" id="100000002986831" width="592" height="395" alt="Smartphones have expanded the opportunity for certain kinds of workers to increase their involvement in their children&#039;s lives."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Smartphones have expanded the opportunity for certain kinds of workers to increase their involvement in their children's lives.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> John Amis/Associated Press</span></figcaption></figure></div>
+<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//bits.blogs.nytimes.com/2014/07/08/you-dont-have-to-feel-very-guilty-about-using-your-smartphone-while-parenting/" data-title="You Don&#8217;t Have to Feel Very Guilty About Using Your Smartphone While Parenting" data-description="A preschool boy has a vacation. And his father finds a way to spend time with him and still get his work done. ">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody">My 3-year-old son was off from preschool last week, and just between you and me, I played partial hooky from work to take care of him.</p>
+<p class="story-body-text" itemprop="articleBody">Iâm asking you to keep it on the down low because as far my bosses and co-workers are concerned, Iâve been a busy bee. Last week, like every week, I wrote a column, conducted a half-dozen lengthy interviews, kept up with news about the industry I cover and <a href="https://www.twitter.com/fmanjoo">tweeted</a> obsessively and mercilessly. Also, here I am, writing this post, which is a kind of work, too.</p>
+<p class="story-body-text" itemprop="articleBody">And yet one day last week my son and I spent much of the morning and early afternoon at a science museum. At other times, we played with bubbles and toy woolly mammoths. He served me a baked lemon from his pretend food truck. I got him an ice cream in the park. We participated in a grad studentâs child-development research study. We visited a construction site.</p>
+<p class="story-body-text" itemprop="articleBody">Sure, he watched some TV, too, and played by himself for a bit. Most of the time, though, there was little sign that I was hard at work.</p>
+<p class="story-body-text" itemprop="articleBody">If youâve got kids and an amenable, digital-friendly job, youâve most likely performed similar work-life acrobatic feats. These situations come with no small amount of guilt. You worry that while youâre trying to do two things at once, youâre accomplishing neither. Youâre juggling work and parenting, and youâre inadequate at both.</p>
+<p class="story-body-text" itemprop="articleBody">This is parenting; thereâs no getting around the guilt. But thanks to technology, I was managing to do a reasonably good job at work while being a fairly adequate parent. It wasnât ideal. But it was probably far better than the alternative, which would be to ship my son off to a nanny or grandparent for the week while I spent all day plugging away at the office, not seeing him.</p>
+<p class="story-body-text" itemprop="articleBody">Technology generally gets a bad parenting rap â particularly smartphones. Every few months, there is a new article voicing concerns about how <a href="//time.com/14953/parents-who-use-smartphones-in-front-of-their-kids-are-crankier/">weâre all being terrible parents</a> because we just canât stop staring at our phones. Parental smartphone addiction has also been <a href="//www.npr.org/blogs/health/2014/04/21/304196338/for-the-childrens-sake-put-down-that-smartphone">a rising worry among child-development scholars</a>. The concern is justified; smartphones are changing how we relate to other human beings, so itâs reasonable to worry about how theyâll affect parenting.</p>
+<p class="story-body-text" itemprop="articleBody">But we rarely consider how, by liberating us from the office, smartphones have greatly expanded the opportunity for certain kinds of workers to increase their involvement in their children&#8217;s lives. Because you can work from anywhere thanks to your phone, you can be present and at least partly attentive to your children in scenarios where, in the past, youâd have had to be totally absent. Even though my son had to yell for my attention once when I was fixed to my phone, if I didnât have that phone, I would almost certainly not have been able to be with him that day â or at any one of numerous school events or extracurricular activities. I would have been in an office. And he would have been with a caretaker.</p>
+<p class="story-body-text" itemprop="articleBody">Thatâs the trade-off few of us think about when we consider how phones have changed parenting. Before the modern portable office â before the Internet made it possible for a wide variety of workers to work from home, and before smartphones made it possible to work from anywhere â white-collar jobs required a central office. In pre-digital times, the office functioned as a nexus of collaboration and production, and the further you got from the office, the less you got done. So when a child-care emergency popped up, you had to make a choice between work and the child. Or you could try both, to disastrous ends â see Diane Keaton in â<a href="https://www.youtube.com/watch?v=2jZjQiQGrDE">Baby Boom.</a>â</p>
+<p class="story-body-text" itemprop="articleBody">Much of this is obvious, but we rarely consider the stifling past. Instead, when we think about how our phones intrude on parenting, the primary emotion is crippling guilt. Thereâs an entire online cottage industry devoted to shaming parents whose noses are buried in their devices. Check out the <a href="//parentsonphones.tumblr.com/">Parents On Phones Tumblr</a>, which features an endless stream of absolutely damning pictures of people ignoring their kids. Its motto is: âShining a light on the culture of mobile phones and parental neglect.â</p>
+<p class="story-body-text" itemprop="articleBody">Thatâs a smug attitude, but I admit I often feel that way. I feel awful when I reach for my phone while Iâm with my children. And when I see another parent texting while at the park, I experience a thrilling sense of superiority because my phone is securely in my pocket â at least until it buzzes with an important message, and I pull it out â and ignore the kids while I respond to some supposedly urgent thing.</p>
+<p class="story-body-text" itemprop="articleBody">I feel guilty, but I use my phone anyway. Meanwhile, many of us are tapping away.Â  Researchers at Boston University recently published <a href="//pediatrics.aappublications.org/content/early/2014/03/05/peds.2013-3703.abstract">an anthropological study of smartphone usage</a> among parents. They visited several fast food restaurants, and observed 55 people with children; 40 were using phones. The notes from the study read like a sci-fi hellscape of parental obliviousness:</p>
+<blockquote><p class="story-body-text" itemprop="articleBody">Female caregiver brings food over and sits down across from girl, they distribute the food and as [school aged] girl starts eating caregiver brings out her smartphone. There is no conversation. Caregiver appears to be typing into phone, holding it about 10 inches away from her face, looking into it for long stretches during which she does not look up. She stops typing and is staring at the screen, touching it at points, holding it with her right hand while she leans her chin on her left hand, her facial expression flat. She has been looking at it for about 2 min without any change of gaze, while the girl eats and looks around the room.</p></blockquote>
+<p class="story-body-text" itemprop="articleBody">Itâs a dismaying read. Yet studies like this are incomplete, because they canât address two questions that are central to the debate about smartphones and parenting. First, how attentive would smartphone-distracted parents have been in pre-smartphone times? If we didnât have phones, would we have been paying total attention to our children, or would we have found distraction in books, newspapers, TV or our own heads?</p>
+<p class="story-body-text" itemprop="articleBody">Second, in the absence of phones, how many smartphone-addicted parents would be forced to spend less time with their children because they didnât have the technical capacity to skip out of the office? In the discourse about phones, we often assume that the operative choice, for parents, is between spending non-distracted time with your kids versus distracted time. But itâs a tough economy, and jobs are hard to find; if we couldnât work away from the office, wouldnât a lot of us just spend more time at the office?</p>
+<p class="story-body-text" itemprop="articleBody">These questions are difficult to answer. But theyâre worth considering. For me, itâs far too soon to conclude that phones are, on balance, bad for parenting. I spent a lot of quality time with my son last week. He and I had a great time. I also got a lot of work done. And it was all made possible by my phone.</p>
+<p class="story-body-text" itemprop="articleBody">&nbsp;</p>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//bits.blogs.nytimes.com/2014/07/08/you-dont-have-to-feel-very-guilty-about-using-your-smartphone-while-parenting/" data-title="You Don&#8217;t Have to Feel Very Guilty About Using Your Smartphone While Parenting" data-description="A preschool boy has a vacation. And his father finds a way to spend time with him and still get his work done. ">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//bits.blogs.nytimes.com/2014/07/08/daily-report-samsung-forecasts-a-profit-decline-as-smartphone-sales-ease/" title="Daily Report: Samsung Forecasts a Profit Decline as Smartphone Sales Ease">
+				Daily Report: Samsung Forecasts a Profit Decline as Smartphone Sales Ease			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//bits.blogs.nytimes.com/2014/07/08/amazon-tries-to-woo-authors-in-hachette-dispute/" title="Amazon Angles to Attract Hachette&#039;s Authors to Its Side">
+				Amazon Angles to Attract Hachette&#8217;s Authors to Its Side			</a>
+					</li>
+	</ul>
+</div>
+<div id="nyt_promo_widget-10" class="module nocontent widget_nyt_promo_widget"><div style="font-family: nyt-franklin, arial, sans-serif; padding-top: 12px; font-size: 14px; line-height: 17px;">
+Visit the <a href="//nytimes.com/technology" style="font-weight: 600;">Technology section</a> for complete coverage of the industry. <a href="//nytimes.com/technology" style="font-family: nyt-franklin, arial, sans-serif; font-weight: 600;">Â»</a>
+</div></div>		<div class="module ad" id="MiddleRight"></div>
+        		<div class="module ad" id="Box3"></div>
+        		<div class="module ad" id="Box1"></div>
+        <div id="nyt_blog_social_media-5" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-single ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">us on</span></span>
+<span class="blog-fw-specific-followmessage"><span class="blog-fw-username"><a href="https://twitter.com/nytimesbits" title="Follow @nytimesbits on twitter">@nytimesbits</a></span> on <span class="blog-fw-twitter">twitter</span></span></h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/nytimesbits" title="Follow nytimesbits on Twitter">Twitter</a></li></ul>
+<p class="blog-fw-followbutton"><a href="https://twitter.com/nytimesbits" title="Follow @nytimesbits on twitter">Follow</a></p></div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-9',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":123,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003957691"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1444039144" />
+<meta name="PUD" content="20151005" />
+<meta name="pdate" content="20151005" />
+<meta name="ptime" content="20151005055904" />
+<meta name="utime" content="20151005095904" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-10-05T09:59:04-04:00" />
+<meta name="DISPLAYDATE" content="October 5, 2015" />
+<meta name="dat" content="October 5, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Peltz, Nelson;Private Equity">
+<meta name="des" content="Bank of America Corporation;Banking and Financial Institutions;Bankruptcies;Diesel Power;Dodd-Frank Wall Street Reform and Consumer Protection Act (2010);Drugs (Pharmaceuticals);Fashion and Apparel;Greenhouse Gas Emissions;Initial Public Offerings;Insurance;Lloyds Banking Group Plc;Potash;Potash Corporation of Saskatchewan Inc;RadioShack Corporation;Regulation and Deregulation of Industry;Shopping and Retail;Stocks and Bonds;Suicides and Suicide Attempts;Uber Technologies Inc;Valeant Pharmaceuticals International Inc;Venture Capital;Volkswagen AG">
+<meta name="org" content="American Apparel Inc;Barclays PLC;Bitcoin (Currency);Federal Reserve System;Goldman Sachs Group Inc;HSBC Holdings PLC.;Moelis &amp; Company L.L.C.;Standard General LP;UBS AG">
+<meta name="ticker" content="American Apparel Inc|APP|AMEX;Barclays PLC|BCS|NYSE;Goldman Sachs Group Inc|GS|NYSE;HSBC Holdings PLC.|HSBC|NYSE;UBS AG|UBS|NYSE" />
+<meta property="article:tag" content="Peltz Nelson" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Bank of America Corporation" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Bankruptcies" />
+<meta property="article:tag" content="Diesel Power" />
+<meta property="article:tag" content="Dodd-Frank Wall Street Reform and Consumer Protection Act (2010)" />
+<meta property="article:tag" content="Drugs (Pharmaceuticals)" />
+<meta property="article:tag" content="Fashion and Apparel" />
+<meta property="article:tag" content="Greenhouse Gas Emissions" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Insurance" />
+<meta property="article:tag" content="Lloyds Banking Group Plc" />
+<meta property="article:tag" content="Potash" />
+<meta property="article:tag" content="Potash Corporation of Saskatchewan Inc" />
+<meta property="article:tag" content="RadioShack Corporation" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Shopping and Retail" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Suicides and Suicide Attempts" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="Valeant Pharmaceuticals International Inc" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Volkswagen AG" />
+<meta property="article:tag" content="American Apparel Inc" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="Bitcoin (Currency)" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="HSBC Holdings PLC." />
+<meta property="article:tag" content="Moelis &amp; Company L.L.C." />
+<meta property="article:tag" content="Standard General LP" />
+<meta property="article:tag" content="UBS AG" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Peltz Nelson,Private Equity,Bank of America Corporation,Banking and Financial Institutions,Bankruptcies,Diesel Power,Dodd-Frank Wall Street Reform and Consumer Protection Act (2010),Drugs (Pharmaceuticals),Fashion and Apparel,Greenhouse Gas Emissions,Initial Public Offerings,Insurance,Lloyds Banking Group Plc,Potash,Potash Corporation of Saskatchewan Inc,RadioShack Corporation,Regulation and Deregulation of Industry,Shopping and Retail,Stocks and Bonds,Suicides and Suicide Attempts,Uber Technologies Inc,Valeant Pharmaceuticals International Inc,Venture Capital,Volkswagen AG,American Apparel Inc,Barclays PLC,Bitcoin (Currency),Federal Reserve System,Goldman Sachs Group Inc,HSBC Holdings PLC.,Moelis &amp; Company L.L.C.,Standard General LP,UBS AG,DealBook" />
+<meta name="news_keywords" content="American Apparel,Banking and Finance,Bankruptcy,Barclays,Diesel engine,Dodd Frank,Fashion,Federal Reserve,Goldman Sachs Group,Greenhouse gas,IPO,Nelson Peltz,Personal finance,Pharmaceuticals,Potash,Regulation and Deregulation,Retail,Standard General,Stocks and Bonds,Suicide,UBS,Venture capital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F10%2F05%2Fmorning-agenda-american-apparel-files-for-bankruptcy%2F" title="Morning Agenda: American Apparel Files for Bankruptcy" />
+<meta name="description" content="Deaths Highlight Pressures of Wall Street &#124; Why Volkswagen Started Cheating &#124; Valeant&#8217;s High-Price Drug Strategy" />
+<meta name="hdl" content="Morning Agenda: American Apparel Files for Bankruptcy" />
+<meta property="og:title" content="Morning Agenda: American Apparel Files for Bankruptcy" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/10/05/morning-agenda-american-apparel-files-for-bankruptcy/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Deaths Highlight Pressures of Wall Street &#124; Why Volkswagen Started Cheating &#124; Valeant&#8217;s High-Price Drug Strategy" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: American Apparel Files for Bankruptcy" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/10/05/morning-agenda-american-apparel-files-for-bankruptcy/" />
+<meta name="twitter:description" content="Deaths Highlight Pressures of Wall Street &#124; Why Volkswagen Started Cheating &#124; Valeant&#8217;s High-Price Drug Strategy" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/10/02/what-were-reading-94/' />
+<link rel='next' title='Morning Agenda: Activist Investors and Billion-Dollar Bets' href='//news.blogs.nytimes.com/2015/10/06/morning-agenda-activist-investors-and-billion-dollar-bets/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/10/05/morning-agenda-american-apparel-files-for-bankruptcy/' />
+<link rel='shortlink' href='//nyti.ms/1iYCT6x' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/10/05/morning-agenda-american-apparel-files-for-bankruptcy/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: American Apparel Files for Bankruptcy - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3380 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: American Apparel Files for Bankruptcy        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/10/05/morning-agenda-american-apparel-files-for-bankruptcy/"
+	 data-title="Morning Agenda: American Apparel Files for Bankruptcy"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Deaths Highlight Pressures of Wall Street | Why Volkswagen Started Cheating | Valeant&#039;s High-Price Drug Strategy&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/10/05/morning-agenda-american-apparel-files-for-bankruptcy/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="October 5, 2015 5:59 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: American Apparel Files for Bankruptcy</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-10-05T09:59:04+00:00" itemprop="datePublished">October 5, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">October 5, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3380 post type-post status-publish hentry category-dealbook tag-american-apparel-inc tag-bank-of-america-corporation tag-banking-and-financial-institutions tag-bankruptcies tag-barclays-plc tag-bitcoin-currency tag-diesel-power tag-dodd-frank-wall-street-reform-and-consumer-protection-act-2010 tag-drugs-pharmaceuticals tag-fashion-and-apparel tag-federal-reserve-system tag-goldman-sachs-group-inc tag-greenhouse-gas-emissions tag-hsbc-holdings-plc tag-initial-public-offerings tag-insurance tag-lloyds-banking-group-plc tag-moelis-company-l-l-c tag-peltz-nelson tag-potash tag-potash-corporation-of-saskatchewan-inc tag-private-equity tag-radioshack-corporation tag-regulation-and-deregulation-of-industry tag-shopping-and-retail tag-standard-general-lp tag-stocks-and-bonds tag-suicides-and-suicide-attempts tag-uber-technologies-inc tag-ubs-ag tag-valeant-pharmaceuticals-international-inc tag-venture-capital tag-volkswagen-ag per-peltz-nelson per-private-equity des-bank-of-america-corporation des-banking-and-financial-institutions des-bankruptcies des-diesel-power des-dodd-frank-wall-street-reform-and-consumer-protection-act-2010 des-drugs-pharmaceuticals des-fashion-and-apparel des-greenhouse-gas-emissions des-initial-public-offerings des-insurance des-lloyds-banking-group-plc des-potash des-potash-corporation-of-saskatchewan-inc des-radioshack-corporation des-regulation-and-deregulation-of-industry des-shopping-and-retail des-stocks-and-bonds des-suicides-and-suicide-attempts des-uber-technologies-inc des-valeant-pharmaceuticals-international-inc des-venture-capital des-volkswagen-ag org-american-apparel-inc org-barclays-plc org-bitcoin-currency org-federal-reserve-system org-goldman-sachs-group-inc org-hsbc-holdings-plc org-moelis-company-l-l-c org-standard-general-lp org-ubs-ag news_keywords-american-apparel news_keywords-banking-and-finance news_keywords-bankruptcy news_keywords-barclays news_keywords-diesel-engine news_keywords-dodd-frank news_keywords-fashion news_keywords-federal-reserve news_keywords-goldman-sachs-group news_keywords-greenhouse-gas news_keywords-ipo news_keywords-nelson-peltz news_keywords-personal-finance news_keywords-pharmaceuticals news_keywords-potash news_keywords-regulation-and-deregulation news_keywords-retail news_keywords-standard-general news_keywords-stocks-and-bonds news_keywords-suicide news_keywords-ubs news_keywords-venture-capital-2" id="post-3380">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: American Apparel Files for Bankruptcy</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-10-05T09:59:04+00:00" itemprop="datePublished">October 5, 2015 5:59 am</time>
+			<!-- date updated --><span class="visually-hidden updated">October 5, 2015 5:59 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/10/05/morning-agenda-american-apparel-files-for-bankruptcy/" data-title="Morning Agenda: American Apparel Files for Bankruptcy" data-description="Deaths Highlight Pressures of Wall Street | Why Volkswagen Started Cheating | Valeant&#039;s High-Price Drug Strategy">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AMERICAN APPAREL FILES FOR BANKRUPTCY</strong> <span class="divider"> | </span></span> American Apparel <b>filed for bankruptcy protection early Monday</b>, <a href="//www.nytimes.com/2015/10/06/business/american-apparel-files-for-bankruptcy.html?hp&#038;action=click&#038;pgtype=Homepage&#038;module=second-column-region&#038;region=top-news&#038;WT.nav=top-news">Hiroko Tabuchi reports in The New York Times.</a> The one-time arbiter of made-in-America cool has been crippled by debt, a plunge in sales, strife among employees and a drawn-out legal fight with the founder, Dov Charney. </p>
+<p class="story-body-text" itemprop="articleBody">The bankruptcy would <b>wipe out American Apparelâs current shareholders</b>, including Mr. Charney, whose stake was worth about $8.2 million as of Friday. The companyâs creditors, which include Standard General, the hedge fund leading the turnaround at RadioShack, would be in full control.  </p>
+<p class="story-body-text" itemprop="articleBody">The filing <b>follows a deal</b> struck with most of the retailerâs secured lenders to reduce its debt by swapping bondholdersâ debt for shares in the company. The deal also included extra financing from the participating bondholders, which would allow its manufacturing operations in Los Angeles and its 130 stores in the United States to stay open. </p>
+<p class="story-body-text" itemprop="articleBody">No layoffs were announced in the filing, which still needs to be approved by the bankruptcy court. The <b>restructuring is expected to be completed within six months</b> and the overseas operations are not affected. </p>
+<p class="story-body-text" itemprop="articleBody">American Apparel, like many of its peers, has lost out in the intense competition for customers at a time when consumer spending is growing sluggishly. The New York Stock Exchange warned last week that the company was <b>at risk of being delisted</b> because its financial condition was so bad that it was questionable whether it could stay in business. At the close of markets on Friday, its shares were worth just 11 cents.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DEATHS HIGHLIGHT PRESSURES OF WALL STREET</strong> <span class="divider"> | </span></span> There is no evidence that the incidence of suicide by young professionals on Wall Street is higher than in any other industry, but sensitivities about the issue are acute after <b>several episodes this year</b>, <a href="//www.nytimes.com/2015/10/04/business/dealbook/tragedies-draw-attention-to-wall-streets-grueling-pace.html?ref=business">William D. Cohan writes in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Thomas Hughes, a 29-year-old investment banker at the advisory firm Moelis &#038; Company, jumped to his death from his 24th-floor apartment in May. There were signs of heavy drinking and cocaine use. Police ruled it a suicide, but his father John refuses to believe that. He thinks his son, <b>under stress from work</b>, tried to re-energize himself with cocaine and the combination of substances drove him crazy. </p>
+<p class="story-body-text" itemprop="articleBody">A month earlier, Sarvshreshth Gupta, a 22-year-old first-year banking analyst at Goldman Sachs, <b>committed suicide</b> after a particularly stressful stretch at work. Around the same time, another first-year analyst who had worked 72 hours straight was hospitalized after having a seizure. </p>
+<p class="story-body-text" itemprop="articleBody">In 2013, Moritz Erhardt, a 21-year-old intern at Bank of America Merrill Lynch, <b>died after having an epileptic seizure</b>. He had worked the previous 72 hours without sleeping.</p>
+<p class="story-body-text" itemprop="articleBody">These episodes have crystallized a need for change, and Wall Street has been <b>trying to provide a better work-life balance</b> for its junior bankers.</p>
+<p class="story-body-text" itemprop="articleBody">Goldman <b>banned its interns from all-nighters</b> and working through the weekend. Barclays forbids its analysts from working more than 12 days in a row. JPMorgan has the option of one âprotected weekendâ each month. Bank of America put in measures to improve supervision and ensure a minimum of four weekend days a month.</p>
+<p class="story-body-text" itemprop="articleBody">These efforts have not been entirely successful. Investment banking is <b>still labor intensive and resists automation</b>. Life on Wall Street is a never-ending push to close deals. </p>
+<p class="story-body-text" itemprop="articleBody">âYou canât really stand out because most of what youâre doing does not require original thinking,â said Kevin Roose, the author of a book about young Wall Street bankers. âSo the only way you can distinguish yourself is by sheer endurance. <b>Gluttons for punishment are rewarded</b> on Wall Street, especially at the young levels.â </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>WHY VOLKSWAGEN STARTED CHEATING</strong> <span class="divider"> | </span></span> It started when the carmaker realized that a <b>new diesel engine it had developed at great expense</b> could not meet pollution standards in the United States, <a href="//www.nytimes.com/2015/10/05/business/engine-shortfall-pushed-volkswagen-to-evade-emissions-testing.html?ref=business">Jack Ewing reports in The New York Times</a>. Rather than throw out years of work and investment, managers decided to cheat, people with knowledge of Volkswagenâs internal inquiry said. </p>
+<p class="story-body-text" itemprop="articleBody">The software that enabled Volkswagen to cheat on emissions tests was installed starting in 2008.  By then, the automaker had <b>spent several years developing the new EA 189 diesel engine line</b> and was preparing for production. The cars with the new motors started arriving in the United States in 2009. By that point, it would have been a severe setback to cancel production and go back to the drawing board.   </p>
+<p class="story-body-text" itemprop="articleBody">It remains <b>unclear who made the decision</b> to install the illegal software. </p>
+<p class="story-body-text" itemprop="articleBody">Three top managers who played prominent roles in engine development <b>have been suspended</b>, but Volkswagen has not disclosed why. They are Ulrich Hackenberg, head of development; Heinz-Jakob Neusser, head of development for the Volkswagen brand; and Wolfgang Hatz, head of engines and transmissions development.</p>
+<p class="story-body-text" itemprop="articleBody">Volkswagen has said it would unveil a <b>technical solution for the affected vehicles on Wednesday</b>, when the companyâs supervisory board is scheduled to hold an emergency meeting. Experts are skeptical  about its ability to make cars compliant without hurting fuel economy and performance.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The <b>Eurozone finance ministers</b> are meeting in Luxembourg and will hold a news conference at 11:30 a.m.<br />
+<b>Ben S. Bernanke</b> is a guest on CNBC at 8 a.m. <b>Carl Icahn</b> is a guest on Fox Business Network at 2 p.m. <b>Stephen A. Schwarzman</b> will be a guest on Bloomberg Television at 7 a.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>VALEANTâS HIGH-PRICE DRUG STRATEGY</strong> <span class="divider"> | </span></span> Until recently, investors were star-struck by drug companies that could raise prices indiscriminately, but they are beginning to see the dangers of such a model,<br />
+<a href="//www.nytimes.com/2015/10/04/business/valeants-high-price-drug-strategy.html?ref=business">Gretchen Morgenson writes in the Fair Game column.</a> Price jumps may generate earnings and stock gains, but the enrichment of a few at the cost of many often <b>attracts unwanted scrutiny</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Valeantâs habit of buying up existing drugs and raising prices aggressively has <b>angered lawmakers and stoked public outrage</b> against the growing trend of higher and higher drug prices, as <a href="//www.nytimes.com/2015/10/05/business/valeants-drug-price-strategy-enriches-it-but-infuriates-patients-and-lawmakers.html?ribbon-ad-idx=5&#038;rref=business">Andrew Pollack and Sabrina Tavernise report in The New York Times.</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Last Monday, 18 Democratic members of the House Committee on Oversight and Government Reform asked its chairman to subpoena Valeant for documents about price increases. <b>Valeantâs stock slid</b> 16.5 percent on the news. </p>
+<p class="story-body-text" itemprop="articleBody">J. Michael Pearson, Valeantâs chief executive, had to <b>reassure employees</b>, rejecting investor concerns about the strategy of relying on big price increases. He said that half of the companyâs sales came from domestic and international businesses in which it had realized small or no net price increases.</p>
+<p class="story-body-text" itemprop="articleBody">At Valeant, executive pay is heavily <b>tied to shareholder returns</b>. It is by no means the only company whose strategy skews rewards to executives and shareholders. That is how the game is played. But isnât it crazy, Ms. Morgenson asks, to leave everything up to <b>executives who manage only their stock price?</b><br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Relativity Media Sells Most of Its Assets</strong> <span class="divider"> | </span></span> An investor group led by Ryan Kavanaugh reached a deal to acquire all of Relativity Mediaâs assets except for its television business.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/05/business/media/most-of-relativity-media-acquired.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Potash Corporation Withdraws Offer for German Rival</strong> <span class="divider"> | </span></span> Potash Corporation of Saskatchewan has dropped a $8.8 billion takeover bid for its rival K+S, citing challenging market conditions and a lack of engagement by K+S management.<br /><span class="kicker"><a href="//www.wsj.com/articles/potashcorp-withdraws-8-8-billion-offer-for-german-rival-k-s-1444018104?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Nordex to Acquire Acciona Windpower of Spain</strong> <span class="divider"> | </span></span> The wind turbine-maker Nordex said it would buy a windpower business from Acciona of Spain for $880 million in cash and stock to bolster its presence in the Americas and emerging markets.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-04/nordex-to-acquire-spain-s-acciona-windpower-for-880-million"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ANA of Japan Eyes Stake in Vietnam Airlines</strong> <span class="divider"> | </span></span> ANA Holdings of Japan is looking to spur consolidation in Asiaâs rapidly growing aviation market as it discusses the possibility of taking a strategic stake in Vietnam Airlines, which was partly privatized last year.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/77a93604-604e-11e5-9846-de406ccb37f2.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3nevhxtO5"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Dodd-Frankâs Effect on Small Banks Is Muted</strong> <span class="divider"> | </span></span> Loan growth at small banks has outpaced that of the bigger banks for more than a year.<br /><span class="kicker"><a href="//www.wsj.com/articles/dodd-franks-effect-on-small-banks-is-muted-1443993212?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>UBS Is Working With Blockchain Prototypes</strong> <span class="divider"> | </span></span> Oliver Bussmann, the chief information officer at the Swiss bank UBS, created an innovation lab in London where the bank is looking at blockchain, the technology that underpins bitcoin digital currency. <br /><span class="kicker"><a href="//blogs.wsj.com/cio/2015/10/02/ubs-working-with-blockchain-prototypes/"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Skeptics of HSBC Dividend Are in for a Surprise</strong> <span class="divider"> | </span></span> The bankâs prospective dividend yield of about 6.5 percent is high, but investors worried about its payout shouldnât fret much, Paul J. Davies writes in the Heard on the Street column. <br /><span class="kicker"><a href="//www.wsj.com/articles/hsbc-dividend-doubters-are-in-for-a-surprise-1443983943"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Financier Says Private Equity Fees Are Driving  Investors Away</strong> <span class="divider"> | </span></span> Guy Hands, who founded the private equity group Terra Firma, wants buyout firms to drop the classic âtwo and 20â fee model espoused by most of his rivals.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/1cd7cff2-67aa-11e5-a57f-21b88f7d973f.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3nevhxtO5"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="A Record-Setting Real Estate Spending Spree" src="https://static01.nyt.com/images/2015/10/04/business/04-INSIDEWEALTH/04-INSIDEWEALTH-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Record-Setting Real Estate Spending Spree</strong> <span class="divider"> | </span></span> Kenneth Griffin, the billionaire chief executive of the investment firm Citadel, has reportedly spent a total of nearly $300 million in Chicago, New York and Miami.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/04/business/kenneth-griffin-goes-on-a-record-setting-real-estate-spending-spree.html">Inside Wealth &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Activist Firm Makes a Big Bet on G.E.</strong> <span class="divider"> | </span></span> Nelson Peltzâs Trian Fund Management said it had accumulated $2.5 billion in General Electric shares since the middle of May â a roughly 1 percent stake â making it one of the companyâs top 10 shareholders. <br /><span class="kicker"><a href="//www.wsj.com/articles/activist-firm-trian-makes-a-big-bet-on-ge-1444017706?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Government to Sell $3 Billion Stake in Lloyds Banking Group</strong> <span class="divider"> | </span></span> It had originally planned a retail offering in Lloyds shares last year, but it delayed those plans because of turmoil in the markets.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/06/business/dealbook/lloyds-banking-group-share-sale.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Schaeffler Shrinks I.P.O. </strong> <span class="divider"> | </span></span> Schaeffler cut the number of shares it intended to sell after delaying the listing date by several days as the auto industry was buffeted by the Volkswagen diesel scandal.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-05/schaeffler-shrinks-ipo-as-market-turmoil-spoils-share-sale-plan"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Huarong of China to Start Taking Orders for $2.5 Billion I.P.O.</strong> <span class="divider"> | </span></span> China Huarong Asset Management, set up by Beijing in 1999 to help resolve bad debt at the countryâs top four state-run banks, had originally planned to list in September but delayed the deal because of volatile stock markets.<br /><span class="kicker"><a href="//www.wsj.com/articles/chinas-huarong-to-start-taking-orders-for-2-5-billion-ipo-1444015901?mod=asia_home"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Cell Therapy Considers Initial Public Offering</strong> <span class="divider"> | </span></span> A British biotech company backed by a Nobel laureate, a lord and a former Welsh first minister is looking at options to float in London or New York  after strong clinical data opened up the chance to file for approval of the first cell therapy for heart disease next year. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/0c6b8188-6a78-11e5-8171-ba1968cf791a.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3nevhxtO5"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Octopus to Begin $140 Million Fund for European Start-Ups</strong> <span class="divider"> | </span></span> Octopus Ventures, the venture capital arm of  an  investment company with more than $7.6 billion of assets under management, is introducing a fund aimed at European start-ups that want to take advantage of the regionâs fast-expanding tech scene.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/21a72026-685b-11e5-97d0-1456a776a4f5.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3nevhxtO5"> THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Promise of Ride-Sharing</strong> <span class="divider"> | </span></span> Uber has the potential to transform urban transportation, but only if the company and its rivals can make the algorithms work.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/24f6aec4-6688-11e5-97d0-1456a776a4f5.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3nevhxtO5"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Policy Makers Skeptical of Preventing Financial Crisis" src="https://static01.nyt.com/images/2015/10/05/business/FED/FED-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Policy Makers Skeptical of Preventing Financial Crisis</strong> <span class="divider"> | </span></span> A Federal Reserve conference highlighted the challenge of heading off events like the 2008 crisis, since they are hard to anticipate.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/05/business/economy/policy-makers-skeptical-on-preventing-financial-crisis.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="As Pacific Trade Negotiators Haggle, U.S. Officials Remain Hopeful" src="https://static01.nyt.com/images/2015/10/05/business/05Trade/05Trade-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>As Pacific Trade Negotiators Haggle, U.S. Officials Remain Hopeful</strong> <span class="divider"> | </span></span> Negotiators appeared close to accord on the Trans-Pacific Partnership, which would phase out thousands of import tariffs and non-tariff barriers.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/05/business/us-and-11-nations-close-to-accord-on-trade-pact.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Big Insurers Face Tough New Safety Rules</strong> <span class="divider"> | </span></span> Prudential, Allianz and MetLife are among the companies that face being hurt by the proposals, which are estimated to increase the amount of capital they must hold as a cushion against unexpected losses by 10 percent on average.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/4e44e49c-6a90-11e5-8608-a0853fb4e1fe.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3nevhxtO5"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>What You Need to Know About New Mutual Fund Rules</strong> <span class="divider"> | </span></span> The Securities and Exchange Commission is increasing its watch over the $60 trillion money-management business. The Wall Street Journal looks at the implications for the asset-management business.  <br /><span class="kicker"><a href="//www.wsj.com/articles/the-new-mutual-fund-rules-what-you-need-to-know-1444010541?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/10/05/morning-agenda-american-apparel-files-for-bankruptcy/"
+					data-title="Morning Agenda: American Apparel Files for Bankruptcy"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Deaths Highlight Pressures of Wall Street | Why Volkswagen Started Cheating | Valeant&#039;s High-Price Drug Strategy&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/10/05/morning-agenda-american-apparel-files-for-bankruptcy/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":48,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

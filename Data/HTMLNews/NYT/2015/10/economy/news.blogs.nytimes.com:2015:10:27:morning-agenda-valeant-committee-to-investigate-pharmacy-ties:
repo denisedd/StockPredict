@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004000944"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1445938908" />
+<meta name="PUD" content="20151027" />
+<meta name="pdate" content="20151027" />
+<meta name="ptime" content="20151027054148" />
+<meta name="utime" content="20151027094148" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-10-27T09:41:48-04:00" />
+<meta name="DISPLAYDATE" content="October 27, 2015" />
+<meta name="dat" content="October 27, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Art;Federal Reserve Bank of New York;Goldman Sachs Group Inc;Law School Admission Test (LSAT);Law Schools;Legal Profession;Regulation and Deregulation of Industry;Start-ups;Taxation;Theranos Inc">
+<meta name="org" content="Bain Capital;Carlyle Group LP;Deutsche Bank AG;Duke Energy Corporation;JPMorgan Chase &amp; Company;New York Stock Exchange;Securities and Exchange Commission;Valeant Pharmaceuticals International Inc">
+<meta name="ticker" content="Carlyle Group LP|CG|NASDAQ;Deutsche Bank AG|DB|NYSE;Duke Energy Corporation|DUK|NYSE;JPMorgan Chase & Company|JPM|NYSE;Valeant Pharmaceuticals International Inc|VRX|NYSE" />
+<meta property="article:tag" content="Art" />
+<meta property="article:tag" content="Federal Reserve Bank of New York" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Law School Admission Test (LSAT)" />
+<meta property="article:tag" content="Law Schools" />
+<meta property="article:tag" content="Legal Profession" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Taxation" />
+<meta property="article:tag" content="Theranos Inc" />
+<meta property="article:tag" content="Bain Capital" />
+<meta property="article:tag" content="Carlyle Group LP" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Duke Energy Corporation" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="New York Stock Exchange" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Valeant Pharmaceuticals International Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Art,Federal Reserve Bank of New York,Goldman Sachs Group Inc,Law School Admission Test (LSAT),Law Schools,Legal Profession,Regulation and Deregulation of Industry,Start-ups,Taxation,Theranos Inc,Bain Capital,Carlyle Group LP,Deutsche Bank AG,Duke Energy Corporation,JPMorgan Chase &amp; Company,New York Stock Exchange,Securities and Exchange Commission,Valeant Pharmaceuticals International Inc,DealBook" />
+<meta name="news_keywords" content="Art,Bain Capital,Carlyle Group,Deutsche Bank,Duke Energy,JPMorgan Chase,Law school,Lawyers,LSAT,NYSE,Regulation and Deregulation,SEC,Startup,Tax,Valeant Pharmaceuticals International" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F10%2F27%2Fmorning-agenda-valeant-committee-to-investigate-pharmacy-ties%2F" title="Morning Agenda: Valeant Committee to Investigate Pharmacy Ties" />
+<meta name="description" content="Former Goldman Banker to Plead Guilty in Document Leak &#124; Law Schools Lower Admissions Standards &#124; A Banker Giving Back" />
+<meta name="hdl" content="Morning Agenda: Valeant Committee to Investigate Pharmacy Ties" />
+<meta property="og:title" content="Morning Agenda: Valeant Committee to Investigate Pharmacy Ties" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/10/27/morning-agenda-valeant-committee-to-investigate-pharmacy-ties/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Former Goldman Banker to Plead Guilty in Document Leak &#124; Law Schools Lower Admissions Standards &#124; A Banker Giving Back" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Valeant Committee to Investigate Pharmacy Ties" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/10/27/morning-agenda-valeant-committee-to-investigate-pharmacy-ties/" />
+<meta name="twitter:description" content="Former Goldman Banker to Plead Guilty in Document Leak &#124; Law Schools Lower Admissions Standards &#124; A Banker Giving Back" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Uber Said to Plan Another $1 Billion in Fund-Raising' href='//news.blogs.nytimes.com/2015/10/26/morning-agenda-uber-said-to-plan-another-1-billion-in-fund-raising/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/10/27/what-were-reading-101/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/10/27/morning-agenda-valeant-committee-to-investigate-pharmacy-ties/' />
+<link rel='shortlink' href='//nyti.ms/1k6F34D' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/10/27/morning-agenda-valeant-committee-to-investigate-pharmacy-ties/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Valeant Committee to Investigate Pharmacy Ties - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3513 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Valeant Committee to Investigate Pharmacy Ties        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/10/27/morning-agenda-valeant-committee-to-investigate-pharmacy-ties/"
+	 data-title="Morning Agenda: Valeant Committee to Investigate Pharmacy Ties"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Former Goldman Banker to Plead Guilty in Document Leak | Law Schools Lower Admissions Standards | A Banker Giving Back&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/10/27/morning-agenda-valeant-committee-to-investigate-pharmacy-ties/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="October 27, 2015 5:41 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Valeant Committee to Investigate Pharmacy Ties</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-10-27T09:41:48+00:00" itemprop="datePublished">October 27, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">October 27, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3513 post type-post status-publish hentry category-dealbook tag-art tag-bain-capital tag-carlyle-group-lp tag-deutsche-bank-ag tag-duke-energy-corporation tag-federal-reserve-bank-of-new-york tag-goldman-sachs-group-inc tag-jpmorgan-chase-company tag-law-school-admission-test-lsat tag-law-schools tag-legal-profession tag-new-york-stock-exchange tag-regulation-and-deregulation-of-industry tag-securities-and-exchange-commission tag-start-ups tag-taxation tag-theranos-inc tag-valeant-pharmaceuticals-international-inc des-art des-federal-reserve-bank-of-new-york des-goldman-sachs-group-inc des-law-school-admission-test-lsat des-law-schools des-legal-profession des-regulation-and-deregulation-of-industry des-start-ups des-taxation des-theranos-inc org-bain-capital org-carlyle-group-lp org-deutsche-bank-ag org-duke-energy-corporation org-jpmorgan-chase-company org-new-york-stock-exchange org-securities-and-exchange-commission org-valeant-pharmaceuticals-international-inc news_keywords-art news_keywords-bain-capital news_keywords-carlyle-group news_keywords-deutsche-bank news_keywords-duke-energy news_keywords-jpmorgan-chase news_keywords-law-school news_keywords-lawyers news_keywords-lsat news_keywords-nyse news_keywords-regulation-and-deregulation news_keywords-sec news_keywords-startup news_keywords-tax news_keywords-valeant-pharmaceuticals-international" id="post-3513">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Valeant Committee to Investigate Pharmacy Ties</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-10-27T09:41:48+00:00" itemprop="datePublished">October 27, 2015 5:41 am</time>
+			<!-- date updated --><span class="visually-hidden updated">October 27, 2015 5:41 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/10/27/morning-agenda-valeant-committee-to-investigate-pharmacy-ties/" data-title="Morning Agenda: Valeant Committee to Investigate Pharmacy Ties" data-description="Former Goldman Banker to Plead Guilty in Document Leak | Law Schools Lower Admissions Standards | A Banker Giving Back">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>VALEANT COMMITTEE TO INVESTIGATE PHARMACY TIES</strong> <span class="divider"> | </span></span> Valeant Pharmaceuticals International said that its relationship with the specialty pharmacy Philidor was legal, but that the board would still form a special committee to <b>run an inquiry into the issue</b>, <a href="//www.nytimes.com/2015/10/27/business/valeant-forms-committee-to-investigate-ties-with-pharmacy.html?ref=business&#038;_r=0">Andrew Pollack reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">J. Michael Pearson, Valeantâs chief executive, said the committee would <b>look at reports</b> by <a href="//www.wsj.com/articles/valeant-forms-board-committee-to-review-philidor-arrangement-1445856795?cb=logged0.2197381549892019">The Wall Street Journal</a> that before Valeant had acquired the option to buy Philidor, its employees had been working at Philidor and using fake names in emails. </p>
+<p class="story-body-text" itemprop="articleBody">Valeant executives have also asked the Securities and Exchange Commission to <b>investigate Citron</b>, accusing the stock research firm of making false statements to drive down Valeant stock. </p>
+<p class="story-body-text" itemprop="articleBody">In spite of its effort to defend itself, Valeant shares fell more than 5 percent on Monday.</p>
+<p class="story-body-text" itemprop="articleBody">Valeant also revealed in a regulatory filing that its Bausch &#038; Lomb eye care business  received a <b>subpoena in September</b> regarding payments and agreements with medical professionals for surgical products. The subpoena was part of a criminal investigation. </p>
+<p class="story-body-text" itemprop="articleBody">Valeant had paid about $100 million initially for an option to acquire Philidor.<br />
+Philidor had <b>failed to get a license</b> to dispense drugs in California because the state said the pharmacy had not been truthful in stating its owners. </p>
+<p class="story-body-text" itemprop="articleBody">Lawsuits and other information suggest that Philidor then acquired <b>stakes in California pharmacies</b>. One of those pharmacies, R&#038;O, claimed in a lawsuit that it sold a stake in itself to an entity that tried to hide that it was a front for Philidor. </p>
+<p class="story-body-text" itemprop="articleBody">Its efforts to explain its ties, without explaining why it obscured the dealings, only <b>confirmed fears about Valeant</b>, <a href="//www.nytimes.com/2015/10/27/business/dealbook/in-trying-to-explain-itself-valeant-muddies-the-water.html?ref=dealbook">Robert Cyran writes in Breakingviews.</a></p>
+<p class="story-body-text" itemprop="articleBody">The best that can be said of Valeantâs unsuccessful attempt to clear the air is that it might help the company see how much more explaining it has to do, Mr. Cyran writes. </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.bloombergview.com/articles/2015-10-26/valeant-s-pharmacy-relationships-were-complicated">Matt Levine at Bloomberg View</a> notes that the complexity of the trails among all the different organizations involved indicates that Valeant avoided legal ownership because that would imply responsibility. The company has reassured investors about due diligence and oversight, while denying any control or <b>responsibility for Philidorâs actions</b>. </p>
+<p class="story-body-text" itemprop="articleBody">That <b>strategy has backfired</b>. âIt just seems to have gotten the ownership bundle wrong: Its control wasnât strong enough to avoid problems at the network, but its economic interests are enough to make those problems Valeantâs own,â Mr. Levine argues.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FORMER GOLDMAN BANKER TO PLEAD GUILTY IN DOCUMENT LEAK</strong> <span class="divider"> | </span></span> A former Goldman Sachs banker, suspected of taking confidential documents, and his source at the Federal Reserve Bank of New York have agreed to plead guilty,<br />
+<a href="//www.nytimes.com/2015/10/27/business/dealbook/criminal-charges-and-50-million-fine-expected-in-goldman-new-york-fed-case.html?ref=dealbook">Ben Protess and Peter Eavis report in DealBook.</a> They will accept a plea deal that could send them to <b>prison for up to a year</b> and may face lifetime bans from the banking industry. </p>
+<p class="story-body-text" itemprop="articleBody">Under a tentative deal with New York Stateâs financial regulator, Goldman would also pay a <b>fine of $50 million</b> and face restrictions on how it handled regulatory information. The settlement would force Goldman to take the rare step of acknowledging that it had failed to adequately supervise the banker. </p>
+<p class="story-body-text" itemprop="articleBody">It would also highlight an embarrassing episode that illustrated the <b>revolving door</b> between Goldman and the government. </p>
+<p class="story-body-text" itemprop="articleBody">The Goldman banker, Rohit Bansal,  had spent seven years as a regulator at the New York Fed and his <b>source was a former colleague</b> there. </p>
+<p class="story-body-text" itemprop="articleBody">It is rare for a Wall Street banker to face <b>criminal charges</b>: Prosecutors have charged bankers and traders in just a handful of situations.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>LAW SCHOOLS LOWER ADMISSIONS STANDARDS</strong> <span class="divider"> | </span></span> Law schools are lowering their entry requirements to <b>keep their classrooms full</b>,<br />
+<a href="//www.nytimes.com/2015/10/27/business/dealbook/study-cites-lower-standards-in-law-school-admissions.html?ref=dealbook">Elizabeth Olson writes in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">About a third of the 204 accredited law schools had entering classes last year with at least a quarter of the class consisting of <b> âat riskâ students</b>, or those with law school admissions test scores of below 150, according to a study by Law School Transparency, a nonprofit advocacy organization.</p>
+<p class="story-body-text" itemprop="articleBody">Admissions scores at law schools closely mirror the results of the state bar exams, which graduates must pass to qualify as licensed lawyers, and they are regarded as an <b>indicator of later success</b> â or failure. </p>
+<p class="story-body-text" itemprop="articleBody">Law schools say test scores are just one indicator and they need the flexibility to <b>assure a diverse population</b> of lawyers.</p>
+<p class="story-body-text" itemprop="articleBody">But they are also facing pressure from the <b>lowest enrollment in decades</b>.<br />
+Enrollment peaked in 2010 with the economy in trouble, but law jobs started to disappear as the industry adjusted to the economy. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Bar passage rates</b> are also slumping, with overall results slipping to their lowest point since 1988. </p>
+<p class="story-body-text" itemprop="articleBody">Kyle McEntee, executive director of Law School Transparency, said that at-risk law students âhave little chance of gainful employment in order to <b>pay off the debt </b>they are accumulating.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>Alibaba</b> will discuss its quarterly earnings at 7:30 a.m. <b>Ford Motor Company</b> releases its third-quarter earnings at 7 a.m. and follows with a conference call at 9 a.m. <b>Apple</b> and <b>Twitter</b> will hold conference calls to discuss their latest quarterly results at 5 p.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A BANKER GIVING BACK</strong> <span class="divider"> | </span></span> The Swiss banker Josef Ackermann played a role in nearly destroying the Cyprus banking system in 2013 and now he has <b>returned to fix one of the banks</b> he helped undermine, </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2015/10/27/business/dealbook/josef-ackermann-sees-his-role-in-cyprus-as-a-chance-to-give-back.html?ref=dealbook">Jack Ewing reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Mr. Ackermann, the former chief of Deutsche Bank, is now chairman of the <b>Bank of Cyprus</b>.<br />
+âIf I could give something back to the people or society, I would like to do that,â Mr. Ackermann said. </p>
+<p class="story-body-text" itemprop="articleBody">âI want to demonstrate that <b>we cannot only make money for ourselves</b>, but also that banking is actually something which is a main contributor to the prosperity of society at large,â Mr. Ackermann said.</p>
+<p class="story-body-text" itemprop="articleBody">If Mr. Ackermann succeeded in reviving the bank, he would also help revive the country. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Thousands of people lost money</b> after their deposits were seized in 2013 to cover losses that the Cyprus banks absorbed on their holdings of Greek bonds. Many are still angry. </p>
+<p class="story-body-text" itemprop="articleBody">The losses were partly Mr. Ackermannâs work. As chairman of the International Institute of Finance â an industry group that represents the interests of banks like Deutsche, Goldman Sachs and Morgan Stanley â he played a primary role in <b>negotiating an agreement</b> that provided crucial debt relief for Greece. </p>
+<p class="story-body-text" itemprop="articleBody">The deal caused enormous <b>collateral damage</b> in Cyprus. Cyprus Popular Bank, the islandâs second-largest lender, collapsed and was absorbed by Bank of Cyprus.</p>
+<p class="story-body-text" itemprop="articleBody">The banking crisis was followed by a recession and a real estate bubble. </p>
+<p class="story-body-text" itemprop="articleBody">The Bank of Cyprus has since <b>reduced its dependence</b> on emergency loans from the European Central Bank, cut costs and decreased its dependence on borrowed money. </p>
+<p class="story-body-text" itemprop="articleBody">The turnaround is still uncertain. Mr. Ackermann would not get a payoff anyway.<br />
+He is paid 68,000 euros, or $75,000, a year and has no other options to profit from the bankâs recovery. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="N.Y.S.E. Owner to Buy Interactive Data for $5.2 Billion" src="https://static01.nyt.com/images/2015/10/27/business/27db-data-web/27db-data-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>N.Y.S.E. Owner to Buy Interactive Data for $5.2 Billion</strong> <span class="divider"> | </span></span> In buying I.D.C., the IntercontinentalExchange beat out a rival exchange operator, Nasdaq, and the financial data publisher Markit in an auction.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/27/business/dealbook/nyse-owner-said-to-buy-interactive-data-for-5-2-billion.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Duke Energy to Acquire Piedmont for $4.9 Billion" src="https://static01.nyt.com/images/2015/10/27/business/27db-duke-web/27db-duke-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Duke Energy to Acquire Piedmont for $4.9 Billion</strong> <span class="divider"> | </span></span> By acquiring the natural gas distributor, Duke Energy will add about one million customers in North Carolina, South Carolina and Tennessee.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/27/business/dealbook/duke-energy-to-acquire-piedmont-for-4-9-billion.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Mikhail Fridman Proposes $4 Billion Investment in Oi of Brazil" src="https://static01.nyt.com/images/2015/10/27/business/db-braziltelecom-web1/db-braziltelecom-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Mikhail Fridman Proposes $4 Billion Investment in Oi of Brazil</strong> <span class="divider"> | </span></span> The Russian oligarchâs investment group has offered to invest in a possible merger of Oi with Telecom Italiaâs local operator, TIM ParticipaÃ§Ãµes.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/27/business/dealbook/mikhail-fridman-proposes-4-billion-investment-in-oi-of-brazil.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Nippon Life Said to Agree to Buy NABâs Insurance Business</strong> <span class="divider"> | </span></span> Nippon Life Insurance has agreed to buy a majority stake in National Australia Bankâs life insurance business for $1.8 billion, Bloomberg News reported, citing people familiar with the transaction.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-26/national-australia-shares-halted-ahead-of-a-transaction-update"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Bridgestone to Buy Pep Boys for $835 Million" src="https://static01.nyt.com/images/2015/10/27/business/27db-pepboys-web/27db-pepboys-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bridgestone to Buy Pep Boys for $835 Million</strong> <span class="divider"> | </span></span> The acquisition of the car parts retailer will give Bridgestone about 800 more stores to add to its network of 2,200 tire and car service centers.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/27/business/dealbook/bridgestone-to-buy-pep-boys-for-835-million.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Philips Casts Doubt on Closing of Sale of Stake in LED Business</strong> <span class="divider"> | </span></span> The Committee on Foreign Investment in the United States has raised âunforeseen concernsâ about the deal, the Dutch electronics giant said.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/27/business/dealbook/philips-casts-doubt-on-closing-of-sale-of-stake-in-led-business.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JPMorgan Says It Will Publicly Disclose Pay Clawbacks</strong> <span class="divider"> | </span></span> After resisting calls for more information, the bank says it will make a public disclosure any time it claws back money from any member of the companyâs operating committee.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/27/business/dealbook/jpmorgan-says-it-will-publicly-disclose-pay-clawbacks.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JPMorgan Chase Says It is Building a Rival to Apple Pay</strong> <span class="divider"> | </span></span> JPMorgan Chase said it would soon introduce its own competitor to Apple Pay that will allow consumers to pay retailers using their smartphones in stores; it has already won the endorsement of a major group of merchants.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/10/26/us-jpmorgan-payments-idUSKCN0SK2MF20151026?feedType=RSS&#038;feedName=topNews"> Reuters </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JPMorgan Targets New Branches in India for Wholesale Banking</strong> <span class="divider"> | </span></span> The bank is in talks with the Reserve Bank of India over permits for centers to support corporate client services including cash management, foreign-currency payments and trade finance.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-26/jpmorgan-targets-new-branches-in-india-for-wholesale-banking"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Bank May Revamp I.T. Systems</strong> <span class="divider"> | </span></span> John Cryan, the co-chief executive, will promise to replace much of Deutsche Bankâs messy and outdated technology when he presents his strategy to investors on Thursday, The Financial Times reports, citing people familiar with his plans.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/29e44356-7bf0-11e5-98fb-5a6d4728f74e.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3pe7uqjAl"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Carlyle Group and Vinci Partners Buy Brazilian Education Business</strong> <span class="divider"> | </span></span> Kroton Educacional has agreed to sell its learning unit, Uniasselvi, to the Carlyle Group and the Brazilian investment firm Vinci Partners for $284.6 million.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/27/business/dealbook/carlyle-group-and-vinci-partners-buy-brazilian-education-business.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Daniel Loebâs Third Point Takes Stake in Japanâs Seven &#038; i</strong> <span class="divider"> | </span></span> Daniel Loeb, the activist investor, has acquired a stake in Seven &#038; i Holdings and called on the Japanese retailer to revamp its lackluster supermarket business, The Financial Times reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/a114683a-7c58-11e5-98fb-5a6d4728f74e.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3pe7uqjAl">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bain Said to Be Working on Brakes I.P.O.</strong> <span class="divider"> | </span></span> Bain Capital is working on an initial public offering of its food services business, Brakes Group, which could value the company at about $3.8 billion, Bloomberg News reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-26/bain-said-to-work-with-goldman-sachs-jpmorgan-for-brakes-ipo"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Midwest Start-Up Achieves Rare $1 Billion Valuation</strong> <span class="divider"> | </span></span> Uptake, a start-up based in Chicago that helps companies analyze data, upends the stereotype of such so-called unicorns: It is profitable and based outside Silicon Valley.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/27/business/dealbook/midwest-start-up-achieves-rare-dollar1-billion-valuation.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chief of Theranos Pledges to Prove Blood Testâs Reliability</strong> <span class="divider"> | </span></span> The head of the medical testing company said on Monday that it would publish data validating the accuracy of its tests.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/27/business/chief-of-theranos-pledges-to-prove-blood-tests-reliability.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Start-Ups Accelerate Efforts to Reinvent Trucking Industry</strong> <span class="divider"> | </span></span> Investors are pouring millions of dollars into start-ups hoping to disrupt the $700 billion trucking industry, which has long relied on third-party brokers to connect truckers with customers.<br /><span class="kicker"><a href="//www.wsj.com/articles/startups-accelerate-efforts-to-reinvent-trucking-industry-1445918403?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Reforming the S.E.C.âs Administrative Process" src="https://static01.nyt.com/images/2015/10/27/business/db-whitecollar-web1/db-whitecollar-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Reforming the S.E.C.âs Administrative Process</strong> <span class="divider"> | </span></span> An area of the law thought long settled has been attacked by defense lawyers, and now on Capitol Hill, as fundamentally unfair, Peter J. Henning writes in the White Collar Watch column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/27/business/dealbook/reforming-the-secs-administrative-process.html">White Collar Watch &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/10/27/business/dealbook/canadian-ratings-agency-to-pay-5-8-million-in-sec-settlement.html">Canadian Ratings Agency to Pay $5.8 Million in S.E.C. Settlement</a> </span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Canadian Ratings Agency to Pay $5.8 Million in S.E.C. Settlement</strong> <span class="divider"> | </span></span> DBRS had been accused of misrepresenting how often it reviewed its outstanding ratings of some residential mortgage-backed securities and other complex bonds.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/27/business/dealbook/canadian-ratings-agency-to-pay-5-8-million-in-sec-settlement.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Massachusetts Accuses Fidelity of Failing to Block Unregistered Advisers</strong> <span class="divider"> | </span></span> The secretary of the commonwealth said that Fidelity Brokerage Service had acted as a âhaven from regulatory oversightâ for unregistered advisers.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/27/business/dealbook/massachusetts-accuses-fidelity-of-failing-to-block-unregistered-advisers.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New York Bank Regulators Leave After Clash With Governorâs Office</strong> <span class="divider"> | </span></span> The acting head of New Yorkâs top banking regulator and the agencyâs chief spokesman are resigning from the office in the face of a battle with New York Governor Andrew Cuomoâs administration over the regulatorâs independence, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/new-york-bank-regulators-exit-after-clash-with-governor-cuomos-office-1445901331?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Art Collectors Find Safe Harbor in Delawareâs Tax Laws" src="https://static01.nyt.com/images/2015/10/26/arts/26FREEPORTJP-SUB/26FREEPORTJP-SUB-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Art Collectors Find Safe Harbor in Delawareâs Tax Laws</strong> <span class="divider"> | </span></span> Laws allowing art to be shipped to and even bought and sold within a storage space with tax advantages has encouraged more art warehouses to open.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/26/arts/design/art-collectors-find-safe-harbor-in-delawares-tax-laws.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/10/27/morning-agenda-valeant-committee-to-investigate-pharmacy-ties/"
+					data-title="Morning Agenda: Valeant Committee to Investigate Pharmacy Ties"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Former Goldman Banker to Plead Guilty in Document Leak | Law Schools Lower Admissions Standards | A Banker Giving Back&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/10/27/morning-agenda-valeant-committee-to-investigate-pharmacy-ties/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":102,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

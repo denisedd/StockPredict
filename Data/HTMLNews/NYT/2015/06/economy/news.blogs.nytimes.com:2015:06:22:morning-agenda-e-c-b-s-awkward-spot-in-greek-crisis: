@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003755802"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1434971726" />
+<meta name="PUD" content="20150622" />
+<meta name="pdate" content="20150622" />
+<meta name="ptime" content="20150622071526" />
+<meta name="utime" content="20150622111526" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-06-22T11:15:26-04:00" />
+<meta name="DISPLAYDATE" content="June 22, 2015" />
+<meta name="dat" content="June 22, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Draghi, Mario">
+<meta name="des" content="Banking and Financial Institutions;European Sovereign Debt Crisis (2010- );Health Insurance and Managed Care;Hedge Funds;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Private Equity;Regulation and Deregulation of Industry;Telephones and Telecommunications;Venture Capital">
+<meta name="org" content="Altice SA;Anthem Inc.;CIGNA Corporation;Energy Transfer Equity LP;European Central Bank;European Union;Williams Companies Inc">
+<meta name="geo" content="France;Greece">
+<meta property="article:tag" content="Draghi Mario" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="European Sovereign Debt Crisis (2010- )" />
+<meta property="article:tag" content="Health Insurance and Managed Care" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Telephones and Telecommunications" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Altice SA" />
+<meta property="article:tag" content="Anthem Inc." />
+<meta property="article:tag" content="CIGNA Corporation" />
+<meta property="article:tag" content="Energy Transfer Equity LP" />
+<meta property="article:tag" content="European Central Bank" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="Williams Companies Inc" />
+<meta property="article:tag" content="France" />
+<meta property="article:tag" content="Greece" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Draghi Mario,Banking and Financial Institutions,European Sovereign Debt Crisis (2010- ),Health Insurance and Managed Care,Hedge Funds,Initial Public Offerings,Mergers Acquisitions and Divestitures,Private Equity,Regulation and Deregulation of Industry,Telephones and Telecommunications,Venture Capital,Altice SA,Anthem Inc.,CIGNA Corporation,Energy Transfer Equity LP,European Central Bank,European Union,Williams Companies Inc,France,Greece,DealBook" />
+<meta name="news_keywords" content="Altice,Banking and Finance,EU,Euro Crisis,European Central Bank,France,Greece,Health Insurance,Hedge fund,IPO,Mario Draghi,Mergers and Acquistions,Private equity,Regulation and Deregulation,Telecommunication,Venture capital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F06%2F22%2Fmorning-agenda-e-c-b-s-awkward-spot-in-greek-crisis%2F" title="Morning Agenda: E.C.B.&#8217;s Awkward Spot in Greek Crisis" />
+<meta name="description" content="E.C.B.&#8217;s Awkward Spot in Greek Crisis &#124; Cigna Rejects Anthem&#8217;s $47 Billion Bid &#124; Altice Offers to Buy Bouygues Telecom for $11.3 Billion &#124; Williams Companies Rebuffs $48 Billion Offer" />
+<meta name="hdl" content="Morning Agenda: E.C.B.&#039;s Awkward Spot in Greek Crisis" />
+<meta property="og:title" content="Morning Agenda: E.C.B.&#039;s Awkward Spot in Greek Crisis" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/06/22/morning-agenda-e-c-b-s-awkward-spot-in-greek-crisis/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="E.C.B.&#8217;s Awkward Spot in Greek Crisis &#124; Cigna Rejects Anthem&#8217;s $47 Billion Bid &#124; Altice Offers to Buy Bouygues Telecom for $11.3 Billion &#124; Williams Companies Rebuffs $48 Billion Offer" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: E.C.B.&#039;s Awkward Spot in Greek Crisis" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/06/22/morning-agenda-e-c-b-s-awkward-spot-in-greek-crisis/" />
+<meta name="twitter:description" content="E.C.B.&#8217;s Awkward Spot in Greek Crisis &#124; Cigna Rejects Anthem&#8217;s $47 Billion Bid &#124; Altice Offers to Buy Bouygues Telecom for $11.3 Billion &#124; Williams Companies Rebuffs $48 Billion Offer" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/06/19/what-were-reading-65/' />
+<link rel='next' title='Morning Agenda: Winners and Losers in Health Care Mergers' href='//news.blogs.nytimes.com/2015/06/23/morning-agenda-winners-and-losers-in-health-care-mergers/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/06/22/morning-agenda-e-c-b-s-awkward-spot-in-greek-crisis/' />
+<link rel='shortlink' href='//nyti.ms/1N0dCSp' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/06/22/morning-agenda-e-c-b-s-awkward-spot-in-greek-crisis/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: E.C.B.&#039;s Awkward Spot in Greek Crisis - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2605 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: E.C.B.&#8217;s Awkward Spot in Greek Crisis        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/06/22/morning-agenda-e-c-b-s-awkward-spot-in-greek-crisis/"
+	 data-title="Morning Agenda: E.C.B.&#8217;s Awkward Spot in Greek Crisis"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;E.C.B.&#039;s Awkward Spot in Greek Crisis | Cigna Rejects Anthem&#039;s $47 Billion Bid | Altice Offers to Buy Bouygues Telecom for $11.3 Billion | Williams Companies Rebuffs $48 Billion Offer&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/06/22/morning-agenda-e-c-b-s-awkward-spot-in-greek-crisis/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 22, 2015 7:15 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: E.C.B.&#8217;s Awkward Spot in Greek Crisis</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-06-22T11:15:26+00:00" itemprop="datePublished">June 22, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">June 22, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2605 post type-post status-publish hentry category-dealbook tag-altice-sa tag-anthem-inc tag-banking-and-financial-institutions tag-cigna-corporation tag-draghi-mario tag-energy-transfer-equity-lp tag-european-central-bank tag-european-sovereign-debt-crisis-2010 tag-european-union tag-france tag-greece tag-health-insurance-and-managed-care tag-hedge-funds tag-initial-public-offerings tag-mergers-acquisitions-and-divestitures tag-private-equity tag-regulation-and-deregulation-of-industry tag-telephones-and-telecommunications tag-venture-capital tag-williams-companies-inc per-draghi-mario des-banking-and-financial-institutions des-european-sovereign-debt-crisis-2010 des-health-insurance-and-managed-care des-hedge-funds des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-private-equity des-regulation-and-deregulation-of-industry des-telephones-and-telecommunications des-venture-capital org-altice-sa org-anthem-inc org-cigna-corporation org-energy-transfer-equity-lp org-european-central-bank org-european-union org-williams-companies-inc geo-france geo-greece news_keywords-altice news_keywords-banking-and-finance news_keywords-eu news_keywords-euro-crisis news_keywords-european-central-bank news_keywords-france news_keywords-greece news_keywords-health-insurance news_keywords-hedge-fund news_keywords-ipo news_keywords-mario-draghi news_keywords-mergers-and-acquistions news_keywords-private-equity-2 news_keywords-regulation-and-deregulation news_keywords-telecommunication news_keywords-venture-capital-2" id="post-2605">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: E.C.B.&#8217;s Awkward Spot in Greek Crisis</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-06-22T11:15:26+00:00" itemprop="datePublished">June 22, 2015 7:15 am</time>
+			<!-- date updated --><span class="visually-hidden updated">June 22, 2015 7:15 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/06/22/morning-agenda-e-c-b-s-awkward-spot-in-greek-crisis/" data-title="Morning Agenda: E.C.B.&#8217;s Awkward Spot in Greek Crisis" data-description="E.C.B.&#039;s Awkward Spot in Greek Crisis | Cigna Rejects Anthem&#039;s $47 Billion Bid | Altice Offers to Buy Bouygues Telecom for $11.3 Billion | Williams Companies Rebuffs $48 Billion Offer">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>E.C.B.âS AWKWARD SPOT IN GREEK CRISIS </strong> <span class="divider"> | </span></span> As billions of euros are being withdrawn from Greek banks, the European Central Bank has stepped in with emergency funding to keep the countryâs banking system from collapsing. Yet as it acts as the savior of Greeceâs financial system, the E.C.B. is also playing the role of the countryâs scold, refusing to budge on debt relief, <a href="//www.nytimes.com/2015/06/22/business/european-central-bank-plays-dual-role-in-greek-crisis.html"> Landon Thomas Jr. and Peter Eavis write in DealBook</a>. âThis tension in many ways <b> mirrors Europeâs broader dilemma</b> of how to handle Greece,â they write. âShould lending lines to the country be renewed, in the interest of keeping the eurozone intact? Or should Greece, having demanded too much from Europe, not be bailed out again?â </p>
+<p class="story-body-text" itemprop="articleBody">The E.C.B. and Mario Draghi, the central bankâs president, have argued that debt relief on their part would violate eurozone rules that forbid the financing of government deficits. Because of those strict rules, the E.C.B. leadership in Frankfurt can <b> quickly shift from a stance of propping up a banking system to allowing it to implode</b>, Mr. Thomas and Mr. Eavis write. However, a Greek default would be costly for the E.C.B., whose exposure to Greece now stands at <b> 150 billion euros, or $170 billion,</b> according to Deutsche Bank. Of that, â¬122 billion is propping up the banking sector through an emergency lifeline and other funding, and â¬27 billion is longer-term Greek bonds. </p>
+<p class="story-body-text" itemprop="articleBody">Guntram B. Wolff of Bruegel, a think tank in Brussels, said it would be <b>difficult for the E.C.B. to recover the money transferred through the emergency credit line</b>, as the funds would have been transferred to other countries. âThe prospect of losing billions of dollars on the emergency credit line could <b>make European leaders think twice</b> about putting Greece in a position where it might have to default and leave the euro,â Mr. Thomas and Mr. Eavis write. </p>
+<p class="story-body-text" itemprop="articleBody">On Monday, European finance ministers were set to meet in Brussels at 12:30 p.m. (6:30 a.m. E.D.T.), and eurozone heads of state were scheduled for an emergency summit meeting at 7 p.m. (1 p.m. E.D.T.). Investors appeared to be optimistic that a bailout deal would be struck after <b> Greece delivered a new set of proposals</b> to European leaders early Monday, <a href="//www.nytimes.com/2015/06/23/business/international/greek-debt-crisis.html"> James Kanter reports in The New York Times</a>, with European stock markets rallying in morning trading.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CIGNA REJECTS ANTHEMâS $47 BILLION BID</strong> <span class="divider"> | </span></span> Amid reports of jockeying among American health insurers seeking consolidation, Anthem made the first public move on Saturday after months of negotiations had stalled, announcing a $47 billion takeover bid for Cigna, <a href="//www.nytimes.com/2015/06/22/business/dealbook/cigna-rejects-an-overture-from-anthem.html"> Michael J. de la Merced and Reed Abelson report in DealBook</a>. Anthem offered $184 a share for Cigna â about 18 percent above Cignaâs closing price Friday of $155.26 â with about 31 percent in stock and nearly 69 percent in cash. </p>
+<p class="story-body-text" itemprop="articleBody">On Sunday, Cigna rejected the offer as âinadequate and not in the best interest of Cignaâs shareholders.â Cigna has balked at Anthemâs offers in large part because of corporate governance issues and disagreement over <b> who would run the combined insurer</b>, Mr. de la Merced and Mr. Abelson write. Anthem said Saturday that Cigna had pushed for its chief executive, David Cordani, to lead the merged company immediately. âWe were stunned that the Cigna board continues to insist on a <b> guaranteed C.E.O. position for Mr. Cordani</b> over choosing to allow its stockholders to realize the significant premium being offered,â Joseph R. Swedish, Anthemâs chief executive, wrote in a public letter to Cignaâs board. </p>
+<p class="story-body-text" itemprop="articleBody">That led Cigna to fire back with a statement that cited numerous reasons for ending its talks with Anthem, including <b> concerns about Mr. Swedishâs future role</b> and possible <b> regulatory hurdles</b>. In a letter written by Cignaâs board chairman, Isaiah Harris Jr., and Mr. Cordani, the two described themselves as âdeeply disappointedâ in Anthemâs decision to make its offer public and accused its executives of <b> choosing âto delay and avoid an open and transparent dialogue</b>.â<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ALTICE OFFERS TO BUY BOUYGUES TELECOM FOR $11.3 BILLION</strong> <span class="divider"> | </span></span> Altice, the cable and mobile services provider led by the French entrepreneur Patrick Drahi, has offered to pay 10 billion euros, or about $11.3 billion, in cash for its rival Bouygues Telecom, according to a person familiar with the discussions, <a href="//www.nytimes.com/2015/06/22/business/dealbook/altice-offers-to-buy-bouygues-telecom-for-11-3-billion.html"> Chad Bray and Mark Scott write in DealBook</a>. Altice confirmed on Monday that it had made an offer for Bouygues Telecom but did not give any further details. In a separate statement, Bouygues said that it had received an unsolicited offer from Altice and that its board would review the proposal on Tuesday. </p>
+<p class="story-body-text" itemprop="articleBody">Altice is one of the largest telecom operators in France, with about 6.5 million fixed-line customers and 22.5 million mobile customers through its Numericable-SFR business. The deal, if completed, would change the telecommunications landscape in France by combining two of Franceâs largest mobile providers â Numericable-SFR and Bouygues Telecom â and <b> ousting Orange as Franceâs largest cellphone company</b>. However, any potential deal could <b> face opposition in France</b>, Mr. Bray and Mr. Scott write. Emmanuel Macron, Franceâs economy minister, told reporters on Sunday that the <b>time was not right for consolidation</b> in the countryâs telecom sector and that the industry should focus on investment.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> Data on <b>existing home sales for May</b> is out at 10 a.m. <b>Larry Ellison</b>, Oracleâs executive chairman, speaks at the Oracle Cloud Platform Launch event in Redwood Shores, Calif., at 1 p.m. (4 p.m. E.D.T.)</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>WILLIAMS COMPANIES REBUFFS $48 BILLION OFFER</strong> <span class="divider"> | </span></span> Williams Companies said on Sunday that it had rejected a $48 billion takeover bid from an unnamed suitor, with Energy Transfer confirming hours later that it had made the approach, <a href=" //www.nytimes.com/2015/06/23/business/dealbook/williams-companies-rejects-48-billion-takeover-offer.html"> Michael J. de la Merced reports in DealBook</a>. âThe move highlights what some analysts describe as likely consolidation in the sector of moving oil and gas,â Mr. de la Merced writes. âThough pipeline operators have largely been shielded from the plunge in oil prices that has battered drillers, many in the industry say the path to success lies in increasing oneâs size.â </p>
+<p class="story-body-text" itemprop="articleBody">Williams, which announced in May it was absorbing a subsidiary in a nearly $14 billion deal, said the Energy Transfer offer was <b>too low</b>. The takeover proposal, which <b> required abandoning the transaction for the subsidiary</b>, âwould not deliver value commensurate with what Williams expects to achieve on a stand-alone basis and through other growth initiatives,â the company said in a news release.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CVC and Temasek to Buy Controlling Stake in Alvogen</strong> <span class="divider"> | </span></span> Robert Wessman, Alvogenâs chief executive, said CVC Capital Partners and the Singaporean sovereign wealth fund Temasek would buy a controlling stake in the pharmaceutical company, Reuters reports. <br /><span class="kicker"><a href="//www.reuters.com/article/2015/06/22/us-alvogen-m-a-cvc-exclusive-idUSKBN0P20JF20150622"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Void at JPMorgan Chase</strong> <span class="divider"> | </span></span> The death of Jimmy Lee, JPMorgan Chaseâs vice chairman and leading deal maker, leaves a void at the top of the investment bank, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/j-p-morgan-faces-a-void-after-a-deal-makers-death-1434928795"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Terra Firma to Charge Fees Only on Invested Capital</strong> <span class="divider"> | </span></span> Terra Firma, the private equity group founded by Guy Hands, will charge fees only on the money it has invested in deals, a departure from private equityâs longstanding fee practice, The Financial Times reports.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/43fb60e6-17fd-11e5-8201-cbdb03d71480.html"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bain Said to Work With JPMorgan and UBS on Ibstock I.P.O.</strong> <span class="divider"> | </span></span> Bain Capital is working with JPMorgan Chase and UBS Group on the potential initial public offering of the British brick maker Ibstock, which may seek a valuation of 1 billion pounds, or $1.6 billion, Bloomberg News reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-06-20/bain-said-to-work-with-jpmorgan-ubs-on-1-6-billion-ibstock-ipo"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Carlyle Group to Invest Up to $500 Million in Magna Energy</strong> <span class="divider"> | </span></span> Carlyle Group said it planned to invest up to $500 million in Magna Energy, a British energy company focused on South Asia that is led by former Cairn Energy executives, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-06-22/carlyle-invests-500-million-in-south-asia-focused-magna-energy"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tudor Venture to Develop Macro Trading Talent</strong> <span class="divider"> | </span></span> Paul Tudor Jones, founder of the $14 billion Tudor Investment Corporation, is starting LaunchPad Trading, a joint venture that will train 20 young macro traders before they start managing client money, Bloomberg News reports.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-06-22/traders-wanted-tudor-to-train-macro-managers-as-banks-retreat"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>2 Chinese Companies Seek to Raise $1 Billion Total in Hong Kong</strong> <span class="divider"> | </span></span> Guolian Securities, Royal Bank of Scotlandâs China joint-venture partner, is seeking to raise up to $471 million in a Hong Kong initial public offering, while Universal Medical Financial &#038; Technical Advisory Services plans to raise up to $546 million from its Hong Kong listing, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/two-more-chinese-companies-join-hong-kong-ipo-parade-1434950370"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>India Said to Plan Changes to I.P.O. Rules for Start-Ups</strong> <span class="divider"> | </span></span> India is set to overhaul its rules for initial public offerings for start-ups this week amid rising fears of an exodus of fast-growing technology companies to Singapore and the United States, The Financial Times reports, citing people familiar with the situation.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/e8d1ea68-1645-11e5-8095-00144feabdc0.html"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BlaBlaCar Said to Seek Funding at $1 Billion Valuation</strong> <span class="divider"> | </span></span> BlaBlaCar, a car-pool platform based in Paris that connects drivers with passengers, is seeking new financing that would value the company at more than $1 billion, Bloomberg News reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-06-19/blablacar-is-said-to-seek-private-funds-at-1-billion-valuation"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Labor Ruling on Uber Unlikely to Hurt Value, Investors Say</strong> <span class="divider"> | </span></span> A California ruling requiring Uber to classify a San Francisco-based driver as an employee instead of an independent contractor could change how these kind of start-ups operate, but investors say it is unlikely to hurt their value, Reuters reports. <br /><span class="kicker"><a href="//www.reuters.com/article/2015/06/22/us-uber-california-idUSKBN0P20C120150622"> REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="List of Requirements for Twitterâs Next Leader Runs Deep   " src="https://static01.nyt.com/images/2015/06/19/business/20twitter-web2/20twitter-web2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>List of Requirements for Twitterâs Next Leader Runs Deep   </strong> <span class="divider"> | </span></span> The new boss will need stature, technical knowledge and a desire to run the company in a time of turmoil, and will need to be comfortable operating under scrutiny.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/20/technology/list-of-requirements-for-twitters-next-leader-runs-deep.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tech Companies Fly High on Fantasy Accounting</strong> <span class="divider"> | </span></span> A troubling aspect of the exuberance for technology stocks is the degree to which companies promote financial results and measures that exclude the actual costs of doing business, Gretchen Morgenson writes in the Fair Game column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/21/business/high-tech-fantasy-accounting.html">Fair Game &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Instacart Reclassifying Part of Work Force as Part-Time Employees</strong> <span class="divider"> | </span></span> Instacart, the online grocery delivery service and one of the rising stars of Silicon Valleyâs on-demand economy, is converting a large part of its contractor work force into part-time employees, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-06-22/instacart-reclassifies-part-of-its-workforce-amid-regulatory-pressure-on-uber"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="European Regulators Lay Out Demands and Fines in Google Antitrust Case" src="https://static01.nyt.com/images/2015/06/20/business/20eugoogle-web/20eugoogle-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>European Regulators Lay Out Demands and Fines in Google Antitrust Case</strong> <span class="divider"> | </span></span> Regulators say that Google uses its 90 percent market share in Europe to favor its own services over those of rivals like Microsoft.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/20/technology/european-regulators-lay-out-demands-and-fines-in-google-antitrust-case.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/06/22/morning-agenda-e-c-b-s-awkward-spot-in-greek-crisis/"
+					data-title="Morning Agenda: E.C.B.&#8217;s Awkward Spot in Greek Crisis"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;E.C.B.&#039;s Awkward Spot in Greek Crisis | Cigna Rejects Anthem&#039;s $47 Billion Bid | Altice Offers to Buy Bouygues Telecom for $11.3 Billion | Williams Companies Rebuffs $48 Billion Offer&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/06/22/morning-agenda-e-c-b-s-awkward-spot-in-greek-crisis/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":51,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

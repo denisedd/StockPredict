@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004074421"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1449227712" />
+<meta name="PUD" content="20151204" />
+<meta name="pdate" content="20151204" />
+<meta name="ptime" content="20151204061512" />
+<meta name="utime" content="20151204111512" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-12-04T11:15:12-05:00" />
+<meta name="DISPLAYDATE" content="December 4, 2015" />
+<meta name="dat" content="December 4, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Initial Public Offerings;Interest Rates;Start-ups;Venture Capital">
+<meta name="org" content="American Homes 4 Rent;American Residential Properties REIT;Anheuser-Busch InBev NV;Avon Products Inc;Cerberus Capital Management;CME Group Inc;Coty Inc;European Union;Fiat Chrysler Automobiles NV;JPMorgan Chase &amp; Company;McDonald&#039;s Corporation;Occupational Safety and Health Administration;Samsung Group;Securities and Exchange Commission;UniRush LLC">
+<meta name="ticker" content="American Homes 4 Rent|AMH|NYSE;Anheuser-Busch InBev NV|BUD|NYSE;Avon Products Inc|AVP|NYSE;CME Group Inc|CME|NASDAQ;Fiat Chrysler Automobiles NV|FCAU|NYSE;JPMorgan Chase & Company|JPM|NYSE;McDonald's Corporation|MCD|NYSE" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Interest Rates" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="American Homes 4 Rent" />
+<meta property="article:tag" content="American Residential Properties REIT" />
+<meta property="article:tag" content="Anheuser-Busch InBev NV" />
+<meta property="article:tag" content="Avon Products Inc" />
+<meta property="article:tag" content="Cerberus Capital Management" />
+<meta property="article:tag" content="CME Group Inc" />
+<meta property="article:tag" content="Coty Inc" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="Fiat Chrysler Automobiles NV" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="McDonald&#039;s Corporation" />
+<meta property="article:tag" content="Occupational Safety and Health Administration" />
+<meta property="article:tag" content="Samsung Group" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="UniRush LLC" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Initial Public Offerings,Interest Rates,Start-ups,Venture Capital,American Homes 4 Rent,American Residential Properties REIT,Anheuser-Busch InBev NV,Avon Products Inc,Cerberus Capital Management,CME Group Inc,Coty Inc,European Union,Fiat Chrysler Automobiles NV,JPMorgan Chase &amp; Company,McDonald&#039;s Corporation,Occupational Safety and Health Administration,Samsung Group,Securities and Exchange Commission,UniRush LLC,DealBook" />
+<meta name="news_keywords" content="Startup" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F12%2F04%2Fmorning-agenda-avon-said-to-discuss-selling-north-american-business%2F" title="Morning Agenda: Avon Said to Discuss Selling North American Business" />
+<meta name="description" content="Fired JPMorgan Broker Says Complaints Written by Bank, Not Clients &#124; Uber Valued at $62.5 Billion" />
+<meta name="hdl" content="Morning Agenda: Avon Said to Discuss Selling North American Business" />
+<meta property="og:title" content="Morning Agenda: Avon Said to Discuss Selling North American Business" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/12/04/morning-agenda-avon-said-to-discuss-selling-north-american-business/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Fired JPMorgan Broker Says Complaints Written by Bank, Not Clients &#124; Uber Valued at $62.5 Billion" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Avon Said to Discuss Selling North American Business" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/12/04/morning-agenda-avon-said-to-discuss-selling-north-american-business/" />
+<meta name="twitter:description" content="Fired JPMorgan Broker Says Complaints Written by Bank, Not Clients &#124; Uber Valued at $62.5 Billion" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Yahoo Runs Out of Time' href='//news.blogs.nytimes.com/2015/12/03/morning-agenda-yahoo-runs-out-of-time/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/12/04/what-were-reading-111/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/12/04/morning-agenda-avon-said-to-discuss-selling-north-american-business/' />
+<link rel='shortlink' href='//nyti.ms/1NvdGIJ' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/12/04/morning-agenda-avon-said-to-discuss-selling-north-american-business/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Avon Said to Discuss Selling North American Business - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3786 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Avon Said to Discuss Selling North American Business        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/12/04/morning-agenda-avon-said-to-discuss-selling-north-american-business/"
+	 data-title="Morning Agenda: Avon Said to Discuss Selling North American Business"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Fired JPMorgan Broker Says Complaints Written by Bank, Not Clients | Uber Valued at $62.5 Billion&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/12/04/morning-agenda-avon-said-to-discuss-selling-north-american-business/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="December 4, 2015 6:15 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Avon Said to Discuss Selling North American Business</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-12-04T11:15:12+00:00" itemprop="datePublished">December 4, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">December 4, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3786 post type-post status-publish hentry category-dealbook tag-american-homes-4-rent tag-american-residential-properties-reit tag-anheuser-busch-inbev-nv tag-avon-products-inc tag-cerberus-capital-management tag-cme-group-inc tag-coty-inc tag-european-union tag-fiat-chrysler-automobiles-nv tag-initial-public-offerings tag-interest-rates tag-jpmorgan-chase-company tag-mcdonalds-corporation tag-occupational-safety-and-health-administration tag-samsung-group tag-securities-and-exchange-commission tag-start-ups tag-unirush-llc tag-venture-capital des-initial-public-offerings des-interest-rates des-start-ups des-venture-capital org-american-homes-4-rent org-american-residential-properties-reit org-anheuser-busch-inbev-nv org-avon-products-inc org-cerberus-capital-management org-cme-group-inc org-coty-inc org-european-union org-fiat-chrysler-automobiles-nv org-jpmorgan-chase-company org-mcdonalds-corporation org-occupational-safety-and-health-administration org-samsung-group org-securities-and-exchange-commission org-unirush-llc news_keywords-startup" id="post-3786">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Avon Said to Discuss Selling North American Business</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-12-04T11:15:12+00:00" itemprop="datePublished">December 4, 2015 6:15 am</time>
+			<!-- date updated --><span class="visually-hidden updated">December 4, 2015 6:15 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/12/04/morning-agenda-avon-said-to-discuss-selling-north-american-business/" data-title="Morning Agenda: Avon Said to Discuss Selling North American Business" data-description="Fired JPMorgan Broker Says Complaints Written by Bank, Not Clients | Uber Valued at $62.5 Billion">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AVON SAID TO DISCUSS SELLING NORTH AMERICAN BUSINESS</strong> <span class="divider"> | </span></span> Avon Products is in talks to sell its North American business to <b>Cerberus Capital Management, the private equity firm,</b><br />
+<a href="//www.nytimes.com/2015/12/04/business/dealbook/avon-said-to-be-in-talks-to-sell-north-american-business.html?ref=business&#038;_r=0">Michael J. de la Merced and Leslie Picker report in DealBook.</a> </p>
+<p class="story-body-text" itemprop="articleBody">People with direct knowledge of the matter said the company has been in negotiations for the past few months. Cerberus is expected to buy a minority stake that would <b>make it one of the biggest shareholders</b> and may receive seats on the board. A deal could be reached before year-end. </p>
+<p class="story-body-text" itemprop="articleBody">Avon shares surged 7 percent in late trading on Thursday after <a href="//www.wsj.com/articles/avon-in-talks-to-sell-north-american-business-1449176091">The Wall Street Journal reported</a> on the discussions. </p>
+<p class="story-body-text" itemprop="articleBody">The cosmetics maker, known for its army of Avon ladies, has been trying to turn its fortunes around as it has <b>struggled to compete in the era of e-commerce</b>. </p>
+<p class="story-body-text" itemprop="articleBody">It turned down a nearly <b>$11 billion takeover bid from its competitor Coty</b> more than three years ago, but its stock has sunk some 80 percent since then, leaving it with a market value of $1.6 billion.</p>
+<p class="story-body-text" itemprop="articleBody">Cerberus is best known for investing in troubled companies and its willingness to go where others will not. <b>It owns Remington Outdoor, the gun manufacturer</b> that made the weapons used in the Sandy Hook and the San Bernardino shootings. </p>
+<p class="story-body-text" itemprop="articleBody">It is also no stranger to retail, having investing in the supermarket chains Safeway and Albertsons. </p>
+<p class="story-body-text" itemprop="articleBody">A sale of the North American business, which made up 14 percent of sales last year and turned no profit, would <b>allow the company to focus on more lucrative markets like Brazil.</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FIRED JPMORGAN BROKER SAYS COMPLAINTS WRITTEN BY BANK, NOT CLIENTS</strong> <span class="divider"> | </span></span> Johnny Burris, a former broker at JPMorgan Chase, complained in 2013 that his employer was pressuring brokers like him to sell the bankâs own mutual funds even when competitors had more suitable offerings. A few weeks after The New York Times reported his concerns, complaints from his former clients in Arizona started to appear on publicly available disciplinary records maintained by a regulatory agency.<br />
+But the <b>clients told Mr. Burris that they had not written the complaints</b>,<br />
+<a HREF="//www.nytimes.com/2015/12/04/business/dealbook/bank-wrote-grievances-after-firing-a-broker.html?ref=business">Nathaniel Popper writes in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody"><b>The statements had made it hard for Mr. Burris to get another job</b> and scuttled his chances in his case against JPMorgan for wrongful determination. </p>
+<p class="story-body-text" itemprop="articleBody">Carolyn Scott told the Times she had not written a complaint, but had <b>signed one without knowing the contents</b> after a JPMorgan employee told her it was something that could help her get money back. âI was stupid enough I didnât read it myself,â Ms. Scott said. âI had no problems with Johnny.â</p>
+<p class="story-body-text" itemprop="articleBody">Another supposed complaint came from <b>a man who was essentially unable to read or write</b>. He had a declaration supporting Mr. Burris read to him aloud and signed it in front of a notary public. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Burris says he believes this was <b>JPMorganâs retaliation</b> for criticizing the bank. He had made secret recordings of his supervisors pressuring him and shared them with journalists and regulators.  </p>
+<p class="story-body-text" itemprop="articleBody">During arbitration in 2015, Mr. Burrisâs lawyer had asked his former supervisors if anyone at JPMorgan had helped draft the complaints and was told: âAbsolutely not.â</p>
+<p class="story-body-text" itemprop="articleBody">This week, Patricia Wexler, a JPMorgan spokeswoman, said that Laya Gavin, a former colleague of Mr. Burris, had <b>helped the clients as a courtesy</b> âby typing up what they told her verbally, reading it back to them for accuracy, and submitting them for review.â </p>
+<p class="story-body-text" itemprop="articleBody">Both clients involved disputed this. </p>
+<p class="story-body-text" itemprop="articleBody">A spokeswoman for the Financial Industry Regulatory Authority, which keeps these records, said the agency was looking into the allegations. </p>
+<p class="story-body-text" itemprop="articleBody">JPMorgan is preparing to pay more than $100 million to settle an investigation into the bankâs <b>marketing of proprietary funds</b>, according to people briefed on the negotiations. Mr. Burris has a pending whistle-blower case before the Occupational Safety and Health Administration. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> Data on <b>employment in November</b> will be released at 8:30 a.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>UBER VALUED AT $62.5 BILLION </strong> <span class="divider"> | </span></span> Uber is close to completing another round of <b>fund-raising worth $2.1 billion</b>, according to people briefed on the companyâs plans,<br />
+<a href="//www.nytimes.com/2015/12/04/business/dealbook/uber-nears-investment-at-a-62-5-billion-valuation.html?ref=dealbook">Mike Isaac and Leslie Picker report in DealBook.</a><br />
+This round of venture capital, the companyâs single largest to date, would value the company at $62.5 billion and make it the worldâs most valuable private start-up. </p>
+<p class="story-body-text" itemprop="articleBody">Tiger Global Management and T. Rowe Price both participated in the newest round, which <a href="//www.bloomberg.com/news/articles/2015-12-03/uber-raises-funding-at-62-5-valuation">Bloomberg News reported</a> on Thursday. <a href="//www.nytimes.com/2015/10/24/business/dealbook/uber-said-to-plan-another-1-billion-in-fund-raising.html">The New York Times</a> had reported on the funding plans in October. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Competition has intensified in the ride-hailing market.</b> Lyft is in talks to raise a further $500 million, which could value the company at about $4 billion. Didi Kuaidi has raised more than $4 billion in private investment to date. </p>
+<p class="story-body-text" itemprop="articleBody">Tiger Global has also invested in Ola and GrabTaxi, which compete with Uber in India and Southeast Asia. This could be the first time a major institutional investor has <b>participated in fund-raising at both Uber and its major competitors</b>. Ola and GrabTaxi have formed a <a href="//www.nytimes.com/2015/12/04/technology/lyft-joins-with-asian-rivals-to-compete-with-uber.html?ref=dealbook">strategic partnership</a> with Lyft, which competes with Uber in the United States. </p>
+<p class="story-body-text" itemprop="articleBody">Uber is <b>spending heavily to establish itself against its Asian competitors</b> and has allocated at least $1 billion to efforts to expand in China.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Home Rental Company to Merge With Rival" src="https://static01.nyt.com/images/2014/01/30/business/RENTAL/RENTAL-square320-v4.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Home Rental Company to Merge With Rival</strong> <span class="divider"> | </span></span> The combined company of American Homes 4 Rent and American Residential Properties will own more than 47,000 homes in the United States.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/04/business/dealbook/american-homes-4-rent-to-merge-with-rival.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Beer Drinkers Sue to Stop Anheuser-Busch InBevâs Purchase Of SABMiller</strong> <span class="divider"> | </span></span> The lawsuit, filed by on behalf of 23 consumers, contends that the acquisition would create a monopoly in the beer market in violation of United States antitrust law.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-12-04/beer-drinkers-sue-to-stop-ab-inbev-s-110-billion-sabmiller-deal"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fiat Chrysler Approves Ferrari Spinoff</strong> <span class="divider"> | </span></span> Fiat Chrysler still owns 80 percent of Ferrari, which it will spin off to its shareholders in January.<br /><span class="kicker"><a href="//www.wsj.com/articles/fiat-chrysler-approves-ferrari-spinoff-1449170879?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>2015 Becomes the Biggest Year for Deals Ever</strong> <span class="divider"> | </span></span> The deals announced on Wednesday helped push global mergers and acquisitions volumes to $4.304 trillion, the data provider Dealogic said Thursday.<br /><span class="kicker"><a href="//www.wsj.com/articles/2015-becomes-the-biggest-m-a-year-ever-1449187101?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BTG Seeks Buyer for Private Banking Arm</strong> <span class="divider"> | </span></span> BTG Pactual is looking for a buyer for its private banking arm BSI, only three months after it received final regulatory approval to acquire the Swiss bank, The Financial Times reports, citing people familiar with the deal.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/9928bfbc-9a0e-11e5-bdda-9f13f99fa654.html#axzz3tLOjQFhK"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Breakingviews: BTG Pactual and the Perils of Supervoting Stock" src="https://static01.nyt.com/images/2015/11/28/business/28DB-PACTUAL/28DB-PACTUAL-square320-v3.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: BTG Pactual and the Perils of Supervoting Stock</strong> <span class="divider"> | </span></span> The investment bank and its jailed ex-leader, AndrÃ© Esteves, illustrate why investors in companies that issue multiple classes of stock should note the risk, Robert Cyran writes.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/04/business/dealbook/btg-pactual-and-the-perils-of-supervoting-stock.html">Breakingviews &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/12/03/business/dealbook/btg-pactual-partners-take-control-from-former-leader.html">BTG Pactual Partners Take Control From Former Leader</a> <time class="timestamp" data-eastern-timestamp="12:06 PM" datetime="2015-12-02" data-utc-timestamp="1449075984000">12:06 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinaâs Biggest Peer Lender Plans Push Into New Finance Services</strong> <span class="divider"> | </span></span> Lufax of China wants to offer  other financial services, including discount brokerage, to the countryâs fast-growing middle class.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-12-03/china-s-biggest-peer-lender-plans-push-into-new-finance-services"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Univision Postpones I.P.O.</strong> <span class="divider"> | </span></span> Univision delayed plans for a 2015 initial public offering because of the lackluster recent performance of media-company stocks and a sluggish market for first-time share sales.<br /><span class="kicker"><a href="//www.wsj.com/articles/univision-postpones-ipo-1449191155?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinaâs Securities Regulator Says Another 10 Companies Ready for I.P.O.s</strong> <span class="divider"> | </span></span> Chinaâs securities regulator said late on Thursday that another 10 Chinese companies have completed their preparations for initial public offerings and will determine issuance dates with stock exchanges.<br />
+<br /><span class="kicker"><a href="//www.reuters.com/article/2015/12/04/us-china-ipo-idUSKBN0TN02O20151204?feedType=RSS&#038;feedName=innovationNews#cLfPhwuuZYChytFw.97"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Andreessen Horowitz to Invest in Supplement Start-Up" src="https://static01.nyt.com/images/2015/12/04/business/db-smart-web1/db-smart-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Andreessen Horowitz to Invest in Supplement Start-Up</strong> <span class="divider"> | </span></span> The firm leads a $2 million seed investment in Nootrobox, a company that sells nootropics, which are substances that might improve the way the mind works.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/04/business/dealbook/andreessen-horowitz-to-invest-in-nootropics-start-up.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Aileen Lee of Cowboy Ventures: Aim to See Beneath the Surface" src="https://static01.nyt.com/images/2015/12/02/multimedia/cornerofc-lee/cornerofc-lee-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Aileen Lee of Cowboy Ventures: Aim to See Beneath the Surface</strong> <span class="divider"> | </span></span> Ms. Lee, founder and partner of the venture capital firm Cowboy Ventures, on the qualities she values in searching for promising entrepreneurs.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/06/business/aileen-lee-of-cowboy-ventures-aim-to-see-beneath-the-surface.html">Corner Office &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Venture Capital Firm Creates Middle East Tech Fund</strong> <span class="divider"> | </span></span> The venture capital firm 500 Startups plans to make initial investments of about $75,000 each in nascent companies in the Middle East and North Africa, which Dave McClure, a founding partner, said was poorly understood by other tech investors.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-12-03/a-venture-capitalist-abroad-500-startups-creates-middle-east-tech-fund"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="9 Samsung Executives Are Subject of Insider Trading Investigation" src="https://static01.nyt.com/images/2015/12/05/business/05samsung/05samsung-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>9 Samsung Executives Are Subject of Insider Trading Investigation</strong> <span class="divider"> | </span></span> The South Korean financial regulator is looking into share purchases before the merger of two subsidiaries, Cheil Industries and Samsung C&#038;T.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/05/business/international/samsung-insider-trading-investigation-korea.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="RushCard Called Uncooperative in Debit Card Inquiry " src="https://static01.nyt.com/images/2015/10/21/business/21PREPAID2/21PREPAID2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>RushCard Called Uncooperative in Debit Card Inquiry </strong> <span class="divider"> | </span></span> The Consumer Financial Protection Bureau says the prepaid debit card company has not provided documents for an investigation of a disruption that left card holders unable to use their funds.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/04/business/dealbook/rushcard-called-uncooperative-in-debit-card-inquiry.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>S.E.C. Charges 3 Options Traders With Spoofing</strong> <span class="divider"> | </span></span> The regulator says the three tricked the Philadelphia Stock Exchange by sending in small orders they did not intend to have executed.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/04/business/dealbook/sec-charges-3-options-traders-with-spoofing.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="E.U. Investigates McDonaldâs Tax Deal With Luxembourg" src="https://static01.nyt.com/images/2015/12/04/business/04eumcdonalds-web/04eumcdonalds-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>E.U. Investigates McDonaldâs Tax Deal With Luxembourg</strong> <span class="divider"> | </span></span> The move is the latest sign that Margrethe Vestager, the blocâs competition commissioner, is determined to widen a crackdown on corporate tax avoidance.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/04/business/eu-opens-inquiry-into-possible-mcdonalds-tax-breaks-in-luxembourg.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Why Negative Interest Rates Are Becoming the New Normal" src="https://static01.nyt.com/images/2015/12/04/upshot/03UP-ECB/03UP-ECB-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Why Negative Interest Rates Are Becoming the New Normal</strong> <span class="divider"> | </span></span> Tools that were academic thought experiments a decade ago are now becoming standard-issue parts of the policy tool kit for central banks.<br /><span class="kicker"><a href="//www.nytimes.com/2015/12/04/upshot/why-negative-interest-rates-are-becoming-the-new-normal.html">The Upshot &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China to Start Stock Circuit Breaker</strong> <span class="divider"> | </span></span> A move of 5 percent in the CSI 300 Index would set off a 15-minute halt for stocks, options and index futures, while a swing of 7 percent would stop trading for the remainder of the day, the Shanghai stock exchange said in a statement on its website.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-12-04/china-to-cut-suspension-time-for-planned-stock-circuit-breaker"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CME Defeats Suit Claiming It Favored High-Frequency Traders</strong> <span class="divider"> | </span></span> CME Group, owner of the worldâs largest futures market, defeated a lawsuit by some users who said the company sold access to order information to high-frequency traders ahead of other market participants.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-12-03/cme-defeats-suit-alleging-it-favored-high-frequency-traders"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JPMorgan Defeats London Whale Lawsuit</strong> <span class="divider"> | </span></span> A federal appeals court said JPMorganâs chief executive Jamie Dimon and other bank officials need not face a shareholder lawsuit claiming they did a bad job investigating the 2012 âLondon Whaleâ trading scandal that caused $6.2 billion of losses.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/12/03/jpmorgan-londonwhale-lawsuit-idUSL1N13S24O20151203?feedType=RSS&#038;feedName=USLegal#H5dVHE0wsfT5uGhE.97">REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Mark Cuban Criticizes S.E.C. Stance on Email</strong> <span class="divider"> | </span></span> Mark Cuban is denouncing the Securities and Exchange Commission over its push against legislation that would require government agencies to get warrants before gaining access to the emails of people under investigation.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/12/03/usa-sec-mark-cuban-idUSL1N13S28T20151203?feedType=RSS&#038;feedName=USLegal#TvDQjGhjXxjpB6OI.97">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/12/04/morning-agenda-avon-said-to-discuss-selling-north-american-business/"
+					data-title="Morning Agenda: Avon Said to Discuss Selling North American Business"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Fired JPMorgan Broker Says Complaints Written by Bank, Not Clients | Uber Valued at $62.5 Billion&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/12/04/morning-agenda-avon-said-to-discuss-selling-north-american-business/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":55,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

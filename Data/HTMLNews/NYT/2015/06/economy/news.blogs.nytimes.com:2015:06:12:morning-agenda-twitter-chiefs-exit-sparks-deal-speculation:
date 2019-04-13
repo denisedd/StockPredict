@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003737619"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1434107811" />
+<meta name="PUD" content="20150612" />
+<meta name="pdate" content="20150612" />
+<meta name="ptime" content="20150612071651" />
+<meta name="utime" content="20151028184141" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-10-28T18:41:41-04:00" />
+<meta name="DISPLAYDATE" content="June 12, 2015" />
+<meta name="dat" content="June 12, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Bain, Adam M (1973- );Costolo, Dick;Dorsey, Jack;Murdoch, James R;Murdoch, Lachlan;Murdoch, Rupert;Noto, Anthony J">
+<meta name="des" content="Alzheimer&#039;s Disease;Appointments and Executive Changes;Banking and Financial Institutions;Biotechnology and Bioengineering;European Sovereign Debt Crisis (2010- );Hedge Funds;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Regulation and Deregulation of Industry;Shareholder Rights and Activism;Venture Capital">
+<meta name="org" content="Axovant Sciences Ltd.;Fox Entertainment Group Inc;GlaxoSmithKline PLC;International Monetary Fund;Twitter">
+<meta name="geo" content="Greece">
+<meta name="ticker" content="GlaxoSmithKline PLC|GSK|NYSE;Twitter|TWTR|NYSE" />
+<meta property="article:tag" content="Bain Adam M (1973- )" />
+<meta property="article:tag" content="Costolo Dick" />
+<meta property="article:tag" content="Dorsey Jack" />
+<meta property="article:tag" content="Murdoch James R" />
+<meta property="article:tag" content="Murdoch Lachlan" />
+<meta property="article:tag" content="Murdoch Rupert" />
+<meta property="article:tag" content="Noto Anthony J" />
+<meta property="article:tag" content="Alzheimer&#039;s Disease" />
+<meta property="article:tag" content="Appointments and Executive Changes" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Biotechnology and Bioengineering" />
+<meta property="article:tag" content="European Sovereign Debt Crisis (2010- )" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Shareholder Rights and Activism" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Axovant Sciences Ltd." />
+<meta property="article:tag" content="Fox Entertainment Group Inc" />
+<meta property="article:tag" content="GlaxoSmithKline PLC" />
+<meta property="article:tag" content="International Monetary Fund" />
+<meta property="article:tag" content="Twitter" />
+<meta property="article:tag" content="Greece" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Bain Adam M (1973- ),Costolo Dick,Dorsey Jack,Murdoch James R,Murdoch Lachlan,Murdoch Rupert,Noto Anthony J,Alzheimer&#039;s Disease,Appointments and Executive Changes,Banking and Financial Institutions,Biotechnology and Bioengineering,European Sovereign Debt Crisis (2010- ),Hedge Funds,Initial Public Offerings,Mergers Acquisitions and Divestitures,Regulation and Deregulation of Industry,Shareholder Rights and Activism,Venture Capital,Axovant Sciences Ltd.,Fox Entertainment Group Inc,GlaxoSmithKline PLC,International Monetary Fund,Twitter,Greece,DealBook" />
+<meta name="news_keywords" content="Adam Bain,Alzheimer&#039;s,Anthony Noto,Appointments and Executive Changes,Banking and Finance,Biotech;Bioengineering,Dick Costolo,Euro Crisis,Fox Entertainment Group,GlaxoSmithKline,Greece,Hedge fund,IMF,IPO,Jack Dorsey,James R Murdoch,Lachlan Murdoch,Mergers and Acquisitions,Regulation and Deregulation,Rupert Murdoch,Shareholder Rights,Twitter,Venture capital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F06%2F12%2Fmorning-agenda-twitter-chiefs-exit-sparks-deal-speculation%2F" title="Morning Agenda: Twitter Chief&#8217;s Exit Sparks Deal Speculation" />
+<meta name="description" content="Twitter Chief&#8217;s Exit Sparks Deal Speculation &#124; I.M.F. Pulls Team From Greece Bailout Talks &#124; Murdoch to Hand Over Media Empire to Sons &#124; Axovant&#8217;s Market Debut Renews Biotech Bubble Worries" />
+<meta name="hdl" content="Morning Agenda: Twitter Chief&#039;s Exit Sparks Deal Speculation" />
+<meta property="og:title" content="Morning Agenda: Twitter Chief&#039;s Exit Sparks Deal Speculation" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/06/12/morning-agenda-twitter-chiefs-exit-sparks-deal-speculation/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Twitter Chief&#8217;s Exit Sparks Deal Speculation &#124; I.M.F. Pulls Team From Greece Bailout Talks &#124; Murdoch to Hand Over Media Empire to Sons &#124; Axovant&#8217;s Market Debut Renews Biotech Bubble Worries" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Twitter Chief&#039;s Exit Sparks Deal Speculation" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/06/12/morning-agenda-twitter-chiefs-exit-sparks-deal-speculation/" />
+<meta name="twitter:description" content="Twitter Chief&#8217;s Exit Sparks Deal Speculation &#124; I.M.F. Pulls Team From Greece Bailout Talks &#124; Murdoch to Hand Over Media Empire to Sons &#124; Axovant&#8217;s Market Debut Renews Biotech Bubble Worries" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: J. Crew&#8217;s &#8216;Great Man&#8217; Problem' href='//news.blogs.nytimes.com/2015/06/11/morning-agenda-j-crews-great-man-problem/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/06/12/what-were-reading-63/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/06/12/morning-agenda-twitter-chiefs-exit-sparks-deal-speculation/' />
+<link rel='shortlink' href='//nyti.ms/1e82ZlL' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/06/12/morning-agenda-twitter-chiefs-exit-sparks-deal-speculation/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Twitter Chief&#039;s Exit Sparks Deal Speculation - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2537 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Twitter Chief&#8217;s Exit Sparks Deal Speculation        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/06/12/morning-agenda-twitter-chiefs-exit-sparks-deal-speculation/"
+	 data-title="Morning Agenda: Twitter Chief&#8217;s Exit Sparks Deal Speculation"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Twitter Chief&#039;s Exit Sparks Deal Speculation | I.M.F. Pulls Team From Greece Bailout Talks | Murdoch to Hand Over Media Empire to Sons | Axovant&#039;s Market Debut Renews Biotech Bubble Worries&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/06/12/morning-agenda-twitter-chiefs-exit-sparks-deal-speculation/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 12, 2015 7:16 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Twitter Chief&#8217;s Exit Sparks Deal Speculation</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-06-12T11:16:51+00:00" itemprop="datePublished">June 12, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">June 12, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2537 post type-post status-publish hentry category-dealbook tag-alzheimers-disease tag-appointments-and-executive-changes tag-axovant-sciences-ltd tag-bain-adam-m-1973 tag-banking-and-financial-institutions tag-biotechnology-and-bioengineering tag-costolo-dick tag-dorsey-jack tag-european-sovereign-debt-crisis-2010 tag-fox-entertainment-group-inc tag-glaxosmithkline-plc tag-greece tag-hedge-funds tag-initial-public-offerings tag-international-monetary-fund tag-mergers-acquisitions-and-divestitures tag-murdoch-james-r tag-murdoch-lachlan tag-murdoch-rupert tag-noto-anthony-j tag-regulation-and-deregulation-of-industry tag-shareholder-rights-and-activism tag-twitter tag-venture-capital per-bain-adam-m-1973 per-costolo-dick per-dorsey-jack per-murdoch-james-r per-murdoch-lachlan per-murdoch-rupert per-noto-anthony-j des-alzheimers-disease des-appointments-and-executive-changes des-banking-and-financial-institutions des-biotechnology-and-bioengineering des-european-sovereign-debt-crisis-2010 des-hedge-funds des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-regulation-and-deregulation-of-industry des-shareholder-rights-and-activism des-venture-capital org-axovant-sciences-ltd org-fox-entertainment-group-inc org-glaxosmithkline-plc org-international-monetary-fund org-twitter geo-greece news_keywords-adam-bain news_keywords-alzheimers news_keywords-anthony-noto news_keywords-appointments-and-executive-changes news_keywords-banking-and-finance news_keywords-biotechbioengineering news_keywords-dick-costolo news_keywords-euro-crisis news_keywords-fox-entertainment-group news_keywords-glaxosmithkline news_keywords-greece news_keywords-hedge-fund news_keywords-imf news_keywords-ipo news_keywords-jack-dorsey news_keywords-james-r-murdoch news_keywords-lachlan-murdoch news_keywords-mergers-and-acquisitions news_keywords-regulation-and-deregulation news_keywords-rupert-murdoch news_keywords-shareholder-rights news_keywords-twitter news_keywords-venture-capital-2" id="post-2537">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Twitter Chief&#8217;s Exit Sparks Deal Speculation</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-06-12T11:16:51+00:00" itemprop="datePublished">June 12, 2015 7:16 am</time>
+			<!-- date updated --><span class="visually-hidden updated">June 12, 2015 7:16 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/06/12/morning-agenda-twitter-chiefs-exit-sparks-deal-speculation/" data-title="Morning Agenda: Twitter Chief&#8217;s Exit Sparks Deal Speculation" data-description="Twitter Chief&#039;s Exit Sparks Deal Speculation | I.M.F. Pulls Team From Greece Bailout Talks | Murdoch to Hand Over Media Empire to Sons | Axovant&#039;s Market Debut Renews Biotech Bubble Worries">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TWITTER CHIEFâS EXIT SPARKS DEAL SPECULATION</strong> <span class="divider"> | </span></span> To Twitter board members and friends of Dick Costolo, his plans to resign as Twitterâs chief executive was not a surprise, <a href="//www.nytimes.com/2015/06/12/technology/dick-costolo-twitter-ceo-jack-dorsey.html"> Vindu Goel and Mike Isaac report in The New York Times</a>. But <a href="//www.nytimes.com/2015/06/12/business/dealbook/costolo-exit-at-twitter-kick-starts-deal-speculation.html"> Michael J. de la Merced notes in DealBook</a> that whenever a chief executive departs, it always raises the question of <b> whether the company is now for sale</b> â and Twitter is no exception. In fact, Twitter was the subject of takeover rumors as recently as last month, and a longtime Twitter investor, Chris Sacca, has mused over the last two weeks that <b> Google might make a logical buyer</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. de la Merced writes that Twitter could be an <b>attractive acquisition for a technology giant</b> because <b> itâs not prohibitively expensive</b>, with a market value of $23.5 billion as of Thursdayâs market close, before Mr. Costoloâs plans to depart were announced. (Twitterâs shares rose more than 7 percent in after-hours trading after the change in leadership was made public.) Also, Twitter has <b> only one tier of stock</b>, unlike other big technology companies like Facebook and Google, whose founders have a special class of stock that give them the power to block a takeover attempt. </p>
+<p class="story-body-text" itemprop="articleBody">People are also <b>speculating about Mr. Costoloâs successor</b>. The interim chief executive, Jack Dorsey, Twitterâs co-founder and former chief, <b> has wanted to return as Twitterâs chief</b> ever since he was pushed out in 2008, according to two people with knowledge of his thinking, Mr. Goel and Mr. Isaac write. They list other possible candidates, who include <b> Adam Bain</b>, who oversees global revenue and partnerships and is a favorite among Twitter employees, and <b> Anthony Noto</b>, a former technology banker at Goldman Sachs and Twitterâs current chief financial officer.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>I.M.F. PULLS TEAM OUT OF GREECE BAILOUT TALKS</strong> <span class="divider"> | </span></span> A bailout deal for Greece appeared to slip further out of reach on Thursday after the International Monetary Fund withdrew its negotiators from discussions with Greece in Brussels, <a href="//www.nytimes.com/2015/06/12/business/international/imf-debt-talks-with-greece.html"> Liz Alderman and Landon Thomas Jr. write in The New York Times</a>. A document that European Commission President Jean-Claude Juncker submitted to Greece in recent days appears to have <b> led to the talksâ breaking point</b>, Ms. Alderman and Mr. Thomas write. One top Greek official told them that the document was full of <b> âmaximalist I.M.F. proposalsâ</b> that they could not agree to. When it became clear to I.M.F. officials that <b> Greece was adopting this stance</b>, they decided to return to Washington, people involved in the talks said. </p>
+<p class="story-body-text" itemprop="articleBody">The I.M.F. has publicly blamed Greece for its decision to walk away, but senior officials at the fund said that they were just as <b>frustrated with Europeâs refusal to consider a write-down</b> of Greek debt, Ms. Alderman and Mr. Thomas write. Greeceâs debt, which is 180 percent of the overall economy, remains at an unsustainable level, I.M.F. economists say. I.M.F. executives are now privately saying that Greeceâs problems <b> cannot be solved with pension and labor reforms alone</b>. Europe <b>must offer significant debt relief</b>, said one official involved in the negotiations. Though both sides seem to have hardened their positions, Peter Doyle, a former economist at the fund who specialized in Europe, said the I.M.F.âs withdrawal <b> shouldnât be seen as the end of discussions</b>. He recalled many occasions when he was called home at a sensitive time in debt talks, only to resume discussions and even get a deal done.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>MURDOCH TO HAND OVER MEDIA EMPIRE TO SONS</strong> <span class="divider"> | </span></span> Rupert Murdoch is expected to name his son James to succeed him as chief executive of 21st Century Fox and elevate his son Lachlan to the role of co-executive chairman of the company, multiple people briefed on the plans told <a href="//www.nytimes.com/2015/06/12/business/media/rupert-murdoch-ceo-21st-century-fox-james-murdoch.html"> Emily Steel and Ravi Somaiya of The New York Times</a> on Thursday. Lachlan, 43, is moving from Australia to Los Angeles and will work in partnership with James, 42, these people said. Their 84-year-old father will remain at the company as executive chairman. It is unclear when the changes will take place, but they are likely to be discussed at a board meeting next week, two people said. The changes will only affect Fox; the hierarchy at News Corporation will remain the same. </p>
+<p class="story-body-text" itemprop="articleBody">Even after he hands over control of 21st Century Fox, Rupert Murdoch is expected to continue to provide broad strategic oversight and will retain ultimate control of the company, said the two people. Rich Greenfield, a media analyst with BTIG Research, said, <b>âThis is still Murdochâs company at the end of the day.â</b> For James Murdoch, his ascension to the top spot at Fox represents <b>a remarkable turnaround</b>, <a href="//www.nytimes.com/2015/06/12/business/media/once-down-james-murdoch-is-guided-back-to-the-top.html">Sarah Lyall writes in The New York Times</a>. After the News Corp. tabloid The News of the World was implicated in a phone hacking scandal in Britain, he soon departed for New York to distance himself from the fallout and rebuild his reputation. âHis repatriation to the U.S. <b>was a wise move</b> because he became, in effect, a nonentity here, and he went off and did some very intelligent things,â said Claire Enders, chief executive of the media research firm Enders Analysis in London.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The Labor Department releases the <b>producer price index for May</b> at 8:30 a.m. The University of Michiganâs preliminary survey of <b>consumer sentiment for June</b> is out at 10 a.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AXOVANTâS MARKET DEBUT RENEWS BIOTECH BUBBLE WORRIES</strong> <span class="divider"> | </span></span> During its trading debut on Thursday, Axovant Sciences saw its market value approach $3 billion on the basis of its unproved Alzheimerâs drug â which renewed concerns among biotechnology observers that the sectorâs stocks are now in a bubble, <a href="//www.nytimes.com/2015/06/12/business/dealbook/shares-of-axovant-alzheimers-drug-developer-surge-on-trading-debut.html"> Andrew Pollack writes in DealBook</a>. Axovant raised $315 million in its offering Wednesday, selling 21 million shares at $15 each. That was 3.1 million more shares than it had expected to sell and at the high end of the expected price range. In Axovantâs first day of trading on Thursday, <b>shares nearly doubled</b> to close at $29.90. </p>
+<p class="story-body-text" itemprop="articleBody">What piques investorsâ interest is the potential of an <b>Alzheimerâs disease drug that GlaxoSmithKline had abandoned</b> after testing it in numerous trials, Mr. Pollack writes. In December, Axovant paid $5 million to buy the rights to that drug, which it calls RVT-101. In Glaxoâs clinical trials, the drug did not work when used by itself but in one trial, patients taking the drug <b>in combination with the widely used drug Aricept </b> had a slower decline in certain measures of cognition and daily functioning than those getting Aricept alone. Axovant said that later this year it would start another trial testing RVT-101 with donepezil, the generic version of Aricept. âGiven the fact that GlaxoSmithKline had a chance to take a look at this drug in the clinic, and concluded that they couldnât do better than selling it for lunch money, the <b> I.P.O. terms illustrate the kind of overnight riches</b> a select few can find on Wall Street,â John Carroll, the editor in chief of the online news service Fierce Biotech, wrote on Thursday.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fiat Chrysler C.E.O. Said to Set Sights on Other Automakers</strong> <span class="divider"> | </span></span> Fiat Chryslerâs chief executive, Sergio Marchionne, is looking at other automakers like Peugeot CitroÃ«n as possible merger partners as it appears less likely he will be able to strike a friendly deal with General Motors, Bloomberg News reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-06-11/marchionne-said-to-mull-alternatives-as-gm-deal-chance-lessens"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Lululemonâs Founder to Sell His Stake in Company" src="https://static01.nyt.com/images/2015/06/12/business/12lululemon-web1/12lululemon-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lululemonâs Founder to Sell His Stake in Company</strong> <span class="divider"> | </span></span> The yoga wear makerâs founder, Dennis Wilson, held 14 percent of the companyâs outstanding shares, valued at about $1.2 billion.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/12/business/lululemons-founder-to-sell-his-stake-in-company.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Mylanâs Dutch Takeover Defense Is in Nasdaqâs Hands" src="https://static01.nyt.com/images/2015/04/24/business/dbpix-dealprof-drug/dbpix-dealprof-drug-square320-v3.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Mylanâs Dutch Takeover Defense Is in Nasdaqâs Hands</strong> <span class="divider"> | </span></span> Mylan is taking advantage of Dutch takeover defenses to block a hostile bid by Teva Pharmaceuticals, but United States market rules may hamper its efforts, Steven Davidoff Solomon writes in the Deal Professor column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/12/business/dealbook/mylans-dutch-takeover-defense-is-in-nasdaqs-hands.html">Deal Professor &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Dish Said to Seek Up to $15 Billion in Bank Financing</strong> <span class="divider"> | </span></span> Dish Network is talking with banks as it considers borrowing $10 billion to $15 billion for the cash portion of its bid for T-Mobile, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/dish-networks-in-talks-with-banks-about-funding-t-mobile-bid-1434056519"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JPMorgan Shakes Up a Banking Team</strong> <span class="divider"> | </span></span> The head of the bankâs technology, media and telecommunications team, Kurt Simon, will become global chairman of mergers and acquisitions.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/12/business/dealbook/jpmorgan-shakes-up-a-banking-team.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Wall Street Chiefsâ Summer Reading List</strong> <span class="divider"> | </span></span> Bloomberg News asked prominent Wall Street figures, including William A. Ackman of Pershing Square Capital Management and Lloyd C. Blankfein of Goldman Sachs, which books were on their reading list. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-06-12/these-are-wall-street-s-must-read-books-of-the-summer"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="After Financial Crisis, Fates of Lender and Borrower Diverge" src="https://static01.nyt.com/images/2015/06/10/business/dealbook/dbpix-blixseth/dbpix-blixseth-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>After Financial Crisis, Fates of Lender and Borrower Diverge</strong> <span class="divider"> | </span></span> David Miller and his team at Credit Suisse made one of their most aggressive loans to Timothy Blixseth, a land and timber baron who now sits in jail, William D. Cohan writes in the Street Scene column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/12/business/dealbook/after-financial-crisis-fates-of-lender-and-borrower-diverge.html">Street Scene &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="In Brazil, Investors Pay a Premium for Tradition" src="https://static01.nyt.com/images/2015/06/11/business/dealbook/dbpix-brazil/dbpix-brazil-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>In Brazil, Investors Pay a Premium for Tradition</strong> <span class="divider"> | </span></span> Brazilians rely on their banks, which dominate the asset-management business and charge mutual fund fees that would shock American investors.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/12/business/dealbook/in-brazil-investors-pay-a-premium-for-tradition.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Investment Banks Missing From Indian Tech Deals</strong> <span class="divider"> | </span></span> In India, start-ups seeking money or partners are bypassing investment banks even more than they are in the United States or China, The Wall Street Journal reports.<br /><span class="kicker"><a href="//www.wsj.com/articles/investment-bankers-lose-out-in-indian-tech-1434051979"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Elliott Management Pushes Citrix Systems for Change" src="https://static01.nyt.com/images/2015/01/27/business/dbpix-singer/dbpix-singer-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Elliott Management Pushes Citrix Systems for Change</strong> <span class="divider"> | </span></span> The activist hedge fund, which has made a lucrative practice out of shaking up tech firms, is urging Citrix to take steps to bolster its stock.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/12/business/dealbook/elliott-management-pushes-citrix-systems-for-change.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uber Plans $1.1 Billion Investment in China in 2015</strong> <span class="divider"> | </span></span> Uber is planning to invest 7 billion renminbi, or $1.1 billion, in China this year alone and will be raising money later this month specifically for its Chinese business, according to a letter Uberâs chief executive sent to investors, The Financial Times reports. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/e533bb8a-1081-11e5-b4dc-00144feabdc0.html"> THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Greylock Hires 1st Female Investment Partner</strong> <span class="divider"> | </span></span> Greylock said it has hired Sarah Tavel, the product manager who oversaw Pinterestâs search tool, making her the firmâs first female investment partner, ReCode reports. <br /><span class="kicker"><a href="//recode.net/2015/06/11/greylock-just-hired-its-first-female-investment-partner/"> RECODE </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chris Sacca Says Downturn in Silicon Valley âInevitableâ</strong> <span class="divider"> | </span></span> Chris Sacca, an investor in tech companies including Twitter and Uber, told Bloomberg Television that a downturn in Silicon Valley was âinevitableâ because too much money was flowing to technology start-ups that would fail.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-06-11/uber-investor-chris-sacca-predicts-technology-industry-decline"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Cubaâs Web Entrepreneurs Search for U.S. Clients, and Reliable Wi-Fi" src="https://static01.nyt.com/images/2015/06/11/world/11Cuba-web/11Cuba-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Cubaâs Web Entrepreneurs Search for U.S. Clients, and Reliable Wi-Fi</strong> <span class="divider"> | </span></span> As the United States opens up to Cuba, a little-advertised circle of software developers, web designers and translators are selling their skills long-distance.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/11/world/americas/cubas-web-entrepreneurs-search-for-us-clients-and-reliable-wi-fi.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Top Executive at Kleiner Perkins to Make Rare Silicon Valley Shift, to Menlo Ventures" src="https://static01.nyt.com/images/2015/06/12/business/dbpix-matt-murphy/dbpix-matt-murphy-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Top Executive at Kleiner Perkins to Make Rare Silicon Valley Shift, to Menlo Ventures</strong> <span class="divider"> | </span></span> Matt Murphy, who had close connections to Google and other prominent tech investments, is joining Menlo Ventures as a managing director.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/12/business/dealbook/top-executive-at-kleiner-perkins-to-make-rare-silicon-valley-shift-to-menlo-ventures.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Mary Schapiro to Join London Stock Exchange Board</strong> <span class="divider"> | </span></span> The former chairwoman of the S.E.C. will become a nonexecutive director at a time when the exchange is expanding its business in the United States.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/12/business/dealbook/mary-schapiro-to-join-london-stock-exchange-board.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Rupert Murdochâs Step Back Will Propel Dynasty Forward</strong> <span class="divider"> | </span></span> But without Chase Carey, there is a risk that the Murdochs could lose their newfound discipline.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/12/business/dealbook/rupert-murdochs-step-back-will-propel-dynasty-forward.html">Breakingviews &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/06/12/business/media/rupert-murdoch-ceo-21st-century-fox-james-murdoch.html">Rupert Murdoch Expected to Hand Reins of 21st Century Fox to Son James</a> <time class="timestamp" data-eastern-timestamp="11:29 AM" datetime="2015-06-11" data-utc-timestamp="1434036598000">11:29 AM</time><span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/06/12/morning-agenda-twitter-chiefs-exit-sparks-deal-speculation/"
+					data-title="Morning Agenda: Twitter Chief&#8217;s Exit Sparks Deal Speculation"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Twitter Chief&#039;s Exit Sparks Deal Speculation | I.M.F. Pulls Team From Greece Bailout Talks | Murdoch to Hand Over Media Empire to Sons | Axovant&#039;s Market Debut Renews Biotech Bubble Worries&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/06/12/morning-agenda-twitter-chiefs-exit-sparks-deal-speculation/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":60,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

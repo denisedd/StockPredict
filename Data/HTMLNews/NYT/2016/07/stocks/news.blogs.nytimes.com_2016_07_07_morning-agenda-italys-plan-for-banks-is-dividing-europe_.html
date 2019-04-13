@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004516853"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1467886501" />
+<meta name="PUD" content="20160707" />
+<meta name="pdate" content="20160707" />
+<meta name="ptime" content="20160707061501" />
+<meta name="utime" content="20160707101501" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-07-07T10:15:01-04:00" />
+<meta name="DISPLAYDATE" content="July 7, 2016" />
+<meta name="dat" content="July 7, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Ailes, Roger E;Carlson, Gretchen;Caspersen, Andrew;Gault, Stanley C;Lazarenko, Pavlo;Rakoff, Jed S">
+<meta name="des" content="Automobile Safety Features and Defects;Banking and Financial Institutions;Great Britain Withdrawal from EU (Brexit);Hedge Funds;Labeling and Labels (Product);Law and Legislation;Libor (London Interbank Offered Rate);Mergers, Acquisitions and Divestitures;Ponzi and Pyramid Schemes;Sexual Harassment;Taxation">
+<meta name="org" content="Aberdeen Asset Management;Barclays PLC;European Central Bank;Gannett Company Inc;Henderson Global Investors Ltd;HNA Group Co Ltd;Monte dei Paschi di Siena SpA;Netflix Inc;Procter &amp; Gamble Co;UniRush LLC">
+<meta name="ticker" content="Barclays PLC|BCS|NYSE;Gannett Company Inc|GCI|NYSE;Netflix Inc|NFLX|NASDAQ;Procter & Gamble Co|PG|NYSE" />
+<meta property="article:tag" content="Ailes Roger E" />
+<meta property="article:tag" content="Carlson Gretchen" />
+<meta property="article:tag" content="Caspersen Andrew" />
+<meta property="article:tag" content="Gault Stanley C" />
+<meta property="article:tag" content="Lazarenko Pavlo" />
+<meta property="article:tag" content="Rakoff Jed S" />
+<meta property="article:tag" content="Automobile Safety Features and Defects" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Great Britain Withdrawal from EU (Brexit)" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Labeling and Labels (Product)" />
+<meta property="article:tag" content="Law and Legislation" />
+<meta property="article:tag" content="Libor (London Interbank Offered Rate)" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Ponzi and Pyramid Schemes" />
+<meta property="article:tag" content="Sexual Harassment" />
+<meta property="article:tag" content="Taxation" />
+<meta property="article:tag" content="Aberdeen Asset Management" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="European Central Bank" />
+<meta property="article:tag" content="Gannett Company Inc" />
+<meta property="article:tag" content="Henderson Global Investors Ltd" />
+<meta property="article:tag" content="HNA Group Co Ltd" />
+<meta property="article:tag" content="Monte dei Paschi di Siena SpA" />
+<meta property="article:tag" content="Netflix Inc" />
+<meta property="article:tag" content="Procter &amp; Gamble Co" />
+<meta property="article:tag" content="UniRush LLC" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Ailes Roger E,Carlson Gretchen,Caspersen Andrew,Gault Stanley C,Lazarenko Pavlo,Rakoff Jed S,Automobile Safety Features and Defects,Banking and Financial Institutions,Great Britain Withdrawal from EU (Brexit),Hedge Funds,Labeling and Labels (Product),Law and Legislation,Libor (London Interbank Offered Rate),Mergers Acquisitions and Divestitures,Ponzi and Pyramid Schemes,Sexual Harassment,Taxation,Aberdeen Asset Management,Barclays PLC,European Central Bank,Gannett Company Inc,Henderson Global Investors Ltd,HNA Group Co Ltd,Monte dei Paschi di Siena SpA,Netflix Inc,Procter &amp; Gamble Co,UniRush LLC,DealBook" />
+<meta name="news_keywords" content="Tax" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F07%2F07%2Fmorning-agenda-italys-plan-for-banks-is-dividing-europe%2F" title="Morning Agenda: Italy&#8217;s Plan for Banks Is Dividing Europe" />
+<meta name="description" content="More British Property Funds Halt Withdrawals &#124; Wall Street Scion Pleads Guilty to Charges in $40 Million Fraud" />
+<meta name="hdl" content="Morning Agenda: Italy&#039;s Plan for Banks Is Dividing Europe" />
+<meta property="og:title" content="Morning Agenda: Italy&#039;s Plan for Banks Is Dividing Europe" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/07/07/morning-agenda-italys-plan-for-banks-is-dividing-europe/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="More British Property Funds Halt Withdrawals &#124; Wall Street Scion Pleads Guilty to Charges in $40 Million Fraud" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Italy&#039;s Plan for Banks Is Dividing Europe" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/07/07/morning-agenda-italys-plan-for-banks-is-dividing-europe/" />
+<meta name="twitter:description" content="More British Property Funds Halt Withdrawals &#124; Wall Street Scion Pleads Guilty to Charges in $40 Million Fraud" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda:  Pressures Grow After &#8216;Brexit&#8217; Vote' href='//news.blogs.nytimes.com/2016/07/06/morning-agenda-pressures-grow-after-brexit-vote/' />
+<link rel='next' title='Morning Agenda: Growing Unease as British Mutual Funds Block the Exit Doors' href='//news.blogs.nytimes.com/2016/07/08/morning-agenda-growing-unease-as-british-mutual-funds-block-the-exit-doors/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/07/07/morning-agenda-italys-plan-for-banks-is-dividing-europe/' />
+<link rel='shortlink' href='//nyti.ms/29ogxfM' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/07/07/morning-agenda-italys-plan-for-banks-is-dividing-europe/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Italy&#039;s Plan for Banks Is Dividing Europe - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5218 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Italy&#8217;s Plan for Banks Is Dividing Europe        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/07/07/morning-agenda-italys-plan-for-banks-is-dividing-europe/"
+	 data-title="Morning Agenda: Italy&#8217;s Plan for Banks Is Dividing Europe"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;More British Property Funds Halt Withdrawals | Wall Street Scion Pleads Guilty to Charges in $40 Million Fraud&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/07/morning-agenda-italys-plan-for-banks-is-dividing-europe/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 7, 2016 6:15 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Italy&#8217;s Plan for Banks Is Dividing Europe</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-07-07T10:15:01+00:00" itemprop="datePublished">July 7, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">July 7, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5218 post type-post status-publish hentry category-dealbook tag-aberdeen-asset-management tag-ailes-roger-e tag-automobile-safety-features-and-defects tag-banking-and-financial-institutions tag-barclays-plc tag-carlson-gretchen tag-caspersen-andrew tag-european-central-bank tag-gannett-company-inc tag-gault-stanley-c tag-great-britain-withdrawal-from-eu-brexit tag-hedge-funds tag-henderson-global-investors-ltd tag-hna-group-co-ltd tag-labeling-and-labels-product tag-law-and-legislation tag-lazarenko-pavlo tag-libor-london-interbank-offered-rate tag-mergers-acquisitions-and-divestitures tag-monte-dei-paschi-di-siena-spa tag-netflix-inc tag-ponzi-and-pyramid-schemes tag-procter-gamble-co tag-rakoff-jed-s tag-sexual-harassment tag-taxation tag-unirush-llc per-ailes-roger-e per-carlson-gretchen per-caspersen-andrew per-gault-stanley-c per-lazarenko-pavlo per-rakoff-jed-s des-automobile-safety-features-and-defects des-banking-and-financial-institutions des-great-britain-withdrawal-from-eu-brexit des-hedge-funds des-labeling-and-labels-product des-law-and-legislation des-libor-london-interbank-offered-rate des-mergers-acquisitions-and-divestitures des-ponzi-and-pyramid-schemes des-sexual-harassment des-taxation org-aberdeen-asset-management org-barclays-plc org-european-central-bank org-gannett-company-inc org-henderson-global-investors-ltd org-hna-group-co-ltd org-monte-dei-paschi-di-siena-spa org-netflix-inc org-procter-gamble-co org-unirush-llc news_keywords-tax" id="post-5218">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Italy&#8217;s Plan for Banks Is Dividing Europe</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-07-07T10:15:01+00:00" itemprop="datePublished">July 7, 2016 6:15 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 7, 2016 6:15 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/07/07/morning-agenda-italys-plan-for-banks-is-dividing-europe/" data-title="Morning Agenda: Italy&#8217;s Plan for Banks Is Dividing Europe" data-description="More British Property Funds Halt Withdrawals | Wall Street Scion Pleads Guilty to Charges in $40 Million Fraud">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>ITALY&#8217;S PLAN FOR BANKS IS DIVIDING EUROPE</strong> The Italian government needs to spend an estimated $45 billion to shore up its banks, which are burdened with bad loans. But fears that European authorities will bar the government from providing this support is adding to turbulence in the aftermath of Britain&#8217;s vote to leave the European Union, <a href="//www.nytimes.com/2016/07/07/business/dealbook/italys-plan-for-banks-could-roil-europe.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160707">Peter Eavis reports in DealBook.</a> And the situation could keep investors on edge through the summer.</p>
+<p class="story-body-text" itemprop="articleBody">Italian bank shares have dropped steeply &#8211; <strong>an indication of a storm ahead</strong>. The stock price of Banca Monte dei Paschi di Siena, one of Italy&#8217;s most troubled lenders, is down 80 percent in the last 12 months. Its shares trade at under 10 percent of its book value &#8211; a sign that investors really think that the bank needs new capital, although when bank stocks sink that much, they find it almost impossible to raise new capital on the markets.</p>
+<p class="story-body-text" itemprop="articleBody">Italian banks don&#8217;t appear to need an overwhelmingly large sum to return them to a firmer footing. <strong>The problem is their 200 billion euros, or about $222 billion, of bad loans.</strong> The banks have already set aside significant reserves to absorb losses in these loans, effectively valuing them at 40 percent of their original value, according to some analyses.</p>
+<p class="story-body-text" itemprop="articleBody">But investors appear to think that the loans are worth less than that, and the theory is that banks would have to value the loans at an even lower level. Banking experts say that â¬40 billion of support is needed to help the banks take those losses.</p>
+<p class="story-body-text" itemprop="articleBody">The Italian government could mimic the United States government&#8217;s TARP spending in 2008 and plow that money into the banks, but<strong> a bailout of that sort may be illegal under relatively new European rules that aim to protect taxpayers.</strong></p>
+<p class="story-body-text" itemprop="articleBody">The rules aim to force investors in the banks to provide support in times of trouble by buying their debt securities. Under anti-bailout rules, these securities would be forcibly turned from debt into new equity, which could absorb any new losses taken on the bad loans. Under such a so-called bail-in, the equity would in theory be worth less than the debt securities, leading to losses for investors who held the debt.</p>
+<p class="story-body-text" itemprop="articleBody">In Italy, however, <strong>retail investors hold many of these debt securities</strong> &#8211; families own about a third of them, according to the research organization Bruegel. A bail-in would focus the pain on Italian households, and the fear of losses might also prompt investors to stop lending to banks and lead depositors to withdraw their money.</p>
+<p class="story-body-text" itemprop="articleBody">A compromise with Europe&#8217;s leaders does not look impossible, although there is considerable tension over the question.</p>
+<p class="story-body-text" itemprop="articleBody">The rules provide ways to give Italy a pass, but Cassa Depositi e Prestiti, a large investment entity controlled by the Italian government, could also provide bailout funds. Either way, analysts agree that <strong>the government would have to overhaul the industry</strong>.<br />
+<strong>MORE BRITISH PROPERTY FUNDS HALT WITHDRAWALS</strong> Three more asset managers suspended redemptions from their British property funds as concerns mounted about the potential impact of Britain&#8217;s decision to leave the European Union on the real estate market, <a href="//www.nytimes.com/2016/07/07/business/dealbook/3-more-property-funds-halt-withdrawals-after-brexit-vote.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160707">Chad Bray reports in DealBook. </a><strong>Columbia Threadneedle Investments, Henderson Global Investors and Canada Life</strong> temporarily suspended trading in their British property funds. There are now six fund managers that have put a hold on customer exits since Monday.</p>
+<p class="story-body-text" itemprop="articleBody">Columbia Threadneedle said its portfolio managers maintained a cash balance in its Threadneedle UK Property Authorised Investment Fund to satisfy redemptions because of the time it takes to sell property. It said that &#8220;the temporary suspension of dealings allows sufficient time for the orderly sale of assets and protects the interests of all investors.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Henderson said it was suspending redemptions in its UK Property Authorised Investment Fund and its feeder fund because of <strong>&#8220;exceptional liquidity pressure.&#8221;</strong></p>
+<p class="story-body-text" itemprop="articleBody">Canada Life, which deferred client redemptions in four funds, said, &#8220;Deferring requests to withdraw allows us to protect the interests of all investors in the property fund, including those who plan to remain invested for the medium to long term.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Aberdeen Asset Management tried a slightly different approach by saying on Wednesday that <strong>it would cut the value of its British property fund by 17 percent for withdrawal requests that had been made earlier in the day.</strong> &#8220;This action has been taken due to rapidly changing commercial property market conditions and to continue to provide liquidity in the fund at a price reflecting those conditions,&#8221; it said in a statement. It said it would suspend trading until noon on Thursday to allow investors to cancel withdrawal requests.<br />
+<strong>ON THE AGENDA</strong> The latest<strong> ADP National Employment Report</strong> will be published at 8:15 a.m. The <strong>European Central Bank</strong> will publish its account of the governing council&#8217;s June meeting at 8:30 a.m.<br />
+<strong>WALL STREET SCION PLEADS GUILTY TO CHARGES IN $40 MILLION FRAUD</strong> Andrew Caspersen, a former Wall Street executive and scion of a wealthy family, pleaded guilty to federal charges that he defrauded friends, relatives and a hedge fund billionaire&#8217;s foundation of nearly $40 million, <a href="//www.nytimes.com/2016/07/07/business/dealbook/andrew-caspersen-pleads-guilty-to-federal-charges-in-40-million-fraud.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160707">Alexandra Stevenson reports in DealBook.</a> The charges, one of wire fraud and one of security fraud, each carry a maximum penalty of 20 years in prison.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>&#8220;The people I harmed were people I cared for the most,&#8221;</strong> Mr. Caspersen said, reading from a statement. &#8220;I could not be more sorry or ashamed for my crimes.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Caspersen&#8217;s lawyer had already said he would not contest the charges, but <strong>it is not clear whether Judge Jed S. Rakoff of Federal District Court will view Mr. Caspersen&#8217;s mental health as a mitigating circumstance when sentencing.</strong> Mr. Caspersen&#8217;s lawyer had argued that his client had a &#8220;compulsive gambling addiction and mental illness&#8221; that prompted him to mastermind a Ponzi-like scheme.</p>
+<p class="story-body-text" itemprop="articleBody">In a plea agreement, federal prosecutors and Mr. Caspersen <strong>agreed on a sentencing of 12 to 16 years in prison</strong>, subject to judicial approval. He could also be required to pay a fine of more than $5 million and restitution to victims. In court on Wednesday, Judge Rakoff described the federal sentencing guidelines as &#8220;irrational.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Caspersen had promised investors annual returns of 15 percent through a private equity-style investment vehicle and squandered the money on bad bets in the market. Even when he had enough to pay back what he owed to friends and family, he continued to gamble.<br />
+<em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Stanley Gault, Who Led Rubbermaid and Goodyear, Dies at 90</strong> After a long career at General Electric, Stanley C. Gault led turnarounds at Rubbermaid and Goodyear.<br />
+<a href="//www.nytimes.com/2016/07/07/business/stanley-gault-who-led-rubbermaid-and-goodyear-dies-at-90.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»</a><br />
+<a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/?nl=dealbook&amp;emc=edit_dlbkam_20160707"><strong>MERGERS &amp; ACQUISITIONS Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Danone, French Food Company, to Buy WhiteWave to Increase U.S. Portfolio</strong> The agreement values WhiteWave at $12.5 billion and would bolster Danone&#8217;s offerings of organic products and plant-based alternatives to milk and yogurt.<br />
+<a href="//www.nytimes.com/2016/07/08/business/dealbook/danone-whitewave-deal.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»</a><br />
+<strong>Law Firm Mergers Keep Pace with 2015&#8217;s Record</strong> Most of the combinations through the end of June involved smaller firms, which are vulnerable to increased competition for limited business.<br />
+<a href="//www.nytimes.com/2016/07/07/business/dealbook/law-firm-mergers-keep-pace-with-2015s-record.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Gannett Buys The Record of Bergen County, N.J.</strong> The Record, the second-largest newspaper in New Jersey, was family-owned for 86 years. Its sale reflects further consolidation in the industry.<br />
+<a href="//www.nytimes.com/2016/07/07/business/media/gannett-buys-the-record-of-bergen-county-nj.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»</a><br />
+<strong>HNA Extends Gategroup Takeover Offer</strong> The Chinese conglomerate HNA Group extended until July 21 its $1.4 billion offer for Gategroup Holding of Switzerland, the world&#8217;s second-biggest airline caterer, saying it would scrap a previously set minimum acceptance level.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-07/hna-extends-gategroup-takeover-offer-scraps-minimum-acceptance?nl=dealbook&amp;emc=edit_dlbkam_20160707">BLOOMBERG</a><br />
+<strong>Avast to Buy AVG for $1.3 Billion</strong> Avast agreed to buy AVG Technologies for $1.3 billion in cash, bolstering its place among internet security-related businesses.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-07/avast-to-buy-avg-for-1-3-billion-adding-security-software?nl=dealbook&amp;emc=edit_dlbkam_20160707">BLOOMBERG</a><br />
+<strong>DÃ©tente for Netflix and Comcast</strong> The relationship between the two companies has often been rocky, but nothing brings out the olive branch like a business opportunity, Jennifer Saba writes in Breakingviews.<br />
+<a href="//www.nytimes.com/2016/07/07/business/dealbook/detente-for-netflix-and-comcast.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»</a><br />
+<a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160707"><strong> INVESTMENT BANKING Â»</strong></a><br />
+<strong>Britain Seeks Retrial of Barclays Traders in Libor Case</strong> A jury was unable to reach a verdict on charges that two former Barclays employees plotted to manipulate a benchmark interest rate.<br />
+<a href="//www.nytimes.com/2016/07/07/business/dealbook/britain-seeks-retrial-of-barclays-traders-in-libor-case.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»</a><br />
+<strong>Former Rabobank Trader to Plead Guilty in U.S. Libor Case</strong> Paul Thompson, former head of money market and derivatives trading in Northeast Asia for Rabobank, will plead guilty on Thursday to charges that he conspired in a huge scandal to manipulate Libor, the leading benchmark for pricing financial transactions<br />
+<a href="//www.reuters.com/article/us-rabobank-libor-idUSKCN0ZM1XW?nl=dealbook&amp;emc=edit_dlbkam_20160707">REUTERS</a><br />
+<em>For the latest updates, go to <a href="//www.nytimes.com/pages/business/dealbook/index.html">NYTimes.com/DealBook</a></em></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160707"><strong>HEDGE FUNDS Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>S.&amp;P. Sounds Alarm on Hedge Fund Reinsurers</strong> Offshore reinsurers affiliated with hedge funds have failed to make a profit from providing reinsurance coverage for more than four years, according to Standard &amp; Poor&#8217;s, the ratings agency.<br />
+<a href="//www.ft.com/cms/s/0/5ef77350-4383-11e6-b22f-79eb4891c97d.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct&amp;nl=dealbook&amp;emc=edit_dlbkam_20160707#axzz4DOzVEDgU">THE FINANCIAL TIMES</a><br />
+<a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160707"><strong>LEGAL/REGULATORY Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Fed Officials Saw Outlook as Cloudy at Meeting Before &#8216;Brexit&#8217; Vote</strong> A unanimous vote in June to keep rates steady was a result of confusion, rather than consensus.<br />
+<a href="//www.nytimes.com/2016/07/07/business/economy/federal-reserve-meeting-minutes-interest-rates.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Daughter of Founder of Korean Conglomerate Is Arrested</strong> Shin Young-ja, the 73-year-old daughter of the founder of the Lotte conglomerate, was arrested on Thursday as prosecutors stepped up an investigation into the country&#8217;s fifth-largest business group.<br />
+<a href="//www.wsj.com/articles/lotte-founders-daughter-arrested-amid-investigation-into-korean-conglomerate-1467860764?mod=asia_home&amp;nl=dealbook&amp;emc=edit_dlbkam_20160707">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>P.&amp;G. Said to Be Under Investigation In Italy</strong> Procter &amp; Gamble, the American consumer products company, is under investigation by the Italian authorities over whether it routed revenue through units in Switzerland and other locations to avoid paying taxes in the Italy, Bloomberg reports, citing people familiar with the investigation.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-06/p-g-is-said-to-be-under-investigation-in-italian-tax-probe?nl=dealbook&amp;emc=edit_dlbkam_20160707">BLOOMBERG</a><br />
+<strong> Cambodian Leader&#8217;s Family Is Profiting From His Position, Report Says</strong> Relatives of the leader, Hun Sen, have acquired shares in companies in nearly every sector of the economy, the human rights group Global Witness says.<br />
+<a href="//www.nytimes.com/2016/07/07/world/asia/hun-sen-cambodia.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>A Ukrainian Kleptocrat Wants His Money and U.S. Asylum</strong> Pavlo Lazarenko, felon and former prime minister of Ukraine, is battling the United States for $250 million held offshore and for political asylum.<br />
+<a href="//www.nytimes.com/2016/07/07/business/international/a-ukrainian-kleptocrat-wants-his-money-and-us-asylum.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>U.S. Safety Agency Investigates Another Tesla Crash Involving Autopilot</strong> As safety officials opened an inquiry into a Pennsylvania accident, a witness to a fatal Tesla crash in Florida described a car that did not slow down even after impact.<br />
+<a href="//www.nytimes.com/2016/07/07/business/us-safety-agency-investigates-another-tesla-crash-involving-autopilot.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Fox News Anchor Files Harassment Suit Against Roger Ailes</strong> The anchor, Gretchen Carlson, said that after she refused sexual advances by Roger Ailes, the network chief, he curtailed her airtime and later declined to renew her contract. Fox said it is investigating Mr. Ailes, who denied the allegations.<br />
+<a href="//www.nytimes.com/2016/07/07/business/media/gretchen-carlson-fox-news-roger-ailes-sexual-harassment-lawsuit.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»Â </a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>UniRush, Owner of RushCard, Names Ron Hynes Chief</strong> Mr. Hynes, a former MasterCard executive, will take over about nine months after a malfunction that kept cardholders from using their money.<br />
+<a href="//www.nytimes.com/2016/07/07/business/dealbook/unirush-owner-of-rushcard-names-ron-hynes-chief.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>G.M.O. Labeling Bill Clears First Hurdle in Senate</strong> The bill would set a national standard for labeling G.M.O. foods, though critics say the system would not be tough enough.<br />
+<a href="//www.nytimes.com/2016/07/07/business/gmo-labeling-bill-passes-first-hurdle-in-senate.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»Â </a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Fire Risk Prompts Safety Agency to Recall Some Hoverboards</strong> The Consumer Products Safety Commission investigated reports of fires caused by the electrical system of the battery-powered scooter.<br />
+<a href="//www.nytimes.com/2016/07/07/business/fire-risk-prompts-safety-agency-to-recall-some-hoverboards.html?nl=dealbook&amp;emc=edit_dlbkam_20160707">NYT Â»</a></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/07/07/morning-agenda-italys-plan-for-banks-is-dividing-europe/"
+					data-title="Morning Agenda: Italy&#8217;s Plan for Banks Is Dividing Europe"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;More British Property Funds Halt Withdrawals | Wall Street Scion Pleads Guilty to Charges in $40 Million Fraud&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/07/morning-agenda-italys-plan-for-banks-is-dividing-europe/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":60,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

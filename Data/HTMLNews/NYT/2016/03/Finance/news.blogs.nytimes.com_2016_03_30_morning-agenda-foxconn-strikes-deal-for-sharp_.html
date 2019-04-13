@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004299621"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1459333387" />
+<meta name="PUD" content="20160330" />
+<meta name="pdate" content="20160330" />
+<meta name="ptime" content="20160330062307" />
+<meta name="utime" content="20160330121547" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-03-30T12:15:47-04:00" />
+<meta name="DISPLAYDATE" content="March 30, 2016" />
+<meta name="dat" content="March 30, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Bacon, Louis Moore;Caspersen, Andrew;Evans, Charles L;Lew, Jacob J;Pearson, John Michael (1959- );Xu Xiang;Yellen, Janet L">
+<meta name="des" content="Audio Recordings, Downloads and Streaming;Banking and Financial Institutions;Computer Security;Credit and Debt;Frauds and Swindling;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Private Equity;Securities and Commodities Violations;Stocks and Bonds;United States Economy;Venture Capital">
+<meta name="org" content="Anbang Insurance Group Co;Bank of England;Bear Stearns Cos;Betterment LLC;Breakingviews.com;Federal Trade Commission;Foxconn Technology;Galeria Kaufhof GmbH;Hogan Lovells;McKinsey &amp; Co;PJT Partners Inc">
+<meta name="geo" content="Australia;China;Puerto Rico;United States">
+<meta property="article:tag" content="Bacon Louis Moore" />
+<meta property="article:tag" content="Caspersen Andrew" />
+<meta property="article:tag" content="Evans Charles L" />
+<meta property="article:tag" content="Lew Jacob J" />
+<meta property="article:tag" content="Pearson John Michael (1959- )" />
+<meta property="article:tag" content="Xu Xiang" />
+<meta property="article:tag" content="Yellen Janet L" />
+<meta property="article:tag" content="Audio Recordings Downloads and Streaming" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Computer Security" />
+<meta property="article:tag" content="Credit and Debt" />
+<meta property="article:tag" content="Frauds and Swindling" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Securities and Commodities Violations" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="United States Economy" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Anbang Insurance Group Co" />
+<meta property="article:tag" content="Bank of England" />
+<meta property="article:tag" content="Bear Stearns Cos" />
+<meta property="article:tag" content="Betterment LLC" />
+<meta property="article:tag" content="Breakingviews.com" />
+<meta property="article:tag" content="Federal Trade Commission" />
+<meta property="article:tag" content="Foxconn Technology" />
+<meta property="article:tag" content="Galeria Kaufhof GmbH" />
+<meta property="article:tag" content="Hogan Lovells" />
+<meta property="article:tag" content="McKinsey &amp; Co" />
+<meta property="article:tag" content="PJT Partners Inc" />
+<meta property="article:tag" content="Australia" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="United States" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Bacon Louis Moore,Caspersen Andrew,Evans Charles L,Lew Jacob J,Pearson John Michael (1959- ),Xu Xiang,Yellen Janet L,Audio Recordings Downloads and Streaming,Banking and Financial Institutions,Computer Security,Credit and Debt,Frauds and Swindling,Initial Public Offerings,Mergers Acquisitions and Divestitures,Private Equity,Securities and Commodities Violations,Stocks and Bonds,United States Economy,Venture Capital,Anbang Insurance Group Co,Bank of England,Bear Stearns Cos,Betterment LLC,Breakingviews.com,Federal Trade Commission,Foxconn Technology,Galeria Kaufhof GmbH,Hogan Lovells,McKinsey &amp; Co,PJT Partners Inc,Australia,China,Puerto Rico,United States,DealBook" />
+<meta name="news_keywords" content="Australia,Breakingviews.com,China" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F03%2F30%2Fmorning-agenda-foxconn-strikes-deal-for-sharp%2F" title="Morning Agenda: Foxconn Strikes Deal for Sharp" />
+<meta name="description" content="Explaining Valeant &#124; Louis Bacon&#8217;s Charity Says It Was Victim of Fraud &#124; Spotify Expected to Sign $1 Billion Financing Deal" />
+<meta name="hdl" content="Morning Agenda: Foxconn Strikes Deal for Sharp" />
+<meta property="og:title" content="Morning Agenda: Foxconn Strikes Deal for Sharp" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/03/30/morning-agenda-foxconn-strikes-deal-for-sharp/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Explaining Valeant &#124; Louis Bacon&#8217;s Charity Says It Was Victim of Fraud &#124; Spotify Expected to Sign $1 Billion Financing Deal" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Foxconn Strikes Deal for Sharp" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/03/30/morning-agenda-foxconn-strikes-deal-for-sharp/" />
+<meta name="twitter:description" content="Explaining Valeant &#124; Louis Bacon&#8217;s Charity Says It Was Victim of Fraud &#124; Spotify Expected to Sign $1 Billion Financing Deal" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/03/29/what-were-reading-140/' />
+<link rel='next' title='Morning Agenda: MetLife Wins Battle to Remove &#8216;Too Big to Fail&#8217; Label' href='//news.blogs.nytimes.com/2016/03/31/morning-agenda-metlife-wins-battle-to-remove-too-big-to-fail-label/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/03/30/morning-agenda-foxconn-strikes-deal-for-sharp/' />
+<link rel='shortlink' href='//nyti.ms/1qhSpyf' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/03/30/morning-agenda-foxconn-strikes-deal-for-sharp/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Foxconn Strikes Deal for Sharp - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4494 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Foxconn Strikes Deal for Sharp        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/03/30/morning-agenda-foxconn-strikes-deal-for-sharp/"
+	 data-title="Morning Agenda: Foxconn Strikes Deal for Sharp"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Explaining Valeant | Louis Bacon&#039;s Charity Says It Was Victim of Fraud | Spotify Expected to Sign $1 Billion Financing Deal&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/03/30/morning-agenda-foxconn-strikes-deal-for-sharp/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="March 30, 2016 6:23 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Foxconn Strikes Deal for Sharp</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-03-30T10:23:07+00:00" itemprop="datePublished">March 30, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">March 30, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4494 post type-post status-publish hentry category-dealbook tag-anbang-insurance-group-co tag-audio-recordings-downloads-and-streaming tag-australia tag-bacon-louis-moore tag-bank-of-england tag-banking-and-financial-institutions tag-bear-stearns-cos tag-betterment-llc tag-breakingviews-com tag-caspersen-andrew tag-china tag-computer-security tag-credit-and-debt tag-evans-charles-l tag-federal-trade-commission tag-foxconn-technology tag-frauds-and-swindling tag-galeria-kaufhof-gmbh tag-hogan-lovells tag-initial-public-offerings tag-lew-jacob-j tag-mckinsey-co tag-mergers-acquisitions-and-divestitures tag-pearson-john-michael-1959 tag-pjt-partners-inc tag-private-equity tag-puerto-rico tag-securities-and-commodities-violations tag-stocks-and-bonds tag-united-states tag-united-states-economy tag-venture-capital tag-xu-xiang tag-yellen-janet-l per-bacon-louis-moore per-caspersen-andrew per-evans-charles-l per-lew-jacob-j per-pearson-john-michael-1959 per-xu-xiang per-yellen-janet-l des-audio-recordings-downloads-and-streaming des-banking-and-financial-institutions des-computer-security des-credit-and-debt des-frauds-and-swindling des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-private-equity des-securities-and-commodities-violations des-stocks-and-bonds des-united-states-economy des-venture-capital org-anbang-insurance-group-co org-bank-of-england org-bear-stearns-cos org-betterment-llc org-breakingviews-com org-federal-trade-commission org-foxconn-technology org-galeria-kaufhof-gmbh org-hogan-lovells org-mckinsey-co org-pjt-partners-inc geo-australia geo-china geo-puerto-rico geo-united-states news_keywords-australia news_keywords-breakingviews-com news_keywords-china" id="post-4494">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Foxconn Strikes Deal for Sharp</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-03-30T10:23:07+00:00" itemprop="datePublished">March 30, 2016 6:23 am</time>
+			<!-- date updated --><span class="visually-hidden updated">March 30, 2016 6:23 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/03/30/morning-agenda-foxconn-strikes-deal-for-sharp/" data-title="Morning Agenda: Foxconn Strikes Deal for Sharp" data-description="Explaining Valeant | Louis Bacon&#039;s Charity Says It Was Victim of Fraud | Spotify Expected to Sign $1 Billion Financing Deal">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FOXCONN STRIKES DEAL FOR SHARP</strong> <span class="divider"> | </span></span> Foxconn is grappling with rising labor costs in China and a slowdown in the global smartphone market, but it managed to forestall its weakening relationship with Apple by striking a deal <b>to acquire the screen maker Sharp of Japan for $3.5 billion</b>,<br />
+<a href="//www.nytimes.com/2016/03/31/business/dealbook/foxconn-sharp.html">Paul Mozur reports in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Foxconn said it would <b>take over 66 percent of Sharp</b>, with a total investment of 389 billion yen, or about $3.5 billion. Foxconn is buying Â¥289 billion worth of common Sharp shares and an additional Â¥99.99 billion worth of nonvoting preferred shares. </p>
+<p class="story-body-text" itemprop="articleBody">The total investment is <b>well below the $5.5 billion that Foxconn was expected</b> to pay last month before it balked over the discovery that a new owner could be liable for close to $3 billion in potential liabilities. </p>
+<p class="story-body-text" itemprop="articleBody">The deal comes after weeks of public negotiations and high-profile setbacks, and <b>should make Foxconn a more attractive partner for Apple, which uses Sharp screens in its iPhones.</b> </p>
+<p class="story-body-text" itemprop="articleBody"><b>Analysts are still skeptical</b> â they say Foxconn gets an ailing business that will take a considerable amount of money to turn around, even if it does get a bigger chunk of the global supply chain. </p>
+<p class="story-body-text" itemprop="articleBody">The deal is a return to form for Foxconn in its <b>emphasis on scale</b>. Even as it has tried to maintain its enormous scale, it has also been trying to climb up the value chain to find more profitable streams of revenue. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>EXPLAINING VALEANT</strong> <span class="divider"> | </span></span> Commentators and analysts have drawn lessons from the mess surrounding Valeant, but few of them are convincing,<br />
+<a href="//www.nytimes.com/2016/03/30/business/dealbook/explaining-valeant-the-main-theories.html?ref=dealbook">Steven Davidoff Solomon writes in Deal Professor</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Some contend that <b>Valeant is like Enron</b>, a house of cards waiting to be brought down by an inevitable accounting scandal. But Valeant is a real operating business and there is no indication of outright fraud. </p>
+<p class="story-body-text" itemprop="articleBody">Others have cautioned about <b>the McKinsey-driven ethos</b> â J. Michael Pearson was a McKinsey consultant for 23 years. But McKinsey has also been at the forefront of arguments about long-term shareholder value. </p>
+<p class="story-body-text" itemprop="articleBody">Warnings about Valeantâs decision to <b>cut research and development</b>  are based on a nonsensical notion that R&#038;D can never be bad. There has been an <b>uproar about predatory pricing</b>, but there is no transparency around Valeantâs pricing and its products still sell. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Hedge funds like ValueAct have also been blamed</b>. This explains the business strategy, but it does not help us understand what went wrong. <b>Shareholders get their share of the blame too for chasing returns</b>, but this has nothing to do with Valeantâs business.</p>
+<p class="story-body-text" itemprop="articleBody">So what is the <b>Deal Professorâs theory?</b> If Wall Street built Valeant, it is now running away from it, Mr. Davidoff Solomon writes. The velocity of the turnaround created views of the company that are not tethered to reality. </p>
+<p class="story-body-text" itemprop="articleBody">It does not make sense for a company with earnings before interest, taxes, depreciation and amortization, or Ebitda, of about $5 billion a year to be worth only $9 billion. Allergan, with Ebitda of $7 billion a year and $40 billion of debt, is worth $110 billion.</p>
+<p class="story-body-text" itemprop="articleBody">This crisis has crushed Valeantâs previous business model, but it still has billions of dollars in earnings. The intrinsic worth of that business remains the same and the flight by Wall Street shut down its old growth model, but not its business. Wall Street always thinks the worst when things go bad and sometimes it <b>creates a self-fulfilling frenzy.</b> </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>LOUIS BACONâS CHARITY SAYS IT WAS VICTIM OF FRAUD</strong> <span class="divider"> | </span></span> The Moore Charitable Foundation said it was the victim of fraud by the 39-year-old Wall Street executive Andrew Caspersen,<br />
+<a href="//www.nytimes.com/2016/03/30/business/dealbook/charitable-trust-says-it-was-a-victim-of-an-investment-scheme.html?ref=dealbook">Matthew Goldstein and Alexandra Stevenson report in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">The trust, founded by the hedge fund billionaire Louis M. Bacon, said that it was &#8220;<b>lied to by Andrew Caspersen, a managing director at investment bank PJT Partners</b>, regarding a potential investment related to the publicly announced restructuring of a private equity fund.â </p>
+<p class="story-body-text" itemprop="articleBody">The foundation put $25 million into Mr. Caspersenâs scheme and said that it detected <b>âirregularities in a proposed follow-on dealâ</b> before notifying PJT Partnersâ general council. PJT contacted the United States attorneyâs office in Manhattan. </p>
+<p class="story-body-text" itemprop="articleBody">The authorities said Mr. Caspersen had lost much of the $25 million in âaggressive options tradingâ and, as a condition of his bond, a magistrate judge ordered him to get a mental health evaluation and alcohol testing and treatment. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>Jacob J. Lew</b>, the Treasury secretary, will discuss the use of sanctions at the Carnegie Endowment for International Peace at 8:45 a.m. The Securities and Exchange Commission will consider whether to adopt <b>new swaps rules</b> in a meeting at 10 a.m. <b>Charles L. Evans</b>, the president of the Federal Reserve Bank of Chicago, will speak at the Forecasters Club of New York Luncheon at 1 p.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SPOTIFY EXPECTED TO SIGN $1 BILLION FINANCING DEAL </strong> <span class="divider"> | </span></span> Spotify is about to close a $1 billion deal that would double the amount of financing it has raised since it was founded a decade ago,<br />
+<a href="//www.nytimes.com/2016/03/30/business/dealbook/spotify-expected-to-sign-1-billion-financing-deal.html?ref=dealbook">Leslie Picker and Ben Sisario report in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">People briefed on the matter said the money comes in the form of <b>convertible debt</b>, which allows investors in the music-streaming company to change their securities into equity at a future date. </p>
+<p class="story-body-text" itemprop="articleBody">The convertible debt allows Spotify to obtain funds <b>without needing to change its valuation</b>. It had an equity value of $8.4 billion last year. </p>
+<p class="story-body-text" itemprop="articleBody"><b>The terms of the debt may put pressure on the company to go public sooner.</b> Investors have the ability to convert to equity at a discount to an initial public offering price â the discount increases if Spotify waits longer than a year to go public. The coupon payment on the debt would also rise over time.</p>
+<p class="story-body-text" itemprop="articleBody">Funds associated with the private equity firm TPG and the investment firm Dragoneer put in $750 million, while the rest came from institutional investors. </p>
+<p class="story-body-text" itemprop="articleBody"><b>TPG and Dragoneer</b> are permitted to cash out their shares as soon as 90 days after an I.P.O., instead of the 180 days employees and other shareholders get, according to <a href="//www.wsj.com/articles/spotify-raises-1-billion-in-debt-financing-1459284467">The Wall Street Journal</a>, which earlier reported the deal.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker">DEAL NOTES</h6>
+<div class="right">
+<div class="inline"></div>
+</div>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Lester C. Thurow, Economist Who Seized the Spotlight, Is Dead at 77" src="https://static01.nyt.com/images/2016/03/30/business/50ThurowObit/50ThurowObit-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lester C. Thurow, Economist Who Seized the Spotlight, Is Dead at 77</strong> <span class="divider"> | </span></span> A prolific writer and popular public speaker, Mr. Thurow sounded an early alarm about the growing income gap between rich and poor Americans.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/30/business/economy/lester-c-thurow-prominent-economist-is-dead-at-77.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Starwood Bidder Is a Reclusive Chinese Insurer With Opaque Backing" src="https://static01.nyt.com/images/2016/03/30/business/30db-anbang2/30db-anbang2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Starwood Bidder Is a Reclusive Chinese Insurer With Opaque Backing</strong> <span class="divider"> | </span></span> Anbang, which is in a bidding war for Starwood Hotels, is controlled by a murky group of interconnected companies and led by a reclusive chairman.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/30/business/dealbook/china-anbang-starwood-wu-xiaohui.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/03/30/business/dealbook/starwoods-takeover-offer-from-anbang-is-risky-but-worth-it.html">Breakingviews: Starwoodâs Takeover Offer From Anbang is Risky, but Worth It</a> <time class="timestamp" data-eastern-timestamp="2:23 PM" datetime="2016-03-29" data-utc-timestamp="1459275808000">2:23 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Starwoodâs Takeover Offer From Anbang Is Risky, but Worth It</strong> <span class="divider"> | </span></span> Heavy interest from rival hoteliers means Starwood can afford to take the Anbang Insurance Groupâs offer, which is $4.64 more per share than its deal with Marriott, Jeffrey Goldfarb writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/30/business/dealbook/starwoods-takeover-offer-from-anbang-is-risky-but-worth-it.html">Breakingviews &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/03/30/business/dealbook/china-anbang-starwood-wu-xiaohui.html">Starwood Bidder Is an Ambitious Chinese Insurer With Opaque Backing</a> <time class="timestamp" data-eastern-timestamp="11:52 AM" datetime="2016-03-29" data-utc-timestamp="1459266726000">11:52 AM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Metro Group of Germany to Split Into 2 Companies</strong> <span class="divider"> | </span></span> The announcement came after Metro agreed in June to sell Galeria Kaufhof, the leading department store chain in Germany and Belgium, to the Hudsonâs Bay Company.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/31/business/dealbook/metro-group-split.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Norfolk Southern Steps Up Fight Against Canadian Pacific Merger</strong> <span class="divider"> | </span></span> In a letter to employees, Norfolk Southernâs chief executive, Jim Squires, said that the company is making good progress on its restructuring plans and that employees should vote against merger talks.<br /><span class="kicker"><a href="//www.wsj.com/articles/norfolk-southern-steps-up-fight-against-canadian-pacific-merger-1459270438?mod=pls_whats_news_us_business_f"> the wall street journal</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Swedbank to Replace Chairman After He Lost Investor Support</strong> <span class="divider"> | </span></span> The departure of Anders Sundstrom as chairman of the Swedish lender followed the ouster of Michael Wolf, its chief executive, in February.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/31/business/dealbook/swedbank-anders-sundstrom.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Doubts Raised Over Controls at HSBC</strong> <span class="divider"> | </span></span> The monitor overseeing HSBCâs compliance with a landmark anti-money-laundering settlement has uncovered potential lapses including loans to companies that exported miniskirts to Iran and candy to Syria, The Wall Street Journal reports, citing a person familiar with the findings.<br /><span class="kicker"><a href="//www.wsj.com/articles/hsbc-struggles-to-bring-money-laundering-vigilance-up-to-snuff-1459279408?mod=asia_home"> the wall street journal </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>UniCredit Said to Be in Talks Over  Popolare di Vicenza Capital Raising </strong> <span class="divider"> | </span></span> UniCredit, Italyâs largest bank by assets, is in talks with the government in Rome about seeking support for a 2 billion euro capital raising at the mutual bank Popolare di Vicenza, a deal seen as a crucial test of investor confidence in Italyâs lenders, The Financial Times reports, citing people with direct knowledge of the matter.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/cb84d852-f5ca-11e5-803c-d27c7117d132.html?ftcamp=published_links%2Frss%2Fmarkets%2Ffeed%2F%2Fproduct#axzz44AYszmcF">the financial times </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinese Textile Maker to Buy Owner of Sandro and Claudie Pierlot</strong> <span class="divider"> | </span></span> Kohlberg Kravis Roberts plans to sell SMCP to Chinaâs Shandong Ruyi in a deal that values the French fashion group at 1.3 billion euros, including debt, The Financial Times reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/e58e5704-f5c6-11e5-803c-d27c7117d132.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz44AYszmcF">the financial times </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="The Fall of Chinaâs Hedge-Fund King" src="https://static01.nyt.com/images/2016/04/03/magazine/03hedgefund1/03hedgefund1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Fall of Chinaâs Hedge-Fund King</strong> <span class="divider"> | </span></span> Xu Xiang was a legend in the countryâs booming stock market â until the bubble he helped to create took him down with it.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/03/magazine/the-fall-of-chinas-hedge-fund-king.html">Feature &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Robo-Adviser Betterment Gets $100 Million in Venture Capital" src="https://static01.nyt.com/images/2016/03/30/business/db-betterment1/db-betterment1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Robo-Adviser Betterment Gets $100 Million in Venture Capital</strong> <span class="divider"> | </span></span> The investment, which Betterment says it will use to increase product development and expand its business, pushes the firmâs valuation to $700 million.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/30/business/dealbook/robo-adviser-betterment-gets-100-million-in-venture-capital.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Janet Yellen Says Fed Still Plans to Raise Interest Rates but Carefully" src="https://static01.nyt.com/images/2016/03/30/business/30fed2/30fed2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Janet Yellen Says Fed Still Plans to Raise Interest Rates but Carefully</strong> <span class="divider"> | </span></span> In remarks to the Economic Club of New York, the Federal Reserve chairwoman said she expected the domestic economy to improve this year.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/30/business/economy/janet-yellen-speech-fed-interest-rates.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Latest Plan to Rescue Puerto Rico Is Met With Disdain on Island" src="https://static01.nyt.com/images/2016/03/30/business/30db-rico1/30db-rico1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Latest Plan to Rescue Puerto Rico Is Met With Disdain on Island</strong> <span class="divider"> | </span></span> The plan calls for putting Puerto Ricoâs finances under a presidentially appointed oversight board â a bitter pill to many on the island.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/30/business/dealbook/politicians-latest-plan-to-rescue-puerto-rico-is-met-with-disdain.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Prosecutor in Bear Stearns Case to Leave U.S. Attorneyâs Office" src="https://static01.nyt.com/images/2016/03/30/business/db-door1/db-door1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Prosecutor in Bear Stearns Case to Leave U.S. Attorneyâs Office</strong> <span class="divider"> | </span></span> James G. McGovern, the head of the criminal division at the United States attorneyâs office in Brooklyn, said he would join the law firm Hogan Lovells as a partner.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/30/business/dealbook/prosecutor-in-bear-stearns-case-to-leave-us-attorneys-office.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Bank of England to Raise Bank Capital Buffer as Safeguard" src="https://static01.nyt.com/images/2016/03/30/business/30db-ukbanks/30db-ukbanks-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bank of England to Raise Bank Capital Buffer as Safeguard</strong> <span class="divider"> | </span></span> The buffer is intended to ensure that British banks can provide lending and other essential banking services during times of financial stress.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/30/business/dealbook/bank-of-england-to-raise-bank-capital-buffer-as-safeguard.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="F.T.C. Sues Volkswagen Over âDeceptiveâ Diesel Car Ads" src="https://static01.nyt.com/images/2016/03/30/business/30ftc/30ftc-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>F.T.C. Sues Volkswagen Over âDeceptiveâ Diesel Car Ads</strong> <span class="divider"> | </span></span> The Federal Trade Commission accused VW of selling or leasing more than 550,000 diesel vehicles using a campaign that said they met emissions standards.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/30/business/media/ftc-sues-volkswagen-over-diesel-car-ads.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hackers Breach Law Firms</strong> <span class="divider"> | </span></span> Hackers broke into the computer networks at some of the countryâs most prestigious law firms, and federal investigators are exploring whether they stole confidential information for the purpose of insider trading, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/hackers-breach-cravath-swaine-other-big-law-firms-1459293504"> the wall street journal</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Simmering for Decades, Anger About Trade Boils Over in â16 Election" src="https://static01.nyt.com/images/2016/03/30/business/30trade1/30trade1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Simmering for Decades, Anger About Trade Boils Over in â16 Election</strong> <span class="divider"> | </span></span> Bashing trade deals has proved a winning strategy for Donald Trump, but economists mostly agree they have benefited American households significantly.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/30/business/economy/trade-donald-trump-bernie-sanders.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Edison International Starts Energy Consultancy" src="https://static01.nyt.com/images/2016/03/30/business/30energy/30energy-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Edison International Starts Energy Consultancy</strong> <span class="divider"> | </span></span> The company will help large businesses take advantage of evolving technologies, markets and incentives in energy efficiency, renewables and storage.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/30/business/energy-environment/edison-international-to-start-energy-consultancy.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Australia to End ASX Clearing Monopoly </strong> <span class="divider"> | </span></span> Canberra is ending the Australian Securities Exchange monopoly on equity clearing and relaxing ownership restrictions in a decision that removes a potential hurdle to the ASXâs participation in overseas mergers.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/5b4d48ae-f62d-11e5-9afe-dd2472ea263d.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz44AYszmcF">the financial times </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/03/30/morning-agenda-foxconn-strikes-deal-for-sharp/"
+					data-title="Morning Agenda: Foxconn Strikes Deal for Sharp"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Explaining Valeant | Louis Bacon&#039;s Charity Says It Was Victim of Fraud | Spotify Expected to Sign $1 Billion Financing Deal&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/03/30/morning-agenda-foxconn-strikes-deal-for-sharp/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":58,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-douthat section-opinion"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-douthat section-opinion" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-douthat section-opinion" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-douthat section-opinion" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/douthat/Ta-Nehisi Coates and the Alternatives to Despair ( 20170914 )" />
+<meta name="communityAssetURL" content="//douthat.blogs.nytimes.com/2017/09/14/ta-nehisi-coates-and-the-alternatives-to-despair/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000005431495"><meta name="author" content="" />
+<meta name="CLMST" content="" />
+<meta name="byl" content="" />
+<meta name="article:author" content="//topics.nytimes.com/top/opinion/editorialsandoped/oped/columnists/rossdouthat/index.html" /><meta name="GBLC" content="">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1505409653" />
+<meta name="PUD" content="20170914" />
+<meta name="pdate" content="20170914" />
+<meta name="ptime" content="20170914132053" />
+<meta name="utime" content="20170914172359" />
+<meta property="article:modified_time" itemprop="dateModified" content="2017-09-14T17:23:59-04:00" />
+<meta name="DISPLAYDATE" content="September 14, 2017" />
+<meta name="dat" content="September 14, 2017" />
+<meta itemprop="articleSection" property="article:section" content="Opinion" />
+<meta name="CG" content="Opinion" />
+<meta name="SCG" content="douthat" />
+<meta name="BN" content="douthat" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Coates, Ta-Nehisi;Hannity, Sean;Lilla, Mark;Obama, Barack">
+<meta name="des" content="Immigration and Emigration;Reality Television;Segregation and Desegregation;Whites">
+<meta name="org" content="Democratic Party;Republican Party">
+<meta name="geo" content="United States">
+<meta property="article:tag" content="Coates Ta-Nehisi" />
+<meta property="article:tag" content="Hannity Sean" />
+<meta property="article:tag" content="Lilla Mark" />
+<meta property="article:tag" content="Obama Barack" />
+<meta property="article:tag" content="Immigration and Emigration" />
+<meta property="article:tag" content="Reality Television" />
+<meta property="article:tag" content="Segregation and Desegregation" />
+<meta property="article:tag" content="Whites" />
+<meta property="article:tag" content="Democratic Party" />
+<meta property="article:tag" content="Republican Party" />
+<meta property="article:tag" content="United States" />
+<meta property="article:tag" content="Uncategorized" />
+<meta name="keywords" content="Coates Ta-Nehisi,Hannity Sean,Lilla Mark,Obama Barack,Immigration and Emigration,Reality Television,Segregation and Desegregation,Whites,Democratic Party,Republican Party,United States,Uncategorized" />
+<meta name="news_keywords" content="Whites" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fdouthat.blogs.nytimes.com%2F2017%2F09%2F14%2Fta-nehisi-coates-and-the-alternatives-to-despair%2F" title="Ta-Nehisi Coates and the Alternatives to Despair" />
+<meta name="description" content="Two disagreements with the latest Coates blockbuster on Trump and race." />
+<meta name="hdl" content="Ta-Nehisi Coates and the Alternatives to Despair" />
+<meta property="og:title" content="Ta-Nehisi Coates and the Alternatives to Despair" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//douthat.blogs.nytimes.com/2017/09/14/ta-nehisi-coates-and-the-alternatives-to-despair/" />
+<meta property="og:site_name" content="Ross Douthat" />
+<meta property="og:description" content="Two disagreements with the latest Coates blockbuster on Trump and race." />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_291_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Ta-Nehisi Coates and the Alternatives to Despair" />
+<meta name="twitter:url" content="//douthat.blogs.nytimes.com/2017/09/14/ta-nehisi-coates-and-the-alternatives-to-despair/" />
+<meta name="twitter:description" content="Two disagreements with the latest Coates blockbuster on Trump and race." />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<meta name="twitter:site" content="@DouthatNYT">
+<link rel='prev' title='Is &#8216;Game of Thrones&#8217; a Dystopia?' href='//douthat.blogs.nytimes.com/2017/07/13/is-game-of-thrones-a-dystopia/' />
+<link rel='next' title='The Age of Consent and Its Discontents' href='//douthat.blogs.nytimes.com/2017/10/19/the-age-of-consent-and-its-discontents/' />
+<link rel='canonical' href='//douthat.blogs.nytimes.com/2017/09/14/ta-nehisi-coates-and-the-alternatives-to-despair/' />
+<link rel='shortlink' href='https://nyti.ms/2eY1qce' />
+<link rel='https://github.com/WP-API/WP-API' href='//douthat.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/douthat/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//douthat.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/opinion/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/douthat/2017/09/14/ta-nehisi-coates-and-the-alternatives-to-despair/" />
+<meta name="dfp-ad-unit-path" content="opinion/douthat" />			<title>Ta-Nehisi Coates and the Alternatives to Despair - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/universal.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt","jkiddScript"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-22055 blog-universal nyt-blog-douthat" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'Opinion', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//douthat.blogs.nytimes.com">
+                Ross Douthat            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Ta-Nehisi Coates and the Alternatives to Despair        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+<div id="liftoff-nyt5-bar1" class="hidden"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//douthat.blogs.nytimes.com/2017/09/14/ta-nehisi-coates-and-the-alternatives-to-despair/"
+	 data-title="Ta-Nehisi Coates and the Alternatives to Despair"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Two disagreements with the latest Coates blockbuster on Trump and race.&lt;/span&gt;&lt;a href=&quot;//douthat.blogs.nytimes.com/2017/09/14/ta-nehisi-coates-and-the-alternatives-to-despair/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="September 14, 2017 1:20 pm">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="douthat" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+			<a href="//www.nytimes.com/pages/opinion/" class="opinion-kicker">
+			<img src="https://static01.nyt.com/images/blogs_v5/_misc/kicker-opinionpages.png" />
+		</a>
+		<div class="element1">
+	<div id="logo" ><a href="//douthat.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=Opinion" title="Go to Ross Douthat Home"><img src="https://static01.nyt.com/images/blogs_v5/douthat/douthat_post.png" alt="Ross Douthat - Just another nytimes.com Blogs weblog"/></a></div>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//douthat.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Ross Douthat">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-22055 post type-post status-publish hentry tag-coates-ta-nehisi tag-democratic-party tag-hannity-sean tag-immigration-and-emigration tag-lilla-mark tag-obama-barack tag-reality-television tag-republican-party tag-segregation-and-desegregation tag-united-states tag-whites per-coates-ta-nehisi per-hannity-sean per-lilla-mark per-obama-barack des-immigration-and-emigration des-reality-television des-segregation-and-desegregation des-whites org-democratic-party org-republican-party geo-united-states news_keywords-whites" id="post-22055">
+	<header class="postHeader">
+				<div class="postKicker">
+					</div>
+				<h1 itemprop="headline" class="entry-title">Ta-Nehisi Coates and the Alternatives to Despair</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+							</address>
+			<!-- date published --><time class="dateline " datetime="2017-09-14T17:20:53+00:00" itemprop="datePublished">September 14, 2017 1:20 pm</time>
+			<!-- date updated --><span class="visually-hidden updated">September 14, 2017 1:20 pm</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//douthat.blogs.nytimes.com/2017/09/14/ta-nehisi-coates-and-the-alternatives-to-despair/" data-title="Ta-Nehisi Coates and the Alternatives to Despair" data-description="Two disagreements with the latest Coates blockbuster on Trump and race.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody">Let&#8217;s talk for a moment about Ta-Nehisi Coates, who has <a href="https://www.theatlantic.com/magazine/archive/2017/10/the-first-white-president-ta-nehisi-coates/537909/">one of his blockbuster essays</a> in the Atlantic, on Donald Trump as the latest avatar of an enduring white supremacism. The essay is very long but I think my basic disagreement with it can be distilled by just looking at two passages. Here&#8217;s the first:</p>
+<blockquote><p class="story-body-text" itemprop="articleBody">The scope of Trump&#8217;s commitment to whiteness is matched only by the depth of popular disbelief in the power of whiteness. We are now being told that support for Trumpâs âMuslim ban,â his scapegoating of immigrants, his defenses of police brutality are somehow the natural outgrowth of the cultural and economic gap between Lena Dunhamâs America and Jeff Foxworthyâs. The collective verdict holds that the Democratic Party lost its way when it abandoned everyday economic issues like job creation for the softer fare of social justice. The indictment continues: To their neoliberal economics, Democrats and liberals have married a condescending elitist affect that sneers at blue-collar culture and mocks the white man as historyâs greatest monster and prime-time televisionâs biggest doofus. &#8230; <strong>in this analysis, Trumpâs racism and the racism of his supporters are incidental to his rise. [<em>emphasis mine &#8211; RD</em>]</strong></p></blockquote>
+<p class="story-body-text" itemprop="articleBody">I think this baldly caricatures the state of the debate over the Trump phenomenon and misdescribes the views that Coates intends to critique. In fact wherever there is criticism of Trump in the public press, from the center-left establishment to left-populists and left-identitarians to the NeverTrump conservative brigades on op-ed pages, there is frequent-to-constant analysis of the role that race and racial politics played in his rise to power. Trump is routinely analogized to racist figures as diverse as George Wallace, Andrew Jackson, 19th century Know-Nothings and early-2oth century European fascists. He is routinely assailed as a white nationalist, accused of playing white identity politics, attacked for giving aid and comfort to white supremacists. Every week, it seems, there is some new and widely-publicized social-science effort to tease out and measure how white racial anxiety helped push Trump into the White House. LOLing at &#8220;economic anxiety&#8221; and highlighting every instance of pro-Trump racism was a constant pastime in the boring technocratic center-left portion of my Twitter feedÂ throughout the campaign and since. In the landscape of public debate, a &#8220;collective verdict&#8221; that race and racism are &#8220;incidental&#8221; to his rise simply does not exist.</p>
+<p class="story-body-text" itemprop="articleBody">Certainly there are many Americans whose beliefs fit Coates&#8217; description, who regardÂ Trump&#8217;s racial vision as basically benign if occasionally insensitive, who think he&#8217;s an unjust victim of the liberal media&#8217;s race card, and so forth. These Americans are Trump supporters, for the most part, plus a smattering of left-wing gadflies andÂ <a href="//slatestarcodex.com/2016/11/16/you-are-still-crying-wolf/">other contrarians</a>.Â But Coates is very clearly not arguing with Fox-watching Trump supporters in his essay: His piece quotes and critiques anti-Trump conservatives and Democrats and liberals, not Sean Hannity or his epigones, and his examples of the supposed &#8220;race is incidental&#8221; consensus are figures like Bernie Sanders and Joe Biden, Mark Lilla and my colleague Nick Kristof, Charles Murray and Anthony Bourdain. His great complaint is not that Trump backers deny their own racist impulses, in other words, but that the &#8220;collective&#8221; ofÂ Trump <em>opponents</em>Â barely acknowledge the role of race and racism in his rise.</p>
+<p class="story-body-text" itemprop="articleBody">I would not presume to speak for all the people that he criticizes. But again, as a generalization I think this is clearly wrong, that the general perspective of Trump critics with regard to race and other matters is both/and, not either/or, that people who want to talk about things like class and culture and economics as well as racial politics still acknowledge the role of race, and that their shared point of view can be summarized as follows:</p>
+<p class="story-body-text" itemprop="articleBody"><em>Trump&#8217;s campaign used race more cynically and divisivelyÂ than any in recent memory: He race-baited with birtherism, stoked white-identitarian sentiments and winked at white supremacists and anti-Semites. But while racialist and racist gestures were part of his appeal, they were far from the only forcesÂ that persuaded people to cast votes for him. So did his distinctive (for the G.O.P.) economic populism, the overreaching social liberalismÂ of the late-Obama-era Democratic Party, the long shadows of the Iraq War and the financial crisis, gender politics and secularization and the opioid crisis and reality television and much, much more. Trump contained multitudes; so did his support; so â crucially âÂ must any effective political adaptation or response.</em></p>
+<p class="story-body-text" itemprop="articleBody">This perspective â which is roughly my own âÂ comes in different varieties depending on the people holding it. A reformist conservative and a left-populist may agree that Trumpism needs more than simple condemnation, but the conservative&#8217;s list ofÂ the legitimate grievances drivingÂ Trump&#8217;s support will include many things that aren&#8217;t on the left-populist&#8217;s list and vice versa. (And some of the things on my ownÂ list, issues having to do with the culture wars, immigration and more, would be described as part and parcel of Trumpism&#8217;s bigotry and racism by those people to my left who share my sense that the Trump phenomenon cannot be reduced to race, but whoÂ think that most-to-all cultural conservatives are bigots.)</p>
+<p class="story-body-text" itemprop="articleBody">Still, I think it&#8217;s fair to say that, not nobody, butÂ <em>almost</em>Â nobody in the large group that favors a broad-spectrum response to Trump thinks that race and white anxiety are &#8220;incidental&#8221; to hisÂ rise. Rather the argument, fairly consistently, is that you can&#8217;t devise a politics that deals effectively with the temptation of white identity politics if you don&#8217;t take seriously the other forces, economic and cultural and sociological and religious, that make identity politics and racial chauvinism seem appealing.</p>
+<p class="story-body-text" itemprop="articleBody">Which brings me to the second passage that helpfully distills my disagreement with Coates. Speaking dismissively of all socioeconomic explanations of racism&#8217;s recrudescence, he writes:</p>
+<blockquote><p class="story-body-text" itemprop="articleBody">âThere is a tremendous amount of anger and frustration among working-class whites, particularly where there is an economic downturn,â a researcher told theÂ <i>Los Angeles Times</i>. âThese people feel left out; they feel government is not responsive to them.â By this logic, postwar Americaâwith its booming economy and low unemploymentâshould have been an egalitarian utopia and not the violently segregated country it actually was.</p></blockquote>
+<p class="story-body-text" itemprop="articleBody">But hold up: Postwar America <em>is</em> actually a logical example for the &#8220;racism feeds off other grievances and problems&#8221; argument, because the long period of economic growth and low unemployment that ran from the late &#8217;40s to the late &#8217;60s was also the era that saw <em>the most rapid legal progress for blacks since Reconstruction</em>. America entered the postwar era as a &#8220;violently segregated&#8221; country, yes, but in terms of racial progress and expanded civl rights the era was a time of sweeping gains, not successful racialÂ backlashÂ â and backlash politics only really gathered steam as the postwar boom gave way to a period of economic stagnation and social disarray.</p>
+<p class="story-body-text" itemprop="articleBody">Indeed, the racial progress in the postwar eraÂ offers grist for almost all the different, non-despairing theories that Coates wants to dismiss. For left-populists in the style of Sanders, it suggestsÂ that super-high taxes and broadly-shared prosperity can create the preconditions for successful appeals for racial justice. For self-styled Rooseveltian liberals like Lilla, it suggests that government by a consensus-minded and patriotic liberalism (or Rockefeller Republicanism) is entirely compatible with major gains for the marginalized and mistreated. For communitarian, one-nation conservatives like myself, it suggests that appeals to redress racial wrongsÂ are more effective when they&#8217;re grounded in religious consensus (the postwar period being a peak for Christian practice and institutional religious strength), disentangled from anxieties about mass immigration (which was then on a four-decade hiatus), and offered against a reassuring backdrop of basic social order (low crime, strong families, etc.)</p>
+<p class="story-body-text" itemprop="articleBody">All of these postwar-pining groups are no doubt guilty of a certainÂ nostalgia, and for none of them is it exactly clear how you get to what they want â stronger economic growth, civic and patriotic renewal, religious revivalÂ â from where we find ourselves today. But their look backward to the postwar era is still much moreÂ justifiable than Coates&#8217; glib dismissal allows, because if you want a model for how sustained racial progress can happen in this country, it&#8217;s literally the only one we have that doesn&#8217;t involve a massive civil war.</p>
+<p class="story-body-text" itemprop="articleBody">Since Coates generally declines to offer prescriptions for the ills that he diagnosesÂ â a position with which I have some sympathy these days!Â â it&#8217;s hard to say exactly how a Coatesian anti-Trumpism, laser-focused on race, would differ from the various holistic attempts to respond to Trump&#8217;s rise that he rejects. In general, a lot of the arguments against doing anything to woo Trump voters to a different sort of politics, because they&#8217;re racists and white-supremacist enablers and <a href="//nymag.com/daily/intelligencer/2017/03/frank-rich-no-sympathy-for-the-hillbilly.html">don&#8217;t deserve the respect</a> required for wooing, seem to boil down to &#8220;eventually they&#8217;ll all die off.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">I don&#8217;t think that is Coates&#8217; take, not least because his quasi-mystical account of the the malign, &#8220;eldritch&#8221; force of whiteness suggests that it will not yield even to demographic replacement.</p>
+<p class="story-body-text" itemprop="articleBody">But even if he has no clear alternative politics, even if he wants to argue that we are foredoomed to live under white supremacy or at least see it constantly returned to power more or less forever, his despair would have more force if he fairly described the alternatives he&#8217;s rejecting, andÂ didn&#8217;t insist on casting himself as the only voice in the wilderness prophetic enough to cry out that Donald Trump&#8217;s election was about white supremacy and race.</p>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//douthat.blogs.nytimes.com/2017/09/14/ta-nehisi-coates-and-the-alternatives-to-despair/" data-title="Ta-Nehisi Coates and the Alternatives to Despair" data-description="Two disagreements with the latest Coates blockbuster on Trump and race.">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//douthat.blogs.nytimes.com/2017/07/13/is-game-of-thrones-a-dystopia/" title="Is &#039;Game of Thrones&#039; a Dystopia?">
+				Is &#8216;Game of Thrones&#8217; a Dystopia?			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//douthat.blogs.nytimes.com/2017/10/19/the-age-of-consent-and-its-discontents/" title="The Age of Consent and Its Discontents">
+				The Age of Consent and Its Discontents			</a>
+					</li>
+	</ul>
+</div>
+<div id="nyt_about_blog-3" class="module nocontent widget_nyt_about_blog"><h4 class="moduleHeader">About</h4><div class="entry">
+<p class="summary">Ross Douthat joined The New York Times as an Op-Ed columnist in April 2009. Previously, he was a senior editor at the Atlantic and a blogger for <a href="//www.theatlantic.com/">theatlantic.com</a>. He is the author of "Privilege: Harvard and the Education of the Ruling Class" (Hyperion, 2005) and the co-author, with Reihan Salam, of "Grand New Party: How Republicans Can Win the Working Class and Save the American Dream" (Doubleday, 2008). He is the film critic for National Review.</p>
+<ul class="refer">
+<li><a href="//topics.nytimes.com/top/opinion/editorialsandoped/oped/columnists/rossdouthat/index.html">Ross Douthat's Columnist Page Â»</a></li>
+</ul>
+</div>
+</div>		<div class="module ad" id="MiddleRight"></div>
+        <div id="blogroll-3" class="module nocontent widget_blogroll"><h4 class="moduleHeader">Blogroll</h4>		<div class="entry blogroll">
+						<ul class="refer odd">
+						<li><a href="//text-patterns.thenewatlantis.com/">Alan Jacobs</a></li>
+						<li><a href="//andrewsullivan.theatlantic.com/the_daily_dish/">Andrew Sullivan</a></li>
+						<li><a href="//blogs.telegraph.co.uk/news/author/damianthompson/">Damian Thompson</a></li>
+						<li><a href="//www.amconmag.com/larison/">Daniel Larison</a></li>
+						<li><a href="//washingtonindependent.com/author/weigel">Dave Weigel</a></li>
+						<li><a href="//www.frumforum.com/">David Frum</a></li>
+						<li><a href="//voices.washingtonpost.com/ezra-klein/">Ezra Klein</a></li>
+						<li><a href="//www.firstthings.com/blogs/firstthoughts/">First Thoughts</a></li>
+						<li><a href="//www.frontporchrepublic.com/">Front Porch Republic</a></li>
+						<li><a href="//www.newyorker.com/online/blogs/georgepacker/">George Packer</a></li>
+						<li><a href="//getreligion.org">Get Religion</a></li>
+						<li><a href="//gregmankiw.blogspot.com/">Greg Mankiw</a></li>
+						<li><a href="//hotair.com">Hot Air</a></li>
+						<li><a href="//jeffreygoldberg.theatlantic.com">Jeffrey Goldberg</a></li>
+						<li><a href="//campaignspot.nationalreview.com/">Jim Geraghty</a></li>
+						<li><a href="//keithhennessey.com/">Keith Hennessey</a></li>
+						<li><a href="//www.motherjones.com/kevin-drum">Kevin Drum</a></li>
+			</ul><ul class="refer even">			<li><a href="//politics.theatlantic.com/">Marc Ambinder</a></li>
+						<li><a href="//markshea.blogspot.com">Mark Shea</a></li>
+						<li><a href="//meganmcardle.theatlantic.com">Megan McArdle</a></li>
+						<li><a href="//www.slate.com/blogs/blogs/kausfiles/">Mickey Kaus</a></li>
+						<li><a href="//www.ordinary-gentlemen.com/">Ordinary Gentlemen</a></li>
+						<li><a href="//www.firstthings.com/blogs/postmodernconservative/">Postmodern Conservative</a></li>
+						<li><a href="//agenda.nationalreview.com/">Reihan Salam</a></li>
+						<li><a href="//secularright.org/">Secular Right</a></li>
+						<li><a href="//ta-nehisicoates.theatlantic.com/">Ta-Nehisi Coates</a></li>
+						<li><a href="//www.theamericanscene.com">The American Scene</a></li>
+						<li><a href="//corner.nationalreview.com">The Corner</a></li>
+						<li><a href="//www.thenextright.com/">The Next Right</a></li>
+						<li><a href="//www.theweeklystandard.com/weblogs/TWSFP/TWSFPView.asp">The Standard Blog</a></li>
+						<li><a href="//www.marginalrevolution.com">Tyler Cowen</a></li>
+						<li><a href="//nymag.com/daily/entertainment/">Vulture</a></li>
+						<li><a href="//www.willwilkinson.net/flybottle/">Will Wilkinson</a></li>
+						</ul>
+		</div>
+		</div>		<div class="module archivesModule clearfix nocontent">
+			<h4 class="moduleHeader">Archive</h4>			<select name="archive_chrono" onchange="window.location.href=this.value; this.selectedIndex=this.options[0]">
+				<option class="archiveform_option" value="">Select Month</option>
+					<option value='//douthat.blogs.nytimes.com/2017/10/'> October 2017 </option>
+	<option value='//douthat.blogs.nytimes.com/2017/09/'> September 2017 </option>
+	<option value='//douthat.blogs.nytimes.com/2017/07/'> July 2017 </option>
+	<option value='//douthat.blogs.nytimes.com/2017/06/'> June 2017 </option>
+	<option value='//douthat.blogs.nytimes.com/2017/05/'> May 2017 </option>
+	<option value='//douthat.blogs.nytimes.com/2016/12/'> December 2016 </option>
+	<option value='//douthat.blogs.nytimes.com/2016/05/'> May 2016 </option>
+	<option value='//douthat.blogs.nytimes.com/2016/04/'> April 2016 </option>
+	<option value='//douthat.blogs.nytimes.com/2016/03/'> March 2016 </option>
+	<option value='//douthat.blogs.nytimes.com/2016/02/'> February 2016 </option>
+	<option value='//douthat.blogs.nytimes.com/2016/01/'> January 2016 </option>
+	<option value='//douthat.blogs.nytimes.com/2015/12/'> December 2015 </option>
+	<option value='//douthat.blogs.nytimes.com/2015/11/'> November 2015 </option>
+	<option value='//douthat.blogs.nytimes.com/2015/10/'> October 2015 </option>
+	<option value='//douthat.blogs.nytimes.com/2015/09/'> September 2015 </option>
+			</select>
+		</div>
+        <div id="recentposts-2" class="module nocontent widget_recentposts"><h4 class="moduleHeader">Recent Posts</h4>				<div class="entry">
+						<h5><a href="//douthat.blogs.nytimes.com/2017/10/25/liberalism-and-the-politics-of-low-fertility/" title="Read: Liberalism and the Politics of Low Fertility">Liberalism and the Politics of Low Fertility</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//douthat.blogs.nytimes.com/2017/10/25/liberalism-and-the-politics-of-low-fertility/"></a>
+				</span>			</h5>
+			<p class="summary">
+			Is the West trapped in a demographic-political doom loop?<a href="//douthat.blogs.nytimes.com/2017/10/25/liberalism-and-the-politics-of-low-fertility/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//douthat.blogs.nytimes.com/2017/10/19/the-age-of-consent-and-its-discontents/" title="Read: The Age of Consent and Its Discontents">The Age of Consent and Its Discontents</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//douthat.blogs.nytimes.com/2017/10/19/the-age-of-consent-and-its-discontents/"></a>
+				</span>			</h5>
+			<p class="summary">
+			Does Harvey Weinstein prove the case against a &#8220;consenting adults&#8221; sexual ethics? Not quite.<a href="//douthat.blogs.nytimes.com/2017/10/19/the-age-of-consent-and-its-discontents/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//douthat.blogs.nytimes.com/2017/09/14/ta-nehisi-coates-and-the-alternatives-to-despair/" title="Read: Ta-Nehisi Coates and the Alternatives to Despair">Ta-Nehisi Coates and the Alternatives to Despair</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//douthat.blogs.nytimes.com/2017/09/14/ta-nehisi-coates-and-the-alternatives-to-despair/"></a>
+				</span>			</h5>
+			<p class="summary">
+			Two disagreements with the latest Coates blockbuster on Trump and race.<a href="//douthat.blogs.nytimes.com/2017/09/14/ta-nehisi-coates-and-the-alternatives-to-despair/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//douthat.blogs.nytimes.com/2017/07/13/is-game-of-thrones-a-dystopia/" title="Read: Is &#8216;Game of Thrones&#8217; a Dystopia?">Is &#8216;Game of Thrones&#8217; a Dystopia?</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//douthat.blogs.nytimes.com/2017/07/13/is-game-of-thrones-a-dystopia/"></a>
+				</span>			</h5>
+			<p class="summary">
+			Or do its fans love it because they secretly long to have a king?<a href="//douthat.blogs.nytimes.com/2017/07/13/is-game-of-thrones-a-dystopia/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//douthat.blogs.nytimes.com/2017/07/06/should-tyler-cowen-believe-in-god/" title="Read: Should Tyler Cowen Believe in God?">Should Tyler Cowen Believe in God?</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//douthat.blogs.nytimes.com/2017/07/06/should-tyler-cowen-believe-in-god/"></a>
+				</span>			</h5>
+			<p class="summary">
+			A long dialogue with an agnostic economist.<a href="//douthat.blogs.nytimes.com/2017/07/06/should-tyler-cowen-believe-in-god/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+		</div><!-- end Recent Posts side tool -->
+    		<div class="module ad" id="Box1"></div>
+        <div id="nyt_blog_social_media-3" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-single ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">us on</span></span>
+<span class="blog-fw-specific-followmessage"><span class="blog-fw-username"><a href="https://twitter.com/DouthatNYT" title="Follow @DouthatNYT on twitter">@DouthatNYT</a></span> on <span class="blog-fw-twitter">twitter</span></span></h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/DouthatNYT" title="Follow DouthatNYT on Twitter">Twitter</a></li></ul>
+<p class="blog-fw-followbutton"><a href="https://twitter.com/DouthatNYT" title="Follow @DouthatNYT on twitter">Follow</a></p></div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-102',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+
+
+         
+
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":53,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

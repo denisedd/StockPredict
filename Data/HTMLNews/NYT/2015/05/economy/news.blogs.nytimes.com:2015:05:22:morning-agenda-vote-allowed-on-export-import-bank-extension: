@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003698797"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1432294026" />
+<meta name="PUD" content="20150522" />
+<meta name="pdate" content="20150522" />
+<meta name="ptime" content="20150522072706" />
+<meta name="utime" content="20150522112706" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-05-22T11:27:06-04:00" />
+<meta name="DISPLAYDATE" content="May 22, 2015" />
+<meta name="dat" content="May 22, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Cantwell, Maria;Graham, Lindsey;Heitkamp, Heidi;McConnell, Mitch">
+<meta name="des" content="Courts and the Judiciary;Drugs (Pharmaceuticals);Frauds and Swindling;International Trade and World Market;Law and Legislation;Mergers, Acquisitions and Divestitures;Private Equity;Trans-Pacific Partnership">
+<meta name="org" content="CVS Caremark Corporation;Export-Import Bank of US;Federal Bureau of Investigation;Omnicare Inc;Senate">
+<meta name="geo" content="Uruguay">
+<meta name="ticker" content="CVS Caremark Corporation|CVS|NYSE;Omnicare Inc|OCR|NYSE" />
+<meta property="article:tag" content="Cantwell Maria" />
+<meta property="article:tag" content="Graham Lindsey" />
+<meta property="article:tag" content="Heitkamp Heidi" />
+<meta property="article:tag" content="McConnell Mitch" />
+<meta property="article:tag" content="Courts and the Judiciary" />
+<meta property="article:tag" content="Drugs (Pharmaceuticals)" />
+<meta property="article:tag" content="Frauds and Swindling" />
+<meta property="article:tag" content="International Trade and World Market" />
+<meta property="article:tag" content="Law and Legislation" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Trans-Pacific Partnership" />
+<meta property="article:tag" content="CVS Caremark Corporation" />
+<meta property="article:tag" content="Export-Import Bank of US" />
+<meta property="article:tag" content="Federal Bureau of Investigation" />
+<meta property="article:tag" content="Omnicare Inc" />
+<meta property="article:tag" content="Senate" />
+<meta property="article:tag" content="Uruguay" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Cantwell Maria,Graham Lindsey,Heitkamp Heidi,McConnell Mitch,Courts and the Judiciary,Drugs (Pharmaceuticals),Frauds and Swindling,International Trade and World Market,Law and Legislation,Mergers Acquisitions and Divestitures,Private Equity,Trans-Pacific Partnership,CVS Caremark Corporation,Export-Import Bank of US,Federal Bureau of Investigation,Omnicare Inc,Senate,Uruguay,DealBook" />
+<meta name="news_keywords" content="Export-Import Bank of US,FBI,Fraud,Heidi Heitkamp,International trade,Judiciary,Legislation,Lindsey Graham,Maria Cantwell,Mergers and Acquistions,Mitch McConnell,Pharmaceuticals,Private equity,Senate,Trans-Pacific Partnership,Uruguay" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F05%2F22%2Fmorning-agenda-vote-allowed-on-export-import-bank-extension%2F" title="Morning Agenda: Vote Allowed on Export-Import Bank Extension" />
+<meta name="description" content="Vote Allowed on Export-Import Bank Extension &#124; With Omnicare, CVS Expands Into 2 Markets &#124; CrossFit Entrepreneur Charged With Fraud &#124; Uruguay Orders Release of Private Equity Executive" />
+<meta name="hdl" content="Morning Agenda: Vote Allowed on Export-Import Bank Extension" />
+<meta property="og:title" content="Morning Agenda: Vote Allowed on Export-Import Bank Extension" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/05/22/morning-agenda-vote-allowed-on-export-import-bank-extension/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Vote Allowed on Export-Import Bank Extension &#124; With Omnicare, CVS Expands Into 2 Markets &#124; CrossFit Entrepreneur Charged With Fraud &#124; Uruguay Orders Release of Private Equity Executive" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Vote Allowed on Export-Import Bank Extension" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/05/22/morning-agenda-vote-allowed-on-export-import-bank-extension/" />
+<meta name="twitter:description" content="Vote Allowed on Export-Import Bank Extension &#124; With Omnicare, CVS Expands Into 2 Markets &#124; CrossFit Entrepreneur Charged With Fraud &#124; Uruguay Orders Release of Private Equity Executive" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Heavy Fines for Foreign Exchange Collusion' href='//news.blogs.nytimes.com/2015/05/21/morning-agenda-heavy-fines-for-foreign-exchange-collusion/' />
+<link rel='next' title='What Weâre Reading' href='//news.blogs.nytimes.com/2015/05/22/what-were-reading-57/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/05/22/morning-agenda-vote-allowed-on-export-import-bank-extension/' />
+<link rel='shortlink' href='//nyti.ms/1JGrKRM' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/05/22/morning-agenda-vote-allowed-on-export-import-bank-extension/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Vote Allowed on Export-Import Bank Extension - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2439 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Vote Allowed on Export-Import Bank Extension        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/05/22/morning-agenda-vote-allowed-on-export-import-bank-extension/"
+	 data-title="Morning Agenda: Vote Allowed on Export-Import Bank Extension"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Vote Allowed on Export-Import Bank Extension | With Omnicare, CVS Expands Into 2 Markets | CrossFit Entrepreneur Charged With Fraud | Uruguay Orders Release of Private Equity Executive&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/05/22/morning-agenda-vote-allowed-on-export-import-bank-extension/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 22, 2015 7:27 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Vote Allowed on Export-Import Bank Extension</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-05-22T11:27:06+00:00" itemprop="datePublished">May 22, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">May 22, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2439 post type-post status-publish hentry category-dealbook tag-cantwell-maria tag-courts-and-the-judiciary tag-cvs-caremark-corporation tag-drugs-pharmaceuticals tag-export-import-bank-of-us tag-federal-bureau-of-investigation tag-frauds-and-swindling tag-graham-lindsey tag-heitkamp-heidi tag-international-trade-and-world-market tag-law-and-legislation tag-mcconnell-mitch tag-mergers-acquisitions-and-divestitures tag-omnicare-inc tag-private-equity tag-senate tag-trans-pacific-partnership tag-uruguay per-cantwell-maria per-graham-lindsey per-heitkamp-heidi per-mcconnell-mitch des-courts-and-the-judiciary des-drugs-pharmaceuticals des-frauds-and-swindling des-international-trade-and-world-market des-law-and-legislation des-mergers-acquisitions-and-divestitures des-private-equity des-trans-pacific-partnership org-cvs-caremark-corporation org-export-import-bank-of-us org-federal-bureau-of-investigation org-omnicare-inc org-senate geo-uruguay news_keywords-export-import-bank-of-us news_keywords-fbi news_keywords-fraud news_keywords-heidi-heitkamp news_keywords-international-trade news_keywords-judiciary news_keywords-legislation news_keywords-lindsey-graham news_keywords-maria-cantwell news_keywords-mergers-and-acquistions news_keywords-mitch-mcconnell news_keywords-pharmaceuticals news_keywords-private-equity-2 news_keywords-senate news_keywords-trans-pacific-partnership news_keywords-uruguay" id="post-2439">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Vote Allowed on Export-Import Bank Extension</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-05-22T11:27:06+00:00" itemprop="datePublished">May 22, 2015 7:27 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 22, 2015 7:27 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/05/22/morning-agenda-vote-allowed-on-export-import-bank-extension/" data-title="Morning Agenda: Vote Allowed on Export-Import Bank Extension" data-description="Vote Allowed on Export-Import Bank Extension | With Omnicare, CVS Expands Into 2 Markets | CrossFit Entrepreneur Charged With Fraud | Uruguay Orders Release of Private Equity Executive">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>VOTE ALLOWED ON EXPORT-IMPORT BANK EXTENSION </strong> <span class="divider"> | </span></span> On Thursday, supporters of the Export-Import Bank won a key concession from the Senate majority leader, Mitch McConnell of Kentucky, who agreed to hold a vote to extend the bankâs life beyond June, <a href="//www.nytimes.com/2015/05/22/business/senate-obama-trade-pact-export-import-bank-patriot-act.html"> Jonathan Weisman reports in The New York Times</a>. The concession was the result of last-minute negotiations that eventually led to the passage in the Senate of legislation that would empower the president to complete a 12-nation Pacific trade accord, the Trans-Pacific Partnership. </p>
+<p class="story-body-text" itemprop="articleBody">On June 30, authorization expires for the Ex-Im Bank, a 70-year-old federal agency that guarantees loans for American companies exporting products overseas. Conservative groups and powerful Republican lawmakers have criticized the bank as a <b>tool of crony capitalism</b>, benefiting only big exporters. However, a majority in the House and Senate still supports it, and three senators â Maria Cantwell, Democrat of Washington; Heidi Heitkamp, Democrat of North Dakota; and Lindsey Graham, Republican of South Carolina â refused to vote to consider the Pacific trade legislation on Thursday until they got a commitment from Mr. McConnell for a vote to extend Ex-Imâs life, Mr. Weisman writes. </p>
+<p class="story-body-text" itemprop="articleBody">The three senators ended their filibuster after Mr. McConnell agreed to allow a <b>vote on the Ex-Im Bank in June</b> as an amendment to legislation of Ms. Cantwellâs choice. âThat is not likely to save the bank, but supporters hope it shows that a strong, bipartisan majority in the Senate wants it saved,â Mr. Weisman writes. Mr. Graham said the bankâs supporters would try to attach legislation to critical highway funding in July, shortly after the bankâs authorization has lapsed.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>WITH OMNICARE, CVS EXPANDS INTO 2 MARKETS</strong> <span class="divider"> | </span></span> In buying the pharmacy services provider Omnicare, CVS Health Corporation is hoping to cater to the needs of an increasingly aging American population and broaden its presence in the fast-growing specialty pharmacy business, <a href="//www.nytimes.com/2015/05/22/business/dealbook/cvs-health-agrees-to-buy-omnicare-in-12-7-billion-deal.html"> Katie Thomas and Chad Bray write in DealBook</a>. Omnicare distributes prescription drugs to nursing homes and assisted-living operations, which would extend CVS Healthâs operations into that market. <b> âI think itâs an excellent move by CVS,â</b> said Adam J. Fein, president of Pembroke Consulting, a management advisory and business research company based in Philadelphia. âIt opens up a really great new market for them in long-term care and assisted living.â But Omnicareâs <b>specialty pharmacy unit</b>, which focuses on rare diseases that require expensive medication, is the companyâs <b>âcrown and the jewel,â</b> Mr. Fein said. Omnicareâs specialty unit saw net sales rise 20 percent, to $1.67 billion, in 2014 over the previous year. Its long-term care business, by contrast, rose just 2.6 percent in that period, to $4.8 billion.</p>
+<p class="story-body-text" itemprop="articleBody">The $12.7 billion deal is the latest in a recent series of takeovers in the pharmacy sector, but Robert Cyran of Breakingviews contends that the CVS Healthâs acquisition of Omnicare signals that <a href="//www.nytimes.com/2015/05/22/business/dealbook/cvss-deal-for-omnicare-may-signal-a-slowdown-in-pharmacy-mergers.html"> âthe era of frantic pharmacy mergers is nearing an end.â</a> As the increasingly concentrated industry runs into antitrust concerns, the number of takeover targets will narrow. The CVS-Omnicare merger is not likely to be blocked by regulators, but the deal doesnât make the best strategic sense, Mr. Cyran writes, adding that CVS Healthâs decision to settle for Omnicare shows that its takeover options were limited.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ENTREPRENEUR PROMOTING CROSSFIT VENTURES CHARGED WITH FRAUD</strong> <span class="divider"> | </span></span> Over the last five years, Joshua B. Newman, a Yale graduate and serial entrepreneur, has left behind a trail of unpaid debts to investors, a checkered history that Matthew Goldstein of DealBook chronicled in <a href="//www.nytimes.com/2015/04/17/business/dealbook/a-yale-graduate-leaves-a-trail-of-ventures-and-debts.html">a profile of Mr. Newman</a> in April. On Thursday, Federal Bureau of Investigation agents based in New Jersey arrested Mr. Newman and charged him with two counts of wire fraud and misappropriating money from more than a dozen investors, <a href="//www.nytimes.com/2015/05/22/business/dealbook/yale-graduate-who-promoted-crossfit-investments-is-arrested.html"> Mr. Goldstein reports in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Newman, 35, who graduated from Yale in 2001, has positioned himself as something of a local spokesman for CrossFit, a high-intensity fitness movement that has swept the nation, Mr. Goldstein writes. In a 13-page criminal complaint, prosecutors working for Paul J. Fishman, the United States attorney for New Jersey, accused Mr. Newman of <b>defrauding investors out of at least $2 million</b> over a three-year period, using much of that money to pay off debts to other investors and personal expenses. They also said he was trying to âsolicit money from new investorsâ for several CrossFit training centers until the time of his arrest.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>Janet L. Yellen</b>, the Federal Reserve chairwoman, will speak about the economic outlook in Providence, R.I., at 1 p.m. <b> April consumer price data</b> will be out at 8:30 a.m.  <b> Meg Whitman</b>, Hewlett-Packardâs chief executive, is on CNBC at 9 a.m. </p>
+<p class="story-body-text" itemprop="articleBody"><b>In observance of Memorial Day</b>, there will be no DealBook newsletter on Monday. Weâll be back on Tuesday. For breaking news and analysis on finance, visit <a href="//www.nytimes.com/pages/business/dealbook/index.html">dealbook.nytimes.com</a>.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>URUGUAY ORDERS RELEASE OF PRIVATE EQUITY EXECUTIVE</strong> <span class="divider"> | </span></span> Uruguayâs Supreme Court on Thursday ordered the release of MatÃ­as Campiani, an Argentine private equity executive who has been in prison for more than a year while the countryâs prosecutors attempted to build a fraud case against him, <a href="//www.nytimes.com/2015/05/22/business/dealbook/private-equity-executive-to-be-released-from-uruguay-prison.html"> David Gelles and Charles Newbery write in DealBook</a>. Last week, Mr. Gelles and Mr. Newbery <a href="//www.nytimes.com/2015/05/15/business/dealbook/risky-web-of-privatization-in-uruguay-where-charges-are-optional.html">wrote about the case of Mr. Campiani</a>, the chief executive of Leadgate, a private equity firm that in 2007 took control of the Uruguayâs national airline, Pluna, which collapsed in 2012 after a series of misfortunes. Mr. Campiani and his two partners, Arturo Ãlvarez-Demalde and SebastiÃ¡n Hirsch, returned Pluna to the government for a loss, but in December 2013, the government arrested the three men and accused them of fraud and held them in prison. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Ãlvarez-Demalde and Mr. Hirsch were eventually released, but Mr. Campiani remained in prison even though no formal charges have been filed against him. Uruguay is one of the few countries in which people can be detained for long periods without being formally charged. As of Thursday night, Mr. Campiani was still in prison, but he said his father was coming to post his $50,000 bail on Friday.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HSBC Considering âStrategic Optionsâ for Brazil Business</strong> <span class="divider"> | </span></span> The British bank is weighing a sale and other possibilities regarding its poorly performing Brazilian unit, which reported a loss of $146 million in 2014.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/23/business/dealbook/hsbc-considering-strategic-options-for-brazil-business.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sale of K-Y to Reckitt Benckiser Raises Competition Concerns</strong> <span class="divider"> | </span></span> Regulators in Britain are worried the sale will result in higher prices, since Reckitt also owns the Durex brand of condoms and lubricants.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/23/business/dealbook/k-y-jelly-lubricant-reckitt-benckiser-competition-antitrust-prices-durex.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uber Said to Seek $1 Billion Credit Line</strong> <span class="divider"> | </span></span> Uber is seeking a $1 billion credit line from banks, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/uber-in-talks-for-1-billion-credit-facility-with-banks-1432265901"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New China-Led Bank Aims to be Operational by End of 2014</strong> <span class="divider"> | </span></span> The Asian Infrastructure Investment Bank plans to sign articles of agreement by the end of June, Reuters reports. <br /><span class="kicker"><a href="//www.nytimes.com/reuters/2015/05/22/business/22reuters-asia-aiib-statement.html"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Goldman Sachs Meeting in Bay Area Shows Appetite for Tech</strong> <span class="divider"> | </span></span> The investment bank, eager to court technology businesses while a boom is luring billions of investor dollars, held its annual meeting in San Francisco.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/22/business/dealbook/goldman-meeting-in-bay-area-shows-appetite-for-tech.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Catholic Trust Looks to Brazilian Fund for Social Returns" src="https://static01.nyt.com/images/2015/05/22/business/22DB-CATHOLIC/22DB-CATHOLIC-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Catholic Trust Looks to Brazilian Fund for Social Returns</strong> <span class="divider"> | </span></span> The backing of an investment fund by an order of the Roman Catholic Church follows the Vaticanâs endorsement of leveraging capitalism for social impact.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/22/business/dealbook/catholic-trust-looks-to-brazilian-fund-for-social-returns.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Heads of Deutsche Bank Try to Assuage Shareholders" src="https://static01.nyt.com/images/2015/05/24/business/db-deutsche-web1/db-deutsche-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Heads of Deutsche Bank Try to Assuage Shareholders</strong> <span class="divider"> | </span></span> Anshu Jain, one of the lenderâs chief executives, acknowledged that it had taken longer than expected to overcome problems amid calls for him and another top executive to step down.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/22/business/dealbook/deutsche-bank-germany-frankfurt.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Huatai Securities Said to Raise $4.5 Billion in Hong Kong I.P.O.</strong> <span class="divider"> | </span></span> Huatai Securities, the Chinese brokerage firm, has raised $4.5 billion, pricing its shares at the top of an indicated range, The Wall Street Journal reports, citing people with knowledge of the matter. <br /><span class="kicker"><a href="//www.wsj.com/articles/huatai-securities-raises-us-4-5-billion-in-hong-kong-ipo-1432284390"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Obvious Ventures Raises $123,456,789 for 1st Fund</strong> <span class="divider"> | </span></span> Obvious Ventures, the venture capital firm co-founded by Evan Williams of Twitter fame, said it had raised $123,456,789 for its first fund, VentureBeat reports.<br /><span class="kicker"><a href="//venturebeat.com/2015/05/21/ev-williams-obvious-ventures-closes-123456789-round/"> VENTUREBEAT</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Longtime Twitter Investor Says Heâs Planning to Propose Changes</strong> <span class="divider"> | </span></span> Chris Sacca of Lowercase Capital, an early investor in Twitter, said in a blog post that he will be making some suggestions for changes at the company, Bloomberg News reports.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-05-22/longtime-twitter-cheerleader-chris-sacca-is-dropping-the-pom-poms"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>E.C.B. President Urges Europe to Speed Up Economic Reforms</strong> <span class="divider"> | </span></span> Mario Draghi, president of the European Central Bank,  said in a speech that governments in Europe need to accelerate structural reforms so that the European Central Bank can do its job, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-05-22/draghi-urges-reforms-as-low-growth-forces-unconventional-policy"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="A Finance Minister Fit for a Greek Tragedy?" src="https://static01.nyt.com/images/2015/05/24/magazine/24greece1/24mag-24greece-t_CA1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Finance Minister Fit for a Greek Tragedy?</strong> <span class="divider"> | </span></span> The defiant stand by Yanis Varoufakis in the high-stakes economic negotiations with the European Union threatens to tear Europe apart.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/24/magazine/a-finance-minister-fit-for-a-greek-tragedy.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hong Kong and Mainland China to Partly Open Markets for Investment Funds</strong> <span class="divider"> | </span></span> On July 1, a trial mutual recognition program will allow funds registered in one jurisdiction to be marketed to individual investors in the other.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/23/business/dealbook/hong-kong-and-china-to-connect-investment-fund-markets.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tobacco Companies Said to Be Likely to Get Approval for Merger</strong> <span class="divider"> | </span></span> Reynolds American and Lorillard are expected to receive approval from antitrust regulators for their proposed merger as soon as next week, The Wall Street Journal reports, citing people familiar with the deliberations.<br /><span class="kicker"><a href="//www.wsj.com/articles/ftc-expected-to-clear-reynolds-lorillard-deal-as-soon-as-next-week-1432236315"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lawmaker Subpoenas Fed, Seeking Evidence of a Leak</strong> <span class="divider"> | </span></span> The chairman of the House Financial Services Committee issued a subpoena to the Federal Reserve to provide documents related to a leak of information to a newsletter, The Associated Press reports. <br /><span class="kicker"><a href="//www.nytimes.com/2015/05/22/business/lawmaker-subpoenas-fed-seeking-evidence-of-a-leak.html"> THE ASSOCIATED PRESS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Japanese Central Bank Keeps Monetary Policy Steady</strong> <span class="divider"> | </span></span> The Bank of Japan refrained from increasing monetary stimulus and expressed a more optimistic view on the economy, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-05-22/boj-refrains-from-boosting-stimulus-after-growth-picks-up"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/05/22/morning-agenda-vote-allowed-on-export-import-bank-extension/"
+					data-title="Morning Agenda: Vote Allowed on Export-Import Bank Extension"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Vote Allowed on Export-Import Bank Extension | With Omnicare, CVS Expands Into 2 Markets | CrossFit Entrepreneur Charged With Fraud | Uruguay Orders Release of Private Equity Executive&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/05/22/morning-agenda-vote-allowed-on-export-import-bank-extension/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":46,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

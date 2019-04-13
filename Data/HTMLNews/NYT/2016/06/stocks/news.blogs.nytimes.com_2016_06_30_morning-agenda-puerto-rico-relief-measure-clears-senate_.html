@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004503450"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1467282551" />
+<meta name="PUD" content="20160630" />
+<meta name="pdate" content="20160630" />
+<meta name="ptime" content="20160630062911" />
+<meta name="utime" content="20160630102911" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-06-30T10:29:11-04:00" />
+<meta name="DISPLAYDATE" content="June 30, 2016" />
+<meta name="dat" content="June 30, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Arora, Nikesh;Bullard, James B;Lew, Jacob J;Lu Wei (1960- )">
+<meta name="des" content="Banking and Financial Institutions;Great Britain Withdrawal from EU (Brexit);Hedge Funds;Initial Public Offerings;Law and Legislation;Mergers, Acquisitions and Divestitures;Regulation and Deregulation of Industry;Securities and Commodities Violations;Venture Capital">
+<meta name="org" content="AMC Entertainment;Bank of America Corporation;Bayer AG;Carmike Cinemas Inc;Citigroup Inc;Credit Suisse Group AG;Deutsche Bank AG;Federal Reserve System;GE Capital Corp;General Electric Company;Google Capital;International Monetary Fund;Jimmy John&#039;s Franchise LLC;Lions Gate Entertainment Corporation;Monsanto Company;Morgan Stanley;Senate;Societe Generale;SOFTBANK Corporation;Starz;Sungevity Inc;Yahoo! Inc">
+<meta name="ttl" content="Outlander (TV Program)"/>
+<meta name="ticker" content="Bank of America Corporation|BAC|NYSE;Bayer AG|BAYRY|Other OTC;Citigroup Inc|C|NYSE;Credit Suisse Group AG|CS|NYSE;Deutsche Bank AG|DB|NYSE;General Electric Company|GE|NYSE;Lions Gate Entertainment Corporation|LGF|NYSE;Monsanto Company|MON|NYSE;Morgan Stanley|MS|NYSE;Societe Generale|SCGLY|Other OTC;SOFTBANK Corporation|SFTBF|Other OTC;Starz|STRZA|NASDAQ;Yahoo! Inc|YHOO|NASDAQ" />
+<meta property="article:tag" content="Arora Nikesh" />
+<meta property="article:tag" content="Bullard James B" />
+<meta property="article:tag" content="Lew Jacob J" />
+<meta property="article:tag" content="Lu Wei (1960- )" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Great Britain Withdrawal from EU (Brexit)" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Law and Legislation" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Securities and Commodities Violations" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="AMC Entertainment" />
+<meta property="article:tag" content="Bank of America Corporation" />
+<meta property="article:tag" content="Bayer AG" />
+<meta property="article:tag" content="Carmike Cinemas Inc" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="Credit Suisse Group AG" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="GE Capital Corp" />
+<meta property="article:tag" content="General Electric Company" />
+<meta property="article:tag" content="Google Capital" />
+<meta property="article:tag" content="International Monetary Fund" />
+<meta property="article:tag" content="Jimmy John&#039;s Franchise LLC" />
+<meta property="article:tag" content="Lions Gate Entertainment Corporation" />
+<meta property="article:tag" content="Monsanto Company" />
+<meta property="article:tag" content="Morgan Stanley" />
+<meta property="article:tag" content="Senate" />
+<meta property="article:tag" content="Societe Generale" />
+<meta property="article:tag" content="SOFTBANK Corporation" />
+<meta property="article:tag" content="Starz" />
+<meta property="article:tag" content="Sungevity Inc" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="Outlander (TV Program)" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Arora Nikesh,Bullard James B,Lew Jacob J,Lu Wei (1960- ),Banking and Financial Institutions,Great Britain Withdrawal from EU (Brexit),Hedge Funds,Initial Public Offerings,Law and Legislation,Mergers Acquisitions and Divestitures,Regulation and Deregulation of Industry,Securities and Commodities Violations,Venture Capital,AMC Entertainment,Bank of America Corporation,Bayer AG,Carmike Cinemas Inc,Citigroup Inc,Credit Suisse Group AG,Deutsche Bank AG,Federal Reserve System,GE Capital Corp,General Electric Company,Google Capital,International Monetary Fund,Jimmy John&#039;s Franchise LLC,Lions Gate Entertainment Corporation,Monsanto Company,Morgan Stanley,Senate,Societe Generale,SOFTBANK Corporation,Starz,Sungevity Inc,Yahoo! Inc,Outlander (TV Program),DealBook" />
+<meta name="news_keywords" content="Senate,Starz" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F06%2F30%2Fmorning-agenda-puerto-rico-relief-measure-clears-senate%2F" title="Morning Agenda: Puerto Rico Relief Measure Clears Senate" />
+<meta name="description" content="Nearly All U.S. Banks Pass Fed Stress Test &#124; Lionsgate Is Said to Be Near Deal to Buy Starz" />
+<meta name="hdl" content="Morning Agenda: Puerto Rico Relief Measure Clears Senate" />
+<meta property="og:title" content="Morning Agenda: Puerto Rico Relief Measure Clears Senate" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/06/30/morning-agenda-puerto-rico-relief-measure-clears-senate/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Nearly All U.S. Banks Pass Fed Stress Test &#124; Lionsgate Is Said to Be Near Deal to Buy Starz" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Puerto Rico Relief Measure Clears Senate" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/06/30/morning-agenda-puerto-rico-relief-measure-clears-senate/" />
+<meta name="twitter:description" content="Nearly All U.S. Banks Pass Fed Stress Test &#124; Lionsgate Is Said to Be Near Deal to Buy Starz" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda:  Banking in the Time of &#8216;Brexit&#8217;' href='//news.blogs.nytimes.com/2016/06/29/morning-agenda-banking-in-the-time-of-brexit/' />
+<link rel='next' title='Morning Agenda: Half of Williams Board Resigns' href='//news.blogs.nytimes.com/2016/07/01/morning-agenda-half-of-williams-board-resigns/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/06/30/morning-agenda-puerto-rico-relief-measure-clears-senate/' />
+<link rel='shortlink' href='//nyti.ms/29hun0o' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/06/30/morning-agenda-puerto-rico-relief-measure-clears-senate/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Puerto Rico Relief Measure Clears Senate - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5167 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Puerto Rico Relief Measure Clears Senate        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/06/30/morning-agenda-puerto-rico-relief-measure-clears-senate/"
+	 data-title="Morning Agenda: Puerto Rico Relief Measure Clears Senate"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Nearly All U.S. Banks Pass Fed Stress Test | Lionsgate Is Said to Be Near Deal to Buy Starz&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/30/morning-agenda-puerto-rico-relief-measure-clears-senate/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 30, 2016 6:29 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Puerto Rico Relief Measure Clears Senate</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-06-30T10:29:11+00:00" itemprop="datePublished">June 30, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">June 30, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5167 post type-post status-publish hentry category-dealbook tag-amc-entertainment tag-arora-nikesh tag-bank-of-america-corporation tag-banking-and-financial-institutions tag-bayer-ag tag-bullard-james-b tag-carmike-cinemas-inc tag-citigroup-inc tag-credit-suisse-group-ag tag-deutsche-bank-ag tag-federal-reserve-system tag-ge-capital-corp tag-general-electric-company tag-google-capital tag-great-britain-withdrawal-from-eu-brexit tag-hedge-funds tag-initial-public-offerings tag-international-monetary-fund tag-jimmy-johns-franchise-llc tag-law-and-legislation tag-lew-jacob-j tag-lions-gate-entertainment-corporation tag-lu-wei-1960 tag-mergers-acquisitions-and-divestitures tag-monsanto-company tag-morgan-stanley tag-outlander-tv-program tag-regulation-and-deregulation-of-industry tag-securities-and-commodities-violations tag-senate tag-societe-generale tag-softbank-corporation tag-starz tag-sungevity-inc tag-venture-capital tag-yahoo-inc per-arora-nikesh per-bullard-james-b per-lew-jacob-j per-lu-wei-1960 des-banking-and-financial-institutions des-great-britain-withdrawal-from-eu-brexit des-hedge-funds des-initial-public-offerings des-law-and-legislation des-mergers-acquisitions-and-divestitures des-regulation-and-deregulation-of-industry des-securities-and-commodities-violations des-venture-capital org-amc-entertainment org-bank-of-america-corporation org-bayer-ag org-carmike-cinemas-inc org-citigroup-inc org-credit-suisse-group-ag org-deutsche-bank-ag org-federal-reserve-system org-ge-capital-corp org-general-electric-company org-google-capital org-international-monetary-fund org-jimmy-johns-franchise-llc org-lions-gate-entertainment-corporation org-monsanto-company org-morgan-stanley org-senate org-societe-generale org-softbank-corporation org-starz org-sungevity-inc org-yahoo-inc ttl-outlander-tv-program news_keywords-senate news_keywords-starz" id="post-5167">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Puerto Rico Relief Measure Clears Senate</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-06-30T10:29:11+00:00" itemprop="datePublished">June 30, 2016 6:29 am</time>
+			<!-- date updated --><span class="visually-hidden updated">June 30, 2016 6:29 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/06/30/morning-agenda-puerto-rico-relief-measure-clears-senate/" data-title="Morning Agenda: Puerto Rico Relief Measure Clears Senate" data-description="Nearly All U.S. Banks Pass Fed Stress Test | Lionsgate Is Said to Be Near Deal to Buy Starz">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>PUERTO RICO RELIEF MEASURE CLEARS SENATE</strong> The Senate passed and sent to the White House a relief measure to help Puerto Rico surmount its fiscal crisis, just two days before the territory planned to default on a large debt payment, <a href="//www.nytimes.com/2016/06/30/business/puerto-rico-debt-payment.html?ref=business&amp;nl=dealbook&amp;emc=edit_dlbkam_20160630">Jackie Calmes reports in The New York Times</a>. President Obama will sign the measure, which his Treasury secretary, Jacob J. Lew, negotiated and lobbied for.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>The rescue package will not prevent Puerto Rico from missing the $2 billion debt payment due on on Friday,</strong> but the legislation would allow the island&#8217;s government to restructure its $72 billion total debt so that it can manage payments and create a bipartisan oversight board to guide the recovery process.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>The bill would also bar lawsuits by creditors for nonpayment retroactive to December</strong> &#8211; an important provision in light of the imminent missed debt payment.</p>
+<p class="story-body-text" itemprop="articleBody">Final Senate approval had been thrown into doubt in recent days because the House passed the bill last week and then left for its holiday. Any changes the Senate made would have forced the bill&#8217;s return to the House, delaying action until House members returned.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Several senators did demand changes.</strong> Coal-state senators from Ohio and West Virginia wanted an unrelated amendment to protect miners&#8217; pensions and health benefits.</p>
+<p class="story-body-text" itemprop="articleBody">Senator Robert Menendez, Democrat of New Jersey, opposed much of the Puerto Rico bill, while other Democrats found fault with different provisions. <strong>Some criticized the oversight board as unrepresentative of Puerto Rican-Americans and Senator Bernie Sanders, Democrat of Vermont, compared the board to &#8220;a colonial master&#8221; for the island.</strong></p>
+<p class="story-body-text" itemprop="articleBody">Compromises were worked out, but the bill hung in the balance on Tuesday. Mr. Lew warned that the bill&#8217;s loss could lead to a &#8220;descent into chaos.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">On the final vote, dissenters included both liberal and conservative senators.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>NEARLY ALL U.S. BANKS PASS FED STRESS TEST</strong> All but one of the nation&#8217;s largest banks earned an unconditional passing grade from federal regulators in annual stress tests, which measure their preparedness to weather a financial crisis, <a href="//www.nytimes.com/2016/06/30/business/dealbook/nearly-all-us-banks-pass-feds-stress-test.html?ref=dealbook&amp;_r=&amp;nl=dealbook&amp;emc=edit_dlbkam_20160630">Nathaniel Popper and Michael Corkery report in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Morgan Stanley was the only American-based institution not to pass unconditionally</strong> &#8211; regulators raised concerns over the company&#8217;s internal controls and processes.</p>
+<p class="story-body-text" itemprop="articleBody">The Federal Reserve gave failing grades to the American subsidiaries of two European banks, <strong>Deutsche Bank and Santander</strong>, which both failed in previous years.</p>
+<p class="story-body-text" itemprop="articleBody">The passing grades will allow the big banks to pay dividends and buy back stock from shareholders.</p>
+<p class="story-body-text" itemprop="articleBody">The stress tests compel each institution to run a simulation of how it would deal with catastrophic conditions, like an abrupt rise in interest rates or unemployment, or a big crash in equity markets. Last week, the Fed said that all the big banks would be able to make it through a recession and still maintain adequate financial buffers.</p>
+<p class="story-body-text" itemprop="articleBody">A Fed official said on Wednesday that even with the concerns raised, the stress <strong>test results suggest that banks would be able to withstand an event like Britain&#8217;s exit from the European Union</strong>, which has rocked bank stocks over the last week.</p>
+<p class="story-body-text" itemprop="articleBody">The stress test results announced Wednesday are no doubt a welcome relief, in particular, to Bank of America and Citigroup, which have had difficulty passing the test unconditionally in past years.</p>
+<p class="story-body-text" itemprop="articleBody">The three banks that were called out by the Fed had big enough financial buffers. The criticism focused more on how they operate internally.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>The results are an unhappy hiccup for Morgan Stanley</strong>, which has been struggling to raise its profits and is in the middle of a significant cost-cutting campaign. Deutsche Bank and Santander now have to face concerns about their ability to satisfy American regulators.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>ON THE AGENDA</strong> <strong>James Bullard</strong>, the chief executive of the Federal Reserve Bank of St. Louis, will speak at the annual dinner of the Society of Business Economists in London at 1:30 p.m. <strong>Yahoo</strong>&#8216;s annual meeting of shareholders starts at 5 p.m.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>LIONSGATE IS SAID TO BE NEAR DEAL TO BUY STARZ</strong> Lionsgate is near a deal that could unite the film studio behind &#8220;The Hunger Games&#8221; with Starz, the home of the &#8220;Outlander&#8221; television series, <a href="//www.nytimes.com/2016/06/30/business/dealbook/lionsgate-is-said-to-be-near-deal-to-buy-starz.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160630">Michael J. de la Merced reports in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">A deal could be announced as soon as Thursday, although the details were still being ironed out, a person briefed on the matter said on Wednesday.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Lionsgate would pay a premium to the Starz&#8217;s closing stock price on Wednesday of $28.25, which valued the channel operator at about $2.8 billion.</strong> Lionsgate closed on Wednesday with a market value of $3 billion.</p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.bloomberg.com/news/articles/2016-06-29/lions-gate-said-to-be-in-advanced-talks-to-acquire-starz?nl=dealbook&amp;emc=edit_dlbkam_20160630">Bloomberg</a>, which earlier reported the talks, <strong>said that the deal would value Starz at more than $30 a share.</strong> But it said the negotiations had been held up by disagreements over price and voting shares, citing people with knowledge of the matter.</p>
+<p class="story-body-text" itemprop="articleBody">Starz became one of the country&#8217;s top premium TV networks with hits like &#8220;Outlander&#8221; and &#8220;Power,&#8221; and has been the subject of merger speculation for three years. <strong>The cable channel would give Lionsgate both an outlet for its television productions and scale as the media and telecommunications industry consolidates.</strong></p>
+<p class="story-body-text" itemprop="articleBody">Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></p>
+<p class="story-body-text" itemprop="articleBody">&nbsp;</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Simon Ramo, Who Helped Develop ICBMs in the Cold War, Dies at 103</strong> Dr. Ramo advised presidents on science and technology, and was a postwar force in the aerospace and electronics industries.<br />
+<a href="//www.nytimes.com/2016/06/30/business/simon-ramo-dies-at-103-helped-develop-icbms-in-the-cold-war.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Ronald Perelman Donates $75 Million for Arts Complex at World</strong> Trade Center Site The long-stalled performing arts center, which will sit on an emotionally resonant and highly visited spot in the city, will be named for Mr. Perelman.<br />
+<a href="//www.nytimes.com/2016/06/30/arts/design/ronald-perelman-donates-75-million-for-arts-complex-at-world-trade-center-site.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»</a><br />
+<strong>Jerome Fisher, a Founder of Nine West, Dies at 85</strong> Mr. Fisher and Vince Camuto produced fashionable shoes at reasonable prices.<br />
+<a href="//www.nytimes.com/2016/06/30/business/jerome-fisher-a-founder-of-nine-west-dies-at-85.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>MERGERS &amp; ACQUISITIONS Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Sports Investor Buying Specialist in Broadcasts George Pyne&#8217;s Bruin</strong> Sports Capital is acquiring Deltatre, which helps broadcast soccer and other sporting events.<br />
+<a href="//www.nytimes.com/2016/07/01/business/dealbook/pyne-bruin-sports-capital-deltatre.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»</a><br />
+<strong>A Bayer Deal for Monsanto Would Get E.U. Regulatory Scrutiny</strong> European Union competition authorities said they would examine concerns raised about the potential effect of a merger of Bayer and Monsanto.<br />
+<a href="//www.nytimes.com/2016/06/30/business/dealbook/a-bayer-deal-for-monsanto-would-get-eu-regulatory-scrutiny.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»</a><br />
+<strong>Sandwich Chain to Hit the Auction Block</strong> Jimmy John&#8217;s Franchise, the gourmet sandwich chain that explored an initial public offering last year, is now seeking to sell a major equity stake in a deal that it hopes will value it at more than $2.3 billion, Reuters reports, citing people familiar with the matter.<br />
+<a href="//www.bloomberg.com/news/articles/2016-06-30/carmike-said-to-call-off-shareholder-vote-on-purchase-by-amc?nl=dealbook&amp;emc=edit_dlbkam_20160630">REUTERS</a><br />
+<strong>Carmike Said to Call Off Shareholder Vote on Purchase by AMC</strong> Carmike Cinemas plans to call off a shareholder vote on its proposed $1.1 billion sale to AMC Entertainment Holdings, Bloomberg reports, citing people with knowledge of the matter.<br />
+<a href="//www.bloomberg.com/news/articles/2016-06-30/carmike-said-to-call-off-shareholder-vote-on-purchase-by-amc?nl=dealbook&amp;emc=edit_dlbkam_20160630">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>INVESTMENT BANKING Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Credit Suisse Plans on Raising Stake in Chinese Joint Venture</strong> Credit Suisse is planning to increase its stake in its Chinese securities joint venture to the maximum permissible 49 percent, making it the first foreign bank to take advantage of relaxed Chinese investment rules, Reuters reports, citing people with knowledge of the matter.<br />
+<a href="//www.reuters.com/article/us-credit-suisse-gp-china-jointventure-idUSKCN0ZG0BB?feedType=RSS&amp;feedName=innovationNews&amp;nl=dealbook&amp;emc=edit_dlbkam_20160630">REUTERS</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>I.M.F. Steps Up Call for German Bank Reforms</strong> The International Monetary Fund has warned that ultra-low interest rates pose a threat to the profitability of Germany&#8217;s financial sector, as it steps up its call for the country&#8217;s banks and insurance groups to restructure.<br />
+<a href="//www.ft.com/cms/s/0/00b845e8-3dfd-11e6-8716-a4a71e8140b0.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct&amp;nl=dealbook&amp;emc=edit_dlbkam_20160630#axzz4CxJ0grtI">THE FINANCIAL TIMES</a><br />
+<strong>SociÃ©tÃ© GÃ©nÃ©rale Declares Commitment to Britain</strong> SociÃ©tÃ© GÃ©nÃ©rale, Europe&#8217;s sixth-largest bank by assets, said that Britain&#8217;s departure from the European Union would bring challenges and uncertainty but London would remain one of the world&#8217;s big financial hubs.<br />
+<a href="//www.ft.com/cms/s/0/a9e95762-3df6-11e6-9f2c-36b487ebd80a.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct&amp;nl=dealbook&amp;emc=edit_dlbkam_20160630#axzz4CxJ0grtI">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody">For the latest updates, go to <a href="//www.nytimes.com/pages/business/dealbook/index.html">NYTimes.com/DealBook </a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>ADVERTISEMENT</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>HEDGE FUNDS Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>GAM Buys Hedge Fund Manager</strong> The asset management firm GAM is buying the $4 billion hedge fund manager Cantab Capital, billing the deal as the &#8220;cornerstone&#8221; for a new quantitative investing unit.<br />
+<a href="//www.ft.com/cms/s/0/46b9972e-3e23-11e6-8716-a4a71e8140b0.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct&amp;nl=dealbook&amp;emc=edit_dlbkam_20160630#axzz4CxJ0grtI">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>I.P.O./OFFERINGS Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Sungevity, a Solar Panel Provider, to Go Public in Merger</strong> A planned merger with Easterly Acquisition, an asset management firm, would give Sungevity easier access to financing to help expand its business.<br />
+<a href="//www.nytimes.com/2016/06/30/business/dealbook/sungevity-a-solar-panel-provider-to-go-public-in-merger.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>VENTURE CAPITAL Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Kleiner Perkins Raises $1.4 Billion With Two Funds</strong> The venture capital firm joins a list of peers that have recently raised more than a billion dollars, despite talk of a Silicon Valley lull.<br />
+<a href="//www.nytimes.com/2016/06/30/technology/kleiner-perkins-raises-1-4-billion-with-two-funds.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»</a><br />
+<strong>Google Capital Ventures Into Public Companies With Care.com</strong> The Alphabet investment unit has invested $46.35 million in Care.com, a publicly traded company that helps connect families and caregivers.<br />
+<a href="//www.nytimes.com/2016/06/30/business/dealbook/google-capital-ventures-into-public-companies-with-carecom.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>LEGAL/REGULATORY Â»</strong><br />
+<strong>General Electric Wins Approval to Shed &#8216;Too Big to Fail&#8217; Label</strong> The announcement comes after an aggressive campaign by General Electric to sell off billions of dollars worth of assets in its GE Capital division.<br />
+<a href="//www.nytimes.com/2016/06/30/business/dealbook/general-electric-wins-ok-to-shed-too-big-to-fail-label.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»Â </a><br />
+<strong>Shedding &#8216;Too Big to Fail&#8217; Label Was Worth $50 Billion to G.E.</strong> Since G.E. announced its plans to offload almost all of GE Capital&#8217;s assets, its stock has added about $50 billion in overall market capitalization, Rob Cox writes in Breakingviews.<br />
+<a href="//www.nytimes.com/2016/06/30/business/dealbook/shedding-too-big-to-fail-label-was-worth-50-billion-to-ge.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»Â </a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>An Index of Uncertainty Surges After &#8216;Brexit&#8217;</strong> Quantifying the tremors that the British vote has spread, not just in Britain but across the Atlantic.<br />
+<a href="//www.nytimes.com/2016/07/01/upshot/an-index-of-uncertainty-surges-after-brexit.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»</a><br />
+<strong>Europe Is Expected to Approve E.U.-U.S. Data Transfer Pact</strong> The decision is based on renewed assurances by United States officials that Europeans&#8217; data will be sufficiently protected when it is transferred.<br />
+<a href="//www.nytimes.com/2016/06/30/technology/europe-is-expected-to-approve-eu-us-data-transfer-pact.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»</a><br />
+<strong>Corporate Fraud Demands Criminal Time</strong> Volkswagen cheated on emissions tests because the chances of getting caught were low. Let&#8217;s change the calculus of corporate crime, Robert H. Tillman and Henry N. Pontell write in an op-ed for The New York Times.<br />
+<a href="//www.nytimes.com/2016/06/29/opinion/corporate-fraud-demands-criminal-time.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»</a><br />
+<strong>In Trade Stances Toward China, Clinton and Trump Both Signal a Chill</strong> The candidates, grappling with economic populism and increasing concern over China&#8217;s military posture, could follow through on campaign pledges to toughen trade policy.<br />
+<a href="//www.nytimes.com/2016/06/30/business/international/hillary-clinton-donald-trump-trade-china.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»Â </a><br />
+<strong>How China Took Center Stage in Bitcoin&#8217;s Civil War</strong> Through vast server farms and canny investments, Chinese companies have effectively centralized control over a currency designed to be borderless.<br />
+<a href="//www.nytimes.com/2016/07/03/business/dealbook/bitcoin-china.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>China&#8217;s Internet Czar Will Step Down From Post</strong> Given the opacity of the Chinese government, it was not clear whether the official, Lu Wei, was in trouble or in line for a promotion.<br />
+<a href="//www.nytimes.com/2016/06/30/business/international/china-internet-lu-wei.html?nl=dealbook&amp;emc=edit_dlbkam_20160630">NYT Â»</a><br />
+<strong>SoftBank Said to Face S.E.C. Inquiry</strong> Regulators are examining SoftBank Group over accusations about the activities of Nikesh Arora before he resigned as president last week, Bloomberg reports, citing people familiar with the matter.<br />
+<a href="//www.bloomberg.com/news/articles/2016-06-30/softbank-said-to-face-u-s-inquiry-over-alleged-arora-conflicts-iq1op711?nl=dealbook&amp;emc=edit_dlbkam_20160630">BLOOMBERG</a><br />
+For the latest updates, go to <a href="//www.nytimes.com/dealbook">nytimes.com/DealBook</a> | <a href="//m.nytimes.com/dealbook">m.nytimes.com/DealBook Â»</a><br />
+BlackBerry users can download the DealBook <a href="//m.nytimes.com/bbinstall">BlackBerry Shortcut Â»</a><br />
+Receive this daily email and breaking news updates: <a href="//dealbook.nytimes.com/dealbook-e-mail/">Subscribe Â»</a></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/06/30/morning-agenda-puerto-rico-relief-measure-clears-senate/"
+					data-title="Morning Agenda: Puerto Rico Relief Measure Clears Senate"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Nearly All U.S. Banks Pass Fed Stress Test | Lionsgate Is Said to Be Near Deal to Buy Starz&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/30/morning-agenda-puerto-rico-relief-measure-clears-senate/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":55,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

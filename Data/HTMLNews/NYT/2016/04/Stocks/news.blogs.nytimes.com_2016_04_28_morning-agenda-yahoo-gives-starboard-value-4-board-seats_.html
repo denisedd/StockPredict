@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004368693"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1461838419" />
+<meta name="PUD" content="20160428" />
+<meta name="pdate" content="20160428" />
+<meta name="ptime" content="20160428061339" />
+<meta name="utime" content="20160428101339" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-04-28T10:13:39-04:00" />
+<meta name="DISPLAYDATE" content="April 28, 2016" />
+<meta name="dat" content="April 28, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Ackman, William A;Chan, Priscilla;Esteves, Andre Santos (1969- );Obama, Barack;Smith, Jeffrey C;Zuckerberg, Mark E">
+<meta name="des" content="Banking and Financial Institutions;Credit Ratings and Credit Rating Agencies;Drugs (Pharmaceuticals);European Sovereign Debt Crisis (2010- );Hedge Funds;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Private Equity;Regulation and Deregulation of Industry;Securities and Commodities Violations;Stocks and Bonds">
+<meta name="org" content="Anglo American Corp;Apollo Global Management;Bain Capital;BTG Pactual;Canada Pension Plan Investment Board;Carlyle Group LP;Cinven Ltd;Comcast Corporation;DreamWorks Animation SKG Inc;Facebook Inc;Federal Bureau of Investigation;Guggenheim Securities LLC;Hanesbrands Inc;HNA Group Co Ltd;Lloyds Banking Group Plc;Marvell Technologies;Medivation Inc;Moody&#039;s Corporation;Paulson &amp; Co;Pershing Square Capital Management;Samsung Group;Sanofi SA;Securities and Exchange Commission;Silver Lake Partners;Starboard Value LP;The Blackstone Group;TPG Capital;TUI AG;Valeant Pharmaceuticals International Inc;Viking Global Investors LP;Vista Equity Partners;Yahoo! Inc">
+<meta property="article:tag" content="Ackman William A" />
+<meta property="article:tag" content="Chan Priscilla" />
+<meta property="article:tag" content="Esteves Andre Santos (1969- )" />
+<meta property="article:tag" content="Obama Barack" />
+<meta property="article:tag" content="Smith Jeffrey C" />
+<meta property="article:tag" content="Zuckerberg Mark E" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Credit Ratings and Credit Rating Agencies" />
+<meta property="article:tag" content="Drugs (Pharmaceuticals)" />
+<meta property="article:tag" content="European Sovereign Debt Crisis (2010- )" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Securities and Commodities Violations" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Anglo American Corp" />
+<meta property="article:tag" content="Apollo Global Management" />
+<meta property="article:tag" content="Bain Capital" />
+<meta property="article:tag" content="BTG Pactual" />
+<meta property="article:tag" content="Canada Pension Plan Investment Board" />
+<meta property="article:tag" content="Carlyle Group LP" />
+<meta property="article:tag" content="Cinven Ltd" />
+<meta property="article:tag" content="Comcast Corporation" />
+<meta property="article:tag" content="DreamWorks Animation SKG Inc" />
+<meta property="article:tag" content="Facebook Inc" />
+<meta property="article:tag" content="Federal Bureau of Investigation" />
+<meta property="article:tag" content="Guggenheim Securities LLC" />
+<meta property="article:tag" content="Hanesbrands Inc" />
+<meta property="article:tag" content="HNA Group Co Ltd" />
+<meta property="article:tag" content="Lloyds Banking Group Plc" />
+<meta property="article:tag" content="Marvell Technologies" />
+<meta property="article:tag" content="Medivation Inc" />
+<meta property="article:tag" content="Moody&#039;s Corporation" />
+<meta property="article:tag" content="Paulson &amp; Co" />
+<meta property="article:tag" content="Pershing Square Capital Management" />
+<meta property="article:tag" content="Samsung Group" />
+<meta property="article:tag" content="Sanofi SA" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Silver Lake Partners" />
+<meta property="article:tag" content="Starboard Value LP" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="TPG Capital" />
+<meta property="article:tag" content="TUI AG" />
+<meta property="article:tag" content="Valeant Pharmaceuticals International Inc" />
+<meta property="article:tag" content="Viking Global Investors LP" />
+<meta property="article:tag" content="Vista Equity Partners" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Ackman William A,Chan Priscilla,Esteves Andre Santos (1969- ),Obama Barack,Smith Jeffrey C,Zuckerberg Mark E,Banking and Financial Institutions,Credit Ratings and Credit Rating Agencies,Drugs (Pharmaceuticals),European Sovereign Debt Crisis (2010- ),Hedge Funds,Initial Public Offerings,Mergers Acquisitions and Divestitures,Private Equity,Regulation and Deregulation of Industry,Securities and Commodities Violations,Stocks and Bonds,Anglo American Corp,Apollo Global Management,Bain Capital,BTG Pactual,Canada Pension Plan Investment Board,Carlyle Group LP,Cinven Ltd,Comcast Corporation,DreamWorks Animation SKG Inc,Facebook Inc,Federal Bureau of Investigation,Guggenheim Securities LLC,Hanesbrands Inc,HNA Group Co Ltd,Lloyds Banking Group Plc,Marvell Technologies,Medivation Inc,Moody&#039;s Corporation,Paulson &amp; Co,Pershing Square Capital Management,Samsung Group,Sanofi SA,Securities and Exchange Commission,Silver Lake Partners,Starboard Value LP,The Blackstone Group,TPG Capital,TUI AG,Valeant Pharmaceuticals International Inc,Viking Global Investors LP,Vista Equity Partners,Yahoo! Inc,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F04%2F28%2Fmorning-agenda-yahoo-gives-starboard-value-4-board-seats%2F" title="Morning Agenda: Yahoo Gives Starboard Value 4 Board Seats" />
+<meta name="description" content="A Hedge Fund Herd Loses Billions &#124; Facebook Plans to Solidify Founder&#8217;s Control" />
+<meta name="hdl" content="Morning Agenda: Yahoo Gives Starboard Value 4 Board Seats" />
+<meta property="og:title" content="Morning Agenda: Yahoo Gives Starboard Value 4 Board Seats" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/04/28/morning-agenda-yahoo-gives-starboard-value-4-board-seats/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="A Hedge Fund Herd Loses Billions &#124; Facebook Plans to Solidify Founder&#8217;s Control" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Yahoo Gives Starboard Value 4 Board Seats" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/04/28/morning-agenda-yahoo-gives-starboard-value-4-board-seats/" />
+<meta name="twitter:description" content="A Hedge Fund Herd Loses Billions &#124; Facebook Plans to Solidify Founder&#8217;s Control" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Comcast in Talks to Buy DreamWorks Animation' href='//news.blogs.nytimes.com/2016/04/27/morning-agenda-comcast-in-talks-to-buy-dreamworks-animation/' />
+<link rel='next' title='Morning Agenda: Bigger Is Better For Health Care Companies' href='//news.blogs.nytimes.com/2016/04/29/morning-agenda-bigger-is-better-for-health-care-companies/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/04/28/morning-agenda-yahoo-gives-starboard-value-4-board-seats/' />
+<link rel='shortlink' href='//nyti.ms/1TfH5JZ' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/04/28/morning-agenda-yahoo-gives-starboard-value-4-board-seats/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Yahoo Gives Starboard Value 4 Board Seats - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4684 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Yahoo Gives Starboard Value 4 Board Seats        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/04/28/morning-agenda-yahoo-gives-starboard-value-4-board-seats/"
+	 data-title="Morning Agenda: Yahoo Gives Starboard Value 4 Board Seats"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt; A Hedge Fund Herd Loses Billions | Facebook Plans to Solidify Founder&#039;s Control&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/04/28/morning-agenda-yahoo-gives-starboard-value-4-board-seats/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="April 28, 2016 6:13 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Yahoo Gives Starboard Value 4 Board Seats</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-04-28T10:13:39+00:00" itemprop="datePublished">April 28, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">April 28, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4684 post type-post status-publish hentry category-dealbook tag-ackman-william-a tag-anglo-american-corp tag-apollo-global-management tag-bain-capital tag-banking-and-financial-institutions tag-btg-pactual tag-canada-pension-plan-investment-board tag-carlyle-group-lp tag-chan-priscilla tag-cinven-ltd tag-comcast-corporation tag-credit-ratings-and-credit-rating-agencies tag-dreamworks-animation-skg-inc tag-drugs-pharmaceuticals tag-esteves-andre-santos-1969 tag-european-sovereign-debt-crisis-2010 tag-facebook-inc tag-federal-bureau-of-investigation tag-guggenheim-securities-llc tag-hanesbrands-inc tag-hedge-funds tag-hna-group-co-ltd tag-initial-public-offerings tag-lloyds-banking-group-plc tag-marvell-technologies tag-medivation-inc tag-mergers-acquisitions-and-divestitures tag-moodys-corporation tag-obama-barack tag-paulson-co tag-pershing-square-capital-management tag-private-equity tag-regulation-and-deregulation-of-industry tag-samsung-group tag-sanofi-sa tag-securities-and-commodities-violations tag-securities-and-exchange-commission tag-silver-lake-partners tag-smith-jeffrey-c tag-starboard-value-lp tag-stocks-and-bonds tag-the-blackstone-group tag-tpg-capital tag-tui-ag tag-valeant-pharmaceuticals-international-inc tag-viking-global-investors-lp tag-vista-equity-partners tag-yahoo-inc tag-zuckerberg-mark-e per-ackman-william-a per-chan-priscilla per-esteves-andre-santos-1969 per-obama-barack per-smith-jeffrey-c per-zuckerberg-mark-e des-banking-and-financial-institutions des-credit-ratings-and-credit-rating-agencies des-drugs-pharmaceuticals des-european-sovereign-debt-crisis-2010 des-hedge-funds des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-private-equity des-regulation-and-deregulation-of-industry des-securities-and-commodities-violations des-stocks-and-bonds org-anglo-american-corp org-apollo-global-management org-bain-capital org-btg-pactual org-canada-pension-plan-investment-board org-carlyle-group-lp org-cinven-ltd org-comcast-corporation org-dreamworks-animation-skg-inc org-facebook-inc org-federal-bureau-of-investigation org-guggenheim-securities-llc org-hanesbrands-inc org-hna-group-co-ltd org-lloyds-banking-group-plc org-marvell-technologies org-medivation-inc org-moodys-corporation org-paulson-co org-pershing-square-capital-management org-samsung-group org-sanofi-sa org-securities-and-exchange-commission org-silver-lake-partners org-starboard-value-lp org-the-blackstone-group org-tpg-capital org-tui-ag org-valeant-pharmaceuticals-international-inc org-viking-global-investors-lp org-vista-equity-partners org-yahoo-inc" id="post-4684">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Yahoo Gives Starboard Value 4 Board Seats</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-04-28T10:13:39+00:00" itemprop="datePublished">April 28, 2016 6:13 am</time>
+			<!-- date updated --><span class="visually-hidden updated">April 28, 2016 6:13 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/04/28/morning-agenda-yahoo-gives-starboard-value-4-board-seats/" data-title="Morning Agenda: Yahoo Gives Starboard Value 4 Board Seats" data-description=" A Hedge Fund Herd Loses Billions | Facebook Plans to Solidify Founder&#039;s Control">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>YAHOO GIVES STARBOARD VALUE 4 BOARD SEATS </strong> <span class="divider"> | </span></span> The hedge fund Starboard Value is getting a seat at Yahooâs table after being a thorn in its side for over a year and a half,<br />
+<a href="//www.nytimes.com/2016/04/28/business/dealbook/yahoo-board-starboard.html?ref=dealbook">Michael J. de la Merced and Vindu Goel report in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody"><b>Yahoo gave Starboard four director seats</b>, ending the hedge fundâs campaign to unseat the entire board. Jeffrey C. Smith, Starboardâs chief executive, will get one of those seats and <b>a place on the committee overseeing the companyâs sale process</b>. </p>
+<p class="story-body-text" itemprop="articleBody">The other new additions to the board are Tor R. Braham, a former technology investment banker at Deutsche Bank; Eddy W. Hartenstein, a director of Tribune Publishing and former chief executive of The Los Angeles Times; and Richard S. Hill, chairman of Tessera Technologies.</p>
+<p class="story-body-text" itemprop="articleBody">The move may <b>quiet doubts about how serious Yahoo is about exploring a sale</b> â a concern that Starboard had latched on to. It will also allow the company to focus on the process rather than defending itself against Starboard.  </p>
+<p class="story-body-text" itemprop="articleBody">Yahoo and the board are still looking through the preliminary bids received last week, which include proposals from Verizon Communications, TPG Capital, Silver Lake, and a consortium led by Bain Capital and Vista Equity Partners. </p>
+<p class="story-body-text" itemprop="articleBody">On Wednesday, <b>Starboard also won seats on the board of Marvell Technologies</b>, a chip maker that it has been fighting for a few months.<br />
+The hedge fund is on a roll and has joined Carl C. Icahn, Daniel S. Loeb and William A. Ackman as one of the most prominent practitioners of shareholder activism, <a href="//www.nytimes.com/2016/04/28/business/dealbook/starboard-values-rise-to-activist-prominence.html?ref=dealbook&#038;_r=0">Michael J. de la Merced writes in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Starboard was spun off from the financial firm Ramius five years ago. It started off pressuring the Internet company AOL, demanding that it shut its Patch local news arm and sell off its patents. AOL eventually did exactly that, though Starboard did not gain any board seats. It managed in 2014 to oust the entire board of Darden Restaurants using a campaign that involved a 300-page presentation castigating the company for a host of sins, including profligate breadstick distribution. </p>
+<p class="story-body-text" itemprop="articleBody">Not all of its campaigns have been that successful though. In 2013, Starboard sought to block the $4.7 billion sale of Smithfield Foods to a Chinese meat processor, but failed to put together a rival offer. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A HEDGE FUND HERD LOSES BILLIONS </strong> <span class="divider"> | </span></span> William A. Ackman is now the unofficial leader of a herd of hedge funds that lost billions of dollars betting on Valeant Pharmaceuticals over the past year,<br />
+<a href="//www.nytimes.com/2016/04/28/business/dealbook/as-valeant-tumbles-so-does-billackmans-hedge-fund-herd.html?ref=dealbook">Alexandra Stevenson and Matthew Goldstein report in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">The Canadian drug makerâs shares have plunged 85 percent since he first pitched the company as one of his best investment ideas last year. </p>
+<p class="story-body-text" itemprop="articleBody">Paulson &#038; Company, Viking Global Investors, Brahman Capital, and his own firm Pershing Square Capital Management have all lost billions betting on Valeant. </p>
+<p class="story-body-text" itemprop="articleBody">And Mr. Ackman found himself defending Valeant again on Wednesday when he testified before Congress about the pharmaceutical companyâs drug pricing policies, as   <a href="//www.nytimes.com/2016/04/28/business/valeant-pearson-ackman-hearing-congress-drug-prices.html">Katie Thomas reports in The New York Times</a>. When scolded by a senator for not looking closely enough into the companyâs pricing, Mr. Ackman, flustered, said, <b>âI regret that we didnât do more due diligence.â</b></p>
+<p class="story-body-text" itemprop="articleBody">Hedge funds spend tens of millions of dollars on outside research as well as their own teams of analysts, but they are also influenced by their counterparts, exchanging ideas at charity events and industry dinners. </p>
+<p class="story-body-text" itemprop="articleBody">The tripping up of this herd of hedge funds reflects how big-dollar investors are chasing too few ideas and it could get worse. âIf anything, we are now seeing the early signs that this type of <b>hedge fund herding is spilling over into herding of large institutional investors</b>,â said Andrew Karolyi, a professor of finance at Cornell University. </p>
+<p class="story-body-text" itemprop="articleBody"><b>The crowding into Valeant stock was not isolated.</b> SunEdison was once a hedge fund darling and this month it filed for bankruptcy. The value of hedge fund positions in SunEdison has fallen to just $15 million after its bankruptcy filing,  from $3.5 billion last year, according to FactSet, the financial research firm.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> An advanced estimate of <b>first-quarter gross domestic product</b> will be published at 8:30 a.m. <b>Ford</b> will hold a briefing on its latest earnings at 9 a.m. <b>Amazon</b> will hold a conference call on its latest quarterly earnings at 5 p.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FACEBOOK PLANS TO SOLIDIFY FOUNDERâS CONTROL </strong> <span class="divider"> | </span></span> Facebook proposed a new class of stock on Wednesday, known as C shares, in a move aimed at keeping Mark Zuckerberg, the chief executive, in control,<br />
+<a href="//www.nytimes.com/2016/04/28/technology/facebook-q1-earnings.html?ref=business">Mike Isaac and Leslie Picker report in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">The new share class <b>allows Mr. Zuckerberg to preserve his voting power</b> at Facebook even as he starts giving away the majority of his stock for charitable purposes. </p>
+<p class="story-body-text" itemprop="articleBody">Facebook said the move was ânot a traditional governance model,â but added that <b>âFacebook was not built to be a traditional company.â</b></p>
+<p class="story-body-text" itemprop="articleBody">Company founders often reign supreme in Silicon Valley and corporate structures have shifted to accommodate that philosophy. More tech companies have been adopting different stock classes to allow their founders to cement their voting power. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Zuckerberg owns almost four million class A shares and 468 million class B shares, giving him <b>overall voting power of 60 percent</b>. In December, he and his wife, Dr. Priscilla Chan, announced the creation of a limited liability corporation to which they would give 99 percent of their Facebook shares during their lifetimes for charitable purposes. This would diminish his voting power. </p>
+<p class="story-body-text" itemprop="articleBody">The new C shares allow Mr. Zuckerberg to maintain 60 percent of voting power while still giving away large amounts of stock. </p>
+<p class="story-body-text" itemprop="articleBody">Under the proposal, <b>all holders of stock would get two C shares for each A or B share that they own</b>. Holders of A shares are entitled to one vote per share. Holders of B shares have 10 votes a share. The C shares come with no voting power. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Zuckerberg would obtain a large amount of C shares that he can donate without diluting his voting power in the company. </p>
+<p class="story-body-text" itemprop="articleBody">Most investors currently hold A shares, which only have about a quarter of the overall shareholdersâ voting power so they may not be forgoing much if they choose to sell their A shares versus their C shares. </p>
+<p class="story-body-text" itemprop="articleBody">The social network also reported robust earnings for the first quarter, surpassing Wall Street expectations. Sales rose 52 percent to $5.3 billion from a year ago, while profit tripled to $1.5 billion. Shares rose 9 percent in after-hours trading. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sanofi Offers to Buy Drug Maker Medivation for $9.3 Billion</strong> <span class="divider"> | </span></span> Sanofi said that it first privately made an offer to acquire the prostate cancer drug maker nearly two weeks ago but had not received a response to its offer.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/29/business/dealbook/sanofi-france-offers-buy-drug-maker-medivation.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="DreamWorks Deal Would Serve Comcastâs Entertainment Strategy" src="https://static01.nyt.com/images/2016/04/28/business/28COMCAST/28COMCAST-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DreamWorks Deal Would Serve Comcastâs Entertainment Strategy</strong> <span class="divider"> | </span></span> An expected acquisition would allow Comcast to build on its successful NBCUniversal entertainment business, which includes TV, film and theme parks.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/28/business/media/dreamworks-deal-would-serve-comcasts-entertainment-strategy.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/04/28/business/dealbook/adding-dreamworks-would-bolster-comcast-in-disney-rivalry.html">Breakingviews: Adding DreamWorks Would Bolster Comcast in Disney Rivalry</a> </span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Adding DreamWorks Would Bolster Comcast in Disney Rivalry</strong> <span class="divider"> | </span></span> Since Comcastâs offer to buy Disney fell short more than a decade ago, it has essentially tried to copy the Magic Kingdomâs strategy, Jennifer Saba writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/28/business/dealbook/adding-dreamworks-would-bolster-comcast-in-disney-rivalry.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TUI Agrees to $1.3 Billion Hotelbeds Sale</strong> <span class="divider"> | </span></span> TUI agreed to sell its Hotelbeds unit to funds of the buyout firm Cinven and the Canada Pension Plan Investment Board for 1.19 billion euros, or about $1.3 billion.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-28/tui-agrees-to-1-3-billion-hotelbeds-sale-to-pe-pension-funds">BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hanesbrands Offers $835 Million for Australian Underwear Company</strong> <span class="divider"> | </span></span> Hanesbrands agreed to buy Australiaâs Pacific Brands for $835 million, gaining underwear labels like Bonds and Jockey.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-27/hanesbrands-offers-a-1-1-billion-in-cash-for-pacific-brands">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstone Said to Lead Bids for Irish Mall</strong> <span class="divider"> | </span></span> Blackstone Group was the lead bidder for Irelandâs largest mall, Bloomberg News reports, citing two people familiar with the sale. The Blanchardstown Center project is expected to fetch about $1.1 billion, one of these people said.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-27/blackstone-said-to-be-lead-bidder-for-ireland-s-biggest-mall">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HNA of China to Buy Carlson Rezidor Hotel Group</strong> <span class="divider"> | </span></span> Carlson Rezidor Hotel Group, the home to brands including Radisson and Country Inns and Suites, will be sold to a unit of the Chinese conglomerate HNA Group for an undisclosed price.<br /><span class="kicker"><a href="//www.wsj.com/articles/chinas-hna-to-buy-carlson-rezidor-hotel-group-1461797802?mod=asia_home"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Apollo and Vale Said to Be in Talks Over Joint Venture</strong> <span class="divider"> | </span></span> Vale is considering spinning off its fertilizer assets into a joint venture controlled by Apollo Global Management if they succeed in a  bid for Anglo Americanâs fertilizer operations in Brazil, Reuters reports, citing three sources with direct knowledge of the plan.<br /><span class="kicker"><a href="//www.reuters.com/article/us-anglo-american-m-a-vale-sa-apollo-glo-idUSKCN0XP0BM?feedType=RSS&#038;feedName=innovationNews"> REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Deutsche Bank Profit Down 58 Percent Amid Challenging Markets" src="https://static01.nyt.com/images/2016/04/29/business/29db-deutschebank/29db-deutschebank-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Bank Profit Down 58 Percent Amid Challenging Markets</strong> <span class="divider"> | </span></span> The German lender said that its litigation costs had declined significantly in the first quarter, but that market conditions had cut into its profits.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/29/business/dealbook/deutsche-bank-earnings-q1.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Lloyds Banking Group Profit Drops 44 Percent After Bond Redemption" src="https://static01.nyt.com/images/2016/04/29/business/29db-lloyds/29db-lloyds-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lloyds Banking Group Profit Drops 44 Percent After Bond Redemption</strong> <span class="divider"> | </span></span> The British lender took a charge of about $1.2 billion in the first quarter related to the buyback of bonds with a high rate of interest issued during the financial crisis.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/29/business/dealbook/lloyds-banking-group-q1-earnings.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AndrÃ© Esteves, Freed From Jail, Returns to BTG Pactual</strong> <span class="divider"> | </span></span> The investment bankâs former chief executive will take no executive role, but will focus on partnership matters and strategy.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/28/business/dealbook/andre-esteves-freed-from-jail-returns-to-btg-pactual.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Rattner Drops Bid to Return to Investment Banking</strong> <span class="divider"> | </span></span> He acted within weeks of the Securities and Exchange Commissionâs order that cleared his path to affiliate with Guggenheim Securities.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/28/business/dealbook/rattner-drops-bid-to-return-to-investment-banking.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Carlyle Profits Plunge More Than $200 Million in First Quarter</strong> <span class="divider"> | </span></span> Carlyle joined other big private equity groups in the United States in reporting a slowdown in existing deals early this year as stock markets sold off.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/b17a70f8-0c67-11e6-9456-444ab5211a2f.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz46oyQ65D1">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Samsung Biologics Plans I.P.O.</strong> <span class="divider"> | </span></span> Samsung Biologics, a contract manufacturer of biotechnology drugs for global pharmaceutical firms, said it was planning an initial public offering this year. Analysts estimate that it could be worth as much as $2.6 billion.<br /><span class="kicker"><a href="//www.reuters.com/article/us-samsung-biologics-ipo-idUSKCN0XP01P?feedType=RSS&#038;feedName=innovationNews">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="President Obama Weighs His Economic Legacy" src="https://static01.nyt.com/images/2016/05/01/magazine/01obama1/01obama1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>President Obama Weighs His Economic Legacy</strong> <span class="divider"> | </span></span> Eight years after the financial crisis, unemployment is at 5 percent, deficits are down and G.D.P. is growing. Why do so many voters feel left behind? The president has a theory.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/01/magazine/president-obama-weighs-his-economic-legacy.html">The Money Issue &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fed Keeps Rates Steady and Says Labor Market Is Improving</strong> <span class="divider"> | </span></span> While policy makers noted some weak points in the domestic economy, the central bank appears on course to increase rates later in the year.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/28/business/economy/federal-reserve-interest-rates-yellen.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Greece Pushes for Eurozone Summit Meeting to Unblock Debt Talks" src="https://static01.nyt.com/images/2016/04/28/world/28EUGreece-web/28EUGreece-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Greece Pushes for Eurozone Summit Meeting to Unblock Debt Talks</strong> <span class="divider"> | </span></span> Without new rescue funds by July, the country could default on its debts and throw the currency bloc into another period of chaos.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/28/business/international/greece-eurozone-summit-debt.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China Said to Want a Small Stake in Web Firms</strong> <span class="divider"> | </span></span> The Chinese governmentâs control over the Internet could get even tighter, with regulators floating a proposal for the state to take 1 percent stakes in major Chinese Internet companies, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/china-wants-to-own-small-stake-in-web-firms-1461781500">THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Moodyâs Appeals Hong Kong Ruling That Penalized Critical Report</strong> <span class="divider"> | </span></span> The  Securities and Futures Commission charged Moodyâs for a 2011 report about 61 Chinese companies, claiming it misled investors and caused notable share price drops at the corporations named in the note.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-28/moody-s-appeals-hong-kong-ruling-that-penalized-critical-report">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="With Finality, F.B.I. Opts Not to Share iPhone-Unlocking Method" src="https://static01.nyt.com/images/2016/04/28/business/28FBIsub/28FBIsub-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>With Finality, F.B.I. Opts Not to Share iPhone-Unlocking Method</strong> <span class="divider"> | </span></span> The bureau said that it would not ask for a review of the tactics used to break into the iPhone of a San Bernardino, Calif., attacker.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/28/technology/with-finality-fbi-opts-not-to-share-iphone-unlocking-method.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Apple iPhone, Once a Status Symbol in China, Loses Its Luster" src="https://static01.nyt.com/images/2016/04/28/business/28chinaapple/28chinaapple-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Apple iPhone, Once a Status Symbol in China, Loses Its Luster</strong> <span class="divider"> | </span></span> The companyâs second-quarter earnings show how hard it can be to keep the attention of the countryâs fickle and increasingly hard-to-impress consumers.<br /><span class="kicker"><a href="//www.nytimes.com/2016/04/28/technology/apple-china-iphone-earnings.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/04/28/morning-agenda-yahoo-gives-starboard-value-4-board-seats/"
+					data-title="Morning Agenda: Yahoo Gives Starboard Value 4 Board Seats"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt; A Hedge Fund Herd Loses Billions | Facebook Plans to Solidify Founder&#039;s Control&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/04/28/morning-agenda-yahoo-gives-starboard-value-4-board-seats/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":50,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

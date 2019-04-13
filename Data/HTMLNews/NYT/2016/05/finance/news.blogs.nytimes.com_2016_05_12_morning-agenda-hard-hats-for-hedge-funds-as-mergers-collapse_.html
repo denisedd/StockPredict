@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004402330"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1463047387" />
+<meta name="PUD" content="20160512" />
+<meta name="pdate" content="20160512" />
+<meta name="ptime" content="20160512060307" />
+<meta name="utime" content="20160512190053" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-05-12T19:00:53-04:00" />
+<meta name="DISPLAYDATE" content="May 12, 2016" />
+<meta name="dat" content="May 12, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Bloomberg, Michael R;Griffin, Kenneth C;Mester, Loretta J;Mnuchin, Steven T;Pickens, T Boone Jr;Rubenstein, David M;Scaramucci, Anthony;Sullivan, Emmet G;Trump, Donald J">
+<meta name="des" content="Antitrust Laws and Competition Issues;Art;Artificial Intelligence;Auctions;Banking and Financial Institutions;Bankruptcies;Campaign Finance;Decisions and Verdicts;Endorsements;Hedge Funds;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Payday Loans;Political Action Committees;Presidential Election of 2016;Regulation and Deregulation of Industry;Tax Evasion">
+<meta name="org" content="1Malaysia Development Berhad (1MDB);AMC Entertainment;Auctionata AG;Carlyle Group LP;Credit Suisse Group AG;Goldman Sachs Group Inc;Google Inc;Hutchison Whampoa Limited;Linn Energy L.L.C;Mitsubishi Motor Corp;Nissan Motor Co;Office Depot Inc.;Paddle8 Inc;Qihoo 360 Technology Company Ltd;Skybridge Capital II LLC;Telefonica UK Ltd;Tencent Holdings Ltd;Theranos Inc;UBS AG;Valeant Pharmaceuticals International Inc">
+<meta name="geo" content="Delaware;Houston (Tex);Panama;Silicon Valley (Calif)">
+<meta name="ticker" content="Carlyle Group LP|CG|NASDAQ;Credit Suisse Group AG|CS|NYSE;Goldman Sachs Group Inc|GS|NYSE;Linn Energy L.L.C|LINE|NASDAQ;Office Depot Inc.|ODP|NASDAQ;Qihoo 360 Technology Company Ltd|QIHU|NYSE;Valeant Pharmaceuticals International Inc|VRX|NYSE" />
+<meta property="article:tag" content="Bloomberg Michael R" />
+<meta property="article:tag" content="Griffin Kenneth C" />
+<meta property="article:tag" content="Mester Loretta J" />
+<meta property="article:tag" content="Mnuchin Steven T" />
+<meta property="article:tag" content="Pickens T Boone Jr" />
+<meta property="article:tag" content="Rubenstein David M" />
+<meta property="article:tag" content="Scaramucci Anthony" />
+<meta property="article:tag" content="Sullivan Emmet G" />
+<meta property="article:tag" content="Trump Donald J" />
+<meta property="article:tag" content="Antitrust Laws and Competition Issues" />
+<meta property="article:tag" content="Art" />
+<meta property="article:tag" content="Artificial Intelligence" />
+<meta property="article:tag" content="Auctions" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Bankruptcies" />
+<meta property="article:tag" content="Campaign Finance" />
+<meta property="article:tag" content="Decisions and Verdicts" />
+<meta property="article:tag" content="Endorsements" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Payday Loans" />
+<meta property="article:tag" content="Political Action Committees" />
+<meta property="article:tag" content="Presidential Election of 2016" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Tax Evasion" />
+<meta property="article:tag" content="1Malaysia Development Berhad (1MDB)" />
+<meta property="article:tag" content="AMC Entertainment" />
+<meta property="article:tag" content="Auctionata AG" />
+<meta property="article:tag" content="Carlyle Group LP" />
+<meta property="article:tag" content="Credit Suisse Group AG" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Google Inc" />
+<meta property="article:tag" content="Hutchison Whampoa Limited" />
+<meta property="article:tag" content="Linn Energy L.L.C" />
+<meta property="article:tag" content="Mitsubishi Motor Corp" />
+<meta property="article:tag" content="Nissan Motor Co" />
+<meta property="article:tag" content="Office Depot Inc." />
+<meta property="article:tag" content="Paddle8 Inc" />
+<meta property="article:tag" content="Qihoo 360 Technology Company Ltd" />
+<meta property="article:tag" content="Skybridge Capital II LLC" />
+<meta property="article:tag" content="Telefonica UK Ltd" />
+<meta property="article:tag" content="Tencent Holdings Ltd" />
+<meta property="article:tag" content="Theranos Inc" />
+<meta property="article:tag" content="UBS AG" />
+<meta property="article:tag" content="Valeant Pharmaceuticals International Inc" />
+<meta property="article:tag" content="Delaware" />
+<meta property="article:tag" content="Houston (Tex)" />
+<meta property="article:tag" content="Panama" />
+<meta property="article:tag" content="Silicon Valley (Calif)" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Bloomberg Michael R,Griffin Kenneth C,Mester Loretta J,Mnuchin Steven T,Pickens T Boone Jr,Rubenstein David M,Scaramucci Anthony,Sullivan Emmet G,Trump Donald J,Antitrust Laws and Competition Issues,Art,Artificial Intelligence,Auctions,Banking and Financial Institutions,Bankruptcies,Campaign Finance,Decisions and Verdicts,Endorsements,Hedge Funds,Initial Public Offerings,Mergers Acquisitions and Divestitures,Payday Loans,Political Action Committees,Presidential Election of 2016,Regulation and Deregulation of Industry,Tax Evasion,1Malaysia Development Berhad (1MDB),AMC Entertainment,Auctionata AG,Carlyle Group LP,Credit Suisse Group AG,Goldman Sachs Group Inc,Google Inc,Hutchison Whampoa Limited,Linn Energy L.L.C,Mitsubishi Motor Corp,Nissan Motor Co,Office Depot Inc.,Paddle8 Inc,Qihoo 360 Technology Company Ltd,Skybridge Capital II LLC,Telefonica UK Ltd,Tencent Holdings Ltd,Theranos Inc,UBS AG,Valeant Pharmaceuticals International Inc,Delaware,Houston (Tex),Panama,Silicon Valley (Calif),DealBook" />
+<meta name="news_keywords" content="Art,Auction,Bankruptcy,Delaware,Panama,Political endorsement" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F05%2F12%2Fmorning-agenda-hard-hats-for-hedge-funds-as-mergers-collapse%2F" title="Morning Agenda: Hard Hats for Hedge Funds as Mergers Collapse" />
+<meta name="description" content="Fund-Raisers Pitch for Trump at Hedge Fund Conference &#124; Online Art Auctioneers to Merge" />
+<meta name="hdl" content="Morning Agenda: Hard Hats for Hedge Funds as Mergers Collapse" />
+<meta property="og:title" content="Morning Agenda: Hard Hats for Hedge Funds as Mergers Collapse" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/05/12/morning-agenda-hard-hats-for-hedge-funds-as-mergers-collapse/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Fund-Raisers Pitch for Trump at Hedge Fund Conference &#124; Online Art Auctioneers to Merge" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Hard Hats for Hedge Funds as Mergers Collapse" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/05/12/morning-agenda-hard-hats-for-hedge-funds-as-mergers-collapse/" />
+<meta name="twitter:description" content="Fund-Raisers Pitch for Trump at Hedge Fund Conference &#124; Online Art Auctioneers to Merge" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Staples and Office Depot End Merger Plan' href='//news.blogs.nytimes.com/2016/05/11/morning-agenda-staples-and-office-depot-end-merger-plan/' />
+<link rel='next' title='Morning Agenda: Swift Reports a New Attack' href='//news.blogs.nytimes.com/2016/05/13/morning-agenda-swift-reports-a-new-attack/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/05/12/morning-agenda-hard-hats-for-hedge-funds-as-mergers-collapse/' />
+<link rel='shortlink' href='//nyti.ms/1TH2fR9' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/05/12/morning-agenda-hard-hats-for-hedge-funds-as-mergers-collapse/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Hard Hats for Hedge Funds as Mergers Collapse - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4783 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Hard Hats for Hedge Funds as Mergers Collapse        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/05/12/morning-agenda-hard-hats-for-hedge-funds-as-mergers-collapse/"
+	 data-title="Morning Agenda: Hard Hats for Hedge Funds as Mergers Collapse"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Fund-Raisers Pitch for Trump at Hedge Fund Conference | Online Art Auctioneers to Merge&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/12/morning-agenda-hard-hats-for-hedge-funds-as-mergers-collapse/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 12, 2016 6:03 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Hard Hats for Hedge Funds as Mergers Collapse</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-05-12T10:03:07+00:00" itemprop="datePublished">May 12, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">May 12, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4783 post type-post status-publish hentry category-dealbook tag-1malaysia-development-berhad-1mdb tag-amc-entertainment tag-antitrust-laws-and-competition-issues tag-art tag-artificial-intelligence tag-auctionata-ag tag-auctions tag-banking-and-financial-institutions tag-bankruptcies tag-bloomberg-michael-r tag-campaign-finance tag-carlyle-group-lp tag-credit-suisse-group-ag tag-decisions-and-verdicts tag-delaware tag-endorsements tag-goldman-sachs-group-inc tag-google-inc tag-griffin-kenneth-c tag-hedge-funds tag-houston-tex tag-hutchison-whampoa-limited tag-initial-public-offerings tag-linn-energy-l-l-c tag-mergers-acquisitions-and-divestitures tag-mester-loretta-j tag-mitsubishi-motor-corp tag-mnuchin-steven-t tag-nissan-motor-co tag-office-depot-inc tag-paddle8-inc tag-panama tag-payday-loans tag-pickens-t-boone-jr tag-political-action-committees tag-presidential-election-of-2016 tag-qihoo-360-technology-company-ltd tag-regulation-and-deregulation-of-industry tag-rubenstein-david-m tag-scaramucci-anthony tag-silicon-valley-calif tag-skybridge-capital-ii-llc tag-sullivan-emmet-g tag-tax-evasion tag-telefonica-uk-ltd tag-tencent-holdings-ltd tag-theranos-inc tag-trump-donald-j tag-ubs-ag tag-valeant-pharmaceuticals-international-inc per-bloomberg-michael-r per-griffin-kenneth-c per-mester-loretta-j per-mnuchin-steven-t per-pickens-t-boone-jr per-rubenstein-david-m per-scaramucci-anthony per-sullivan-emmet-g per-trump-donald-j des-antitrust-laws-and-competition-issues des-art des-artificial-intelligence des-auctions des-banking-and-financial-institutions des-bankruptcies des-campaign-finance des-decisions-and-verdicts des-endorsements des-hedge-funds des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-payday-loans des-political-action-committees des-presidential-election-of-2016 des-regulation-and-deregulation-of-industry des-tax-evasion org-1malaysia-development-berhad-1mdb org-amc-entertainment org-auctionata-ag org-carlyle-group-lp org-credit-suisse-group-ag org-goldman-sachs-group-inc org-google-inc org-hutchison-whampoa-limited org-linn-energy-l-l-c org-mitsubishi-motor-corp org-nissan-motor-co org-office-depot-inc org-paddle8-inc org-qihoo-360-technology-company-ltd org-skybridge-capital-ii-llc org-telefonica-uk-ltd org-tencent-holdings-ltd org-theranos-inc org-ubs-ag org-valeant-pharmaceuticals-international-inc geo-delaware geo-houston-tex geo-panama geo-silicon-valley-calif news_keywords-art news_keywords-auction news_keywords-bankruptcy news_keywords-delaware news_keywords-panama news_keywords-political-endorsement" id="post-4783">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Hard Hats for Hedge Funds as Mergers Collapse</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-05-12T10:03:07+00:00" itemprop="datePublished">May 12, 2016 6:03 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 12, 2016 6:03 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/05/12/morning-agenda-hard-hats-for-hedge-funds-as-mergers-collapse/" data-title="Morning Agenda: Hard Hats for Hedge Funds as Mergers Collapse" data-description="Fund-Raisers Pitch for Trump at Hedge Fund Conference | Online Art Auctioneers to Merge">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HARD HATS FOR HEDGE FUNDS AS MERGERS COLLAPSE</strong> <span class="divider"> | </span></span> More than $400 billion worth of corporate mergers have been withdrawn in the United States since the beginning of January â almost three times the previous record for the same period, <a href="//www.nytimes.com/2016/05/12/business/dealbook/hedge-funds-look-for-hard-hats-in-a-year-of-collapsing-mergers.html?ref=dealbook">Leslie Picker reports in DealBook</a></p>
+<p class="story-body-text" itemprop="articleBody">The broken deals have <b>whipsawed hedge funds that focus on merger arbitrage</b>, placing bets on the likelihood that deals will be completed. Merger arbitrage was the worst-performing investment strategy in April other than macro funds, according to Hedge Fund Research. </p>
+<p class="story-body-text" itemprop="articleBody">It was <b>historically a calm hinterland of the investing world</b>. Traders would buy up shares in a company being acquired that were trading slightly below the offer price, often by just pennies. It was considered low-risk trading for small returns. </p>
+<p class="story-body-text" itemprop="articleBody">Now, investment funds are working with lawyers to pore over agreements to make sure they are placing bets on deals that are unlikely to come apart. But the <b>riskier environment does offer more opportunities for greater returns</b> as the market becomes more skeptical about pending deals. </p>
+<p class="story-body-text" itemprop="articleBody">The collapse of these enormous deals has chilled the market, but for those still determined to go ahead, it means there is more focus on the deal terms. Executives and boards want to learn from the mistakes of deals gone awry. </p>
+<p class="story-body-text" itemprop="articleBody">A ruling that blocked the proposed merger between Office Depot and Staples has prompted <b>scrutiny of the decision by the two companies to forgo presenting their case in court</b>, <a href="//www.wsj.com/articles/blocked-merger-of-staples-office-depot-shines-spotlight-on-legal-tactic-1463003063?cb=logged0.3744936656330877">The Wall Street Journal reports.</a></p>
+<p class="story-body-text" itemprop="articleBody">Judge Emmet G. Sullivan of Federal District Court for the District of Columbia has a reputation for thinking out loud in court and his early comments did not bode well for the F.T.C. This momentum might have been hard for Staples and Office Depot to sustain. And presenting their case would allow the F.T.C. to pick apart their evidence when they had thus far been allowed to freely take shots at the government case. </p>
+<p class="story-body-text" itemprop="articleBody">So they decided to deprive the F.T.C. of a chance to confront their chief executives, also <b>passing up the chance to make their best case to the judge</b>. </p>
+<p class="story-body-text" itemprop="articleBody">The judgeâs full written opinion will be published next week. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FUND-RAISERS PITCH FOR TRUMP AT HEDGE FUND CONFERENCE</strong> <span class="divider"> | </span></span> Donald J. Trumpâs top fund-raisers made their pitches on Wednesday to the 2,000 hedge fund managers, investors, lawyers and journalists gathered in Las Vegas for the SkyBridge Alternatives Conference, the industryâs most prominent annual meeting,<br />
+<a href="//www.reuters.com/article/us-usa-election-trump-hedgefunds-idUSKCN0Y300D">Reuters reports. </a></p>
+<p class="story-body-text" itemprop="articleBody">David Rubenstein, a co-founder of Carlyle Group, kicked off the conference by asking the audience which candidate would win the election, but the vast majority did not express an opinion. Michael Bloomberg, the former mayor of New York who flirted with joining the presidential race, was also at the event, but he declined to endorse any presidential candidate. </p>
+<p class="story-body-text" itemprop="articleBody">Anthony Scaramucci, the host of the conference who runs SkyBridge Capital, <b>said he was reaching out to his contacts to convince them that Mr. Trump would run his campaign like an entrepreneur, something that the United States needed.</b>. âYou have an opportunity now to bring an entrepreneur and a team of advisers that are entrepreneurial, out-of-the-box thinkers into Washington,â he told Reuters. âThatâs the sell to potential donors.â </p>
+<p class="story-body-text" itemprop="articleBody">T. Boone Pickens, the oil investor and hedge fund manager, voiced his support, saying that Mr. Trump was smart enough to get himself help where he needed it politically and that it would be <b>refreshing to have a businessman instead of a politician in the White House.</b>.  <a href="//www.wsj.com/articles/billionaire-t-boone-pickens-planning-trump-fundraiser-1463021638?mod=asia_home">The Wall Street Journal</a> reports that Mr. Pickens is planning to host a fund-raising event next month for a âsuper PACâ that supports Mr. Trump.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> The Committee on Science, Space and Technology will hold a hearing in Washington on the <b>security of private banking information</b> at 10 a.m. <b>Loretta Mester</b>, the president of the Federal Reserve Bank of Cleveland, will speak at the Konstanz Seminar on Monetary Theory </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ONLINE ART AUCTIONEERS TO MERGE</strong> <span class="divider"> | </span></span> Paddle8 and Auctionata, two auction houses that have been shaking up the world of online art auctions, are expected to announce on Thursday that they will merge to broaden their reach, </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/05/12/business/dealbook/2-online-art-auctioneers-to-merge-and-go-global.html?ref=dealbook">Michael J. de la Merced reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">They are not trying to displace Sothebyâs and Christieâs, <b>instead aiming for the âmiddle marketâ</b> â objects more valuable than can be sold on eBay, but only reaching about $500,000. </p>
+<p class="story-body-text" itemprop="articleBody">They do sometimes auction more expensive items. Paddle8 gained notoriety for auctioning the sole copy of the <b>Wu-Tang Clanâs final album</b> and Auctionata sold an 18th-century Chinese clock for $3.83 million last summer. </p>
+<p class="story-body-text" itemprop="articleBody"><b>âWe will be able to pick up an object and sell it quicker than anyone else in the world,â</b> Alexander Zacke, the chief executive of Auctionata, said in a telephone interview. </p>
+<p class="story-body-text" itemprop="articleBody">Online art sales have becoming a growing part of the business. The research firm Hiscos ranked Paddle8 fifth and Auctionata at ninth in a ranking of online art platforms. Christieâs LIVE placed first and Sothebyâs BIDnow ranked fourth. </p>
+<p class="story-body-text" itemprop="articleBody">Together, Paddle8 and Auctionata reported sales of around $140 million in 2015 and would have a combined user base of nearly 800,000. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Nissan to Take $2.2 Billion Controlling Stake in Mitsubishi Motors </strong> <span class="divider"> | </span></span> Nissan Motor has agreed to take a 34 percent stake in Mitsubishi Motors, taking de facto control with a $2.2 billion bet that bails out its smaller, scandal-hit rival.<br /><span class="kicker"><a href="//www.reuters.com/article/us-nissan-mitsubishimotors-investment-idUSKCN0Y227F">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AMC Said to Plan Bid for Odeon Cinemas in Europe</strong> <span class="divider"> | </span></span> AMC Entertainment Holdings, the theater chain owned by Dalian Wanda Group, is assembling a bid for Odeon &#038; UCI Cinemas Group worth as much as $1.3 billion, Bloomberg reports, citing two people familiar with the matter. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-11/amc-said-to-plan-bid-for-guy-hands-s-odeon-cinemas-in-europe">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Qihoo Buyer Group Said to Hit Impasse With Chinese FX Regulator</strong> <span class="divider"> | </span></span> The Qihoo 360 Technology buyout consortium, seeking to take the Chinese company private in a $9.3 billion deal, has hit an impasse with the nationâs foreign-exchange supervisor as the regulator scrutinizes the deal, Bloomberg reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-12/qihoo-buyer-group-said-to-hit-impasse-with-chinese-fx-regulator">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>UBS Appoints New Chief to Swiss Unit</strong> <span class="divider"> | </span></span> UBS has recruited the former chief executive of Germanyâs Commerzbank to lead its Swiss operations at a time when Credit Suisse is beefing up its domestic operations.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/1190d730-177f-11e6-9d98-00386a18e39d.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz48Jb2apWm">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hedge Fund Managers Ditch Decorum in Shouting Match Over China</strong> <span class="divider"> | </span></span> The clash on Wednesday at the Bellagio hotel in Las Vegas, where hedge fund industry executives are gathering, stands in contrast to last yearâs meeting, where many money managers expressed confidence in China.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-12/hedge-fund-managers-ditch-decorum-in-shouting-match-over-china">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Wind Power Operator to Pursue I.P.O. in Copenhagen" src="https://static01.nyt.com/images/2016/05/13/business/13db-danishipo/13db-danishipo-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Wind Power Operator to Pursue I.P.O. in Copenhagen</strong> <span class="divider"> | </span></span> Dong Energy, which is the worldâs largest offshore wind energy operator, plans a listing on Nasdaq in Copenhagen this summer.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/13/business/dealbook/denmark-wind-dong-energy-ipo.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Music Streaming Service Backed by Tencent Plans I.P.O. in U.S. </strong> <span class="divider"> | </span></span> China Music Corporation, the owner of the online music services Kugou and Kuwo, is planning an initial public offering in the United States as competition heats up to win the ears of Chinese listeners, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/tencent-backed-music-streaming-service-plans-u-s-ipo-1462967987">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Pentagon Turns to Silicon Valley for Edge in Artificial Intelligence" src="https://static01.nyt.com/images/2016/05/12/business/12ARTIFICIAL/12ARTIFICIAL-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Pentagon Turns to Silicon Valley for Edge in Artificial Intelligence</strong> <span class="divider"> | </span></span> Secretary of Defense Ashton B. Carter takes his bridge-building message to Silicon Valley despite skepticism among some in the tech community.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/12/technology/artificial-intelligence-as-the-pentagons-latest-weapon.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="How Austin Beat Uber" src="https://static01.nyt.com/images/2016/05/12/opinion/12parker/12parker-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>How Austin Beat Uber</strong> <span class="divider"> | </span></span> Not everyone is eager to see the city âdisrupted,â even if it means more convenient ride sharing.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/12/opinion/how-austin-beat-uber.html">Op-Ed Contributor &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Google to Ban All Payday Loan Ads" src="https://static01.nyt.com/images/2016/05/11/business/12xp-google/12xp-google-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Google to Ban All Payday Loan Ads</strong> <span class="divider"> | </span></span> The web giant said the move was to protect its users from such lending, which often leads to unaffordable repayment terms and financial harm.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/12/business/google-to-ban-all-payday-loan-ads.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="E.U. Regulators Block Merger of British Mobile Carriers on Competition Grounds" src="https://static01.nyt.com/images/2016/05/05/nytnow/05EUtelecome/05EUtelecome-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>E.U. Regulators Block Merger of British Mobile Carriers on Competition Grounds</strong> <span class="divider"> | </span></span> The acquisition of O2 by Hutchison Whampoa, the owner of the operator Three, would have harmed consumer choice, the blocâs antitrust chief said.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/12/business/international/three-o2-merger-blocked-eu.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Embattled Blood Lab Theranos Makes a Bid to Regain Confidence" src="https://static01.nyt.com/images/2016/05/12/business/12THERANOS/12THERANOS-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Embattled Blood Lab Theranos Makes a Bid to Regain Confidence</strong> <span class="divider"> | </span></span> The blood-testing company, which is under criminal investigation, is replacing its chief operating officer and expanding its board.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/12/business/embattled-blood-lab-theranos-makes-a-bid-to-regain-confidence.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Valeant Promised Price Breaks on Drugs. Heart Hospitals Are Still Waiting." src="https://static01.nyt.com/images/2016/05/12/business/12valeant1/12valeant1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Valeant Promised Price Breaks on Drugs. Heart Hospitals Are Still Waiting.</strong> <span class="divider"> | </span></span> Several hospitals say nothing has changed since Valeant vowed to look into assertions that no hospital could be found that had received a discount.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/12/business/valeant-promised-price-breaks-on-drugs-heart-hospitals-are-still-waiting.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Dark Money in London </strong> <span class="divider"> | </span></span> An insider at a Swiss bank warned Britainâs financial watchdogs that bankers in its British office were offering services that could facilitate tax evasion and money laundering. The Financial Times examines whether the regulators turned a blind eye.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/2/1d805534-1185-11e6-839f-2922947098f0.html">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Malaysian Leaderâs Stepson Is Said to Fund U.S. Property Deals With 1MDB Money </strong> <span class="divider"> | </span></span>  At least $50 million said to have been diverted from a state investment fund in Malaysia was spent on luxury properties in New York and Los Angeles by the stepson of the Malaysian prime minister, according to documents reviewed by The Wall Street Journal and people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/malaysian-leader-najibs-stepson-allegedly-funded-u-s-property-deals-with-1mdb-money-1463022324?mod=asia_home">THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Goldman Sachs Gets Panama Papers Request From Regulator </strong> <span class="divider"> | </span></span> New Yorkâs Financial Services Department has asked Goldman Sachs and three other banks to provide it with information about shell companies established through a Panamanian law firm, Bloomberg reports, citing a person briefed on the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-11/goldman-sachs-gets-panama-request-from-new-york-bank-regulator">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Houston Court Cuts into Delawareâs Bankruptcy Business</strong> <span class="divider"> | </span></span> Lawyers who help decide where a company seeks bankruptcy protection say the Houston court could move some cases more quickly, saving oil and gas companies millions of dollars in potential legal fees. <br /><span class="kicker"><a href="//www.reuters.com/article/usa-court-bankruptcy-idUSL2N18825F?feedType=RSS&#038;feedName=USLegal">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Linn Energy Files for Bankruptcy</strong> <span class="divider"> | </span></span> The oil and gas producer Linn Energy filed for Chapter 11 bankruptcy on Wednesday after reaching a deal with lenders to restructure its $8.3 billion debt load and obtain $2.2 billion in new financing.<br /><span class="kicker"><a href="//www.wsj.com/articles/linn-energy-files-for-bankruptcy-1463001443?mod=pls_whats_news_us_business_f">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+<div id="addendums" class="addendums"><div class="story-addendum theme-correction"><strong>Correction: May 12, 2016</strong> <br>An earlier version of this article cited a Reuters article that Donald Trump's finance chairman had met with Kenneth Griffin. Reuters has since retracted the report.</div></div></div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/05/12/morning-agenda-hard-hats-for-hedge-funds-as-mergers-collapse/"
+					data-title="Morning Agenda: Hard Hats for Hedge Funds as Mergers Collapse"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Fund-Raisers Pitch for Trump at Hedge Fund Conference | Online Art Auctioneers to Merge&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/12/morning-agenda-hard-hats-for-hedge-funds-as-mergers-collapse/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":88,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

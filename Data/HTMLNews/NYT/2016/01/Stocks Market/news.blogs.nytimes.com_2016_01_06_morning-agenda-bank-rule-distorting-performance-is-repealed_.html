@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004127476"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1452077822" />
+<meta name="PUD" content="20160106" />
+<meta name="pdate" content="20160106" />
+<meta name="ptime" content="20160106055702" />
+<meta name="utime" content="20160106105702" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-01-06T10:57:02-05:00" />
+<meta name="DISPLAYDATE" content="January 6, 2016" />
+<meta name="dat" content="January 6, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Ackman, William A;Clinton, Hillary Rodham;Esteves, Andre Santos (1969- );Sanders, Bernard">
+<meta name="des" content="Banking and Financial Institutions;Book Trade and Publishing;China;Commodities;Drugs (Pharmaceuticals);Hedge Funds;Hospitals;Medicine and Health;Metals and Minerals;Private Equity;Stocks and Bonds">
+<meta name="org" content="Credit Suisse Group AG;Federal Reserve System;Financial Accounting Standards Board;GE Capital Corp;General Electric Company;JPMorgan Chase &amp; Company;KKR &amp; Co LP;Kraft Heinz Company;Microsoft Corp;Pfizer Inc;Valeant Pharmaceuticals International Inc">
+<meta name="ticker" content="Credit Suisse Group AG|CS|NYSE;General Electric Company|GE|NYSE;JPMorgan Chase & Company|JPM|NYSE;KKR & Co LP|KKR|NYSE;Microsoft Corp|MSFT|NASDAQ;Pfizer Inc|PFE|NYSE;Valeant Pharmaceuticals International Inc|VRX|NYSE" />
+<meta property="article:tag" content="Ackman William A" />
+<meta property="article:tag" content="Clinton Hillary Rodham" />
+<meta property="article:tag" content="Esteves Andre Santos (1969- )" />
+<meta property="article:tag" content="Sanders Bernard" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Book Trade and Publishing" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Commodities" />
+<meta property="article:tag" content="Drugs (Pharmaceuticals)" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Hospitals" />
+<meta property="article:tag" content="Medicine and Health" />
+<meta property="article:tag" content="Metals and Minerals" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Credit Suisse Group AG" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Financial Accounting Standards Board" />
+<meta property="article:tag" content="GE Capital Corp" />
+<meta property="article:tag" content="General Electric Company" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="KKR &amp; Co LP" />
+<meta property="article:tag" content="Kraft Heinz Company" />
+<meta property="article:tag" content="Microsoft Corp" />
+<meta property="article:tag" content="Pfizer Inc" />
+<meta property="article:tag" content="Valeant Pharmaceuticals International Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Ackman William A,Clinton Hillary Rodham,Esteves Andre Santos (1969- ),Sanders Bernard,Banking and Financial Institutions,Book Trade and Publishing,China,Commodities,Drugs (Pharmaceuticals),Hedge Funds,Hospitals,Medicine and Health,Metals and Minerals,Private Equity,Stocks and Bonds,Credit Suisse Group AG,Federal Reserve System,Financial Accounting Standards Board,GE Capital Corp,General Electric Company,JPMorgan Chase &amp; Company,KKR &amp; Co LP,Kraft Heinz Company,Microsoft Corp,Pfizer Inc,Valeant Pharmaceuticals International Inc,DealBook" />
+<meta name="news_keywords" content="Commodity,Hospital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F01%2F06%2Fmorning-agenda-bank-rule-distorting-performance-is-repealed%2F" title="Morning Agenda: Bank Rule Distorting Performance Is Repealed" />
+<meta name="description" content="Centerview Benefits From Wall Street Pivot &#124; Valeant Said to Be Planning to Appoint New Chief" />
+<meta name="hdl" content="Morning Agenda: Bank Rule Distorting Performance Is Repealed" />
+<meta property="og:title" content="Morning Agenda: Bank Rule Distorting Performance Is Repealed" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/01/06/morning-agenda-bank-rule-distorting-performance-is-repealed/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Centerview Benefits From Wall Street Pivot &#124; Valeant Said to Be Planning to Appoint New Chief" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Bank Rule Distorting Performance Is Repealed" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/01/06/morning-agenda-bank-rule-distorting-performance-is-repealed/" />
+<meta name="twitter:description" content="Centerview Benefits From Wall Street Pivot &#124; Valeant Said to Be Planning to Appoint New Chief" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/01/05/what-were-reading-118/' />
+<link rel='next' title='Morning Agenda: China Stops Trading After Less Than Half an Hour' href='//news.blogs.nytimes.com/2016/01/07/morning-agenda-china-stops-trading-after-less-than-half-an-hour/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/01/06/morning-agenda-bank-rule-distorting-performance-is-repealed/' />
+<link rel='shortlink' href='//nyti.ms/1UvVYK1' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/01/06/morning-agenda-bank-rule-distorting-performance-is-repealed/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Bank Rule Distorting Performance Is Repealed - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3988 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Bank Rule Distorting Performance Is Repealed        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/01/06/morning-agenda-bank-rule-distorting-performance-is-repealed/"
+	 data-title="Morning Agenda: Bank Rule Distorting Performance Is Repealed"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Centerview Benefits From Wall Street Pivot | Valeant Said to Be Planning to Appoint New Chief&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/01/06/morning-agenda-bank-rule-distorting-performance-is-repealed/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="January 6, 2016 5:57 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Bank Rule Distorting Performance Is Repealed</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-01-06T10:57:02+00:00" itemprop="datePublished">January 6, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">January 6, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3988 post type-post status-publish hentry category-dealbook tag-ackman-william-a tag-banking-and-financial-institutions tag-book-trade-and-publishing tag-china tag-clinton-hillary-rodham tag-commodities tag-credit-suisse-group-ag tag-drugs-pharmaceuticals tag-esteves-andre-santos-1969 tag-federal-reserve-system tag-financial-accounting-standards-board tag-ge-capital-corp tag-general-electric-company tag-hedge-funds tag-hospitals tag-jpmorgan-chase-company tag-kkr-co-lp tag-kraft-heinz-company tag-medicine-and-health tag-metals-and-minerals tag-microsoft-corp tag-pfizer-inc tag-private-equity tag-sanders-bernard tag-stocks-and-bonds tag-valeant-pharmaceuticals-international-inc per-ackman-william-a per-clinton-hillary-rodham per-esteves-andre-santos-1969 per-sanders-bernard des-banking-and-financial-institutions des-book-trade-and-publishing des-china des-commodities des-drugs-pharmaceuticals des-hedge-funds des-hospitals des-medicine-and-health des-metals-and-minerals des-private-equity des-stocks-and-bonds org-credit-suisse-group-ag org-federal-reserve-system org-financial-accounting-standards-board org-ge-capital-corp org-general-electric-company org-jpmorgan-chase-company org-kkr-co-lp org-kraft-heinz-company org-microsoft-corp org-pfizer-inc org-valeant-pharmaceuticals-international-inc news_keywords-commodity news_keywords-hospital" id="post-3988">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Bank Rule Distorting Performance Is Repealed</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-01-06T10:57:02+00:00" itemprop="datePublished">January 6, 2016 5:57 am</time>
+			<!-- date updated --><span class="visually-hidden updated">January 6, 2016 5:57 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/01/06/morning-agenda-bank-rule-distorting-performance-is-repealed/" data-title="Morning Agenda: Bank Rule Distorting Performance Is Repealed" data-description="Centerview Benefits From Wall Street Pivot | Valeant Said to Be Planning to Appoint New Chief">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BANK RULE DISTORTING PERFORMANCE IS REPEALED</strong> <span class="divider"> | </span></span> An <b>âAlice in Wonderlandâ accounting rule</b> that allowed banks to book huge gains because they were stressed has been overturned, <a href="//www.nytimes.com/2016/01/06/business/dealbook/bank-rule-distorting-performance-is-repealed.html?ref=dealbook">Peter Eavis reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">The rule was instated as the financial system was starting to crumble and <b>the Financial Accounting Standards Board voted to get rid of it</b>, along with several other changes. </p>
+<p class="story-body-text" itemprop="articleBody">The financial industry had pushed for the rule, which had enabled struggling firms to print magical profits. But <b>banks ended up despising the rule because of the confusion it added to their earnings statements</b>.  </p>
+<p class="story-body-text" itemprop="articleBody">The rule took an accounting approach that says balance sheets need to closely reflect prices in the marketplace. If a bank holds bonds, its financial statements must reflect the value of the bonds in the market. </p>
+<p class="story-body-text" itemprop="articleBody">This <b>so-called fair value approach</b> can prevent banks from hiding losses and provides information to investors assessing whether to lend to banks. During the financial crisis, it gave regulators and investors an approximation of the losses the banks were having on bad mortgage securities. </p>
+<p class="story-body-text" itemprop="articleBody">But the enforcement of the rule that was scrapped on Tuesday allowed banks under stress to <b>book profits on the possibility that they could buy back their own distressed bonds at a discount</b>. The bank might not even have the cash to buy back its own debt even if it wanted to. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CENTERVIEW BENEFITS FROM WALL STREET PIVOT</strong> <span class="divider"> | </span></span> Large corporations are increasingly turning to boutique investment banks like Centerview for advice on deals and strategy,<br />
+<a href="//www.nytimes.com/2016/01/06/business/dealbook/centerview-benefits-from-wall-sts-pivot-to-smaller-banks.html?ref=dealbook">David Gelles reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Boutiques have gained favor as they are <b>unburdened by larger trading and financing operations that can create conflicts of interest</b> and their small staff sizes decrease the chance of a deal being leaked. The boutiques are also luring senior deal makers away from big banks. </p>
+<p class="story-body-text" itemprop="articleBody">Blair W. Effron, a founder of Centerview, was involved in General Electricâs disposal of GE Capital, the plan to merge Kraft and Heinz, and Pfizerâs merger with Allergan. The firm earned about $600 million last year â <b>a huge sum for a bank that has just 35 partners</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Centerview and other insurgents including Lazard, Evercore Partners, Moelis &#038; Company and LionTree have been turning heads as they have raked in more fees and bigger assignments. <b>All of the eight largest deals of the year involve boutique firms. </b></p>
+<p class="story-body-text" itemprop="articleBody">Those who have joined the wave of top bankers leaving for boutiques can find that <b>they make more of an impact at a smaller firm and the paydays can be bigger</b>. Boutiques have been unburdened by the restrictions that reined in compensation at banks that received government bailouts. </p>
+<p class="story-body-text" itemprop="articleBody">Those that start their own firms can see their value of equity swell. Ken Moelisâs stake in his own firm was worth nearly $500 million when it went public in 2014. Robert F. Greenhill founded his own firm and saw his worth balloon to at least $550 million. </p>
+<p class="story-body-text" itemprop="articleBody">Despite the momentum such boutique firms are gaining, <b>there are still questions over how long they are built to last</b>. Small investment banks depend on companiesâ willingness to pay top dollar and a downturn in mergers can dry up business fast. Some boutiques are struggling even in the current booming merger market.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The Federal Reserve will release the minutes from Decemberâs <b>Federal Open Market Committee</b> meeting at 2 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>VALEANT SAID TO BE PLANNING TO APPOINT NEW CHIEF</strong> <span class="divider"> | </span></span> Valeant Pharmaceuticals is planning to appoint a new chief executive while J. Michael Pearson remains in the hospital,<br />
+<a href="//www.wsj.com/articles/valeant-planning-to-appoint-new-leader-as-ceo-remains-hospitalized-1452036751">The Wall Street Journal reports</a>, citing people familiar with the matter. <b>It is unclear whether the management change would be permanent.</b> </p>
+<p class="story-body-text" itemprop="articleBody">These people told the Wall Street Journal that Howard Schiller, a Valeant director who resigned as chief financial offer last year, and his replacement, Robert Rosiello, are possible candidates for the position. <b>They also said that Mr. Pearsonâs condition had not improved markedly and the board believed a single leader was necessary. </b></p>
+<p class="story-body-text" itemprop="articleBody">The company is being <b>led by a three-person group that was created in December after Mr. Pearson was hospitalized for severe pneumonia</b>, as <a href="//www.nytimes.com/2015/12/29/business/valeant-pearson-chief-executive-medical-leave.html">Rachel Abrams reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">Mr. Rosiello is in that group, along with Robert Chai-Onn, Valeantâs executive vice president and general counsel and Dr. Ari Kellen, an executive vice president and company group chairman.</p>
+<p class="story-body-text" itemprop="articleBody">Before joining Valeant, Mr. Rosiello spent three decades at McKinsey as a consultant in the health care sector, specializing in helping companies achieve growth through acquisitions. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Schiller was a senior banker at Goldman Sachs before joining Valeant as finance chief in 2011. He stepped down last year, but remained on the board and is on a special committee responsible for overseeing the three-person chief executive group.</p>
+<p class="story-body-text" itemprop="articleBody">Valeant shares fell more than 10 percent after the news that Mr. Pearson had been hospitalized â <b>a sign, some said, of how closely associated he is with the company</b>. Shares also fell in after-hours trading once The Wall Street Journal reported that there were plans to appoint a new chief.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="New World Development Offers $2.8 Billion to Take Unit Private" src="https://static01.nyt.com/images/2016/01/07/business/07db-newworld/07db-newworld-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New World Development Offers $2.8 Billion to Take Unit Private</strong> <span class="divider"> | </span></span> A bid by the Hong Kong parent company for New World China Land in 2014 fell through because of a head count rule that can give veto power to holders of a tiny stake.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/07/business/dealbook/hong-kong-new-world-cheng-yu-tung.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Dalian Wanda to Invest $2.3 Billion to Build Hospitals in China</strong> <span class="divider"> | </span></span> Dalian Wanda Group said it would invest $2.3 billion to build three big international hospitals in the Chinese cities of Shanghai, Chengdu and Qingdao that will be managed by International Hospitals Group, the British hospitals company. <br /><span class="kicker"><a href="//www.ft.com/fastft/2016/01/06/dalian-wanda-to-invest-2-3bn-in-hospitals/"> THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Orange in Talks to Acquire Bouygues Telecom" src="https://static01.nyt.com/images/2016/01/06/business/06db-orange_web1/06db-orange_web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Orange in Talks to Acquire Bouygues Telecom</strong> <span class="divider"> | </span></span> The takeover would cement Orangeâs position as the largest mobile carrier in France, though any deal would face tough questions from the regionâs antitrust regulators.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/06/business/dealbook/orange-in-talks-to-acquire-bouygues-telecom.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Penguin Random Sells Self-Publishing Unit</strong> <span class="divider"> | </span></span> Penguin Random House said that it had sold Author Solutions, which allowed writers direct access to publishing tools, to an unnamed affiliate of the United States private equity firm Najafi Companies.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/a6070036-b3d6-11e5-8358-9a82b43f6b2f.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3wEx4s4r5">THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinese Group Buys Henry Bath Metals Firm</strong> <span class="divider"> | </span></span> China Materials Storage and Transportation Development Company, a state-owned enterprise has acquired a majority stake in the 221-year-old metals warehousing business owned by the trading firm Mercuria, highlighting the countryâs determination to play a greater role in global commodity markets.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/b073ce92-b399-11e5-8358-9a82b43f6b2f.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3wEx4s4r5">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Downfall of AndrÃ© Esteves Stands Out in Brazil Scandal" src="https://static01.nyt.com/images/2015/12/30/business/30db-pactual-web1/30db-pactual-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Downfall of AndrÃ© Esteves Stands Out in Brazil Scandal</strong> <span class="divider"> | </span></span> The arrest of Mr. Esteves, who once epitomized Brazilâs global ambitions, in a corruption investigation has rattled the financial community.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/06/business/dealbook/downfall-of-andre-esteves-stands-out-in-brazil-scandal.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Credit Suisseâs Stock Trading Chief in U.S. to Leave</strong> <span class="divider"> | </span></span> Credit Suisse Groupâs head of  equities trading in the United States, Daniel Mathisson, plans to leave the bank in February, The Wall Street Journal reports, citing a person familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/credit-suisse-u-s-stock-trading-chief-to-leave-1452042127?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="LVMHâs Private Equity Arm to Merge With Catterton" src="https://static01.nyt.com/images/2016/01/06/business/06DB-PRIVATE/06DB-PRIVATE-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>LVMHâs Private Equity Arm to Merge With Catterton</strong> <span class="divider"> | </span></span> The two said that the new company, to be named L Catterton, would be the largest consumer-focused investor firm in the world.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/06/business/dealbook/lvmhs-private-equity-arm-to-merge-with-catterton.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Kohlberg Kravis Roberts Buying Mills Fleet Farm</strong> <span class="divider"> | </span></span> The private equity firmâs first deal of the year is one that builds on its portfolio of retail companies.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/06/business/dealbook/kohlberg-kravis-roberts-buying-mills-fleet-farm.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Pershing Square Ends 2015 With a Loss of 20.5%" src="https://static01.nyt.com/images/2016/01/06/business/06db-hedge-web/06db-hedge-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Pershing Square Ends 2015 With a Loss of 20.5%</strong> <span class="divider"> | </span></span> The hedge fund, founded by William A. Ackman, finished the year with the worst loss in its 11-year history.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/06/business/dealbook/william-ackman-fund-ends-2015-with-a-20-5-loss.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinese Pharmaceutical Company Plans I.P.O. Worth Up to $3 Billion </strong> <span class="divider"> | </span></span> Jiangsu Hansoh Pharmaceutical is planning to tap demand to invest in Chinaâs growing health care market by raising up to $3 billion in an initial public offering later this year, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/chinas-jiangsu-hansoh-pharmaceutical-plans-up-to-3-billion-hong-kong-ipo-1451990179"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JPMorgan Pays Additional $48 Million to Settle Mortgage Servicing Issues</strong> <span class="divider"> | </span></span> The bank already paid $2 billion in a 2013 settlement with the Office of the Comptroller of the Currency, but did not meet all the obligations of that earlier settlement.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/06/business/dealbook/jpmorgan-pays-48-million-more-to-settle-mortgage-servicing-issues.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Bernie Sanders Attacks Hillary Clinton Over Regulating Wall Street" src="https://static01.nyt.com/images/2016/01/06/us/06sanders/06sanders-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bernie Sanders Attacks Hillary Clinton Over Regulating Wall Street</strong> <span class="divider"> | </span></span> The senator said that his rival was too cozy with the financial industry and that his regulatory proposals were bigger and bolder.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/06/us/politics/bernie-sanders-attacks-hillary-clinton-over-regulating-wall-street.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Microsoft Faces New Scrutiny in China" src="https://static01.nyt.com/images/2016/01/06/business/06chinasoft_web1/06chinasoft_web1-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Microsoft Faces New Scrutiny in China</strong> <span class="divider"> | </span></span> The companyâs problems in the country began in 2014, when it ended support for Windows XP, hoping users would upgrade to more recent operating systems.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/06/business/international/microsoft-china-antitrust-inquiry.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China Stocks Rise, but Offshore Renminbi Hits New Low</strong> <span class="divider"> | </span></span> Chinaâs blue chip shares ended sharply higher on Wednesday after state news media said that a selling ban on major shareholders brought in to help arrest a market crash last summer would remain in place until the government publishes new rules on such disposals.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2016/01/06/business/06reuters-china-markets.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/01/06/morning-agenda-bank-rule-distorting-performance-is-repealed/"
+					data-title="Morning Agenda: Bank Rule Distorting Performance Is Repealed"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Centerview Benefits From Wall Street Pivot | Valeant Said to Be Planning to Appoint New Chief&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/01/06/morning-agenda-bank-rule-distorting-performance-is-repealed/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":48,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

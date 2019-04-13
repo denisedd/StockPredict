@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003806439"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1437131494" />
+<meta name="PUD" content="20150717" />
+<meta name="pdate" content="20150717" />
+<meta name="ptime" content="20150717071134" />
+<meta name="utime" content="20150717111134" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-07-17T11:11:34-04:00" />
+<meta name="DISPLAYDATE" content="July 17, 2015" />
+<meta name="dat" content="July 17, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Germany;Schauble, Wolfgang">
+<meta name="des" content="Banking and Financial Institutions;Reddit Inc">
+<meta name="org" content="888 Holdings PLC;Baker Hughes Inc;Deutsche Bank AG;DISH Network Corporation;European Central Bank;Facebook Inc;Federal Financial Supervisory Authority (BaFin) (Germany);Financial Conduct Authority (Great Britain);Greece;Halliburton Company;Hedge Funds;Iksil, Bruno;JPMorgan Chase &amp; Company;LendingClub Corporation;Magna International Inc;Monsanto Company;Partnerre Ltd;Samsung Group;Syngenta AG;The Blackstone Group;Treasury Department">
+<meta name="geo" content="Far East, South and Southeast Asia and Pacific Areas;South Korea">
+<meta name="ticker" content="Baker Hughes Inc|BHI|NYSE;Deutsche Bank AG|DB|NYSE;Facebook Inc|FB|NASDAQ;Halliburton Company|HAL|NYSE;JPMorgan Chase & Company|JPM|NYSE;Magna International Inc|MGA|NYSE;Monsanto Company|MON|NYSE;Partnerre Ltd|PRE|NYSE;Syngenta AG|SYT|NYSE" />
+<meta property="article:tag" content="Germany" />
+<meta property="article:tag" content="Schauble Wolfgang" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Reddit Inc" />
+<meta property="article:tag" content="888 Holdings PLC" />
+<meta property="article:tag" content="Baker Hughes Inc" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="DISH Network Corporation" />
+<meta property="article:tag" content="European Central Bank" />
+<meta property="article:tag" content="Facebook Inc" />
+<meta property="article:tag" content="Federal Financial Supervisory Authority (BaFin) (Germany)" />
+<meta property="article:tag" content="Financial Conduct Authority (Great Britain)" />
+<meta property="article:tag" content="Greece" />
+<meta property="article:tag" content="Halliburton Company" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Iksil Bruno" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="LendingClub Corporation" />
+<meta property="article:tag" content="Magna International Inc" />
+<meta property="article:tag" content="Monsanto Company" />
+<meta property="article:tag" content="Partnerre Ltd" />
+<meta property="article:tag" content="Samsung Group" />
+<meta property="article:tag" content="Syngenta AG" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="Treasury Department" />
+<meta property="article:tag" content="Far East South and Southeast Asia and Pacific Areas" />
+<meta property="article:tag" content="South Korea" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Germany,Schauble Wolfgang,Banking and Financial Institutions,Reddit Inc,888 Holdings PLC,Baker Hughes Inc,Deutsche Bank AG,DISH Network Corporation,European Central Bank,Facebook Inc,Federal Financial Supervisory Authority (BaFin) (Germany),Financial Conduct Authority (Great Britain),Greece,Halliburton Company,Hedge Funds,Iksil Bruno,JPMorgan Chase &amp; Company,LendingClub Corporation,Magna International Inc,Monsanto Company,Partnerre Ltd,Samsung Group,Syngenta AG,The Blackstone Group,Treasury Department,Far East South and Southeast Asia and Pacific Areas,South Korea,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F07%2F17%2Fmorning-agenda-samsung-ct-shareholders-reject-elliotts-activism%2F" title="Morning Agenda: Samsung C&amp;T Shareholders Reject Elliott&#8217;s Activism" />
+<meta name="description" content="Samsung C&amp;T Shareholders Reject Elliott&#8217;s Activism &#124; Greek Exit Prospect Remains &#124; Online Lending Inspection &#124; Elusive Convictions" />
+<meta name="hdl" content="Morning Agenda: Samsung C&amp;T Shareholders Reject Elliott&#039;s Activism" />
+<meta property="og:title" content="Morning Agenda: Samsung C&amp;T Shareholders Reject Elliott&#039;s Activism" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/07/17/morning-agenda-samsung-ct-shareholders-reject-elliotts-activism/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Samsung C&amp;T Shareholders Reject Elliott&#8217;s Activism &#124; Greek Exit Prospect Remains &#124; Online Lending Inspection &#124; Elusive Convictions" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Samsung C&amp;T Shareholders Reject Elliott&#039;s Activism" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/07/17/morning-agenda-samsung-ct-shareholders-reject-elliotts-activism/" />
+<meta name="twitter:description" content="Samsung C&amp;T Shareholders Reject Elliott&#8217;s Activism &#124; Greek Exit Prospect Remains &#124; Online Lending Inspection &#124; Elusive Convictions" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Greece Adopts Austerity' href='//news.blogs.nytimes.com/2015/07/16/dealbook-greece-adopts-austerity/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/07/17/what-were-reading-73/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/07/17/morning-agenda-samsung-ct-shareholders-reject-elliotts-activism/' />
+<link rel='shortlink' href='//nyti.ms/1KceshC' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/07/17/morning-agenda-samsung-ct-shareholders-reject-elliotts-activism/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Samsung C&amp;T Shareholders Reject Elliott&#039;s Activism - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2789 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Samsung C&#038;T Shareholders Reject Elliott&#8217;s Activism        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/07/17/morning-agenda-samsung-ct-shareholders-reject-elliotts-activism/"
+	 data-title="Morning Agenda: Samsung C&amp;T Shareholders Reject Elliott&#8217;s Activism"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Samsung C&amp;T Shareholders Reject Elliott&#039;s Activism | Greek Exit Prospect Remains | Online Lending Inspection | Elusive Convictions&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/07/17/morning-agenda-samsung-ct-shareholders-reject-elliotts-activism/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 17, 2015 7:11 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Samsung C&#038;T Shareholders Reject Elliott&#8217;s Activism</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-07-17T11:11:34+00:00" itemprop="datePublished">July 17, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">July 17, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2789 post type-post status-publish hentry category-dealbook tag-888-holdings-plc tag-baker-hughes-inc tag-banking-and-financial-institutions tag-deutsche-bank-ag tag-dish-network-corporation tag-european-central-bank tag-facebook-inc tag-far-east-south-and-southeast-asia-and-pacific-areas tag-federal-financial-supervisory-authority-bafin-germany tag-financial-conduct-authority-great-britain tag-germany tag-greece tag-halliburton-company tag-hedge-funds tag-iksil-bruno tag-jpmorgan-chase-company tag-lendingclub-corporation tag-magna-international-inc tag-monsanto-company tag-partnerre-ltd tag-reddit-inc tag-samsung-group tag-schauble-wolfgang tag-south-korea tag-syngenta-ag tag-the-blackstone-group tag-treasury-department per-germany per-schauble-wolfgang des-banking-and-financial-institutions des-reddit-inc org-888-holdings-plc org-baker-hughes-inc org-deutsche-bank-ag org-dish-network-corporation org-european-central-bank org-facebook-inc org-federal-financial-supervisory-authority-bafin-germany org-financial-conduct-authority-great-britain org-greece org-halliburton-company org-hedge-funds org-iksil-bruno org-jpmorgan-chase-company org-lendingclub-corporation org-magna-international-inc org-monsanto-company org-partnerre-ltd org-samsung-group org-syngenta-ag org-the-blackstone-group org-treasury-department geo-far-east-south-and-southeast-asia-and-pacific-areas geo-south-korea" id="post-2789">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Samsung C&#038;T Shareholders Reject Elliott&#8217;s Activism</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-07-17T11:11:34+00:00" itemprop="datePublished">July 17, 2015 7:11 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 17, 2015 7:11 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/07/17/morning-agenda-samsung-ct-shareholders-reject-elliotts-activism/" data-title="Morning Agenda: Samsung C&#038;T Shareholders Reject Elliott&#8217;s Activism" data-description="Samsung C&amp;T Shareholders Reject Elliott&#039;s Activism | Greek Exit Prospect Remains | Online Lending Inspection | Elusive Convictions">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SAMSUNG C&#038;T SHAREHOLDERS REJECT ELLIOTTâS ACTIVISM</strong> <span class="divider"> | </span></span> A rare test for shareholder activism in Asia failed on Friday with the Lee family of Samsung securing its future leadership in a face-off with a big New York hedge fund. Shareholders in a Samsung Group subsidiary voted for a merger with another Samsung company, clearing the way for a father-to-son transfer of power in Samsungâs largest family-owned conglomerate, <a href="//www.nytimes.com/2015/07/18/business/dealbook/samsung-ct-shareholders-back-cheil-industries-merger-defying-activist-hedge-fund-elliott-associates.html?ref=business">Choe Sang-Hun and Neil Gough report in DealBook</a>. The approval delivers a <b>crushing defeat to Elliott Associates</b>, the activist hedge fund, which opposed the merger.</p>
+<p class="story-body-text" itemprop="articleBody"> Elliott owns 7.12 percent of Samsung C&#038;T and had campaigned against its all-stock merger with Cheil Industries, another Samsung company. It had argued that Cheilâs $8 billion takeover of Samsung C&#038;T <b>cheated the minority shareholders</b> by grossly undervaluing Samsung C&#038;T shares. It said it was an <b>unlawful attempt to help Lee Jae-yong</b>, the song of Samsungâs chairman, Lee Kun-hee, inherit the conglomerate. Samsung has pushed back, depicting Elliot as a <b>foreign âvultureâ capitalist</b> trying to disrupt an orderly generational change at the crown jewel of the South Korean economy in order to make a quick profit and exit.</p>
+<p class="story-body-text" itemprop="articleBody"> The merger carries implications that reach well beyond the Lee family. Samsung, with its 70 subsidiaries ranging from shipbuilding to home appliances, generates a quarter of South Koreaâs gross domestic product and its influence in the nation is pervasive. Other family-controlled conglomerates, known as chaebol, will have been watching the result carefully as they are also preparing their chairmenâs children for succession.</p>
+<p class="story-body-text" itemprop="articleBody"> Although the South Korean public is increasingly skeptical of such dynastic transfers of power, people remain wary of foreign investors and activisim like Elliottâs is rarely seen in Asia. Publicly traded companies often remain under the control of close-knit family groups of state-backed shareholders, while legal protections for minority investors can be patchy, so many activist hedge funds choose to stay away. </p>
+<p class="story-body-text" itemprop="articleBody"> However, all was not lost for Elliot. Cheil and Samsung C&#038;T have promised to bolster corporate governance by increasing dividends and creating a shareholder rights committee after the merger.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>GREEK EXIT PROSPECT REMAINS</strong> <span class="divider"> | </span></span> Wolfgang SchÃ¤uble, Germanyâs finance minister, suggested on Thursday that Greeceâs best shot at getting debt relief would be <b>to leave the euro</b>, <a href="//www.nytimes.com/2015/07/17/world/europe/eurozone-greece-debt-germany.html?hp&#038;action=click&#038;pgtype=Homepage&#038;module=first-column-region&#038;region=top-news&#038;WT.nav=top-news&#038;assetType=nyt_now">Melissa Eddy reports in The New York Times</a>. His comments made Germanyâs role as champion of European integration look shakier after a week of negotiations, during which Germanyâs harder, more selfish edge has been on display.</p>
+<p class="story-body-text" itemprop="articleBody"> Mr. SchÃ¤uble stressed that he was not pushing the Greeks to take a particular course and that he was only talking about <b>a temporary exit from the euro</b>. But with the new bailout up for vote on Friday, his remarks were a stark reminder that there is a greater willingness in Germany to question whether the goal of âever-closer unionâ in Europe should be reassessed.</p>
+<p class="story-body-text" itemprop="articleBody"> Even as Greeceâs prospects were clouded by political uncertainty and Mr. SchÃ¤ubleâs comments, European finance officials pledged their support and money, <a href="//www.nytimes.com/2015/07/17/business/international/european-central-bank-meeting-greece.html">Andrew Higgins and Jack Ewing write in The New York Times</a>. Eurozone finance ministers agreed to âgrant in principleâ a new bailout package and, along with ministers from the rest of the European Union, agreed to <b>short-term loans of as much as 7 billion euros</b> to meet Greeceâs immediate needs.</p>
+<p class="story-body-text" itemprop="articleBody"> The European Central Bank also offered its support by raising the cap on its emergency loans by â¬900 million, to nearly â¬90 billion. This prompted Deputy Finance Minister Dimitris Mardas of Greece to say on television that <b>banks would reopen on Monday</b>.</p>
+<p class="story-body-text" itemprop="articleBody"> Despite these positive signals, the process of rescuing Greece remains precarious. The E.C.B. extended its <b>emergency credit for only one week</b> and the eurozone finance ministers said they were supporting the bailout only on the condition that Athens swiftly adopt more measures to overhaul its economy.</p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ONLINE LENDING INSPECTION</strong> <span class="divider"> | </span></span> The Treasury Department is doing a study of online marketplace lenders, in an effort to determine whether regulations are keeping up with the rapidly growing industry, <a href="//www.nytimes.com/2015/07/17/business/dealbook/treasury-examines-whether-to-regulate-online-lenders.html?ref=business">Michael Corkery reports in DealBook</a>. As traditional banks have retreated from making small loans, a flood of online lenders flush with funding have filled the void. </p>
+<p class="story-body-text" itemprop="articleBody"> These marketplace lenders say they are providing valuable credit to important, underserved segments of the economy, often with less trouble and at lower cost. The Treasury said it wanted to examine these claims and âhow the financial regulatory framework should evolve to support the safe growth of the industry.â </p>
+<p class="story-body-text" itemprop="articleBody"> Despite the supportive tone of the Treasuryâs statements on the exercise, the department is also raising some pointed questions about the loosely regulated industry, Mr. Corkery notes. In its request for information, the Treasury said its questions included how borrowers are assessed for creditworthiness and whether lenders should be required to have âskin in the game,â meaning they retain some of the risk in case of default. </p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> At 8.30 a.m. <b>the Labor Department</b> reports on the latest prices for consumers, and <b>the Commerce Department</b> releases data on new residential construction. <b>Stanley Fischer</b>, the Federal Reserve Vice Chairman, discusses the central bankâs priorities at the United States Chamber of Commerce Center for Capital Markets Competitiveness in Washington at 10 a.m. <b>Honeywellâs</b> earnings for the second quarter will be released before the New York Stock Exchange opens and followed by a conference call for investors at 9:30 a.m. </p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ELUSIVE CONVICTIONS</strong> <span class="divider"> | </span></span> It seems perverse that Bruno Iksil, known as <b>the London Whale</b>, faces no charges for his risky bets but his junior aide does, <a href="//www.nytimes.com/2015/07/17/business/figures-in-london-whale-trading-case-escape-the-authorities-nets.html?ref=business">writes James B. Stewart in the Common Sense column</a>. Mr. Iksilâs bets on complex derivative contracts earned him his nickname and ended up costing JPMorgan Chase $6.2 billion in losses. But Britainâs Financial Conduct Authority has dropped its investigation and decided to take no further action against him â a sign of just how difficult it is to <b>hold someone legally accountable</b> for such risky behavior. </p>
+<p class="story-body-text" itemprop="articleBody"> Rather than the rogue trader he was portrayed as in early news coverage, government documents and interviews show Mr. Iksil as a conflicted figure, <b>troubled by conscience</b> and pushed by his bosses to undertake the risky derivatives trading that proved his undoing. He did not conceal his positions and his strategy was discussed repeatedly with higher-ranking executives. He also <b>sounded the alarm</b> â though he did not stop inflated valuations or blow the whistle to senior executives. </p>
+<p class="story-body-text" itemprop="articleBody"> The bank agreed to pay $920 million to resolve accusations that it had misstated financial results and lacked sufficient internal controls to prevent its traders from âfraudulently overvaluing investments.â Although the investigation is still open, Mr. Iksilâs boss, who is Spanish, and his aide, who is French, are <b>unlikely to be extradited</b> from their countries. </p>
+<p class="story-body-text" itemprop="articleBody"> âItâs so frustrating about these cases,â said Brandon L. Garrett, a law professor and author of the book âToo Big to Jail.â âItâs hard for prosecutors when some of the key figures are resisting extradition and wonât talk to you. But you get the sense that they get a few small fish, start working their way up the chain, and then at some point, they just drop it. We want the <b>right people to be held accountable</b>, not some expendable minions.â </p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Magna International to Buy Getrag of Germany for $1.9 Billion" src="https://static01.nyt.com/images/2015/07/17/business/17db-magna-web/17db-magna-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Magna International to Buy Getrag of Germany for $1.9 Billion</strong> <span class="divider"> | </span></span> The deal for Getrag Group will bolster Magnaâs powertrain and transmission business and increase its growth potential in the Chinese market.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/17/business/dealbook/magna-international-to-buy-getrag-of-germany-for-1-9-billion.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PartnerRe and Axis Capital Unveil Sweetened Terms for Merger</strong> <span class="divider"> | </span></span> The move comes as a rival bidder, Exor, continues to press investors to vote against the Axis Capital deal.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/17/business/dealbook/partnerre-and-axis-capital-unveil-sweetened-terms-for-merger.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>888 Holdings Agrees to Buy Online Gambling Company Bwin.Party</strong> <span class="divider"> | </span></span> The Gibraltar-based 888 Holdings triumphed over GVC Holdings in a deal worth about $1.4 billion.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/18/business/dealbook/888-holdings-agrees-to-buy-online-gambling-company-bwinparty.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>T-Mobile Acquisition Talks Said to Have Stalled</strong> <span class="divider"> | </span></span> Talks for Dish Network to buy T-Mobile US from Deutsche Telekom have stalled over concerns related to valuation and structure, Bloomberg reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-07-16/dish-talks-for-t-mobile-said-to-stall-on-structure-valuation"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Traders Pounce on Doubts About Halliburton-Baker Hughes Deal</strong> <span class="divider"> | </span></span> The possibility that regulators may not approve Halliburtonâs $35 billion takeover of fellow oilfield services company Baker Hughes this year has given investors with an appetite for risk a high-reward opportunity.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/07/15/us-halliburton-baker-hughes-investment-idUSKCN0PP2BO20150715?feedType=nl&#038;feedName=innovationNews"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Facebookâs Oculus to Buy Gesture-Control Firm</strong> <span class="divider"> | </span></span> Facebookâs Oculus VR said Thursday it agreed to pay about $60 million for the Israel-based gesture-control company Pebbles.<br /><span class="kicker"><a href="//blogs.wsj.com/digits/2015/07/16/facebook-to-pay-about-60-million-for-gesture-control-firm-pebbles/">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>How a Monsanto-Syngenta Merger Could Happen</strong> <span class="divider"> | </span></span> In resisting a takeover bid from rival Monsanto, Syngenta has argued that a merger would run afoul of antitrust regulators, but the situation may not be so clear cut.<br /><span class="kicker"><a href="//www.wsj.com/articles/how-a-monsanto-syngenta-merger-could-happen-1437004308"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Germany Said to Blast Deutsche Bank Over Culture</strong> <span class="divider"> | </span></span> German regulators accused a half-dozen current Deutsche Bank executives of failing to stop or tell regulators about years of attempted market manipulation, according to a confidential report reviewed by The Wall Street Journal.<br /><span class="kicker"><a href="//www.wsj.com/articles/germany-blasts-deutsche-bank-executives-over-broken-culture-1437068759?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HSBC Investigated by Saudi Regulator</strong> <span class="divider"> | </span></span> HSBCâs Saudi Arabia unit is under investigation by regulators in the kingdom for its role in a stock listing that left investors nursing heavy losses.<br /><span class="kicker"><a href="//www.wsj.com/articles/hsbc-in-the-cross-hairs-of-saudi-regulator-1437067469?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Hans H. Angermueller, Banker Who Helped Free U.S. Hostages in Iran, Dies at 90" src="https://static01.nyt.com/images/2015/07/17/business/17db-angermueller-web/17db-angermueller-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hans H. Angermueller, Banker Who Helped Free U.S. Hostages in Iran, Dies at 90</strong> <span class="divider"> | </span></span> Mr. Angermueller, a Citicorp executive in the 1970s and â80s who was on the short list for the chief position, worked to devise a financial deal that helped free Americans held in Iran.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/17/business/dealbook/hans-h-angermueller-banker-who-helped-free-us-hostages-in-iran-dies-at-90.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Global Banks to Steer Clear of Iran Until Sanctions Finally Go</strong> <span class="divider"> | </span></span> International banks and most insurers are likely to steer clear of dealing with Iran for some time, fearing they could face more fines from United States regulators despite this weekâs nuclear deal between world powers and Tehran.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2015/07/17/business/17reuters-iran-business-banks.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Bigger Might Have Been Better for Goldman Sachs</strong> <span class="divider"> | </span></span> Comparisons with mega-banks like Citigroup, Bank of America and JPMorgan Chase suggest Goldmanâs focus isnât always an advantage.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/17/business/dealbook/bigger-might-have-been-better-for-goldman.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Barclays Deputy Chairman to Stay Until New C.E.O. Is in Place" src="https://static01.nyt.com/images/2015/07/17/business/17db-rake-web/17db-rake-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Barclays Deputy Chairman to Stay Until New C.E.O. Is in Place</strong> <span class="divider"> | </span></span> The British bank said Michael Rake would continue to serve and any conflict of interest in respect to his chairmanship of Worldpay would be managed.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/17/business/dealbook/barclays-deputy-chairman-to-stay-until-new-ceo-is-in-place.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Blackstoneâs Profit Slumps in Quarter" src="https://static01.nyt.com/images/2015/07/17/business/17BLACKSTONE/17BLACKSTONE-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstoneâs Profit Slumps in Quarter</strong> <span class="divider"> | </span></span> The firmâs hedge fund and credit units showed gains, but its private equity and real estate businesses declined.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/17/business/dealbook/blackstones-profit-slumps-in-quarter.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Asia Hedge Fundsâ First Loss in 14 Months on China Crash</strong> <span class="divider"> | </span></span> The Eurekahedge Asian Hedge Fund Index slipped 1.3 percent last month, the first loss since April 2014, with 62 percent of the funds having reported.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-07-16/asia-hedge-funds-have-first-loss-in-14-months-on-china-crash"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Reddit Changes Content Rules as Steve Huffman Takes Charge" src="https://static01.nyt.com/images/2015/07/17/business/17reddit-web/17reddit-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Reddit Changes Content Rules as Steve Huffman Takes Charge</strong> <span class="divider"> | </span></span> Mr. Huffman, who reappeared as chief executive of Reddit, hopes to pull off a turnaround of the popular online message board.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/17/technology/reddit-steve-huffman.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="A Tiny Bankâs Surreal Trip Through a Fraud Prosecution   " src="https://static01.nyt.com/images/2015/07/19/business/19-GRET/19-GRET-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Tiny Bankâs Surreal Trip Through a Fraud Prosecution   </strong> <span class="divider"> | </span></span> Abacus Bank discovered a fraudulent loan scheme in 2009 and reported it to regulators. For its trouble, it found itself a target of prosecutors, writes Gretchen Morgenson in the Fair Game column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/19/business/a-tiny-banks-surreal-trip-through-a-fraud-prosecution.html">Fair Game &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SEC Investigates Deeper Into Fund Firmsâ Fees</strong> <span class="divider"> | </span></span> United States securities regulators are reported to be examining whether mutual-fund managers are dipping more deeply than allowed into their investorsâ money to compensate the brokerage firms that distribute their products.<br /><span class="kicker"><a href="//www.wsj.com/articles/sec-cranks-up-probe-into-fund-firms-fees-1437087282"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Janet Yellen Open to Easing Small Banksâ Burden</strong> <span class="divider"> | </span></span> The central bank chairwoman has indicated she would be open to raising the asset threshold at which banks are subject to tougher supervision.<br /><span class="kicker"><a href="//www.ft.com/cms/s/0/b3654de4-2c01-11e5-8613-e7aedbb7bdb7.html#ixzz3g8Vc2nPh"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Trader Not Alarmed by Libor Warning</strong> <span class="divider"> | </span></span> Tom Hayes, the first person to stand trial for rigging benchmark interest rates, said that he did not pay much attention to warnings that he should not make written requests for fixings.<br /><span class="kicker"><a href="//www.ft.com/cms/s/0/9dec2b16-2bbd-11e5-8613-e7aedbb7bdb7.html#axzz3g6sLGIFA"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Puerto Rico, Running Short of Cash, Misses a Debt Payment" src="https://static01.nyt.com/images/2015/07/17/business/db-rico-web1/db-rico-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Puerto Rico, Running Short of Cash, Misses a Debt Payment</strong> <span class="divider"> | </span></span> The Public Finance Corporation, which helps the islandâs government finance its budget deficits, failed to make a $93.7 million debt-servicing payment.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/16/business/puerto-rico-running-short-of-cash-misses-a-debt-payment.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/07/17/morning-agenda-samsung-ct-shareholders-reject-elliotts-activism/"
+					data-title="Morning Agenda: Samsung C&amp;T Shareholders Reject Elliott&#8217;s Activism"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Samsung C&amp;T Shareholders Reject Elliott&#039;s Activism | Greek Exit Prospect Remains | Online Lending Inspection | Elusive Convictions&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/07/17/morning-agenda-samsung-ct-shareholders-reject-elliotts-activism/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":73,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

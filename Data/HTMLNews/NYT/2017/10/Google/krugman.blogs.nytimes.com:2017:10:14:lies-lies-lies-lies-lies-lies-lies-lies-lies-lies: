@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-krugman section-opinion"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-krugman section-opinion" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-krugman section-opinion" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-krugman section-opinion" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/krugman/Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies ( 20171014 )" />
+<meta name="communityAssetURL" content="//krugman.blogs.nytimes.com/2017/10/14/lies-lies-lies-lies-lies-lies-lies-lies-lies-lies/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000005496680"><meta name="author" content="" />
+<meta name="CLMST" content="" />
+<meta name="byl" content="" />
+<meta name="article:author" content="//topics.nytimes.com/top/opinion/editorialsandoped/oped/columnists/paulkrugman/index.html" /><meta name="GBLC" content="">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1508012623" />
+<meta name="PUD" content="20171014" />
+<meta name="pdate" content="20171014" />
+<meta name="ptime" content="20171014162343" />
+<meta name="utime" content="20171015230122" />
+<meta property="article:modified_time" itemprop="dateModified" content="2017-10-15T23:01:22-04:00" />
+<meta name="DISPLAYDATE" content="October 14, 2017" />
+<meta name="dat" content="October 14, 2017" />
+<meta itemprop="articleSection" property="article:section" content="Opinion" />
+<meta name="CG" content="Opinion" />
+<meta name="SCG" content="krugman" />
+<meta name="BN" content="krugman" />
+<meta name="robots" content="noodp">
+<meta property="article:tag" content="Uncategorized" />
+<meta name="keywords" content="Uncategorized" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fkrugman.blogs.nytimes.com%2F2017%2F10%2F14%2Flies-lies-lies-lies-lies-lies-lies-lies-lies-lies%2F" title="Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies" />
+<meta name="description" content="A crib sheet for the tax &#8220;reform&#8221; debate." />
+<meta name="hdl" content="Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies" />
+<meta property="og:title" content="Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//krugman.blogs.nytimes.com/2017/10/14/lies-lies-lies-lies-lies-lies-lies-lies-lies-lies/" />
+<meta property="og:site_name" content="Paul Krugman Blog" />
+<meta property="og:description" content="A crib sheet for the tax &#8220;reform&#8221; debate." />
+<meta property="og:image" content="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman2/101417krugman2-facebookJumbo.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman2/101417krugman2-thumbLarge.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies" />
+<meta name="twitter:url" content="//krugman.blogs.nytimes.com/2017/10/14/lies-lies-lies-lies-lies-lies-lies-lies-lies-lies/" />
+<meta name="twitter:description" content="A crib sheet for the tax &#8220;reform&#8221; debate." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman2/101417krugman2-thumbLarge.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman2/101417krugman2-thumbLarge.png" name="thumbnail" />
+<link rel='prev' title='Friday Night Music: Moron Edition' href='//krugman.blogs.nytimes.com/2017/10/13/friday-night-music-moron-edition/' />
+<link rel='next' title='Subsidies, Spite, and Supply Chains' href='//krugman.blogs.nytimes.com/2017/10/15/subsidies-spite-and-supply-chains/' />
+<link rel='canonical' href='//krugman.blogs.nytimes.com/2017/10/14/lies-lies-lies-lies-lies-lies-lies-lies-lies-lies/' />
+<link rel='shortlink' href='https://nyti.ms/2z8hWyr' />
+<link rel='https://github.com/WP-API/WP-API' href='//krugman.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/krugman/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//krugman.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/opinion/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/krugman/2017/10/14/lies-lies-lies-lies-lies-lies-lies-lies-lies-lies/" />
+<meta name="dfp-ad-unit-path" content="opinion/krugman" />			<title>Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/universal.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt","jkiddScript"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-41687 blog-universal nyt-blog-krugman" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'Opinion', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//krugman.blogs.nytimes.com">
+                Paul Krugman            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+<div id="liftoff-nyt5-bar1" class="hidden"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//krugman.blogs.nytimes.com/2017/10/14/lies-lies-lies-lies-lies-lies-lies-lies-lies-lies/"
+	 data-title="Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;A crib sheet for the tax &quot;reform&quot; debate.&lt;/span&gt;&lt;a href=&quot;//krugman.blogs.nytimes.com/2017/10/14/lies-lies-lies-lies-lies-lies-lies-lies-lies-lies/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="October 14, 2017 4:23 pm">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="krugman" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+			<a href="//www.nytimes.com/pages/opinion/" class="opinion-kicker">
+			<img src="https://static01.nyt.com/images/blogs_v5/_misc/kicker-opinionpages.png" />
+		</a>
+		<div class="element1">
+	<a href="//krugman.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=Opinion"><div id="logo" class="archived-blog-post"><div class="w75 left site-header-logo"><img src="https://static01.nyt.com/images/blogs_v3/krugman/krugman75.gif" alt="Paul Krugman"/></div><div class="site-title">Paul Krugman</div><div class="site-description">New York Times Blog</div></div></a>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//krugman.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Paul Krugman">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-41687 post type-post status-publish hentry" id="post-41687">
+	<header class="postHeader">
+				<div class="postKicker">
+					</div>
+				<h1 itemprop="headline" class="entry-title">Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+							</address>
+			<!-- date published --><time class="dateline " datetime="2017-10-14T20:23:43+00:00" itemprop="datePublished">October 14, 2017 4:23 pm</time>
+			<!-- date updated --><span class="visually-hidden updated">October 14, 2017 4:23 pm</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//krugman.blogs.nytimes.com/2017/10/14/lies-lies-lies-lies-lies-lies-lies-lies-lies-lies/" data-title="Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies" data-description="A crib sheet for the tax &quot;reform&quot; debate.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody">Modern conservatives have been lying about taxes pretty much from the beginning of their movement. Made-up sob stories about family farms broken up to pay inheritance taxes, magical claims about self-financing tax cuts, and so on go all the way back to the 1970s. But the selling of tax cuts under Trump has taken things to a whole new level, both in terms of the brazenness of the lies and their sheer number. Both the depth and the breadth of the dishonesty make it hard even for those of us who do this for a living to keep track.</p>
+<p class="story-body-text" itemprop="articleBody">In fact, when I set out to make a list of the bigger lies, I thought there would be six or seven, and was surprised to come up with ten.</p>
+<p class="story-body-text" itemprop="articleBody">So I thought it might be useful, both for myself and for others, to put together a crib sheet: a fairly long-form description of ten big lies Trump and allies are telling, what theyâve said, and how we know that they are lies. Iâm probably missing some stuff, and for all I know some new big lie will have been tweeted out by the time this is posted. But we do what we can. So here we go.</p>
+<p class="story-body-text" itemprop="articleBody"><em>Lie #1: America is the most highly-taxed country in the world</em></p>
+<p class="story-body-text" itemprop="articleBody">This is a Trump special: heâs said it many, many times, most recently <a href="//money.cnn.com/2017/10/12/news/economy/trump-us-highest-taxes/index.html">just this past week</a>. Each time, fact-checkers have piled on to point out that itâs false. Hereâs taxes as a percentage of GDP, from the OECD:</p>
+<div class="w592"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman1/101417krugman1-tmagArticle.png" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman1/101417krugman1-tmagArticle.png" src="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman1/101417krugman1-tmagArticle.png" id="100000005496591" width="592" height="311" alt="Taxes as % of GDP"   /><meta itemprop="height" content="311"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Taxes as % of GDP</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> OECD</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">The blue bar is the US; the red bar the average for advanced countries.</p>
+<p class="story-body-text" itemprop="articleBody">Why does Trump keep repeating what even he has to know by now is a flat lie? I suspect itâs a power thing: he enjoys showing that he can lie repeatedly through his teeth, be caught red-handed in his lie again and again, and his followers will still believe him rather than the âfake newsâ media.</p>
+<p class="story-body-text" itemprop="articleBody"><em>Lie #2: The estate tax is destroying farmers and truckers</em></p>
+<p class="story-body-text" itemprop="articleBody">Tales of struggling family farms disbanded because they canât afford the taxes when the patriarch dies have flourished for decades, despite the absence of any examples. I donât mean examples are rare: I mean that advocates of estate tax repeal havenât been able to come up with a single example at least since the late 1970s, when exemption levels were raised to the equivalent of around $2 million in todayâs dollars.</p>
+<p class="story-body-text" itemprop="articleBody">Lately Trump has added a new twist, portraying the estate tax as a terrible burden on hard-working truckers. For who among us doesnât own an $11 million fleet of trucks?</p>
+<p class="story-body-text" itemprop="articleBody">The reality, as this graphic from the Center on Budget and Policy Priorities shows, is that only a small number of very large estates pay any tax at all, and only a tiny fraction of those tax-paying estates are small businesses or family farms:</p>
+<div class="w592"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman2/101417krugman2-tmagArticle.png" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman2/101417krugman2-tmagArticle.png" src="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman2/101417krugman2-tmagArticle.png" id="100000005496596" width="592" height="468" alt=""   /><meta itemprop="height" content="468"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text"></span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> </span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">In fact, since transportation and warehousing are only 3 percent of GDP and farming less than 1 percent, it seems quite possible that this year only 2 or 3 truckers and not a single farmer will pay any estate tax. </p>
+<p class="story-body-text" itemprop="articleBody"><em>Lie #3: Taxation of pass-through entities is a burden on small business</em></p>
+<p class="story-body-text" itemprop="articleBody">Most businesses in the United States, at least for tax purposes, arenât what we normally think of as corporations subject to profits taxes. Instead, theyâre partnerships, sole proprietorships, and S corporations whose earnings are simply âpassed throughâ: counted as part of their ownersâ personal income and taxed accordingly.</p>
+<p class="story-body-text" itemprop="articleBody">Trump wants to change that, and let owners simply pay a <del datetime="2017-10-15T23:00:17+00:00">15</del>25 percent tax on the earnings of pass-through entities, with no further taxes owed. This is being billed as a reduction in the burden on hard-working small business owners.</p>
+<p class="story-body-text" itemprop="articleBody">But as the <a href="//www.taxpolicycenter.org/publications/taxation-pass-through-businesses/full">Tax Policy Center</a> explains, many middle-income households who own pass-through entities arenât running businesses; they generally derive only a small fraction of their income from these entities: </p>
+<blockquote><p class="story-body-text" itemprop="articleBody">Rather, they may receive occasional income from the rental of a vacation home, or from the sale of odds and ends on eBay, that they report as business income.</p></blockquote>
+<p class="story-body-text" itemprop="articleBody">High-income owners of such entities, by contrast, get a lot of money from them â but theyâre not struggling small business people:</p>
+<blockquote><p class="story-body-text" itemprop="articleBody">This high-income group is made up of doctors, lawyers, consultants, other professionals, and, at the very highest end, partners in hedge funds or other investment firms.</p></blockquote>
+<p class="story-body-text" itemprop="articleBody">And these are, of course, the people who would gain massively from the Trump proposal. The vast majority of Americans are in a tax bracket of 15 percent or less, so even if they control a pass-through entity, the Trump tax break is worth nothing to them:</p>
+<div class="w592"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman3/101417krugman3-tmagArticle.png" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman3/101417krugman3-tmagArticle.png" src="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman3/101417krugman3-tmagArticle.png" id="100000005496608" width="592" height="450" alt=""   /><meta itemprop="height" content="450"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text"></span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> </span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">High-income individuals, however, would gain a lot by paying <del datetime="2017-10-15T23:00:17+00:00">15</del>25 percent instead of the much higher rates they pay at the margin â 39.6 percent right now. And theyâd also have a strong incentive to rearrange their affairs so that more of their income pops up in their pass-throughs. This wouldnât be small-business creation; it wouldnât add jobs; it would just be tax avoidance. Thatâs what happened when Kansas tried something similar, and played a big role in the stateâs fiscal disaster.</p>
+<p class="story-body-text" itemprop="articleBody">So this isnât a tax break for small business, itâs a tax break for, surprise, wealthy individuals.</p>
+<p class="story-body-text" itemprop="articleBody"><em>Lie #4: Cutting profits taxes really benefits workers</em></p>
+<p class="story-body-text" itemprop="articleBody">Tax incidence is a headache-inducing subject at best, and my sense is that even the tax policy experts have gotten behind the curve in thinking through the implications of global capital markets for the subject. But I think thereâs a way to cut through at least some of the confusion.</p>
+<p class="story-body-text" itemprop="articleBody">Think about what happens if you cut the taxes on corporate profits. The immediate impact is that (duh) corporations have more money. Why would they spend that extra money on hiring more workers or increasing their wages?</p>
+<p class="story-body-text" itemprop="articleBody">Not, surely, out of the goodness of their hearts â and not in response to worker demands, because these days nobody cares what workers think.</p>
+<p class="story-body-text" itemprop="articleBody">Now, they might be inclined to invest more, increasing the demand for labor and therefore raising wages indirectly while competing pre-tax profits down. But there are a couple of major slippages in this story.</p>
+<p class="story-body-text" itemprop="articleBody">First, a lot of corporate profits arenât a return on physical capital and wonât be competed down if capital gets cheaper. Apple, Google, Microsoft, and others derive their profits from technological advantages, brand name, and market power; cutting the taxes on those profits just leaves their owners with more money.</p>
+<p class="story-body-text" itemprop="articleBody">Second, to raise wages a tax cut must raise the overall stock of capital, which means it must lead to higher total investment spending. Where does the money for that increase in investment come from? The tax cuts are unlikely to raise national saving.</p>
+<p class="story-body-text" itemprop="articleBody">The money might come from abroad, via capital inflows. But the flip side of those capital inflows would be a bigger trade deficit â hardly what the proponents of tax cuts are advertising â and in any case running trade deficits on the required scale is a much more problematic thing than people seem to realize. The dollar would have to rise sharply â and the strength of the dollar would itself deter foreign investment, very much <a href="https://krugman.blogs.nytimes.com/2017/10/05/the-transfer-problem-and-tax-incidence-insanely-wonkish/">slowing the process of wage rise</a>. </p>
+<p class="story-body-text" itemprop="articleBody">So for an extended period â at least 5 years, probably much more &#8212; cutting profits taxes is good for owners of corporations. Workers, not so much.</p>
+<p class="story-body-text" itemprop="articleBody"><em>Lie #5: Repatriating overseas profits will create jobs</em></p>
+<p class="story-body-text" itemprop="articleBody">For tax reasons, corporations hold a lot of money in overseas tax shelters. Tax cutters always claim that lower rates and/or an amnesty will bring that money home and create a lot of jobs.</p>
+<p class="story-body-text" itemprop="articleBody">So, first of all, there isnât really a Scrooge McDuck-type pile of cash hidden overseas, ready to be put to work if the taxman will let it. Those overseas accounts are just an accounting device, which have very little real effect. Many of the companies with big overseas hoards also have plenty of idle cash at home; whatâs holding them back is a lack of perceived opportunities, not cash flow. And even those who donât have surplus cash can easily borrow at near-record low interest rates; remember, they can always use the overseas cash to secure their loans.</p>
+<p class="story-body-text" itemprop="articleBody">And we have solid empirical evidence here. In 2004 the U.S. enacted the Homeland Investment Act, which offered a tax holiday for repatriation of foreign earnings by U.S. multinationals. Careful study of its effects <a href="//www.nber.org/papers/w15023">tells us that</a> </p>
+<blockquote><p class="story-body-text" itemprop="articleBody">Repatriations did not lead to an increase in domestic investment, employment or R&#038;D &#8212; even for the firms that lobbied for the tax holiday stating these intentions and for firms that appeared to be financially constrained. Instead, a $1 increase in repatriations was associated with an increase of almost $1 in payouts to shareholders.</p></blockquote>
+<p class="story-body-text" itemprop="articleBody"><em>Lie #6: This is not a tax cut for the rich</em></p>
+<p class="story-body-text" itemprop="articleBody">Trump says it isnât, so thatâs that, right? Oh, wait.</p>
+<p class="story-body-text" itemprop="articleBody">Actually, if you look at the major provisions of the Unified Framework, the big items are (i) Cuts in corporate taxes (ii) Pass-through tax cut (iii) elimination of the estate tax (iv) cut in top marginal rate. All these strongly favor very high incomes â and everything else is small change. Hence the <a href="//www.taxpolicycenter.org/publications/preliminary-analysis-unified-framework">Tax Policy Center estimate</a>:</p>
+<div class="w592"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman4/101417krugman4-tmagArticle.png" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman4/101417krugman4-tmagArticle.png" src="https://static01.nyt.com/images/2017/10/14/opinion/101417krugman4/101417krugman4-tmagArticle.png" id="100000005496644" width="592" height="358" alt=""   /><meta itemprop="height" content="358"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text"></span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> </span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">Administration flacks and defenders are accusing TPC of reaching conclusions without adequate information; but the administration is making lots of assertions about what its plan will do, with apparently no more information than the center. Furthermore, given the general shape of the plan thereâs no way it can fail to be very much a gift to the already very rich.</p>
+<p class="story-body-text" itemprop="articleBody"><em>Lie #7: Itâs a big tax cut for the middle class</em></p>
+<p class="story-body-text" itemprop="articleBody">See Lie #6 above. All the big provisions benefit the rich, not the middle class. Whatâs left is mostly small change â and some of it, like ending deductibility of state and local taxes and other deductions, actually raises taxes on a substantial number of middle-class Americans.</p>
+<p class="story-body-text" itemprop="articleBody">In total, by 2027, according to TPC, 80 percent of the tax cut goes to the top 1 percent; only 12 percent to the middle three quintiles.</p>
+<p class="story-body-text" itemprop="articleBody"><em>Lie #8: It wonât increase the deficit</em></p>
+<p class="story-body-text" itemprop="articleBody">OK, weâre looking at big cuts in corporate taxes, elimination of the estate tax, lower rates on high-income individuals, and a massive new tax-avoidance loophole. How can this not increase the budget deficit?</p>
+<p class="story-body-text" itemprop="articleBody">The only answer would be if the tax proposal eliminated vast swathes of the existing set of tax deductions, massively broadening the tax base. It doesnât. The only even halfway biggish thing here is the state and local deductibility end â and that is already in very big political trouble. This is a multi-trillion-dollar budget buster, unless it summons up deep voodoo. But â¦</p>
+<p class="story-body-text" itemprop="articleBody"><em>Lie #9: Cutting taxes will jump-start rapid growth</em></p>
+<p class="story-body-text" itemprop="articleBody">Insistence in the magical power of tax cuts is the ultimate zombie lie of U.S. policy discussion; nothing can kill it. And we know why: thereâs a lot of money behind the proposition that great things will happen if you cut the donorsâ taxes. Itâs difficult to get a man to understand something when his salary depends on his not understanding it.</p>
+<p class="story-body-text" itemprop="articleBody">Still, for the record: Reagan cut taxes, and although his administration began with a terrible recession, there was a fast recovery thereafter. Some of us think Paul Volcker had more to do with both the recession and the recovery than anything coming from the White House; but in any case we have more evidence.</p>
+<p class="story-body-text" itemprop="articleBody">For Bill Clinton raised taxes, amid cries from the right that he would destroy the economy. Instead he presided over a boom that surpassed Reagan in every dimension. For what itâs worth, I donât think this boom was Clintonâs doing. But it certainly refuted the proposition that cutting taxes is both necessary and sufficient for prosperity.</p>
+<p class="story-body-text" itemprop="articleBody">Then Bush the younger cut taxes, and there were many hosannahs about the âBush boom.â What he actually got was a lackluster recovery, followed by an epic crash.</p>
+<p class="story-body-text" itemprop="articleBody">Finally, Obama inherited the aftermath of that crash, and despite scorched-earth opposition from Republicans the economy gradually clawed its way back. Then in 2013 Obama first raised taxes substantially, then implemented the Affordable Care Act, again amid cries of disaster from the right. The economy did fine.</p>
+<p class="story-body-text" itemprop="articleBody">Oh, and there were the recent state-level experiments. Sam Brownback slashed taxes in Kansas, promising an economic miracle; all he got was a fiscal crisis. Jerry Brown raised taxes in California, amid predictions of â you guessed it â disaster; the economy boomed, and the main problem is a housing shortage.</p>
+<p class="story-body-text" itemprop="articleBody">There is nothing, nothing at all, in this history that would make any open-minded person believe that the Trump tax plan will cause dramatically accelerated growth.</p>
+<p class="story-body-text" itemprop="articleBody"><em>Lie #10: Tax cuts will pay for themselves</em></p>
+<p class="story-body-text" itemprop="articleBody">If tax cuts donât generate an economic miracle, itâs hard for them to generate a revenue surge that makes up for lower rates. True, some hidden money may come out of the woodwork and show up as taxable income, even if GDP doesnât rise. But this effect hasnât historically been anywhere big enough to offset the direct losses from lower taxes. Reaganâs tax cuts led to deficits, Clintonâs tax hike to surpluses; Jerry Brown presided over Californiaâs fiscal revitalization, Sam Brownback over a fiscal crisis that eventually prompted the legislature to overrule him and raise taxes again.</p>
+<p class="story-body-text" itemprop="articleBody">So there we are: ten big tax-cut lies. That was pretty exhausting, actually â and as I said, Iâve probably missed a few, and/or Trump will invent some new ones. But I hope this ends up being a useful reference.</p>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//krugman.blogs.nytimes.com/2017/10/14/lies-lies-lies-lies-lies-lies-lies-lies-lies-lies/" data-title="Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies, Lies" data-description="A crib sheet for the tax &quot;reform&quot; debate.">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//krugman.blogs.nytimes.com/2017/10/13/friday-night-music-moron-edition/" title="Friday Night Music: Moron Edition">
+				Friday Night Music: Moron Edition			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//krugman.blogs.nytimes.com/2017/10/15/subsidies-spite-and-supply-chains/" title="Subsidies, Spite, and Supply Chains">
+				Subsidies, Spite, and Supply Chains			</a>
+					</li>
+	</ul>
+</div>
+		<div class="module ad" id="MiddleRight"></div>
+        <div id="nyt_about_blog-6" class="module nocontent widget_nyt_about_blog"><h4 class="moduleHeader">ABOUT</h4><div class="entry">
+<p class="summary">Paul Krugman is an Op-Ed columnist for The New York Times.</p>
+<ul class="refer">
+<li><a href="//topics.nytimes.com/top/opinion/editorialsandoped/oped/columnists/paulkrugman/index.html">Biography and Columns Â»</a></li>
+<h6 class="kicker">Books</h6>
+<li><a href="//books.wwnorton.com/books/detail.aspx?ID=4294971028">End This Depression Now!</a> (2013)</li>
+<li><a href="//www.worthpublishers.com/newcatalog.aspx?search=krugman&isbn=0716771586">Principles of Economics, 2nd ed.</a> (2009)</li>
+<li><a href="//www.krugmanonline.com/books/the-return-of-depression-economics-and-the-crisis-of-2008.php" target="new" alt="The Return of Depression Economics and the Crisis of 2008">The Return of Depression Economics and the Crisis of 2008</a> (Dec. 2008)</li>
+<li><a href="//www.krugmanonline.com/books/the-conscience-of-a-liberal.php" target="new" alt="KrugmanOnline.com">The Conscience of a Liberal</a> (Oct. 2007)</li>
+</ul>
+</div>
+</div>		<div class="module ad" id="Box1"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-48',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+
+
+         
+
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":51,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

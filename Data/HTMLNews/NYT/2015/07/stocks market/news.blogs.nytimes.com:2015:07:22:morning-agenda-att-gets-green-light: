@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003814164"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1437563609" />
+<meta name="PUD" content="20150722" />
+<meta name="pdate" content="20150722" />
+<meta name="ptime" content="20150722071329" />
+<meta name="utime" content="20150722111329" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-07-22T11:13:29-04:00" />
+<meta name="DISPLAYDATE" content="July 22, 2015" />
+<meta name="dat" content="July 22, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Antitrust Laws and Competition Issues;Banking and Financial Institutions;Biotechnology and Bioengineering;Citigroup Inc;Community Reinvestment Act;Credit Cards;Cyberattacks and Hackers;Exchange Traded Funds;Hedge Funds;Initial Public Offerings;Private Equity;Regulation and Deregulation of Industry;Shareholder Rights and Activism;Venture Capital">
+<meta name="org" content="AT&amp;T Inc;Blue Buffalo Pet Products Inc.;CIT Group Inc;Dell Inc;DIRECTV Group Inc;Federal Communications Commission;JPMorgan Chase &amp; Company;Securities and Exchange Commission">
+<meta name="geo" content="Silicon Valley (Calif)">
+<meta name="ticker" content="AT&T Inc|T|NYSE;Dell Inc|DELL|NASDAQ;JPMorgan Chase & Company|JPM|NYSE" />
+<meta property="article:tag" content="Antitrust Laws and Competition Issues" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Biotechnology and Bioengineering" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="Community Reinvestment Act" />
+<meta property="article:tag" content="Credit Cards" />
+<meta property="article:tag" content="Cyberattacks and Hackers" />
+<meta property="article:tag" content="Exchange Traded Funds" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Shareholder Rights and Activism" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="AT&amp;T Inc" />
+<meta property="article:tag" content="Blue Buffalo Pet Products Inc." />
+<meta property="article:tag" content="CIT Group Inc" />
+<meta property="article:tag" content="Dell Inc" />
+<meta property="article:tag" content="DIRECTV Group Inc" />
+<meta property="article:tag" content="Federal Communications Commission" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Silicon Valley (Calif)" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Antitrust Laws and Competition Issues,Banking and Financial Institutions,Biotechnology and Bioengineering,Citigroup Inc,Community Reinvestment Act,Credit Cards,Cyberattacks and Hackers,Exchange Traded Funds,Hedge Funds,Initial Public Offerings,Private Equity,Regulation and Deregulation of Industry,Shareholder Rights and Activism,Venture Capital,AT&amp;T Inc,Blue Buffalo Pet Products Inc.,CIT Group Inc,Dell Inc,DIRECTV Group Inc,Federal Communications Commission,JPMorgan Chase &amp; Company,Securities and Exchange Commission,Silicon Valley (Calif),DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F07%2F22%2Fmorning-agenda-att-gets-green-light%2F" title="Morning Agenda: AT&amp;T Gets Green Light" />
+<meta name="description" content="4 Arrests Said To Be Tied to JPMorgan Breach &#124; CIT-OneWest Merger Approved &#124; Losing Track of Shares" />
+<meta name="hdl" content="Morning Agenda: AT&amp;T Gets Green Light" />
+<meta property="og:title" content="Morning Agenda: AT&amp;T Gets Green Light" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/07/22/morning-agenda-att-gets-green-light/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="4 Arrests Said To Be Tied to JPMorgan Breach &#124; CIT-OneWest Merger Approved &#124; Losing Track of Shares" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: AT&amp;T Gets Green Light" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/07/22/morning-agenda-att-gets-green-light/" />
+<meta name="twitter:description" content="4 Arrests Said To Be Tied to JPMorgan Breach &#124; CIT-OneWest Merger Approved &#124; Losing Track of Shares" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/07/21/what-were-reading-74/' />
+<link rel='next' title='Morning Agenda: Bank of America Shake-Up' href='//news.blogs.nytimes.com/2015/07/23/dealbook-bank-of-america-shake-up/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/07/22/morning-agenda-att-gets-green-light/' />
+<link rel='shortlink' href='//nyti.ms/1LCSfbo' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/07/22/morning-agenda-att-gets-green-light/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: AT&amp;T Gets Green Light - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2841 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: AT&#038;T Gets Green Light        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/07/22/morning-agenda-att-gets-green-light/"
+	 data-title="Morning Agenda: AT&amp;T Gets Green Light"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;4 Arrests Said To Be Tied to JPMorgan Breach | CIT-OneWest Merger Approved | Losing Track of Shares&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/07/22/morning-agenda-att-gets-green-light/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 22, 2015 7:13 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: AT&#038;T Gets Green Light</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-07-22T11:13:29+00:00" itemprop="datePublished">July 22, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">July 22, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2841 post type-post status-publish hentry category-dealbook tag-antitrust-laws-and-competition-issues tag-att-inc tag-banking-and-financial-institutions tag-biotechnology-and-bioengineering tag-blue-buffalo-pet-products-inc tag-cit-group-inc tag-citigroup-inc tag-community-reinvestment-act tag-credit-cards tag-cyberattacks-and-hackers tag-dell-inc tag-directv-group-inc tag-exchange-traded-funds tag-federal-communications-commission tag-hedge-funds tag-initial-public-offerings tag-jpmorgan-chase-company tag-private-equity tag-regulation-and-deregulation-of-industry tag-securities-and-exchange-commission tag-shareholder-rights-and-activism tag-silicon-valley-calif tag-venture-capital des-antitrust-laws-and-competition-issues des-banking-and-financial-institutions des-biotechnology-and-bioengineering des-citigroup-inc des-community-reinvestment-act des-credit-cards des-cyberattacks-and-hackers des-exchange-traded-funds des-hedge-funds des-initial-public-offerings des-private-equity des-regulation-and-deregulation-of-industry des-shareholder-rights-and-activism des-venture-capital org-att-inc org-blue-buffalo-pet-products-inc org-cit-group-inc org-dell-inc org-directv-group-inc org-federal-communications-commission org-jpmorgan-chase-company org-securities-and-exchange-commission geo-silicon-valley-calif" id="post-2841">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: AT&#038;T Gets Green Light</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-07-22T11:13:29+00:00" itemprop="datePublished">July 22, 2015 7:13 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 22, 2015 7:13 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/07/22/morning-agenda-att-gets-green-light/" data-title="Morning Agenda: AT&#038;T Gets Green Light" data-description="4 Arrests Said To Be Tied to JPMorgan Breach | CIT-OneWest Merger Approved | Losing Track of Shares">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AT&#038;T GETS GREEN LIGHT</strong> <span class="divider"> | </span></span> AT&#038;T is a step closer to becoming the largest television distributor in the United States. The Federal Communications Commission has given its proposed <b>$48.5 billion takeover</b> of the satellite company DirecTV conditional approval, <a href="//www.nytimes.com/2015/07/22/business/dealbook/atts-bid-for-directv-advances-with-conditional-approval-order-by-fcc-chief.html">Emily Steel reports in DealBook</a>. The Justice Department has also said it would not challenge the acquisition.</p>
+<p class="story-body-text" itemprop="articleBody"> The F.C.C.âs conditions are <b>intended to increase competition</b> in the broadband market. AT&#038;T would be required to build its high-speed fiber Internet connection to about 10 times its current size, extending service to 12.5 million customers. It could not exclude affiliated video services and content from data caps on its fixed broadband connections. And it would also be required to <b>report interconnection agreements</b>, in which a company like Netflix pays a distributor for better service when it creates a lot of traffic.</p>
+<p class="story-body-text" itemprop="articleBody"> Antitrust specialists and industry executives <b>did not expect regulators</b> to raise major concerns about this deal â unlike Comcastâs $45 billion attempt to take over Time Warner Cable, which collapsed in April under regulatory scrutiny. AT&#038;T would not control a majority of the countryâs high-speed broadband customers, as Comcast would have, and neither AT&#038;T nor DirecTV owns a major entertainment group.</p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>4 ARRESTS SAID TO BE TIED TO JPMORGAN BREACH</strong> <span class="divider"> | </span></span> Federal authorities arrested four men in Florida and Israel in connection with a series of <b>fraudulent investment schemes</b> that could be linked to a hacking attack at JPMorgan last summer, <a href="//www.nytimes.com/2015/07/22/business/dealbook/4-arrested-in-schemes-said-to-be-tied-to-jpmorgan-chase-breach.html?ref=dealbook">Matthew Goldstein reports in DealBook</a>. Authorities suspect that some of the men arrested, along with a fifth still at large, had a hand in <b>stealing the contact information</b> of 83 million customers, according to people briefed on the matter.</p>
+<p class="story-body-text" itemprop="articleBody"> None of the five have been charged with the theft of email addresses and other contact information, or with carrying out the hacking. But authorities are hoping that some might cooperate and <b>provide enough evidence</b> for charges to be filed over what was one of the largest ever cyberattacks on a United States bank.</p>
+<p class="story-body-text" itemprop="articleBody"> Soon after the hacking was discovered at JPMorgan, agents with the F.B.I. determined that the attack was not particularly sophisticated: The hacking succeeded largely because the bank failed to properly update a remote server. In spite of this, it was discovered somewhat by accident and went on long enough to give hackers <b>access to 90 servers</b>.</p>
+<p class="story-body-text" itemprop="articleBody"> The court filings detail charges involving a multiyear campaign to drive up the price of <b>worthless penny stocks</b> by pitching them to unsuspecting investors through spam emails. Another involved an unlicensed money-transfer operation used by criminals to <b>cash in Bitcoin</b> paid by people to get malicious software removed from their computers. The perpetrators of that scheme sought to hide their illegal activities by taking control of a small New Jersey credit union. </p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CIT-ONEWEST MERGER APPROVED</strong> <span class="divider"> | </span></span> Federal banking regulators have approved one of the largest deals in the financial services industry since the mortgage crisis, <a href="//www.nytimes.com/2015/07/22/business/dealbook/regulators-approve-merger-of-cit-and-onewest-in-3-4-billion-deal.html">Michael Corkery reports in DealBook</a>. After nearly a year of scrutiny from community groups and consumer advocates, regulators gave the go-ahead for the commercial lender CIT Groupâs acquisition of OneWest, a California retail bank.</p>
+<p class="story-body-text" itemprop="articleBody"> The deal is a <b>boon to private equity investors</b> who had bought up the assets of OneWest when it was failed mortgage lender IndyMac. The merger will double the size of CIT: The company will have more than $65 billion in assets and more than $30 billion of deposits. </p>
+<p class="story-body-text" itemprop="articleBody"> Consumer advocates had opposed the merger, saying that OneWest had a poor track record in following a law designed to ensure that banks <b>serve low-income and minority neighbors</b>. Some had also taken issue with OneWestâs foreclosure practices. One of the conditions of the approval is that CIT must satisfy several requirements of the Community Reinvestment Act, including the creation of a special committee dedicated to developing banking products for low and moderate-income communities.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>Coca-Cola</b> discusses its results for the second quarter at 9:30 a.m. <b> Boeing</b> holds a conference call on its second-quarter earnings at 11:30 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>LOSING TRACK OF SHARES</strong> <span class="divider"> | </span></span> In the United States, most <b>people who think they own shares</b> actually do not, <a href="//www.nytimes.com/2015/07/22/business/dealbook/funds-find-they-dont-really-own-dell-shares.html?ref=dealbook">Steven Davidoff Solomon writes in the Deal Professor column</a>. In the 1960s, every trade was recorded and a new stock certificate issued for each. As the number of trades increased, brokerage houses struggled to keep up and several folded because of faulty record-keeping. </p>
+<p class="story-body-text" itemprop="articleBody"> So the system was overhauled. Now most shareholders are beneficial owners, who have a right of ownership that is not reflected in the actual legal title of the shares. The <b>stock is held on their behalf</b> by a superentity called Cede &#038; Company.</p>
+<p class="story-body-text" itemprop="articleBody"> When five Dell shareholders tried to exercise their appraisal rights, they discovered one of the <b>imperfections of this arrangement</b>. They had objected to a $24.9 billion management-led buyout at Dell because they thought the purchase price of $13.75 a share was too low. They filed suit in a Delaware court, asking it to determine the fair value of Dell shares.</p>
+<p class="story-body-text" itemprop="articleBody"> Unfortunately for them, Delaware appraisal law requires dissenters to own their shares from the time of dissenting until the completion of the deal. It turned out that when the funds exercised their appraisal rights, Cede had <b>transferred their shares</b> to new nominees at the brokers representing them. It is not clear why this happened. But the shifting of ownership meant the funds had violated the continuous ownership requirement.</p>
+<p class="story-body-text" itemprop="articleBody"> Appraisal rights exist to <b>protect shareholders from underpriced deals</b>. Instead of wrangling over technicalities or rewriting the statute to cut back on these actions, Delaware should perhaps write an appraisal statute that works with the share ownership rules, Professor Solomon argues.</p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Drug Maker Depomed Rejects New Bid From Horizon Pharma" src="https://static01.nyt.com/images/2015/07/20/business/cnbc-horizon/cnbc-horizon-square320.png"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Drug Maker Depomed Rejects New Bid From Horizon Pharma</strong> <span class="divider"> | </span></span> Horizon Pharma said it was willing to pay $33 a share for its smaller American rival, up from its previous offer of $29.25 a share.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/22/business/dealbook/horizon-pharma-sweetens-bid-for-drug-maker-depomed.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Citigroup Ordered to Refund $700 Million in Credit-Card Case</strong> <span class="divider"> | </span></span> The settlement with the Consumer Financial Protection Bureau also includes $70 million in fines for illegal and deceptive credit card practices involving add-on products.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/22/business/dealbook/citigroup-must-refund-700-million-in-credit-case.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Barclays Names New Mergers Head for Europe, Middle East and Africa</strong> <span class="divider"> | </span></span> Pier Luigi Colizzi joined Barclays in 2012 as head of banking for Italy and will replace Matthew Ponsonby, who was named vice chairman of banking.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/22/business/dealbook/barclays-names-new-mergers-head-for-europe-middle-east-and-africa.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>S.E.C. Asked to Beef Up Disclosures for Private Equity Firms</strong> <span class="divider"> | </span></span> Comptrollers and treasurers from New York to California want the S.E.C. to demand that private equity funds make disclosures of fees and expenses more frequently, according to a letter reviewed by The Wall Street Journal.<br /><span class="kicker"><a href="//www.wsj.com/articles/states-cities-to-ask-sec-to-beef-up-disclosures-for-private-equity-firms-1437522627?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>K.K.R. Snaps Up Most of Gestamp Solar</strong> <span class="divider"> | </span></span> Kohlberg Kravis Roberts has swooped in on the Spanish solar power plant developer, in the renewable energy sectorâs second large deal in two days.<br /><span class="kicker"><a href="https://next.ft.com/be9e360a-2fbf-11e5-91ac-a5e17d9b4cff#axzz3gbcHiuy5"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: K.K.R.âs Buyout of First Data Has a Chance of Turning a Profit</strong> <span class="divider"> | </span></span> A turnaround plan started by a new chief seems to be working, and K.K.R. may realize a healthy return, according to Breakingviews calculations.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/22/business/dealbook/kkrs-buyout-of-first-data-has-a-chance-of-turning-a-profit.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Exchange-Traded Funds Surpass Hedge Funds</strong> <span class="divider"> | </span></span> The level of assets in exchange-traded funds has surpassed those held by hedge funds for the first time.<br /><span class="kicker"><a href="https://next.ft.com/7851d42a-2fbc-11e5-91ac-a5e17d9b4cff#axzz3gbcHiuy5"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hedge Funds Gear Up for Another Big Short</strong> <span class="divider"> | </span></span> Hedge funds are lining up to profit from potential trouble at âalternativeâ mutual funds and bond exchange-traded funds that have boomed in popularity among retirees and other individual investors.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-07-21/hedge-fund-eyes-iran-as-nuclear-deal-paves-way-for-foreign-money"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Former Och-Ziff Managerâs Firm Starts Health Care Hedge Fund</strong> <span class="divider"> | </span></span> Money managers like Ally Bridge Group, which focuses on global health care investments, are lining up as China expands health insurance coverage and makes medical care more affordable. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-07-22/former-och-ziff-manager-s-firm-starts-health-care-hedge-fund"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blue Buffalo Raises $677 Million in I.P.O.</strong> <span class="divider"> | </span></span> The company, which produces high-end food for cats and dogs, raised about $677 million in its initial public offering.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-07-21/blue-buffalo-raises-677-million-in-initial-public-offering"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>European Tech in Silicon Valleyâs Shadow</strong> <span class="divider"> | </span></span> Money is flowing into start-ups, but tough European Union rules could dash hopes of a Google or Facebook rival.<br /><span class="kicker"><a href="https://next.ft.com/d1507b96-1b24-11e5-8201-cbdb03d71480#axzz3gbcHiuy5"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Medalliaâs Valuation Tops $1 Billion</strong> <span class="divider"> | </span></span> The company helps large companies understand what their customers really think of them and has broken into the ranks of venture-backed companies valued at $1 billion or more with its latest financing round.<br /><span class="kicker"><a href="//blogs.wsj.com/venturecapital/2015/07/21/emb-721-730-am-et-medallias-valuation-tops-1b-in-latest-round/"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Biotechs Tap Homegrown Capital</strong> <span class="divider"> | </span></span> Britainâs biotechs have achieved billion-dollar valuations, but only by moving to the Nasdaq or the Golden State.<br /><span class="kicker"><a href="https://next.ft.com/25791c7a-2fbe-11e5-8873-775ba7c2ea3d#axzz3gbcHiuy5"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Funding Circle Hires Barclays and Amex Executives</strong> <span class="divider"> | </span></span> To help it expand the online market for small-business loans, Funding Circle is enlisting executives from established financial services firms.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-07-21/funding-circle-hires-barclays-amex-executives-to-oversee-risks"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Case for a Tax on Financial Transactions</strong> <span class="divider"> | </span></span> Senator Bernie Sandersâs financial transaction tax would raise revenue and discourage high-frequency trading.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/22/opinion/the-case-for-a-tax-on-financial-transactions.html">Op-Ed Contributor &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Complex Bankruptcy Case, With Baha Mar and a Chinese Contractor, Lands in Delaware</strong> <span class="divider"> | </span></span> The resort in the Bahamas filed for bankruptcy in the United States and sued its contractor in London, while the Bahamian government seeks to replace its management.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/22/business/a-complex-bankruptcy-case-with-baha-mar-and-a-chinese-contractor-lands-in-delaware.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fed Faults China Construction Bank Over Anti-Money-Laundering Efforts</strong> <span class="divider"> | </span></span> United States regulators faulted China Construction Bank  for deficiencies in its program to spot money laundering, the latest American crackdown on foreign-owned firms.<br /><span class="kicker"><a href="//www.wsj.com/articles/fed-faults-china-construction-bank-over-anti-money-laundering-efforts-1437490936?mod=rss_markets_main"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Senate Republicans Said to Consider New Tactic for Easing Dodd-Frank</strong> <span class="divider"> | </span></span> After seeking for months to win support for legislation that narrows the reach of the law, Republicans are considering adding their measure to a government spending bill, Bloomberg News reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-07-21/senate-republicans-said-to-mull-new-tactic-for-easing-dodd-frank"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/07/22/morning-agenda-att-gets-green-light/"
+					data-title="Morning Agenda: AT&amp;T Gets Green Light"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;4 Arrests Said To Be Tied to JPMorgan Breach | CIT-OneWest Merger Approved | Losing Track of Shares&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/07/22/morning-agenda-att-gets-green-light/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":53,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

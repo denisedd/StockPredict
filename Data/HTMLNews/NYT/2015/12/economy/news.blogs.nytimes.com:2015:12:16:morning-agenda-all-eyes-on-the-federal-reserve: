@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004096236"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1450262841" />
+<meta name="PUD" content="20151216" />
+<meta name="pdate" content="20151216" />
+<meta name="ptime" content="20151216054721" />
+<meta name="utime" content="20151216104721" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-12-16T10:47:21-05:00" />
+<meta name="DISPLAYDATE" content="December 16, 2015" />
+<meta name="dat" content="December 16, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Hedge Funds;Paulson, John A;Robbins, Larry (1969- )">
+<meta name="des" content="Alternative and Renewable Energy;Banking and Financial Institutions;Bitcoin (Currency);Federal Reserve System;Initial Public Offerings;Interest Rates;Junk Bonds;Shareholder Rights and Activism;Square Inc;United States Economy;Venture Capital">
+<meta name="org" content="AstraZeneca PLC;Baker Hughes Inc;Barclays PLC;Dialog Semiconductor PLC;Dow Chemical Company;DuPont Co;Global Payments Inc;Goldman Sachs Group Inc;Halliburton Company;Heartland Payment Systems Inc;Microchip Technology Inc;NASDAQ OMX Group Inc;Qualcomm Inc;Royal Bank of Scotland PLC;Valeant Pharmaceuticals International Inc;Walgreen Co.">
+<meta name="ticker" content="Baker Hughes Inc|BHI|NYSE;Barclays PLC|BCS|NYSE;Dow Chemical Company|DOW|NYSE;Global Payments Inc|GPN|NYSE;Halliburton Company|HAL|NYSE;Microchip Technology Inc|MCHP|NASDAQ;NASDAQ OMX Group Inc|NDAQ|NASDAQ;Qualcomm Inc|QCOM|NASDAQ;Valeant Pharmaceuticals International Inc|VRX|NYSE;Walgreen Co.|WBA|NASDAQ" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Paulson John A" />
+<meta property="article:tag" content="Robbins Larry (1969- )" />
+<meta property="article:tag" content="Alternative and Renewable Energy" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Bitcoin (Currency)" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Interest Rates" />
+<meta property="article:tag" content="Junk Bonds" />
+<meta property="article:tag" content="Shareholder Rights and Activism" />
+<meta property="article:tag" content="Square Inc" />
+<meta property="article:tag" content="United States Economy" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="AstraZeneca PLC" />
+<meta property="article:tag" content="Baker Hughes Inc" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="Dialog Semiconductor PLC" />
+<meta property="article:tag" content="Dow Chemical Company" />
+<meta property="article:tag" content="DuPont Co" />
+<meta property="article:tag" content="Global Payments Inc" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Halliburton Company" />
+<meta property="article:tag" content="Heartland Payment Systems Inc" />
+<meta property="article:tag" content="Microchip Technology Inc" />
+<meta property="article:tag" content="NASDAQ OMX Group Inc" />
+<meta property="article:tag" content="Qualcomm Inc" />
+<meta property="article:tag" content="Royal Bank of Scotland PLC" />
+<meta property="article:tag" content="Valeant Pharmaceuticals International Inc" />
+<meta property="article:tag" content="Walgreen Co." />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Hedge Funds,Paulson John A,Robbins Larry (1969- ),Alternative and Renewable Energy,Banking and Financial Institutions,Bitcoin (Currency),Federal Reserve System,Initial Public Offerings,Interest Rates,Junk Bonds,Shareholder Rights and Activism,Square Inc,United States Economy,Venture Capital,AstraZeneca PLC,Baker Hughes Inc,Barclays PLC,Dialog Semiconductor PLC,Dow Chemical Company,DuPont Co,Global Payments Inc,Goldman Sachs Group Inc,Halliburton Company,Heartland Payment Systems Inc,Microchip Technology Inc,NASDAQ OMX Group Inc,Qualcomm Inc,Royal Bank of Scotland PLC,Valeant Pharmaceuticals International Inc,Walgreen Co.,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F12%2F16%2Fmorning-agenda-all-eyes-on-the-federal-reserve%2F" title="Morning Agenda: All Eyes on the Federal Reserve" />
+<meta name="description" content="Battered, Apologetic and Still Pitching Hedge Funds &#124; Remaking Dow and DuPont for the Activists" />
+<meta name="hdl" content="Morning Agenda: All Eyes on the Federal Reserve" />
+<meta property="og:title" content="Morning Agenda: All Eyes on the Federal Reserve" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/12/16/morning-agenda-all-eyes-on-the-federal-reserve/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Battered, Apologetic and Still Pitching Hedge Funds &#124; Remaking Dow and DuPont for the Activists" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: All Eyes on the Federal Reserve" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/12/16/morning-agenda-all-eyes-on-the-federal-reserve/" />
+<meta name="twitter:description" content="Battered, Apologetic and Still Pitching Hedge Funds &#124; Remaking Dow and DuPont for the Activists" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/12/15/what-were-reading-114/' />
+<link rel='next' title='Morning Agenda:  Janet Yellen&#8217;s New Risk Manager Role' href='//news.blogs.nytimes.com/2015/12/17/morning-agenda-janet-yellens-new-risk-manager-role/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/12/16/morning-agenda-all-eyes-on-the-federal-reserve/' />
+<link rel='shortlink' href='//nyti.ms/1P7vvCX' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/12/16/morning-agenda-all-eyes-on-the-federal-reserve/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: All Eyes on the Federal Reserve - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3870 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: All Eyes on the Federal Reserve        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/12/16/morning-agenda-all-eyes-on-the-federal-reserve/"
+	 data-title="Morning Agenda: All Eyes on the Federal Reserve"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Battered, Apologetic and Still Pitching Hedge Funds | Remaking Dow and DuPont for the Activists&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/12/16/morning-agenda-all-eyes-on-the-federal-reserve/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="December 16, 2015 5:47 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: All Eyes on the Federal Reserve</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-12-16T10:47:21+00:00" itemprop="datePublished">December 16, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">December 16, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3870 post type-post status-publish hentry category-dealbook tag-alternative-and-renewable-energy tag-astrazeneca-plc tag-baker-hughes-inc tag-banking-and-financial-institutions tag-barclays-plc tag-bitcoin-currency tag-dialog-semiconductor-plc tag-dow-chemical-company tag-dupont-co tag-federal-reserve-system tag-global-payments-inc tag-goldman-sachs-group-inc tag-halliburton-company tag-heartland-payment-systems-inc tag-hedge-funds tag-initial-public-offerings tag-interest-rates tag-junk-bonds tag-microchip-technology-inc tag-nasdaq-omx-group-inc tag-paulson-john-a tag-qualcomm-inc tag-robbins-larry-1969 tag-royal-bank-of-scotland-plc tag-shareholder-rights-and-activism tag-square-inc tag-united-states-economy tag-valeant-pharmaceuticals-international-inc tag-venture-capital tag-walgreen-co per-hedge-funds per-paulson-john-a per-robbins-larry-1969 des-alternative-and-renewable-energy des-banking-and-financial-institutions des-bitcoin-currency des-federal-reserve-system des-initial-public-offerings des-interest-rates des-junk-bonds des-shareholder-rights-and-activism des-square-inc des-united-states-economy des-venture-capital org-astrazeneca-plc org-baker-hughes-inc org-barclays-plc org-dialog-semiconductor-plc org-dow-chemical-company org-dupont-co org-global-payments-inc org-goldman-sachs-group-inc org-halliburton-company org-heartland-payment-systems-inc org-microchip-technology-inc org-nasdaq-omx-group-inc org-qualcomm-inc org-royal-bank-of-scotland-plc org-valeant-pharmaceuticals-international-inc org-walgreen-co" id="post-3870">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: All Eyes on the Federal Reserve</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-12-16T10:47:21+00:00" itemprop="datePublished">December 16, 2015 5:47 am</time>
+			<!-- date updated --><span class="visually-hidden updated">December 16, 2015 5:47 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/12/16/morning-agenda-all-eyes-on-the-federal-reserve/" data-title="Morning Agenda: All Eyes on the Federal Reserve" data-description="Battered, Apologetic and Still Pitching Hedge Funds | Remaking Dow and DuPont for the Activists">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ALL EYES ON THE FEDERAL RESERVE</strong> <span class="divider"> | </span></span> If the Federal Reserve decides to raise its benchmark interest rate today, as expected, it will bring <b>an end to seven years of low interest rates</b>.</p>
+<p class="story-body-text" itemprop="articleBody">The decision will come as no surprise. The bigger surprise would be if the Fed stayed pat. Janet L. Yellen, the Federal Reserve chairwoman, has long telegraphed what indicators the central bank has been keeping its eye on and statements from <b>Fed officials have emphasized their intention to act</b> at this final meeting of the year, as <a href="//www.nytimes.com/interactive/2015/business/economy/fed-interest-rates.html">Kevin Granville reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">Unemployment is at 5 percent, about half its recession rate. <b>Confidence in jobs growth</b> has replaced the concerns about turmoil in the global economy. Many of these problems still remain, as <a href="//www.ft.com/intl/cms/s/0/ec289b32-a351-11e5-bc70-7ff6d4fd203a.html#axzz3uSnL5H3s">The Financial Times explains</a>, and others have reared their heads. The junk bond boom has fizzled and could signal broader problems in the economy.</p>
+<p class="story-body-text" itemprop="articleBody">There have also been some indicators that have made it harder to judge how effective the Fedâs policies were, especially as the circumstances that drove it to act were so unusual.</p>
+<p class="story-body-text" itemprop="articleBody">For example, <b>saving has risen</b> in spite of exceptionally low rates, as <a href="//www.wsj.com/articles/fed-to-mark-the-end-of-era-1450213323?cb=logged0.8181992694735527">The Wall Street Journal reports.</a> The personal saving rate has averaged 5.7 percent of disposal income since the recession ended, compared with 3.9 percent during the previous period of growth, partly because of householdsâ trying to rebuild wealth lost during the recession. The low rates may also have increased the cost of retirement and prompted people to save more.</p>
+<p class="story-body-text" itemprop="articleBody">And concerns do remain. <a href="//www.nytimes.com/2015/12/16/business/economy/the-advantages-of-higher-inflation.html?partner=rss&amp;emc=rss">Eduardo Porter</a> suggests in the Economic Scene column that the <b>Fed may have underestimated the benefits of allowing higher inflation</b> and avoiding the trap of the âzero lower bound,â in which interest rates could not be lowered any further to stimulate a stagnant economy because they had already hit the floor.</p>
+<p class="story-body-text" itemprop="articleBody">âThe risk of hitting the zero bound has risen, as slow population growth, strong inflows of capital from overseas and other market forces outside the Fedâs control have conspired to push interest rates down,â Mr. Porter writes. âThat leaves <b>less space to lower rates in response to a recession</b>.â</p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.ft.com/intl/cms/s/0/4417d7e2-a328-11e5-bc70-7ff6d4fd203a.html#axzz3uRqV6JKt">The Financial Times</a> argues in an editorial that it is <b>still too early for liftoff</b> and that the Fed should stop using the same measures as it did before the global financial crisis to make its decision.</p>
+<p class="story-body-text" itemprop="articleBody">âThe world has changed very radically since the U.S. last increased rates,â it wrote. âThe latitude the Fed gives itself within its framework should change too.â</p>
+<p class="story-body-text" itemprop="articleBody">The one place where a rate increase is unlikely to create much difference is in Europe, <a href="//www.nytimes.com/2015/12/16/business/international/a-fed-interest-rate-increase-is-unlikely-to-have-large-effect-in-eurozone.html?partner=rss&amp;emc=rss">Jack Ewing reports in The New York Times.</a> The continent is more worried about <b>why Europe is not responding</b> to the help it is getting from its own central bank and the constant signaling from the Fed means that many markets have already priced in the likelihood of a Fed rate rise.</p>
+<p class="story-body-text" itemprop="articleBody">Ms. Yellen will hold a news conference after the policy statement is published in which she will explain why liftoff from zero is (or isnât) warranted. Sheâs also expected to address issues like the risks of weakness in the high-yield bond market.</p>
+<p class="story-body-text" itemprop="articleBody">As <a href="//www.bloomberg.com/news/articles/2015-12-15/fed-s-historic-liftoff-and-everything-after-decision-day-guide">Bloomberg notes</a> in its guide to decision day, it is worth watching for dissent among officials and looking at the chart showing their projections for where rates will be in the future to see <b>how quickly the Fed will push up interest rates</b> over the next year.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BATTERED, APOLOGETIC AND STILL PITCHING HEDGE FUNDS</strong> <span class="divider"> | </span></span> It has been such a bruising year for hedge funds that some managers have had to write apology letters to their investors, but that hasnât stopped them from <b>soliciting more money with the promise of better opportunities</b>,<br />
+<a href="//www.nytimes.com/2015/12/16/business/dealbook/battered-apologetic-and-still-pitching-their-hedge-funds.html?ref=dealbook">Alexandra Stevenson and Matthew Goldstein report in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">John A. Paulson of Paulson &amp; Company is nursing losses in three funds while raising money for <b>a private equity fund and a fund focused on health care stocks</b>.</p>
+<p class="story-body-text" itemprop="articleBody">Larry Robbins, who founded Glenview Capital Management, lost 20 percent through October and sent an apology to his investors. In the same letter, he offered them <b>the opportunity to invest in a new fund</b> and sweetened the offer by not charging fees on the new portfolio.</p>
+<p class="story-body-text" itemprop="articleBody">The fund-raising highlights the fact that <b>pension funds still want to invest in hedge funds</b>, even as they complain about high fees and disappointing performance.</p>
+<p class="story-body-text" itemprop="articleBody">Mediocre returns just mean that some investors have just <b>pulled out from the underperforming funds</b>, like Mr. Paulsonâs Advantage fund, which is down 11 percent for the year.</p>
+<p class="story-body-text" itemprop="articleBody">Some of this <b>money is redeployed elsewhere</b>, sometimes even to other portfolios managed by the same manager. The Advantage fund has been supplanted by another fund that makes bets on mergers and acquisitions, which now manages more than $9 billion in assets and has taken some of the investor money once directed to the Advantage portfolio.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The <b>Federal Open Market Committee</b> releases its policy statement at 2 p.m. Data on <b>new residential construction</b> will be released at 8:30 a.m. <b>Valeantâs</b> investor day starts at 8 a.m. <b>General Electricâs</b> annual outlook investor meeting starts at 3:30 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>REMAKING DOW AND DUPONT FOR THE ACTIVISTS</strong> <span class="divider"> | </span></span> The Dow Chemical and DuPont merger shows that financial engineering prevails and <b>only activist shareholders matter</b>,<br />
+<a href="//www.nytimes.com/2015/12/16/business/dealbook/remaking-dow-and-dupont-for-the-activist-shareholders.html?ribbon-ad-idx=5&amp;rref=business/dealbook&amp;module=ArrowsNav&amp;contentCollection=DealBook&amp;action=keypress&amp;region=FixedRight&amp;pgtype=article">Steven Davidoff Solomon writes in the Deal Professor column.</a> It remains to be seen whether that is any good for the rest of us.</p>
+<p class="story-body-text" itemprop="articleBody">The move to split almost immediately into three companies afterward is risky and raises questions about <b>why the companies committed to it</b>. The answer is: activist shareholders.</p>
+<p class="story-body-text" itemprop="articleBody">They are willing to agitate for change at any company and are often looking for an event to capture more immediate value. A sale or a spinoff could be a good option.</p>
+<p class="story-body-text" itemprop="articleBody">Funds and shareholders are not looking to do the hard work of a turnaround, Mr. Solomon writes. <b>They want to perform some financial engineering</b> and a spinoff is the ultimate exercise in that.</p>
+<p class="story-body-text" itemprop="articleBody">The theory is that a spinoff would allow the company to be more focused, but in practice, studies show that they produce only short term gains. They are less successful over the long term.</p>
+<p class="story-body-text" itemprop="articleBody">Despite the questionable evidence to support them, spinoffs are still thriving because companies are scared and <b>shareholders are much more powerful than they have ever been</b>. Institutional shareholders often hold almost a majority of a public company and often they pay attention to proxy advisory services and vote as a group. They also increasingly throw their support behind the activists.</p>
+<p class="story-body-text" itemprop="articleBody">Is this a good thing? It could <b>end up harming shareholders</b> and everyone else involved in the corporate enterprise, Mr. Solomon writes.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &amp; Acquisitions Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Global Payments to Buy Heartland Payment for $4.3 Billion</strong> <span class="divider"> | </span></span> The merger would be the latest in the payments industry as companies around the world continue to move toward e-commerce of all types.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/12/16/business/dealbook/global-payments-to-buy-heartland-payment-for-4-3-billion.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2015/12/15/business/cnbc-valeant/cnbc-valeant-square320.png" alt="Valeant Makes Distribution Deal With Walgreens" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Valeant Makes Distribution Deal With Walgreens</strong> <span class="divider"> | </span></span> The pharmaceutical companyâs agreement appeared to be part of its strategy to replace its reliance on a now-defunct mail-order pharmacy.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/12/16/business/valeant-makes-distribution-deal-with-walgreens.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2015/12/16/technology/16qualcomm-web1/16qualcomm-web1-square320.jpg" alt="Qualcomm Concludes a Split Would Be Detrimental" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Qualcomm Concludes a Split Would Be Detrimental</strong> <span class="divider"> | </span></span> The chip maker has released the results of a monthslong review that it undertook to evaluate whether it should divide into two separate companies.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/12/16/technology/qualcomm-analysis-concludes-a-split-would-be-detrimental.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AstraZeneca to Buy Respiratory Drug Business From Takeda</strong> <span class="divider"> | </span></span> AstraZeneca agreed to buy a respiratory business from Takeda Pharmaceutical of Japan for $575 million to gain global rights to the lung treatment Roflumilast<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-12-16/astrazeneca-to-buy-respiratory-drug-business-from-japan-s-takeda"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Billionaire in Talks to Take Crown Assets Private</strong> <span class="divider"> | </span></span> Australiaâs third-richest man, James Packer, is in talks to return some of Crown Resortsâ casino assets to private ownership, Bloomberg News reported, citing people with knowledge of the matter.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-12-16/billionaire-packer-said-in-talks-to-take-crown-assets-private"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Microchip Is The Undisclosed Bidder Challenging Dialog</strong> <span class="divider"> | </span></span> Microchip Technology is the semiconductor manufacturer that made the $3.8 billion unsolicited offer for its peer, Atmel, that was disclosed last week, Reuters reports, citing a person familiar with the matter.<br />
+<span class="kicker"><a href="//www.reuters.com/article/us-atmel-m-a-microchip-exclusive-idUSKBN0TY2P420151215?feedType=RSS&amp;feedName=innovationNews"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Blow to the Halliburton and Baker Hughes Deal</strong> <span class="divider"> | </span></span> Halliburton, the oil services group, has been forced to delay its planned $26 billion acquisition of its rival Baker Hughes for a second time, after failing to reach an agreement with competition regulators.<br />
+<span class="kicker"><a href="//www.ft.com/intl/cms/s/0/4ae49c46-a36d-11e5-bc70-7ff6d4fd203a.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3uGTUz08R">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Cofco of China Said to Be in Talks to Take Over Nobleâs Agribusiness</strong> <span class="divider"> | </span></span> Chinaâs food giant Cofco is in advanced talks to take full ownership of Noble Groupâs agribusiness and bolster its power in global agriculture markets, Reuters reports, citing three sources.<br />
+<span class="kicker"><a href="//www.reuters.com/article/us-noble-m-a-cofco-exclusive-idUSKBN0TY19Y20151216?feedType=RSS&amp;feedName=innovationNews"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinaâs State Power Investment Corporation to Buy Renewable Energy Company</strong> <span class="divider"> | </span></span> Pacific Hydro, which has electric and wind facilities in Australia, Brazil and Chile, is being bought from the Australian pension fund IFM Investors for an undisclosed price.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/12/17/business/dealbook/china-state-power-pacific-hydro-investment.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>R.B.S. Considering Sale of Williams &amp; Glyn</strong> <span class="divider"> | </span></span> Royal Bank of Scotland had been preparing to spin off the branch network in 2017, but it said it had received informal approaches for the unit.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/12/17/business/dealbook/rbs-williams-glyn.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Barclays Said to Consider Scaling Back in Africa</strong> <span class="divider"> | </span></span> Barclays is considering whether to break with almost 100 years of history by selling some or all of its African banking operations as part of a review led by Jes Staley, its new chief executive, The Financial Times reports, citing people familiar with the matter.<br />
+<span class="kicker"><a href="//www.ft.com/intl/cms/s/0/ebc2ff20-a356-11e5-bc70-7ff6d4fd203a.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3uSnL5H3s">THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Trading Sags 36% at Jefferies Group</strong> <span class="divider"> | </span></span> The investment bank blamed turbulent energy markets for the disappointing fourth-quarter results.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/12/16/business/dealbook/trading-sags-36-at-jefferies-group.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Goldman Names a New M.&amp;.A. Co-Chairman</strong> <span class="divider"> | </span></span> In a strong year for deals, John Vaske joins Tim Ingrassia and Paul Parker to oversee the firmâs global merger advising business.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/12/16/business/dealbook/goldman-names-a-new-ma-co-chairman.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blockchain and the Holy Grail of Banking</strong> <span class="divider"> | </span></span> Blockchain is exciting for banks precisely because it promises to protect their scale in a derisked system and it is exciting for nonbanks because it allows them to challenge incumbent banks without being exposed to the risk mistakes of non-bank challengers in the past, Izabella Kaminska writes in FTAlphaville.<br />
+<span class="kicker"><a href="//ftalphaville.ft.com/2015/12/15/2148035/the-ghosts-of-fintech-past/"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CVC Partners to Take Stake in Payments Security Provider</strong> <span class="divider"> | </span></span> The private equity firm plans to announce that it has invested $80 million into Kount, whose products are meant to help clamp down on fraudulent online transactions.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/12/17/business/dealbook/cvc-partners-to-take-stake-in-payments-security-provider.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Related Companies Raises $1 Billion for Real Estate Fund</strong> <span class="divider"> | </span></span> Related has raised the capital for a second so-called opportunistic fund, testing its renovate-and-flip model in the healthier environment.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/12/16/business/dealbook/related-companies-raises-1-billion-for-real-estate-fund.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Square Merchants Bought Shares During Its I.P.O., With a Start-Upâs Help</strong> <span class="divider"> | </span></span> Square invited its merchants to buy shares in the companyâs November initial public offering through a platform known as Loyal3.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/12/16/business/dealbook/square-ipo-start-up-initial-public-offering.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Slack Aims to Become a Control Panel for Your Job</strong> <span class="divider"> | </span></span> Slack is unveiling an app store and an $80 million fund to invest in apps, as the group messaging start-up tries to become a control panel for your job.<br />
+<span class="kicker"><a href="//bits.blogs.nytimes.com/2015/12/15/slack-aims-to-become-a-control-panel-for-your-job/">Bits Blog Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Adena Friedman Said to Be Named Nasdaq Operating Chief</strong> <span class="divider"> | </span></span> The promotion would put her one step closer to succeeding the chief executive, Robert Greifeld, who has been in his role since 2003 and is expected to leave when his contract expires in 2017.<br />
+<span class="kicker"><a href="//www.wsj.com/articles/friedman-to-be-nasdaq-operating-chief-1450225822?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody">&nbsp;</p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/12/16/morning-agenda-all-eyes-on-the-federal-reserve/"
+					data-title="Morning Agenda: All Eyes on the Federal Reserve"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Battered, Apologetic and Still Pitching Hedge Funds | Remaking Dow and DuPont for the Activists&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/12/16/morning-agenda-all-eyes-on-the-federal-reserve/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":68,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

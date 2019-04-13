@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-bits section-technology"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-bits section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-bits section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-bits section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="channels" content="NytNow" />
+<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/bits/Google Releases Employee Data, Illustrating Tech's Diversity Challenge ( 20140528 )" />
+<meta name="communityAssetURL" content="//bits.blogs.nytimes.com/2014/05/28/google-releases-employee-data-illustrating-techs-diversity-challenge/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000002907483"><meta name="author" content="Claire Cain Miller" />
+<meta name="CLMST" content="Claire Cain Miller" />
+<meta name="byl" content="Claire Cain Miller" />
+<meta name="article:author" content="//topics.nytimes.com/top/reference/timestopics/people/m/claire_cain_miller/index.html" /><meta name="GBLC" content="Executives and Management;Internet;Policy;Venture Capital">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1401316972" />
+<meta name="PUD" content="20140528" />
+<meta name="pdate" content="20140528" />
+<meta name="ptime" content="20140528184252" />
+<meta name="utime" content="20140529143813" />
+<meta property="article:modified_time" itemprop="dateModified" content="2014-05-29T14:38:13-04:00" />
+<meta name="DISPLAYDATE" content="May 28, 2014" />
+<meta name="dat" content="May 28, 2014" />
+<meta itemprop="articleSection" property="article:section" content="Technology" />
+<meta name="CG" content="Technology" />
+<meta name="SCG" content="bits" />
+<meta name="BN" content="bits" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Computers and the Internet;Hiring and Promotion;Minorities;Women and Girls">
+<meta name="org" content="Google Inc">
+<meta name="ticker" content="Google Inc|GOOGL|NASDAQ" />
+<meta property="article:tag" content="Computers and the Internet" />
+<meta property="article:tag" content="Hiring and Promotion" />
+<meta property="article:tag" content="Minorities" />
+<meta property="article:tag" content="Women and Girls" />
+<meta property="article:tag" content="Google Inc" />
+<meta property="article:tag" content="Executives and Management" />
+<meta property="article:tag" content="Internet" />
+<meta property="article:tag" content="Policy" />
+<meta property="article:tag" content="Venture Capital" />
+<meta name="keywords" content="Computers and the Internet,Hiring and Promotion,Minorities,Women and Girls,Google Inc,Executives and Management,Internet,Policy,Venture Capital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fbits.blogs.nytimes.com%2F2014%2F05%2F28%2Fgoogle-releases-employee-data-illustrating-techs-diversity-challenge%2F" title="Google Releases Employee Data, Illustrating Tech&#8217;s Diversity Challenge" />
+<meta name="description" content="Google on Wednesday released statistics on the makeup of its work force, providing numbers that offer a stark glance at how Silicon Valley remains a white man&#8217;s world." />
+<meta name="hdl_p" content="Data on Diversity at Google Shows Sectorâs Challenge" />
+<meta name="hdl" content="Google Releases Employee Data, Illustrating Tech&#039;s Diversity Challenge" />
+<meta property="og:title" content="Google Releases Employee Data, Illustrating Tech&#039;s Diversity Challenge" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//bits.blogs.nytimes.com/2014/05/28/google-releases-employee-data-illustrating-techs-diversity-challenge/" />
+<meta property="og:site_name" content="Bits Blog" />
+<meta property="og:description" content="Google on Wednesday released statistics on the makeup of its work force, providing numbers that offer a stark glance at how Silicon Valley remains a white man&#8217;s world." />
+<meta property="og:image" content="https://static01.nyt.com/images/2014/05/28/business/28bits-google/28bits-google-videoSixteenByNine600.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2014/05/28/business/28bits-google/28bits-google-thumbLarge.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Google Releases Employee Data, Illustrating Tech&#039;s Diversity Challenge" />
+<meta name="twitter:url" content="//bits.blogs.nytimes.com/2014/05/28/google-releases-employee-data-illustrating-techs-diversity-challenge/" />
+<meta name="twitter:description" content="Google on Wednesday released statistics on the makeup of its work force, providing numbers that offer a stark glance at how Silicon Valley remains a white man&#8217;s world." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2014/05/28/business/28bits-google/28bits-google-thumbLarge.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2014/05/28/business/28bits-google/28bits-google-thumbLarge.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@nytimesbits">
+<link rel='prev' title='Intel Shows Off &#8216;Smart&#8217; Wearable Shirt' href='//bits.blogs.nytimes.com/2014/05/28/intel-shows-off-smart-wearable-shirt/' />
+<link rel='next' title='Making Twitter Easier to Use' href='//bits.blogs.nytimes.com/2014/05/28/making-twitter-easier-to-use/' />
+<link rel='canonical' href='//bits.blogs.nytimes.com/2014/05/28/google-releases-employee-data-illustrating-techs-diversity-challenge/' />
+<link rel='shortlink' href='//nyti.ms/1lRSlvr' />
+<link rel='https://github.com/WP-API/WP-API' href='//bits.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/bits/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//bits.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/technology/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/bits/2014/05/28/google-releases-employee-data-illustrating-techs-diversity-challenge/" />
+<meta name="dfp-ad-unit-path" content="technology/bits" />			<title>Google Releases Employee Data, Illustrating Tech&#039;s Diversity Challenge - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/bits.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-158116 blog-universal nyt-blog-bits" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'Technology', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//bits.blogs.nytimes.com">
+                Bits            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Google Releases Employee Data, Illustrating Tech&#8217;s Diversity Challenge        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//bits.blogs.nytimes.com/2014/05/28/google-releases-employee-data-illustrating-techs-diversity-challenge/"
+	 data-title="Google Releases Employee Data, Illustrating Tech&#8217;s Diversity Challenge"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Google on Wednesday released statistics on the makeup of its work force, providing numbers that offer a stark glance at how Silicon Valley remains a white manâs world.&lt;/span&gt;&lt;a href=&quot;//bits.blogs.nytimes.com/2014/05/28/google-releases-employee-data-illustrating-techs-diversity-challenge/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 28, 2014 6:42 pm">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="bits" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+		<div class="element1">
+	<a href="//bits.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=Technology"><div id="logo" class="archived-blog-post"><div class="w75 left site-header-logo"><img src="https://static01.nyt.com/images/blogs_v3/bits/bits75.gif" alt="Bits"/></div><div class="site-title">Bits</div><div class="site-description">Business, Innovation, Technology, Society</div></div></a>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//bits.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Bits">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-158116 post type-post status-publish hentry category-executives-and-management category-internet category-policy category-venture-capital tag-computers-and-the-internet tag-google-inc tag-hiring-and-promotion tag-minorities tag-women-and-girls des-computers-and-the-internet des-hiring-and-promotion des-minorities des-women-and-girls org-google-inc splitPostView" id="post-158116">
+	<header class="postHeader">
+				<div class="postKicker">
+			<span class="kicker"><a href="//bits.blogs.nytimes.com/category/policy/?module=BlogCategory&version=Blog Post&action=Click&contentCollection=Technology&pgtype=Blogs&region=Header">Policy</a></span>
+		</div>
+				<h1 itemprop="headline" class="entry-title">Google Releases Employee Data, Illustrating Tech&#8217;s Diversity Challenge</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Claire Cain Miller			</address>
+			<!-- date published --><time class="dateline " datetime="2014-05-28T22:42:52+00:00" itemprop="datePublished">May 28, 2014 6:42 pm</time>
+			<!-- date updated --><span class="visually-hidden updated">May 28, 2014 6:42 pm</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div class="w592"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2014/05/28/business/28bits-google/28bits-google-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2014/05/28/business/28bits-google/28bits-google-tmagArticle.jpg" src="https://static01.nyt.com/images/2014/05/28/business/28bits-google/28bits-google-tmagArticle.jpg" id="100000002907252" width="592" height="395" alt="Thirty percent of Google&#039;s employees are women, the company said, a figure that&#039;s 17 percentage points less than the representation of women in the full United States workforce."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Thirty percent of Google's employees are women, the company said, a figure that's 17 percentage points less than the representation of women in the full United States workforce.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Jim Wilson/The New York Times</span></figcaption></figure></div>
+<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//bits.blogs.nytimes.com/2014/05/28/google-releases-employee-data-illustrating-techs-diversity-challenge/" data-title="Google Releases Employee Data, Illustrating Tech&#8217;s Diversity Challenge" data-description="Google on Wednesday released statistics on the makeup of its work force, providing numbers that offer a stark glance at how Silicon Valley remains a white manâs world.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody">Google on Wednesday released statistics on the makeup of its work force, providing numbers that offer a stark glance at how Silicon Valley remains a white man&#8217;s world.</p>
+<p class="story-body-text" itemprop="articleBody">Thirty percent of Google&#8217;s 46,170 employees worldwide are women, the company said, and 17 percent of its technical employees are women. Comparatively, 47 percent of the total work force in the United States is women and 20 percent of software developers are women, according to the Bureau of Labor Statistics.</p>
+<p class="story-body-text" itemprop="articleBody">Of its United States employees, 61 percent are white, 2 percent are black and 3 percent are Hispanic. About one-third are Asian &#8212; well above the national average &#8212; and 4 percent are of two or more races. Of Google&#8217;s technical staff, 60 percent are white, 1 percent are black, 2 percent are Hispanic, 34 percent are Asian and 3 percent are of two or more races.</p>
+<p class="story-body-text" itemprop="articleBody">In the United States work force over all, 80 percent of employees are white, 12 percent are black and 5 percent are Asian, according to the Bureau of Labor Statistics.</p>
+<p class="story-body-text" itemprop="articleBody">Google&#8217;s disclosures come amid an escalating debate over the lack of diversity in the tech industry. Although tech is a key driver of the economy and makes  products that many Americans use ever yday, it does not come close to reflecting the demographics of the country &#8212; in terms of sex, <a href="//www.newrepublic.com/article/117088/silicons-valleys-brutal-ageism">age</a> or <a href="//www.newyorker.com/online/blogs/currency/2013/12/addressing-silicon-valleys-race-problem.html">race</a>.  The lopsided numbers persist among <a href="//www.nytimes.com/2014/04/06/technology/technologys-man-problem.html">engineers</a>, <a href="//www.nytimes.com/2010/04/18/technology/18women.html">founders</a> and <a href="//www.nytimes.com/2013/10/05/technology/as-tech-start-ups-surge-ahead-women-seem-to-be-left-behind.html">boards of directors</a>.</p>
+<p class="story-body-text" itemprop="articleBody">The Rev. Jesse L. Jackson Sr., the civil rights activist, has been <a href="//bits.blogs.nytimes.com/2014/03/19/jesse-jackson-confronts-silicon-valley/">pressuring tech companies</a> to release data on the makeup of their workforces. When he appeared at Google&#8217;s shareholders meeting this month, David Drummond, Google&#8217;s chief legal officer, surprised people when he said the company would release the data. Other tech companies at which Mr. Jackson has appeared, including Hewlett-Packard and Facebook, have not released diversity statistics about their companies.</p>
+<div class="w480"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2014/05/28/business/28bits-jackson/28bits-jackson-blog480.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2014/05/28/business/28bits-jackson/28bits-jackson-blog480.jpg" src="https://static01.nyt.com/images/2014/05/28/business/28bits-jackson/28bits-jackson-blog480.jpg" id="100000002907256" width="480" height="320" alt="The Rev. Jesse L. Jackson Sr., the civil rights activist, has been pressuring tech companies to release data on the make-up of their workforces."   /><meta itemprop="height" content="320"><meta itemprop="width" content="480"></div><figcaption class="caption" itemprop="description"><span class="caption-text">The Rev. Jesse L. Jackson Sr., the civil rights activist, has been pressuring tech companies to release data on the make-up of their workforces.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Matt Rourke/Associated Press</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">&#8220;Google is not where we want to be when it comes to diversity, and itâs hard to address these kinds of challenges if youâre not prepared to discuss them openly, and with the facts,&#8221; Laszlo Bock, Google&#8217;s senior vice president for people operations, wrote <a href="//googleblog.blogspot.com/2014/05/getting-to-work-on-diversity-at-google.html">in a blog post</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Though Google did not specifically say how it planned to change the numbers, it said that it hoped releasing them would start a dialogue. The company had made changes in the past <a href="//www.nytimes.com/2012/08/23/technology/in-googles-inner-circle-a-falling-number-of-women.html">to recruit and retain women</a>, like lengthening maternity leaves and including women on the teams that interviewed prospective employees, but the numbers reveal it has a long way to go.</p>
+<p class="story-body-text" itemprop="articleBody">Tech companies have often blamed the lack of diverse workforces on the pipeline &#8212; they can only hire the people who apply for jobs, and those tend to be white and Asian men, they say.</p>
+<p class="story-body-text" itemprop="articleBody">That is partly true. For instance, only 18.5 percent of high school <a href="//bits.blogs.nytimes.com/2014/02/02/techs-diversity-problem-is-apparent-as-early-as-high-school/">students who took the Advanced Placement exam</a> in computer science last year were girls. In eight states, no Hispanic students took the test and in 12 states, no black students took it. The problems start as early as childhood, when <a href="//bits.blogs.nytimes.com/2013/11/20/a-viral-video-encourages-girls-to-become-engineers/">girls are discouraged</a> by parents and teachers from pursuing technical pursuits.</p>
+<p class="story-body-text" itemprop="articleBody">Yet some of the blame also falls on tech companies. There can be <a href="//www.nytimes.com/2014/04/06/technology/technologys-man-problem.html">a sexist culture</a> that turns away women, as evidenced by the high attrition rate among technical women as compared to men. And women who try to start tech companies face exclusion by a venture capital network dominated by a <a href="//www.nytimes.com/2012/06/03/technology/lawsuit-against-kleiner-perkins-is-shaking-silicon-valley.html">chummy fraternity</a> of men.</p>
+<p class="story-body-text" itemprop="articleBody">This is all despite the fact that the data &#8212; which in Silicon Valley usually reigns supreme &#8212; shows that diversity on groups benefits research, development, innovation and profit.</p>
+<footer class="story-footer">
+    <div class="story-meta">
+	<p class="story-print-citation">A version of this article appears in print on 06/02/2014, on page <span itemprop="printSection">B</span><span itemprop="printPage">7</span> of the <span itemprop="printEdition">NewYork</span> edition with the headline: Data on Diversity at Google Shows Sectorâs Challenge.</p>    </div>
+</footer>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//bits.blogs.nytimes.com/2014/05/28/google-releases-employee-data-illustrating-techs-diversity-challenge/" data-title="Google Releases Employee Data, Illustrating Tech&#8217;s Diversity Challenge" data-description="Google on Wednesday released statistics on the makeup of its work force, providing numbers that offer a stark glance at how Silicon Valley remains a white manâs world.">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//bits.blogs.nytimes.com/2014/05/28/intel-shows-off-smart-wearable-shirt/" title="Intel Shows Off &#039;Smart&#039; Wearable Shirt">
+				Intel Shows Off &#8216;Smart&#8217; Wearable Shirt			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//bits.blogs.nytimes.com/2014/05/28/making-twitter-easier-to-use/" title="Making Twitter Easier to Use">
+				Making Twitter Easier to Use			</a>
+					</li>
+	</ul>
+</div>
+<div id="nyt_promo_widget-10" class="module nocontent widget_nyt_promo_widget"><div style="font-family: nyt-franklin, arial, sans-serif; padding-top: 12px; font-size: 14px; line-height: 17px;">
+Visit the <a href="//nytimes.com/technology" style="font-weight: 600;">Technology section</a> for complete coverage of the industry. <a href="//nytimes.com/technology" style="font-family: nyt-franklin, arial, sans-serif; font-weight: 600;">Â»</a>
+</div></div>		<div class="module ad" id="MiddleRight"></div>
+        		<div class="module ad" id="Box3"></div>
+        		<div class="module ad" id="Box1"></div>
+        <div id="nyt_blog_social_media-5" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-single ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">us on</span></span>
+<span class="blog-fw-specific-followmessage"><span class="blog-fw-username"><a href="https://twitter.com/nytimesbits" title="Follow @nytimesbits on twitter">@nytimesbits</a></span> on <span class="blog-fw-twitter">twitter</span></span></h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/nytimesbits" title="Follow nytimesbits on Twitter">Twitter</a></li></ul>
+<p class="blog-fw-followbutton"><a href="https://twitter.com/nytimesbits" title="Follow @nytimesbits on twitter">Follow</a></p></div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-9',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":50,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

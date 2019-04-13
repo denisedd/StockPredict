@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004562266"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1470044960" />
+<meta name="PUD" content="20160801" />
+<meta name="pdate" content="20160801" />
+<meta name="ptime" content="20160801054920" />
+<meta name="utime" content="20160801094920" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-08-01T09:49:20-04:00" />
+<meta name="DISPLAYDATE" content="August 1, 2016" />
+<meta name="dat" content="August 1, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Armstrong, Tim;Hershey, Milton Snavely (1857-1945);Holmes, Elizabeth (1984- );Kalanick, Travis;Kurian, Thomas R (1966- )">
+<meta name="des" content="Banking and Financial Institutions;Cloud Computing;Computer and Video Games;Computers and the Internet;Hedge Funds;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Presidential Election of 2016;Stocks and Bonds">
+<meta name="org" content="Alphabet Inc;AOL Inc;Bank of New York Mellon Corporation;Fosun International;GlaxoSmithKline PLC;Goldman Sachs Group Inc;Google Inc;Hershey Company;Hershey Foods Corp;JPMorgan Chase &amp; Company;NetSuite Inc;Publicis Groupe;Publicis Groupe SA;Saatchi &amp; Saatchi;Sotheby&#039;s;Standard Chartered Bank PLC;Taikang Life Insurance Co Ltd;Theranos Inc;Verizon Communications Inc;Yahoo! Inc">
+<meta name="ticker" content="Bank of New York Mellon Corporation|BK|NYSE;GlaxoSmithKline PLC|GSK|NYSE;Goldman Sachs Group Inc|GS|NYSE;Hershey Company|HSY|NYSE;JPMorgan Chase & Company|JPM|NYSE;NetSuite Inc|N|NYSE;Publicis Groupe SA|PUBGY|Other OTC;Sotheby's|BID|NYSE;Verizon Communications Inc|VZ|NYSE;Yahoo! Inc|YHOO|NASDAQ" />
+<meta property="article:tag" content="Armstrong Tim" />
+<meta property="article:tag" content="Hershey Milton Snavely (1857-1945)" />
+<meta property="article:tag" content="Holmes Elizabeth (1984- )" />
+<meta property="article:tag" content="Kalanick Travis" />
+<meta property="article:tag" content="Kurian Thomas R (1966- )" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Cloud Computing" />
+<meta property="article:tag" content="Computer and Video Games" />
+<meta property="article:tag" content="Computers and the Internet" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Presidential Election of 2016" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Alphabet Inc" />
+<meta property="article:tag" content="AOL Inc" />
+<meta property="article:tag" content="Bank of New York Mellon Corporation" />
+<meta property="article:tag" content="Fosun International" />
+<meta property="article:tag" content="GlaxoSmithKline PLC" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Google Inc" />
+<meta property="article:tag" content="Hershey Company" />
+<meta property="article:tag" content="Hershey Foods Corp" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="NetSuite Inc" />
+<meta property="article:tag" content="Publicis Groupe" />
+<meta property="article:tag" content="Publicis Groupe SA" />
+<meta property="article:tag" content="Saatchi &amp; Saatchi" />
+<meta property="article:tag" content="Sotheby&#039;s" />
+<meta property="article:tag" content="Standard Chartered Bank PLC" />
+<meta property="article:tag" content="Taikang Life Insurance Co Ltd" />
+<meta property="article:tag" content="Theranos Inc" />
+<meta property="article:tag" content="Verizon Communications Inc" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Armstrong Tim,Hershey Milton Snavely (1857-1945),Holmes Elizabeth (1984- ),Kalanick Travis,Kurian Thomas R (1966- ),Banking and Financial Institutions,Cloud Computing,Computer and Video Games,Computers and the Internet,Hedge Funds,Initial Public Offerings,Mergers Acquisitions and Divestitures,Presidential Election of 2016,Stocks and Bonds,Alphabet Inc,AOL Inc,Bank of New York Mellon Corporation,Fosun International,GlaxoSmithKline PLC,Goldman Sachs Group Inc,Google Inc,Hershey Company,Hershey Foods Corp,JPMorgan Chase &amp; Company,NetSuite Inc,Publicis Groupe,Publicis Groupe SA,Saatchi &amp; Saatchi,Sotheby&#039;s,Standard Chartered Bank PLC,Taikang Life Insurance Co Ltd,Theranos Inc,Verizon Communications Inc,Yahoo! Inc,DealBook" />
+<meta name="news_keywords" content="Sotheby&#039;s" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F08%2F01%2Fmorning-agenda-uber-and-didi-chuxing-team-up-in-china%2F" title="Morning Agenda: Uber and Didi Chuxing Team Up in China" />
+<meta name="description" content="Oracle Has a Cloud Problem &#124; Yahoo Sale Leaves Little Choice for Shareholders" />
+<meta name="hdl" content="Morning Agenda: Uber and Didi Chuxing Team Up in China" />
+<meta property="og:title" content="Morning Agenda: Uber and Didi Chuxing Team Up in China" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/08/01/morning-agenda-uber-and-didi-chuxing-team-up-in-china/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Oracle Has a Cloud Problem &#124; Yahoo Sale Leaves Little Choice for Shareholders" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Uber and Didi Chuxing Team Up in China" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/08/01/morning-agenda-uber-and-didi-chuxing-team-up-in-china/" />
+<meta name="twitter:description" content="Oracle Has a Cloud Problem &#124; Yahoo Sale Leaves Little Choice for Shareholders" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What Weâre Reading' href='//news.blogs.nytimes.com/2016/07/29/what-were-reading-175/' />
+<link rel='next' title='Morning Agenda: Herbalife vs. Activist: Just Maybe He&#8217;s Right' href='//news.blogs.nytimes.com/2016/08/02/morning-agenda-herbalife-vs-activist-just-maybe-hes-right/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/08/01/morning-agenda-uber-and-didi-chuxing-team-up-in-china/' />
+<link rel='shortlink' href='//nyti.ms/2aCmMdp' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/08/01/morning-agenda-uber-and-didi-chuxing-team-up-in-china/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Uber and Didi Chuxing Team Up in China - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5405 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Uber and Didi Chuxing Team Up in China        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/08/01/morning-agenda-uber-and-didi-chuxing-team-up-in-china/"
+	 data-title="Morning Agenda: Uber and Didi Chuxing Team Up in China"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Oracle Has a Cloud Problem | Yahoo Sale Leaves Little Choice for Shareholders&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/08/01/morning-agenda-uber-and-didi-chuxing-team-up-in-china/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="August 1, 2016 5:49 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Uber and Didi Chuxing Team Up in China</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-08-01T09:49:20+00:00" itemprop="datePublished">August 1, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">August 1, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5405 post type-post status-publish hentry category-dealbook tag-alphabet-inc tag-aol-inc tag-armstrong-tim tag-bank-of-new-york-mellon-corporation tag-banking-and-financial-institutions tag-cloud-computing tag-computer-and-video-games tag-computers-and-the-internet tag-fosun-international tag-glaxosmithkline-plc tag-goldman-sachs-group-inc tag-google-inc tag-hedge-funds tag-hershey-company tag-hershey-foods-corp tag-hershey-milton-snavely-1857-1945 tag-holmes-elizabeth-1984 tag-initial-public-offerings tag-jpmorgan-chase-company tag-kalanick-travis tag-kurian-thomas-r-1966 tag-mergers-acquisitions-and-divestitures tag-netsuite-inc tag-presidential-election-of-2016 tag-publicis-groupe tag-publicis-groupe-sa tag-saatchi-saatchi tag-sothebys tag-standard-chartered-bank-plc tag-stocks-and-bonds tag-taikang-life-insurance-co-ltd tag-theranos-inc tag-verizon-communications-inc tag-yahoo-inc per-armstrong-tim per-hershey-milton-snavely-1857-1945 per-holmes-elizabeth-1984 per-kalanick-travis per-kurian-thomas-r-1966 des-banking-and-financial-institutions des-cloud-computing des-computer-and-video-games des-computers-and-the-internet des-hedge-funds des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-presidential-election-of-2016 des-stocks-and-bonds org-alphabet-inc org-aol-inc org-bank-of-new-york-mellon-corporation org-fosun-international org-glaxosmithkline-plc org-goldman-sachs-group-inc org-google-inc org-hershey-company org-hershey-foods-corp org-jpmorgan-chase-company org-netsuite-inc org-publicis-groupe org-publicis-groupe-sa org-saatchi-saatchi org-sothebys org-standard-chartered-bank-plc org-taikang-life-insurance-co-ltd org-theranos-inc org-verizon-communications-inc org-yahoo-inc news_keywords-sothebys" id="post-5405">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Uber and Didi Chuxing Team Up in China</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-08-01T09:49:20+00:00" itemprop="datePublished">August 1, 2016 5:49 am</time>
+			<!-- date updated --><span class="visually-hidden updated">August 1, 2016 5:49 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/08/01/morning-agenda-uber-and-didi-chuxing-team-up-in-china/" data-title="Morning Agenda: Uber and Didi Chuxing Team Up in China" data-description="Oracle Has a Cloud Problem | Yahoo Sale Leaves Little Choice for Shareholders">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>UBER AND DIDI CHUXING TEAM UP IN CHINA</strong> The battle for ride-sharing in China is over. Didi Chuxing plans to buy Uber China, according to people with knowledge of the deal. After spending tens of millions of dollars every month fighting for market share, the two companies will combine into a new one worth about <a href="//www.nytimes.com/2016/08/02/business/dealbook/china-uber-didi-chuxing.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">$35 billion</a>.</p>
+<p class="story-body-text" itemprop="articleBody">&#8220;I&#8217;ve learned that being successful is about listening to your head as well as following your heart,&#8221; Travis Kalanick, Uber&#8217;s chief executive, wrote in a blog post intended to announce the deal. &#8220;Uber and Didi Chuxing are investing billions of dollars in China and both have yet to turn a profit there.&#8221; <a href="//www.bloomberg.com/news/articles/2016-08-01/uber-said-to-merge-china-business-with-didi-in-35-billion-deal?nl=dealbook&amp;emc=edit_dlbkam_20160801">Bloomberg</a>, which earlier reported the deal, said that Uber had lost more than $2 billion in China.</p>
+<p class="story-body-text" itemprop="articleBody">Investors in Uber China will receive a 20 percent stake in the new company and Didi will make a $1 billion investment in Uber Global.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>ORACLE HAS A CLOUD PROBLEM</strong> Oracle has never really had a problem spending money, having shelled out for dozens of companies over the last 11 years. But as the new owner of NetSuite, it faces the challenge of integrating its new acquisition into its global network of data centers. And it will have to show that it can rein in competitors that have been stealing customers with fresher technology and cloud computing, as Oracle has taken its time shifting from its older and more expensive technology.</p>
+<p class="story-body-text" itemprop="articleBody">Oracle figured it could distribute NetSuite&#8217;s e-commerce and manufacturing software via its cloud, while using it to reach smaller companies that have so far been unable to afford Oracle&#8217;s high-cost product. And that task falls to <a href="//www.nytimes.com/2016/08/01/technology/oracle-thomas-kurian-software-netsuite.html?ref=dealbook&amp;_r=&amp;nl=dealbook&amp;emc=edit_dlbkam_20160801">Thomas Kurian</a>, the president of product development, who has been overseeing Oracle&#8217;s reinvention.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>ON THE AGENDA</strong> The latest I.S.M. manufacturing report will be published at 10 a.m. Elizabeth Holmes, the founder and chief executive of Theranos, will speak at the annual meeting of the American Association for Clinical Chemistry in Philadelphia at 4:30 p.m.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>YAHOO SALE LEAVES LITTLE CHOICE FOR SHAREHOLDERS</strong> The Yahoo sale is not the sale of a publicly traded company &#8211; it&#8217;s the sale of the Yahoo subsidiary. The $4.8 billion will be paid to Yahoo, and its shareholders will not receive any money unless Yahoo pays it out in a dividend. They will be left holding shares in the remaining company. Although they have a vote on the sale, there will be no appraisal rights. So anyone who thinks the price is inadequate is out of luck, <a href="//www.nytimes.com/2016/07/30/business/dealbook/yahoos-sale-to-verizon-leaves-shareholders-with-little-say.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160801">Steven Davidoff Solomon explains.</a></p>
+<p class="story-body-text" itemprop="articleBody">Verizon, for its part, will be agitating to make the most of its role in this deal. It has been trying to reinvent itself since before it bought AOL and Yahoo, seeking to shake its reputation as a big, boring telephone company to be considered a digital player. &#8220;People act like Google and Facebook have already won. But nobody owns the future,&#8221; said Tim Armstrong, AOL&#8217;s chief executive, who will oversee the <a href="//www.nytimes.com/2016/07/31/business/media/yahoo-and-the-online-universe-according-to-verizon.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">integration with Yahoo.</a></p>
+<p class="story-body-text" itemprop="articleBody"><em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/?nl=dealbook&amp;emc=edit_dlbkam_20160801">MERGERS &amp; ACQUISITIONS Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Chinese Group to Pay $4.4 Billion for Caesars&#8217; Mobile Games</strong> The deal with Caesars Interactive Entertainment is a sign that investors are willing to pay increasingly large sums for smartphone games.<br />
+<a href="//www.nytimes.com/2016/08/01/business/dealbook/china-caesars-mobile-games-playtika.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Sotheby&#8217;s New Major Shareholder Is Already a Power in Chinese Art</strong> Taikang Life Insurance, run by Chen Dongsheng, now holds 13.5 percent of Sotheby&#8217;s stock, evidence of how far China has risen in the art business.<br />
+<a href="//www.nytimes.com/2016/08/01/arts/design/sothebys-chen-dongsheng-china-art.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Acquisitive Chinese Conglomerate Planning Asset Sales</strong> Liang Xinjun, chief executive of Fosun International, said the group was preparing to sell as much as $6 billion in assets in an effort to repay debt and improve its credit rating.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-31/fosun-plans-sale-of-assets-in-reversal-of-15-billion-m-a-spree?nl=dealbook&amp;emc=edit_dlbkam_20160801">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>GlaxoSmithKline and Alphabet Create $715 Million Bioelectronics Company</strong> GlaxoSmithKline and Verily Life Sciences, Alphabet&#8217;s life science unit, will contribute $715.12 million to a new company that will focus on fighting diseases by targeting electrical signals in the body.<br />
+<a href="//www.reuters.com/article/us-gsk-alphabet-idUSKCN10C1K8?feedType=RSS&amp;feedName=innovationNews&amp;nl=dealbook&amp;emc=edit_dlbkam_20160801">REUTERS</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">INVESTMENT BANKING Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>JPMorgan Chase Retreats From Settlement Role in Treasury Market</strong> The decision leaves Bank of New York Mellon as the lone company handling the settlement of government debt for big bond brokers and poses a new challenge for regulators seeking to bolster the market&#8217;s capacity to withstand shocks.<br />
+<a href="//www.wsj.com/articles/this-boring-service-is-suddenly-a-big-concern-for-treasurys-1469995801?mod=asia_home&amp;nl=dealbook&amp;emc=edit_dlbkam_20160801">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Goldman Sachs Faces More Questions from British Officials</strong> British members of Parliament have asked Goldman to give details of paid work it has done for Tina Green, who is married to the retailer Sir Philip Green, after a parliamentary investigation accused the bank of lending credibility to the &#8220;otherwise questionable&#8221; sale of the department store chain BHS.<br />
+<a href="//www.ft.com/cms/s/0/6c6242d2-54e4-11e6-9664-e0bdc13c3bef.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody">For the latest updates, go to <a href="//www.nytimes.com/pages/business/dealbook/index.html">NYTimes.com/DealBook</a><br />
+<a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">HEDGE FUNDS Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Hedge Funds Sue Standard Chartered</strong> A group of hedge funds that includes Arrowgrass, Highbridge and Pine River is suing Standard Chartered over who should hold the losses on derivatives contracts tied to the bonds of an Indian car-parts company.<br />
+<a href="//www.ft.com/cms/s/0/573fda26-5715-11e6-9f70-badea1b336d4.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">I.P.O./OFFERINGS Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Companies Choose Sales Over I.P.O.s</strong> Mergers and acquisitions have not slumped as sharply in the United States as initial public offerings, and many private equity firms are looking for a quick exit from older investments.<br />
+<a href="//www.wsj.com/articles/more-companies-are-choosing-a-sale-over-an-ipo-1470007753?mod=asia_home&amp;nl=dealbook&amp;emc=edit_dlbkam_20160801">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">LEGAL/REGULATORY Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Why Is the Stock Market So High?</strong> Ask the Bond Market Bonds have risen sharply in value, and their yields have plummeted. That has made stock prices look cheap and dividends seem generous, driving up the market.<br />
+<a href="//www.nytimes.com/2016/07/31/your-money/why-is-the-stock-market-so-high-ask-the-bond-market.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Back-Stabbing and Threats of a &#8216;Suicide Parachute&#8217; at Hershey</strong> A leaked memo reveals strife in the trust that controls the Hershey Company and the school for at-risk children started by its founder, Milton Hershey.<br />
+<a href="//www.nytimes.com/2016/07/31/business/dealbook/back-stabbing-and-threats-of-a-suicide-parachute-at-hershey.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Publicis Ad Executive Sidelined by Gender Diversity Comments</strong> The executive, Kevin Roberts, chairman of Saatchi &amp; Saatchi and head coach at Publicis Groupe, said the issue of gender diversity was &#8220;way worse&#8221; in other industries.<br />
+<a href="//www.nytimes.com/2016/08/01/business/publicis-ad-executive-sidelined-by-gender-diversity-comments.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Clinton? Trump? Either Way, Count on Deficit Spending to Rise</strong> Both candidates have some expensive proposals, and economists are coming around to the view that an increase in borrowing might be a good thing.<br />
+<a href="//www.nytimes.com/2016/08/01/business/economy/clinton-trump-either-way-count-on-deficit-spending-to-rise.html?nl=dealbook&amp;emc=edit_dlbkam_20160801">NYT Â»</a></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/08/01/morning-agenda-uber-and-didi-chuxing-team-up-in-china/"
+					data-title="Morning Agenda: Uber and Didi Chuxing Team Up in China"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Oracle Has a Cloud Problem | Yahoo Sale Leaves Little Choice for Shareholders&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/08/01/morning-agenda-uber-and-didi-chuxing-team-up-in-china/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":58,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

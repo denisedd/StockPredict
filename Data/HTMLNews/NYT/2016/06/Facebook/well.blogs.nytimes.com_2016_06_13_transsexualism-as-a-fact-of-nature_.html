@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-well section-health"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/well/Being Transgender as a Fact of Nature ( 20160613 )" />
+<meta name="communityAssetURL" content="//well.blogs.nytimes.com/2016/06/13/transsexualism-as-a-fact-of-nature/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004468062"><meta name="author" content="Jane E. Brody" />
+<meta name="CLMST" content="Jane E. Brody" />
+<meta name="byl" content="Jane E. Brody" />
+<meta name="article:author" content="//topics.nytimes.com/top/reference/timestopics/people/b/jane_e_brody/index.html" /><meta name="GBLC" content="Columns;Featured;Personal Health">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1465811138" />
+<meta name="PUD" content="20160613" />
+<meta name="pdate" content="20160613" />
+<meta name="ptime" content="20160613054538" />
+<meta name="utime" content="20160615004103" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-06-15T00:41:03-04:00" />
+<meta name="DISPLAYDATE" content="June 13, 2016" />
+<meta name="dat" content="June 13, 2016" />
+<meta itemprop="articleSection" property="article:section" content="Health" />
+<meta name="CG" content="Health" />
+<meta name="SCG" content="well" />
+<meta name="BN" content="well" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Gender;Testosterone;Transgender and Transsexuals">
+<meta property="article:tag" content="Gender" />
+<meta property="article:tag" content="Testosterone" />
+<meta property="article:tag" content="Transgender and Transsexuals" />
+<meta property="article:tag" content="Columns" />
+<meta property="article:tag" content="Featured" />
+<meta property="article:tag" content="Personal Health" />
+<meta name="keywords" content="Gender,Testosterone,Transgender and Transsexuals,Columns,Featured,Personal Health" />
+<meta name="news_keywords" content="Gender,Testosterone" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fwell.blogs.nytimes.com%2F2016%2F06%2F13%2Ftranssexualism-as-a-fact-of-nature%2F" title="Being Transgender as a Fact of Nature" />
+<meta name="description" content="The current bathroom controversy reflects prejudice and misinformation about people who identify as transgender." />
+<meta name="hdl_p" content="A Deeper Understanding of Gender" />
+<meta name="hdl" content="Being Transgender as a Fact of Nature" />
+<meta property="og:title" content="Being Transgender as a Fact of Nature" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//well.blogs.nytimes.com/2016/06/13/transsexualism-as-a-fact-of-nature/" />
+<meta property="og:site_name" content="Well" />
+<meta property="og:description" content="The current bathroom controversy reflects prejudice and misinformation about people who identify as transgender." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/06/09/science/09brody/09brody-facebookJumbo.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2016/06/09/science/09brody/09brody-thumbLarge.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Being Transgender as a Fact of Nature" />
+<meta name="twitter:url" content="//well.blogs.nytimes.com/2016/06/13/transsexualism-as-a-fact-of-nature/" />
+<meta name="twitter:description" content="The current bathroom controversy reflects prejudice and misinformation about people who identify as transgender." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2016/06/09/science/09brody/09brody-thumbLarge.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2016/06/09/science/09brody/09brody-thumbLarge.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@nytimeswell">
+<link rel='prev' title='Churchgoers May Live Longer' href='//well.blogs.nytimes.com/2016/06/12/churchgoers-may-live-longer/' />
+<link rel='next' title='Should Pediatricians Refuse to Treat Patients Who Don&#8217;t Vaccinate?' href='//well.blogs.nytimes.com/2016/06/13/should-pediatricians-refuse-to-treat-patients-who-dont-vaccinate/' />
+<link rel='canonical' href='//well.blogs.nytimes.com/2016/06/13/transsexualism-as-a-fact-of-nature/' />
+<link rel='shortlink' href='//nyti.ms/21hzOi2' />
+<link rel='https://github.com/WP-API/WP-API' href='//well.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/well/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//well.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/health/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/well/2016/06/13/transsexualism-as-a-fact-of-nature/" />
+<meta name="dfp-ad-unit-path" content="health/well" /><meta name="categories" content="columns,personal-health" />			<title>Being Transgender as a Fact of Nature - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/well.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-118871 blog-universal nyt-blog-well" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'Health', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//well.blogs.nytimes.com">
+                Well            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Being Transgender as a Fact of Nature        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//well.blogs.nytimes.com/2016/06/13/transsexualism-as-a-fact-of-nature/"
+	 data-title="Being Transgender as a Fact of Nature"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;The current bathroom controversy reflects prejudice and misinformation about people who identify as transgender.&lt;/span&gt;&lt;a href=&quot;//well.blogs.nytimes.com/2016/06/13/transsexualism-as-a-fact-of-nature/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 13, 2016 5:45 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="well" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+		<div class="element1">
+	<div id="logo" ><a href="//well.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=Health" title="Go to Well Home"><img src="https://static01.nyt.com/images/blogs_v5/well/well_post.png" alt="Well - Tara Parker-Pope on Health"/></a></div>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//well.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Well">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-118871 post type-post status-publish hentry category-columns category-personal-health tag-gender tag-testosterone tag-transgender-and-transsexuals des-gender-2 des-testosterone des-transgender-and-transsexuals news_keywords-gender news_keywords-testosterone splitPostView" id="post-118871">
+	<header class="postHeader">
+				<div class="postKicker">
+			<span class="kicker"><a href="//well.blogs.nytimes.com/category/columns/personal-health/?module=BlogCategory&version=Blog Post&action=Click&contentCollection=Health&pgtype=Blogs&region=Header">Personal Health</a></span>
+		</div>
+				<h1 itemprop="headline" class="entry-title">Being Transgender as a Fact of Nature</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Jane E. Brody			</address>
+			<!-- date published --><time class="dateline " datetime="2016-06-13T09:45:38+00:00" itemprop="datePublished">June 13, 2016 5:45 am</time>
+			<!-- date updated --><span class="visually-hidden updated">June 13, 2016 5:45 am</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//well.blogs.nytimes.com/2016/06/13/transsexualism-as-a-fact-of-nature/" data-title="Being Transgender as a Fact of Nature" data-description="The current bathroom controversy reflects prejudice and misinformation about people who identify as transgender.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="w190 right"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2016/06/09/science/09brody/09brody-articleInline.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2016/06/09/science/09brody/09brody-articleInline.jpg" src="https://static01.nyt.com/images/2016/06/09/science/09brody/09brody-articleInline.jpg" id="100000004460049" width="190" height="260" alt="After surgical and hormonal treatment, George Jorgensen, a Bronx-born G.I., became Christine Jorgensen, a nightclub entertainer and advocate for transsexual rights."   /><meta itemprop="height" content="260"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text">After surgical and hormonal treatment, George Jorgensen, a Bronx-born G.I., became Christine Jorgensen, a nightclub entertainer and advocate for transsexual rights.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Fred Morgan/NY Daily News Archive, via Getty Images</span></figcaption></figure></div>
+<div class="inlineModule"><div class="entry"><div class="thumb"><img alt="Personal Health" src="https://static01.nyt.com/gfx/blogs/well/authors/janebrody50.png" width="50" height="50"></div><h6 class="kicker"><a href="//well.blogs.nytimes.com/category/columns/personal-health/">Personal Health</a></h6><p class="summary">Jane Brody on health and aging.</p></div></div>
+<p class="story-body-text" itemprop="articleBody">In 1952, George Jorgensen, a Bronx-born G.I., underwent surgical and hormonal treatment in Denmark to become Christine Jorgensen, a nightclub entertainer and advocate for gender identity rights. Ever since, health professionals and lay people alike have debated the origins of gender identity, the wisdom of altering oneâs biologically determined sex, and whether society should accept the transgender community as a fact of nature.</p>
+<p class="story-body-text" itemprop="articleBody">There is even disagreement over whether the Civil Rights Act of 1964, which bars discrimination because of sex, <a href="//www.nytimes.com/2016/05/14/opinion/gender-is-more-than-just-anatomy.html?_r=0" target="_blank">also protects gender identity</a>, a personâs inner sense of being male or female. Many more transgender people, whose identity does not match their biological sex, have come forward in recent years. Some seek sex change treatment. The Olympic gold-medalist previously known as Bruce Jenner made a high-profile announcement last year of transitioning to Caitlyn Jenner, including a <a href="//www.vanityfair.com/hollywood/2015/06/caitlyn-jenner-bruce-cover-annie-leibovitz" target="_blank">cover story in Vanity Fair</a>.</p>
+<p class="story-body-text" itemprop="articleBody">This year, the Public Theater in New York presented the musical â<a href="//www.nytimes.com/2016/03/14/theater/review-in-southern-comfort-a-family-not-bound-by-blood.html" target="_blank">Southern Comfort</a>,â adapted from an award-winning 2001 documentary film about transgender people living in rural Georgia who came together to support a dying friend who developed ovarian cancer years after transitioning from female to male.</p>
+<p class="story-body-text" itemprop="articleBody">Yet the controversy now raging over the rights of transgender students to use bathroom and locker room facilities that match their gender identity rather than their birth sex reflects the persistence of widespread prejudice and misinformation about the nature and behavior of people who identify as transgender.</p>
+<p class="story-body-text" itemprop="articleBody">Those who insist that people should use only the facilities that match the sex on their birth certificates may not realize that most states allow those who change their sexual assignment to <a href="//www.lambdalegal.org/know-your-rights/transgender/changing-birth-certificate-sex-designations" target="_blank">change the sex on their birth certificates</a>. Furthermore, a transgender individual using a facility matched to his or her gender identity is no more of a sexual threat to others than anyone else using that bathroom might be. Psychosocial distress or embarrassment can be avoided simply by providing closed-door toilet and changing areas in public bathrooms and locker rooms. After all, we should be used to mixed-gender bathrooms by now: Weâve had them in our homes for years.</p>
+<p class="story-body-text" itemprop="articleBody">I recently read a most illuminating article, â<a href="//www.nejm.org/doi/pdf/10.1056/NEJMcp1008161" target="_blank">Care of Transsexual Persons</a>,â that answered many of the questions and concerns that have been raised about transsexualism, which is now more commonly referred to as being transgender. Written by Dr. Louis J. Gooren, an endocrinologist at VU University Medical Center in Amsterdam and a leading expert in the field, it was published in 2011 in The New England Journal of Medicine.</p>
+<p class="story-body-text" itemprop="articleBody">Perhaps the most important point Dr. Gooren and others make is that a mismatch between gender identity and biological sex is not something people choose. The most common description given by transgendered individuals is a persistent, painfully distressing belief that they are females trapped in a male body, or vice versa.</p>
+<p class="story-body-text" itemprop="articleBody">This mismatch is classified in the psychiatric literature as âgender dysphoria,â but Dr. Gooren pointed out that âa substantial proportion of the transgender population does not have a clinically significant coexisting psychiatric conditionâ other than chronic suffering from feeling they are not what their bodies tell them they are.</p>
+<p class="story-body-text" itemprop="articleBody">No chromosomal or hormonal causes of being transgender have been identified. Also lacking is convincing evidence that it is caused by some aberration of family dynamics â how a child is treated or dressed by mom, dad or anyone else.</p>
+<p class="story-body-text" itemprop="articleBody">Being transgender simply happens, possibly during brain development in the womb. All brains start out female; if the fetus is male, testosterone normally programs both the genitalia and the brain to develop as male. But autopsies of a small number of male-to-female transgender people found that two important areas of the brain had a <a href="//www.ncbi.nlm.nih.gov/pubmed/21094885" target="_blank">typical female pattern</a>, suggesting an alteration in the brainâs sexual differentiation.</p>
+<p class="story-body-text" itemprop="articleBody">In individuals who transition from female to male, it is possible that excessive production of androgens during pregnancy could have programmed the brain to be male.</p>
+<p class="story-body-text" itemprop="articleBody">Among adults, male-to-female transitions are nearly three times more common than female-to-male ones. It has not been unusual for people born male to first acknowledge and express their female gender identity in midlife, often after having married and fathered children.</p>
+<p class="story-body-text" itemprop="articleBody">In young children, girls who are tomboys and boys who act more like girls are quite common and should not be assumed to be transgender. Such behavior often changes by adolescence.</p>
+<p class="story-body-text" itemprop="articleBody">However, when bodily changes at puberty differ from a childâs gender identity, they are typically a source of extreme distress. Still, experts warn that at any age, and especially in adolescence, great caution must be taken before irreversible treatments are provided to induce changes that conform to a personâs discordant gender identity.</p>
+<p class="story-body-text" itemprop="articleBody">âPersons with gender identity disorder may have unrealistic expectations about what being a member of the opposite sex entails,â Dr. Gooren wrote, using an older term for gender dysphoria. Therefore, he and others have said that before starting hormone treatments, the person should live for at least a year as the desired sex. However, the transition process varies by individual, and many doctors no longer advise a waiting period.</p>
+<p class="story-body-text" itemprop="articleBody">Surgical sex reassignment may then follow to remove and reconstruct the genitalia, breasts and internal sex organs to more closely resemble the desired sex. Some people also undergo facial reconstruction. Even after surgery, hormone treatments must continue indefinitely to maintain the desired gender characteristics.</p>
+<p class="story-body-text" itemprop="articleBody">It is especially important for transgender individuals seeking treatment to know the risks involved. Long-term studies of people who underwent sex reassignment surgery have been conducted in Sweden and Denmark, where excellent population-wide medical records are kept.</p>
+<p class="story-body-text" itemprop="articleBody">A Swedish team from the Karolinska Institute and the University of Gothenberg <a href="//journals.plos.org/plosone/article?id=10.1371/journal.pone.0016885" target="_blank">followed 324 people who underwent sex reassignment surgery</a> and compared them with matched controls in the general population. After an average follow-up of 11.4 years, men and women who had sex reassignments had death rates three times higher from all causes. Suicide rates were especially high, suggesting âthe need for continued psychiatric follow-upâ among those undergoing sex change, the authors wrote. Cancer deaths were doubled in the surgical group, though the cancers appeared to be unrelated to hormone treatments.</p>
+<p class="story-body-text" itemprop="articleBody">The <a href="//www.smoa.jsexmed.org/article/S2050-1161(16)00009-X/pdf" target="_blank">recent Danish study</a>, by researchers in Copenhagen, investigated postoperative diseases and deaths among 104 men and women representing 98 percent of those who underwent sex reassignment surgery in Denmark from 1978 through 2010. One person in three had developed an ailment, most often cardiovascular disease, and one in 10 had died, with deaths occurring at an average age of 53.5.</p>
+<p class="story-body-text" itemprop="articleBody">The authors suggested that a host of societal factors, including social exclusion, harassment and negative experiences in school and at work, could largely contribute to the patientsâ health problems. The findings underscore the importance of better postoperative support and closer attention to injurious lifestyle issues like smoking and alcohol abuse.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Related:</strong></p>
+<ul>
+<li><a href="//well.blogs.nytimes.com/2016/05/23/supporting-children-who-serve-as-caregivers/">Supporting Children Who Serve as Caregivers</a></li>
+<li><a href="//well.blogs.nytimes.com/2015/12/21/12-minutes-of-yoga-for-stronger-bones/?_r=0">12 Minutes of Yoga for Bone Health</a></li>
+<li><a href="//well.blogs.nytimes.com/2016/01/25/the-health-benefits-of-knitting/">The Health Benefits of Knitting</a></li>
+</ul>
+<p class="story-body-text" itemprop="articleBody"><strong>For more fitness, food and wellness news, follow us on <a href="https://www.facebook.com/WellNYT">Facebook</a> and <a href="https://www.twitter.com/NYTimesWell">Twitter</a>, or sign up for our <a href="//www.nytimes.com/newsletters/healthupdate">newsletter.</a></strong></p>
+<div id="addendums" class="addendums"><div class="story-addendum theme-correction"><strong>Correction: June 15, 2016</strong> <br>The Personal Health column  on Tuesday,  about transgender individuals, used an outdated psychiatric term in some editions to refer to feeling a mismatch between oneâs gender identity and biological sex. It is gender dysphoria, no longer gender identity disorder.</div></div><footer class="story-footer">
+    <div class="story-meta">
+	<p class="story-print-citation">A version of this article appears in print on 06/14/2016, on page <span itemprop="printSection">D</span><span itemprop="printPage">5</span> of the <span itemprop="printEdition">NewYork</span> edition with the headline: A Deeper Understanding of Gender.</p>    </div>
+</footer>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//well.blogs.nytimes.com/2016/06/13/transsexualism-as-a-fact-of-nature/" data-title="Being Transgender as a Fact of Nature" data-description="The current bathroom controversy reflects prejudice and misinformation about people who identify as transgender.">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//well.blogs.nytimes.com/2016/06/12/churchgoers-may-live-longer/" title="Churchgoers May Live Longer">
+				Churchgoers May Live Longer			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//well.blogs.nytimes.com/2016/06/13/should-pediatricians-refuse-to-treat-patients-who-dont-vaccinate/" title="Should Pediatricians Refuse to Treat Patients Who Don&#039;t Vaccinate?">
+				Should Pediatricians Refuse to Treat Patients Who Don&#8217;t Vaccinate?			</a>
+					</li>
+	</ul>
+</div>
+<div id="nytint-qa-well-widget" class="nytint-qa-widget module qaModule noContent">
+  <a class="nytint-qa-module-header" href="//well.blogs.nytimes.com/ask/well/questions"><h4 class="moduleHeader">Ask Well</h4></a>
+  <div class="nytint-qa-header-spacer">&nbsp;</div>
+  <p class="summary">Your health questions answered by Times journalists and&nbsp;experts.</p>
+  <form action="/svc/int/qa/questions/well/submit" method="POST" id="nytint-qa-ask-form" class="qaQuestionForm">
+    <!-- askbox.jst rendered here -->
+    <!-- these lines replaced by jst render--><div id="nytint-qa-question-box">
+      <!-- these lines replaced by jst render--><textarea name="question" class="textarea qaTextarea nytint-qa-form-element" id="nytint-qa-question-input" placeholder="What would you like to know?" disabled="disabled"></textarea>
+    <!-- these lines replaced by jst render--></div>
+  </form>
+  <div class="nytint-qa-recent-questions-wrapper clearfix nytint-qa-hidden">
+    <div class="nytint-qa-liner">
+      <h5><!-- (Recent/Related Questions) filled by javascript from nytqa.recent_questions.js --></h5>
+      <div class="nytint-qa-seemore">
+        <p><a href="//well.blogs.nytimes.com/ask/well/questions/yours" title="Your questions">Your Questions</a> | <a href="//well.blogs.nytimes.com/ask/well/questions">All &raquo;</a></p>
+      </div>
+      <ul class="nytint-qa-recent-questions clearfix">
+        <!-- question views get rendered into here -->
+      </ul>
+    </div>
+  </div>
+    <link href="https://int.nyt.com/applications/qa/assets/well-f0b8f674afd653cf65ff12f13234cb39.css" media="screen" rel="stylesheet" type="text/css" />
+    <script>
+  var NYTD = NYTD || {};
+      NYTD.NYTINT = NYTD.NYTINT || {};
+      NYTD.NYTINT.QA = NYTD.NYTINT.QA || {};
+      NYTD.NYTINT.QA.app_root_path = "/ask/";
+      NYTD.NYTINT.QA.svc_root_path = "/svc/int/qa/";
+      NYTD.NYTINT.QA.event_root_url = "/ask/well/questions";
+      NYTD.NYTINT.QA.event_slug = "well";
+      NYTD.NYTINT.QA.A_COL_FORM = false;
+  </script>
+    <script src="https://int.nyt.com/applications/qa/assets/well_base-7dc69e7a081837e27503446314bb2b89.js" type="text/javascript"></script>
+  <script src="https://int.nyt.com/applications/qa/assets/well_widget-2fbcafade4829875da7ba7c9cd2ced3c.js" type="text/javascript"></script>
+    <script>
+  require(['foundation/main'], function (Foundation) {
+    require(['nytint/qa/well_widget'], function () {});
+  });
+  </script>
+</div>
+
+<div id="nyt_featured_posts-11" class="module nocontent widget_nyt_featured_posts"><h4 class="moduleHeader"></h4>			<div class="subColumn-2">	<div class="column">
+		<div class="entry">
+						<div class="w190">
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">
+					<img src="https://static01.nyt.com/images/2016/08/31/well/family/well-family-exerciseask/well-family-exerciseask-articleInline.jpg" width="190" height="126" />
+				</a>
+			</div>
+			<div class="w600 hidden">
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">
+					<img src="https://static01.nyt.com/images/2016/08/31/well/family/well-family-exerciseask/well-family-exerciseask-videoSixteenByNine600.jpg" width="224" height="126" />
+				</a>
+			</div>
+						<h6 class="kicker">
+				<a href="//well.blogs.nytimes.com/category/ask-well/">Ask Well</a>
+			</h6>
+						<h5>
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">Can You Safely Lose Weight While Breast-Feeding?</a>
+							</h5>
+		</div><!--end of entry-->
+	</div><!--end of column-->
+						<div class="column lastColumn">
+		<div class="entry">
+						<div class="w190">
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">
+					<img src="https://static01.nyt.com/images/2016/08/29/science/well-klass-smallpenis/well-klass-smallpenis-articleInline.jpg" width="190" height="126" />
+				</a>
+			</div>
+			<div class="w600 hidden">
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">
+					<img src="https://static01.nyt.com/images/2016/08/29/science/well-klass-smallpenis/well-klass-smallpenis-videoSixteenByNine600.jpg" width="224" height="126" />
+				</a>
+			</div>
+						<h6 class="kicker">
+				<a href="//well.blogs.nytimes.com/category/family/the-checkup/">The Checkup</a>
+			</h6>
+						<h5>
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">As Boys Get Fatter, Parents Worry One Body Part Is Too Small</a>
+							</h5>
+		</div><!--end of entry-->
+	</div><!--end of column-->
+		</div><!--end of sub-column2--></div><div id="nyt_promo_widget-14" class="module nocontent widget_nyt_promo_widget"><!-- Regilite iFrame 20140820 ~dj.paris -->
+<style>
+#regilite-bigad {
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding:10px;
+  height:250px;
+}
+#regilite-bigad h1 {
+  font-family: "nyt-franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 0 15px 10px;
+  font-size: 16px;
+  line-height: 18px;
+}
+#regilite-bigad h1 a {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+#regi-image img {
+  display: block;
+  float: left;
+  padding: 0 10px;
+  width: 50px;
+}
+p#regi-copy {
+  font-size: 12px; 
+  line-height: 16px; 
+  margin: 0;
+  font-family: Georgia, "Times New Roman", sans-serif;
+  color: #333;
+  text-align: left;
+  padding: 0 10px 15px 0;
+}
+#regiframe-wrapper {
+  padding: 0 10px;
+}
+#regiframe-wrapper iframe {
+  border: 0;
+  width: 280px;
+  height: 180px;
+}
+</style>
+  
+
+  
+<div id="regilite-bigad">
+  <h1>
+   Sign Up for the Running Email
+  </h1>
+
+  <div id="regi-image">
+    <img src="https://static01.nyt.com/marketing/newsletters/images/Running_75.jpg" alt="Running Newsletter">
+  </div>
+
+  <p id="regi-copy">Get Well's Running email for practical tips, expert advice, exclusive content and a bit of motivation delivered to your inbox every week to help you on your running journey. Coming soon.</p>
+
+  <div id="regiframe-wrapper">
+    <iframe title="regilite" src="https://regilite.nytimes.com/regilite?product=RU&theme=Transparent&landing=true&addSlot=true&app=newsletter&sourceApp=nyt-v5&title=Running"></iframe>
+  </div>
+</div>
+
+<span class="adxInfo" style="display:none;">campaign: %%CAMP%% -- %%CAMP_UID%%, creative: %%ADID%% -- %%AD_UID%%, page: %%PAGE%%, targetedPage: %%TARGETEDPAGE%%, position: %%POS%%</span>
+</div>		<div class="module ad" id="MiddleRight"></div>
+        <div id="nyt_feed_in_flat_tabs-6" class="module nocontent widget_nyt_feed_in_flat_tabs">		<h4 class="moduleHeader left">Times Health</h4>
+		<div id="tabWidget-nyt_feed_in_flat_tabs-6" class="tabAutoLoad">
+			<div class="tabsContainer">
+				<ul class="tabs right">
+										<li class="selected">
+							<a href="javascript:void(0);">Most Viewed</a>
+						</li>
+												<li class="">
+							<a href="javascript:void(0);">Most E-mailed</a>
+						</li>
+										</ul>
+		   </div>
+		<div class="tabContent">
+	<div class="blog-story">
+		<ul class="refer">
+					<li>
+				<a href="//well.blogs.nytimes.com/2016/02/17/which-type-of-exercise-is-best-for-the-brain/">Which Type of Exercise Is Best for the Brain?</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2013/10/03/well-quiz-the-mind-behind-the-eyes/">Can You Read People&#8217;s Emotions?</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2011/01/28/how-meditation-may-change-the-brain/">How Meditation May Change the Brain</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2015/11/10/ask-well-the-health-benefits-of-meditation/">Ask The Health Benefits of Meditation</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2010/12/15/phys-ed-the-benefits-of-exercising-before-breakfast/">Phys Ed: The Benefits of Exercising Before Breakfast</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2015/07/07/dog-needs-a-walk-theres-an-app-for-that/">Dog Needs a Walk? There&#8217;s an App for That</a>
+			</li>
+					</ul>
+	</div>
+</div>
+		<div class="tabContent">
+	<div class="blog-story">
+		<ul class="refer">
+				</ul>
+	</div>
+</div>
+				</div>
+	</div>
+			<div class="module ad" id="Box1"></div>
+        <div id="nyt_blog_social_media-4" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-double ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">Well on</span></span>
+</h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/nytimeswell" title="Follow nytimeswell on Twitter">Twitter</a></li><li class="blog-fw-facebook double"><a href="https://facebook.com/WellNYT" title="Follow WellNYT on Facebook">Facebook</a></li></ul>
+</div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-39',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":119,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003792273"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1436527492" />
+<meta name="PUD" content="20150710" />
+<meta name="pdate" content="20150710" />
+<meta name="ptime" content="20150710072452" />
+<meta name="utime" content="20150710112452" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-07-10T11:24:52-04:00" />
+<meta name="DISPLAYDATE" content="July 10, 2015" />
+<meta name="dat" content="July 10, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Tsipras, Alexis">
+<meta name="des" content="Banking and Financial Institutions;Economic Conditions and Trends;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Private Equity;Regulation and Deregulation of Industry;Stocks and Bonds;Venture Capital">
+<meta name="org" content="Communist Party of China;Coty Inc;European Central Bank;European Union;Eurozone;General Motors;Goldman Sachs Group Inc;International Monetary Fund;JPMorgan Chase &amp; Company;Morgan Stanley;Procter &amp; Gamble Company;Uber Technologies Inc">
+<meta name="geo" content="China;Greece">
+<meta name="ticker" content="General Motors|GM|NYSE;Goldman Sachs Group Inc|GS|NYSE;JPMorgan Chase & Company|JPM|NYSE;Morgan Stanley|MS|NYSE;Procter & Gamble Company|PG|NYSE" />
+<meta property="article:tag" content="Tsipras Alexis" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Economic Conditions and Trends" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Communist Party of China" />
+<meta property="article:tag" content="Coty Inc" />
+<meta property="article:tag" content="European Central Bank" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="Eurozone" />
+<meta property="article:tag" content="General Motors" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="International Monetary Fund" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="Morgan Stanley" />
+<meta property="article:tag" content="Procter &amp; Gamble Company" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Greece" />
+<meta property="article:tag" content="Uncategorized" />
+<meta name="keywords" content="Tsipras Alexis,Banking and Financial Institutions,Economic Conditions and Trends,Initial Public Offerings,Mergers Acquisitions and Divestitures,Private Equity,Regulation and Deregulation of Industry,Stocks and Bonds,Venture Capital,Communist Party of China,Coty Inc,European Central Bank,European Union,Eurozone,General Motors,Goldman Sachs Group Inc,International Monetary Fund,JPMorgan Chase &amp; Company,Morgan Stanley,Procter &amp; Gamble Company,Uber Technologies Inc,China,Greece,Uncategorized" />
+<meta name="news_keywords" content="Alexis Tsipras,Banking and Finance,China,Communist Party of China,Coty,Economy,EU,European Central Bank,Eurozone,GM,Greece,IMF,IPO,Mergers and Acquistions,Private equity,Regulation and Deregulation,Stocks and Bonds,Uber,Venture capital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F07%2F10%2Fmorning-agenda-greece-accepts-austerity-measures%2F" title="Morning Agenda: Greece Accepts Austerity Measures" />
+<meta name="description" content="Greece Accepts Austerity Measures &#124; Chinese Stock Markets Sustain Rebound &#124; Bankers Sign Up for Uber as Its I.P.O. Looms &#124; P.&amp;G. Sells Beauty Brands" />
+<meta name="hdl" content="Morning Agenda: Greece Accepts Austerity Measures" />
+<meta property="og:title" content="Morning Agenda: Greece Accepts Austerity Measures" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/07/10/morning-agenda-greece-accepts-austerity-measures/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Greece Accepts Austerity Measures &#124; Chinese Stock Markets Sustain Rebound &#124; Bankers Sign Up for Uber as Its I.P.O. Looms &#124; P.&amp;G. Sells Beauty Brands" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Greece Accepts Austerity Measures" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/07/10/morning-agenda-greece-accepts-austerity-measures/" />
+<meta name="twitter:description" content="Greece Accepts Austerity Measures &#124; Chinese Stock Markets Sustain Rebound &#124; Bankers Sign Up for Uber as Its I.P.O. Looms &#124; P.&amp;G. Sells Beauty Brands" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Alarm Over Computer Failures' href='//news.blogs.nytimes.com/2015/07/09/morning-agenda-alarm-over-computer-failures/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/07/10/what-were-reading-71/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/07/10/morning-agenda-greece-accepts-austerity-measures/' />
+<link rel='shortlink' href='//nyti.ms/1JTGPkr' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/07/10/morning-agenda-greece-accepts-austerity-measures/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Greece Accepts Austerity Measures - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2734 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Greece Accepts Austerity Measures        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/07/10/morning-agenda-greece-accepts-austerity-measures/"
+	 data-title="Morning Agenda: Greece Accepts Austerity Measures"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Greece Accepts Austerity Measures | Chinese Stock Markets Sustain Rebound | Bankers Sign Up for Uber as Its I.P.O. Looms | P.&amp;G. Sells Beauty Brands&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/07/10/morning-agenda-greece-accepts-austerity-measures/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 10, 2015 7:24 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Greece Accepts Austerity Measures</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-07-10T11:24:52+00:00" itemprop="datePublished">July 10, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">July 10, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2734 post type-post status-publish hentry tag-banking-and-financial-institutions tag-china tag-communist-party-of-china tag-coty-inc tag-economic-conditions-and-trends tag-european-central-bank tag-european-union tag-eurozone tag-general-motors tag-goldman-sachs-group-inc tag-greece tag-initial-public-offerings tag-international-monetary-fund tag-jpmorgan-chase-company tag-mergers-acquisitions-and-divestitures tag-morgan-stanley tag-private-equity tag-procter-gamble-company tag-regulation-and-deregulation-of-industry tag-stocks-and-bonds tag-tsipras-alexis tag-uber-technologies-inc tag-venture-capital per-tsipras-alexis des-banking-and-financial-institutions des-economic-conditions-and-trends des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-private-equity des-regulation-and-deregulation-of-industry des-stocks-and-bonds des-venture-capital org-communist-party-of-china org-coty-inc org-european-central-bank org-european-union org-eurozone org-general-motors org-goldman-sachs-group-inc org-international-monetary-fund org-jpmorgan-chase-company org-morgan-stanley org-procter-gamble-company org-uber-technologies-inc geo-china geo-greece news_keywords-alexis-tsipras news_keywords-banking-and-finance news_keywords-china news_keywords-communist-party-of-china news_keywords-coty news_keywords-economy news_keywords-eu news_keywords-european-central-bank news_keywords-eurozone news_keywords-gm news_keywords-greece news_keywords-imf news_keywords-ipo news_keywords-mergers-and-acquistions news_keywords-private-equity-2 news_keywords-regulation-and-deregulation news_keywords-stocks-and-bonds news_keywords-uber news_keywords-venture-capital-2" id="post-2734">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Greece Accepts Austerity Measures</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-07-10T11:24:52+00:00" itemprop="datePublished">July 10, 2015 7:24 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 10, 2015 7:24 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/07/10/morning-agenda-greece-accepts-austerity-measures/" data-title="Morning Agenda: Greece Accepts Austerity Measures" data-description="Greece Accepts Austerity Measures | Chinese Stock Markets Sustain Rebound | Bankers Sign Up for Uber as Its I.P.O. Looms | P.&amp;G. Sells Beauty Brands">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>GREECE ACCEPTS AUSTERITY MEASURES</strong> <span class="divider"> | </span></span> European markets rallied again on Friday after Greece submitted proposals that appeared to accept the austerity measures that its creditors wanted, <a href="//www.nytimes.com/2015/07/11/business/greek-debt-talks.html"> David Jolly and Liz Alderman write in The New York Times</a>. On Thursday, Prime Minister Alexis Tsipras of Greece sought a three-year bailout loan totaling 53.5 billion euros, or about $59 billion, and asked for the countryâs European creditors to <b> commit to a discussion about debt relief</b>, which has been a major sticking point in the bailout talks, <a href="//www.nytimes.com/2015/07/10/world/europe/greek-debt-talks.html"> Ms. Alderman and James Kanter write in The New York Times</a>. Germanyâs finance minister, Wolfgang SchÃ¤uble, finally softened his stance on that issue on Thursday, admitting that âdebt sustainability is <b> not feasible without a haircut</b>,â although he then appeared to backtrack. </p>
+<p class="story-body-text" itemprop="articleBody">Carsten Brzeski, an economist at ING-DiBa in Frankfurt, said in a research note that the latest Greek proposal was <b> âmore or less identicalâ</b> to the plan it had rejected from Jean-Claude Juncker, the president of the European Commission. Athens also appears to have conceded on <b> âthe two most critical issues,â</b> tax and pension overhauls, and <b> dropped outright demands for debt relief</b>. </p>
+<p class="story-body-text" itemprop="articleBody">With the Sunday deadline in mind, the representatives of the main creditors â the eurozone nations, the European Central Bank and the International Monetary Fund â will review the new proposal in Brussels on Friday, the same day that Mr. Tsipras is expected to <b> ask his Parliament to approve</b> the proposed reform measures. On Saturday, the <b> eurozone finance ministers will meet at 3 p.m.</b> (9 a.m. E.D.T.). <a href="//www.consilium.europa.eu/en/meetings/european-council/2015/07/12/"> On Sunday</a>, the <b> leaders of the eurozone will meet at 4 p.m.</b> (10 a.m. E.D.T.), followed by a meeting of the <b> full European Council</b>. </p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CHINESE STOCK MARKETS SUSTAIN REBOUND</strong> <span class="divider"> | </span></span> The mainland Chinese markets saw a rebound continue for a second day, as a series of government measures to shore up stocks appeared to take effect, <a href="//www.nytimes.com/2015/07/11/business/after-week-of-turmoil-chinese-stocks-post-further-gains.html"> Paul Mozur writes in The New York Times</a>. The Shanghai composite index <b> jumped 4.5 percent</b> on Friday, after a 5.8 percent gain on Thursday. </p>
+<p class="story-body-text" itemprop="articleBody">Even though shares of many Chinese companies are still suspended from trading, analysts expressed cautious optimism that <b> the worst may be over</b>. âMarket movement appears to indicate that <b> government actions are working</b>,â Morgan Stanley wrote in a report on Friday. âThough not everyone agrees with the sequence and order of the government actions, we believe they have helped to achieve meaningful deleveraging in the equity market <b> without triggering systemic risks</b>.â </p>
+<p class="story-body-text" itemprop="articleBody">The amount of leverage in the stock market is relatively small, economists say, but the falling stock markets were seen by the government as a political threat. Even though the government seems to have been successful in stopping the marketsâ free fall for now, âthe <b> sense of supreme control</b> that once cloaked the Communist Party leadership <b> may take longer to recover</b>,â <a href=" //www.nytimes.com/2015/07/10/world/asia/china-stock-market-crash-communist-xi-jinping.html"> Edward Wong and Chris Buckley write in The New York Times</a>.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BANKERS SIGN UP FOR UBER AS ITS I.P.O. LOOMS</strong> <span class="divider"> | </span></span> Since late last year, banks have been increasingly showing their fondness for Uber, with JPMorgan Chase being the latest to announce that it has added the start-upâs services to its official travel policy. It could be just a coincidence that Wall Street banks, including <b> Goldman Sachs and Morgan Stanley</b>, have signed up for Uber in recent months, but âbank experts were quick to note that these moves come as the banks are jockeying to win a coveted spot <b> managing Uberâs initial public offering</b> â one that is not yet scheduled but that is assumed to be coming in the not-too-distant future,â <a href="//www.nytimes.com/2015/07/10/business/an-uber-ipo-looms-and-suddenly-bankers-are-using-uber-coincidence.html"> Nathaniel Popper writes in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody">A JPMorgan spokeswoman said the bankâs decision to reimburse employees for all Uber rides had nothing to with an I.P.O. and was just part of the bankâs broader relationship with the company. Yet Mr. Popper observes that such a move does âfit squarely within a hallowed tradition of banks going to sometimes <b> amusing lengths to secure a prized initial offering</b> and the significant fees and reputational lift that it can provide.â For example, Jimmy Lee, the JPMorgan dealmaker who died last month, once <b> placed a General Motors car in the lobby</b> of the bankâs headquarters when G.M. executives arrived for a meeting about the automakerâs initial public offering after the financial crisis. However, Mr. Popper says that these sorts of overtures by banks are not just for show: Bankers who are taking a company public need to be able to <b> demonstrate an understanding of what the company does</b>.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b> Janet L. Yellen</b>, the Federal Reserve chairwoman, will speak about the economy in a speech in Cleveland at 12:30 p.m. <b> Eric S. Rosengren</b>, president of the Boston Fed and an alternate voting member of the Fedâs policy-setting committee, will speak at the Rocky Mountain Economic Summit in Idaho at 9:30 a.m. (11:30 a.m. E.D.T.). <b> Jacob J. Lew</b>, the Treasury secretary, will participate in a discussion in Politicoâs âAmericaâs Fiscal Futureâ series at 8 a.m. in New York. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>P.&#038;G. SELLS BEAUTY BRANDS</strong> <span class="divider"> | </span></span> Procter &#038; Gamble has agreed to sell its portfolio of 43 beauty brands, including Wella, Clairol and Vidal Sassoon, to Coty for $12.5 billion, <a href="//www.nytimes.com/2015/07/10/business/dealbook/pg-sells-43-beauty-brands-to-coty.html"> Rachel Abrams writes in DealBook</a>. The deal is the latest effort by P.&#038;G. to <b> shed more than 100 brands</b> and focus on about 10 core product lines, like Tide. The beauty portfolio is expected to be <b> biggest chunk of the assets</b> P.&#038;G. will unload. P.&#038;G. said in a statement that it wanted to structure the sale as <b> a reverse Morris trust</b> â typically a tax-efficient spinoff that would create a separate entity that would then be taken over by Coty.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Ryanair Says Itâll Accept I.A.G.âs Takeover Bid for Its Aer Lingus Stake" src="https://static01.nyt.com/images/2015/07/11/business/dealbook/11Ryanair-web/11Ryanair-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ryanair Says Itâll Accept I.A.G.âs Takeover Bid for Its Aer Lingus Stake</strong> <span class="divider"> | </span></span> The offer, which came from the parent of British Airways, removes the final hurdle to a combination that analysts say will bolster Irelandâs position as hub for trans-Atlantic travel.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/11/business/dealbook/ryanair-aer-lingus-british-airways-takeover.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>InterContinental Hotels Group to Sell Hong Kong Hotel for $938 Million</strong> <span class="divider"> | </span></span> InterContinental Hotels Group agreed to sell the InterContinental Hong Kong to a group of investors advised and managed by Gaw Capital Partners for $938 million, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-07-10/intercontinental-sells-hong-kong-hotel-for-938-million-ibx8suhk"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Perella Weinberg Hires a Senior Goldman Sachs Executive</strong> <span class="divider"> | </span></span> Bruce Mendelsohn, the head of restructuring for the Americas at Goldman Sachs, will join the boutique bankâs corporate bankruptcy advisory practice.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/10/business/dealbook/perella-weinberg-hires-a-senior-goldman-sachs-executive.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New Jersey Used Tax Subsidies to Lure JPMorgan Jobs</strong> <span class="divider"> | </span></span> After Bill de Blasio, New Yorkâs mayor, rejected JPMorgan Chaseâs requests for tax breaks in exchange for moving its headquarters to another part of Manhattan, New Jersey stepped in with an offer, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/behind-the-deal-to-bring-j-p-morgan-jobs-to-new-jersey-1436492793"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="James Marcus, Opera Benefactor and Ex-Goldman Partner, Dies at 85" src="https://static01.nyt.com/images/2015/07/10/arts/10marcus-obit/10marcus-obit-thumbStandard.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>James Marcus, Opera Benefactor and Ex-Goldman Partner, Dies at 85</strong> <span class="divider"> | </span></span> Mr. Marcus served as a managing director of the Metropolitan Opera beginning in 1976. Ten years later he was named chairman, a position he held until 1993.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/10/arts/james-marcus-opera-benefactor-and-ex-goldman-partner-dies-at-85.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Drachma Makes Its First Appearance</strong> <span class="divider"> | </span></span> A Bloomberg News reporter spotted a Citigroup credit card transaction in Greece that was posted not in euros but in âDrachma EQ.â<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-07-09/first-sighting-of-drachma-in-the-wild-via-credit-card-mystery"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Breakingviews: Barclays Faces Toughest Test in Investment Banking" src="https://static01.nyt.com/images/2015/07/10/business/10db-barclaysviews/10db-barclaysviews-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Barclays Faces Toughest Test in Investment Banking</strong> <span class="divider"> | </span></span> Barclays, Credit Suisse and Deutsche Bank have new leaders and distinct challenges in investment banking, but Barclays has the steepest climb.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/10/business/dealbook/barclays-faces-toughest-test-in-investment-banking.html">Breakingviews &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/07/09/business/dealbook/antony-jenkins-to-step-down-as-barclays-chief-executive.html">Antony Jenkins Ousted as Barclays Chief Executive</a> <time class="timestamp" data-eastern-timestamp="6:08 PM" datetime="2015-07-08" data-utc-timestamp="1436393327000">6:08 PM</time><span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Thomas H. Lee Said to Lead Bidders for EBayâs Enterprise Unit</strong> <span class="divider"> | </span></span> The private equity firm Thomas H. Lee Partners is in advanced talks to buy the enterprise business of eBay for close to $1 billion, Reuters reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/07/09/ebay-ma-thl-idUSL1N0ZP24N20150709"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>23andMe Valued at $1 Billion </strong> <span class="divider"> | </span></span> After the genetic analytics company 23andMe last week reported that it had raised $79 million, the market research firm VC Experts found Delaware filings that show the round was done at a valuation of $1.03 billion, Fortune reports.  <br /><span class="kicker"><a href="//fortune.com/2015/07/09/23andme-is-the-startup-worlds-newest-unicorn/"> FORTUNE</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Regulator Drops Investigation of âLondon Whaleâ</strong> <span class="divider"> | </span></span> Britainâs financial watchdog has dropped its investigation of Bruno Iksil, the former JPMorgan trader known as the âLondon Whale,â The Financial Times reports. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/7d17a212-2659-11e5-bd83-71cb60e8f08c.html"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uber Files Motion Opposing Driver Class-Action Suit</strong> <span class="divider"> | </span></span> The ride-hailing service asserts that the handful of drivers who filed the lawsuit on work status shouldnât represent all the drivers.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/10/technology/uber-files-motion-opposing-driver-class-action-suit.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>An Income Tax on Carried Interest Couldnât Be Avoided</strong> <span class="divider"> | </span></span> Treating so-called carried interest as ordinary income for tax purposes would raise more money than the government predicts because the usual techniques for avoiding capital gains taxes donât work, Victor Fleischer writes in the Standard Deduction column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/10/business/dealbook/an-income-tax-on-carried-interest-couldnt-be-avoided.html">Standard Deduction &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Why Chinaâs Stock Market Bailout Just Might Work" src="https://static01.nyt.com/images/2015/07/10/business/10stewart-web/10stewart-web-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Why Chinaâs Stock Market Bailout Just Might Work</strong> <span class="divider"> | </span></span> Unlike Japan in the 1990s, China has the motivation and the resources that may make government intervention in the markets succeed, James B. Stewart writes in the Common Sense column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/10/business/international/why-chinas-stock-market-bailout-just-might-work.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/07/11/business/after-week-of-turmoil-chinese-stocks-post-further-gains.html">After Week of Turmoil, Chinese Stocks Post Further Gains</a> <time class="timestamp" data-eastern-timestamp="12:48 AM" datetime="2015-07-10" data-utc-timestamp="1436503683000">12:48 AM</time><span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span><span class="timestamp" data-eastern-timestamp="3:57 PM" data-utc-timestamp="1436515047"></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Greek Economy Under Siege, With Fears That the Worst Is Coming" src="https://static01.nyt.com/images/2015/07/10/business/10greekecon01/10greekecon01-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Greek Economy Under Siege, With Fears That the Worst Is Coming</strong> <span class="divider"> | </span></span> As a Sunday deadline nears for an agreement with the other eurozone nations, the only sure thing is that Greeceâs economy is teetering on collapse.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/10/business/international/deal-or-no-deal-greece-faces-a-difficult-aftermath.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/07/10/morning-agenda-greece-accepts-austerity-measures/"
+					data-title="Morning Agenda: Greece Accepts Austerity Measures"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Greece Accepts Austerity Measures | Chinese Stock Markets Sustain Rebound | Bankers Sign Up for Uber as Its I.P.O. Looms | P.&amp;G. Sells Beauty Brands&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/07/10/morning-agenda-greece-accepts-austerity-measures/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":95,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

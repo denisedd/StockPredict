@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004463688"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1465553982" />
+<meta name="PUD" content="20160610" />
+<meta name="pdate" content="20160610" />
+<meta name="ptime" content="20160610061942" />
+<meta name="utime" content="20160610101942" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-06-10T10:19:42-04:00" />
+<meta name="DISPLAYDATE" content="June 10, 2016" />
+<meta name="dat" content="June 10, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Abrams, George S (1932- );Dauman, Philippe P;Lerer, Kenneth;Perkins, Thomas James;Redstone, Sumner M">
+<meta name="des" content="Appointments and Executive Changes;Banking and Financial Institutions;Boards of Directors;Consumer Confidence (Economic Indicator);Initial Public Offerings;Mergers, Acquisitions and Divestitures;Money Laundering;Private Equity;Remittances;Small Business;Venture Capital;Whistle-Blowers">
+<meta name="org" content="1Malaysia Development Berhad (1MDB);Apollo Global Management;BSI SA;Caesars Entertainment Corporation;CBS Corporation;Citigroup Inc;Coutts &amp; Co;Deutsche Bank AG;Energy Transfer Equity LP;European Union;Kleiner Perkins Caufield &amp; Byers;Line Corp;National Amusements Inc;Paramount Pictures;Securities and Exchange Commission;Tesla Motors Inc;TPG Capital;Uber Technologies Inc;Viacom Inc;Volkswagen AG">
+<meta name="ticker" content="Caesars Entertainment Corporation|CZR|NASDAQ;CBS Corporation|CBS|NYSE;Citigroup Inc|C|NYSE;Deutsche Bank AG|DB|NYSE;Energy Transfer Equity LP|ETE|NYSE;Tesla Motors Inc|TSLA|NASDAQ;Viacom Inc|VIAB|NASDAQ;Volkswagen AG|VLKAY|Other OTC" />
+<meta property="article:tag" content="Abrams George S (1932- )" />
+<meta property="article:tag" content="Dauman Philippe P" />
+<meta property="article:tag" content="Lerer Kenneth" />
+<meta property="article:tag" content="Perkins Thomas James" />
+<meta property="article:tag" content="Redstone Sumner M" />
+<meta property="article:tag" content="Appointments and Executive Changes" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Boards of Directors" />
+<meta property="article:tag" content="Consumer Confidence (Economic Indicator)" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Money Laundering" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Remittances" />
+<meta property="article:tag" content="Small Business" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Whistle-Blowers" />
+<meta property="article:tag" content="1Malaysia Development Berhad (1MDB)" />
+<meta property="article:tag" content="Apollo Global Management" />
+<meta property="article:tag" content="BSI SA" />
+<meta property="article:tag" content="Caesars Entertainment Corporation" />
+<meta property="article:tag" content="CBS Corporation" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="Coutts &amp; Co" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Energy Transfer Equity LP" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="Kleiner Perkins Caufield &amp; Byers" />
+<meta property="article:tag" content="Line Corp" />
+<meta property="article:tag" content="National Amusements Inc" />
+<meta property="article:tag" content="Paramount Pictures" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Tesla Motors Inc" />
+<meta property="article:tag" content="TPG Capital" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="Viacom Inc" />
+<meta property="article:tag" content="Volkswagen AG" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Abrams George S (1932- ),Dauman Philippe P,Lerer Kenneth,Perkins Thomas James,Redstone Sumner M,Appointments and Executive Changes,Banking and Financial Institutions,Boards of Directors,Consumer Confidence (Economic Indicator),Initial Public Offerings,Mergers Acquisitions and Divestitures,Money Laundering,Private Equity,Remittances,Small Business,Venture Capital,Whistle-Blowers,1Malaysia Development Berhad (1MDB),Apollo Global Management,BSI SA,Caesars Entertainment Corporation,CBS Corporation,Citigroup Inc,Coutts &amp; Co,Deutsche Bank AG,Energy Transfer Equity LP,European Union,Kleiner Perkins Caufield &amp; Byers,Line Corp,National Amusements Inc,Paramount Pictures,Securities and Exchange Commission,Tesla Motors Inc,TPG Capital,Uber Technologies Inc,Viacom Inc,Volkswagen AG,DealBook" />
+<meta name="news_keywords" content="Remittances,Whistleblower" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F06%2F10%2Fmorning-agenda-thomas-j-perkins-pioneering-venture-capitalist-dies-at-84%2F" title="Morning Agenda: Thomas J. Perkins, Pioneering Venture Capitalist, Dies at 84" />
+<meta name="description" content="Viacom Rumblings &#124; Tighter Rules on Remittances Squeeze Businesses" />
+<meta name="hdl" content="Morning Agenda: Thomas J. Perkins, Pioneering Venture Capitalist, Dies at 84" />
+<meta property="og:title" content="Morning Agenda: Thomas J. Perkins, Pioneering Venture Capitalist, Dies at 84" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/06/10/morning-agenda-thomas-j-perkins-pioneering-venture-capitalist-dies-at-84/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Viacom Rumblings &#124; Tighter Rules on Remittances Squeeze Businesses" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Thomas J. Perkins, Pioneering Venture Capitalist, Dies at 84" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/06/10/morning-agenda-thomas-j-perkins-pioneering-venture-capitalist-dies-at-84/" />
+<meta name="twitter:description" content="Viacom Rumblings &#124; Tighter Rules on Remittances Squeeze Businesses" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda:  A Bearish George Soros Trades Again' href='//news.blogs.nytimes.com/2016/06/09/morning-agenda-a-bearish-george-soros-trades-again/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/06/10/what-were-reading-161/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/06/10/morning-agenda-thomas-j-perkins-pioneering-venture-capitalist-dies-at-84/' />
+<link rel='shortlink' href='//nyti.ms/24F317k' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/06/10/morning-agenda-thomas-j-perkins-pioneering-venture-capitalist-dies-at-84/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Thomas J. Perkins, Pioneering Venture Capitalist, Dies at 84 - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5012 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Thomas J. Perkins, Pioneering Venture Capitalist, Dies at 84        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/06/10/morning-agenda-thomas-j-perkins-pioneering-venture-capitalist-dies-at-84/"
+	 data-title="Morning Agenda: Thomas J. Perkins, Pioneering Venture Capitalist, Dies at 84"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt; Viacom Rumblings | Tighter Rules on Remittances Squeeze Businesses&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/10/morning-agenda-thomas-j-perkins-pioneering-venture-capitalist-dies-at-84/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 10, 2016 6:19 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Thomas J. Perkins, Pioneering Venture Capitalist, Dies at 84</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-06-10T10:19:42+00:00" itemprop="datePublished">June 10, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">June 10, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5012 post type-post status-publish hentry category-dealbook tag-1malaysia-development-berhad-1mdb tag-abrams-george-s-1932 tag-apollo-global-management tag-appointments-and-executive-changes tag-banking-and-financial-institutions tag-boards-of-directors tag-bsi-sa tag-caesars-entertainment-corporation tag-cbs-corporation tag-citigroup-inc tag-consumer-confidence-economic-indicator tag-coutts-co tag-dauman-philippe-p tag-deutsche-bank-ag tag-energy-transfer-equity-lp tag-european-union tag-initial-public-offerings tag-kleiner-perkins-caufield-byers tag-lerer-kenneth tag-line-corp tag-mergers-acquisitions-and-divestitures tag-money-laundering tag-national-amusements-inc tag-paramount-pictures tag-perkins-thomas-james tag-private-equity tag-redstone-sumner-m tag-remittances tag-securities-and-exchange-commission tag-small-business tag-tesla-motors-inc tag-tpg-capital tag-uber-technologies-inc tag-venture-capital tag-viacom-inc tag-volkswagen-ag tag-whistle-blowers per-abrams-george-s-1932 per-dauman-philippe-p per-lerer-kenneth per-perkins-thomas-james per-redstone-sumner-m des-appointments-and-executive-changes des-banking-and-financial-institutions des-boards-of-directors des-consumer-confidence-economic-indicator des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-money-laundering des-private-equity des-remittances des-small-business des-venture-capital des-whistle-blowers org-1malaysia-development-berhad-1mdb org-apollo-global-management org-bsi-sa org-caesars-entertainment-corporation org-cbs-corporation org-citigroup-inc org-coutts-co org-deutsche-bank-ag org-energy-transfer-equity-lp org-european-union org-kleiner-perkins-caufield-byers org-line-corp org-national-amusements-inc org-paramount-pictures org-securities-and-exchange-commission org-tesla-motors-inc org-tpg-capital org-uber-technologies-inc org-viacom-inc org-volkswagen-ag news_keywords-remittances news_keywords-whistleblower" id="post-5012">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Thomas J. Perkins, Pioneering Venture Capitalist, Dies at 84</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-06-10T10:19:42+00:00" itemprop="datePublished">June 10, 2016 6:19 am</time>
+			<!-- date updated --><span class="visually-hidden updated">June 10, 2016 6:19 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/06/10/morning-agenda-thomas-j-perkins-pioneering-venture-capitalist-dies-at-84/" data-title="Morning Agenda: Thomas J. Perkins, Pioneering Venture Capitalist, Dies at 84" data-description=" Viacom Rumblings | Tighter Rules on Remittances Squeeze Businesses">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>THOMAS J. PERKINS, PIONEERING VENTURE CAPITALIST, DIES AT 84</strong> <span class="divider"> | </span></span> Thomas J. Perkins, who nurtured Silicon Valleyâs venture capital industry into a force that helped foster companies like Google and Amazon, died on Tuesday at his home in Marin County, Calif.,<br />
+<a href="//www.nytimes.com/2016/06/10/technology/tom-perkins-dies.html?ref=dealbook">Pui-Wing Tam reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">His longtime assistant, Kathy Daly, said he died after a prolonged illness, which she did not specify. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Perkins <b>helped found Kleiner Perkins Caufield &#038; Byers in 1972</b> and pioneered a model of investment that involved putting small amounts of money into promising young start-ups and giving them advice in return for a stake in the companies. Mr. Perkins helped recruit venture capitalists like John Doerr and led investments into companies like Netscape, AOL, Amazon and Google.<br />
+The firmâs success transformed Silicon Valley, leading to a proliferation of venture firms in the region. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Perkinsâs decades-long career at the firm made him synonymous with the venture capital industry, <a href="//www.nytimes.com/2016/06/10/business/dealbook/the-giants-nurtured-by-thomas-j-perkins.html">Michael J. de la Merced reports in DealBook</a>.  <b>Genentech, which he described as one of his favorite investments, went on to become a pioneer in the biotechnology industry.</b> Tandem, which makes the computers used in banks and A.T.M.s, was incubated at Kleiner Perkins and sold to Compaq in 1997.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Mr. Perkins later became embroiled in several controversies.</b> In 1996, he was convicted in France of involuntary manslaughter from a yacht collision. He stepped down from the board of Hewlett-Packard in 2006 after he said the company had used illegal methods to obtain his phone records. The allegations led to the resignation of H.P.âs chairwoman and an overhaul of the board. </p>
+<p class="story-body-text" itemprop="articleBody"><b>He also publicly broke with Kleiner Perkins in 2014</b> after writing an opinion piece in The Wall Street Journal in which he compared the âprogressive war on the 1 percentâ to the persecution of Jews in Nazi Germany. Mr. Perkins later apologized for his language. </p>
+<p class="story-body-text" itemprop="articleBody">In a statement, two other co-founders of Kleiner Perkins, Brook Byers and Frank Caufield, said Mr. Perkins had helped define entrepreneurial venture capital.  </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Perkins was also known for his flamboyant, wealthy lifestyle. He wrote a novel titled <b>âSex and the Single Zillionaire,â</b> for which he had guidance from the romance novelist Danielle Steel. He married her in 1998. The marriage ended in divorce. </p>
+<p class="story-body-text" itemprop="articleBody">Before that he had been married to Gerd Thune-Ellefsen, a Norwegian whom he had met while skiing. He is survived by two children from that marriage, a son, Tor, and a daughter, Elizabeth.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>VIACOM RUMBLINGS </strong> <span class="divider"> | </span></span> National Amusements, the theater chain through which Sumner M. Redstone controls his $40 billion empire, is preparing to replace directors on the Viacom board in a move that is expected to lead to the ouster of the companyâs embattled chief executive,<br />
+<a href="//www.nytimes.com/2016/06/10/business/media/viacom-board-philippe-dauman.html?ref=dealbook">Emily Steel reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">Kenneth Lerer, the venture capitalist who helped found The Huffington Post and is the chairman at BuzzFeed, and Nicole Seligman, a former Sony executive and lawyer who represented President Bill Clinton during his impeachment trial, are being considered, according to people briefed on the discussions. </p>
+<p class="story-body-text" itemprop="articleBody">Also on the list are Judith McHale, the former Discovery Communications chief, and Thomas J. May, the chairman of Eversource Energy utility company, these people said. </p>
+<p class="story-body-text" itemprop="articleBody">It is unclear whether these people have formally accepted the positions. </p>
+<p class="story-body-text" itemprop="articleBody">One possibility that has been discussed is having the new Viacom board serve a short term <b>before National Amusements pushes to merge Viacom with CBS</b>, the other entertainment company it controls. Viacom and CBS were split into two companies in 2006. </p>
+<p class="story-body-text" itemprop="articleBody">At the same time, given the latest move by National Amusements, Viacom is still presumably trying to decide whether to amend its bylaws, a move that would  prevent a sale of the Paramount movie studio. It had four business days after Mondayâs announcement to file the new amendments, but has not yet done so, <a href="//www.nytimes.com/2016/06/10/business/dealbook/viacom-has-few-options-for-fighting-national-amusements.html">Steven Davidoff Solomon writes in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">The problem for Viacom is that its directors other than Mr. Redstone have decided to oppose a leadership change and support Philippe P. Dauman, the chief executive. Mr. Daumanâs opposition is based on claims that Mr. Redstone is not competent, which somehow translate to the actions of National Amusementsâ board being illegitimate. </p>
+<p class="story-body-text" itemprop="articleBody">If Viacom accepts the changes, it will be <b>admitting that National Amusements can act appropriately with regard to Viacom and thus, that Mr. Redstone and National Amusements can remove the board.</b> </p>
+<p class="story-body-text" itemprop="articleBody"><b>Viacom could try to kick the can down the road, by filing the changes, saying vaguely that they were illegal. Or it could challenge the changes in court.</b> A bylaw requiring 100 percent board approval is unusual, but there is precedent for the validity of this type of bylaw under Delaware law, Mr. Davidoff Solomon writes. Viacom would most likely argue that the controlling shareholder is overreaching. </p>
+<p class="story-body-text" itemprop="articleBody">There is also the option of claiming that National Amusementsâ amendments are void because of claims of Mr. Redstoneâs incompetency. But this would be hard to establish as National Amusements has its own board and is a functioning company. And if Mr. Redstone is indeed incompetent, then his interest goes to the trust from which Mr. Dauman and George Abrams have been removed. </p>
+<p class="story-body-text" itemprop="articleBody">If Viacom does pursue litigation, it may be a cue for National Amusements and Mr. Redstone to finally unseat the Viacom board. National Amusements could also invoke the seldom-used summary procedures in the Delaware code for contested elections of directors and procedures to confirm the validity of its appointments. This would allow National Amusements to raise the ante if Viacom does litigate over the amended bylaws. </p>
+<p class="story-body-text" itemprop="articleBody">Viacom has difficult decisions to make and very little time to make them in. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> The University of Michigan will release its latest  <b>consumer confidence survey</b> at 10 a.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TIGHTER RULES ON REMITTANCES SQUEEZE BUSINESSES </strong> <span class="divider"> | </span></span> Banks are refusing to do business with money transmitters, closing or freezing their accounts over <b>concerns about money laundering and extra regulatory scrutiny</b>,<br />
+<a href="//www.nytimes.com/2016/06/10/business/dealbook/tighter-rules-on-remittances-put-squeeze-on-go-betweens.html?ref=dealbook">Elinor Comlay reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Convenience stores that handle remittances need an account to deposit the cash, but because it is so hard for banks to know the identity of the final customer, remittances companies and their agents are being categorized as high risk for money laundering. </p>
+<p class="story-body-text" itemprop="articleBody"><b>This has affected mom-and-pop convenience stores</b>, potentially limiting options for the millions of people living in the United States who want to send money home. Over a quarter of American households rely on nonbank financial institutions, including money transmitters, for everyday banking needs, according to the Conference of State Bank Supervisors. </p>
+<p class="story-body-text" itemprop="articleBody">Mexico is the biggest destination for money transfers from the United States, according to estimates by the World Bank. About $24.3 billion was remitted to there from the United States last year, practically all the cross-border money that flowed to Mexico and one-fifth of all remittances sense from the United States. <b>But while it was once viewed as a big consumer business opportunity, American banks now see it as a liability.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Bank of America and JPMorgan Chase scrapped their low-cost remittance services two years ago. Last year, Citigroup agreed to pay $140 million to regulators for failing to safeguard against money laundering and shut down its Banamex USA Unit. </p>
+<p class="story-body-text" itemprop="articleBody">AmeriMex Communications, a company that sells cellphone minutes to people in the United States to give to family or friends in Mexico, has started to work with convenience store owners on a prepay basis because many are also money-transfer agents and their bank accounts have been frozen, said Don Aldridge, AmeriMexâs chief executive.  </p>
+<p class="story-body-text" itemprop="articleBody">Regulators are aware of these problems â they say <b>there is a wider trend of banks closing potentially risky accounts because of the costs of monitoring and compliance. </b> </p>
+<p class="story-body-text" itemprop="articleBody">âThe fact that, over the same time period, the overall level of U.S.-to-Mexico remittances appears to be healthy and growing may indicate that some of the weaker institutions are losing access and the market may be consolidating under stronger participants â which would not be a bad thing,â said Daniel L. Glaser, assistant Treasury secretary for terrorist financing.</p>
+<p class="story-body-text" itemprop="articleBody">However critics say that the dollar amount of transfers has been rising steadily since the financial crisis so the data reflects the health of the economy, rather than the health of the money-transfer market. And  <b>regulators are concerned that people will resort to sending cash across the border, a method that is riskier and harder to track.</b><br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Cracks Appear in Merger of Williams and Energy Transfer Equity</strong> <span class="divider"> | </span></span> Slumping oil prices have spurred questions about the deal, and Williams now says it expects to cut its dividend if the sale goes through, Kevin Allison writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/10/business/dealbook/cracks-appear-in-merger-of-williams-and-energy-transfer-equity.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Merck to Buy Biotech Company</strong> <span class="divider"> | </span></span> Merck has agreed to buy the company, Afferent Pharmaceuticals, for an upfront payment of $500 million, with milestone payments of up to $750 million.<br /><span class="kicker"><a href="//www.wsj.com/articles/merck-to-acquire-biotech-company-afferent-1465509592?mod=pls_whats_news_us_business_f">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Wall Streetâs $8 Billion Bounty </strong> <span class="divider"> | </span></span> Data analyzed by The Financial Times show that buyers and sellers in the United States paid $8 billion more in fees than their counterparts in the European Union.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/2a60cfde-2c8a-11e6-bf8d-26294ad519fc.html#axzz4AlMmHbKZ"> THE FINANCIAL TIMES  </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>How a 143-Year-Old Swiss Bank Took a Quick Road to Ruin in Asia</strong> <span class="divider"> | </span></span> When a rainmaker left RBS Coutts with 70 colleagues for BSI, a small Swiss bank looking to get big in a hurry, it set off a chain of events that thrust the bank into the center of the financial scandal involving 1MDB. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-06-10/how-a-143-year-old-swiss-bank-took-a-quick-road-to-ruin-in-asia">BLOOMBERG</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Whistle-Blower Said to Help S.E.C. in Deutsche Bank Investigation</strong> <span class="divider"> | </span></span>  The Securities and Exchange Commission received a whistle-blower complaint accusing the bank of inflating the value of mortgage bonds on its books and masked losses around 2013, Bloomberg reports, citing people with knowledge of the situation.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-06-09/sec-said-to-be-aided-by-whistle-blower-in-deutsche-bank-probe">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Demand for Digital Services Leaves Banks Open to More Risk </strong> <span class="divider"> | </span></span> The majority of top bankers said they were open to more risks than they could manage as a result of digital developments, according to a global survey of managers by the consultancy Accenture. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/edbd9a78-2d7c-11e6-bf8d-26294ad519fc.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz4AlMmHbKZ">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Apollo and TPG May Pitch In With Caesars Settlement </strong> <span class="divider"> | </span></span> Executives at Apollo Global Management and TPG, the owners of Caesars Entertainment, may contribute to a broader settlement offer by Caesars to resolve accusations that the casino operator and its owners looted the operating unit of valuable assets for their benefit. <br /><span class="kicker"><a href="//www.wsj.com/articles/apollo-tpg-officials-may-pitch-in-to-caesars-settlement-1465502956?mod=pls_whats_news_us_business_f">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Japanese Messaging Service Plans I.P.O. at $5.5 Billion Valuation</strong> <span class="divider"> | </span></span> The service, Line Corporation, is preparing to list in Japan and the United States at a valuation of $5.5 billion, putting it on track to deliver the biggest market debut for a technology company this year.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-06-10/japan-s-line-plans-market-debut-in-tokyo-new-york-in-july">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Dutch Insurer Raises $1.2 Billion </strong> <span class="divider"> | </span></span> The insurer, ASR Nederland, raised $1.2 billion in an initial public offering that allowed the Dutch government to recoup some of the money it spent bailing out its parent company Fortis.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-06-09/asr-ipo-raises-1-2-billion-as-dutch-government-cuts-stake">BLOOMBERG</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="How Keeping Up Appearances Ruined a Former Dallas Banker" src="https://static01.nyt.com/images/2016/06/10/business/10STEWART1/10STEWART1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>How Keeping Up Appearances Ruined a Former Dallas Banker</strong> <span class="divider"> | </span></span> S.E.C. and criminal complaints paint the former banker, Thomas C. Davis, considered a pillar of the business community, as a man in âdesperateâ financial straits, James B. Stewart writes in Common Sense.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/10/business/how-keeping-up-appearances-ruined-a-former-dallas-banker.html">Common Sense &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Uber and Its Executives Are Fined in France" src="https://static01.nyt.com/images/2016/06/10/business/10UBERFRANCE/10UBERFRANCE-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uber and Its Executives Are Fined in France</strong> <span class="divider"> | </span></span> The popular ride-hailing service and two French executives must pay almost $500,000 for breaking the countryâs tough transportation rules.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/10/technology/uber-and-its-executives-fined-in-france.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Tesla Model S Suspension Failures Face Scrutiny by Safety Agency" src="https://static01.nyt.com/images/2016/06/10/business/10TESLA/10TESLA-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tesla Model S Suspension Failures Face Scrutiny by Safety Agency</strong> <span class="divider"> | </span></span> The agency, the National Highway Traffic Safety Administration, also warned Tesla Motors to refrain from encouraging Model S drivers not to report safety concerns.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/10/business/tesla-model-s-nhtsa-suspension-failure.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Volkswagen Not Alone in Flouting Pollution Limits" src="https://static01.nyt.com/images/2016/06/10/business/10vwdiesel1/10vwdiesel1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Volkswagen Not Alone in Flouting Pollution Limits</strong> <span class="divider"> | </span></span> Other carmakers in Europe have taken advantage of a loophole that allows them to reduce emissions controls whenever there is risk of engine damage.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/10/business/international/volkswagen-not-alone-in-flouting-pollution-limits.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Taking a Hard Look at a Campaign Critical of a Fiduciary Rule</strong> <span class="divider"> | </span></span> A United States Chamber of Commerce webpage cites small-business owners supposedly opposed to the new regulation. But the report isnât all itâs said to be, Daniel Dudis and Bartlett Naylor write in Another View.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/10/business/dealbook/taking-a-hard-look-at-a-campaign-critical-of-a-fiduciary-rule.html">Another View &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/06/10/morning-agenda-thomas-j-perkins-pioneering-venture-capitalist-dies-at-84/"
+					data-title="Morning Agenda: Thomas J. Perkins, Pioneering Venture Capitalist, Dies at 84"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt; Viacom Rumblings | Tighter Rules on Remittances Squeeze Businesses&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/10/morning-agenda-thomas-j-perkins-pioneering-venture-capitalist-dies-at-84/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":52,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

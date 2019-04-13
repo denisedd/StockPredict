@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-afterdeadline section-timestopics"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-afterdeadline section-timestopics" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-afterdeadline section-timestopics" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-afterdeadline section-timestopics" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/afterdeadline/Close but Not Quite ( 20160202 )" />
+<meta name="communityAssetURL" content="//afterdeadline.blogs.nytimes.com/2016/02/02/close-but-not-quite-13/" />
+<meta name="WT.z_gtn" content="Blog" /><meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta name="author" content="Philip B. Corbett" />
+<meta name="CLMST" content="Philip B. Corbett" />
+<meta name="byl" content="Philip B. Corbett" />
+<meta name="GBLC" content="">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1454418022" />
+<meta name="PUD" content="20160202" />
+<meta name="pdate" content="20160202" />
+<meta name="ptime" content="20160202080022" />
+<meta name="utime" content="20160202130057" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-02-02T13:00:57-05:00" />
+<meta name="DISPLAYDATE" content="February 2, 2016" />
+<meta name="dat" content="February 2, 2016" />
+<meta itemprop="articleSection" property="article:section" content="After Deadline" />
+<meta name="CG" content="After Deadline" />
+<meta name="SCG" content="afterdeadline" />
+<meta name="BN" content="afterdeadline" />
+<meta name="robots" content="noodp">
+<meta property="article:tag" content="Uncategorized" />
+<meta name="keywords" content="Uncategorized" />
+<meta name="description" content="Too often we use a word that sounds sort of like what we probably mean, more or less. That&#8217;s not the level of precision we&#8217;re striving for. Here are a few recent misfires." />
+<meta name="hdl" content="Close but Not Quite" />
+<meta property="og:title" content="Close but Not Quite" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//afterdeadline.blogs.nytimes.com/2016/02/02/close-but-not-quite-13/" />
+<meta property="og:site_name" content="After Deadline Blog" />
+<meta property="og:description" content="Too often we use a word that sounds sort of like what we probably mean, more or less. That&#8217;s not the level of precision we&#8217;re striving for. Here are a few recent misfires." />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_291_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Close but Not Quite" />
+<meta name="twitter:url" content="//afterdeadline.blogs.nytimes.com/2016/02/02/close-but-not-quite-13/" />
+<meta name="twitter:description" content="Too often we use a word that sounds sort of like what we probably mean, more or less. That&#8217;s not the level of precision we&#8217;re striving for. Here are a few recent misfires." />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Tangled Passages' href='//afterdeadline.blogs.nytimes.com/2016/01/26/tangled-passages-13/' />
+<link rel='next' title='Number Trouble' href='//afterdeadline.blogs.nytimes.com/2016/02/09/number-trouble-5/' />
+<link rel='canonical' href='//afterdeadline.blogs.nytimes.com/2016/02/02/close-but-not-quite-13/' />
+<link rel='shortlink' href='//nyti.ms/205BucQ' />
+<link rel='https://github.com/WP-API/WP-API' href='//afterdeadline.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/afterdeadline/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//afterdeadline.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/most-emailed/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/afterdeadline/2016/02/02/close-but-not-quite-13/" />
+<meta name="dfp-ad-unit-path" content="timestopics/afterdeadline" />			<title>Close but Not Quite - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/universal.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-1739 blog-universal nyt-blog-afterdeadline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'After Deadline', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//afterdeadline.blogs.nytimes.com">
+                After Deadline            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Close but Not Quite        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//afterdeadline.blogs.nytimes.com/2016/02/02/close-but-not-quite-13/"
+	 data-title="Close but Not Quite"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Too often we use a word that sounds sort of like what we probably mean, more or less. That&#039;s not the level of precision we&#039;re striving for. Here are a few recent misfires.&lt;/span&gt;&lt;a href=&quot;//afterdeadline.blogs.nytimes.com/2016/02/02/close-but-not-quite-13/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="February 2, 2016 8:00 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="afterdeadline" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+		<div class="element1">
+	<a href="//afterdeadline.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=After Deadline"><div id="logo" class="archived-blog-post"><div class="w75 left site-header-logo"><img src="https://static01.nyt.com/images/blogs_v3/afterdeadline/afterdeadline75.gif" alt="After Deadline"/></div><div class="site-title">After Deadline</div><div class="site-description">New York Times Blog</div></div></a>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//afterdeadline.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search After Deadline">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-1739 post type-post status-publish hentry tag-after-deadline tag-grammar" id="post-1739">
+	<header class="postHeader">
+				<div class="postKicker">
+					</div>
+				<h1 itemprop="headline" class="entry-title">Close but Not Quite</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Philip B. Corbett			</address>
+			<!-- date published --><time class="dateline " datetime="2016-02-02T13:00:22+00:00" itemprop="datePublished">February 2, 2016 8:00 am</time>
+			<!-- date updated --><span class="visually-hidden updated">February 2, 2016 8:00 am</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//afterdeadline.blogs.nytimes.com/2016/02/02/close-but-not-quite-13/" data-title="Close but Not Quite" data-description="Too often we use a word that sounds sort of like what we probably mean, more or less. That&#039;s not the level of precision we&#039;re striving for. Here are a few recent misfires.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody">Too often we use a word that sounds sort of like what we probably mean, more or less. That&#8217;s not the level of precision we&#8217;re striving for. If you&#8217;re not absolutely sure you&#8217;ve got the right word, you probably don&#8217;t. Look it up!</p>
+<p class="story-body-text" itemprop="articleBody">A few recent misfires:</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>A Reuters article on Tuesday shed new light on the Pentagon&#8217;s <strong>obstinance</strong> on GuantÃ¡namo and the extent to which the department has sought to keep detainees locked away for years without due process in a prison established to sidestep the Constitution and international law.</em></p>
+<p class="story-body-text" itemprop="articleBody">This isn&#8217;t a word. A good clue is the fact that the adjective is &#8220;obstinate,&#8221; not &#8220;obstinant.&#8221; The noun is &#8220;obstinacy&#8221; or, less often, &#8220;obstinateness.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>[Opinion] Trump seems to feel absolutely no <strong>compunction</strong> to explain how anything would work.</em></p>
+<p class="story-body-text" itemprop="articleBody">&#8220;Compunction&#8221; means a feeling of guilt or regret. Certainly one might say Trump feels no compunction about some of the controversial things he has said or done. But here we meant something more like &#8220;compulsion,&#8221; or, better, &#8220;obligation.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>But her own children said it was her role as mother that she seemed to <strong>covet </strong>most.</em></p>
+<p class="story-body-text" itemprop="articleBody">As a colleague pointed out, &#8220;covet&#8221; means to long for something you don&#8217;t have, or that belongs to someone else. That&#8217;s not the case here. We meant something more like &#8220;value&#8221; or perhaps &#8220;cherish.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>It is difficult to <strong>understate</strong> how big Saudi Aramco is believed to be. Its stated oil reserves amount to 261 billion barrels, more than 10 times those of Exxon Mobil. It supplies roughly a tenth of the world&#8217;s oil.</em></p>
+<p class="story-body-text" itemprop="articleBody">This common error is more a misunderstanding of the idiom than of the word itself. We should say &#8220;difficult to overstate&#8221; &mdash; that is, Saudi Aramco is so large that it would be hard to exaggerate its size.</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>Film aficionados tend to find the fact-checking of movies a <strong>feckless</strong> exercise.</em></p>
+<p class="story-body-text" itemprop="articleBody">This may be a closer call. But the context suggests we meant something more like &#8220;pointless,&#8221; rather than &#8220;feckless,&#8221; which can mean either weak or careless.</p>
+<p class="story-body-text" itemprop="articleBody">&nbsp;<br />
+<strong>When Spell-Check Can&#8217;t Help</strong></p>
+<p class="story-body-text" itemprop="articleBody">A couple of familiar, and painful, homonym mix-ups from recent stories:</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>China has also failed in its efforts to <strong>reign</strong> in Mr. Kim.</em></p>
+<p class="story-body-text" itemprop="articleBody">Fortunately, this was quickly fixed to read &#8220;rein in.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>The office released a photo of Mr. Couch, his blond hair, and red beard and mustache, <strong>died</strong> dark brown.</em></p>
+<p class="story-body-text" itemprop="articleBody">&#8220;Dyed,&#8221; of course.</p>
+<p class="story-body-text" itemprop="articleBody">&nbsp;<br />
+<strong>Pro and Con</strong></p>
+<p class="story-body-text" itemprop="articleBody">&#8220;Advocate&#8221; means to speak or work in favor of something. So it&#8217;s ungainly, even illogical, to use this word in describing opposition &mdash; it&#8217;s like saying someone is in favor of being against something. Yet versions of this crop up fairly often. For example:</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>In May, he beatified Ãscar Romero, the archbishop of San Salvador who was assassinated in 1980 after <strong>advocating fervently against poverty, social injustice and torture</strong>.</em></p>
+<p class="story-body-text" itemprop="articleBody">How about &#8220;campaigning fervently against&#8221; or &#8220;working fervently against&#8221; or perhaps &#8220;fervently fighting poverty, etc.&#8221;?</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>But Gandy, <strong>the anti-domestic-violence advocate</strong>, said she was not surprised that the Yankees had made such a calculated decision to trade for Chapman.</em></p>
+<p class="story-body-text" itemprop="articleBody">An awkward description: someone who is for being against domestic violence.  Rephrase.</p>
+<p class="story-body-text" itemprop="articleBody">&nbsp;<br />
+<strong>In a Word</strong></p>
+<p class="story-body-text" itemprop="articleBody">This week&#8217;s grab bag of grammar, style and other missteps, compiled with help from colleagues and readers.</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>Yet so far this season, there is just <strong>one more foul per game compared to last</strong> &mdash; which, accounting for the extra possessions, is essentially no change at all.</em></p>
+<p class="story-body-text" itemprop="articleBody">As The Times&#8217;s stylebook says, &#8220;compare to&#8221; means to liken. Here we wanted &#8220;compared with&#8221; &mdash; or, better, just say &#8220;one more foul per game than last year.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>On the day of Russia&#8217;s 2011 parliamentary election, coordinated counterattacks crashed the websites of <strong>much of the country&#8217;s liberal media outlets</strong>.</em></p>
+<p class="story-body-text" itemprop="articleBody">Make it &#8220;many &hellip; outlets.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>Infants with the defect, called <strong>gastroschisis</strong>, are born with intestines poking out of a hole in the abdominal wall. Other organs, like the stomach and liver, may also be found outside the body at birth.</em></p>
+<p class="story-body-text" itemprop="articleBody">A reader points out that a pronouncer would have been helpful with this unfamiliar term. (It&#8217;s apparently gas-TROSS-kuh-sis.)</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>[Editorial] Until the state or the city comes up with money to pay for lawyers <strong>who</strong> the Constitution requires the government to provide, these people, including Ms. Kennedy, are locked up in jail without lawyers to challenge their arrests, request reduced bail or file motions to preserve evidence.</em></p>
+<p class="story-body-text" itemprop="articleBody">Make it &#8220;whom,&#8221; the object of &#8220;provide.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em><strong>Worries</strong> about China&#8217;s health <strong>is</strong> weighing on oil.</em></p>
+<p class="story-body-text" itemprop="articleBody">The plural subject &#8220;worries&#8221; needs a plural verb.</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>This month, El Salvador said it was seeing a surge in Guillain-BarrÃ© cases. It normally averages about 14 per month, but between Dec. 1, 2015, and Jan. 6, 2016, it recorded 46, <strong>of which two had died</strong>.</em></p>
+<p class="story-body-text" itemprop="articleBody">&#8220;Which&#8221; refers to &#8220;cases,&#8221; so &#8220;had died&#8221; doesn&#8217;t work. We could just say &#8220;46, two of them fatal.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>Wilkes Bashford, a clothier whose <strong>eponymous</strong> emporium is famous for having dressed affluent, elegance-conscious San Franciscans for the last half-century, died on Saturday at his home in San Francisco. He was 82.</em></p>
+<p class="story-body-text" itemprop="articleBody">As we&#8217;ve often noted &mdash; and as the stylebook explains &mdash; in precise usage &#8220;eponymous&#8221; describes the giver of the name, not the recipient.</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>[Opinion] If <strong>either of these narratives are</strong> true, then Clinton&#8217;s sex life will be a non-issue in 2016.</em></p>
+<p class="story-body-text" itemprop="articleBody">&#8220;Either&#8221; is singular, so make it &#8220;either &hellip; is.&#8221; </p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>Last year he hiked and camped in Isle Royale National Park in Lake Superior; and MacNaughton Mountain (no relation) in the Adirondacks; canoed on the Androscoggin River in New Hampshire; and backpacked the Wonderland Trail around Mount Rainier in Washington with Fitpacking, an adventure travel company.</em></p>
+<p class="story-body-text" itemprop="articleBody">We tried to use semicolons to tame this overstuffed sentence, but they don&#8217;t really work. Try again.</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>Democrats <strong>pushed back</strong> against the idea that a vote should be invalidated just because a person did not register a written change of address.</em></p>
+<p class="story-body-text" itemprop="articleBody">Let&#8217;s try harder to resist this overused expression.</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>&#8220;Washington is not a snow town,&#8221; former Mayor Marion S. Barry Jr. once <strong>famously</strong> said, and with forecasters predicting a mid-Atlantic weekend storm of historic proportions, with the capital as its center, officials and citizens here and across the region are scurrying to prepare.</em></p>
+<p class="story-body-text" itemprop="articleBody">This is one of those journalese tics that we could easily do without, with no loss to the story.</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>If you look only at the global economy, and what leading forecasters think it will do in 2016, things look to be in a reasonably solid state. The world economy will grow 3.4 percent this year, economists at the International Monetary Fund projected this week, up from 3.1 percent in 2015. Private sector forecasters mostly have similar expectations.</p>
+<p class="story-body-text" itemprop="articleBody">If you look only at global financial markets, <strong>it&#8217;s Aaack, Run for the Hills! The Sky is Falling!</strong></em></p>
+<p class="story-body-text" itemprop="articleBody">This passage is bright and effective, but the capitalization is baffling.</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>Though competition between the five remains fierce &mdash; and each year, a few of them seem up and a few down &mdash; it&#8217;s becoming harder to picture how any one of them, let alone two or three, <strong>may cede</strong> their growing clout in every aspect of American business and society. &hellip; </em></p>
+<p class="story-body-text" itemprop="articleBody"><em>Even with these difficulties, it&#8217;s unclear if the larger dynamic <strong>may change</strong> much. Let&#8217;s say that Alibaba, the Chinese e-commerce company, eclipses Amazon&#8217;s retail business in India &mdash; well, O.K., so then it satisfies itself with the rest of the world.</em></p>
+<p class="story-body-text" itemprop="articleBody">Neither of these &#8220;mays&#8221; is right. Make it &#8220;will cede&#8221; (or possibly &#8220;would cede&#8221;) and &#8220;will change.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>Matthew Hutchinson was <strong>among</strong> the two people killed.</em></p>
+<p class="story-body-text" itemprop="articleBody">&#8220;Among&#8221; isn&#8217;t right for just two. Say &#8220;was one of the two.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>It&#8217;s all very exciting, eh? But still &hellip; Canada? The land of hyper-politeness and constant apology? The home of maple syrup, poutine, the gentle sport of curling and 10 percent of the world&#8217;s forests? The country that Spy magazine once said had &#8220;cultural Epstein-Barrness&#8221;?</em></p>
+<p class="story-body-text" itemprop="articleBody">Putting aside the rest of the stereotypes, can we at least agree never again to use &#8220;eh?&#8221; in a joking reference to Canadians?</p>
+<p class="story-body-text" itemprop="articleBody">&bull;&bull;&bull;</p>
+<p class="story-body-text" itemprop="articleBody"><em>But Google has made strong inroads in schools, reporting recently that its free <strong>software program</strong> for classrooms, called Google Apps for Education, was now used by more than 50 million students, teachers and administrators worldwide.</em></p>
+<p class="story-body-text" itemprop="articleBody">&#8220;Program&#8221; is redundant after &#8220;software.&#8221;</p>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//afterdeadline.blogs.nytimes.com/2016/02/02/close-but-not-quite-13/" data-title="Close but Not Quite" data-description="Too often we use a word that sounds sort of like what we probably mean, more or less. That&#039;s not the level of precision we&#039;re striving for. Here are a few recent misfires.">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//afterdeadline.blogs.nytimes.com/2016/01/26/tangled-passages-13/" title="Tangled Passages">
+				Tangled Passages			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//afterdeadline.blogs.nytimes.com/2016/02/09/number-trouble-5/" title="Number Trouble">
+				Number Trouble			</a>
+					</li>
+	</ul>
+</div>
+		<div class="module ad" id="MiddleRight"></div>
+        <div id="nyt_about_blog-3" class="module nocontent widget_nyt_about_blog"><h4 class="moduleHeader">About</h4><div class="entry">
+  <img class="w151 right" src="https://static01.nyt.com/images/blogs/topics/grammar-165.jpg"></p>
+<p class="summary">After Deadline examines questions of grammar, usage and style encountered by writers and editors of The Times. It is adapted from a weekly newsroom critique overseen by Philip B. Corbett, the associate managing editor for standards, who is also in charge of The Timesâs style manual.</p>
+<ul class="refer">
+<li><a href="//afterdeadline.blogs.nytimes.com/2015/06/23/faqs-on-style-2/" title="FAQs on Style">FAQs on Style</a></li>
+</ul>
+</div>
+</div>		<div class="module archivesModule clearfix nocontent">
+			<h4 class="moduleHeader">Archive</h4>			<select name="archive_chrono" onchange="window.location.href=this.value; this.selectedIndex=this.options[0]">
+				<option class="archiveform_option" value="">Select Month</option>
+					<option value='//afterdeadline.blogs.nytimes.com/2016/03/'> March 2016 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2016/02/'> February 2016 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2016/01/'> January 2016 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2015/12/'> December 2015 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2015/11/'> November 2015 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2015/10/'> October 2015 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2015/09/'> September 2015 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2015/08/'> August 2015 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2015/07/'> July 2015 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2015/06/'> June 2015 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2015/05/'> May 2015 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2015/04/'> April 2015 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2015/03/'> March 2015 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2015/02/'> February 2015 </option>
+	<option value='//afterdeadline.blogs.nytimes.com/2015/01/'> January 2015 </option>
+			</select>
+		</div>
+        <div id="recentposts-2" class="module nocontent widget_recentposts"><h4 class="moduleHeader">Recent Posts</h4>				<div class="entry">
+						<h5><a href="//afterdeadline.blogs.nytimes.com/2016/03/22/a-lineup-of-missteps-8/" title="Read: A Lineup of Missteps">A Lineup of Missteps</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//afterdeadline.blogs.nytimes.com/2016/03/22/a-lineup-of-missteps-8/"></a>
+				</span>			</h5>
+			<p class="summary">
+			This week&#8217;s grab bag of grammar, style and other missteps, compiled with help from colleagues and readers.<a href="//afterdeadline.blogs.nytimes.com/2016/03/22/a-lineup-of-missteps-8/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//afterdeadline.blogs.nytimes.com/2016/03/15/close-but-not-quite-14/" title="Read: Close but Not Quite">Close but Not Quite</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//afterdeadline.blogs.nytimes.com/2016/03/15/close-but-not-quite-14/"></a>
+				</span>			</h5>
+			<p class="summary">
+			We think we know what these words mean. We almost know what they mean. But we don&#8217;t, not quite. Here are some recent examples of mixed-up words and homophone trouble.<a href="//afterdeadline.blogs.nytimes.com/2016/03/15/close-but-not-quite-14/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//afterdeadline.blogs.nytimes.com/2016/03/08/ugly-disagreements-4/" title="Read: Ugly Disagreements">Ugly Disagreements</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//afterdeadline.blogs.nytimes.com/2016/03/08/ugly-disagreements-4/"></a>
+				</span>			</h5>
+			<p class="summary">
+			We should all be able to agree that singular subjects need singular verbs and plural subjects need plural verbs. Upholding that rule on deadline, however, continues to be a challenge. Here is the latest sampling of singular/plural tribulations.<a href="//afterdeadline.blogs.nytimes.com/2016/03/08/ugly-disagreements-4/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//afterdeadline.blogs.nytimes.com/2016/03/01/a-lineup-of-missteps-7/" title="Read: A Lineup of Missteps">A Lineup of Missteps</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//afterdeadline.blogs.nytimes.com/2016/03/01/a-lineup-of-missteps-7/"></a>
+				</span>			</h5>
+			<p class="summary">
+			This week&#8217;s extra-large grab bag of grammar, style and other missteps from recent articles.<a href="//afterdeadline.blogs.nytimes.com/2016/03/01/a-lineup-of-missteps-7/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//afterdeadline.blogs.nytimes.com/2016/02/23/bright-passages-28/" title="Read: Bright Passages">Bright Passages</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//afterdeadline.blogs.nytimes.com/2016/02/23/bright-passages-28/"></a>
+				</span>			</h5>
+			<p class="summary">
+			Here&#8217;s a short break from carping, and another sampling of sparkling prose from recent Times stories.<a href="//afterdeadline.blogs.nytimes.com/2016/02/23/bright-passages-28/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+		</div><!-- end Recent Posts side tool -->
+    		<div class="module ad" id="Box1"></div>
+        <div id="nyt_promo_widget-3" class="module nocontent widget_nyt_promo_widget"><h4 class="moduleHeader">Subscribe to After Deadline RSS Feed</h4><a href="//afterdeadline.blogs.nytimes.com/feed/" class="icon"><img src="https://static01.nyt.com/images/global/icons/rss.gif" width="44" height="16" border="0" align="absmiddle" alt="After Deadline RSS Feed"></a></div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-129',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":94,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

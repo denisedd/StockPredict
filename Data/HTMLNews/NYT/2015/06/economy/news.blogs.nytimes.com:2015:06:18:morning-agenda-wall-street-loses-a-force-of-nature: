@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003748829"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1434625909" />
+<meta name="PUD" content="20150618" />
+<meta name="pdate" content="20150618" />
+<meta name="ptime" content="20150618071149" />
+<meta name="utime" content="20150618111149" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-06-18T11:11:49-04:00" />
+<meta name="DISPLAYDATE" content="June 18, 2015" />
+<meta name="dat" content="June 18, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Banking and Financial Institutions;Deaths (Obituaries);Euro (Currency);European Sovereign Debt Crisis (2010- );Foreclosures;Hedge Funds;Initial Public Offerings;JPMorgan Chase &amp; Company;Mergers, Acquisitions and Divestitures;Mortgages;Private Equity;Regulation and Deregulation of Industry;Venture Capital">
+<meta name="org" content="European Central Bank;European Union;International Monetary Fund;Office of the Comptroller (NYC)">
+<meta name="geo" content="Greece">
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Deaths (Obituaries)" />
+<meta property="article:tag" content="Euro (Currency)" />
+<meta property="article:tag" content="European Sovereign Debt Crisis (2010- )" />
+<meta property="article:tag" content="Foreclosures" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Mortgages" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="European Central Bank" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="International Monetary Fund" />
+<meta property="article:tag" content="Office of the Comptroller (NYC)" />
+<meta property="article:tag" content="Greece" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Banking and Financial Institutions,Deaths (Obituaries),Euro (Currency),European Sovereign Debt Crisis (2010- ),Foreclosures,Hedge Funds,Initial Public Offerings,JPMorgan Chase &amp; Company,Mergers Acquisitions and Divestitures,Mortgages,Private Equity,Regulation and Deregulation of Industry,Venture Capital,European Central Bank,European Union,International Monetary Fund,Office of the Comptroller (NYC),Greece,DealBook" />
+<meta name="news_keywords" content="Banking and Finance,EU,Euro,Euro Crisis,European Central Bank,Foreclosure,Greece,Hedge fund,IMF,IPO,Mergers and Acquistions,Mortgage loan,Obituary,Office of the Comptroller NYC,Private equity,Regulation and Deregulation,Venture capital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F06%2F18%2Fmorning-agenda-wall-street-loses-a-force-of-nature%2F" title="Morning Agenda: Wall Street Loses &#8216;A Force of Nature&#8217;" />
+<meta name="description" content="Wall Street Loses &#8216;A Force of Nature&#8217; &#124; Fitbit Valued at $4.1 Billion Before Trading Debut &#124; Greek Exit From Euro Appears More Likely &#124; 6 Banks Face New Limits on Mortgage Operations" />
+<meta name="hdl" content="Morning Agenda: Wall Street Loses &#039;A Force of Nature&#039;" />
+<meta property="og:title" content="Morning Agenda: Wall Street Loses &#039;A Force of Nature&#039;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/06/18/morning-agenda-wall-street-loses-a-force-of-nature/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Wall Street Loses &#8216;A Force of Nature&#8217; &#124; Fitbit Valued at $4.1 Billion Before Trading Debut &#124; Greek Exit From Euro Appears More Likely &#124; 6 Banks Face New Limits on Mortgage Operations" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Wall Street Loses &#039;A Force of Nature&#039;" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/06/18/morning-agenda-wall-street-loses-a-force-of-nature/" />
+<meta name="twitter:description" content="Wall Street Loses &#8216;A Force of Nature&#8217; &#124; Fitbit Valued at $4.1 Billion Before Trading Debut &#124; Greek Exit From Euro Appears More Likely &#124; 6 Banks Face New Limits on Mortgage Operations" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Jobs&#8217;s Legacy Shadows Ousted Chiefs&#8217; Return' href='//news.blogs.nytimes.com/2015/06/17/morning-agenda-jobss-legacy-shadows-ousted-chiefs-return/' />
+<link rel='next' title='Morning Agenda: Emergency Meeting on Greece Set for Monday' href='//news.blogs.nytimes.com/2015/06/19/morning-agenda-emergency-meeting-on-greece-set-for-monday/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/06/18/morning-agenda-wall-street-loses-a-force-of-nature/' />
+<link rel='shortlink' href='//nyti.ms/1epZNSz' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/06/18/morning-agenda-wall-street-loses-a-force-of-nature/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Wall Street Loses &#039;A Force of Nature&#039; - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2583 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Wall Street Loses &#8216;A Force of Nature&#8217;        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/06/18/morning-agenda-wall-street-loses-a-force-of-nature/"
+	 data-title="Morning Agenda: Wall Street Loses &#8216;A Force of Nature&#8217;"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Wall Street Loses &#039;A Force of Nature&#039; | Fitbit Valued at $4.1 Billion Before Trading Debut | Greek Exit From Euro Appears More Likely | 6 Banks Face New Limits on Mortgage Operations&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/06/18/morning-agenda-wall-street-loses-a-force-of-nature/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 18, 2015 7:11 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Wall Street Loses &#8216;A Force of Nature&#8217;</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-06-18T11:11:49+00:00" itemprop="datePublished">June 18, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">June 18, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2583 post type-post status-publish hentry category-dealbook tag-banking-and-financial-institutions tag-deaths-obituaries tag-euro-currency tag-european-central-bank tag-european-sovereign-debt-crisis-2010 tag-european-union tag-foreclosures tag-greece tag-hedge-funds tag-initial-public-offerings tag-international-monetary-fund tag-jpmorgan-chase-company tag-mergers-acquisitions-and-divestitures tag-mortgages tag-office-of-the-comptroller-nyc tag-private-equity tag-regulation-and-deregulation-of-industry tag-venture-capital des-banking-and-financial-institutions des-deaths-obituaries des-euro-currency des-european-sovereign-debt-crisis-2010 des-foreclosures des-hedge-funds des-initial-public-offerings des-jpmorgan-chase-company-3 des-mergers-acquisitions-and-divestitures des-mortgages des-private-equity des-regulation-and-deregulation-of-industry des-venture-capital org-european-central-bank org-european-union org-international-monetary-fund org-office-of-the-comptroller-nyc geo-greece news_keywords-banking-and-finance news_keywords-eu news_keywords-euro news_keywords-euro-crisis news_keywords-european-central-bank news_keywords-foreclosure news_keywords-greece news_keywords-hedge-fund news_keywords-imf news_keywords-ipo news_keywords-mergers-and-acquistions news_keywords-mortgage-loan news_keywords-obituary news_keywords-office-of-the-comptroller-nyc-2 news_keywords-private-equity-2 news_keywords-regulation-and-deregulation news_keywords-venture-capital-2" id="post-2583">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Wall Street Loses &#8216;A Force of Nature&#8217;</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-06-18T11:11:49+00:00" itemprop="datePublished">June 18, 2015 7:11 am</time>
+			<!-- date updated --><span class="visually-hidden updated">June 18, 2015 7:11 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/06/18/morning-agenda-wall-street-loses-a-force-of-nature/" data-title="Morning Agenda: Wall Street Loses &#8216;A Force of Nature&#8217;" data-description="Wall Street Loses &#039;A Force of Nature&#039; | Fitbit Valued at $4.1 Billion Before Trading Debut | Greek Exit From Euro Appears More Likely | 6 Banks Face New Limits on Mortgage Operations">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>WALL STREET LOSES âA FORCE OF NATUREâ </strong> <span class="divider"> | </span></span> With the death of  James B. Lee Jr. on Wednesday, Wall Street lost one of its most colorful and influential deal makers, <a href="//www.nytimes.com/2015/06/18/business/dealbook/jimmy-lee-investment-banking-force-dies.html"> Andrew Ross Sorkin writes in DealBook</a>. Mr. Lee, a vice chairman of JPMorgan Chase, was an <b> early pioneer of syndicated loans</b> and played a <b> key role in the world of leveraged buyouts and private equity</b>, financing deals for Henry Kravis of Kohlberg Kravis Roberts, Stephen A. Schwarzman of the Blackstone Group and the late Theodore J. Forstmann of Fortsmann Little. </p>
+<p class="story-body-text" itemprop="articleBody">âHe was a <b> throwback, part of a different generation of bankers</b> on Wall Street who were trusted advisers to corporate America based on deep relationships and insights, even as much of investment banking had become commoditized,â Mr. Sorkin writes. On Wednesday, Jamie Dimon, JPMorgan Chaseâs chief executive, called Mr. Lee âinvaluable.â He added, âJimmy was a master of his craft, but he was so much more â he was an <b> incomparable force of nature</b>.â </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Lee, who talked about how his fatherâs early death might have driven him to create special bonds with people, was known for valuing loyalty and relationships. âJimmy was my closest friend in finance,â Mr. Schwarzman said. âHe always gave someone the sense â and it was true â that <b>he cared desperately about you</b>.â Daniel S. Loeb, the founder of Third Point, recalled his last note from Mr. Lee, in which he told Mr. Loeb that his <b> âgreatest accomplishmentâ was his children</b>: his son, James, and his two daughters, Elizabeth and Alexandra. They survive him, as does his wife, also named Elizabeth.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FITBIT VALUED AT $4.1 BILLION BEFORE TRADING DEBUT</strong> <span class="divider"> | </span></span> The fitness-tracking device maker Fitbit begins trading Thursday on the New York Stock Exchange after pricing its shares at $20 each, valuing the company at $4.1 billion, <a href="//www.nytimes.com/2015/06/18/business/dealbook/fitbit-prices-ipo-at-20-a-share-above-top-of-its-range.html"> Michael J. de la Merced writes in DealBook</a>. The price is above the top of already heightened price range of $17 to $19 a share. At $20 a share, the company will <b> raise $732 million</b> for itself and its selling stockholders after increasing the number of shares to be sold to 36.6 million from 34.5 million. The shares will trade under the symbol FIT. </p>
+<p class="story-body-text" itemprop="articleBody">Investors are keenly interested in Fitbit as the number of fitness wearable devices used by customers is <b>expected to triple by 2018</b>, to more than 70 million, according to a report by Juniper Research in November. Last year, Fitbit earned $131.8 million, reversing a nearly $52 million loss in the previous year. Its <b>sales more than tripled</b> during that same period, to $745.4 million.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>GREEK EXIT FROM EURO APPEARS MORE LIKELY</strong> <span class="divider"> | </span></span> Greece and its creditors continue discussions over a bailout deal at a gathering of European finance ministers in Luxembourg on Thursday, but hopes for a compromise are waning as neither side shows any sign of softening its position. As a result, âthe view is taking hold in Europe that its ambitious currency project would be better served if Greece just left,â <a href="//www.nytimes.com/2015/06/19/business/dealbook/greek-exit-from-euro-appears-increasingly-likely.html"> Landon Thomas Jr. writes in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody">Thomas Mayer, a former economist at Deutsche Bank who now runs a research institute in Frankfurt, compares the situation to an elite country club with a longstanding member who refuses to follow the rules. The club faces two choices: 1) <b> relax its principles</b> at the risk of losing its select status or 2) <b> eject the troublemaker</b> and risk causing a big stink in doing so. Mr. Mayer told Mr. Thomas that many in Europe are starting to <b> favor the second option</b>. âYou just canât keep forcing this down peopleâs throats,â Mr. Mayer said. âPlus, if Greece left, it would show that <b> there is life outside of the European Monetary Union</b>.â </p>
+<p class="story-body-text" itemprop="articleBody">Both sides are bracing for a Greek exit. The Greek central bank warned on Wednesday that the countryâs economy would be devastated if the country left the euro. And bankers say that in the last week, Greeks have <b>pulled more than 1.5 billion euros</b>, or $1.7 billion, from their deposit accounts. Within the European Stability Mechanism, Europeâs newly formed rescue vehicle, preparations are being made to <b> support other weak countries</b> in the event of a contagion panic, Mr. Thomas writes.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> Data on <b> consumer prices in May</b>, <b> weekly jobless claims</b> and <b> the first-quarter current account </b> are out at 8:30 a.m. The Federal Reserve Bank of Philadelphiaâs <b> business outlook survey for June</b> is out at 10 a.m. Companies reporting earnings today include <b> Kroger</b>, <b> Red Hat</b> and <b> Rite Aid</b>.  </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>6 BANKS FACE NEW LIMITS ON MORTGAGE OPERATIONS</strong> <span class="divider"> | </span></span> The Office of the Comptroller of the Currency said Wednesday that JPMorgan Chase, Wells Fargo, Santander, HSBC, US Bank and EverBank will face new restrictions on their mortgage operations because they failed to do enough to fix problems in their foreclosure practices in the aftermath of the financial crisis, <a href="//www.nytimes.com/2015/06/18/business/dealbook/regulator-restricts-mortgage-operations-of-six-big-banks.html"> Nathaniel Popper writes in DealBook</a>. The banks had promised in 2011 to change the way they handled foreclosures in a consent order with the O.C.C. </p>
+<p class="story-body-text" itemprop="articleBody">The regulator said the six banks will have new limitations on their ability to <b> acquire mortgage servicing rights from other banks</b>, but they will not have any limitations on servicing of mortgages that the banks issue themselves. The O.C.C. determined that three other banks â Bank of America, Citigroup and PNC Financial â had complied with the 2011 order and an amended version in 2013 and no longer faced restrictions. </p>
+<p class="story-body-text" itemprop="articleBody">The O.C.C. also said that it was <b>giving states about $280 million</b> that it had received as part of a 2011 settlement related to the financial crisis. The regulator said it was not able to distribute the funds to affected homeowners so it was hoping the states would have more success.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Qihoo 360 of China Announces C.E.O.-Led Takeover Bid</strong> <span class="divider"> | </span></span> The $10 billion offer for the maker of mobile security software is the latest attempt by a Chinese company listed in the United States to go private.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/18/business/dealbook/qihoo-360-of-china-announces-ceo-led-takeover-bid.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Alibabaâs Finance Affiliate Said to Raise Funds at $40 Billion Valuation</strong> <span class="divider"> | </span></span> Alibaba Groupâs finance affiliate, Ant Financial, which runs Chinaâs biggest online payments business, closed a private placement valuing the unit at more than $40 billion, Bloomberg News reports, citing two people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-06-18/alibaba-finance-arm-said-to-raise-funds-above-40-billion-value"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Barney Frank Joins Signature Bank Board</strong> <span class="divider"> | </span></span> Barney Frank, the former Democratic representative who championed stronger banking regulations, said Wednesday that he was joining Signature Bankâs board of directors, The Hill reports.<br />
+ <br /><span class="kicker"><a href="//thehill.com/policy/finance/245325-barney-frank-champion-of-financial-regulations-joins-a-bank-board"> THE HILL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Goldman Sachs Tells Interns to Leave Office by Midnight</strong> <span class="divider"> | </span></span> Goldman Sachs has told its summer investment banking interns not to stay in the office overnight in a bid to improve working conditions for its junior staff, Reuters reports.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/06/17/us-goldmansachs-interns-idUSKBN0OX1LA20150617"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Private Equity Firms Look for Energy Deals Outside U.S.</strong> <span class="divider"> | </span></span> Private equity funds are looking to cheaply buy assets from overseas owners who have been hurt by the fall in oil prices, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/private-equity-hunts-for-oil-deals-outside-u-s-1434545737"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TPG Says Former Spokesman Has Dropped Lawsuit</strong> <span class="divider"> | </span></span> TPG Capital said Wednesday that its former head of public affairs, Adam Levine, who had accused it of violating securities regulations and defrauding investors, had agreed to drop his lawsuit against the buyout firm, Reuters reports. <br /><span class="kicker"><a href="//www.reuters.com/article/2015/06/17/tpg-levine-settlement-idUSL1N0Z31SE20150617"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Elliott Says Samsung Unitsâ Merger Would Cost Shareholders $7 Billion</strong> <span class="divider"> | </span></span> In a 27-page presentation, the hedge fund Elliott argued that a proposed merger of two Samsung Group units, Samsung C&#038;T and Cheil Industries, would cause Samsung C&#038;T shareholders to lose 7.8 trillion won, or about $7 billion, The Financial Times reports. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/8da3fbf4-155a-11e5-a587-00144feabdc0.html"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Univar Prices Shares at $22 for $3 Billion Valuation</strong> <span class="divider"> | </span></span> Univar priced its initial public offering at $22 per share on Wednesday, raising $770 million and valuing the chemical distributor at about $3 billion, Reuters reports.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/06/18/us-univar-ipo-idUSKBN0OY04Q20150618"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Airbnb Is Said to Seek $1 Billion More in Financing</strong> <span class="divider"> | </span></span> If the financing round is completed, Airbnb, which helps arrange short-term housing rentals, will have a valuation of $24 billion.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/18/business/airbnb-is-said-to-seek-dollar1-billion-more-in-financing.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="California Says Uber Driver Is Employee, Not a Contractor" src="https://static01.nyt.com/images/2015/06/18/business/18uber-web2/18uber-web2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>California Says Uber Driver Is Employee, Not a Contractor</strong> <span class="divider"> | </span></span> The ride-hailing company has long positioned itself as a âlogistics companyâ and says its drivers are contractors, not employees.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/18/business/uber-contests-california-labor-ruling-that-says-drivers-should-be-employees.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ellen Pao Ordered to Pay Kleiner Perkins $276,000 for Legal Costs</strong> <span class="divider"> | </span></span> A judge said Kleiner Perkins Caufield &#038; Byers should get nearly $276,000 instead of the $973,000 it sought from Ellen Pao to cover the cost of defending itself during her gender discrimination lawsuit, Reuters reports. <br /><span class="kicker"><a href="//www.reuters.com/article/2015/06/17/us-kleiner-lawsuit-iduskbn0ox2wy20150617"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Export-Import Bank Divides Once-Supportive Republicans" src="https://static01.nyt.com/images/2015/06/14/us/00export-web01/00export-web01-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Export-Import Bank Divides Once-Supportive Republicans</strong> <span class="divider"> | </span></span> Many congressional leaders are siding with Tea Party conservatives against the 81-year-old bank, in the partyâs latest debate over governmentâs role in the economy.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/18/business/international/export-import-bank-divides-once-supportive-republicans.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>G.E. Chief Threatens to Move Jobs Overseas if Ex-Im Bank Ends</strong> <span class="divider"> | </span></span> Jeffrey R. Immelt, General Electricâs chief executive, said he would move jobs overseas if Congress doesnât reauthorize the Export-Import Bankâs charter before it expires at the end of June, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/politics/articles/2015-06-17/ge-s-immelt-says-he-d-move-jobs-overseas-if-ex-im-bank-expires"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Does It Really Matter Exactly When the Fed Raises Rates?" src="https://static01.nyt.com/images/2015/06/18/upshot/18UP-YELLEN/18UP-YELLEN-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Does It Really Matter Exactly When the Fed Raises Rates?</strong> <span class="divider"> | </span></span> Janet L. Yellenâs comments expose the yawning gap between how economists think and how markets react.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/18/upshot/does-it-really-matter-exactly-when-the-fed-raise-rates.html">The Upshot &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Fed, in Shift, Expects Slower Increase in Interest Rates" src="https://static01.nyt.com/images/2015/06/18/business/18fed-web2/18fed-web2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fed, in Shift, Expects Slower Increase in Interest Rates</strong> <span class="divider"> | </span></span> Officials also reduced their economic forecasts during the current year, anticipating growth between 1.8 and 2 percent.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/18/business/economy/federal-reserve-interest-rates-yellen.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>U.S. Gets More Time to Consider Insider-Trading Appeal</strong> <span class="divider"> | </span></span> Federal prosecutors have another month to decide whether to ask the Supreme Court to review a ruling that narrowed the definition of insider trading.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/18/business/dealbook/us-gets-more-time-to-consider-insider-trading-appeal.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Kenneth Feinberg to Oversee Cuts in Multiemployer Pension Plans" src="https://static01.nyt.com/images/2015/06/17/business/dealbook/dbpix-feinberg/dbpix-feinberg-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Kenneth Feinberg to Oversee Cuts in Multiemployer Pension Plans</strong> <span class="divider"> | </span></span> The program signals an important break with federal pension law, which until now has allowed benefit cuts for active workers but not for retirees.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/18/business/dealbook/kenneth-feinberg-to-oversee-cuts-in-multiemployer-pension-plans.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Will A.I.G. Decision Affect the Next Bailout? Donât Bet on It</strong> <span class="divider"> | </span></span> Although a judge had harsh words in his ruling on the American International Group case, donât expect the government to do anything different in the next financial crisis, Peter J. Henning and Steven Davidoff Solomon write in the White Collar Watch column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/18/business/dealbook/will-aig-decision-affect-the-next-bailout-dont-bet-on-it.html">White Collar Watch &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Womanâs Portrait Will Appear on the $10 Bill" src="https://static01.nyt.com/images/2015/06/18/us/18MONEYWEB/18MONEYWEB-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Womanâs Portrait Will Appear on the $10 Bill</strong> <span class="divider"> | </span></span> The yet-to-be-named figure will appear on the note in 2020, the 100th anniversary of the 19th Amendment, which gave women the right to vote.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/18/us/portrait-of-a-woman-to-share-space-on-the-dollar-10-bill-with-hamiltons.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/06/18/morning-agenda-wall-street-loses-a-force-of-nature/"
+					data-title="Morning Agenda: Wall Street Loses &#8216;A Force of Nature&#8217;"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Wall Street Loses &#039;A Force of Nature&#039; | Fitbit Valued at $4.1 Billion Before Trading Debut | Greek Exit From Euro Appears More Likely | 6 Banks Face New Limits on Mortgage Operations&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/06/18/morning-agenda-wall-street-loses-a-force-of-nature/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":67,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
