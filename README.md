@@ -1,6 +1,18 @@
 # StockPredict
 CMPT 733 Final Project
 
+For large files plese download from Google Drive:
+
+1. Code/3ModelDevelopment/Doc2Vec/doc2vec_model.docvecs.vectors_docs.npy -- Doc2Vec model
+
+https://drive.google.com/open?id=1XhfAJkx6Ign9AMc5eHe3pp_cg5W5YSmg
+
+2. Data/ProcessedNews.pkl -- Preprocessed News Data
+
+https://drive.google.com/open?id=1hMsiEZoP5ITTy7B-5fr_NH0W4Vb46YQu
+
+Details for each folder and files:
+
 1. Code/1DataCollection&Preprocess
 
 AllSymbolScraper.py -- Scrape all nasdaq company name and stock symbol.
@@ -38,12 +50,4 @@ JsonNews -- Extraced json from HTML.
 StockPrice -- CSV file for stock price data.
 
 
-For large files plese download from Google Drive:
 
-1. Code/3ModelDevelopment/Doc2Vec/doc2vec_model.docvecs.vectors_docs.npy 
-
-https://drive.google.com/open?id=1XhfAJkx6Ign9AMc5eHe3pp_cg5W5YSmg
-
-2. Data/ProcessedNews.pkl
-
-https://drive.google.com/open?id=1hMsiEZoP5ITTy7B-5fr_NH0W4Vb46YQu
