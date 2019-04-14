@@ -78,7 +78,7 @@ Random Forest model_CountNgram.ipynb -- Random Forest for binary classification.
 
 ## Web Application
 
-...
+Sprintboot Web Server code. Java code and all static resources included. Maven based project.
 
 ## Our Data
 
