@@ -20,7 +20,7 @@ Details for each folder and files:
 
 ## Data Collection & Preprocess
 
-1. Code/1DataCollection&Preprocess
+Path: Code/1DataCollection&Preprocess
 
 AllSymbolScraper.py -- Scrape all nasdaq company name and stock symbol.
 
@@ -44,7 +44,7 @@ NYT_scrape.ipynb -- Scrape news from New York Times.
 
 ## Data Analysis
 
-2. Code/2DataAnalysis
+Path: Code/2DataAnalysis
 
 TopicModeling -- Train LDA model and visualize result.
 
@@ -56,7 +56,7 @@ tsNe.ipynb -- t-SNE for word embedding.
 
 ## Model Development
 
-3. Code/3ModelDevelopment
+Path: Code/3ModelDevelopment
 
 Doc2Vec -- Doc2Vec model development and LSTM model for binary prediction.
 
@@ -82,7 +82,7 @@ Random Forest model_CountNgram.ipynb -- Random Forest for binary classification.
 
 ## Our Data
 
-4. Data
+Path: Data/
 
 AllSymbolScrapper -- Stock symbols html file.
 
