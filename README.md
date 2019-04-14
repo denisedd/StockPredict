@@ -1,9 +1,10 @@
 # StockPredict
-CMPT 733 Final Project
 
-To run our data science pipeline, simply follow the instructions in each file as following.
+CMPT 733 Final Project: Our project is a data science pipeline for stock movement prediction, including binary(up/down) classification and regression (price prediction). For details please check out our report, video (https://www.youtube.com/watch?v=b5wkez0ENVk&feature=youtu.be) and website (http://nml-cloud-231.cs.sfu.ca:8088/).
 
-Before running our code, please download from Google Drive for large files:
+To run our data science pipeline, simply follow the instructions in each stage as following.
+
+Before running our code, please download files from Google Drive:
 
 1. Code/3ModelDevelopment/Doc2Vec/doc2vec_model.docvecs.vectors_docs.npy -- Doc2Vec model
 
