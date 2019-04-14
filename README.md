@@ -1,7 +1,9 @@
 # StockPredict
 CMPT 733 Final Project
 
-For large files plese download from Google Drive:
+To run our data science pipeline, simply follow the instructions in each file as following.
+
+Before running our code, please download from Google Drive for large files:
 
 1. Code/3ModelDevelopment/Doc2Vec/doc2vec_model.docvecs.vectors_docs.npy -- Doc2Vec model
 
@@ -27,17 +29,43 @@ Twitter_api.py -- Extracting twitter data from api (reference : https://github.c
 
 Twitter_parse.py & Twitter_reformat.py -- Twitter data cleaning and preprocessing
 
+Guardian_scrape.ipynb -- Scrape the Guardian news.
+
+news_api_extract.ipynb -- Extract HTML files from news_api.
+
+news_extract_Guardian.ipynb -- Extract HTML files from guardian.
+
+NYT_scrape.ipynb -- Scrape news from New York Times.
+
 2. Code/2DataAnalysis
 
 TopicModeling -- Train LDA model and visualize result.
 
 Twitter-Wordcloud.py - Twitter data visualation.
 
+News_EDA.ipynb -- EDA for news dataset.
+
+tsNe.ipynb -- t-SNE for word embedding.
+
 3. Code/3ModelDevelopment
 
 Doc2Vec -- Doc2Vec model development and LSTM model for binary prediction.
 
 base_model_nasdaq.ipynb -- Baseline model for logistic regression and linear regression.
+
+deploy_model.py -- Integrate model to web application.
+
+Glove.ipynb -- Train glove model and cnn+rnn model.
+
+Linear SVM_CountNgram.ipynb -- SVM model for binary classification.
+
+lstm_regression.ipynb -- Train LSTM model for regression predition.
+
+model/ -- glove model, deep learning models.
+
+Naive Bayes model_CountNgram.ipynb -- Naive Bayes for binary classification.
+
+Random Forest model_CountNgram.ipynb -- Random Forest for binary classification.
 
 4. Data
 
@@ -49,5 +77,10 @@ JsonNews -- Extraced json from HTML.
 
 StockPrice -- CSV file for stock price data.
 
+NewsAPI -- Data from NewsAPI.
 
+processed_data -- Processed headlines from different news sources.
 
+stocknews -- News data from Kaggle.
+
+The Guardian -- News (raw data) from Guardian.
