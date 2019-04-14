@@ -18,6 +18,8 @@ https://drive.google.com/open?id=1hMsiEZoP5ITTy7B-5fr_NH0W4Vb46YQu
 
 Details for each folder and files:
 
+## Data Collection & Preprocess
+
 1. Code/1DataCollection&Preprocess
 
 AllSymbolScraper.py -- Scrape all nasdaq company name and stock symbol.
@@ -40,6 +42,8 @@ news_extract_Guardian.ipynb -- Extract HTML files from guardian.
 
 NYT_scrape.ipynb -- Scrape news from New York Times.
 
+## Data Analysis
+
 2. Code/2DataAnalysis
 
 TopicModeling -- Train LDA model and visualize result.
@@ -49,6 +53,8 @@ Twitter-Wordcloud.py - Twitter data visualation.
 News_EDA.ipynb -- EDA for news dataset.
 
 tsNe.ipynb -- t-SNE for word embedding.
+
+## Model Development
 
 3. Code/3ModelDevelopment
 
@@ -69,6 +75,12 @@ model/ -- glove model, deep learning models.
 Naive Bayes model_CountNgram.ipynb -- Naive Bayes for binary classification.
 
 Random Forest model_CountNgram.ipynb -- Random Forest for binary classification.
+
+## Web Application
+
+...
+
+## Our Data
 
 4. Data
 
