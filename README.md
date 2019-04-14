@@ -4,7 +4,7 @@ CMPT 733 Final Project:
 
 Our project a stock movement prediction data science pipeline and platform, including binary(up/down) classification and regression (price prediction). For details please check out our report, video (https://www.youtube.com/watch?v=b5wkez0ENVk&feature=youtu.be) and website (http://nml-cloud-231.cs.sfu.ca:8088/).
 
-To run our data science pipeline, simply follow the instructions in each stage as following.
+To run our data science pipeline, simply follow the instructions in each stage as following. Here are the list of dependencies for running the python code: AlphaVantage, Quandl, tweepy, gensim, spacy, pyLDAvis, nltk, seaborn, pandas, numpy, PIL, wordcloud, tqdm, keras, tensorflow, sklearn.
 
 Before running our code, please download files from Google Drive:
 
