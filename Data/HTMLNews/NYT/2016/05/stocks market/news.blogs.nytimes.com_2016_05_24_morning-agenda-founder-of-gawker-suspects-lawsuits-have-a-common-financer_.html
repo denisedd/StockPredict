@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004432866"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1464083762" />
+<meta name="PUD" content="20160524" />
+<meta name="pdate" content="20160524" />
+<meta name="ptime" content="20160524055602" />
+<meta name="utime" content="20160524095602" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-05-24T09:56:02-04:00" />
+<meta name="DISPLAYDATE" content="May 24, 2016" />
+<meta name="dat" content="May 24, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Abrams, George S (1932- );Bharara, Preet;Dauman, Philippe P;Denton, Nick;Hogan, Hulk;Mairone, Rebecca S;Redstone, Shari;Redstone, Sumner M;Soon-Shiong, Patrick;Trump, Donald J">
+<meta name="des" content="Appointments and Executive Changes;Banking and Financial Institutions;Hedge Funds;Insider Trading;Mergers, Acquisitions and Divestitures;Mortgages;Regulation and Deregulation of Industry;Securities and Commodities Violations;Subprime Mortgage Crisis;Suits and Litigation (Civil)">
+<meta name="org" content="1Malaysia Development Berhad (1MDB);Axa SA;Bank of America Corporation;Bayer AG;BSI SA;CBS Corporation;Countrywide Financial Corp;Deutsche Bank AG;Federal Home Loan Mortgage Corp (Freddie Mac);Federal National Mortgage Assn (Fannie Mae);Gannett Company Inc;Gawker Media;Gawker.com;House Financial Services Committee;Justice Department;KKR &amp; Co LP;L&#039;Oreal SA;Monsanto Company;National Amusements Inc;Old Mutual;Securities and Exchange Commission;Senate Committee on Banking, Housing, and Urban Affairs;SWIFT(Society for Worldwide Interbank Financial Telecommunication);Takata Corp;Toyota Motor Corp;Tribune Publishing Company;Unilever NV;Viacom Inc">
+<meta name="geo" content="Greece;United States">
+<meta name="ticker" content="Axa SA|AXAHY|Other OTC;Bank of America Corporation|BAC|NYSE;Bayer AG|BAYRY|Other OTC;CBS Corporation|CBS|NYSE;Deutsche Bank AG|DB|NYSE;Federal Home Loan Mortgage Corp (Freddie Mac)|FMCC|Other OTC;Federal National Mortgage Assn (Fannie Mae)|FNMA|Other OTC;Gannett Company Inc|GCI|NYSE;Monsanto Company|MON|NYSE;Toyota Motor Corp|TM|NYSE;Tribune Publishing Company|TPUB|NYSE;Unilever NV|UN|NYSE;Viacom Inc|VIAB|NASDAQ" />
+<meta property="article:tag" content="Abrams George S (1932- )" />
+<meta property="article:tag" content="Bharara Preet" />
+<meta property="article:tag" content="Dauman Philippe P" />
+<meta property="article:tag" content="Denton Nick" />
+<meta property="article:tag" content="Hogan Hulk" />
+<meta property="article:tag" content="Mairone Rebecca S" />
+<meta property="article:tag" content="Redstone Shari" />
+<meta property="article:tag" content="Redstone Sumner M" />
+<meta property="article:tag" content="Soon-Shiong Patrick" />
+<meta property="article:tag" content="Trump Donald J" />
+<meta property="article:tag" content="Appointments and Executive Changes" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Insider Trading" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Mortgages" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Securities and Commodities Violations" />
+<meta property="article:tag" content="Subprime Mortgage Crisis" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="1Malaysia Development Berhad (1MDB)" />
+<meta property="article:tag" content="Axa SA" />
+<meta property="article:tag" content="Bank of America Corporation" />
+<meta property="article:tag" content="Bayer AG" />
+<meta property="article:tag" content="BSI SA" />
+<meta property="article:tag" content="CBS Corporation" />
+<meta property="article:tag" content="Countrywide Financial Corp" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Federal Home Loan Mortgage Corp (Freddie Mac)" />
+<meta property="article:tag" content="Federal National Mortgage Assn (Fannie Mae)" />
+<meta property="article:tag" content="Gannett Company Inc" />
+<meta property="article:tag" content="Gawker Media" />
+<meta property="article:tag" content="Gawker.com" />
+<meta property="article:tag" content="House Financial Services Committee" />
+<meta property="article:tag" content="Justice Department" />
+<meta property="article:tag" content="KKR &amp; Co LP" />
+<meta property="article:tag" content="L&#039;Oreal SA" />
+<meta property="article:tag" content="Monsanto Company" />
+<meta property="article:tag" content="National Amusements Inc" />
+<meta property="article:tag" content="Old Mutual" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Senate Committee on Banking Housing and Urban Affairs" />
+<meta property="article:tag" content="SWIFT(Society for Worldwide Interbank Financial Telecommunication)" />
+<meta property="article:tag" content="Takata Corp" />
+<meta property="article:tag" content="Toyota Motor Corp" />
+<meta property="article:tag" content="Tribune Publishing Company" />
+<meta property="article:tag" content="Unilever NV" />
+<meta property="article:tag" content="Viacom Inc" />
+<meta property="article:tag" content="Greece" />
+<meta property="article:tag" content="United States" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Abrams George S (1932- ),Bharara Preet,Dauman Philippe P,Denton Nick,Hogan Hulk,Mairone Rebecca S,Redstone Shari,Redstone Sumner M,Soon-Shiong Patrick,Trump Donald J,Appointments and Executive Changes,Banking and Financial Institutions,Hedge Funds,Insider Trading,Mergers Acquisitions and Divestitures,Mortgages,Regulation and Deregulation of Industry,Securities and Commodities Violations,Subprime Mortgage Crisis,Suits and Litigation (Civil),1Malaysia Development Berhad (1MDB),Axa SA,Bank of America Corporation,Bayer AG,BSI SA,CBS Corporation,Countrywide Financial Corp,Deutsche Bank AG,Federal Home Loan Mortgage Corp (Freddie Mac),Federal National Mortgage Assn (Fannie Mae),Gannett Company Inc,Gawker Media,Gawker.com,House Financial Services Committee,Justice Department,KKR &amp; Co LP,L&#039;Oreal SA,Monsanto Company,National Amusements Inc,Old Mutual,Securities and Exchange Commission,Senate Committee on Banking Housing and Urban Affairs,SWIFT(Society for Worldwide Interbank Financial Telecommunication),Takata Corp,Toyota Motor Corp,Tribune Publishing Company,Unilever NV,Viacom Inc,Greece,United States,DealBook" />
+<meta name="news_keywords" content="Gawker.com,Greece,Mortgage loan" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F05%2F24%2Fmorning-agenda-founder-of-gawker-suspects-lawsuits-have-a-common-financer%2F" title="Morning Agenda: Founder of Gawker Suspects Lawsuits Have a Common Financer" />
+<meta name="description" content="Penalty Against Bank of America Overturned &#124; The Game of Thrones at Viacom" />
+<meta name="hdl" content="Morning Agenda: Founder of Gawker Suspects Lawsuits Have a Common Financer" />
+<meta property="og:title" content="Morning Agenda: Founder of Gawker Suspects Lawsuits Have a Common Financer" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/05/24/morning-agenda-founder-of-gawker-suspects-lawsuits-have-a-common-financer/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Penalty Against Bank of America Overturned &#124; The Game of Thrones at Viacom" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Founder of Gawker Suspects Lawsuits Have a Common Financer" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/05/24/morning-agenda-founder-of-gawker-suspects-lawsuits-have-a-common-financer/" />
+<meta name="twitter:description" content="Penalty Against Bank of America Overturned &#124; The Game of Thrones at Viacom" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: New Questions About Sumner Redstone&#8217;s Competency' href='//news.blogs.nytimes.com/2016/05/23/morning-agenda-new-questions-about-sumner-redstones-competency/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/05/24/what-were-reading-156/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/05/24/morning-agenda-founder-of-gawker-suspects-lawsuits-have-a-common-financer/' />
+<link rel='shortlink' href='//nyti.ms/1TtR04S' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/05/24/morning-agenda-founder-of-gawker-suspects-lawsuits-have-a-common-financer/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Founder of Gawker Suspects Lawsuits Have a Common Financer - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4871 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Founder of Gawker Suspects Lawsuits Have a Common Financer        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/05/24/morning-agenda-founder-of-gawker-suspects-lawsuits-have-a-common-financer/"
+	 data-title="Morning Agenda: Founder of Gawker Suspects Lawsuits Have a Common Financer"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Penalty Against Bank of America Overturned | The Game of Thrones at Viacom&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/24/morning-agenda-founder-of-gawker-suspects-lawsuits-have-a-common-financer/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 24, 2016 5:56 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Founder of Gawker Suspects Lawsuits Have a Common Financer</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-05-24T09:56:02+00:00" itemprop="datePublished">May 24, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">May 24, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4871 post type-post status-publish hentry category-dealbook tag-1malaysia-development-berhad-1mdb tag-abrams-george-s-1932 tag-appointments-and-executive-changes tag-axa-sa tag-bank-of-america-corporation tag-banking-and-financial-institutions tag-bayer-ag tag-bharara-preet tag-bsi-sa tag-cbs-corporation tag-countrywide-financial-corp tag-dauman-philippe-p tag-denton-nick tag-deutsche-bank-ag tag-federal-home-loan-mortgage-corp-freddie-mac tag-federal-national-mortgage-assn-fannie-mae tag-gannett-company-inc tag-gawker-media tag-gawker-com tag-greece tag-hedge-funds tag-hogan-hulk tag-house-financial-services-committee tag-insider-trading tag-justice-department tag-kkr-co-lp tag-loreal-sa tag-mairone-rebecca-s tag-mergers-acquisitions-and-divestitures tag-monsanto-company tag-mortgages tag-national-amusements-inc tag-old-mutual tag-redstone-shari tag-redstone-sumner-m tag-regulation-and-deregulation-of-industry tag-securities-and-commodities-violations tag-securities-and-exchange-commission tag-senate-committee-on-banking-housing-and-urban-affairs tag-soon-shiong-patrick tag-subprime-mortgage-crisis tag-suits-and-litigation-civil tag-swiftsociety-for-worldwide-interbank-financial-telecommunication tag-takata-corp tag-toyota-motor-corp tag-tribune-publishing-company tag-trump-donald-j tag-unilever-nv tag-united-states tag-viacom-inc per-abrams-george-s-1932 per-bharara-preet per-dauman-philippe-p per-denton-nick per-hogan-hulk per-mairone-rebecca-s per-redstone-shari per-redstone-sumner-m per-soon-shiong-patrick per-trump-donald-j des-appointments-and-executive-changes des-banking-and-financial-institutions des-hedge-funds des-insider-trading des-mergers-acquisitions-and-divestitures des-mortgages des-regulation-and-deregulation-of-industry des-securities-and-commodities-violations des-subprime-mortgage-crisis des-suits-and-litigation-civil org-1malaysia-development-berhad-1mdb org-axa-sa org-bank-of-america-corporation org-bayer-ag org-bsi-sa org-cbs-corporation org-countrywide-financial-corp org-deutsche-bank-ag org-federal-home-loan-mortgage-corp-freddie-mac org-federal-national-mortgage-assn-fannie-mae org-gannett-company-inc org-gawker-media org-gawker-com org-house-financial-services-committee org-justice-department org-kkr-co-lp org-loreal-sa org-monsanto-company org-national-amusements-inc org-old-mutual org-securities-and-exchange-commission org-senate-committee-on-banking-housing-and-urban-affairs org-swiftsociety-for-worldwide-interbank-financial-telecommunication org-takata-corp org-toyota-motor-corp org-tribune-publishing-company org-unilever-nv org-viacom-inc geo-greece geo-united-states news_keywords-gawker-com news_keywords-greece news_keywords-mortgage-loan" id="post-4871">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Founder of Gawker Suspects Lawsuits Have a Common Financer</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-05-24T09:56:02+00:00" itemprop="datePublished">May 24, 2016 5:56 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 24, 2016 5:56 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/05/24/morning-agenda-founder-of-gawker-suspects-lawsuits-have-a-common-financer/" data-title="Morning Agenda: Founder of Gawker Suspects Lawsuits Have a Common Financer" data-description="Penalty Against Bank of America Overturned | The Game of Thrones at Viacom">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FOUNDER OF GAWKER SUSPECTS LAWSUITS HAVE A COMMON FINANCER</strong> <span class="divider"> | </span></span> Nick Denton, the founder of Gawker Media, is starting to believe that a lawsuit brought by the wrestler Hulk Hogan might be funded by someone other than Mr. Hogan,<br />
+<a href="//www.nytimes.com/2016/05/24/business/dealbook/gawker-founder-suspects-a-common-financer-behind-lawsuits.html?ref=dealbook">Andrew Ross Sorkin writes in the DealBook column.</a> And the aim might be to do something other than simply inflicting financial pain on Gawker. </p>
+<p class="story-body-text" itemprop="articleBody">&#8220;<b>My own personal hunch is that itâs linked to Silicon Valley</b>, but thatâs nothing really more than a hunch,â Mr. Denton said. âIf youâre a billionaire and you donât like the coverage of you, and you donât particularly want to embroil yourself any further in a public scandal, itâs a pretty smart, rational thing to fund other legal cases.â </p>
+<p class="story-body-text" itemprop="articleBody">In recent weeks, several new lawsuits have been brought against Gawker. They are unrelated to Mr. Hoganâs case and seem to personally attack certain Gawker writers. <b>All the new cases, like Mr. Hoganâs, were brought by Charles J. Harder, a litigator based in Los Angeles</b>, working on a contingency basis, who has most likely run up huge legal bills and expenses. Mr. Hoganâs financial health has been erratic.  Gawker said it had already spent as much as $10 million on its side of the case. </p>
+<p class="story-body-text" itemprop="articleBody">âThe answer may be entirely innocent,â Mr. Denton said, âbut I think in order for people to understand whatâs going on here, what the stakes are, I think itâs important that it be out in public, or at least that heâd be asked the question in public.â</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Harder said, âI do not discuss the finances of my clients, including any financial arrangements they have with my firm. This applies to all clients.â </p>
+<p class="story-body-text" itemprop="articleBody">It would not be the first time that lawsuits had been funded for reasons beyond strict economics. Kenneth G. Langone, the co-founder of Home Depot and former director of the New York Stock Exchange, helped fund Maurice R. Greenbergâs lawsuit against the United States government over the bankruptcy of the American International Group, which was viewed as being as much as about money as about principle.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Dentonâs suspicions increased after Mr. Hoganâs legal team abruptly dropped one of the claims, for ânegligent infliction of emotional distress,â  from its case â the one that required Gawkerâs insurance company to pay for its defense. </p>
+<p class="story-body-text" itemprop="articleBody">Legal experts said that it was particularly <b>unusual for a plaintiff using a lawyer being paid on a contingency basis not only to turn down settlement offers, but also to pursue a strategy that prevented an insurance company from being able to contribute to a settlement.</b> </p>
+<p class="story-body-text" itemprop="articleBody">âI think itâs in the publicâs interest and the media interest for the motives of people on both sides to be out there,â Mr. Denton said.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PENALTY AGAINST BANK OF AMERICA OVERTURNED</strong> <span class="divider"> | </span></span> A federal appeals court overturned a $1.27 billion penalty that Bank of America had been ordered to pay for <b>the sale of shoddy mortgages before the financial crisis</b>,<br />
+<a href="//www.nytimes.com/2016/05/24/business/dealbook/penalty-against-bank-of-america-overturned-in-mortgage-case.html?ref=dealbook">Michael Corkery reports in DealBook.</a> It ruled that federal prosecutors had failed to prove that Bank of Americaâs Countrywide unit had defrauded Fannie Mae and Freddie Mac when it sold them troubled loans. </p>
+<p class="story-body-text" itemprop="articleBody">The judge said that while Countrywide employees may have sold loans that were not of the quality promised in contracts, there was <b>no evidence that the sales, an element of a loan program at Countrywide known informally as hustle, were part of a deliberate deception.</b> </p>
+<p class="story-body-text" itemprop="articleBody">The ruling is one of a few setbacks for the Justice Departmentâs efforts to hold Wall Street accountable after the mortgage crisis. It is also a disappointment for Preet Bharara, the United States attorney for the Southern District of New York, who brought the prosecution. </p>
+<p class="story-body-text" itemprop="articleBody">The bad lending ultimately required a taxpayer-financed bailout of the nationâs biggest banks, including Bank of America. </p>
+<p class="story-body-text" itemprop="articleBody">In 2014, <b>Judge Jed S. Rakoff of the Federal District Court in Manhattan ordered the bank to pay a $1.27 billion penalty</b> â just a fraction of the tens of billions of dollars that the bank paid in legal fees and settlements related to Countrywide, which Bank of America bought in 2008. The case stood out because federal prosecutors also tried to hold Rebecca Mairone, a former Countrywide executive, liable for the faulty loans.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> The House Financial Services Committee will hold a hearing on <b>stopping terrorism financing</b> at 10 a.m.  Data on <b>new residential sales during April</b> will be published at 10 a.m.  The Senate Committee on Banking, Housing and Urban Affairs will hold a hearing on the <b>role of sanctions under the Iran deal</b> at 10:30 a.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>THE GAME OF THRONES AT VIACOM</strong> <span class="divider"> | </span></span> Directors from Viacom have charged in a lawsuit that Sumner M. Redstone had been manipulated by his daughter into changing the terms of the trust that controls his company, as <a href="//www.nytimes.com/2016/05/24/business/viacom-ceo-sumner-redstone-competency-lawsuit-philippe-dauman.html?ref=business">Emily Steel reports in The New York Times.</a><br />
+<b>Philippe P. Dauman, the chief executive of Viacom, called it an âunlawful corporate takeover.â</b> </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Redstoneâs legal team fired back with a petition in Los Angeles, asking a court to confirm the validity of the changes he had made. Mr. Redstoneâs lawyer said his client was âsaddened that Mr. Dauman is trying to make this disputeâ about Shari Redstone, Mr. Redstoneâs daughter.  </p>
+<p class="story-body-text" itemprop="articleBody">The problem is, Mr. Redstone has all the cards,<br />
+<a href="//www.nytimes.com/2016/05/24/business/dealbook/the-game-of-thrones-at-viacom.html?ref=dealbook">Steven Davidoff Solomon writes in Deal Professor.</a></p>
+<p class="story-body-text" itemprop="articleBody">Mr. Dauman has been removed from the trust that will control Viacom and CBS upon Mr. Redstoneâs death or mental incapacity and lost his place as a director for National Amusements, the holding company that owns a controlling interest in Viacom and CBS. <b>He remains chief executive of Viacom, but he is now fighting to keep that position and his actions are questionable.<br />
+</b></p>
+<p class="story-body-text" itemprop="articleBody">Mr. Dauman has a duty of loyalty to Viacom and its shareholders â putting the machinery of Viacom into combat mode against the companyâs majority shareholder <b>appears to be an act of self-interest.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Unless a controlling shareholder is engaging in extreme and illegal behavior, the law is clear. Boards are at the mercy of their controlling shareholders.</p>
+<p class="story-body-text" itemprop="articleBody"><b>National Amusements can now remove and replace all the Viacom directors except Ms. Redstone, and then the newly appointed directors can remove Mr. Dauman as chief executive.</b> </p>
+<p class="story-body-text" itemprop="articleBody">It will also be tricky for Mr. Dauman to challenge his removal. He is claiming that Mr. Redstone is mentally incompetent, but he has made statements of support in the past. </p>
+<p class="story-body-text" itemprop="articleBody"><b>The key to Mr. Daumanâs preservation therefore is for him and his colleague, George Abrams, to get back on the trust before Mr. Redstone dies, or show that Mr. Redstone is mentally incompetent.</b> That way the trust gains control of National Amusements and thus Viacom, and they can act to prevent their own removal, Mr. Davidoff Solomon writes. And Viacom would do well to realize that its interests are not those of the chief executive and that Mr. Daumanâs legal case may not be quite the winner he asserts. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Old Mutual Says Buyers Are Interested in Asset Management Arm</strong> <span class="divider"> | </span></span> The financial services company, based in London, said in March that it would pursue a breakup and separate into its four main businesses.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/25/business/dealbook/old-mutual-buyers-interested-asset-management.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Tribune Publishing, With New Backer, Rejects Gannettâs Bid" src="https://static01.nyt.com/images/2016/05/24/business/24db-tribune/24db-tribune-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tribune Publishing, With New Backer, Rejects Gannettâs Bid</strong> <span class="divider"> | </span></span> The newspaper companyâs strategy to remain a stand-alone company was backed up by a $70.5 million investment by Nant Capital.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/24/business/dealbook/tribune-publishing-with-new-backer-rejects-gannetts-bid.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Doctorâs Stake in Tribune Is to Preserve âPublic Trustâ" src="https://static01.nyt.com/images/2016/05/24/business/24DB-INVESTOR/24DB-INVESTOR-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Doctorâs Stake in Tribune Is to Preserve âPublic Trustâ</strong> <span class="divider"> | </span></span> Dr. Patrick Soon-Shiong, who has made billions in pharmaceuticals, made a $70.5 million investment in the publisher of The Los Angeles Times.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/24/business/dealbook/doctors-stake-in-tribune-is-to-preserve-public-trust.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="General Atlantic Agrees to Buy Majority Stake in Argus Media" src="https://static01.nyt.com/images/2016/05/24/business/24DB-ARGUS/24DB-ARGUS-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>General Atlantic Agrees to Buy Majority Stake in Argus Media</strong> <span class="divider"> | </span></span> The transaction would value the commodity price reporting agency, based in London, at nearly $1.4 billion, the companies said.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/24/business/dealbook/general-atlantic-agrees-to-buy-majority-stake-in-argus-media.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Amundi Agrees to Buy Majority Stake in Kleinwort Benson Investors" src="https://static01.nyt.com/images/2016/05/24/business/24db-amundi/24db-amundi-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Amundi Agrees to Buy Majority Stake in Kleinwort Benson Investors</strong> <span class="divider"> | </span></span> Amundi will acquire a 87.5 percent stake in the company from Oddo &amp; Cie, with the management of Kleinwort Benson Investors owning the rest.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/24/business/dealbook/amundi-kleinwort-benson-buy-oddo-cie.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Bayerâs Bid for Monsanto Is Weighted With Risk" src="https://static01.nyt.com/images/2016/05/24/business/24db-monsantoviews/24db-monsantoviews-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bayerâs Bid for Monsanto Is Weighted With Risk</strong> <span class="divider"> | </span></span> Buying Monsanto could benefit one side of Bayerâs business at the expense of another, Olaf Storbeck writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/24/business/dealbook/bayers-bid-for-monsanto-is-weighted.html">Breakingviews &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/05/24/business/dealbook/bayer-offers-to-buy-monsanto-for-62-billion.html">Bayer Offers to Buy Monsanto for $62 Billion</a> <time class="timestamp" data-eastern-timestamp="2:40 AM" datetime="2016-05-23" data-utc-timestamp="1463985620000">2:40 AM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ares to Buy American Capital for $3.43 Billion </strong> <span class="divider"> | </span></span> Ares Capital, the biggest business development company in the United States by assets and market value, is buying its rival American Capital for $3.43 billion as the sector strains to balance attacks by activist investors, high debt levels and regulatory limits.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/e26d5834-20f7-11e6-9d4d-c11776a5124d.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz49RqW64ok">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Unilever and LâOrÃ©al Said to Compete for Shampoo </strong> <span class="divider"> | </span></span> The companies join others in submitting bids for the shampoo maker Vogue International, Reuters reports, citing people familiar with the matter. The deal could value Vogue at $2.5 billion to $3 billion.<br /><span class="kicker"><a href="//www.reuters.com/article/us-vogueinternational-m-a-exclusive-idUSKCN0YE2MR?feedType=RSS&#038;feedName=innovationNews">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>K.K.R. to Sell Coffee Machine Maker</strong> <span class="divider"> | </span></span> Kohlberg Kravis Roberts agreed to sell WMF, the German silverware and coffee machine maker, to SEB of France in a deal worth about $1.8 billion including debt.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-23/kkr-said-near-german-silverware-maker-wmf-sale-to-france-s-seb">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Trump Boasts of Rapport With Wall St., but the Feeling Is Not Quite Mutual" src="https://static01.nyt.com/images/2016/05/14/business/17db-trumpbanks2/17db-trumpbanks2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Trump Boasts of Rapport With Wall St., but the Feeling Is Not Quite Mutual</strong> <span class="divider"> | </span></span> An examination of financial records shows that Donald J. Trumpâs relationship with the financial industry is more nuanced than he suggests.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/24/business/dealbook/donald-trump-relationship-bankers.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Bankâs Mortgage Positions Said to Be Investigated by the S.E.C. </strong> <span class="divider"> | </span></span> The Securities and Exchange Commission is investigating whether Deutsche Bank  inflated the value of securities in its mortgage-bond trading business and masked losses around 2013, Bloomberg reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-23/deutsche-bank-post-crisis-mortgage-positions-said-probed-by-sec?nl=?nl=dlbk&#038;emc=dlbkpm&#038;emc=edit_dlbkpm_20160523">BLOOMBERG</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Homegrown Hedge Fund Activism Takes Root in Europe </strong> <span class="divider"> | </span></span> European funds and the European operation of funds in the United States have opted for engagement over confrontation and it seems to be producing better results. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/1e7c55f2-20ce-11e6-aa98-db1e01fabc0c.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz49RqW64ok">THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Handicapping Insider Trading Case Against a Gambler" src="https://static01.nyt.com/images/2016/05/24/business/24db-whitecollar2/24db-insider2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Handicapping Insider Trading Case Against a Gambler</strong> <span class="divider"> | </span></span> The Justice Department charged the gambler, William T. Walters, with trading on inside information, but the charges may not be as easy to prove as they appear, Peter J. Henning writes in White Collar Watch.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/24/business/dealbook/handicapping-insider-trading-case-against-a-gambler.html">White Collar Watch &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>U.S. Court Opens Door to Libor Claims </strong> <span class="divider"> | </span></span> An appeals court has opened the door for more claims against the big banks for rigging the London interbank offered rate, or Libor, by overturning a three-year-old ruling that threw out a host of private antitrust-related lawsuits.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/874120ce-2135-11e6-aa98-db1e01fabc0c.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz49RqW64ok">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Regulators Swoop on Swiss Private Bank Over 1MDB Scandal</strong> <span class="divider"> | </span></span> Switzerland has begun a criminal inquiry against the bank, BSI, while Singapore has ordered the bank to close its operation there after claims of serious anti-money-laundering failures.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/be8247ec-2177-11e6-9d4d-c11776a5124d.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz49RqW64ok"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Swift Chief Says More Banks May Have Been Breached </strong> <span class="divider"> | </span></span> Hackers may have targeted more banks than have been previously reported, according to prepared remarks by  Gottfried Leibbrandt, the chief executive officer of Swift, for a speech he is set to give on Tuesday. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-23/swift-ceo-to-say-more-banks-may-have-been-breached-by-hackers">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Exxon Investors Seek Assurance as Climate Shifts, Along With Attitudes" src="https://static01.nyt.com/images/2016/05/24/science/24EXXON1/24EXXON1-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Exxon Investors Seek Assurance as Climate Shifts, Along With Attitudes</strong> <span class="divider"> | </span></span> A growing chorus of shareholders is worried the energy giant is not adequately preparing for tighter times in light of the Paris accord.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/24/science/exxon-investors-seek-assurance-as-climate-shifts-along-with-attitudes.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/05/24/science/public-campaign-against-exxon-has-roots-in-a-2012-meeting.html">Public Campaign Against Exxon Has Roots in a 2012 Meeting</a> <time class="timestamp" data-eastern-timestamp="5:28 PM" datetime="2016-05-23" data-utc-timestamp="1464038896000">5:28 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Public Campaign Against Exxon Has Roots in a 2012 Meeting" src="https://static01.nyt.com/images/2016/05/24/business/24activist/24activist-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Public Campaign Against Exxon Has Roots in a 2012 Meeting</strong> <span class="divider"> | </span></span> A gathering held four years ago in California outlined tactics for taking on the fossil fuel industry, drawing lessons from the fight over tobacco.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/24/science/public-campaign-against-exxon-has-roots-in-a-2012-meeting.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Toyota Expands Takata Airbag Recall in U.S." src="https://static01.nyt.com/images/2016/05/25/business/25toyota/25toyota-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Toyota Expands Takata Airbag Recall in U.S.</strong> <span class="divider"> | </span></span> The announcement came after United States regulators accelerated moves to recall vehicles with a defective airbag inflater made by the Japanese company Takata.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/25/business/international/toyota-recall-takata-airbag-inflater.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Greek Lawmakers Narrowly Approve Austerity Legislation" src="https://static01.nyt.com/images/2016/05/22/business/23GREEKECON/23GREEKECON-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Greek Lawmakers Narrowly Approve Austerity Legislation</strong> <span class="divider"> | </span></span> The legislation includes higher taxes on coffee, alcohol, fuel and other goods and a mechanism to cut state spending if Greece misses its budget targets.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/23/business/greek-lawmakers-narrowly-approve-austerity-legislation.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="French Insurer AXA to Exit Tobacco Investments After Activistsâ Campaign" src="https://static01.nyt.com/images/2016/05/24/business/24db-axatobacco/24db-axatobacco-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>French Insurer AXA to Exit Tobacco Investments After Activistsâ Campaign</strong> <span class="divider"> | </span></span> The decision to unload about $2 billion in cigarette company stocks and bonds follows an effort by advocates, but it could be financially costly.<br /><span class="kicker"><a href="//www.nytimes.com/2016/05/24/business/dealbook/france-axa-investments-tobacco.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/05/24/morning-agenda-founder-of-gawker-suspects-lawsuits-have-a-common-financer/"
+					data-title="Morning Agenda: Founder of Gawker Suspects Lawsuits Have a Common Financer"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Penalty Against Bank of America Overturned | The Game of Thrones at Viacom&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/24/morning-agenda-founder-of-gawker-suspects-lawsuits-have-a-common-financer/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":102,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

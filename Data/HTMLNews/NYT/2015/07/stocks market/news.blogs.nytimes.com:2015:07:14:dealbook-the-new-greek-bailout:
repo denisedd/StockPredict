@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003798569"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1436874760" />
+<meta name="PUD" content="20150714" />
+<meta name="pdate" content="20150714" />
+<meta name="ptime" content="20150714075240" />
+<meta name="utime" content="20150715114710" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-07-15T11:47:10-04:00" />
+<meta name="DISPLAYDATE" content="July 14, 2015" />
+<meta name="dat" content="July 14, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Greece;Tsipras, Alexis">
+<meta name="des" content="Amazon.com Inc;Antitrust Laws and Competition Issues;Banking and Financial Institutions;Computer Chips;European Sovereign Debt Crisis (2010- );Hedge Funds;Puerto Rico;Venture Capital">
+<meta name="org" content="Dalian Wanda Commercial Properties;Micron Technology Inc;MPLX LP;Uber Technologies Inc">
+<meta name="geo" content="China;United States">
+<meta name="ticker" content="Micron Technology Inc|MU|NASDAQ" />
+<meta property="article:tag" content="Greece" />
+<meta property="article:tag" content="Tsipras Alexis" />
+<meta property="article:tag" content="Amazon.com Inc" />
+<meta property="article:tag" content="Antitrust Laws and Competition Issues" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Computer Chips" />
+<meta property="article:tag" content="European Sovereign Debt Crisis (2010- )" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Dalian Wanda Commercial Properties" />
+<meta property="article:tag" content="Micron Technology Inc" />
+<meta property="article:tag" content="MPLX LP" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="United States" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Greece,Tsipras Alexis,Amazon.com Inc,Antitrust Laws and Competition Issues,Banking and Financial Institutions,Computer Chips,European Sovereign Debt Crisis (2010- ),Hedge Funds,Puerto Rico,Venture Capital,Dalian Wanda Commercial Properties,Micron Technology Inc,MPLX LP,Uber Technologies Inc,China,United States,DealBook" />
+<meta name="news_keywords" content="Alexis Tsipras,Banking and Finance,China,Competition law,Computer Chip,Dalian Wanda Commercial Properties,Euro Crisis,Hedge fund,Uber,US,Venture capital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F07%2F14%2Fdealbook-the-new-greek-bailout%2F" title="Morning Agenda: The New Greek Bailout" />
+<meta name="description" content="The New Greek Bailout &#124; Tsinghua Unigroup Is Said to Make $23 Billion Bid for Micron &#124; Chinese Government Moves Cramp Hedge Funds&#8217; Style" />
+<meta name="hdl" content="Morning Agenda: The New Greek Bailout" />
+<meta property="og:title" content="Morning Agenda: The New Greek Bailout" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/07/14/dealbook-the-new-greek-bailout/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="The New Greek Bailout &#124; Tsinghua Unigroup Is Said to Make $23 Billion Bid for Micron &#124; Chinese Government Moves Cramp Hedge Funds&#8217; Style" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: The New Greek Bailout" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/07/14/dealbook-the-new-greek-bailout/" />
+<meta name="twitter:description" content="The New Greek Bailout &#124; Tsinghua Unigroup Is Said to Make $23 Billion Bid for Micron &#124; Chinese Government Moves Cramp Hedge Funds&#8217; Style" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: A Deal for Greece' href='//news.blogs.nytimes.com/2015/07/13/morning-agenda-a-deal-for-greece/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/07/14/what-were-reading-72/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/07/14/dealbook-the-new-greek-bailout/' />
+<link rel='shortlink' href='//nyti.ms/1K47FGS' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/07/14/dealbook-the-new-greek-bailout/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: The New Greek Bailout - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2760 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: The New Greek Bailout        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/07/14/dealbook-the-new-greek-bailout/"
+	 data-title="Morning Agenda: The New Greek Bailout"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;The New Greek Bailout | Tsinghua Unigroup Is Said to Make $23 Billion Bid for Micron | Chinese Government Moves Cramp Hedge Funds&#039; Style&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/07/14/dealbook-the-new-greek-bailout/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 14, 2015 7:52 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: The New Greek Bailout</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-07-14T11:52:40+00:00" itemprop="datePublished">July 14, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">July 14, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2760 post type-post status-publish hentry category-dealbook tag-amazon-com-inc tag-antitrust-laws-and-competition-issues tag-banking-and-financial-institutions tag-china tag-computer-chips tag-dalian-wanda-commercial-properties tag-european-sovereign-debt-crisis-2010 tag-greece tag-hedge-funds tag-micron-technology-inc tag-mplx-lp tag-puerto-rico tag-tsipras-alexis tag-uber-technologies-inc tag-united-states tag-venture-capital per-greece per-tsipras-alexis des-amazon-com-inc des-antitrust-laws-and-competition-issues des-banking-and-financial-institutions des-computer-chips des-european-sovereign-debt-crisis-2010 des-hedge-funds des-puerto-rico des-venture-capital org-dalian-wanda-commercial-properties org-micron-technology-inc org-mplx-lp org-uber-technologies-inc geo-china geo-united-states news_keywords-alexis-tsipras news_keywords-banking-and-finance news_keywords-china news_keywords-competition-law news_keywords-computer-chip news_keywords-dalian-wanda-commercial-properties news_keywords-euro-crisis news_keywords-hedge-fund news_keywords-uber news_keywords-us-2 news_keywords-venture-capital-2" id="post-2760">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: The New Greek Bailout</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-07-14T11:52:40+00:00" itemprop="datePublished">July 14, 2015 7:52 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 14, 2015 7:52 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/07/14/dealbook-the-new-greek-bailout/" data-title="Morning Agenda: The New Greek Bailout" data-description="The New Greek Bailout | Tsinghua Unigroup Is Said to Make $23 Billion Bid for Micron | Chinese Government Moves Cramp Hedge Funds&#039; Style">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>THE NEW GREEK BAILOUT</strong> <span class="divider"> | </span></span> While Prime Minister Alexis Tsipras of Greece is trying to get his Parliament to agree to the latest bailout deal, <b>Greek banks are in need</b> of a bailout of their own. The European Central Bank has kept them running for months with emergency loans, but it wonât provide any additional cash â it is waiting for Parliament to approve Mondayâs bailout deal. This means Greek banks may not open this week and could soon run out of cash, <a href="//www.nytimes.com/2015/07/14/business/international/greeces-banks-are-next-in-line-for-a-european-bailout.html?ref=business">Jack Ewing writes</a> in The New York Times. Every day that the banks stay closed adds to their problems and the eventual cost of an overhaul, Mr. Ewing notes.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Tsipras now has just days to sell the deal to lawmakers at home. The package, worth as much as 86 billion euros, or $96 billion, includes easier repayment terms but also <b>tough reforms</b> such as pension cuts and tax increases as well as intensive international oversight. Mr. Tsipras now finds himself in the strange situation of having to champion policies he was <b>elected to oppose</b>, <a href="//www.nytimes.com/2015/07/14/world/europe/greece-debt-plan.html">write Suzanne Daley and Liz Alderman</a> in The New York Times. <a href="//www.ft.com/cms/s/0/159b56be-297f-11e5-8613-e7aedbb7bdb7.html">The Financial Times reports</a> that he may have to <b>rely on opposition support</b> in order to pass the economic reform measures. Members of the Greek Parliament called the deal a âhumiliation of Greeceâ and a âcoup by Germany.â </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2015/07/14/upshot/the-greek-deal-is-a-disaster-for-greece-and-maybe-for-europe.html">Neil Irwin examines</a> the agreement in The Upshot and argues that this deal will be the âone that <b>pushes Greece into the abyss</b>, even if financial markets donât acknowledge it just yet.â He compares the strategy to a family selling off its furniture to make a mortgage payment: âYou can do it, but it does not exactly amount to a long-term solution.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TSINGHUA UNIGROUP IS SAID TO MAKE $23 BILLION BID FOR MICRON</strong> <span class="divider"> | </span></span> Chinaâs <b>largest chip design company</b> is preparing a $23 billion bid to buy the United States memory chip maker Micron Technology, <a href="//www.wsj.com/articles/state-owned-chinese-chip-maker-tsinghua-unigroup-makes-23-billion-bid-for-micron-1436833492?cb=logged0.5756736700423062"> The Wall Street Journal reports</a>. If successful, it would be the <b>largest ever foreign takeover</b> by a Chinese firm, making Shuanghui International Holdingsâ $4.7 billion takeover of Smithfield Foods look like small potatoes. Tsinghua Unigroup is said to be willing to pay $21 a share for Micron â a 19.3 percent premium over its Monday closing price.  </p>
+<p class="story-body-text" itemprop="articleBody">The purchase would be a major advance for China, which has only a modest chip making industry, <a href="//www.nytimes.com/reuters/2015/07/13/business/13reuters-micron-tech-m-a-tsinghuaunigroup.html">Reuters reports</a>. Chips are <b>crucial to consumer products and defense equipment</b> but there is a question as to whether the United States would allow a foreign company to buy a supplier of such strategic components. The deal is likely to <b>face close scrutiny</b> by officials in Washington charged with determining whether foreign acquisitions and investment pose a security threat.  </p>
+<p class="story-body-text" itemprop="articleBody">Tsinghua already has links to major United States companies. It bought a controlling stake in Hewlett-Packardâs China networking equipment business, and Intel last year announced that it would buy a 20 percent stake in Tsinghua Unigroup for $1.5 billion. If Tsinghua Unigroup acquires Micron, it would own the last remaining US maker of dynamic random access memory chips, or DRAM chips, which are mostly used in personal computers. The US chip maker also makes NAND memory chips, which are used for storing <b>data on mobile devices</b>. In assessing the deal, <a href="//www.ft.com/cms/s/3/f807229c-29c7-11e5-8613-e7aedbb7bdb7.html">The Financial Times says</a> that regardless of whether the deal goes through, it is a sign that the semiconductor industry is looking more attractive.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>JPMorgan Chase</b> reports second-quarter results and will discuss results at 8.30 a.m. <b>Retail sales</b>, released at 8:30 a.m., are likely to show that consumer spending increased for the fourth straight month in June. <b>A committee of the British Parliament</b> will question Stephen Green, former chairman of HSBC, and Winfried Bischoff, former chairman of Lloyds Banking Group and Citigroup, on the culture of the banking industry and whether large fines are the right way to improve ethics in the sector, 3:35 p.m. B.S.T./10:35 a.m. E.D.T. <b>Yum Brands</b>, the owner of KFC, Pizza Hut and Taco Bell, reports second-quarter earnings at 9:15 a.m. E.D.T.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CHINESE GOVERNMENT MOVES CRAMP HEDGE FUNDSâ STYLE</strong> <span class="divider"> | </span></span> Hedge funds are <b>rethinking their positions in China</b> after trillions of dollars in value was wiped off the mainland stock market, <a href="//www.nytimes.com/2015/07/14/business/hedge-funds-reassess-china-after-market-free-fall.html?ref=business">writes Alexandra Stevenson</a> in DealBook. The governmentâs aggressive efforts to prop up the market have made it hard for them to decide their next move. Investor confidence may have been lifted, but according to Dawn Fitzpatrick at OâConnor, at a UBS-owned $5.6 billion hedge fund, the governmentâs heavy hand has pushed back progress toward capital market liberalization.  </p>
+<p class="story-body-text" itemprop="articleBody">The Public Security Ministryâs promise to investigate âmaliciousâ short-selling means hedge funds have also had to <b>cut back on short-selling</b> to avoid regulatory headaches.  </p>
+<p class="story-body-text" itemprop="articleBody">Mainland Chinese stocks were already considered by some to be a speculative market â sometimes referred to as a casino. But, as one investment officer points out, âIn a casino you know <b>the rules of the game</b>. Here they are shifting, and I think this is going to deter foreign investors in this market.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinese Investment Fundâs $1.44 Billion Venture in Europe</strong> <span class="divider"> | </span></span> Chinaâs largest state investment fund has bought 10 shopping centers in France and Belgium for about 1.3 billion euros ($1.44 billion), one of its biggest acquisitions in Europe.<br /><span class="kicker"><a href="//www.wsj.com/articles/chinese-investment-fund-completes-1-44-billion-investment-in-france-belgium-1436795652?mod=asia_home"> The Wall Street Journal </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Dalian Wanda Plans Six Acquisitions</strong> <span class="divider"> | </span></span> The Chinese property group has announced plans to make six more acquisitions outside the property sector this year as well as the formation of a financial holding company, as it extends efforts to branch out from real estate.<br /><span class="kicker"><a href="//www.ft.com/cms/s/0/890537cc-292b-11e5-8613-e7aedbb7bdb7.html?siteedition=uk#axzz3fr4w6voz"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinaâs Bohai Leasing to Buy 20% of Avolon for $429 Million</strong> <span class="divider"> | </span></span> Chinaâs Bohai Leasingâs agreement to buy 20 percent of United States-listed Avolon Holdings Ltd would provide access to a global aircraft leasing market dominated by GE Capital and AerCap Holdings.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/07/14/avolon-holdings-ma-bohai-leasing-idUSL4N0ZU21I20150714"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Pipeline Operator MPLX to Buy MarkWest Energy Partners</strong> <span class="divider"> | </span></span> The deal would value MarkWest Energy, a so-called master limited partnership, at about $20 billion, including debt.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/14/business/dealbook/pipeline-operator-mplx-to-buy-markwest-energy-partners.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Uber Out of the Running for Here, Nokiaâs Digital Mapping Service" src="https://static01.nyt.com/images/2015/07/14/business/14uber-web1/14uber-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uber Out of the Running for Here, Nokiaâs Digital Mapping Service</strong> <span class="divider"> | </span></span> Uberâs global plans will not include the multibillion-dollar purchase of Here, the main competitor to Google Maps.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/14/technology/uber-out-of-the-running-for-here-nokias-digital-mapping-service.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Martin Franklin Adds 2 More Deals to a Long List" src="https://static01.nyt.com/images/2015/07/13/business/dealbook/dbpix-franklin/dbpix-franklin-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Martin Franklin Adds 2 More Deals to a Long List</strong> <span class="divider"> | </span></span> The acquisitions of Waddington Group, a maker of disposable dinnerware, and Alent, a chemicals manufacturer, expand the reach of Mr. Franklinâs business empire.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/14/business/dealbook/martin-franklin-adds-2-more-deals-to-a-long-list.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/07/14/business/dealbook/jarden-to-acquire-waddington-group-for-1-35-billion.html">Jarden to Acquire Waddington Group for $1.35 Billion</a> <time class="timestamp" data-eastern-timestamp="9:09 AM" datetime="2015-07-13" data-utc-timestamp="1436792953000">9:09 AM</time><span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/07/14/business/dealbook/platform-specialty-products-alent.html">Platform Specialty Products to Acquire Alent for $2.1 Billion</a> <time class="timestamp" data-eastern-timestamp="4:57 AM" datetime="2015-07-13" data-utc-timestamp="1436777871000">4:57 AM</time><span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Plenty Deserve Blame for Greeceâs Woes, but Maybe Not Goldman Sachs" src="https://static01.nyt.com/images/2015/07/13/business/dealbook/dbpix-reich/dbpix-reich-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Plenty Deserve Blame for Greeceâs Woes, but Maybe Not Goldman Sachs</strong> <span class="divider"> | </span></span> A Goldman Sachs deal with the country has been repeatedly castigated, but the firm was simply going about its normal business, writes William D. Cohan in the Street Scene column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/14/business/dealbook/plenty-deserve-blame-for-greeces-woes-but-maybe-not-goldman-sachs.html">Street Scene &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FanDuel to Announce It Has Raised $275 Million More</strong> <span class="divider"> | </span></span> The money is meant to help the daily fantasy sports start-up gain customers and expand its global presence as the popularity of online sports betting draws big new entrants like Yahoo.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/14/business/dealbook/fanduel-to-announce-it-has-raised-275-million-more.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="CrowdStrike, Cybersecurity Services Provider, Raises $100 Million" src="https://static01.nyt.com/images/2015/07/14/business/14db-crowdstrike-web1/14db-crowdstrike-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CrowdStrike, Cybersecurity Services Provider, Raises $100 Million</strong> <span class="divider"> | </span></span> The investment was led by Google Capital, in what it says will be the first of several cybersecurity deals.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/14/business/dealbook/crowdstrike-cybersecurity-services-provider-raises-100-million.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fosun Backs On-Demand Beauty Company StyleSeat</strong> <span class="divider"> | </span></span> The beauty service booking start-up StyleSeat Inc. has raised a $25 million growth round led by the new venture arm of Fosun International, Chinaâs largest private conglomerate.<br /><span class="kicker"><a href="//blogs.wsj.com/venturecapital/2015/07/13/fosuns-venture-arm-backs-on-demand-beauty-co-styleseat/?mod=WSJBlog"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Pager, a Health Care App, Raises $14 Million</strong> <span class="divider"> | </span></span> Pager, an app that allows New Yorkers to request at-home visits from doctors and nurses, has raised new funding from Ashton Kutcherâs Sound Ventures and New Enterprise Associates at a valuation of about $75 million.<br /><span class="kicker"><a href="//blogs.wsj.com/venturecapital/2015/07/13/pager-raises-14-million-from-ashton-kutchers-sound-ventures-nea/?mod=WSJBlog"> The Wall Street Journal </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Accusing Amazon of Antitrust Violations, Authors and Booksellers Demand Inquiry" src="https://static01.nyt.com/images/2015/07/14/business/14amazon-web2/14amazon-web2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Accusing Amazon of Antitrust Violations, Authors and Booksellers Demand Inquiry</strong> <span class="divider"> | </span></span> Groups representing thousands of authors, agents and independent booksellers are calling for the Department of Justice to examine Amazon.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/14/technology/accusing-amazon-of-antitrust-violations-authors-and-booksellers-demand-us-inquiry.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><span class="icon document">Documents</span>:<a href="//www.nytimes.com/interactive/2015/07/13/business/amazon-authors-united-documents.html"> The Paper Trail</a> <time class="timestamp" data-eastern-timestamp="2:35 PM" datetime="2015-07-13" data-utc-timestamp="1436812507000">2:35 PM</time><span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Puerto Rico Faces Its Creditors in Early Debt Resolution Talks" src="https://static01.nyt.com/images/2015/07/14/business/14DB-Rico1/14DB-Rico1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Puerto Rico Faces Its Creditors in Early Debt Resolution Talks</strong> <span class="divider"> | </span></span> Roughly 350 creditors were told they would have to wait several weeks until a working group of Puerto Rico leaders formed recommendations for resolving the islandâs fiscal crisis.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/14/business/puerto-rico-faces-its-creditors-in-early-debt-resolution-talks.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="âClawbacksâ Could Backfire" src="https://static01.nyt.com/images/2015/07/14/business/14SORKINsub/14SORKINsub-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>âClawbacksâ Could Backfire</strong> <span class="divider"> | </span></span> A new rule, which allows payouts to be recovered when the basis of compensation is found to be flawed, is seen having the perverse consequence of driving up salaries further, writes Andrew Ross Sorkin in the DealBook column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/14/business/dealbook/clawbacks-could-backfire.html">DealBook Column &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Lawsuit Against General Motors Tests Attorney-Client Privilege" src="https://static01.nyt.com/images/2015/07/14/business/dbpix-gm-ignition2/dbpix-gm-ignition2-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lawsuit Against General Motors Tests Attorney-Client Privilege</strong> <span class="divider"> | </span></span> Plaintiffs have asked a court to lift the veil of confidentiality over communications between General Motors and its outside lawyers, writes Peter J. Henning in the White Collar Watch column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/14/business/dealbook/lawsuit-against-general-motors-tests-attorney-client-privilege.html">White Collar Watch &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Treasury âFlashâ Rally Report Is Released" src="https://static01.nyt.com/images/2015/07/13/business/document-report-on-2014-treasury-flash-rally/document-report-on-2014-treasury-flash-rally-square320.png"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Treasury âFlashâ Rally Report Is Released</strong> <span class="divider"> | </span></span> Federal regulators identified no single cause of an hour of extreme volatility in the Treasuries market last fall.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/14/business/dealbook/treasury-flash-rally-report-is-released.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The State of Cost-Benefit Analysis at the S.E.C.</strong> <span class="divider"> | </span></span> Facing skepticism in the courts, the commission has opted for detailed rationales for its rules, even if it canât put solid numbers into the cost-benefit equation, writes David Zaring in the Another View column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/14/business/dealbook/the-state-of-cost-benefit-analysis-at-the-sec.html">Another View &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Officials at Dewey &amp; LeBoeuf Manipulated Income Statements, Witness Testifies" src="https://static01.nyt.com/images/2015/04/27/business/27db-dewey/27db-dewey-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Officials at Dewey &amp; LeBoeuf Manipulated Income Statements, Witness Testifies</strong> <span class="divider"> | </span></span> Francis J. Canellas, the former finance director of the bankrupt law firm, told jurors that a late-night meeting in December 2008 led to the manipulation of Deweyâs books.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/14/business/dealbook/officials-at-dewey-leboeuf-manipulated-income-statements-witness-testifies.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/07/14/dealbook-the-new-greek-bailout/"
+					data-title="Morning Agenda: The New Greek Bailout"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;The New Greek Bailout | Tsinghua Unigroup Is Said to Make $23 Billion Bid for Micron | Chinese Government Moves Cramp Hedge Funds&#039; Style&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/07/14/dealbook-the-new-greek-bailout/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":47,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

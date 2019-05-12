@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004035272"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1447412934" />
+<meta name="PUD" content="20151113" />
+<meta name="pdate" content="20151113" />
+<meta name="ptime" content="20151113060854" />
+<meta name="utime" content="20151113110854" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-11-13T11:08:54-05:00" />
+<meta name="DISPLAYDATE" content="November 13, 2015" />
+<meta name="dat" content="November 13, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Dow Jones Stock Average;Initial Public Offerings;Interest Rates;Standard &amp; Poor&#039;s 500-Stock Index;The Blackstone Group">
+<meta name="org" content="Anheuser-Busch InBev NV;Apollo Global Management L.L.C;Cisco Systems Inc;Citigroup Inc;Deutsche Bank AG;Federal Reserve Bank of New York;Federal Reserve System;General Electric Company;Goldman Sachs Group Inc;HSBC Holdings PLC.;Hulu.com;Millennial Generation;Mylan Inc;Perrigo Company;Syngenta AG;Time Warner Inc;Valeant Pharmaceuticals International Inc;Volkswagen AG">
+<meta name="ticker" content="Anheuser-Busch InBev NV|BUD|NYSE;Cisco Systems Inc|CSCO|NASDAQ;Citigroup Inc|C|NYSE;Deutsche Bank AG|DB|NYSE;General Electric Company|GE|NYSE;Goldman Sachs Group Inc|GS|NYSE;HSBC Holdings PLC.|HSBC|NYSE;Mylan Inc|MYL|NASDAQ;Syngenta AG|SYT|NYSE;Time Warner Inc|TWX|NYSE;Valeant Pharmaceuticals International Inc|VRX|NYSE;Volkswagen AG|VLKAY|Other OTC" />
+<meta property="article:tag" content="Dow Jones Stock Average" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Interest Rates" />
+<meta property="article:tag" content="Standard &amp; Poor&#039;s 500-Stock Index" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="Anheuser-Busch InBev NV" />
+<meta property="article:tag" content="Apollo Global Management L.L.C" />
+<meta property="article:tag" content="Cisco Systems Inc" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Federal Reserve Bank of New York" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="General Electric Company" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="HSBC Holdings PLC." />
+<meta property="article:tag" content="Hulu.com" />
+<meta property="article:tag" content="Millennial Generation" />
+<meta property="article:tag" content="Mylan Inc" />
+<meta property="article:tag" content="Perrigo Company" />
+<meta property="article:tag" content="Syngenta AG" />
+<meta property="article:tag" content="Time Warner Inc" />
+<meta property="article:tag" content="Valeant Pharmaceuticals International Inc" />
+<meta property="article:tag" content="Volkswagen AG" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Dow Jones Stock Average,Initial Public Offerings,Interest Rates,Standard &amp; Poor&#039;s 500-Stock Index,The Blackstone Group,Anheuser-Busch InBev NV,Apollo Global Management L.L.C,Cisco Systems Inc,Citigroup Inc,Deutsche Bank AG,Federal Reserve Bank of New York,Federal Reserve System,General Electric Company,Goldman Sachs Group Inc,HSBC Holdings PLC.,Hulu.com,Millennial Generation,Mylan Inc,Perrigo Company,Syngenta AG,Time Warner Inc,Valeant Pharmaceuticals International Inc,Volkswagen AG,DealBook" />
+<meta name="news_keywords" content="Anheuser-Busch InBev,Apollo Global Management,Cisco,Citigroup,Deutsche Bank,Dow Jones Industrial Average,Federal Reserve,Federal Reserve Bank of New York,General Electric,Goldman Sachs Group,Hulu.com,Interest rate,IPO,Mylan,Perrigo,SP 500,Syngenta,Time Warner,Valeant Pharmaceuticals International,Volkswagen" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F11%2F13%2Fmorning-agenda-several-fed-officials-ready-to-raise-rates%2F" title="Morning Agenda: Several Fed Officials Ready to Raise Rates" />
+<meta name="description" content="Valeant Stake Exposes Rift at Sequoia &#124; Millenials Make Way Up Ladder at Goldman &#124; Making Angels Out of Investors" />
+<meta name="hdl" content="Morning Agenda: Several Fed Officials Ready to Raise Rates" />
+<meta property="og:title" content="Morning Agenda: Several Fed Officials Ready to Raise Rates" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/11/13/morning-agenda-several-fed-officials-ready-to-raise-rates/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Valeant Stake Exposes Rift at Sequoia &#124; Millenials Make Way Up Ladder at Goldman &#124; Making Angels Out of Investors" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Several Fed Officials Ready to Raise Rates" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/11/13/morning-agenda-several-fed-officials-ready-to-raise-rates/" />
+<meta name="twitter:description" content="Valeant Stake Exposes Rift at Sequoia &#124; Millenials Make Way Up Ladder at Goldman &#124; Making Angels Out of Investors" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Square Sticks to Its Script' href='//news.blogs.nytimes.com/2015/11/12/morning-agenda-square-sticks-to-its-script/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/11/13/what-were-reading-106/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/11/13/morning-agenda-several-fed-officials-ready-to-raise-rates/' />
+<link rel='shortlink' href='//nyti.ms/1RTmXhP' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/11/13/morning-agenda-several-fed-officials-ready-to-raise-rates/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Several Fed Officials Ready to Raise Rates - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3637 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Several Fed Officials Ready to Raise Rates        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/11/13/morning-agenda-several-fed-officials-ready-to-raise-rates/"
+	 data-title="Morning Agenda: Several Fed Officials Ready to Raise Rates"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Valeant Stake Exposes Rift at Sequoia | Millenials Make Way Up Ladder at Goldman | Making Angels Out of Investors&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/11/13/morning-agenda-several-fed-officials-ready-to-raise-rates/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="November 13, 2015 6:08 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Several Fed Officials Ready to Raise Rates</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-11-13T11:08:54+00:00" itemprop="datePublished">November 13, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">November 13, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3637 post type-post status-publish hentry category-dealbook tag-anheuser-busch-inbev-nv tag-apollo-global-management-l-l-c tag-cisco-systems-inc tag-citigroup-inc tag-deutsche-bank-ag tag-dow-jones-stock-average tag-federal-reserve-bank-of-new-york tag-federal-reserve-system tag-general-electric-company tag-goldman-sachs-group-inc tag-hsbc-holdings-plc tag-hulu-com tag-initial-public-offerings tag-interest-rates tag-millennial-generation tag-mylan-inc tag-perrigo-company tag-standard-poors-500-stock-index tag-syngenta-ag tag-the-blackstone-group tag-time-warner-inc tag-valeant-pharmaceuticals-international-inc tag-volkswagen-ag des-dow-jones-stock-average des-initial-public-offerings des-interest-rates des-standard-poors-500-stock-index des-the-blackstone-group org-anheuser-busch-inbev-nv org-apollo-global-management-l-l-c org-cisco-systems-inc org-citigroup-inc org-deutsche-bank-ag org-federal-reserve-bank-of-new-york org-federal-reserve-system org-general-electric-company org-goldman-sachs-group-inc org-hsbc-holdings-plc org-hulu-com org-millennial-generation org-mylan-inc org-perrigo-company org-syngenta-ag org-time-warner-inc org-valeant-pharmaceuticals-international-inc org-volkswagen-ag news_keywords-anheuser-busch-inbev news_keywords-apollo-global-management news_keywords-cisco news_keywords-citigroup news_keywords-deutsche-bank news_keywords-dow-jones-industrial-average news_keywords-federal-reserve news_keywords-federal-reserve-bank-of-new-york news_keywords-general-electric news_keywords-goldman-sachs-group news_keywords-hulu-com news_keywords-interest-rate news_keywords-ipo news_keywords-mylan news_keywords-perrigo news_keywords-sp-500 news_keywords-syngenta news_keywords-time-warner news_keywords-valeant-pharmaceuticals-international news_keywords-volkswagen" id="post-3637">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Several Fed Officials Ready to Raise Rates</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-11-13T11:08:54+00:00" itemprop="datePublished">November 13, 2015 6:08 am</time>
+			<!-- date updated --><span class="visually-hidden updated">November 13, 2015 6:08 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/11/13/morning-agenda-several-fed-officials-ready-to-raise-rates/" data-title="Morning Agenda: Several Fed Officials Ready to Raise Rates" data-description="Valeant Stake Exposes Rift at Sequoia | Millenials Make Way Up Ladder at Goldman | Making Angels Out of Investors">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SEVERAL FED OFFICIALS READY TO RAISE RATES </strong> <span class="divider"> | </span></span> Federal Reserve officials are turning from the question of whether to act to <b>how quickly to raise rates</b> afterward,<br />
+<a href="//www.nytimes.com/2015/11/13/business/economy/several-fed-officials-say-they-are-ready-to-raise-rates.html?_r=0">Binyamin Appelbaum reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">William C. Dudley, the president of the Federal Reserve Bank of New York, had been hesitant about raising rates, but said on Thursday that there was a <b>stronger case for moving ahead</b>. Stanley Fischer, the Fedâs vice chairman, also suggested there was no reason to keep holding rates down. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Dudley is an influential adviser to Janet L. Yellen, the Fedâs chairwoman, and his shift reflected the <b>tentative consensus among Fed officials</b> that the time has come to raise the benchmark rate. </p>
+<p class="story-body-text" itemprop="articleBody">Investors and analysts now consider an increase in  December <b>all but certain</b>. Borrowing costs have already started to rise in anticipation. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Stocks in the United States fell</b> the most in six weeks as investors braced for the expected rate rise. The fall was also driven by a rout in commodities, which put energy and raw-materials providers under pressure. </p>
+<p class="story-body-text" itemprop="articleBody">The Standard &#038; Poorâs 500-stock index and the Dow Jones industrial average both slipped 1.4 percent, while the Nasdaq composite index was down 1.2 percent, <a href="//www.bloomberg.com/news/articles/2015-11-12/s-p-500-futures-are-little-changed-with-central-banks-in-focus">Bloomberg reports.</a></p>
+<p class="story-body-text" itemprop="articleBody"><b>Commodity prices tumbled</b> as the stronger dollar and a persistent slump in demand from China dampened a rebound after the summer. Brent crude closed below $45 a barrel on Thursday, while West Texas intermediate slipped below $42 after OPEC warned about the growing oil glut. Copper hit its lowest price since July 2009. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Europe and Asia joined the slide</b> as European equities slipped to three-week low, <a href="https://next.ft.com/content/cf378cb6-89a9-11e5-9f8c-a8d619fa707c">The Financial Times reports.</a> The FTSE Eurofirst 300 opened 0.3 per cent lower after the Shanghai composite dipped 1.4 percent, Australiaâs resources-heavy S.&#038;P./ASX 200 index dropped 1.5 percent and the Nikkei 225 slipped 0.5 percent. </p>
+<p class="story-body-text" itemprop="articleBody">Ms. Yellen has said that she expected to raise rates by about one percentage point a year, but forecasts submitted by Fed officials indicate a <b>divergence in predictions</b> for the benchmark rate at the end of 2016 varying from -0.1 percent to 2.9 percent. </p>
+<p class="story-body-text" itemprop="articleBody">Charles L. Evans, president of the Federal Reserve Bank of Chicago, said he was focused on <b>pressing for rates to rise slowly</b>, while Jeffrey M. Lacker, president of the Federal Reserve Bank of Richmond, said he would prefer a slightly rapider rate of increase than one percentage point a year.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>VALEANT STAKE EXPOSES RIFT AT SEQUOIA</strong> <span class="divider"> | </span></span> The Sequoia Fund has been the envy of Wall Street, consistently beating the market. It was so in demand that it closed to new investors in 2013, enhancing its mystique. Now that <b>mystique has been shattered</b>,<br />
+<a href="//www.nytimes.com/2015/11/13/business/huge-valeant-stake-exposes-rift-at-sequoia-fund.html?ref=dealbook">James B. Stewart writes in the Common Sense column.</a></p>
+<p class="story-body-text" itemprop="articleBody">When Vinod Ahooja and Sharon Osberg, two of its <b>independent directors, abruptly resigned</b> last month, it was a rare, public sign of dissent. </p>
+<p class="story-body-text" itemprop="articleBody">The departures came just days after a contentious board meeting during which the fundâs managers revealed that they had bought 1.5 million <b>more shares in Valeant</b>, making it the companyâs largest shareholder with 10 percent. The independent directors had expressed their concerns over an already large stake. </p>
+<p class="story-body-text" itemprop="articleBody">Valeant represented 32 percent of the fundâs portfolio this summer. </p>
+<p class="story-body-text" itemprop="articleBody">David Poppe, president of Ruane, Cunniff &#038; Goldfarb, the New York investment firm that manages the Sequoia Fund, confirmed that the directors had resigned over the Valeant position.</p>
+<p class="story-body-text" itemprop="articleBody">âThere was an ongoing debate over a considerable period of time, and they pushed us pretty hard on the level of concentration and why we were comfortable with that,â he told Mr. Stewart. âAnd I think <b>recent events frustrated them</b>.â </p>
+<p class="story-body-text" itemprop="articleBody">Valeantâs plunge has dragged down Sequoia, which has seen its shares <b>drop 22 percent over the last three months</b>. In October, investors withdrew nearly $100 million from the fund.</p>
+<p class="story-body-text" itemprop="articleBody">The resignations revealed a growing estrangement between <b>Sequoia and Warren E. Buffett</b>, who has praised the fund over the years. Berkshire Hathaway has been a core position for Sequoia, making up 35 percent of the fundâs assets in the late 1990s. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Buffett had recommended Ms. Osberg as an independent director 12 years ago and he <b>agreed with her decision</b> to resign after her worries about Valeant intensified.  </p>
+<p class="story-body-text" itemprop="articleBody">âAny time Charlie or Warren says something, you listen,â Mr. Poppe said. âBut rightly or wrongly, we felt we knew Valeant very well. As we said in our recent letter to shareholders, we thought Valeant was aggressive but stayed within the lines. <b>To say theyâre immoral is pretty strong</b>.â</p>
+<p class="story-body-text" itemprop="articleBody">Both Mr. Poppe and Ruane Cunniffâs chairman, Bob Goldfarb, have defended the fundâs position in Valeant, <b>comparing it with the fundâs longtime investment in Berkshire Hathaway</b>. </p>
+<p class="story-body-text" itemprop="articleBody">The comparison between Mr. Buffett, who has often said that he will not tolerate practices that are borderline unethical, and Valeantâs chief executive, J. Michael Pearson, was <b>the last straw for Ms. Osberg</b>. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>MILLENNIALS MAKE WAY UP LADDER AT GOLDMAN</strong> <span class="divider"> | </span></span> There are 425 newly minted managing directors and nearly a third of them were <b>born after 1980</b>,<br />
+<a href="//www.nytimes.com/2015/11/13/business/dealbook/goldman-sachs-names-425-new-managing-directors.html?ref=dealbook">Liz Moyer reports in DealBook.</a> Forty percent were hired as analysts and about 21 percent are former summer interns. </p>
+<p class="story-body-text" itemprop="articleBody">The managing director position is coveted at Goldman Sachs â just <b>one rung below partner</b>. A new class is named every other November and the induction is commemorated with a class photo. </p>
+<p class="story-body-text" itemprop="articleBody"><b>A quarter of those promoted are women</b> â the highest percentage in a single year â and the biggest jump came in the investment banking division. </p>
+<p class="story-body-text" itemprop="articleBody">More than half work in the Americas, 16 percent are in Asia, 4 percent in India and 26 percent are in Europe, the Middle East and Africa. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> Data on <b>retail sales</b> and the <b>producer price index</b> for October will be released at 8:30 a.m. <b>Loretta J. Mester</b>, the president of the Federal Reserve Bank of Cleveland, will speak at the City Club of Cleveland at 12 p.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>MAKING ANGELS OUT OF INVESTORS </strong> <span class="divider"> | </span></span> Angel Labs, a global angel investor academy based in San Francisco, is on a mission to <b>widen the influence of angel investing</b>,</p>
+<p class="story-body-text" itemprop="articleBody"><a HREF="//www.nytimes.com/2015/11/13/business/dealbook/a-global-academys-crash-course-makes-angels-out-of-investors.html?ref=dealbook">Sarah Max reports in DealBook.</a> It has been running boot camps to help people from Europe to Uruguay size up fledgling business ideas. </p>
+<p class="story-body-text" itemprop="articleBody">Tugce Ergul, a co-founder of Angel Labs, said the people who attend âfeel left out of whatâs happening in Silicon Valley.â</p>
+<p class="story-body-text" itemprop="articleBody">Angel Labs came about after Ms. Ergul, on the hunt for investment ideas, discovered that there were plenty of entrepreneurs, but <b>no local investors</b>. The problem was âa lack of understanding about how to value these deals and add value beyond just the cash.â</p>
+<p class="story-body-text" itemprop="articleBody">The group, and others like the Global Entrepreneurship Network, are trying to engender a culture of early-stage investing in places where <b>deals take longer</b> and investors want more control. </p>
+<p class="story-body-text" itemprop="articleBody">There is also the challenge of <b>finding exit strategies</b>, when it is difficult to do an initial public offering and not much going on in terms of mergers and acquisitions. </p>
+<p class="story-body-text" itemprop="articleBody">Many Angel Labs participants say the thrill of taking a hands-on approach is at the <b>root of their interest</b> in early-stage investing. Some could simply write a check to a venture capital fund, but they prefer to be involved.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Government Sells Northern Rock Mortgages for $20 Billion</strong> <span class="divider"> | </span></span> The sale of the mortgage portfolio is the largest ever financial-asset sale by a government in Europe, according to the British government.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/14/business/dealbook/british-government-sells-northern-rock-mortgages-for-20-billion.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chemical Company Said to Be in Talks to Acquire Syngenta</strong> <span class="divider"> | </span></span> China National Chemical is in talks to buy the Swiss pesticide maker Syngenta  in what would be the largest acquisition ever by a Chinese company, Bloomberg reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-11-12/chemchina-is-said-to-be-in-talks-to-acquire-syngenta"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sumitomo Mitsui to Discuss Deal for G.E. Leasing Unit</strong> <span class="divider"> | </span></span> Sumitomo Mitsui Financial Group is set to enter exclusive talks to buy General Electricâs Japan leasing business, The Wall Street Journal reports, citing a person familiar with the matter. The offer values the business at more than $4.5 billion.<br /><span class="kicker"><a href="//www.wsj.com/articles/sumitomo-mitsui-to-enter-talks-to-buy-ge-japan-leasing-1447398228?mod=pls_whats_news_us_business_f">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hulu Said to Consider Selling Stake to Time Warner</strong> <span class="divider"> | </span></span> Hulu is seeking to sell a stake to Time Warner as part of a deal that would value the streaming service at more than $5 billion, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/hulu-in-talks-to-sell-stake-to-time-warner-1447362212?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Mylan Set to Lose in Battle for Perrigo</strong> <span class="divider"> | </span></span> A minority of Perrigo shareholders tendered their stock into Mylanâs $26 billion takeover proposal by late Thursday night, The Wall Street Journal reports, citing people familiar with the matter. Mylan needs at least 50 percent to take control of its smaller rival.<br /><span class="kicker"><a href="//www.wsj.com/articles/mylan-set-to-lose-in-26-billion-hostile-takeover-battle-for-perrigo-1447385207"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Anheuser-Busch InBevâs Plan to Finance Beer Deal</strong> <span class="divider"> | </span></span> Data suggests that the brewer is avoiding about $300 million of outlays to lenders by self-arranging $75 billion of debt to buy SABMiller, Richard Beales writes.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/13/business/dealbook/anheuser-busch-inbevs-plan-to-finance-beer-deal.html">Breakingviews &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/11/12/business/dealbook/anheuser-busch-inbev-sabmiller-deal.html">Anheuser-Busch InBev Completes Agreement for SABMiller</a> <time class="timestamp" data-eastern-timestamp="7:34 PM" datetime="2015-11-11" data-utc-timestamp="1447288465000">7:34 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="The Web of Deals That John Malone Weaves " src="https://static01.nyt.com/images/2015/11/13/business/malone11-12/malone11-12-square320.png"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Web of Deals That John Malone Weaves </strong> <span class="divider"> | </span></span> His Liberty Interactive will spin off two units, while Liberty Media will reclassify its common stock into three tracking stocks.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/13/business/dealbook/the-web-of-deals-that-john-malone-weaves.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Cisco Chief Warns Against I.T. Mega-Mergers</strong> <span class="divider"> | </span></span> Chuck Robbins, Ciscoâs new chief executive, said that the company would look only for âsmall strategic acquisitionsâ and that deals like Dellâs planned purchase of the storage maker EMC would not provoke a change in strategy.<br /><span class="kicker"><a href="https://next.ft.com/content/e3609ff2-8995-11e5-9f8c-a8d619fa707c"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ex-Chief of Diageo and AXA Chairman to Join HSBC Board</strong> <span class="divider"> | </span></span> Paul Walsh, the former chief executive of Diageo, will join the bankâs board in January, and Henri de Castries, the chairman and chief executive of AXA, will join in March.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/14/business/dealbook/hsbc-board-henri-de-castries-paul-walsh.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Citigroup Imports a Branch Style From Operations Abroad" src="https://static01.nyt.com/images/2015/11/13/business/13db-bank-web2/13db-bank-web2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Citigroup Imports a Branch Style From Operations Abroad</strong> <span class="divider"> | </span></span> The âsmart branches,â catering to a more affluent clientele, will be much smaller and offer more personal services.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/13/business/dealbook/citigroup-imports-a-branch-style-from-operations-abroad.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Bank Names Management Team for New Investment Division</strong> <span class="divider"> | </span></span> The move is part of an overhaul by John Cryan, the new co-chief executive, to simplify the structure of the lender and improve its returns.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/13/business/dealbook/deutsche-bank-names-management-team-for-new-investment-division.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstone to Buy Property Fund Stakes From Calpers</strong> <span class="divider"> | </span></span> Blackstone Group has agreed to buy about $3 billion worth of stakes in real estate funds from Californiaâs public pension fund Calpers, a boost to its so-called secondaries business.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/11/12/us-blackstone-group-calpers-idUSKCN0T12MG20151112?feedType=RSS&#038;feedName=innovationNews#55Lrw520Qk8XFher.97"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>LoanDepot Postpones I.P.O.</strong> <span class="divider"> | </span></span> LoanDepot, a nonbank mortgage lender that aimed to sell shares to the public at a valuation of up to $2.6 billion, postponed its initial public offering, citing market conditions.<br /><span class="kicker"><a href="//www.wsj.com/articles/loandepot-delays-ipo-1447369734?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Secretive, Sprawling Network Spreads Money Through Silicon Valley</strong> <span class="divider"> | </span></span> Since 2009, Sequoia has funneled millions of dollars to scores of well-connected entrepreneurs, academics and other people known as scouts. <br /><span class="kicker"><a href="//www.wsj.com/articles/secretive-sprawling-network-of-scouts-spreads-money-through-silicon-valley-1447381377?mod=rss_markets_main"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Massachusetts Regulator Says Real Estate Affiliate Faked Proxy Votes</strong> <span class="divider"> | </span></span> The vote was crucial to the sale of American Realty businesses to the private equity giant Apollo Global Management, a deal that later collapsed.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/13/business/dealbook/massachusetts-regulator-says-real-estate-affiliate-faked-proxy-votes.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>How a Company Can Be Both Downgraded and Upgraded</strong> <span class="divider"> | </span></span> A recent ratings action by Fitch illustrates why many companies can enter bankruptcy with certain capital structures, Stephen J. Lubben writes in the In Debt column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/13/business/dealbook/how-a-company-can-be-both-downgraded-and-upgraded.html">In Debt &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lawmakers Seek Information About Online Lenders</strong> <span class="divider"> | </span></span> Four members of Congress and the Treasury Department are trying to determine whether the small-business lenders should be more tightly regulated.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/13/business/lawmakers-ask-for-information-about-online-lenders.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Volkswagen, Offering Amnesty, Asks Workers to Come Forward on Emissions Cheating" src="https://static01.nyt.com/images/2015/11/13/business/13volkswagen-web2/13volkswagen-web2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Volkswagen, Offering Amnesty, Asks Workers to Come Forward on Emissions Cheating</strong> <span class="divider"> | </span></span> The company, trying to get to the bottom of its emissions cheating scandal, pressured employees to tell what they know.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/13/business/volkswagen-offering-amnesty-asks-workers-to-come-forward-on-emissions-cheating.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/11/12/business/international/vw-scandal-eu-emissions-tests.html">VWâs Emissions-Test Trickery May Not Be Illegal in Europe</a> </span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Utah Senator, Crucial Ally for the Pacific Rim Trade Deal, Is Now Its Main Hurdle" src="https://static01.nyt.com/images/2015/11/13/us/13hatch/13hatch-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Utah Senator, Crucial Ally for the Pacific Rim Trade Deal, Is Now Its Main Hurdle</strong> <span class="divider"> | </span></span> Senator Orrin G. Hatch objects to language that would limit brand-name drug makersâ monopoly protections abroad for their cutting-edge medicines known as biologics.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/13/us/politics/utah-senator-crucial-ally-for-the-pacific-rim-trade-deal-is-now-its-main-hurdle.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/11/13/morning-agenda-several-fed-officials-ready-to-raise-rates/"
+					data-title="Morning Agenda: Several Fed Officials Ready to Raise Rates"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Valeant Stake Exposes Rift at Sequoia | Millenials Make Way Up Ladder at Goldman | Making Angels Out of Investors&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/11/13/morning-agenda-several-fed-officials-ready-to-raise-rates/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":74,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

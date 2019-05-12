@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004349610"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1461233829" />
+<meta name="PUD" content="20160421" />
+<meta name="pdate" content="20160421" />
+<meta name="ptime" content="20160421061709" />
+<meta name="utime" content="20160421104909" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-04-21T10:49:09-04:00" />
+<meta name="DISPLAYDATE" content="April 21, 2016" />
+<meta name="dat" content="April 21, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Anthony, Susan B;Hamilton, Alexander;Jackson, Andrew;King, Martin Luther Jr;Lew, Jacob J;Lincoln, Abraham;Mayer, Marissa;Mohammed bin Salman (1985- );Roosevelt, Eleanor;Stanton, Elizabeth Cady;Tubman, Harriet">
+<meta name="des" content="Automobiles;Banking and Financial Institutions;Car Services and Livery Cabs;Cheating;Economic Conditions and Trends;Fuel Emissions (Transportation);Mergers, Acquisitions and Divestitures;Prices (Fares, Fees and Rates);Regulation and Deregulation of Industry;Securities and Commodities Violations;Stocks and Bonds;Venture Capital">
+<meta name="org" content="Barclays PLC;BlackRock Inc;Credit Suisse Group AG;Deutsche Bank AG;European Central Bank;Federal Reserve System;Mitsubishi Corporation;Pew Charitable Trusts;Saudi Aramco;Securities and Exchange Commission;Silver Lake Partners;SOFTBANK Corporation;Treasury Department;Uber Technologies Inc;Volkswagen AG">
+<meta name="geo" content="Panama;Saudi Arabia">
+<meta name="ticker" content="Barclays PLC|BCS|NYSE;BlackRock Inc|BLK|NYSE;Credit Suisse Group AG|CS|NYSE;Deutsche Bank AG|DB|NYSE;SOFTBANK Corporation|SFTBF|Other OTC;Volkswagen AG|VLKAY|Other OTC" />
+<meta property="article:tag" content="Anthony Susan B" />
+<meta property="article:tag" content="Hamilton Alexander" />
+<meta property="article:tag" content="Jackson Andrew" />
+<meta property="article:tag" content="King Martin Luther Jr" />
+<meta property="article:tag" content="Lew Jacob J" />
+<meta property="article:tag" content="Lincoln Abraham" />
+<meta property="article:tag" content="Mayer Marissa" />
+<meta property="article:tag" content="Mohammed bin Salman (1985- )" />
+<meta property="article:tag" content="Roosevelt Eleanor" />
+<meta property="article:tag" content="Stanton Elizabeth Cady" />
+<meta property="article:tag" content="Tubman Harriet" />
+<meta property="article:tag" content="Automobiles" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Car Services and Livery Cabs" />
+<meta property="article:tag" content="Cheating" />
+<meta property="article:tag" content="Economic Conditions and Trends" />
+<meta property="article:tag" content="Fuel Emissions (Transportation)" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Prices (Fares Fees and Rates)" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Securities and Commodities Violations" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="BlackRock Inc" />
+<meta property="article:tag" content="Credit Suisse Group AG" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="European Central Bank" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Mitsubishi Corporation" />
+<meta property="article:tag" content="Pew Charitable Trusts" />
+<meta property="article:tag" content="Saudi Aramco" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Silver Lake Partners" />
+<meta property="article:tag" content="SOFTBANK Corporation" />
+<meta property="article:tag" content="Treasury Department" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="Volkswagen AG" />
+<meta property="article:tag" content="Panama" />
+<meta property="article:tag" content="Saudi Arabia" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Anthony Susan B,Hamilton Alexander,Jackson Andrew,King Martin Luther Jr,Lew Jacob J,Lincoln Abraham,Mayer Marissa,Mohammed bin Salman (1985- ),Roosevelt Eleanor,Stanton Elizabeth Cady,Tubman Harriet,Automobiles,Banking and Financial Institutions,Car Services and Livery Cabs,Cheating,Economic Conditions and Trends,Fuel Emissions (Transportation),Mergers Acquisitions and Divestitures,Prices (Fares Fees and Rates),Regulation and Deregulation of Industry,Securities and Commodities Violations,Stocks and Bonds,Venture Capital,Barclays PLC,BlackRock Inc,Credit Suisse Group AG,Deutsche Bank AG,European Central Bank,Federal Reserve System,Mitsubishi Corporation,Pew Charitable Trusts,Saudi Aramco,Securities and Exchange Commission,Silver Lake Partners,SOFTBANK Corporation,Treasury Department,Uber Technologies Inc,Volkswagen AG,Panama,Saudi Arabia,DealBook" />
+<meta name="news_keywords" content="Cars,Cheating,Panama" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F04%2F21%2Fmorning-agenda-global-stock-rally%2F" title="Morning Agenda: Global Stock Rally" />
+<meta name="description" content="Change for a $20 &#124; Volkswagen Deal Expected" />
+<meta name="hdl" content="Morning Agenda: Global Stock Rally" />
+<meta property="og:title" content="Morning Agenda: Global Stock Rally" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/04/21/morning-agenda-global-stock-rally/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Change for a $20 &#124; Volkswagen Deal Expected" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Global Stock Rally" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/04/21/morning-agenda-global-stock-rally/" />
+<meta name="twitter:description" content="Change for a $20 &#124; Volkswagen Deal Expected" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Yahoo&#8217;s Troubles Mount' href='//news.blogs.nytimes.com/2016/04/20/morning-agenda-yahoos-troubles-mount/' />
+<link rel='next' title='Morning Agenda: New Limits on Bankers&#8217; Pay' href='//news.blogs.nytimes.com/2016/04/22/morning-agenda-new-limits-on-bankers-pay/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/04/21/morning-agenda-global-stock-rally/' />
+<link rel='shortlink' href='//nyti.ms/1Sxt6F7' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/04/21/morning-agenda-global-stock-rally/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Global Stock Rally - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4643 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Global Stock Rally        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/04/21/morning-agenda-global-stock-rally/"
+	 data-title="Morning Agenda: Global Stock Rally"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Change for a $20 | Volkswagen Deal Expected &lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/04/21/morning-agenda-global-stock-rally/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="April 21, 2016 6:17 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Global Stock Rally</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-04-21T10:17:09+00:00" itemprop="datePublished">April 21, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">April 21, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4643 post type-post status-publish hentry category-dealbook tag-anthony-susan-b tag-automobiles tag-banking-and-financial-institutions tag-barclays-plc tag-blackrock-inc tag-car-services-and-livery-cabs tag-cheating tag-credit-suisse-group-ag tag-deutsche-bank-ag tag-economic-conditions-and-trends tag-european-central-bank tag-federal-reserve-system tag-fuel-emissions-transportation tag-hamilton-alexander tag-jackson-andrew tag-king-martin-luther-jr tag-lew-jacob-j tag-lincoln-abraham tag-mayer-marissa tag-mergers-acquisitions-and-divestitures tag-mitsubishi-corporation tag-mohammed-bin-salman-1985 tag-panama tag-pew-charitable-trusts tag-prices-fares-fees-and-rates tag-regulation-and-deregulation-of-industry tag-roosevelt-eleanor tag-saudi-arabia tag-saudi-aramco tag-securities-and-commodities-violations tag-securities-and-exchange-commission tag-silver-lake-partners tag-softbank-corporation tag-stanton-elizabeth-cady tag-stocks-and-bonds tag-treasury-department tag-tubman-harriet tag-uber-technologies-inc tag-venture-capital tag-volkswagen-ag per-anthony-susan-b per-hamilton-alexander per-jackson-andrew per-king-martin-luther-jr per-lew-jacob-j per-lincoln-abraham per-mayer-marissa per-mohammed-bin-salman-1985 per-roosevelt-eleanor per-stanton-elizabeth-cady per-tubman-harriet des-automobiles des-banking-and-financial-institutions des-car-services-and-livery-cabs des-cheating des-economic-conditions-and-trends des-fuel-emissions-transportation des-mergers-acquisitions-and-divestitures des-prices-fares-fees-and-rates des-regulation-and-deregulation-of-industry des-securities-and-commodities-violations des-stocks-and-bonds des-venture-capital org-barclays-plc org-blackrock-inc org-credit-suisse-group-ag org-deutsche-bank-ag org-european-central-bank org-federal-reserve-system org-mitsubishi-corporation org-pew-charitable-trusts org-saudi-aramco org-securities-and-exchange-commission org-silver-lake-partners org-softbank-corporation org-treasury-department org-uber-technologies-inc org-volkswagen-ag geo-panama geo-saudi-arabia news_keywords-cars news_keywords-cheating news_keywords-panama" id="post-4643">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Global Stock Rally</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-04-21T10:17:09+00:00" itemprop="datePublished">April 21, 2016 6:17 am</time>
+			<!-- date updated --><span class="visually-hidden updated">April 21, 2016 6:17 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/04/21/morning-agenda-global-stock-rally/" data-title="Morning Agenda: Global Stock Rally" data-description="Change for a $20 | Volkswagen Deal Expected ">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>GLOBAL STOCK RALLY </strong> <span class="divider"> | </span></span> Stock, oil and steel prices were all on their way up for a fourth day on Thursday, <a href="//www.bloomberg.com/news/articles/2016-04-20/asia-stocks-set-for-gain-after-u-s-edges-higher-yen-holds-drop">as Bloomberg reports</a>. European shares were up slightly ahead of the European Central Bank policy meeting, while Asia shares reached a four-month high.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Brent crude prices were bolstered</b> by a slip in production in the United States and talk from Iraq about negotiations to freeze output. Steel prices rebounded on signs of strength in the Chinese property market.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Stocks have been surging since February</b>, helped by promising corporate earnings in the United States, the recovery of oil prices and indications of restraint on interest rate increases from the Federal Reserve.</p>
+<p class="story-body-text" itemprop="articleBody">There may be question marks over many parts of Hong Kongâs economy, but stocks there seemed to have shrugged all that off. The Hang Seng index rose 1.8 percent on Thursday, while the <b>MSCI Hong Kong Index</b> closed at its highest point since Nov. 24. Optimists say concerns over monetary tightening from the Federal Reserve and the weakening renminbi have eased, and the shares are too cheap to pass up, <a href="//www.bloomberg.com/news/articles/2016-04-21/hong-kong-stocks-scorn-economic-gloom-as-bull-market-approaches">Bloomberg News reports</a>.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CHANGE FOR A $20</strong> <span class="divider"> | </span></span> United States currency will get its biggest makeover in a century,<br />
+<a href="//www.nytimes.com/2016/04/21/us/women-currency-treasury-harriet-tubman.html?ref=business">Jackie Calmes reports in The New York Times</a>. The slaveholding <b>Andrew Jackson will be ousted for Harriet Tubman</b>, the former slave and abolitionist, on the $20 bill. And women and civil rights leaders will grace the $5 and $10 notes.</p>
+<p class="story-body-text" itemprop="articleBody">Treasury Secretary Jacob J. Lew reneged on his commitment to make a woman the face of the $10 bill. He decided to <b>keep Alexander Hamilton</b>, the first Treasury secretary whose fan base has been bolstered by a Broadway musical based on his life.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Images of women will be added to the back of both the $10 and the $5 notes, however.</b> The Treasury building on the back of the $10 will be replaced with a picture of a 1913 march for the womenâs right to vote, along with five suffrage leaders: <b>Lucretia Mott, Sojourner Truth, Elizabeth Cady Stanton, Alice Paul and Susan B. Anthony.</b></p>
+<p class="story-body-text" itemprop="articleBody">The Lincoln Memorial will remain on the $5 bill, but as the backdrop for a performance there by <b>Marian Anderson</b>, the African-American classical singer who was barred from singing at the segregated Constitution Hall nearby. <b>Eleanor Roosevelt</b>, who arranged the performance, and the <b>Rev. Dr. Martin Luther King</b> will also be featured.</p>
+<p class="story-body-text" itemprop="articleBody">The final designs will be unveiled in 2020. Journalists from The New York Times <a href="//www.nytimes.com/2016/04/21/arts/design/tubmans-in-jacksons-out-whats-it-mean.html">discuss here</a> whether the sweeping change to the currency will affect <b>how Americans think about their history and their money</b>.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> The <b>European Central Bank</b> will hold a news conference to discuss its latest policy decision at 8:30 a.m. <b>General Motors</b> will host a conference call on its first-quarter earnings at 10 a.m. <b>Alphabet</b> will discuss its earnings at 4:30 p.m. <b>Microsoftâs</b> earnings conference call starts at 5:30 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>VOLKSWAGEN DEAL EXPECTED</strong> <span class="divider"> | </span></span> The company is close to completing a deal to resolve claims in the United States over its admission that it rigged vehicles to cheat on pollution tests, <a href="//www.nytimes.com/2016/04/21/business/volkswagen-emissions.html">Jack Ewing reports in The new York Times</a></p>
+<p class="story-body-text" itemprop="articleBody">People involved in the case say the <b>deal is expected to include fines from regulators and compensation to owners that could cost Volkswagen billions of dollars.</b></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.reuters.com/article/us-volkswagen-emissions-usa-idUSKCN0XH2CX">Reuters reports</a> that the deal involves <b>an offer to buy back almost 500,000 rigged diesel cars</b>, citing people briefed on the matter. The buyback offer would include versions of the Jetta sedan, the Golf compact and the Audi A3 sold since 2009. It would not apply to the bigger, 80,000 3.0-liter diesel vehicles also found to have exceeded pollution limits.</p>
+<p class="story-body-text" itemprop="articleBody">Volkswagen has also <b>agreed to a compensation fund for owners</b>, Reuters reports, citing another person briefed on the terms. The fund is expected to add more than $1 billion on top of the cost of the buyback. The sources cited also said that Volkswagen may offer to repair the polluting vehicles if the fix is approved by regulators.</p>
+<p class="story-body-text" itemprop="articleBody">Even at a high price, a settlement would be a major relief for the company. The uncertainty over the financial impact of the scandal has delayed its earnings reports and impaired its ability to raise money on markets.</p>
+<p class="story-body-text" itemprop="articleBody">Judge Charles Breyer of the United States District Court in San Francisco had given Volkswagen until Thursday to reach a settlement with the federal government and with vehicle owners in the United States. <b>The judge has scheduled a hearing in the case for Thursday morning.</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &amp; Acquisitions Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/04/20/business/20SKYMAIN1/20SKYMAIN1-square320.jpg" alt="Yahooâs First Quarter Adds Urgency to Sale Option" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Yahooâs First Quarter Adds Urgency to Sale Option</strong> <span class="divider"> | </span></span> Marissa Mayer, the chief executive of Yahoo, needs to offload the companyâs core business before bidders like Verizon lose interest, Jennifer Saba writes in Breakingviews.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/04/21/business/dealbook/yahoos-first-quarter-adds-urgency-to-sale-option.html">Breakingviews Â»</a></span><span class="divider">Â |Â </span><span class="kicker"><a href="//www.nytimes.com/2016/04/20/technology/yahoo-reports-falling-revenue-and-a-quarterly-loss.html">Yahooâs Troubles Mount, and Revenue Shrinks, as It Vets Suitors</a> <time class="timestamp" datetime="2016-04-19" data-eastern-timestamp="8:07 PM" data-utc-timestamp="1461110871000">8:07 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/04/21/business/21BOWERY/21BOWERY-square320.jpg" alt="AEG Closer to Seizing New York Concert Industry With Bowery Deal" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AEG Closer to Seizing New York Concert Industry With Bowery Deal</strong> <span class="divider"> | </span></span> Industry executives said that the deal would effectively turn the New York market into a battleground between AEG and Live Nation Entertainment.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/04/21/business/media/aeg-closer-to-seizingnew-york-concert-industry-with-bowery-deal.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/04/21/business/db-creditsuisse1/db-creditsuisse1-square320.jpg" alt="Credit Suisse Hires Former Deutsche Bank Executive" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Credit Suisse Hires Former Deutsche Bank Executive</strong> <span class="divider"> | </span></span> Henrik Aslaksen, the former global head of mergers and acquisitions at Deutsche Bank, will join the Swiss bank as head of strategic client coverage.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/04/21/business/dealbook/credit-suisse-hires-former-deutsche-bankexecutive.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2015/04/29/business/30db-barclays-web/30db-barclays-web-square320.jpg" alt="Barclays Names Permanent C.E.O. for Barclaycard Business" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Barclays Names Permanent C.E.O. for Barclaycard Business</strong> <span class="divider"> | </span></span> Amer Sajed joined the British bank from Citigroup in 2006, and he has served as interim chief executive of the credit card business since May 2015.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/04/21/business/dealbook/barclays-names-permanent-ceo-for-barclaycard-business.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Italy Bank Fund Approved by Regulator</strong> <span class="divider"> | </span></span> Italyâs Atlante bank rescue fund has received market regulator approval and exceeded its goal of raising 4 billion euros, or about $4.5 billion.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-21/italy-bank-fund-approved-by-regulator-reaches-money-target">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bank Overdraft Fees Hit Younger Adults Hardest, Pew Says</strong> <span class="divider"> | </span></span> Pew Charitable Trusts said that younger consumers were more likely to use debit cards, and debits made up the majority of transactions resulting in fees.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/04/21/your-money/bank-overdraft-fees-hit-younger-adults-hardest-pew-says.html">Your Money Adviser Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SoftBank Investors Call for Inquiry into the President</strong> <span class="divider"> | </span></span> A group of investors in SoftBank Group has called on the board to investigate Nikesh Arora, the president and chief operating officer, questioning whether the executive has conflicts of interest because of his existing role as a senior adviser to the private equity firm Silver Lake.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-21/softbank-investors-call-for-internal-probe-of-president-arora-in9tcg8v">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Investors Pull $15 Billion From Hedge Funds</strong> <span class="divider"> | </span></span> Hedge funds have suffered their worst quarter in seven years after investors who are starting to fight back against the high fees being charged across the industry pulled out more than $15 billion.<br />
+<span class="kicker"><a href="//www.ft.com/intl/cms/s/0/72b5a244-06fd-11e6-9b51-0fb5e65703ce.html#axzz46EtqjIla"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstoneâs Senfina Hedge Fund Falls 15%</strong> <span class="divider"> | </span></span> Blackstoneâs new hedge fund, its crown jewel last year, has dropped more than 15 percent in value since January, showing how some of the industryâs stars have been wrongfooted by market swings.<br />
+<span class="kicker"><a href="//www.ft.com/intl/cms/s/0/9e53fd4a-0704-11e6-a70d-4e39ac32c284.html#axzz46EtqjIla">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/04/21/business/db-united2/db-united2-square320.jpg" alt="United Continental Settles Battle Over Its Board" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>United Continental Settles Battle Over Its Board</strong> <span class="divider"> | </span></span> The embattled airline named a former chief executive of Air Canada as its new chairman, striking a compromise with two significant investors.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/04/21/business/dealbook/united-continental-board.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Saudi Arabia Mulls Dual Listing for Aramco I.P.O.</strong> <span class="divider"> | </span></span> âWe are thinking about several options,â Prince Mohammed bin Salman, who oversees Saudi Arabian Oil Companyâs Supreme Council, said in an interview. âEither it will be double-listed or maybe we can have a fund in the U.S. market that can only trade and invest in Saudi Aramco, like some of the funds that are already out there that trade in gold or oil.â<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-20/saudi-arabia-mulls-dual-listing-traded-fund-for-aramco-ipo">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Venture Capitalist Warns Over âDirtyâ Fund-Raising Terms </strong> <span class="divider"> | </span></span> Bill Gurley, a venture capitalist who made an early bet on Uber Technologies, sounded the alarm over what he described as a âfundamental sea change in the investment community,â describing how a tighter venture capital market and a dearth of initial public offerings is forcing some start-ups to accept toxic deal terms.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-21/vc-gurley-tells-startups-to-beware-of-dirty-fundraising-terms">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New Delhi Bans Uber âSurge Pricingâ</strong> <span class="divider"> | </span></span> Indiaâs capital city said it was banning âsurge pricingâ by the taxi-hailing app Uber and its local rival Ola, highlighting the challenges the companies still face in what they see as a vast, potentially lucrative market.<br />
+<span class="kicker"><a href="//www.ft.com/intl/cms/s/0/742d189a-0785-11e6-96e5-f85cb08b0730.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz46EtqjIla">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/04/21/business/22ecb/22ecb-square320.jpg" alt="E.C.B. Expected to Stand Pat, but Explore Next Options" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>E.C.B. Expected to Stand Pat, but Explore Next Options</strong> <span class="divider"> | </span></span> After a sweeping series of monetary moves in March, the European Central Bank on Thursday is expected to pause before taking further steps.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/04/22/business/international/ecb-interest-rates.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/04/22/business/22mitsubishi/22mitsubishi-square320.jpg" alt="Japan Regulators Investigate Mitsubishi Over Fuel-Economy Cheating" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Japan Regulators Investigate Mitsubishi Over Fuel-Economy Cheating</strong> <span class="divider"> | </span></span> Transportation regulators began searching for evidence at a technical center after the automaker admitted cheating on fuel-economy tests.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/04/22/business/mitsubishi-cheating-fuel-economy-investigation.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>One Firm Getting What It Wants in Washington: BlackRock</strong> <span class="divider"> | </span></span> A panel on Monday advocated a closer examination of certain asset-management activities and products but not new scrutiny of large fund managers. The guidance affirmed that BlackRock would dodge the âsystemically importantâ label that would mean greater oversight by the Fed.</p>
+<p class="story-body-text" itemprop="articleBody"><span class="kicker"><a href="//www.wsj.com/articles/one-firm-getting-what-it-wants-in-washington-blackrock-1461162812?nl=?nl=dlbk&amp;emc=dlbkpm&amp;emc=edit_dlbkpm_20160420">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/04/18/business/cnbc-theranos/cnbc-theranos-square320.png" alt="Theranos Under Pressure as Inquiries Mount" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Theranos Under Pressure as Inquiries Mount</strong> <span class="divider"> | </span></span> Two federal investigations have added to questions from officials about the company, but the area of scrutiny is unknown, Peter J. Henning and Steven Davidoff Solomon write in White Collar Watch.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/04/21/business/dealbook/theranos-under-pressureas-inquiries-mount.html">White Collar Watch Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>S.E.C. Panel Proposes Stock Exchange Fee-Cutting Experiment</strong> <span class="divider"> | </span></span> The Securities and Exchange Commission should mandate an experiment in cutting stock exchange fees and rebates, a move that could illuminate flaws in a pricing model that critics say creates conflicts of interest, a subcommittee of the regulator has recommended.<br />
+<span class="kicker"><a href="//www.reuters.com/article/stocks-regulations-fees-idUSL2N17N2C8?feedType=RSS&amp;feedName=USLegal">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China Said to Suspend Registrations of Finance Firms</strong> <span class="divider"> | </span></span> China suspended new registrations of finance companies nationwide as authorities started a crackdown on Internet finance, Bloomberg News reports, citing a Caixin report on comments by people familiar with the matter.</p>
+<p class="story-body-text" itemprop="articleBody"><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-21/china-suspends-registrations-of-financial-firms-caixin-reports"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New York Wants Foreign Banks to Hand Over Panama Records</strong> <span class="divider"> | </span></span> New York stateâs banking regulator has ordered 13 foreign banks to turn over information about their contact with a Panamanian law firm that helped register tens of thousands of shell companies, broadening the state and federal authorities investigating revelations related to the Panama data leak.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-04-20/ny-regulator-asks-banks-for-records-linked-to-panama-papers-firm">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody">&nbsp;</p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/04/21/morning-agenda-global-stock-rally/"
+					data-title="Morning Agenda: Global Stock Rally"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Change for a $20 | Volkswagen Deal Expected &lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/04/21/morning-agenda-global-stock-rally/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":55,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

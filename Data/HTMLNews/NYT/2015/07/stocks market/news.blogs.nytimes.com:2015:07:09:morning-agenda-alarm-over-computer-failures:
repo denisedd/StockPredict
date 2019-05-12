@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003789623"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1436439444" />
+<meta name="PUD" content="20150709" />
+<meta name="pdate" content="20150709" />
+<meta name="ptime" content="20150709065724" />
+<meta name="utime" content="20150709105724" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-07-09T10:57:24-04:00" />
+<meta name="DISPLAYDATE" content="July 9, 2015" />
+<meta name="dat" content="July 9, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Appointments and Executive Changes;Banking and Financial Institutions;European Sovereign Debt Crisis (2010- );Hedge Funds;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Regulation and Deregulation of Industry;Stocks and Bonds;Venture Capital">
+<meta name="org" content="Barclays PLC;European Union;Eurozone;New York Stock Exchange;United Airlines;Wall Street Journal">
+<meta name="geo" content="China;Greece">
+<meta name="ticker" content="Barclays PLC|BCS|NYSE" />
+<meta property="article:tag" content="Appointments and Executive Changes" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="European Sovereign Debt Crisis (2010- )" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="Eurozone" />
+<meta property="article:tag" content="New York Stock Exchange" />
+<meta property="article:tag" content="United Airlines" />
+<meta property="article:tag" content="Wall Street Journal" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Greece" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Appointments and Executive Changes,Banking and Financial Institutions,European Sovereign Debt Crisis (2010- ),Hedge Funds,Initial Public Offerings,Mergers Acquisitions and Divestitures,Regulation and Deregulation of Industry,Stocks and Bonds,Venture Capital,Barclays PLC,European Union,Eurozone,New York Stock Exchange,United Airlines,Wall Street Journal,China,Greece,DealBook" />
+<meta name="news_keywords" content="Appointments and Executive Changes,China,EU,Euro Crisis,Eurozone,Greece,Hedge fund,IPO,Mergers and Acquistions,NYSE,Regulation and Deregulation,Stocks and Bonds,United Airlines,Venture capital,Wall Street Journal" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F07%2F09%2Fmorning-agenda-alarm-over-computer-failures%2F" title="Morning Agenda: Alarm Over Computer Failures" />
+<meta name="description" content="Alarm Over Computer Failures &#124; Chinese Stocks End Slump But Wariness Remains &#124; Euro Used as Weapon &#124; Why Barclays C.E.O. Was Ousted" />
+<meta name="hdl" content="Morning Agenda: Alarm Over Computer Failures" />
+<meta property="og:title" content="Morning Agenda: Alarm Over Computer Failures" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/07/09/morning-agenda-alarm-over-computer-failures/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Alarm Over Computer Failures &#124; Chinese Stocks End Slump But Wariness Remains &#124; Euro Used as Weapon &#124; Why Barclays C.E.O. Was Ousted" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Alarm Over Computer Failures" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/07/09/morning-agenda-alarm-over-computer-failures/" />
+<meta name="twitter:description" content="Alarm Over Computer Failures &#124; Chinese Stocks End Slump But Wariness Remains &#124; Euro Used as Weapon &#124; Why Barclays C.E.O. Was Ousted" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Economic Reforms at Risk as Chinese Markets Fall' href='//news.blogs.nytimes.com/2015/07/08/morning-agenda-economic-reforms-at-risk-as-chinese-markets-fall/' />
+<link rel='next' title='Morning Agenda: Greece Accepts Austerity Measures' href='//news.blogs.nytimes.com/2015/07/10/morning-agenda-greece-accepts-austerity-measures/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/07/09/morning-agenda-alarm-over-computer-failures/' />
+<link rel='shortlink' href='//nyti.ms/1G9bkeu' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/07/09/morning-agenda-alarm-over-computer-failures/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Alarm Over Computer Failures - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2730 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Alarm Over Computer Failures        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/07/09/morning-agenda-alarm-over-computer-failures/"
+	 data-title="Morning Agenda: Alarm Over Computer Failures"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Alarm Over Computer Failures | Chinese Stocks End Slump But Wariness Remains | Euro Used as Weapon | Why Barclays C.E.O. Was Ousted&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/07/09/morning-agenda-alarm-over-computer-failures/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 9, 2015 6:57 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Alarm Over Computer Failures</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-07-09T10:57:24+00:00" itemprop="datePublished">July 9, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">July 9, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2730 post type-post status-publish hentry category-dealbook tag-appointments-and-executive-changes tag-banking-and-financial-institutions tag-barclays-plc tag-china tag-european-sovereign-debt-crisis-2010 tag-european-union tag-eurozone tag-greece tag-hedge-funds tag-initial-public-offerings tag-mergers-acquisitions-and-divestitures tag-new-york-stock-exchange tag-regulation-and-deregulation-of-industry tag-stocks-and-bonds tag-united-airlines tag-venture-capital tag-wall-street-journal des-appointments-and-executive-changes des-banking-and-financial-institutions des-european-sovereign-debt-crisis-2010 des-hedge-funds des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-regulation-and-deregulation-of-industry des-stocks-and-bonds des-venture-capital org-barclays-plc org-european-union org-eurozone org-new-york-stock-exchange org-united-airlines org-wall-street-journal geo-china geo-greece news_keywords-appointments-and-executive-changes news_keywords-china news_keywords-eu news_keywords-euro-crisis news_keywords-eurozone news_keywords-greece news_keywords-hedge-fund news_keywords-ipo news_keywords-mergers-and-acquistions news_keywords-nyse news_keywords-regulation-and-deregulation news_keywords-stocks-and-bonds news_keywords-united-airlines news_keywords-venture-capital-2 news_keywords-wall-street-journal" id="post-2730">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Alarm Over Computer Failures</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-07-09T10:57:24+00:00" itemprop="datePublished">July 9, 2015 6:57 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 9, 2015 6:57 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/07/09/morning-agenda-alarm-over-computer-failures/" data-title="Morning Agenda: Alarm Over Computer Failures" data-description="Alarm Over Computer Failures | Chinese Stocks End Slump But Wariness Remains | Euro Used as Weapon | Why Barclays C.E.O. Was Ousted">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ALARM OVER COMPUTER FAILURES</strong> <span class="divider"> | </span></span> There was no evidence that the computer failures that disrupted the New York Stock Exchange, United Airlines and The Wall Street Journalâs website on Wednesday were part of a coordinated attack, but <a href="//www.nytimes.com/2015/07/09/business/dealbook/new-york-stock-exchange-suspends-trading.html"> Nathaniel Popper writes in DealBook</a> that they are likely to revive a debate about how regulators can better <b> safeguard the markets</b> from technological glitches. A person who was on a call with other members of the trading industry told Mr. Popper that New York exchange employees <b> expressed panic</b> as they acknowledged they had <b> âlost control of the system.â</b> </p>
+<p class="story-body-text" itemprop="articleBody">Traders said the exchange <b> gave them no warning</b> before shutting down all trading at 11:32 a.m., saying only on its website that âadditional information will follow as soon as possible.â Traders on the floor sought information from employees of the exchange, who told them that the exchange had been updating software before the trading day began, and that the <b> software had contained a bug</b> that could not be fixed without shutting down the system, Mr. Popper writes. Trading resumed at 3:10 p.m., but in the meantime, it was business as usual on Wall Street, thanks to the proliferation of other exchanges and trading platforms, <a href="//www.nytimes.com/2015/07/09/business/dealbook/an-offline-nyse-makes-barely-a-ripple-in-a-days-trading.html"> Michael J. de la Merced writes in DealBook</a>.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CHINESE STOCKS END SLUMP BUT WARINESS REMAINS</strong> <span class="divider"> | </span></span> Chinese stock markets halted their slump on Thursday, with the main Shanghai index closing 5.8 percent higher and the Shenzhen market gaining 3.8 percent. âBut even as shares rose, there were warnings that mainland markets have further to fall,â <a href="//www.nytimes.com/2015/07/10/business/chinese-stocks-stabilize-but-fears-persist.html"> Paul Mozur writes in The New York Times</a>, citing high valuations of small companies. Also, as David Barboza of The New York Times notes, at least <b> a third of the companies</b> listed on the major stock exchanges in China have had <b> trading in their shares suspended</b> as of Wednesday. </p>
+<p class="story-body-text" itemprop="articleBody">Though both major exchanges are <b> down 30 percent to 40 percent</b> in six weeks, they are still about <b>75 percent higher</b> compared with a year earlier, Mr. Barboza writes. The Chinese government would do well to remember that <b> âthe stock market is not the economy</b>, and the economy is not the stock market,â <a href="//www.nytimes.com/2015/07/09/upshot/the-problem-with-chinas-efforts-to-prop-up-its-stock-market.html"> Neil Irwin writes in The Upshot</a>. All of the governmentâs efforts to prop up the stock markets are misguided, Mr. Irwin contends, because officials are ignoring evidence that Chinese stocks were <b> overvalued at their mid-June levels</b>, skyrocketing in the preceding year âwithout much fundamental improvement in earnings or growth in the Chinese economy to justify it.â He adds: âWhen a government intervenes to try to prevent markets from adjusting to sensible levels, it can mean <b> pouring money down a sinkhole</b> and merely delaying an inevitable correction.â<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>EURO USED AS WEAPON </strong> <span class="divider"> | </span></span> In requesting a three-year loan on Wednesday from the eurozoneâs bailout fund, Greece said it would provide specific measures on Thursday to demonstrate its commitment to shoring up its finances, <a href="//www.nytimes.com/2015/07/09/business/international/tsipras-greece-debt.html"> Niki Kitsantonis and James Kanter write in The New York Times</a>. Athens has until the end of Thursday to submit that proposal, and until Sunday to agree on a bailout deal, but right now itâs not clear how big a loan Greece needs. Some economists estimate that Greece will <b> need 50 billion euros</b>, or about $55 billion, and possibly more, Ms. Kitsantonis and Mr. Kanter write. </p>
+<p class="story-body-text" itemprop="articleBody">In the standoff between Greece and its creditors, the euro, which was supposed to be a unifying force in Europe, has turned into a weapon used by both sides, <a href="//www.nytimes.com/2015/07/09/business/dealbook/greek-debt-dispute-highlights-prospect-of-a-euro-exit.html"> Peter Eavis writes in DealBook</a>. Greeceâs creditors appear to <b> gain the most leverage</b> in raising the specter of Greeceâs exit from the eurozone, Mr. Eavis writes, because they know that the Greek people want to stick with the euro. Greeceâs leaders have criticized that tactic, calling it âblackmail,â but they are betting that <b> fears of a disruptive Greek departure</b> could force creditors to compromise. </p>
+<p class="story-body-text" itemprop="articleBody">No matter which side prevails, analysts say that some of the important ideals behind the euro â such as cooperation and inclusivity â have been tarnished. âTo be honest, <b> the dream has died</b> regardless of what happens with Greece, because that <b> dream was just a fantasy</b>,â said Jens J. Nordvig, an analyst with Nomura Securities and the author of âThe Fall of the Euro.â<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b> Weekly jobless claims</b> are out at 8:30 a.m. <b> Pepsico</b> and <b> Walgreens Boots Alliance</b> report earnings today. <b> Lael Brainard</b>, a Federal Reserve governor, will speak about the future of regulatory reform at the Bipartisan Policy Center in Washington at 10 a.m. <b> Esther George</b>, president of the Kansas City Fed and an alternate voting member of the Fedâs policy-setting committee, discusses monetary policy in a speech at Oklahoma State University at 11:30 a.m. (12:30 a.m. E.D.T.). <b> T. Boone Pickens</b>, the founder of BP Capital, is scheduled to be on CNBC at 2 p.m. <b> Tim Armstrong</b>, AOLâs chief executive, is scheduled to appear on Bloomberg Television at 9:40 a.m. and <b> Douglas M. Hodge</b>, Pimcoâs chief executive, at 2 p.m.</p>
+<p class="story-body-text" itemprop="articleBody"><b> On the Hill:</b> The House Financial Services Committee holds a hearing titled âThe Dodd-Frank Act Five Years Later: Are We More Stable?â at 10 a.m.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>WHY BARCLAYS C.E.O. WAS OUSTED</strong> <span class="divider"> | </span></span> In his three years as chief executive of Barclays, Antony Jenkins worked to change the bankâs culture to make it more risk-averse and to improve the bankâs capital, but that wasnât enough for the bankâs directors, <a href="//www.nytimes.com/2015/07/09/business/dealbook/antony-jenkins-to-step-down-as-barclays-chief-executive.html"> Chad Bray writes in DealBook</a>. John McFarlane, the Barclays chairman, noted on Wednesday that the stock price was still around the <b> same level it was six years ago</b> and that the <b> companyâs dividend remained flat</b>. Managementâs plans to reward shareholders were âtoo far out in the future,â he said. Mr. Jenkins also <b> differed with Thomas King</b>, the head of the investment banking business, over the unitâs strategic direction, people with knowledge of the discussions told Mr. Bray. </p>
+<p class="story-body-text" itemprop="articleBody">As for Mr. Jenkinsâs successor, Mr. Bray writes that one possible internal candidate is <b> Tushar Morzaria</b>, who is well regarded after joining the bank as group finance director in 2013 from JPMorgan Chase. The Financial Times came up with a <a href="//www.ft.com/intl/cms/s/0/27a48036-256c-11e5-9c4e-a775d2b173ca.html"> list of other candidates</a>, identifying <b> Colm Kelleher</b>, president of Morgan Stanleyâs institutional securities business, as the most likely external hire.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>GVC Holdings Offers to Buy Gambling Rival Bwin.Party</strong> <span class="divider"> | </span></span> The deal would value Bwin.Party at about $1.4 billion and comes just two years after GVC and William Hill teamed up to acquire Sportingbet.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/10/business/dealbook/gvc-holdings-offers-to-buy-gambling-rival-bwinparty.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>German Automakers Said to Lead Bidding for Nokiaâs Mapping Unit</strong> <span class="divider"> | </span></span> BMW, Daimler and Volkswagen are feeling less pressure to pay a high price to buy Here, Nokiaâs digital mapping service, because rival bidders like Uber have dropped out, Reuters reports, citing people familiar with the process.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/07/08/daimler-nokia-standoff-idUSL8N0ZO2VD20150708"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Cutting Jobs, Microsoft Turns Page on Nokia Deal" src="https://static01.nyt.com/images/2015/07/09/business/09MICROSOFT/09MICROSOFT-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Cutting Jobs, Microsoft Turns Page on Nokia Deal</strong> <span class="divider"> | </span></span> The company will shed more than 6 percent of its workers and take a charge against earnings related to its acquisition of Nokiaâs smartphone business.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/09/technology/microsoft-layoffs.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Breakingviews: Microsoftâs Write-Down on Nokia Adds to String of Merger Missteps" src="https://static01.nyt.com/images/2015/07/09/business/dbpix-nokia/dbpix-nokia-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Microsoftâs Write-Down on Nokia Adds to String of Merger Missteps</strong> <span class="divider"> | </span></span> Microsoftâs attempts to move beyond its core strength in business software through acquisitions has cost it about $14 billion in write-downs over the last three years.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/09/business/dealbook/microsofts-write-down-on-nokia-adds-to-string-of-merger-missteps.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Paramount and 2 Theater Chains in Deal to Hurry 2 Films to Digital</strong> <span class="divider"> | </span></span> Aimed at millennials, the low-budget franchise films in the deal will head to digital a bit faster than usual.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/09/business/media/paramount-and-2-theater-chains-in-deal-to-hurry-2-films-to-digital.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Citigroup Said to Gather Puerto Rico Bondholders on Monday</strong> <span class="divider"> | </span></span> Citigroup will host a meeting of Puerto Rico bondholders on Monday in New York that will include a presentation by Anne Krueger, a former International Monetary Fund official, The Wall Street Journal reports, citing a person familiar with the situation.<br /><span class="kicker"><a href="//www.wsj.com/articles/citigroup-to-host-monday-meeting-with-puerto-rico-bondholders-1436367016">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ex-Manager at Waddell &#038; Reed Starts Investment Firm</strong> <span class="divider"> | </span></span> Ryan Caldwell, who recently left the mutual fund company Waddell &#038; Reed Financial, has formed an investment firm, Chiron Investment Management, with GPS Investment Partners, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/ex-manager-at-waddell-reed-others-form-investment-firm-1436414608"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>How Bloomberg Keeps Traders Addicted to Its Terminals</strong> <span class="divider"> | </span></span> The Bloomberg terminal is largely unchanged since its introduction in the 1980s, but it has firmly wormed itself into the fabric of finance, The Financial Times reports. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/5d6c2d9c-1f61-11e5-ab0f-6bb9974f25d0.html"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Automated Analyst Reports Designed for Wall Street</strong> <span class="divider"> | </span></span> Several start-ups that use artificial intelligence to write news stories and other reports are now looking to write more analyst reports for banks and financial service companies, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/robots-on-wall-street-firms-try-out-automated-analyst-reports-1436434381"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>I.R.S. Cracks Down on Hedge Fund Tax Strategy</strong> <span class="divider"> | </span></span> Hedge funds like Renaissance Technologies have used complex financial structures known as basket options to bypass taxes on short-term trades.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/09/business/dealbook/irs-cracks-down-on-hedge-fund-tax-strategy.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ConAgra Expands Board as Part of Agreement With Jana Partners</strong> <span class="divider"> | </span></span> ConAgra Foods has agreed to add two members to its board as part of an agreement with Jana Partners, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/conagra-expands-board-in-agreement-with-jana-partners-1436391613"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Appaloosa Management Founder to Help Lead Jeb Bush Fund-Raiser</strong> <span class="divider"> | </span></span> David Tepper, the billionaire co-founder of Appaloosa Management, is among the co-chairmen of a fund-raiser for the Republican presidential contender Jeb Bush later this month in New Jersey, The New York Observer reports.<br /><span class="kicker"><a href="//observer.com/2015/07/bush-lands-david-tepper-nj-and-ny-stops-show-strength-in-christie-country/"> THE NEW YORK OBSERVER </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Albertsons, Big Grocery Chain, Files for I.P.O." src="https://static01.nyt.com/images/2015/07/08/business/dealbook/dbpix-safeway/dbpix-safeway-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Albertsons, Big Grocery Chain, Files for I.P.O.</strong> <span class="divider"> | </span></span> A public stock listing would be an exit from its years of private ownership under a consortium led by the investment firm Cerberus Capital Management.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/09/business/dealbook/albertsons-big-grocery-chain-files-for-ipo.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Yahoo Will Enter Daily Fantasy Sports Market" src="https://static01.nyt.com/images/2015/07/09/business/09yahoo-web1/09yahoo-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Yahoo Will Enter Daily Fantasy Sports Market</strong> <span class="divider"> | </span></span> The Internet company says it will host daily and one-week fantasy games, joining a market estimated to generate $2.6 billion in revenue this year.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/09/technology/yahoo-will-enter-daily-fantasy-sports-market.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Fed Still Looking at Raising Rates This Year, Minutes Show" src="https://static01.nyt.com/images/2015/07/09/business/09FED/09FED-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fed Still Looking at Raising Rates This Year, Minutes Show</strong> <span class="divider"> | </span></span> The central bankâs most recent meeting, in June, predated the worsening of the Greek debt crisis and the extended slump of the Chinese stock market.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/09/business/economy/federal-reserve-rates-june-meeting-minutes.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Plan to Curb U.S. Taxation of Overseas Profit Finds Bipartisan Support" src="https://static01.nyt.com/images/2015/07/09/business/09TAX1/09TAX1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Plan to Curb U.S. Taxation of Overseas Profit Finds Bipartisan Support</strong> <span class="divider"> | </span></span> Two senior senators from either side of the aisle proposed significantly reducing such taxation, in return for a tax bite to pay for highways and infrastructure.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/09/business/end-to-us-taxation-of-overseas-profit-finds-bipartisan-support.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Bad Math and a Coming Public Pension Crisis " src="https://static01.nyt.com/images/2015/07/09/business/09PENSION/09PENSION-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bad Math and a Coming Public Pension Crisis </strong> <span class="divider"> | </span></span> A panel of senior actuaries will consider whether to update, or elaborate on, the existing actuarial standards for public pensions.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/09/business/bad-math-and-a-coming-public-pension-crisis.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hired Hacker Who Named Clients Now Fears Retaliation</strong> <span class="divider"> | </span></span> Eric Saldarriaga, a private investigator convicted of hacking into personal email accounts, sought to keep his cooperation with prosecutors secret, fearing retaliation from his clients.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/09/business/dealbook/hacker-feared-retaliation-from-clients-court-documents-show.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/07/09/morning-agenda-alarm-over-computer-failures/"
+					data-title="Morning Agenda: Alarm Over Computer Failures"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Alarm Over Computer Failures | Chinese Stocks End Slump But Wariness Remains | Euro Used as Weapon | Why Barclays C.E.O. Was Ousted&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/07/09/morning-agenda-alarm-over-computer-failures/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":60,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

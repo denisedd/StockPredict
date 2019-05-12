@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004285186"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1458642038" />
+<meta name="PUD" content="20160322" />
+<meta name="pdate" content="20160322" />
+<meta name="ptime" content="20160322062038" />
+<meta name="utime" content="20160323175538" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-03-23T17:55:38-04:00" />
+<meta name="DISPLAYDATE" content="March 22, 2016" />
+<meta name="dat" content="March 22, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Icahn, Carl C">
+<meta name="des" content="Anbang Insurance Group Co;Credit Default Swaps;Foreign Investments;Hedge Funds">
+<meta name="org" content="American International Group Inc;Apple Inc;Bangladesh;Citigroup Inc;Deutsche Bank AG;Federal Reserve Bank of New York;Goldman Sachs Group Inc;Information Handling Services Inc;Justice Department;Markit Ltd.;Marriott Vacations Worldwide Corporation;Securities and Exchange Commission;Starwood Hotels &amp; Resorts Worldwide Inc;Statoil ASA;Supreme Court (US);UBS Group A.G.;Valeant Pharmaceuticals International Inc;Yahoo! Inc">
+<meta property="article:tag" content="Icahn Carl C" />
+<meta property="article:tag" content="Anbang Insurance Group Co" />
+<meta property="article:tag" content="Credit Default Swaps" />
+<meta property="article:tag" content="Foreign Investments" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="American International Group Inc" />
+<meta property="article:tag" content="Apple Inc" />
+<meta property="article:tag" content="Bangladesh" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Federal Reserve Bank of New York" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Information Handling Services Inc" />
+<meta property="article:tag" content="Justice Department" />
+<meta property="article:tag" content="Markit Ltd." />
+<meta property="article:tag" content="Marriott Vacations Worldwide Corporation" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Starwood Hotels &amp; Resorts Worldwide Inc" />
+<meta property="article:tag" content="Statoil ASA" />
+<meta property="article:tag" content="Supreme Court (US)" />
+<meta property="article:tag" content="UBS Group A.G." />
+<meta property="article:tag" content="Valeant Pharmaceuticals International Inc" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Icahn Carl C,Anbang Insurance Group Co,Credit Default Swaps,Foreign Investments,Hedge Funds,American International Group Inc,Apple Inc,Bangladesh,Citigroup Inc,Deutsche Bank AG,Federal Reserve Bank of New York,Goldman Sachs Group Inc,Information Handling Services Inc,Justice Department,Markit Ltd.,Marriott Vacations Worldwide Corporation,Securities and Exchange Commission,Starwood Hotels &amp; Resorts Worldwide Inc,Statoil ASA,Supreme Court (US),UBS Group A.G.,Valeant Pharmaceuticals International Inc,Yahoo! Inc,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F03%2F22%2Fmorning-agenda-leon-cooperman-could-face-showdown-with-regulators%2F" title="Morning Agenda: Leon Cooperman Could Face Showdown With Regulators" />
+<meta name="description" content="William Ackman Bets Again on Valeant, But It Could Still Crumble &#124; Marriott Raises Bid for Starwood" />
+<meta name="hdl" content="Morning Agenda: Leon Cooperman Could Face Showdown With Regulators" />
+<meta property="og:title" content="Morning Agenda: Leon Cooperman Could Face Showdown With Regulators" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/03/22/morning-agenda-leon-cooperman-could-face-showdown-with-regulators/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="William Ackman Bets Again on Valeant, But It Could Still Crumble &#124; Marriott Raises Bid for Starwood" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Leon Cooperman Could Face Showdown With Regulators" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/03/22/morning-agenda-leon-cooperman-could-face-showdown-with-regulators/" />
+<meta name="twitter:description" content="William Ackman Bets Again on Valeant, But It Could Still Crumble &#124; Marriott Raises Bid for Starwood" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Banks Pull Financing From Coal Industry' href='//news.blogs.nytimes.com/2016/03/21/morning-agenda-banks-pull-financing-from-coal-industry/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/03/22/what-were-reading-138/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/03/22/morning-agenda-leon-cooperman-could-face-showdown-with-regulators/' />
+<link rel='shortlink' href='//nyti.ms/1Rhtmlr' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/03/22/morning-agenda-leon-cooperman-could-face-showdown-with-regulators/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Leon Cooperman Could Face Showdown With Regulators - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4442 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Leon Cooperman Could Face Showdown With Regulators        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/03/22/morning-agenda-leon-cooperman-could-face-showdown-with-regulators/"
+	 data-title="Morning Agenda: Leon Cooperman Could Face Showdown With Regulators"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;William Ackman Bets Again on Valeant, But It Could Still Crumble | Marriott Raises Bid for Starwood&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/03/22/morning-agenda-leon-cooperman-could-face-showdown-with-regulators/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="March 22, 2016 6:20 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Leon Cooperman Could Face Showdown With Regulators</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-03-22T10:20:38+00:00" itemprop="datePublished">March 22, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">March 22, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4442 post type-post status-publish hentry category-dealbook tag-american-international-group-inc tag-anbang-insurance-group-co tag-apple-inc tag-bangladesh tag-citigroup-inc tag-credit-default-swaps tag-deutsche-bank-ag tag-federal-reserve-bank-of-new-york tag-foreign-investments tag-goldman-sachs-group-inc tag-hedge-funds tag-icahn-carl-c tag-information-handling-services-inc tag-justice-department tag-markit-ltd tag-marriott-vacations-worldwide-corporation tag-securities-and-exchange-commission tag-starwood-hotels-resorts-worldwide-inc tag-statoil-asa tag-supreme-court-us tag-ubs-group-a-g tag-valeant-pharmaceuticals-international-inc tag-yahoo-inc per-icahn-carl-c des-anbang-insurance-group-co des-credit-default-swaps des-foreign-investments des-hedge-funds org-american-international-group-inc org-apple-inc org-bangladesh org-citigroup-inc org-deutsche-bank-ag org-federal-reserve-bank-of-new-york org-goldman-sachs-group-inc org-information-handling-services-inc org-justice-department org-markit-ltd org-marriott-vacations-worldwide-corporation org-securities-and-exchange-commission org-starwood-hotels-resorts-worldwide-inc org-statoil-asa org-supreme-court-us org-ubs-group-a-g org-valeant-pharmaceuticals-international-inc org-yahoo-inc" id="post-4442">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Leon Cooperman Could Face Showdown With Regulators</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-03-22T10:20:38+00:00" itemprop="datePublished">March 22, 2016 6:20 am</time>
+			<!-- date updated --><span class="visually-hidden updated">March 22, 2016 6:20 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/03/22/morning-agenda-leon-cooperman-could-face-showdown-with-regulators/" data-title="Morning Agenda: Leon Cooperman Could Face Showdown With Regulators" data-description="William Ackman Bets Again on Valeant, But It Could Still Crumble | Marriott Raises Bid for Starwood">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>LEON COOPERMAN COULD FACE SHOWDOWN WITH REGULATORS</strong> <span class="divider"> | </span></span> Leon G. Cooperman and his $5.2 billion hedge fund Omega Advisors received a notice from the Securities and Exchange Commission saying <b>they could face enforcement action over trading violations</b>,<br />
+<a href="//www.nytimes.com/2016/03/22/business/dealbook/leon-cooperman-and-omega-advisors-receive-sec-notice.html?ref=dealbook">Alexandra Stevenson and Matthew Goldstein report in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Cooperman said it was related to the trading of a single security â Atlas Pipeline â in July 2010 and a possible third party. Omega had been invested in the security since 2007. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Cooperman defended himself and his firm vigorously, saying, <b>âI am not going to let these guys change my legacy.â</b> </p>
+<p class="story-body-text" itemprop="articleBody">He said he had been called to testify before the regulator more than a week ago.<br />
+âI donât believe the government investigation will have an impact,â he added. âIf I were to reach a contrary conclusion, I would close up shop and give you back your money.â </p>
+<p class="story-body-text" itemprop="articleBody">Omega has had a tough time. Its Overseas Partners fund lost 10.4 percent in 2015. <b>The firm is down 6 percent this year.</b> </p>
+<p class="story-body-text" itemprop="articleBody">The investigation indicates that regulators have not given up on pursuing improper trading cases against the hedge fund industry in spite of an unfavorable court ruling more than a year ago.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>WILLIAM ACKMAN BETS AGAIN ON VALEANT, BUT IT COULD STILL CRUMBLE</strong> <span class="divider"> | </span></span> The schadenfreude on Wall Street has been thick since William A. Ackman was dethroned, </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/03/22/business/dealbook/bill-ackman-bets-again-on-valeant-taking-a-seat-on-the-board.html?ref=dealbook">Andrew Ross Sorkin writes in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Mr. Ackmanâs funds are down about 47 percent</b> and his miscalculated investment in Valeant Pharmaceuticals has turned into an unmitigated disaster.</p>
+<p class="story-body-text" itemprop="articleBody">Valeant said it would restate its earnings and pushed J. Michael Pearson, the chief executive, to step down, <a href="//www.nytimes.com/2016/03/22/business/valeant-ackman-pearson-earnings.html">Katie Thomas and Andrew Pollack report in The New York Times</a>. <b>But Mr. Ackman, who made his name spotting financial fraud, missed signs of chicanery at Valeant.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Ackman would have to generate returns of 50 to 70 percent in his funds to earn a performance fee, Mr. Sorkin writes. <b>This would take a near miracle.</b> </p>
+<p class="story-body-text" itemprop="articleBody"><b>The damage from the bet has also cascaded across Wall Street and around the world.</b>  Some followed Mr. Ackman into Valeant, Deutsche Bank helped underwrite a public offering for Mr. Ackmanâs funds. UBS also led Mr. Ackmanâs offerings. </p>
+<p class="story-body-text" itemprop="articleBody">The Rothschild Bank and its wealth management unit bought $274 million of Pershing stock on behalf of its clients. Qatarâs investment fund also took a $141 million stake. The Blackstone Group bought into the offering as well as working as an adviser to Pershing. Even Carl Icahn, Mr. Ackmanâs former nemesis, has taken a hit via his stake in American International Group, which has a stake in Mr. Ackmanâs fund.<br />
+<b>Pension funds that manage money for teachers, police and firefighters have stakes in Pershing too.</b> </p>
+<p class="story-body-text" itemprop="articleBody">All this has <b>set off gossip in New York real estate circles</b>, where agents have begun speculating about the future of Mr. Ackmanâs property investments. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Ackman believes he can get back to even within a year, but <b>he may have to turn things around sooner</b> as May is the next window for investors to ask Mr. Ackman for their money back. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Ackman may be maintaining his optimism, but Valeantâs board looks like a toxic mixture,<br />
+<a href="//www.nytimes.com/2016/03/22/business/dealbook/valeants-struggles-could-lead-it-to-crumble.html?ref=dealbook">Robert Cyran writes in Breakingviews</a>. The company pointed the finger at Howard B. Schiller, the companyâs former chief financial officer, for âimproper conduct.â <b>Mr. Schiller has refused to quit as a director, so he will be sitting on the board along with Mr. Ackman and a nominee for ValueAct Capital.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Valeantâs failure to file audited financial statements on time may put it in default and potentially force it to repay slugs of debt. Raising new cash would be a challenge even without the companyâs other problems. </p>
+<p class="story-body-text" itemprop="articleBody">Valeantâs indebtedness stems from the serial acquisition of sometimes mediocre assets at inflated prices â if anything, Valeant will have to sell assets to reduce debt. <b>It is in a fight for survival</b>, Mr. Cyran writes.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The House Financial Services committee will hear testimony from Treasury Secretary Jacob J. Lew on the <b>state of the international financial system</b> at 10 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>MARRIOTT RAISES BID FOR STARWOOD</strong> <span class="divider"> | </span></span> Marriott International sweetened its bid for Starwood Hotels and Resorts Worldwide, but <b>it may not be enough to deter the Anbang Insurance Group and its co-investors</b>, who swooped in with a bid last week,<br />
+<a href="//www.nytimes.com/2016/03/22/business/dealbook/marriott-raises-bid-for-starwood.html?ref=dealbook">Leslie Picker reports in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Under Marriottâs new offer, shareholders would receive $21 a share in cash and 0.8 share of Marriott for each share of Starwood. <b>The deal values Starwood at $79.53 a share, or $13.6 billion</b>, as of the market close on Friday. This compares with last weekâs offer of $78 a share, worth about $13.2 billion. </p>
+<p class="story-body-text" itemprop="articleBody">Marriottâs proposal may not be on the table for long â analysts say that Anbang may come back with another offer and that <b>the new bid does not do much to deter rivals.</b> The breakup fee has increased from $400 million to $450 million, and Starwood has agreed to reimburse Marriott for its financing-related costs, up to $18 million.  <b>Morningstar said the Anbang consortium would have to offer around $86 a share to be competitive with Marriottâs latest proposal.</b> </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker">DEAL NOTES</h6>
+<div class="right">
+<div class="inline"></div>
+</div>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Andrew S. Grove, Longtime Chief of Intel, Dies at 79" src="https://static01.nyt.com/images/2016/03/22/obituaries/22grove/22grove-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Andrew S. Grove, Longtime Chief of Intel, Dies at 79</strong> <span class="divider"> | </span></span> He helped lead the semiconductor revolution, which proved to be as momentous for economic and social development as hydrocarbon fuels, electricity and telephones were in earlier eras.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/22/technology/andrew-grove-intel-obituary.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="IHS and Markit, Providers of Data and Analytics, Agree to Merge" src="https://static01.nyt.com/images/2016/03/22/business/db-ihs1/db-ihs1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>IHS and Markit, Providers of Data and Analytics, Agree to Merge</strong> <span class="divider"> | </span></span> The combined company, IHS Markit, will provide services to more than 50,000 customers and will have about $3.3 billion in annual revenue.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/22/business/dealbook/ihs-markit-deal.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bang &#038; Olufsen in Takeover Talks With Chinese Company </strong> <span class="divider"> | </span></span> Sparkle Roll Group of China, which sells luxury cars and goods,  said it was in talks to acquire Bang &#038; Olufsen, the Danish maker of high-end hi-fi systems.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-22/china-s-sparkle-roll-in-talks-to-buy-denmark-s-bang-olufsen"> bloomberg news </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Judge Approves Orange County Register Sale to Digital First</strong> <span class="divider"> | </span></span> A higher bid by Tribune Publishing for the California newspaper had been blocked by a court order at the request of the Justice Department.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/22/business/media/judge-approves-orange-county-register-sale-to-digital-first.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Analysts Urge Citigroup Split</strong> <span class="divider"> | </span></span> The bankâs stock price is being held back by capital rules, Keefe Bruyette &amp; Woods contends in a new report.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/22/business/dealbook/analysts-urge-citigroup-split.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>No Respite for Yahoo, Battling on 2 Fronts</strong> <span class="divider"> | </span></span> The company is trying both to quell an activist insurgency and to explore selling itself at the same time. Either would be difficult alone.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/22/business/dealbook/yahoo-parries-trouble-on-two-fronts-at-once.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sequoia Capital Looks to Raise Money for China Funds</strong> <span class="divider"> | </span></span> Sequoia Capital is looking to raise as much as $1.45 billion for a pair of funds to invest in Chinese technology start-ups, Bloomberg News reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-21/sequoia-capital-said-to-seek-up-to-1-5-billion-for-china-funds"> bloomberg news </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Credit Default Swaps Make Restructuring More Difficult</strong> <span class="divider"> | </span></span> An exchange offer involving Norske Skog shows the growing difficulty of restructuring distressed companies and of knowing where bondholdersâ interests lie, Stephen J. Lubben writes in the In Debt column.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/22/business/dealbook/credit-default-swaps-make-restructuring-more-difficult.html">In Debt &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>U.S. Supreme Court Weighs Racketeering Lawâs Scope in R.J. Reynolds Case</strong> <span class="divider"> | </span></span> The Supreme Court on Monday wrestled with whether a lawsuit filed by European Union countries can move forward. The suit accuses the American cigarette maker R.J. Reynolds of running a global money-laundering scheme involving narcotics smuggling into Europe.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2016/03/21/us/21reuters-usa-court-racketeering.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Apple May Be Willing to Risk Contempt Charge" src="https://static01.nyt.com/images/2016/03/22/business/22db-whitecollar/22db-whitecollar-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Apple May Be Willing to Risk Contempt Charge</strong> <span class="divider"> | </span></span> A judge can hold Apple in contempt for refusing to comply with an order to unlock an iPhone, but the threat may be ineffective.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/22/business/dealbook/apple-may-be-willing-to-risk-contempt-charge.html">White Collar Watch &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="U.S. Says It May Not Need Appleâs Help to Unlock iPhone" src="https://static01.nyt.com/images/2016/03/21/multimedia/22apple-event/22apple-event-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>U.S. Says It May Not Need Appleâs Help to Unlock iPhone</strong> <span class="divider"> | </span></span> A court hearing set for Tuesday was canceled in the Justice Departmentâs bid to gain access to phone data in the San Bernardino mass shooting inquiry.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/22/technology/apple-fbi-hearing-unlock-iphone.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/interactive/2016/03/03/technology/apple-iphone-fbi-fight-explained.html">Breaking Down Appleâs iPhone Fight With the U.S. Government</a> <time class="timestamp" data-eastern-timestamp="7:19 PM" datetime="2016-03-21" data-utc-timestamp="1458602369000">7:19 PM</time></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/03/22/technology/apples-modest-product-upgrades-take-back-seat-to-worries-on-iphone-encryption.html">Appleâs Modest Product Upgrades Take Back Seat to Worries on iPhone Encryption</a> <time class="timestamp" data-eastern-timestamp="7:29 PM" datetime="2016-03-21" data-utc-timestamp="1458602984000">7:29 PM</time></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/03/22/business/dealbook/apple-may-be-willing-to-risk-contempt-charge.html">White Collar Watch: Apple May Be Willing to Risk Contempt Charge</a> </span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="BP and Statoil Pull Employees From Algeria Gas Fields After Attack" src="https://static01.nyt.com/images/2016/03/22/business/22gas/22gas-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BP and Statoil Pull Employees From Algeria Gas Fields After Attack</strong> <span class="divider"> | </span></span> An affiliate of Al Qaeda claimed responsibility for a grenade attack that hit one of the largest natural gas fields in Algeria.<br /><span class="kicker"><a href="//www.nytimes.com/2016/03/22/business/energy-environment/bp-and-statoil-pull-employees-from-algeria-gas-fields-after-attack.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Anthem Sues Express Scripts Over Drug Pricing</strong> <span class="divider"> | </span></span> The health insurer Anthem said it had sued the pharmacy benefit manager Express Scripts Holding to recover damages from drug pricing it claims was too high.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2016/03/21/business/21reuters-anthem-express-scr-pricing.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Affymetrix Bidâs China Ties Prompt National Security Talk</strong> <span class="divider"> | </span></span> A San Francisco congresswoman asked the  Treasury Department to scrutinize Origin Technologies Corporationâs $1.5 billion bid for Affymetrix, citing national security concerns.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-21/affymetrix-bid-s-china-ties-must-be-examined-congresswoman-says"> bloomberg news </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bangladesh Says New York Fed Had `Major Lapseâ in Cyber Heist</strong> <span class="divider"> | </span></span> Bangladeshâs central bank has suggested that the Federal Reserve Bank of New York had a âmajor lapseâ in allowing hackers to transfer $101 million in transactions that it later flagged as suspicious, according to an internal document seen by Bloomberg.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-03-22/fed-had-major-lapse-during-cyber-heist-bangladesh-report-says"> bloomberg news </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>1MDB Investigation Focuses on Bond Deals</strong> <span class="divider"> | </span></span> United States authorities are investigating whether Goldman Sachs misled bondholders when the firm sold securities issued by 1MDB, a Malaysian government investment fund that is at the center of a corruption scandal, The Wall Street Journal reports, citing a person familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/goldman-1mdb-probe-zeroes-in-on-bond-deals-1458599669?mod=rss_markets_main"> the wall street journal </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/03/22/morning-agenda-leon-cooperman-could-face-showdown-with-regulators/"
+					data-title="Morning Agenda: Leon Cooperman Could Face Showdown With Regulators"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;William Ackman Bets Again on Valeant, But It Could Still Crumble | Marriott Raises Bid for Starwood&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/03/22/morning-agenda-leon-cooperman-could-face-showdown-with-regulators/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":48,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

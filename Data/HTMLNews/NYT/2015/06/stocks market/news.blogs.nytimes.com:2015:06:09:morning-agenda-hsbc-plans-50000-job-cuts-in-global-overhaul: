@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003730476"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1433847840" />
+<meta name="PUD" content="20150609" />
+<meta name="pdate" content="20150609" />
+<meta name="ptime" content="20150609070400" />
+<meta name="utime" content="20150609110400" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-06-09T11:04:00-04:00" />
+<meta name="DISPLAYDATE" content="June 9, 2015" />
+<meta name="dat" content="June 9, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Appointments and Executive Changes;Banking and Financial Institutions;Economic Conditions and Trends;Hedge Funds;HSBC Holdings PLC.;Initial Public Offerings;Layoffs and Job Reductions;Mergers, Acquisitions and Divestitures;Prices (Fares, Fees and Rates);Private Equity;Regulation and Deregulation of Industry;Suits and Litigation (Civil);United States Economy;Venture Capital">
+<meta name="org" content="California Public Employees Retirement System;Deutsche Bank AG">
+<meta name="ticker" content="Deutsche Bank AG|DB|NYSE" />
+<meta property="article:tag" content="Appointments and Executive Changes" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Economic Conditions and Trends" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="HSBC Holdings PLC." />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Layoffs and Job Reductions" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Prices (Fares Fees and Rates)" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="United States Economy" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="California Public Employees Retirement System" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Appointments and Executive Changes,Banking and Financial Institutions,Economic Conditions and Trends,Hedge Funds,HSBC Holdings PLC.,Initial Public Offerings,Layoffs and Job Reductions,Mergers Acquisitions and Divestitures,Prices (Fares Fees and Rates),Private Equity,Regulation and Deregulation of Industry,Suits and Litigation (Civil),United States Economy,Venture Capital,California Public Employees Retirement System,Deutsche Bank AG,DealBook" />
+<meta name="news_keywords" content="Appointments and Executive Changes,Banking and Finance,CalPERS,Economy,Hedge fund,IPO,Lawsuits,Layoffs,Mergers and Acquistions,Price,Private equity,Regulation and Deregulation,US Economy,Venture capital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F06%2F09%2Fmorning-agenda-hsbc-plans-50000-job-cuts-in-global-overhaul%2F" title="Morning Agenda: HSBC Plans 50,000 Job Cuts in Global Overhaul" />
+<meta name="description" content="HSBC Plans 50,000 Job Cuts in Global Overhaul &#124; Regulator Said to Have Urged Deutsche Bank Chiefs&#8217; Exit &#124; What Mergers Say About U.S. Economy &#124; Calpers Aims to Reduce Money Manager Fees" />
+<meta name="hdl" content="Morning Agenda: HSBC Plans 50,000 Job Cuts in Global Overhaul" />
+<meta property="og:title" content="Morning Agenda: HSBC Plans 50,000 Job Cuts in Global Overhaul" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/06/09/morning-agenda-hsbc-plans-50000-job-cuts-in-global-overhaul/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="HSBC Plans 50,000 Job Cuts in Global Overhaul &#124; Regulator Said to Have Urged Deutsche Bank Chiefs&#8217; Exit &#124; What Mergers Say About U.S. Economy &#124; Calpers Aims to Reduce Money Manager Fees" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: HSBC Plans 50,000 Job Cuts in Global Overhaul" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/06/09/morning-agenda-hsbc-plans-50000-job-cuts-in-global-overhaul/" />
+<meta name="twitter:description" content="HSBC Plans 50,000 Job Cuts in Global Overhaul &#124; Regulator Said to Have Urged Deutsche Bank Chiefs&#8217; Exit &#124; What Mergers Say About U.S. Economy &#124; Calpers Aims to Reduce Money Manager Fees" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Shake-Up at Deutsche Bank' href='//news.blogs.nytimes.com/2015/06/08/morning-agenda-shake-up-at-deutsche-bank/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/06/09/what-were-reading-62/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/06/09/morning-agenda-hsbc-plans-50000-job-cuts-in-global-overhaul/' />
+<link rel='shortlink' href='//nyti.ms/1KSORac' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/06/09/morning-agenda-hsbc-plans-50000-job-cuts-in-global-overhaul/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: HSBC Plans 50,000 Job Cuts in Global Overhaul - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2521 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: HSBC Plans 50,000 Job Cuts in Global Overhaul        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/06/09/morning-agenda-hsbc-plans-50000-job-cuts-in-global-overhaul/"
+	 data-title="Morning Agenda: HSBC Plans 50,000 Job Cuts in Global Overhaul"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;HSBC Plans 50,000 Job Cuts in Global Overhaul | Regulator Said to Have Urged Deutsche Bank Chiefs&#039; Exit | What Mergers Say About U.S. Economy | Calpers Aims to Reduce Money Manager Fees&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/06/09/morning-agenda-hsbc-plans-50000-job-cuts-in-global-overhaul/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 9, 2015 7:04 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: HSBC Plans 50,000 Job Cuts in Global Overhaul</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-06-09T11:04:00+00:00" itemprop="datePublished">June 9, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">June 9, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2521 post type-post status-publish hentry category-dealbook tag-appointments-and-executive-changes tag-banking-and-financial-institutions tag-california-public-employees-retirement-system tag-deutsche-bank-ag tag-economic-conditions-and-trends tag-hedge-funds tag-hsbc-holdings-plc tag-initial-public-offerings tag-layoffs-and-job-reductions tag-mergers-acquisitions-and-divestitures tag-prices-fares-fees-and-rates tag-private-equity tag-regulation-and-deregulation-of-industry tag-suits-and-litigation-civil tag-united-states-economy tag-venture-capital des-appointments-and-executive-changes des-banking-and-financial-institutions des-economic-conditions-and-trends des-hedge-funds des-hsbc-holdings-plc des-initial-public-offerings des-layoffs-and-job-reductions des-mergers-acquisitions-and-divestitures des-prices-fares-fees-and-rates des-private-equity des-regulation-and-deregulation-of-industry des-suits-and-litigation-civil des-united-states-economy des-venture-capital org-california-public-employees-retirement-system org-deutsche-bank-ag news_keywords-appointments-and-executive-changes news_keywords-banking-and-finance news_keywords-calpers news_keywords-economy news_keywords-hedge-fund news_keywords-ipo news_keywords-lawsuits news_keywords-layoffs news_keywords-mergers-and-acquistions news_keywords-price news_keywords-private-equity-2 news_keywords-regulation-and-deregulation news_keywords-us-economy news_keywords-venture-capital-2" id="post-2521">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: HSBC Plans 50,000 Job Cuts in Global Overhaul</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-06-09T11:04:00+00:00" itemprop="datePublished">June 9, 2015 7:04 am</time>
+			<!-- date updated --><span class="visually-hidden updated">June 9, 2015 7:04 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/06/09/morning-agenda-hsbc-plans-50000-job-cuts-in-global-overhaul/" data-title="Morning Agenda: HSBC Plans 50,000 Job Cuts in Global Overhaul" data-description="HSBC Plans 50,000 Job Cuts in Global Overhaul | Regulator Said to Have Urged Deutsche Bank Chiefs&#039; Exit | What Mergers Say About U.S. Economy | Calpers Aims to Reduce Money Manager Fees">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HSBC PLANS 50,000 JOB CUTS IN GLOBAL RESTRUCTURING</strong> <span class="divider"> | </span></span> HSBC said Tuesday that it would cut as many as 50,000 jobs around the world and try to reduce costs by as much as $5 billion a year by 2017 as it laid out its plans to restructure its global businesses, <a href="//www.nytimes.com/2015/06/10/business/dealbook/hsbc-job-cuts-axe-25000-50000-saving-drive.html"> Chad Bray reports in DealBook</a>. About 25,000 jobs will be lost through the sale of the bankâs businesses in Turkey and Brazil, and an additional 20,000 to 25,000 jobs will be eliminated as part of the restructuring. However, the bank is <b> increasingly focusing on Asia</b>, saying that it would expand its asset management and insurance operations in hopes of capturing âexpected opportunities from emerging wealth in the region.â The bank also plans to increase its <b>business in the Pearl River Delta</b> in the southern Chinese province of Guangdong and in parts of Southeast Asia. </p>
+<p class="story-body-text" itemprop="articleBody">In April, HSBC, which generates more than half of its earnings from Asia, said it was reviewing whether to move its headquarters from Britain, where a bank tax has hit lenders particularly hard. On Tuesday, the bank said it would <b>complete the review by the end of the year</b>. In the meantime, HSBC said it would begin <b>setting up a âring-fenced bankâ in Britain </b> as required by regulators. The country is giving banks until 2019 to shield their retail banking operations from the effects of investment banking and other activities in the event of another financial crisis â a process known as ring fencing. </p>
+<p class="story-body-text" itemprop="articleBody">HSBC also said it would reduce so-called risk-weighted assets, a measure of the risk of the capital it holds, by 25 percent, or about $290 billion. About half of those reductions will <b>come from the investment banking business</b>, the lender said. </p>
+<p class="story-body-text" itemprop="articleBody">Investors appeared to be underwhelmed by the bankâs plans. HSBC shares edged down in morning trading in London and in afternoon trading in Hong Kong. âThe initiatives taken by management are all welcome,â Sanford C. Bernstein said in a report led by analyst Chirantan Barua in London, Bloomberg News reports. However, the report also said that the bank âhas <b>failed to bring out anything radically different</b> from moves which have been widely expected for some months now.â<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>REGULATOR SAID TO HAVE URGED DEUTSCHE BANK CHIEFSâ EXIT</strong> <span class="divider"> | </span></span> It was well known that shareholders of Deutsche Bank were unhappy with Anshu Jain and JÃ¼rgen Fitschen, who are both stepping down as co-chief executives, but German regulators were also pressuring the bank to change its leadership, <a href="//www.nytimes.com/2015/06/09/business/dealbook/regulator-said-to-have-pressed-for-exit-of-deutsche-chiefs.html"> Jack Ewing and Peter Eavis write in DealBook</a>. According to two people briefed on the events that contributed to the change in leadership, officials at the German regulator, known as BaFin, were unhappy over the way the two executives had handled an investigation into alleged manipulation of benchmark interest rates by bank employees. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Jain and Mr. Fitschen were not accused of taking part in the manipulation, which occurred while Mr. Jain was head of the Deutsche Bank investment bank. But United States and British authorities complained in public statements that Deutsche Bank had been <b>slow to provide information and had kept incomplete records</b>. In its deferred-prosecution agreement with Deutsche Bank, for instance, the United States Justice Department said that the bank committed ânumerous unintentional but significant mistakes in the preservation, collection, and production of documents, audio, and data,â including the destruction of thousands of hours of audio recordings. Comments like these <b>shook BaFinâs confidence in the bankâs leadership</b>, the two people briefed on BaFinâs actions said. In particular, BaFin is said to have been frustrated by Deutsche Bankâs poor record-keeping. However, Michael Golden, a spokesman for the bank, <b>strongly denied that pressure from regulators was a factor</b> in the executivesâ departure.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>WHAT MERGERS SAY ABOUT U.S. ECONOMY</strong> <span class="divider"> | </span></span> Robust deal-making activity is often seen as a barometer of a healthy economy, but in contrast to previous merger booms, the recent flurry of acquisitions in the United States may actually be a sign that businesses are running out of growth options, <a href="//www.nytimes.com/2015/06/09/business/dealbook/mergers-might-not-signal-optimism.html"> Andrew Ross Sorkin writes in the DealBook column</a>. He cites a Citigroup report that notes that revenue growth at American companies has been declining every year for the last five years and points out that Charter Communications didnât mention revenue projections at all when it announced its $55 billion acquisition of Time Warner Cable, and neither did Avago when it announced its $37 billion takeover of Broadcom. âIndeed, <b>cost-cutting continues to be one of the chief rationales</b> in recent deals,â Mr. Sorkin writes. â âSynergy,â an overused word in deal-making, has returned as âsavings.â â</p>
+<p class="story-body-text" itemprop="articleBody">Companies may also be turning to acquisitions to push up stock prices as <b> share buybacks become too expensive</b>, Mr. Sorkin writes. In a note to clients, David J. Kostin, the chief United States equity strategist at Goldman Sachs, recommended that companies focus on acquisitions rather than repurchasing shares while price-earnings ratios are so high. In recent years investors have generally rewarded companies that make big acquisitions by pushing up their share prices, Citigroup said, but Mr. Sorkin warns that the recent enthusiasm for mergers shouldnât be mistaken for a vote of confidence in the economy.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b> Netflix and General Motors</b> hold their annual meetings. MSCI will announce after 5 p.m. whether it will <b>add mainland Chinese stocks to its benchmark emerging market index</b>. <b> Jack Ma</b>, Alibabaâs founder, speaks at the Economic Club of New York at 11:45 a.m. <b>Ronald J. Kruszewski</b>, Stifel Financial Corporationâs chairman and chief executive, will be on Bloomberg Television at 9 a.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CALPERS AIMS TO REDUCE MONEY MANAGER FEES</strong> <span class="divider"> | </span></span> The California Public Employeesâ Retirement System, the countryâs biggest state pension fund, has decided to reduce the amount it pays in asset management fees by cutting ties with half of the external investment managers of its funds, <a href="//www.nytimes.com/2015/06/09/business/dealbook/calpers-to-cut-ties-with-many-fund-managers-to-save-on-fees.html"> Alexandra Stevenson reports in DealBook</a>. Calpers will inform its investment board this month about its plans to reduce the number of external managers to <b>100 from 212</b>. As part of that move, Calpers will <b>cut the number of private equity firms it uses to 30 from 98</b>, giving the remaining managers $30 billion to oversee. </p>
+<p class="story-body-text" itemprop="articleBody">As it anticipates a shortfall between payments to retirees and contributions from active workers, Calpers has been working to simplify its portfolio and increase returns by reducing the fees paid to outside money managers. Last year, it paid <b>$1.6 billion in management fees</b>, $400 million of which was a one-time payment for its real estate managers, a Calpers spokesman said. Pension funds across the country, which are facing the same financial pressures, are also taking a hard look at fees, especially as <b>returns by external money managers have been disappointing</b> in recent years.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Qatar Sovereign Fund to Buy $1.2 Billion Stake in Hong Kong Utility</strong> <span class="divider"> | </span></span> Qatar Investment Authority, the Gulf stateâs sovereign wealth fund, agreed to pay 9.3 billion Hong Kong dollars, or $1.2 billion, to buy a stake in the electric utility controlled by the Hong Kong billionaire Li Ka-shing, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-06-09/power-assets-sells-hk-electric-stake-for-hk-7-7-billion-to-qatar"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tesco Said to Solicit Bids for South Korea Unit From 6 Private Equity Firms</strong> <span class="divider"> | </span></span> Tesco has invited at least six private equity firms, including Kohlberg Kravis Roberts and Carlyle Group, to bid for its South Korean unit Homeplus, which is valued at about $6 billion, Reuters reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/06/09/tesco-southkorea-ma-idUSL3N0YV1SL20150609"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Atlantic Broadband Deal Shows Small Operators Seek Growth, Too</strong> <span class="divider"> | </span></span> The frenzied appetite for mergers seen among the industry behemoths is catching on among the second-tier players.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/09/business/media/atlantic-broadband-deal-shows-small-operators-seek-growth-too.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>European Banks Signing On to Apple Pay</strong> <span class="divider"> | </span></span> MasterCard, Visa Europe, Nationwide, HSBC, Royal Bank of Scotland and Santander are among several lenders that will link up with Apple Pay when it begins operating in Britain in July, The Financial Times reports. <br /><span class="kicker"><a href="//www.ft.com/intl/fastft/337013"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Breakingviews: Anshu Jainâs Painful Lessons for New Deutsche Boss" src="https://static01.nyt.com/images/2015/06/08/business/08jpDB-Deutsche/08jpDB-Deutsche-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Anshu Jainâs Painful Lessons for New Deutsche Boss</strong> <span class="divider"> | </span></span> The departure of Mr. Jain, the co-chief executive, has pleased investors irked by the bankâs lack of progress on cutting costs and increasing capital.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/09/business/dealbook/anshu-jains-painful-lessons-for-new-deutsche-boss.html">Breakingviews &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/06/08/business/dealbook/co-chief-executives-of-deutsche-bank-resign.html">Deutsche Bank Co-Chief Executives Resign</a> <time class="timestamp" data-eastern-timestamp="8:09 PM" datetime="2015-06-07" data-utc-timestamp="1433722190000">8:09 PM</time><span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ex-Centrica Chief to Head $5 Billion Energy Fund</strong> <span class="divider"> | </span></span> Sam Laidlaw, the former chief executive of the British energy provider Centrica, will head Neptune Oil and Gas, a new $5 billion fund backed by the private equity firms Carlyle Group and CVC Capital Partners, Reuters reports.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/06/09/privateequity-energy-centrica-idUSL5N0YV0Q520150609"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fiat Chrysler C.E.O. Said to Urge Activist Investors to Lobby G.M.</strong> <span class="divider"> | </span></span> Sergio Marchionne, the chief executive of Fiat Chrysler Automobiles, is contacting hedge funds and other activist investors to push General Motors to agree to a merger, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/chrysler-boss-recruits-activists-to-prod-gm-into-a-merger-1433806966"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Elliott Seeks Injunction Against Samsung to Halt Takeover</strong> <span class="divider"> | </span></span> Elliott Management said it would ask a court to stop Cheil Industries, the Samsung Groupâs de facto holding company, from taking over Samsung C&#038;T, in which the hedge fund has a 7.1 percent stake, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-06-09/elliott-seeks-injunction-to-stop-cheil-acquiring-samsung-c-t"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Cohen Said to Be Buyer in Record-Breaking Sculpture Auction</strong> <span class="divider"> | </span></span> Steven A. Cohen, the Point72 Asset Management founder,  was the mystery buyer who paid a record-setting $141.3 million for Alberto Giacomettiâs bronze âPointing Manâ at a Christieâs auction in May, The New York Post reports, citing multiple sources. <br /><span class="kicker"><a href="//pagesix.com/2015/06/08/steven-cohen-drops-141m-on-worlds-most-expensive-sculpture/"> THE NEW YORK POST </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bank of Qingdao Said to Plan $700 Million Hong Kong I.P.O.</strong> <span class="divider"> | </span></span> Bank of Qingdao is planning to raise up to $700 million in a Hong Kong initial public offering in the fourth quarter, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/bank-of-qingdao-seeks-hong-kong-ipo-1433822954"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Apax Partners Executives to Sell Personal Stakes Through Fund</strong> <span class="divider"> | </span></span> Executives at Apax Partners, one of the largest private equity firms in Europe, are offloading some of their personal portfolios, which include stakes in banks, a pub chain and a car dealership, in the flotation of a new fund, The Wall Street Journal reports.<br /><span class="kicker"><a href="//www.wsj.com/articles/apax-executives-to-sell-personal-holdings-1433831845"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Uber Spends Heavily to Establish Itself in China" src="https://static01.nyt.com/images/2015/06/09/business/uberchina-web1/uberchina-web1-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uber Spends Heavily to Establish Itself in China</strong> <span class="divider"> | </span></span> Faced with homegrown competition in China, the ride-hailing service is offering its Chinese drivers bonuses of up to three times fares.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/09/technology/uber-spends-heavily-to-establish-itself-in-china.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//sinosphere.blogs.nytimes.com/2015/06/08/a-rappers-ode-to-uber-chengdu-gangster-style/">Sinosphere Blog: A Rapperâs Ode to Uber, Chengdu Gangster Style</a> <time class="timestamp" data-eastern-timestamp="11:13 AM" datetime="2015-06-08" data-utc-timestamp="1433776407000">11:13 AM</time><span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Dov Charney and American Apparel Tussle Over Lawyersâ Fees" src="https://static01.nyt.com/images/2015/06/09/business/db-whitecollar-web1/db-whitecollar-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Dov Charney and American Apparel Tussle Over Lawyersâ Fees</strong> <span class="divider"> | </span></span> Mr. Charney, the founder of American Apparel, may be able to compel the company to pay his legal fees, even though the firm is suing him, Peter J. Henning writes in White Collar Watch.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/09/business/dealbook/dov-charney-and-american-apparel-tussle-over-lawyers-fees.html">White Collar Watch &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="American Apparel Avoids Fight Over Board" src="https://static01.nyt.com/images/2015/06/09/business/09APPAREL/09APPAREL-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>American Apparel Avoids Fight Over Board</strong> <span class="divider"> | </span></span> Jeffrey Kolb, an ally of the retailerâs ousted chief executive, Dov Charney, agreed to withdraw his nominees, one of whom will advise the new chief, Paula Schneider.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/09/business/american-apparel-avoids-fight-over-board.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Volcker Sees Hidden Peril in State Budgets" src="https://static01.nyt.com/images/2015/06/09/business/09DB-FINANCE/09DB-FINANCE-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Volcker Sees Hidden Peril in State Budgets</strong> <span class="divider"> | </span></span> A report from Paul Volckerâs new foundation says that states are building up piles of debt and pushing costs to future generations of taxpayers.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/09/business/dealbook/volcker-sees-hidden-peril-in-state-budgets.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Iceland to Lift Capital Controls Imposed After Financial Crisis" src="https://static01.nyt.com/images/2015/06/09/business/09db-krona-web/09db-krona-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Iceland to Lift Capital Controls Imposed After Financial Crisis</strong> <span class="divider"> | </span></span> The release of the capital controls will be watched carefully as an important case study in how to manage a crisis.<br /><span class="kicker"><a href="//www.nytimes.com/2015/06/09/business/dealbook/iceland-to-lift-capital-controls-imposed-after-financial-crisis.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/06/09/morning-agenda-hsbc-plans-50000-job-cuts-in-global-overhaul/"
+					data-title="Morning Agenda: HSBC Plans 50,000 Job Cuts in Global Overhaul"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;HSBC Plans 50,000 Job Cuts in Global Overhaul | Regulator Said to Have Urged Deutsche Bank Chiefs&#039; Exit | What Mergers Say About U.S. Economy | Calpers Aims to Reduce Money Manager Fees&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/06/09/morning-agenda-hsbc-plans-50000-job-cuts-in-global-overhaul/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":70,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

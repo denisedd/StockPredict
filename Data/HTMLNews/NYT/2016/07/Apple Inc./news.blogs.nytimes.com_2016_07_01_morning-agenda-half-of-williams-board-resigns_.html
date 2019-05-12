@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004505681"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1467366706" />
+<meta name="PUD" content="20160701" />
+<meta name="pdate" content="20160701" />
+<meta name="ptime" content="20160701055146" />
+<meta name="utime" content="20160701095146" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-07-01T09:51:46-04:00" />
+<meta name="DISPLAYDATE" content="July 1, 2016" />
+<meta name="dat" content="July 1, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Carney, Mark J;Diller, Barry;Jay-Z;Redstone, Sumner M">
+<meta name="des" content="Appointments and Executive Changes;Banking and Financial Institutions;Bankruptcies;Chocolate;Credit Cards;Ethics and Official Misconduct;Great Britain Withdrawal from EU (Brexit);Law and Legislation;Mergers, Acquisitions and Divestitures;Music;Private Equity;Puerto Ricans;Regulation and Deregulation of Industry;Suits and Litigation (Civil)">
+<meta name="org" content="Apple Inc;Apple Music;Bank of England;Chevron Corporation;Energy Transfer Equity LP;Exxon Mobil Corp;Federal Reserve System;Google Inc;Hershey Company;Hershey Foods Corp;Lions Gate Entertainment Corporation;MasterCard Inc;Mondelez International;Starz;Takata Corp;Tidal (Aspiro AB);Unicredito Italiano SpA;Williams Companies Inc;Zenefits Insurance Services">
+<meta name="ticker" content="Apple Inc|AAPL|NASDAQ;Chevron Corporation|CVX|NYSE;Energy Transfer Equity LP|ETE|NYSE;Exxon Mobil Corp|XOM|NYSE;Hershey Company|HSY|NYSE;Lions Gate Entertainment Corporation|LGF|NYSE;MasterCard Inc|MA|NYSE;Starz|STRZA|NASDAQ;Williams Companies Inc|WMB|NYSE" />
+<meta property="article:tag" content="Carney Mark J" />
+<meta property="article:tag" content="Diller Barry" />
+<meta property="article:tag" content="Jay-Z" />
+<meta property="article:tag" content="Redstone Sumner M" />
+<meta property="article:tag" content="Appointments and Executive Changes" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Bankruptcies" />
+<meta property="article:tag" content="Chocolate" />
+<meta property="article:tag" content="Credit Cards" />
+<meta property="article:tag" content="Ethics and Official Misconduct" />
+<meta property="article:tag" content="Great Britain Withdrawal from EU (Brexit)" />
+<meta property="article:tag" content="Law and Legislation" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Music" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Puerto Ricans" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="Apple Inc" />
+<meta property="article:tag" content="Apple Music" />
+<meta property="article:tag" content="Bank of England" />
+<meta property="article:tag" content="Chevron Corporation" />
+<meta property="article:tag" content="Energy Transfer Equity LP" />
+<meta property="article:tag" content="Exxon Mobil Corp" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Google Inc" />
+<meta property="article:tag" content="Hershey Company" />
+<meta property="article:tag" content="Hershey Foods Corp" />
+<meta property="article:tag" content="Lions Gate Entertainment Corporation" />
+<meta property="article:tag" content="MasterCard Inc" />
+<meta property="article:tag" content="Mondelez International" />
+<meta property="article:tag" content="Starz" />
+<meta property="article:tag" content="Takata Corp" />
+<meta property="article:tag" content="Tidal (Aspiro AB)" />
+<meta property="article:tag" content="Unicredito Italiano SpA" />
+<meta property="article:tag" content="Williams Companies Inc" />
+<meta property="article:tag" content="Zenefits Insurance Services" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Carney Mark J,Diller Barry,Jay-Z,Redstone Sumner M,Appointments and Executive Changes,Banking and Financial Institutions,Bankruptcies,Chocolate,Credit Cards,Ethics and Official Misconduct,Great Britain Withdrawal from EU (Brexit),Law and Legislation,Mergers Acquisitions and Divestitures,Music,Private Equity,Puerto Ricans,Regulation and Deregulation of Industry,Suits and Litigation (Civil),Apple Inc,Apple Music,Bank of England,Chevron Corporation,Energy Transfer Equity LP,Exxon Mobil Corp,Federal Reserve System,Google Inc,Hershey Company,Hershey Foods Corp,Lions Gate Entertainment Corporation,MasterCard Inc,Mondelez International,Starz,Takata Corp,Tidal (Aspiro AB),Unicredito Italiano SpA,Williams Companies Inc,Zenefits Insurance Services,DealBook" />
+<meta name="news_keywords" content="Bankruptcy,Chocolate,Jay Z,Music,Starz" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F07%2F01%2Fmorning-agenda-half-of-williams-board-resigns%2F" title="Morning Agenda: Half of Williams Board Resigns" />
+<meta name="description" content="Hershey Rejects Mondelez Takeover Offer &#124; Puerto Rico Debt Relief Stirs Colonial Resentment" />
+<meta name="hdl" content="Morning Agenda: Half of Williams Board Resigns" />
+<meta property="og:title" content="Morning Agenda: Half of Williams Board Resigns" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/07/01/morning-agenda-half-of-williams-board-resigns/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Hershey Rejects Mondelez Takeover Offer &#124; Puerto Rico Debt Relief Stirs Colonial Resentment" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Half of Williams Board Resigns" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/07/01/morning-agenda-half-of-williams-board-resigns/" />
+<meta name="twitter:description" content="Hershey Rejects Mondelez Takeover Offer &#124; Puerto Rico Debt Relief Stirs Colonial Resentment" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Puerto Rico Relief Measure Clears Senate' href='//news.blogs.nytimes.com/2016/06/30/morning-agenda-puerto-rico-relief-measure-clears-senate/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/07/01/what-were-reading-167/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/07/01/morning-agenda-half-of-williams-board-resigns/' />
+<link rel='shortlink' href='//nyti.ms/29a8SBK' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/07/01/morning-agenda-half-of-williams-board-resigns/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Half of Williams Board Resigns - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5169 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Half of Williams Board Resigns        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/07/01/morning-agenda-half-of-williams-board-resigns/"
+	 data-title="Morning Agenda: Half of Williams Board Resigns"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Hershey Rejects Mondelez Takeover Offer | Puerto Rico Debt Relief Stirs Colonial Resentment&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/01/morning-agenda-half-of-williams-board-resigns/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 1, 2016 5:51 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Half of Williams Board Resigns</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-07-01T09:51:46+00:00" itemprop="datePublished">July 1, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">July 1, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5169 post type-post status-publish hentry category-dealbook tag-apple-inc tag-apple-music tag-appointments-and-executive-changes tag-bank-of-england tag-banking-and-financial-institutions tag-bankruptcies tag-carney-mark-j tag-chevron-corporation tag-chocolate tag-credit-cards tag-diller-barry tag-energy-transfer-equity-lp tag-ethics-and-official-misconduct tag-exxon-mobil-corp tag-federal-reserve-system tag-google-inc tag-great-britain-withdrawal-from-eu-brexit tag-hershey-company tag-hershey-foods-corp tag-jay-z tag-law-and-legislation tag-lions-gate-entertainment-corporation tag-mastercard-inc tag-mergers-acquisitions-and-divestitures tag-mondelez-international tag-music tag-private-equity tag-puerto-ricans tag-redstone-sumner-m tag-regulation-and-deregulation-of-industry tag-starz tag-suits-and-litigation-civil tag-takata-corp tag-tidal-aspiro-ab tag-unicredito-italiano-spa tag-williams-companies-inc tag-zenefits-insurance-services per-carney-mark-j per-diller-barry per-jay-z per-redstone-sumner-m des-appointments-and-executive-changes des-banking-and-financial-institutions des-bankruptcies des-chocolate des-credit-cards des-ethics-and-official-misconduct des-great-britain-withdrawal-from-eu-brexit des-law-and-legislation des-mergers-acquisitions-and-divestitures des-music des-private-equity des-puerto-ricans des-regulation-and-deregulation-of-industry des-suits-and-litigation-civil org-apple-inc org-apple-music org-bank-of-england org-chevron-corporation org-energy-transfer-equity-lp org-exxon-mobil-corp org-federal-reserve-system org-google-inc org-hershey-company org-hershey-foods-corp org-lions-gate-entertainment-corporation org-mastercard-inc org-mondelez-international org-starz org-takata-corp org-tidal-aspiro-ab org-unicredito-italiano-spa org-williams-companies-inc org-zenefits-insurance-services news_keywords-bankruptcy news_keywords-chocolate news_keywords-jay-z-2 news_keywords-music news_keywords-starz" id="post-5169">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Half of Williams Board Resigns</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-07-01T09:51:46+00:00" itemprop="datePublished">July 1, 2016 5:51 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 1, 2016 5:51 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/07/01/morning-agenda-half-of-williams-board-resigns/" data-title="Morning Agenda: Half of Williams Board Resigns" data-description="Hershey Rejects Mondelez Takeover Offer | Puerto Rico Debt Relief Stirs Colonial Resentment">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>HALF OF WILLIAMS BOARD RESIGNS</strong> About half the directors at the Williams Companies resigned over disagreements about the future of the pipeline operator, <a href="//www.nytimes.com/2016/07/01/business/dealbook/half-of-williamss-board-resigns-after-vote-to-oust-ceo-falls-short.html?ref=dealbook&amp;_r=&amp;nl=dealbook&amp;emc=edit_dlbkam_20160701">Leslie Picker reports in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>A board vote over whether to oust the chief executive, Alan Armstrong, came out 6 to 6,</strong> according to three people with direct knowledge of the matter. Those who voted against Mr. Armstrong&#8217;s remaining on the board resigned.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>The moves came after the $38 billion merger with Energy Transfer Equity was dismantled this week over a tax issue.</strong> According to The Wall Street Journal, which earlier reported the resignations, those who resigned felt that Mr. Armstrong was ill-suited to lead Williams on its new course without Energy Transfer.</p>
+<p class="story-body-text" itemprop="articleBody">The board members who stepped down included the activists on the board: Keith Meister of Corvex Management and Eric Mandelblatt of Soroban Capital Partners. Frank MacInnis, the independent director chairman of Williams, also stepped down, but largely because of personal reasons, these people said. They were joined by Steven Nance, president of Steele Creek Energy, Laura Sugg, a former senior executive at ConocoPhillips, and Ralph Izzo, the chairman of Public Service Enterprise Group.</p>
+<p class="story-body-text" itemprop="articleBody">Williams is also appealing the termination of the deal with Energy Transfer Equity. <strong>Its only real chance is to argue some legal error</strong>, <a href="//www.nytimes.com/2016/07/01/business/dealbook/williams-faces-uphill-battle-in-fight-with-energy-transfer.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160701">Steven Davidoff Solomon writes in Deal Professor</a>. But it comes down to whether the Delaware Supreme Court wants to intervene and agrees that &#8220;reasonable efforts&#8221; as a standard required more in this case.</p>
+<p class="story-body-text" itemprop="articleBody">These questions are valid, but it will be an uphill battle for Williams given the fact-finding of the lower court judge and the penchant of the state&#8217;s Supreme Court to defer to the lower court on these matters.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>HERSHEY REJECTS MONDELEZ TAKEOVER OFFER</strong> Hershey, which has rebuffed numerous offers to buy it over the years, is facing one of its biggest challenges yet from a fellow chocolate giant, <a href="//www.nytimes.com/2016/07/01/business/dealbook/hershey-mondelez-takeover-bid.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160701">Michael J. de la Merced and Stephanie Strom report in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Mondelez International, which makes Oreo cookies and Cadbury Chocolate, <strong>made a $23 billion offer</strong>, but Hershey is betting that it can remain independent or at least fetch a substantially higher price. It rejected the offer, saying that it &#8220;provided no basis for further discussion.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Hershey&#8217;s impregnable defense has historically come from the charitable trust that controls about 81 percent of voting power,</strong> as <a href="//www.nytimes.com/2016/07/01/business/dealbook/trust-holds-the-key-to-whether-a-bid-for-hershey-succeeds-this-time.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160701">Leslie Picker, Ms. Strom and Mr. de la Merced explain</a> in DealBook. But many observers are asking whether this time its response will be different if Mondelez comes back with a higher offer.</p>
+<p class="story-body-text" itemprop="articleBody">The trust has already retained advisers separate from the Hershey Company itself as it weighs its own options. The Pennsylvania Attorney General&#8217;s Office, which has raised concerns over the trust&#8217;s deployment of funds, is <strong>seeking an overhaul of its board</strong>. If that were to happen, some believe Hershey&#8217;s largest shareholder would be more apt to sell.</p>
+<p class="story-body-text" itemprop="articleBody">Mondelez has been mindful of the need to win over the trust &#8211; in its letter last week, it promised to maintain jobs and relocate the combined company&#8217;s chocolate operations to Hershey, Pa.</p>
+<p class="story-body-text" itemprop="articleBody">The Mondelez offer has also raised questions about whether Hershey could attract other buyers or whether Mondelez itself may be put into play.</p>
+<p class="story-body-text" itemprop="articleBody">Putting the two together would create a powerful force in the business of sweets. Mondelez is the world&#8217;s second-largest confectionery company &#8211; but it has very little business in the United States. Hershey has more than four-fifths of its sales in North America.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>ON THE AGENDA Loretta Mester</strong>, the president of the Cleveland Federal Reserve, will speak at the European Economics and Financial Center at 11 a.m. The latest <strong>Manufacturing ISM Report on Business</strong> will be published at 10 a.m.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>PUERTO RICO DEBT RELIEF STIRS COLONIAL RESENTMENT</strong> Puerto Ricans protested against the &#8220;junta,&#8221; a federal control board that will soon direct the island&#8217;s failing governance and finances, even as President Obama signed the debt relief law, <a href="//www.nytimes.com/2016/07/01/business/dealbook/puerto-rico-debt-relief-law-stirs-colonial-resentment.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160701">Mary Williams Walsh reports in DealBook</a>. &#8220;Junta&#8221; in Spanish just means board, although it has dictatorial connotations in English. Protesters converged after hearing that the debt relief law had passed the Senate.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Even Gov. Alejandro GarcÃ­a Padilla seemed to join in</strong>, declaring a moratorium on paying the island&#8217;s debts just a day before a big payment was due, even though the new law precludes him from making such a move.</p>
+<p class="story-body-text" itemprop="articleBody">Beneath the rhetoric, however, <strong>there was resignation</strong> and an awareness that Puerto Rico&#8217;s own elected officials had let the island slip into a death spiral.</p>
+<p class="story-body-text" itemprop="articleBody">The need to pay the island&#8217;s $72 billion debt has crowded out other governmental spending in Puerto Rico, leaving schools closed, fewer hospital beds, and homeless people squatting in abandoned houses. Officials also scared off tourists fearful of the Zika virus by <strong>warning that they would stop testing the water supply to save money</strong>.</p>
+<p class="story-body-text" itemprop="articleBody">In addition to imposing federal control, the so-called Promesa legislation gives Puerto Rico the power to unilaterally reduce its debts, something that a debtor can normally do only in bankruptcy. Federal law explicitly bars the Puerto Rican government from entering bankruptcy, an exclusion is seen as a slap in the face by Puerto Ricans.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Banners hung near the federal courthouse said, &#8220;The problem is not the junta, it&#8217;s the colony.&#8221;</strong></p>
+<p class="story-body-text" itemprop="articleBody"><em>The newsletter will be taking a break on July 4. We will be back on Tuesday, July 5.</em></p>
+<p class="story-body-text" itemprop="articleBody">Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/?nl=dealbook&amp;emc=edit_dlbkam_20160701"><strong>MERGERS &amp; ACQUISITIONS Â»</strong></a><br />
+<br />
+<strong>Slowdown in Merger Deals Attributed to Political Uncertainty</strong> Bankers and lawyers for mergers and acquisitions pegged the decline to concerns about antitrust regulation, the United States presidential election and last week&#8217;s vote in Britain to leave the European Union.<br />
+<a href="//www.nytimes.com/2016/07/01/business/dealbook/slowdown-in-merger-deals-attributed-to-political-uncertainty.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br /><strong>Lionsgate&#8217;s Deal for Starz Bears Malone&#8217;s Hallmarks</strong> The media mogul John C. Malone controls Starz with 48 percent of the votes, thanks to Class B stock that has 10 times the voting power of regular shares. That makes it hard for other shareholders to argue, Jennifer Saba and Richard Beales write in Breakingviews.<br />
+<a href="//www.nytimes.com/2016/07/01/business/dealbook/lionsgates-deal-for-starz-bears-malones-hallmarks.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br /><strong>Apple Said to Be in Talks to Buy Tidal</strong> Apple is considering buying Tidal, the music streaming service run by Jay Z, to bolster its Apple Music service, The Wall Street Journal reports, citing people familiar with the matter.<br />
+<a href="//www.wsj.com/articles/apple-in-talks-to-acquire-jay-zs-tidal-music-service-1467325314?mod=pls_whats_news_us_business_f&amp;nl=dealbook&amp;emc=edit_dlbkam_20160701">THE WALL STREET JOURNAL</a><br />
+<br /><strong>Resort Operator Said to Explore Sale</strong> The operator, Apple Leisure, based in the Caribbean and Mexico, is exploring a sale that could value it at more than $1.5 billion after attracting interest from Chinese companies, Reuters reports, citing people familiar with the matter.<br />
+<a href="//www.reuters.com/article/us-apple-leisure-m-a-sale-exclusive-idUSKCN0ZG32W?feedType=RSS&amp;feedName=innovationNews&amp;nl=dealbook&amp;emc=edit_dlbkam_20160701">REUTERS</a><br />
+<br /><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160701"><strong>INVESTMENT BANKING Â»</strong></a><br />
+<br /><strong>As Britain Faces Uncertainty, Europeans Jockey for London&#8217;s Business</strong> Just days after the vote in Britain, companies and cities across Europe hope to profit by luring businesses and helping those wishing to move.<br />
+<a href="//www.nytimes.com/2016/07/01/business/international/brexit-britain-europe-companies.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»Â </a><br />
+<br /><strong>After &#8216;Brexit,&#8217; Finding a New London for the Financial World to Call Home</strong> James B. Stewart handicaps the race for the biggest financial prize since London was thrust to the fore.<br />
+<a href="//www.nytimes.com/2016/07/01/business/after-brexit-finding-a-new-london-for-the-financial-world-to-call-home.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Britain May Need to Cut Rates, Bank of England Chief Says</strong> Mark Carney, the governor of the central bank, also shrugged off a suggestion that he might be forced to resign after a new prime minister was chosen.<br />
+<a href="//www.nytimes.com/2016/07/01/business/international/britain-may-need-to-cut-rates-bank-of-england-chief-says.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br /><strong>Why Will Markets Recover From Britain&#8217;s Vote to Leave?</strong> Clues From Past Crises History provides some limited reassurance to the market turmoil after Britain&#8217;s vote to leave the European Union, Jeff Sommer writes in Strategies.<br />
+<a href="//www.nytimes.com/2016/07/03/your-money/after-brexit-a-market-recovery-until-the-next-crisis.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br /><strong>UniCredit Brings Back Former Executive to Lead the Bank</strong> UniCredit, Italy&#8217;s biggest bank by assets, has lured back Jean-Pierre Mustier, its former investment banking chief, to become its next chief executive.<br />
+<a href="//www.ft.com/cms/s/0/aed4fb12-3eac-11e6-8716-a4a71e8140b0.html?nl=dealbook&amp;emc=edit_dlbkam_20160701#axzz4CxJ0grtI">THE FINANCIAL TIMES</a><br />
+<br />For the latest updates, go to <a href="//www.nytimes.com/pages/business/dealbook/index.html">NYTimes.com/DealBook</a><br />
+<br />
+<a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160701"><strong>PRIVATE EQUITY Â»</strong></a><br />
+<br />
+<strong>China Opens Door to Foreign Private Equity Funds</strong> China will allow foreign private equity funds to set up asset management services and invest in domestic stocks in a move to open up its markets and financial sector.<br />
+<a href="//www.wsj.com/articles/china-opens-door-to-foreign-private-equity-funds-1467293019?nl=dealbook&amp;emc=edit_dlbkam_20160701">THE WALL STREET JOURNAL</a><br />
+<br /><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160701"><strong>VENTURE CAPITAL Â»</strong></a><br />
+<br />
+<strong>Zenefits Compensates Investors Over Past Misconduct</strong> Shareholders in Zenefits, a troubled human resources company, will get larger stakes as it tries to make up for the former chief executive&#8217;s unlawful corner-cutting.<br />
+<a href="//www.nytimes.com/2016/07/01/technology/zenefits-compensates-investors-over-past-misconduct.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br /><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160701"><strong>LEGAL/REGULATORY Â»</strong></a><br />
+<br />
+<strong>Housing Agency Overhauls Rules to Help Struggling Homeowners</strong> Agency officials said that private buyers of delinquent mortgages would have to consider options to keep struggling borrowers in their homes.<br />
+<a href="//www.nytimes.com/2016/07/01/business/dealbook/housing-agency-overhauls-rules-to-help-struggling-homeowners.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br />
+<strong>MasterCard-Visa Settlement With Retailers Is Overturned</strong> A federal appeals court said the historic settlement was void because the same lawyers represented the retailers and the card processing companies.<br />
+<a href="//www.nytimes.com/2016/07/01/business/mastercard-visa-settlement-with-retailers-is-overturned.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br />
+<strong>Battle for $40 Billion Empire Focuses on Redstone&#8217;s Mental State</strong> As lawsuits for Sumner Redstone&#8217;s $40 billion media empire continue, the judge questions both sides on Mr. Redstone&#8217;s mental state and communication skills.<br />
+<a href="//www.nytimes.com/2016/07/01/business/media/battle-for-40-million-empire-focuses-on-redstones-mental-state.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br />
+<strong>Spanish Tax Authorities Investigate Google</strong> Officials visited the technology giant&#8217;s offices in Madrid as part of their inquiry, broadening the scrutiny in Europe of how the company pays taxes.<br />
+<a href="//www.nytimes.com/2016/07/01/technology/google-spain-tax.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br />
+<strong>Oracle Ordered to Pay HP $3 Billion in Itanium Case</strong> A California jury ordered Oracle to pay Hewlett-Packard Enterprise $3 billion in damages in a case over HP&#8217;s Itanium servers, an Oracle spokeswoman said on Thursday.<br />
+<a href="//www.nytimes.com/reuters/2016/06/30/business/30reuters-hewlett-packard-oracle-verdict.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br />
+<strong>U.S. Warns Honda and Acura Owners to Replace Airbags</strong> The transportation secretary, Anthony Foxx, said certain 2001-3 Hondas and Acuras needed to be repaired immediately because of faulty Takata airbags.<br />
+<a href="//www.nytimes.com/2016/07/01/business/honda-accura-takata-airbag-recall-transportation-department.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br />
+<strong>Self-Driving Tesla Was Involved in Fatal Crash, U.S. Says</strong> The federal highway safety agency said that the driver of a Tesla on &#8220;autopilot&#8221; died in a crash in May, thought to be the first death in a self-driving car.<br />
+<a href="//www.nytimes.com/2016/07/01/business/self-driving-tesla-fatal-crash-investigation.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br /><strong>California Attorney General Said to Investigate Major Oil Refiners</strong> California&#8217;s attorney general issued subpoenas to major oil refiners, including Chevron and Exxon Mobil, as part of an investigation into whether the companies artificially raised retail gasoline prices in the state, The Wall Street Journal reports, citing people familiar with the matter.<br />
+<a href="//www.wsj.com/articles/california-attorney-general-investigating-major-oil-refiners-1467302726?mod=pls_whats_news_us_business_f&amp;nl=dealbook&amp;emc=edit_dlbkam_20160701">THE WALL STREET JOURNAL</a><br />
+<br />
+<strong>Justice Department Won&#8217;t Alter Music Industry Royalty Rules</strong> Ascap and BMI, clearinghouses for royalties, say that modifying their consent decrees was urgently needed to adapt to the new world of online music.<br />
+<a href="//www.nytimes.com/2016/07/01/business/media/justice-department-wont-alter-music-industry-royalty-rules.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br />
+<strong>Court Halts Construction of Hudson River Park Backed by Barry Diller</strong> Construction is delayed on a proposed $130 million waterfront park until an appeals court examines why a previous lawsuit against the park was dismissed.<br />
+<a href="//www.nytimes.com/2016/07/01/nyregion/court-halts-construction-of-hudson-river-park-backed-by-barry-diller.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br />
+<strong>Indictment Links Chipotle Executive to New York Drug Ring</strong> In another blow to Chipotle, its chief creative and development officer, Mark Crumpacker, was charged with drug possession.<br />
+<a href="//www.nytimes.com/2016/07/01/business/indictment-links-chipotle-executive-to-new-york-drug-ring.html?nl=dealbook&amp;emc=edit_dlbkam_20160701">NYT Â»</a><br />
+<br />
+For the latest updates, go to <a href="//www.nytimes.com/dealbook">nytimes.com/DealBook</a> | <a href="//m.nytimes.com/dealbook">m.nytimes.com/DealBook Â»</a><br />
+BlackBerry users can download the DealBook <a href="//m.nytimes.com/bbinstall">BlackBerry Shortcut Â»</a><br />
+Receive this daily email and breaking news updates: <a href="//dealbook.nytimes.com/dealbook-e-mail/">Subscribe Â»</a></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/07/01/morning-agenda-half-of-williams-board-resigns/"
+					data-title="Morning Agenda: Half of Williams Board Resigns"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Hershey Rejects Mondelez Takeover Offer | Puerto Rico Debt Relief Stirs Colonial Resentment&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/01/morning-agenda-half-of-williams-board-resigns/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":50,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

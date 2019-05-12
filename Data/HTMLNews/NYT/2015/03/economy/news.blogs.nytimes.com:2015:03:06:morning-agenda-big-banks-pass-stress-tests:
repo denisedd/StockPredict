@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/news/Morning Agenda: Big Banks Pass Stress Tests ( 20150306 )" />
+<meta name="communityAssetURL" content="//news.blogs.nytimes.com/2015/03/06/morning-agenda-big-banks-pass-stress-tests/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003555278"><meta name="author" content="Sydney Ember" />
+<meta name="CLMST" content="Sydney Ember" />
+<meta name="byl" content="Sydney Ember" />
+<meta name="article:author" content="//topics.nytimes.com/top/reference/timestopics/people/e/sydney_ember/index.html" /><meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1425645078" />
+<meta name="PUD" content="20150306" />
+<meta name="pdate" content="20150306" />
+<meta name="ptime" content="20150306073118" />
+<meta name="utime" content="20150306123118" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-03-06T12:31:18-05:00" />
+<meta name="DISPLAYDATE" content="March 6, 2015" />
+<meta name="dat" content="March 6, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F03%2F06%2Fmorning-agenda-big-banks-pass-stress-tests%2F" title="Morning Agenda: Big Banks Pass Stress Tests" />
+<meta name="description" content="The nation&#8217;s biggest banks pass the Fed&#8217;s latest stress tests. &#124; AbbVie goes on the defensive after deal for cancer drug maker. &#124; Bidders show interest in the government&#8217;s third Bitcoin auction. &#124; Nasdaq&#8217;s long climb back to 5,000." />
+<meta name="hdl" content="Morning Agenda: Big Banks Pass Stress Tests" />
+<meta property="og:title" content="Morning Agenda: Big Banks Pass Stress Tests" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/03/06/morning-agenda-big-banks-pass-stress-tests/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="The nation&#8217;s biggest banks pass the Fed&#8217;s latest stress tests. &#124; AbbVie goes on the defensive after deal for cancer drug maker. &#124; Bidders show interest in the government&#8217;s third Bitcoin auction. &#124; Nasdaq&#8217;s long climb back to 5,000." />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Big Banks Pass Stress Tests" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/03/06/morning-agenda-big-banks-pass-stress-tests/" />
+<meta name="twitter:description" content="The nation&#8217;s biggest banks pass the Fed&#8217;s latest stress tests. &#124; AbbVie goes on the defensive after deal for cancer drug maker. &#124; Bidders show interest in the government&#8217;s third Bitcoin auction. &#124; Nasdaq&#8217;s long climb back to 5,000." />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Etsy Files for I.P.O.' href='//news.blogs.nytimes.com/2015/03/05/morning-agenda-etsy-files-for-i-p-o/' />
+<link rel='next' title='What Weâre Reading' href='//news.blogs.nytimes.com/2015/03/06/what-were-reading-35/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/03/06/morning-agenda-big-banks-pass-stress-tests/' />
+<link rel='shortlink' href='//nyti.ms/1H5Bkub' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/03/06/morning-agenda-big-banks-pass-stress-tests/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Big Banks Pass Stress Tests - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2048 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Big Banks Pass Stress Tests        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/03/06/morning-agenda-big-banks-pass-stress-tests/"
+	 data-title="Morning Agenda: Big Banks Pass Stress Tests"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;The nation&#039;s biggest banks pass the Fed&#039;s latest stress tests. | AbbVie goes on the defensive after deal for cancer drug maker. | Bidders show interest in the government&#039;s third Bitcoin auction. | Nasdaq&#039;s long climb back to 5,000.&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/03/06/morning-agenda-big-banks-pass-stress-tests/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="March 6, 2015 7:31 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+		<button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Big Banks Pass Stress Tests</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Sydney Ember			</address>
+			<!-- date published --><time class="dateline " datetime="2015-03-06T12:31:18+00:00" itemprop="datePublished">March 6, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">March 6, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2048 post type-post status-publish hentry category-dealbook" id="post-2048">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Big Banks Pass Stress Tests</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Sydney Ember                </span>
+                <!-- date published --><time class="dateline " datetime="2015-03-06T12:31:18+00:00" itemprop="datePublished">March 6, 2015 7:31 am</time>
+			<!-- date updated --><span class="visually-hidden updated">March 6, 2015 7:31 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/03/06/morning-agenda-big-banks-pass-stress-tests/" data-title="Morning Agenda: Big Banks Pass Stress Tests" data-description="The nation&#039;s biggest banks pass the Fed&#039;s latest stress tests. | AbbVie goes on the defensive after deal for cancer drug maker. | Bidders show interest in the government&#039;s third Bitcoin auction. | Nasdaq&#039;s long climb back to 5,000.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BIG BANKS PASS STRESS TESTS</strong> <span class="divider"> | </span></span> All 31 of the nationâs biggest banks appear to have enough financial strength to survive a severe downturn in the United States economy, according to the results of the so-called stress tests that the Federal Reserve released on Thursday. But some banks fared better than others, <a href="//www.nytimes.com/2015/03/06/business/dealbook/fed-stress-tests-find-biggest-banks-meet-capital-thresholds.html?ref=dealbook">DealBookâs Peter Eavis writes</a>.</p>
+<p class="story-body-text" itemprop="articleBody">The tests add up the losses that a bank would suffer on its loans and trades during the sort of economic and financial storm that ripped through the country more than six years ago. The Fed then assesses the degree to which those losses would deplete a bankâs capital, the financial foundation of every bank. The tests this year found that some of the banks, including Goldman Sachs and Zions Bancorporation, would emerge from the theoretical shocks with <b>significantly less capital than others</b>. Bank of America, on the other hand, was well above all the minimum requirements, putting it among Thursdayâs clear winners. Unlike last yearâs test, this one showed no bank with capital below the minimum.</p>
+<p class="story-body-text" itemprop="articleBody">But the test results on Thursday represent only the first stage of the tests. âIn many ways, <b>the second stage is more important</b> to the banks,â Mr. Eavis writes. âNext Wednesday, the banks will find out if the Fed has approved their plans to distribute capital to shareholders through dividends and stock buybacks.â Right now, most of the jitters on Wall Street revolve around the possibility that the Fed will reject capital plans because it believes them to be inadequate. An American unit of Deutsche Bank, for instance, is most likely going to fail for this reason, according to a person briefed on the process.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ABBVIE DEFENDS DEAL FOR CANCER DRUG MAKER</strong> <span class="divider"> | </span></span> When AbbVie agreed on Wednesday night to buy Pharmacyclics, a publicly traded cancer drug company, for $21 billion, the amount stunned Wall Street, pushed aside one of the giants of the pharmaceutical sector, Johnson &amp; Johnson, and set off a debate about whether AbbVie had paid too much, <a href="//www.nytimes.com/2015/03/06/business/abbvie-wins-bidding-war-for-maker-of-cancer-drug-then-goes-on-defensive.html">Andrew Pollack reports in DealBook</a>. Pharmacyclicsâ crown jewel is the drug Imbruvica, which is used to treat several blood cancers and is considered a breakthrough. Analysts predict that sales could eventually grow to several billion dollars a year.</p>
+<p class="story-body-text" itemprop="articleBody">The deal seems to <b>make sense strategically for AbbVie</b>, which currently receives more than 60 percent of its sales from the autoimmune disease drug Humira, a drug that will face competition from near-generic versions in the next few years. âAbbVie needs new popular drugs to maintain growth, and Imbruvica could fit that bill,â Mr. Pollack writes. But some analysts said AbbVie had paid too much. Investors seemed to agree, sending the companyâs shares down 5.7 percent on Thursday, to $56.86. The deal came after a bidding war and valued Pharmacyclics at $261.25 a share, more than double the stock price at the start of 2015, and well above the $230.48 it closed at on Wednesday.</p>
+<p class="story-body-text" itemprop="articleBody">AbbVie is obtaining a drug that is expected to have about $1 billion in sales this year, its second full year on the market. But <b>it will own only half of Imbruvica</b>, splitting marketing and profits with Johnson &amp; Johnson, Pharmacyclicsâs partner. AbbVie executives suggested during a conference call with securities analysts that they were assuming Imbruvica could eventually exceed $11 billion in annual sales, higher than most analysts expect and better than any cancer drug has done. Skepticism aside, âthe high price of Pharmacyclics was energizing for the biotechnology industry, setting off speculation on which company would be acquired next by a drug maker needing new products,â Mr. Pollack writes.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong> MORE BIDDERS IN THIRD BITCOIN AUCTION</strong> <span class="divider"> | </span></span> The falling price of Bitcoin has not entirely quashed investor enthusiasm for the virtual currency, <a href="//www.nytimes.com/2015/03/06/business/dealbook/us-auction-suggests-lingering-interest-in-bitcoin.html">Sydney Ember writes in DealBook</a>. The United States Marshals Service said on Thursday that 14 registered bidders took part in an auction for 50,000 Bitcoins, worth around $14 million, that were seized in connection with the online bazaar Silk Road. The service said it received 34 total bids, slightly more than the 27 bids it received from 11 bidders at its second auction in December, which was also for 50,000 Bitcoins.</p>
+<p class="story-body-text" itemprop="articleBody">The auction generated little of the attention that accompanied the governmentâs first auction in June, when it sold nearly 30,000 Bitcoins. At the time, Bitcoin was enjoying a speculative boom that had sent its price to about $1,150 at the end of 2013. Although the price of one Bitcoin had fallen to about $570 at the start of the first auction, investors were still willing to bet heavily on the currency. Since then, however, the price of Bitcoin has tumbled and was trading at about $280 on Thursday. A spokeswoman for the Marshals Service wrote in an email that the service anticipated selling the remaining 44,341 Bitcoins it had recovered âin the coming months.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ITâS JOBS DAY</strong> <span class="divider"> | </span></span> Economists expect the unemployment rate to <b>fall by 0.1 or 0.2 percentage points</b> from Januaryâs 5.7 percent when the Labor Department releases its February figures at 8:30 a.m. The consensus expectation on Wall Street is for employers to have <b>added 235,000 jobs</b> last month.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> In addition to the jobs report, data on <b>international trade</b> is out at 8:30 a.m. Data on <b>consumer credit</b> is released at 3 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>NASDAQâS LONG CLIMB BACK</strong> <span class="divider"> | </span></span> âThat the Nasdaq composite index closed over 5,000 this week for the first time in 15 years is not just a reminder of the virtues of patience,â <a href="//www.nytimes.com/2015/03/06/business/a-changed-nasdaq-makes-the-long-climb-back-to-5000.html?ref=dealbook">James B. Stewart writes in the Common Sense column</a>. âItâs even more a testament to the transformative power of capitalism.â The Nasdaq composite at its dot-com peak in 2000 hardly resembles the Nasdaq index of today.</p>
+<p class="story-body-text" itemprop="articleBody">âOf the top 20 Nasdaq companies by market capitalization in 2000, only four â Microsoft, Cisco Systems, Intel and Qualcomm â remain in the top 20 today. Eight no longer exist as independent companies, most as a result of bankruptcy or acquisition, and several are shadows of their former selves. The current Nasdaq composite index has only about <b>half as many companies as it did in 2000</b>,â Mr. Stewart writes. âIn the intervening 15 years, a new generation of entrepreneurs, newly public companies and entire industries have emerged and seized the dominant positions in the Nasdaq index even as their predecessors faltered.â Among the companies that dominate the index now are Apple, Google and Facebook.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Stewart adds: âHad the Nasdaq index itself not been transformed by innovation and competition, it would be nowhere near its previous peak. The stocks of many of the surviving companies, like Microsoft and Intel, have not come close to the levels they reached before 2000.â As a group, the Nasdaq companies of today are <b>more mature and less concentrated in technology</b>. They are also more diversified, Mr. Stewart writes. âAlthough the Nasdaq is often considered a proxy for technology companies, they now make up about 43 percent of the Nasdaq listings, down from nearly 65 percent in 2000, according to Nasdaq.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"> <span class="divider"> | </span></span> <em>Contact: <a href="https://www.twitter.com/melbournecoal">@melbournecoal</a> | <a href="mailto:sydney.ember@nytimes.com">E-mail</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &amp; Acquisitions Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Mallinckrodt to Buy Drug Maker Ikaria for $2.3 Billion</strong> <span class="divider"> | </span></span> Mallinckrodt said that it expected the deal, the latest by a drug maker, to bolster its presence in hospitals.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/03/06/business/dealbook/mallinckrodt-to-buy-drug-maker-ikaria-for-2-3-billion.html"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Peter Madoffâs Former Home Sells for $3.5 Million </strong> <span class="divider"> | </span></span> The Long Island estate of Peter B. Madoff, the younger brother of Bernard L. Madoff, sold for several million dollars less than its original asking price.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/03/06/business/dealbook/peter-madoffs-former-home-sells-for-3-5-million.html">NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FamilyMart of Japan Said to Be in Talks With UNY Group</strong> <span class="divider"> | </span></span> FamilyMart and the UNY Group, which operates Circle K Sunkus stores, are said to be discussing a deal that would create the second-biggest convenience store chain in Japan, rivaling 7-Eleven Japan, Reuters writes, citing an unidentified person familiar with the discussions.<br />
+<span class="kicker"><a href="//www.reuters.com/article/2015/03/05/us-familymart-uny-talks-idUSKBN0M12QL20150305"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinaâs Fosun Buys Small Stake in Thomas Cook</strong> <span class="divider"> | </span></span> The Chinese conglomerate Fosun International said it was not planning to acquire the British travel group Thomas Cook in its entirety after buying a 5 percent share.<br />
+<span class="kicker"><a href="//www.nytimes.com/reuters/2015/03/06/business/06reuters-thomas-cook-m-a-fosun-comment.html?ref=international"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CBRE Said to Be in Talks for Johnson Controls Unit</strong> <span class="divider"> | </span></span> The CBRE Group, the worldâs biggest commercial real estate services firm, is said to be in discussions to acquire a division of Johnson Controls that manages more than 1.8 billion square feet of corporate real estate for more than $1 billion, Reuters writes, citing unidentified people familiar with the matter.<br />
+<span class="kicker"><a href="//www.reuters.com/article/2015/03/05/us-johnsoncontrolsworkplace-m-a-cbre-idUSKBN0M12BT20150305"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>U.S. Losing Tax Revenue on Foreign Takeovers</strong> <span class="divider"> | </span></span> âJust months after the Obama administration cracked down on mergers that helped U.S. companies skirt domestic taxes, a wave of foreign takeovers is steering more tax revenue away from Uncle Sam,â The Wall Street Journal writes.<br />
+<span class="kicker"><a href="//on.wsj.com/1Nn0Mj8"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Evercore May Double Bankers in Southeast Asia</strong> <span class="divider"> | </span></span> Ralph Schlosstein, the chief executive of Evercore Partners, said the boutique investment bank could increase its head count to as many as 20 people in Singapore by the end of the year, from 11 currently, Bloomberg News writes.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-03-06/evercore-may-double-southeast-asia-employees-as-rivals-cut-back"> BLOOMBERG BUSINESS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2015/03/05/business/dealbook/dbpix-faust/dbpix-faust-thumbStandard.jpg" alt="Eaton Vance Charts Exchange-Traded Future" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Eaton Vance Charts Exchange-Traded Future</strong> <span class="divider"> | </span></span> The fund company is seeking to marry the best features of active and passive investing and is holding it up as a model for others.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/03/06/business/dealbook/eaton-vance-charts-exchange-traded-future.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Oil Glut Leads to Dilemma</strong> <span class="divider"> | </span></span> âIn a world awash in crude, oil producers and traders are facing a billion-barrel conundrum: where to put it all,â Nicole Friedman writes for The Wall Street Journal.<br />
+<span class="kicker"><a href="//www.wsj.com/articles/oil-glut-sparks-latest-dilemma-where-to-put-it-all-1425577673"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sharp Said to Seek Help From Turnaround Fund and Banks</strong> <span class="divider"> | </span></span> The Japanese electronics manufacturer Sharp is said to have asked a domestic turnaround fund to invest up to $250 million in capital, which could come on top of plans to ask its two main lenders for a second big bailout, Reuters writes, citing an unidentified source.<br />
+<span class="kicker"><a href="//www.reuters.com/article/2015/03/06/sharp-restructuring-idUSL4N0W766920150306"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstone Said to Seek Sale of AlliedBarton Security Services</strong> <span class="divider"> | </span></span> The Blackstone Group is said to be exploring a sale of AlliedBarton Security Services in a deal that could value the biggest security officer services company in the United States at around $1.5 billion, Reuters reports, citing unidentified people familiar with the matter.<br />
+<span class="kicker"><a href="//www.reuters.com/article/2015/03/05/us-alliedburton-m-a-idUSKBN0M11WZ20150305"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BlueCrest Said to Fire Trader for Sharing Information With Cohenâs Firm</strong> <span class="divider"> | </span></span> BlueCrest Capital Management is said to have fired Nicholas OâGrady, one of its money managers, last year, contending that he improperly revealed information about his stock trading to an employee at Steven A. Cohenâs investment firm, Point72 Asset Management, Bloomberg Business writes, citing unidentified people familiar with the circumstances.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-03-06/bluecrest-is-said-to-fire-o-grady-on-concern-he-divulged-trades"> BLOOMBERG BUSINESS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tiger Consumer Management to Shut Down</strong> <span class="divider"> | </span></span> The hedge fund manager Patrick McCormack said in a letter to investors that he was closing his roughly $1.4 billion Tiger Consumer Management after 15 years to spend more time with his family.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-03-05/tiger-cub-patrick-mccormack-to-shutter-consumer-hedge-fund-firm"> BLOOMBERG BUSINESS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Huarong of China Plans Hong Kong I.P.O. This Year</strong> <span class="divider"> | </span></span> Lai Xiaomin, the chairman of China Huarong Asset Management, one of the countryâs biggest buyers of bad loans, said on Thursday that the initial public offering would probably top the $2.5 billion Hong Kong I.P.O. of Cinda Asset Management in late 2013.<br />
+<span class="kicker"><a href="//on.wsj.com/17WhXYc"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2015/03/06/technology/06kleiner-pao/06kleiner1-web-1425580224670-square320.jpg" alt="In Ellen Paoâs Suit, World of Venture Capital Is Under Microscope" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>In Ellen Paoâs Suit, World of Venture Capital Is Under Microscope</strong> <span class="divider"> | </span></span> What is really under examination in this trial is the question of why there are so few women in leadership positions in Silicon Valley.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/03/06/technology/in-ellen-paos-suit-vs-kleiner-perkins-world-of-venture-capital-is-under-microscope.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uber Suspends Service in South Korea</strong> <span class="divider"> | </span></span> The popular ride-sharing app Uber said on Friday that it would suspend its low-cost uberX ride service in South Korea as it works to bring its business in line with local regulations, Reuters writes.<br />
+<span class="kicker"><a href="//www.reuters.com/article/2015/03/06/us-uber-southkorea-uberx-idUSKBN0M20CS20150306"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Regulators Fine Bank of Beirut $3.2 Million</strong> <span class="divider"> | </span></span> The Financial Conduct Authority said the lender misled it regarding efforts to improve the bankâs financial crime identification systems and controls.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/03/06/business/dealbook/british-regulators-fine-bank-of-beirut-3-2-million.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>E.C.B.âs Draghi Predicts an Improved Economy When Stimulus Program Begins Monday</strong> <span class="divider"> | </span></span> Mario Draghi, the president of the European Central Bank, said that the bond-buying program might help fix the collapse in consumer prices.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/03/06/business/international/ecb-bond-buying-rates-cyprus.html?ref=economy"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody">&nbsp;</p>
+</div>
+			<footer class="entry-footer">
+								<button class="button comments-button  theme-speech-bubble"></button>
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/03/06/morning-agenda-big-banks-pass-stress-tests/"
+					data-title="Morning Agenda: Big Banks Pass Stress Tests"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;The nation&#039;s biggest banks pass the Fed&#039;s latest stress tests. | AbbVie goes on the defensive after deal for cancer drug maker. | Bidders show interest in the government&#039;s third Bitcoin auction. | Nasdaq&#039;s long climb back to 5,000.&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/03/06/morning-agenda-big-banks-pass-stress-tests/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":74,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

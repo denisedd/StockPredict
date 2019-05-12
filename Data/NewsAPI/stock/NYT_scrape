@@ -1,0 +1,84 @@
+import time
+import os
+import requests
+import json
+
+def json_html(parameters):
+    response = requests.get("https://api.nytimes.com/svc/search/v2/articlesearch.json", params=parameters)
+    data = json.loads(response.text)
+    content = data['response']['docs']
+    return data, content
+    
+def html_txt(data, parameters, lst, path, size=10):
+    for i in range(size):
+        try:
+            url = data['response']['docs'][i]['web_url']
+            response = requests.get(url)
+            
+        except :
+            continue
+        else:
+            file = url.split('https://')[1]
+            file1 = file.replace('/',':')
+            lst.append(file1)
+            filename = path+file1
+            f = open(filename,'w') 
+            f.write(response.text)
+            f.close()
+            
+    return lst
+    
+def NYT_API(query, path, start_date, end_date):
+    lst=[]
+    array=[]
+    parameters = {}
+    parameters['api-key']="JwLKzlcdwaGqOXqeiGzZGSiOmO8WN2Oi"
+    parameters['q']=query
+    parameters['begin_date']=''
+    parameters['end_date']=''
+    parameters['sort']='oldest'
+    
+    parameters['begin_date'] = start_date
+    parameters['end_date'] = end_date
+    data, content = json_html(parameters)
+    ttl_message = data['response']['meta']['hits']
+    print(ttl_message)
+
+    for i in range(round(ttl_message/10)):
+        parameters['page']=i
+        data, content = json_html(parameters)
+        lst=html_txt(data, parameters, lst, path)
+        array.append(content)
+        if i%9==0:
+            time.sleep(80)
+
+    parameters['page']=round(ttl_message/10)
+    data, content = json_html(parameters)
+    array.append(content)
+    lst=html_txt(data, parameters, lst, path, ttl_message%10)
+    filename = path+'index.json'
+    with open(filename,'w') as outfile:
+        json.dump(array, outfile, sort_keys=True, indent=4, separators=(',',':'))
+    print(lst)
+    
+query =['economy', 'stocks market']
+# query =['Apple Inc.', 'Alibaba', 'Amazon', 'Google', 'Facebook', 'Netflix', 
+#                 'Microsoft', 'Tesla', 'eBay', 'Cisco', 'economy','finance','stocks','stocks market']
+d={'20140101':'20140131', '20140201':'20140228', '20140301':'20140331', 
+    '20140401':'20140430', '20140501':'20140531', '20140601':'20140630',
+   '20140701':'20140731', '20140801':'20140831', '20140901':'20140930', 
+    '20141001':'20141031', '20141101':'20141130', '20141201':'20141231'}
+# d = {'20190101':'20190125'}
+
+for key, value in d.items():
+#     start_date = start_date + relativedelta(months=+1)
+#     end_date = end_date + relativedelta(months=+1)
+    for a in query:
+        year = key[:4]
+        month = key[4:6]
+        path ='Data/NYT/{}/{}/{}/'.format(year,month, a)
+        os.makedirs(path)
+        print(key)
+        print(value)
+        NYT_API(a, path, key, value)
+        time.sleep(65)

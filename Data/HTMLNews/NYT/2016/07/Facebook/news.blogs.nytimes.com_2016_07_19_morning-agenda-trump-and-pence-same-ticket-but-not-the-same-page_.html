@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004538765"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1468922988" />
+<meta name="PUD" content="20160719" />
+<meta name="pdate" content="20160719" />
+<meta name="ptime" content="20160719060948" />
+<meta name="utime" content="20170918185527" />
+<meta property="article:modified_time" itemprop="dateModified" content="2017-09-18T18:55:27-04:00" />
+<meta name="DISPLAYDATE" content="July 19, 2016" />
+<meta name="dat" content="July 19, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Ailes, Roger E;Mayer, Marissa;Pence, Mike;Sine, Jeffrey (1954- );Trump, Donald J">
+<meta name="des" content="Banking and Financial Institutions;Dodd-Frank Wall Street Reform and Consumer Protection Act (2010);Emergency Economic Stabilization Act (2008);Fuel Efficiency;Glass-Steagall Act (1933);Insurance;Mergers, Acquisitions and Divestitures;Privacy;Private Equity;Real Estate and Housing (Residential);Regulation and Deregulation of Industry;Republican National Convention;Sovereign Wealth Funds;Subprime Mortgage Crisis;Venture Capital">
+<meta name="org" content="21st Century Fox;Bank of America Corporation;Bank of England;Bayer AG;Fiat Chrysler Automobiles NV;Goldman Sachs Group Inc;Libyan Investment Authority;Microsoft Corp;Monsanto Company;Morgan Stanley;Raine Group LLC;Republican Party;Robey Warshaw LLP;Societe Generale;SOFTBANK Corporation;Thrive Capital;Tumblr;UBS AG;Wells Fargo &amp; Company;Yahoo! Inc">
+<meta name="ticker" content="Bank of America Corporation|BAC|NYSE;Bayer AG|BAYRY|Other OTC;Goldman Sachs Group Inc|GS|NYSE;Microsoft Corp|MSFT|NASDAQ;Monsanto Company|MON|NYSE;Morgan Stanley|MS|NYSE;Societe Generale|SCGLY|Other OTC;SOFTBANK Corporation|SFTBF|Other OTC;Wells Fargo & Company|WFC|NYSE;Yahoo! Inc|YHOO|NASDAQ" />
+<meta property="article:tag" content="Ailes Roger E" />
+<meta property="article:tag" content="Mayer Marissa" />
+<meta property="article:tag" content="Pence Mike" />
+<meta property="article:tag" content="Sine Jeffrey (1954- )" />
+<meta property="article:tag" content="Trump Donald J" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Dodd-Frank Wall Street Reform and Consumer Protection Act (2010)" />
+<meta property="article:tag" content="Emergency Economic Stabilization Act (2008)" />
+<meta property="article:tag" content="Fuel Efficiency" />
+<meta property="article:tag" content="Glass-Steagall Act (1933)" />
+<meta property="article:tag" content="Insurance" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Privacy" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Real Estate and Housing (Residential)" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Republican National Convention" />
+<meta property="article:tag" content="Sovereign Wealth Funds" />
+<meta property="article:tag" content="Subprime Mortgage Crisis" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="21st Century Fox" />
+<meta property="article:tag" content="Bank of America Corporation" />
+<meta property="article:tag" content="Bank of England" />
+<meta property="article:tag" content="Bayer AG" />
+<meta property="article:tag" content="Fiat Chrysler Automobiles NV" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Libyan Investment Authority" />
+<meta property="article:tag" content="Microsoft Corp" />
+<meta property="article:tag" content="Monsanto Company" />
+<meta property="article:tag" content="Morgan Stanley" />
+<meta property="article:tag" content="Raine Group LLC" />
+<meta property="article:tag" content="Republican Party" />
+<meta property="article:tag" content="Robey Warshaw LLP" />
+<meta property="article:tag" content="Societe Generale" />
+<meta property="article:tag" content="SOFTBANK Corporation" />
+<meta property="article:tag" content="Thrive Capital" />
+<meta property="article:tag" content="Tumblr" />
+<meta property="article:tag" content="UBS AG" />
+<meta property="article:tag" content="Wells Fargo &amp; Company" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Ailes Roger E,Mayer Marissa,Pence Mike,Sine Jeffrey (1954- ),Trump Donald J,Banking and Financial Institutions,Dodd-Frank Wall Street Reform and Consumer Protection Act (2010),Emergency Economic Stabilization Act (2008),Fuel Efficiency,Glass-Steagall Act (1933),Insurance,Mergers Acquisitions and Divestitures,Privacy,Private Equity,Real Estate and Housing (Residential),Regulation and Deregulation of Industry,Republican National Convention,Sovereign Wealth Funds,Subprime Mortgage Crisis,Venture Capital,21st Century Fox,Bank of America Corporation,Bank of England,Bayer AG,Fiat Chrysler Automobiles NV,Goldman Sachs Group Inc,Libyan Investment Authority,Microsoft Corp,Monsanto Company,Morgan Stanley,Raine Group LLC,Republican Party,Robey Warshaw LLP,Societe Generale,SOFTBANK Corporation,Thrive Capital,Tumblr,UBS AG,Wells Fargo &amp; Company,Yahoo! Inc,DealBook" />
+<meta name="news_keywords" content="Personal finance,Privacy,Tumblr" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F07%2F19%2Fmorning-agenda-trump-and-pence-same-ticket-but-not-the-same-page%2F" title="Morning Agenda: Trump and Pence: Same Ticket, but Not the Same Page" />
+<meta name="description" content="SoftBank Shares Plunge After Deal Announcement &#124; Yahoo&#8217;s Revenue Slumps" />
+<meta name="hdl" content="Morning Agenda: Trump and Pence: Same Ticket, but Not the Same Page" />
+<meta property="og:title" content="Morning Agenda: Trump and Pence: Same Ticket, but Not the Same Page" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/07/19/morning-agenda-trump-and-pence-same-ticket-but-not-the-same-page/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="SoftBank Shares Plunge After Deal Announcement &#124; Yahoo&#8217;s Revenue Slumps" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Trump and Pence: Same Ticket, but Not the Same Page" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/07/19/morning-agenda-trump-and-pence-same-ticket-but-not-the-same-page/" />
+<meta name="twitter:description" content="SoftBank Shares Plunge After Deal Announcement &#124; Yahoo&#8217;s Revenue Slumps" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: SoftBank to Buy Leading Chip Designer' href='//news.blogs.nytimes.com/2016/07/18/morning-agenda-softbank-to-buy-leading-chip-designer/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/07/19/what-were-reading-172/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/07/19/morning-agenda-trump-and-pence-same-ticket-but-not-the-same-page/' />
+<link rel='shortlink' href='//nyti.ms/2a5w0yL' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/07/19/morning-agenda-trump-and-pence-same-ticket-but-not-the-same-page/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Trump and Pence: Same Ticket, but Not the Same Page - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5314 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Trump and Pence: Same Ticket, but Not the Same Page        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/07/19/morning-agenda-trump-and-pence-same-ticket-but-not-the-same-page/"
+	 data-title="Morning Agenda: Trump and Pence: Same Ticket, but Not the Same Page"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;SoftBank Shares Plunge After Deal Announcement | Yahoo&#039;s Revenue Slumps&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/19/morning-agenda-trump-and-pence-same-ticket-but-not-the-same-page/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 19, 2016 6:09 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Trump and Pence: Same Ticket, but Not the Same Page</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-07-19T10:09:48+00:00" itemprop="datePublished">July 19, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">July 19, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5314 post type-post status-publish hentry category-dealbook tag-21st-century-fox tag-ailes-roger-e tag-bank-of-america-corporation tag-bank-of-england tag-banking-and-financial-institutions tag-bayer-ag tag-dodd-frank-wall-street-reform-and-consumer-protection-act-2010 tag-emergency-economic-stabilization-act-2008 tag-fiat-chrysler-automobiles-nv tag-fuel-efficiency tag-glass-steagall-act-1933 tag-goldman-sachs-group-inc tag-insurance tag-libyan-investment-authority tag-mayer-marissa tag-mergers-acquisitions-and-divestitures tag-microsoft-corp tag-monsanto-company tag-morgan-stanley tag-pence-mike tag-privacy tag-private-equity tag-raine-group-llc tag-real-estate-and-housing-residential tag-regulation-and-deregulation-of-industry tag-republican-national-convention tag-republican-party tag-robey-warshaw-llp tag-sine-jeffrey-1954 tag-societe-generale tag-softbank-corporation tag-sovereign-wealth-funds tag-subprime-mortgage-crisis tag-thrive-capital tag-trump-donald-j tag-tumblr tag-ubs-ag tag-venture-capital tag-wells-fargo-company tag-yahoo-inc per-ailes-roger-e per-mayer-marissa per-pence-mike per-sine-jeffrey-1954 per-trump-donald-j des-banking-and-financial-institutions des-dodd-frank-wall-street-reform-and-consumer-protection-act-2010 des-emergency-economic-stabilization-act-2008 des-fuel-efficiency des-glass-steagall-act-1933 des-insurance des-mergers-acquisitions-and-divestitures des-privacy des-private-equity des-real-estate-and-housing-residential des-regulation-and-deregulation-of-industry des-republican-national-convention des-sovereign-wealth-funds des-subprime-mortgage-crisis des-venture-capital org-21st-century-fox org-bank-of-america-corporation org-bank-of-england org-bayer-ag org-fiat-chrysler-automobiles-nv org-goldman-sachs-group-inc org-libyan-investment-authority org-microsoft-corp org-monsanto-company org-morgan-stanley org-raine-group-llc org-republican-party org-robey-warshaw-llp org-societe-generale org-softbank-corporation org-thrive-capital org-tumblr org-ubs-ag org-wells-fargo-company org-yahoo-inc news_keywords-personal-finance news_keywords-privacy news_keywords-tumblr" id="post-5314">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Trump and Pence: Same Ticket, but Not the Same Page</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-07-19T10:09:48+00:00" itemprop="datePublished">July 19, 2016 6:09 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 19, 2016 6:09 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/07/19/morning-agenda-trump-and-pence-same-ticket-but-not-the-same-page/" data-title="Morning Agenda: Trump and Pence: Same Ticket, but Not the Same Page" data-description="SoftBank Shares Plunge After Deal Announcement | Yahoo&#039;s Revenue Slumps">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div>
+<p class="story-body-text" itemprop="articleBody">TRUMP AND PENCE: SAME TICKET, BUT NOT THE SAME PAGE If there is one thing consistent about the business views of Gov. Mike Pence of Indiana, it is that they are often at odds with those of Donald Trump, <a href="//www.nytimes.com/2016/07/19/business/dealbook/trump-and-pence-on-the-same-ticket-but-not-on-the-same-page.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160719">Andrew Ross Sorkin writes in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Mr. Trump&#8217;s views are not always on the record in the same way as Mr. Pence&#8217;s votes in Congress, but <b>appearances in the news media indicate that the two are far from being in lock step</b>.</p>
+<p class="story-body-text" itemprop="articleBody">As a congressman, Mr. Pence opposed the bills that turned out to have the biggest repercussions on Wall Street and American industry &#8211; the bailout of the financial industry, <b>known as the Troubled Asset Relief Program, and the rescue of the auto industry.</b></p>
+<p class="story-body-text" itemprop="articleBody">Mr. Trump, on the other hand, said in 2008 that the bailing out of the banks was &#8220;sad, but, probably, it&#8217;s something that has to get done, because your financial system is most likely going to come to a halt if it does not.&#8221; He also said later, &#8220;I do agree with what they&#8217;re doing with the banks. Whether they fund them or nationalize them, it doesn&#8217;t matter, but <b>you have to keep the banks going</b>.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">When it came to the auto bailouts, Mr. Trump was also opposed to Mr. Pence. &#8220;I think the government should stand behind them 100 percent,&#8221; he told Fox News. &#8220;<b>You cannot lose the auto companies</b>. They&#8217;re great. They make wonderful products.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Pence&#8217;s donors have not always been Mr. Trump&#8217;s supporters either. The billionaire Koch brothers have been long-time supporters of Mr. Pence, but Mr. Trump has been unable to persuade the family to support him.</p>
+<p class="story-body-text" itemprop="articleBody">They don&#8217;t disagree completely on business. <b>They both want to undo the Dodd-Frank regulatory reform law and want to lower individual and corporate taxes.</b></p>
+<p class="story-body-text" itemprop="articleBody">However, the real practical obstacle created by Mr. Pence&#8217;s addition to the ticket is that he might make it harder for Mr. Trump to raise money from the business community. Because Mr. Pence is a sitting governor, donations from Wall Street fall under an obscure Securities and Exchange Commission law meant to prevent pay-for-play efforts for state pension funds, according to OpenSecrets.org.</p>
+<p class="story-body-text" itemprop="articleBody">&#8220;The rule prevents &#8216;S.E.C.-registered investment advisers&#8217; from contributing more than $250-$350 to state or local officials who could select the firm that would manage a state or local pension fund, or some part of it,&#8221; the organization&#8217;s website said. &#8220;That means most hedge funds and private equity firms &#8211; their PACs, their executives, their fund managers and probably their investor relations staff &#8211; can&#8217;t give to the ticket.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">But, as Mr. Trump already said on Sunday night, <b>&#8220;I don&#8217;t care.&#8221;</b></p>
+<p class="story-body-text" itemprop="articleBody">And he is still struggling to unite his own party for the Republican convention, as <a href="//www.nytimes.com/2016/07/19/us/politics/republican-convention-donald-trump.html?hp=&amp;action=click&amp;pgtype=Homepage&amp;clickSource=story-heading&amp;module=a-lede-package-region&amp;region=top-news&amp;WT.nav=top-news&amp;nl=dealbook&amp;emc=edit_dlbkam_20160719">Jonathan Martin and Patrick Healy report in The New York Times.</a></p>
+<div></div>
+<p class="story-body-text" itemprop="articleBody">SOFTBANK SHARES PLUNGE AFTER DEAL ANNOUNCEMENTShares in SoftBank plunged in Tokyo after it announced a deal to take over a British chip designer for $32 billion dollars, <a href="//www.bloomberg.com/news/articles/2016-07-19/softbank-slumps-after-son-s-32-billion-takeover-of-arm-holdings?nl=dealbook&amp;emc=edit_dlbkam_20160719">Bloomberg reports.</a> Its stock dropped about 10 percent &#8211; <b>the biggest decline since 2012.</b> This came after shares in Sprint fell 5 percent on Monday over concerns that the company would get less support from SoftBank.</p>
+<p class="story-body-text" itemprop="articleBody">The acquisition would make financial sense only if SoftBank more than quintupled the operating profit of the chip designer, ARM, <a href="//www.nytimes.com/2016/07/19/business/dealbook/softbanks-deal-with-arm-is-a-financial-stretch.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160719">Dominic Elliott writes in Breakingviews.</a> Even with the rise of driverless cars and web-enabled industrial and domestic appliances, that seems a stretch.</p>
+<p class="story-body-text" itemprop="articleBody">To achieve a 10 percent return on its investment &#8211; ARM&#8217;s own estimate of its weighted average cost of capital &#8211; SoftBank would need to increase operating profit from Â£500 million last year, or about $660 million, to Â£2.9 billion, or about $3.8 billion, using ARM&#8217;s effective tax rate last year of 18 percent, Mr. Elliott estimates.</p>
+<p class="story-body-text" itemprop="articleBody">Cost savings are usually used to justify a deal this size, but the two companies have no overlapping businesses, so any additional value would need to be created from nebulous cross-selling opportunities.</p>
+<p class="story-body-text" itemprop="articleBody"><b>ARM is best left for the irrational, the exuberant or the desperate</b>, Mr. Elliott writes.</p>
+<p class="story-body-text" itemprop="articleBody">The deal has at least given Britain some cause for optimism after its decision to leave the European Union threatened to quash deal activity.<b>ARM, however, is a special case</b>, as <a href="//www.nytimes.com/2016/07/19/business/dealbook/softbanks-arm-deal-may-signal-life-after-brexit-or-not.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160719">Leslie Picker explains.</a></p>
+<p class="story-body-text" itemprop="articleBody"><b>The company is relatively immune to a slowdown in the British economy</b> because it only generates about 1 percent of its revenue from Britain. It also does not require much in the way of raw materials as it designs chips and then sells the intellectual property. Its employees are spread out across the world. The deal is also unlikely to run into significant regulatory opposition or lead to visible cost cuts.</p>
+<p class="story-body-text" itemprop="articleBody">The tie-up has also led to a <b>reunion of Morgan Stanley alumni</b>, <a href="//www.nytimes.com/2016/07/19/business/dealbook/softbank-arm-deal-brings-together-morgan-stanley-alumni.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160719">Anita Raghavan writes in DealBook</a> . Jeffrey Sine, who helped found the Raine Group, was the lead advisor. He first got to know SoftBank in the mid-1990s when working for Morgan Stanley. He advised on SoftBank&#8217;s acquisition of the publishing company Ziff-Davis and helped take it public later. Raine Group was also given the assignment of spearheading SoftBank&#8217;s acquisition of a controlling stake in Sprint.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Son has also had Alok Sama, another former Morgan Stanley banker, working for him as chief financial officer. Mr. Sama took on the additional title of president when Nikesh Arora left this summer. He brought on board Alex Clavel, another managing director from Morgan Stanley, to work on the ARM acquisition.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Sine also knew the team at Robey Warshaw, the London investment banking boutique that is advising SoftBank on the deal. <b>SoftBank needed a well-connected British banker to lay the groundwork for what would be the largest inward investment into Britain by an Asian company.</b></p>
+<div></div>
+<p class="story-body-text" itemprop="articleBody">ON THE AGENDA <b>Goldman Sachs</b> will publish its second-quarter results at 7:30 a.m. and follow up with a conference call at 9:30 a.m.<b>Microsoft&#8217;s</b> quarterly earnings call starts at 5:30 p.m.</p>
+<div></div>
+<p class="story-body-text" itemprop="articleBody">YAHOO&#8217;S REVENUE SLUMPS Yahoo revealed just how badly its business was deteriorating on the same day that it accepted the final bids to buy its core business, <a href="//www.nytimes.com/2016/07/19/technology/yahoo-revenue-falls-15-percent-and-profit-drops-64-percent.html?ref=business&amp;nl=dealbook&amp;emc=edit_dlbkam_20160719">Vindu Goel reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody"><b>Its revenue in the second quarter fell 15 percent, after excluding accounting adjustments, and its operating profit plunged 64 percent.</b> The company also acknowledged that Tumblr, its biggest acquisition under its current chief executive, was now worth only one-third of the $1.1 billion that Yahoo paid for it in 2013.</p>
+<p class="story-body-text" itemprop="articleBody">Still, investors were more interested whether its email, news and web services would finally be sold and at what price. But Marissa Mayer, the chief executive, had little say on the topic. <b>She offered no timeline for a decision.</b></p>
+<p class="story-body-text" itemprop="articleBody"><b>The flailing business will make it difficult to get top dollar for the company. </b>According to the research firm eMarketer, Yahoo will get about 1.5 percent of the world&#8217;s digital ad revenue this year, down from 2.1 percent last year. By comparison, Google is expected to command 30.9 percent of the market and Facebook is expected to garner 12 percent.</p>
+<p class="story-body-text" itemprop="articleBody">Analysts expect the final bids to come in at $3.5 billion to $6 billion, including Yahoo&#8217;s land and patents.</p>
+<p class="story-body-text" itemprop="articleBody">Ms. Mayer noted that one bright spot for the industry, <b>video advertising, was beginning to undergo price drops in the face of a glut</b> of inventory as Facebook, Twitter and others churn out more live video and clips. &#8220;There&#8217;s so much video, particularly mobile video, coming online that there is some price compression,&#8221; she said.</p>
+<div></div>
+</div>
+<div><em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+<div></div>
+</div>
+<div>
+<h6><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/?nl=dealbook&amp;emc=edit_dlbkam_20160719" name="mna">MERGERS &amp; ACQUISITIONS Â»</a></h6>
+<p class="story-body-text" itemprop="articleBody">Monsanto Said to Be Discussing Confidentiality Pact With BayerMonsanto is negotiating the terms of a confidentiality agreement with Bayer, which made an offer to buy it for more than $64 billion, Reuters reports, citing a person familiar with the matter.</p>
+<ul>
+<li><a href="//www.reuters.com/article/us-monsanto-m-a-bayer-idUSKCN0ZY2D0?feedType=RSS&amp;feedName=innovationNews&amp;nl=dealbook&amp;emc=edit_dlbkam_20160719">REUTERS</a></li>
+</ul>
+<p class="story-body-text" itemprop="articleBody">Buffett Buys $1.8 Billion &#8216;Gem&#8217; of a Medical Insurer in N.Y.Berkshire Hathaway agreed to buy Medical Liability Mutual Insurance, the largest underwriter of medical professional liability insurance in New York.</p>
+<ul>
+<li><a href="//www.bloomberg.com/news/articles/2016-07-18/buffett-buys-1-8-billion-gem-of-a-medical-insurer-in-new-york?nl=dealbook&amp;emc=edit_dlbkam_20160719">BLOOMBERG</a></li>
+</ul>
+</div>
+<div>
+<h6><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160719" name="banking">INVESTMENT BANKING Â»</a></h6>
+<p class="story-body-text" itemprop="articleBody">Decision to Loosen British Banks&#8217; Capital Constraints Divides Experts A top bank regulator in the United States and the author of the Britain&#8217;s postcrisis banking inquiry have criticized the Bank of England&#8217;s decision to relax banks&#8217; capital standards after Britain&#8217;s vote to leave the European Union.</p>
+<ul>
+<li><a href="//www.wsj.com/articles/decision-to-loosen-u-k-banks-capital-constraints-divides-experts-1468874551?mod=asia_home&amp;nl=dealbook&amp;emc=edit_dlbkam_20160719">THE WALL STREET JOURNAL</a></li>
+</ul>
+<p class="story-body-text" itemprop="articleBody">G.O.P. Platform Calls for Revival of Glass Steagall The Republican Party platform called for restoring the Glass-Steagall law that separated commercial banking and securities activities at Wall Street firms.</p>
+<ul>
+<li><a href="//www.wsj.com/articles/gop-platform-calls-for-revival-of-glass-steagall-1468876558?mod=pls_whats_news_us_business_f&amp;nl=dealbook&amp;emc=edit_dlbkam_20160719">THE WALL STREET JOURNAL</a></li>
+</ul>
+<p class="story-body-text" itemprop="articleBody">Five Things to Watch From Goldman Sachs Profits are expected to increase, but it is no triumphant resurgence.</p>
+<ul>
+<li><a href="//www.ft.com/cms/s/0/7ade77d0-4d47-11e6-8172-e39ecd3b86fc.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct&amp;nl=dealbook&amp;emc=edit_dlbkam_20160719#axzz4EisUfw00">THE FINANCIAL TIMES</a></li>
+</ul>
+<p class="story-body-text" itemprop="articleBody">Bank of America Plans More Cost Cuts Bank of America said it would deliver another $5 billion in annual cost cuts by 2018 as part of its strategy to deal with persistently low interest rates that are eating away at lenders&#8217; profitability.</p>
+<ul>
+<li><a href="//www.wsj.com/articles/bank-of-americas-results-slide-1468839019?mod=asia_home&amp;nl=dealbook&amp;emc=edit_dlbkam_20160719">THE WALL STREET JOURNAL</a></li>
+</ul>
+<p class="story-body-text" itemprop="articleBody">Wells Fargo Spends $397 Million on European Headquarters in London Wells Fargo struck a deal to buy a 22-story building known as 33 Central in the heart of London&#8217;s financial district for Â£300 million, or about $397 million.</p>
+<ul>
+<li><a href="//www.ft.com/cms/s/0/7f08f65a-4d1f-11e6-8172-e39ecd3b86fc.html?nl=dealbook&amp;emc=edit_dlbkam_20160719#axzz4EisUfw00">THE FINANCIAL TIMES</a></li>
+</ul>
+<p class="story-body-text" itemprop="articleBody">SociÃ©tÃ© GÃ©nÃ©rale Seeks to Delay Trial Linked to Libyan Sovereign Wealth Fund The French bank SociÃ©tÃ© GÃ©nÃ©rale is being sued by the Libyan Investment Authority, seeking the cancellation of complex financial trades in which it invested $2.1 billion or $1.5 billion of damages.</p>
+<ul>
+<li><a href="//www.ft.com/cms/s/0/71e49c24-4ceb-11e6-8172-e39ecd3b86fc.html?nl=dealbook&amp;emc=edit_dlbkam_20160719#axzz4EisUfw00">THE FINANCIAL TIMES</a></li>
+</ul>
+</div>
+<table>
+<tbody>
+<tr>
+<td height="47">
+<table>
+<tbody>
+<tr>
+<td>For the latest updates, go to <a href="//www.nytimes.com/pages/business/dealbook/index.html">NYTimes.com/DealBook</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" width="358" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td align="center">ADVERTISEMENT</td>
+</tr>
+<tr>
+<td align="center"><a href="//www.nytimes.com/adx/bin/adx_click.html?type=goto&amp;opzn&amp;page=email.nytimes.com/business/dealbookemail/html&amp;pos=Position5&amp;sn2=7cb3730e/cd35de0d&amp;sn1=5bbb0fb3/8fb5a0d9&amp;camp=nyt2015_300x250_em_crossword_nonsub_pos5&amp;ad=CRS-8944_300x250_Crossword_nonsubs_Free_2x&amp;goto=http%3A%2F%2Fwww%2Enytimes%2Ecom%2Fsubscriptions%2Fgames%2Flp897H9%2Ehtml%3FcampaignId%3D4Y8QR" target="_blank"><img src="https://static01.nyt.com/adx/images/ADS/41/21/ad.412104/CRS-8944_300x250_Crossword_freemonth_SS_2x.png" alt="" width="300" height="250" border="0" /></a></td>
+</tr>
+</tbody>
+</table>
+<div>
+<h6><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160719" name="privateequity">PRIVATE EQUITY Â»</a></h6>
+<p class="story-body-text" itemprop="articleBody">Carlyle Goes on Trial for a Financial Crisis Meltdown Carlyle Capital Corporation, a mortgage bond fund, borrowed vast sums from banks to buy $23 billion in bonds. When its lenders were spooked by the deteriorating housing market in the United States, investors lost their entire $945 million in capital.</p>
+<ul>
+<li><a href="//www.wsj.com/articles/carlyle-goes-on-trial-for-a-financial-crisis-meltdown-1468865131?nl=dealbook&amp;emc=edit_dlbkam_20160719">THE WALL STREET JOURNAL</a></li>
+</ul>
+</div>
+<div>
+<h6><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160719" name="venturecapital">VENTURE CAPITAL Â»</a></h6>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/18/100000004538000/19DB-THRIVESUB-thumbStandard.jpg" alt="Joshua Kushner, left, and Kevin Nazemi, two of the founders of Oscar Health. Mr. Kushner also runs Thrive Capital, the venture capital firm." width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">Thrive Capital Raises $700 Million for Fifth Fund With the new financing, the firm, known for early investments in companies like Instagram and Warby Parker, will be valued at just under $1.5 billion.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/19/business/dealbook/thrive-capital-raises-700-million-for-fifth-fund.html?nl=dealbook&amp;emc=edit_dlbkam_20160719">NYT Â»</a></li>
+</ul>
+</div>
+<div>
+<h6><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160719" name="legal">LEGAL/REGULATORY Â»</a></h6>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/18/100000004537794/19DB-LENDING-thumbStandard.jpg" alt="A street in Ferguson, Mo., in the St. Louis metropolitan area. Many neighborhoods in the St. Louis area remain largely segregated." width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">Race Strongly Influences Mortgage Lending in St. Louis, Study Finds Banks made fewer loans to borrowers in minority neighborhoods than to those with similar incomes in white neighborhoods, a consumer group found.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/19/business/dealbook/race-strongly-influences-mortgage-lending-in-st-louis-study-finds.html?nl=dealbook&amp;emc=edit_dlbkam_20160719">NYT Â»</a></li>
+</ul>
+<p class="story-body-text" itemprop="articleBody">Microsoft Case Shows the Limits of a Data Privacy Law An appeals court decision dealt a blow to government efforts to obtain emails stored overseas, mainly because laws have not kept up with technology, Peter J. Henning writes in White Collar Watch.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/19/business/dealbook/microsoft-case-shows-the-limits-of-a-data-privacy-law.html?nl=dealbook&amp;emc=edit_dlbkam_20160719">NYT Â»</a></li>
+</ul>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/18/100000004537545/19CHRYSLER-thumbStandard.jpg" alt="A Chrysler Jeep dealership in Hollywood, Fla. Fiat Chrysler sales figures are under scrutiny." width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">Fiat Chrysler Sales Figures Are Target of U.S. Investigation The S.E.C. is asking whether the automaker has improperly inflated its monthly vehicle sales totals, potentially misleading investors.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/19/business/us-investigates-fiat-chrysler-over-sales-figures.html?nl=dealbook&amp;emc=edit_dlbkam_20160719">NYT Â»</a></li>
+</ul>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/18/100000004537608/19AUTO-thumbStandard.jpg" alt="President Obama in 2011, announcing projections to increase fuel economy to 54.5 miles per gallon for cars and light-duty trucks by model-year 2025. Two federal agencies said in a report released on Monday that demand for S.U.V.s and pickups made it very unlikely that forecast would be met." width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">Fuel Targets Threatened by Demand for Big Autos Two federal agencies said in a report that it was unlikely the industry could meet the government&#8217;s ambitious projections a decade from now.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/19/business/demand-for-big-vehicles-threatens-emissions-targets.html?nl=dealbook&amp;emc=edit_dlbkam_20160719">NYT Â»</a></li>
+</ul>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/18/100000004537058/19FOX-thumbStandard.jpg" alt="Roger Ailes in 1996, when he was first named chairman and chief executive of Fox News." width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">Ailes&#8217;s Fate Is Still in Review, 21st Century Fox Says As speculation swirled that the Murdoch family had decided that a top executive, Roger Ailes, must leave Fox News, the company issued a terse statement notable for what it did not say.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/19/business/media/roger-ailes-fox-news-murdoch.html?nl=dealbook&amp;emc=edit_dlbkam_20160719">NYT Â»</a> | <a href="//www.nytimes.com/2016/07/18/business/media/murdoch-brothers-challenge-what-happens-next-at-fox-news.html?nl=dealbook&amp;emc=edit_dlbkam_20160719">MURDOCH BROTHERS&#8217; CHALLENGE: WHAT HAPPENS NEXT AT FOX NEWS?</a></li>
+</ul>
+<p class="story-body-text" itemprop="articleBody">Tax Investigators Raid Home of Former Boss of UBS In GreeceGreek investigators raided the home of a former local boss of UBS in the latest attempt by cash-poor European nations to pierce the secrecy of Swiss banks in hopes of bolstering depleted coffers.</p>
+<ul>
+<li><a href="//www.ft.com/cms/s/0/23cc4bfc-4ab3-11e6-b387-64ab0a67014c.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct&amp;nl=dealbook&amp;emc=edit_dlbkam_20160719#axzz4EisUfw00">THE FINANCIAL TIMES</a></li>
+</ul>
+</div>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/07/19/morning-agenda-trump-and-pence-same-ticket-but-not-the-same-page/"
+					data-title="Morning Agenda: Trump and Pence: Same Ticket, but Not the Same Page"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;SoftBank Shares Plunge After Deal Announcement | Yahoo&#039;s Revenue Slumps&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/19/morning-agenda-trump-and-pence-same-ticket-but-not-the-same-page/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":111,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

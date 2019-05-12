@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003673197"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1431084456" />
+<meta name="PUD" content="20150508" />
+<meta name="pdate" content="20150508" />
+<meta name="ptime" content="20150508072736" />
+<meta name="utime" content="20150508112736" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-05-08T11:27:36-04:00" />
+<meta name="DISPLAYDATE" content="May 8, 2015" />
+<meta name="dat" content="May 8, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Bush, Jeb;Initial Public Offerings;Pickens, T Boone Jr;Varoufakis, Yanis">
+<meta name="des" content="Apollo Global Management L.L.C;Banking and Financial Institutions;Bankruptcies;Bitcoin (Currency);British Pound (Currency);Company Reports;Credit and Debt;European Sovereign Debt Crisis (2010- );Exchange Traded Funds;Hedge Funds;Mergers, Acquisitions and Divestitures;Regulation and Deregulation of Industry;Venture Capital">
+<meta name="org" content="Alibaba.com;Bank of America Corporation;Citigroup Inc;GE Capital Corp;General Electric Company;Hutchison Whampoa Ltd;JPMorgan Chase &amp; Company;Monsanto Company;Nokia Oyj;Syngenta AG;Uber Technologies Inc;UBS AG;Yelp">
+<meta name="geo" content="Great Britain;Greece">
+<meta name="ticker" content="Bank of America Corporation|BAC|NYSE;Citigroup Inc|C|NYSE;General Electric Company|GE|NYSE;JPMorgan Chase & Company|JPM|NYSE;Monsanto Company|MON|NYSE;Nokia Oyj|NOK|NYSE;Syngenta AG|SYT|NYSE;UBS AG|UBS|NYSE;Yelp|YELP|NYSE" />
+<meta property="article:tag" content="Bush Jeb" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Pickens T Boone Jr" />
+<meta property="article:tag" content="Varoufakis Yanis" />
+<meta property="article:tag" content="Apollo Global Management L.L.C" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Bankruptcies" />
+<meta property="article:tag" content="Bitcoin (Currency)" />
+<meta property="article:tag" content="British Pound (Currency)" />
+<meta property="article:tag" content="Company Reports" />
+<meta property="article:tag" content="Credit and Debt" />
+<meta property="article:tag" content="European Sovereign Debt Crisis (2010- )" />
+<meta property="article:tag" content="Exchange Traded Funds" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Alibaba.com" />
+<meta property="article:tag" content="Bank of America Corporation" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="GE Capital Corp" />
+<meta property="article:tag" content="General Electric Company" />
+<meta property="article:tag" content="Hutchison Whampoa Ltd" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="Monsanto Company" />
+<meta property="article:tag" content="Nokia Oyj" />
+<meta property="article:tag" content="Syngenta AG" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="UBS AG" />
+<meta property="article:tag" content="Yelp" />
+<meta property="article:tag" content="Great Britain" />
+<meta property="article:tag" content="Greece" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Bush Jeb,Initial Public Offerings,Pickens T Boone Jr,Varoufakis Yanis,Apollo Global Management L.L.C,Banking and Financial Institutions,Bankruptcies,Bitcoin (Currency),British Pound (Currency),Company Reports,Credit and Debt,European Sovereign Debt Crisis (2010- ),Exchange Traded Funds,Hedge Funds,Mergers Acquisitions and Divestitures,Regulation and Deregulation of Industry,Venture Capital,Alibaba.com,Bank of America Corporation,Citigroup Inc,GE Capital Corp,General Electric Company,Hutchison Whampoa Ltd,JPMorgan Chase &amp; Company,Monsanto Company,Nokia Oyj,Syngenta AG,Uber Technologies Inc,UBS AG,Yelp,Great Britain,Greece,DealBook" />
+<meta name="news_keywords" content="Alibaba.com,Banking and Finance,Bankruptcy,Bitcoin,British Pound,Debt,Earnings Reports,ETF,Euro Crisis,GE Capital,Great Britain,Greece,Hedge fund,Jeb Bush,Mergers and Acquistions,Regulation and Deregulation,T Boone Pickens Jr,Uber,Venture capital,Yanis Varoufakis" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F05%2F08%2Fmorning-agenda-2-banks-agree-to-erase-zombie-debts%2F" title="Morning Agenda: 2 Banks Agree to Erase Zombie Debts" />
+<meta name="description" content="2 Banks Agree to Erase Zombie Debts &#124; Syngenta Rejects Monsanto&#8217;s $45 Billion Bid &#124; Jonathan Steinberg&#8217;s Rebirth &#124; British Pound and Stocks Gain on Election Results" />
+<meta name="hdl" content="Morning Agenda: 2 Banks Agree to Erase Zombie Debts" />
+<meta property="og:title" content="Morning Agenda: 2 Banks Agree to Erase Zombie Debts" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/05/08/morning-agenda-2-banks-agree-to-erase-zombie-debts/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="2 Banks Agree to Erase Zombie Debts &#124; Syngenta Rejects Monsanto&#8217;s $45 Billion Bid &#124; Jonathan Steinberg&#8217;s Rebirth &#124; British Pound and Stocks Gain on Election Results" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: 2 Banks Agree to Erase Zombie Debts" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/05/08/morning-agenda-2-banks-agree-to-erase-zombie-debts/" />
+<meta name="twitter:description" content="2 Banks Agree to Erase Zombie Debts &#124; Syngenta Rejects Monsanto&#8217;s $45 Billion Bid &#124; Jonathan Steinberg&#8217;s Rebirth &#124; British Pound and Stocks Gain on Election Results" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Some Choice Words for Buffett' href='//news.blogs.nytimes.com/2015/05/07/morning-agenda-some-choice-words-for-buffett/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/05/08/what-were-reading-53/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/05/08/morning-agenda-2-banks-agree-to-erase-zombie-debts/' />
+<link rel='shortlink' href='//nyti.ms/1FTtdTs' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/05/08/morning-agenda-2-banks-agree-to-erase-zombie-debts/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: 2 Banks Agree to Erase Zombie Debts - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2382 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: 2 Banks Agree to Erase Zombie Debts        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/05/08/morning-agenda-2-banks-agree-to-erase-zombie-debts/"
+	 data-title="Morning Agenda: 2 Banks Agree to Erase Zombie Debts"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;2 Banks Agree to Erase Zombie Debts | Syngenta Rejects Monsanto&#039;s $45 Billion Bid | Jonathan Steinberg&#039;s Rebirth | British Pound and Stocks Gain on Election Results&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/05/08/morning-agenda-2-banks-agree-to-erase-zombie-debts/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 8, 2015 7:27 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: 2 Banks Agree to Erase Zombie Debts</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-05-08T11:27:36+00:00" itemprop="datePublished">May 8, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">May 8, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2382 post type-post status-publish hentry category-dealbook tag-alibaba-com tag-apollo-global-management-l-l-c tag-bank-of-america-corporation tag-banking-and-financial-institutions tag-bankruptcies tag-bitcoin-currency tag-british-pound-currency tag-bush-jeb tag-citigroup-inc tag-company-reports tag-credit-and-debt tag-european-sovereign-debt-crisis-2010 tag-exchange-traded-funds tag-ge-capital-corp tag-general-electric-company tag-great-britain tag-greece tag-hedge-funds tag-hutchison-whampoa-ltd tag-initial-public-offerings tag-jpmorgan-chase-company tag-mergers-acquisitions-and-divestitures tag-monsanto-company tag-nokia-oyj tag-pickens-t-boone-jr tag-regulation-and-deregulation-of-industry tag-syngenta-ag tag-uber-technologies-inc tag-ubs-ag tag-varoufakis-yanis tag-venture-capital tag-yelp per-bush-jeb per-initial-public-offerings per-pickens-t-boone-jr per-varoufakis-yanis des-apollo-global-management-l-l-c des-banking-and-financial-institutions des-bankruptcies des-bitcoin-currency des-british-pound-currency des-company-reports des-credit-and-debt des-european-sovereign-debt-crisis-2010 des-exchange-traded-funds des-hedge-funds des-mergers-acquisitions-and-divestitures des-regulation-and-deregulation-of-industry des-venture-capital org-alibaba-com org-bank-of-america-corporation org-citigroup-inc org-ge-capital-corp org-general-electric-company org-hutchison-whampoa-ltd org-jpmorgan-chase-company org-monsanto-company org-nokia-oyj org-syngenta-ag org-uber-technologies-inc org-ubs-ag org-yelp geo-great-britain geo-greece news_keywords-alibaba-com news_keywords-banking-and-finance news_keywords-bankruptcy news_keywords-bitcoin news_keywords-british-pound news_keywords-debt news_keywords-earnings-reports news_keywords-etf news_keywords-euro-crisis news_keywords-ge-capital news_keywords-great-britain news_keywords-greece news_keywords-hedge-fund news_keywords-jeb-bush news_keywords-mergers-and-acquistions news_keywords-regulation-and-deregulation news_keywords-t-boone-pickens-jr news_keywords-uber news_keywords-venture-capital-2 news_keywords-yanis-varoufakis" id="post-2382">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: 2 Banks Agree to Erase Zombie Debts</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-05-08T11:27:36+00:00" itemprop="datePublished">May 8, 2015 7:27 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 8, 2015 7:27 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/05/08/morning-agenda-2-banks-agree-to-erase-zombie-debts/" data-title="Morning Agenda: 2 Banks Agree to Erase Zombie Debts" data-description="2 Banks Agree to Erase Zombie Debts | Syngenta Rejects Monsanto&#039;s $45 Billion Bid | Jonathan Steinberg&#039;s Rebirth | British Pound and Stocks Gain on Election Results">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>2 BANKS AGREE TO ERASE ZOMBIE DEBTS </strong> <span class="divider"> | </span></span> Some of the nationâs biggest banks have come under fire for keeping debts alive on credit reports even when they were discharged in bankruptcy, essentially forcing borrowers to make payments on bills that they do not legally owe, as Jessica Silver-Greenberg of DealBook <a href="//dealbook.nytimes.com/2014/11/12/debts-canceled-by-bankruptcy-still-mar-consumer-credit-scores/">reported last year</a>. Relief may finally be at hand for the consumers whose discharged debts have kept them from getting jobs or renting apartments, now that Bank of America and JPMorgan Chase have agreed to update borrowersâ credit reports within the next three months to reflect that the debts were extinguished, <a href="//www.nytimes.com/2015/05/08/business/dealbook/bank-of-america-and-jpmorgan-chase-agree-to-erase-debts-from-credit-reports-after-bankruptcies.html">Ms. Silver-Greenberg reports in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody">The agreement emerged this week in Federal Bankruptcy Court in White Plains, where the two banks, along with Citigroup and Synchrony Financial, formerly GE Capital Retail Finance, face lawsuits accusing them of deliberately ignoring bankruptcy discharges to fetch more money when they sell off pools of bad debt to financial firms. The banks are also being investigated by the United States Trustee Program, an arm of the Justice Department, about <b>whether the banks are deliberately flouting federal bankruptcy law</b>. </p>
+<p class="story-body-text" itemprop="articleBody">In agreeing to ensure bankruptcies were registered on credit reports, Bank of America and JPMorgan Chase admitted no wrongdoing. A lawyer for JPMorgan Chase, according to court documents, said that by August the bank would ensure that all debts discharged in Chapter 7 bankruptcy were correctly recorded. <b>Bank of America promised to go further</b> by fundamentally changing the way the bank reports all the stale debts that are sold to financial firms. As for the other institutions, a spokesman for Citigroup said the bank has made a proposal âconsistentâ with what the other banks have proposed.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SYNGENTA REJECTS MONSANTOâS $45 BILLION BID</strong> <span class="divider"> | </span></span> The Swiss seed and insecticide maker Syngenta said on Friday that it had rejected an unsolicited takeover offer of more than $45 billion from Monsanto, its American rival, <a href="//www.nytimes.com/2015/05/09/business/dealbook/swiss-insecticide-maker-rejects-takeover-offer-from-monsanto.html">Chad Bray reports in DealBook</a>. Syngenta said that its board of directors believed that the Monsanto bid undervalued âSyngentaâs prospects and underestimates the significant execution risks, including regulatory and public scrutiny at multiple levels in many countries.â </p>
+<p class="story-body-text" itemprop="articleBody">Monsantoâs offer valued Syngenta at 449 Swiss francs a share, or about $490, and consisted of 45 percent in cash, Syngenta said. The offer valued Syngenta at more than $45 billion and represented <b>a 35 percent premium </b>to its closing price on Thursday. Syngentaâs shares rose 16.7 percent to 388.70 francs in early trading in Zurich on Friday after the company announced its rejection of the offer.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JONATHAN STEINBERGâS REBIRTH</strong> <span class="divider"> | </span></span> Second acts are rare on Wall Street, where the stigma of lost fortunes can linger, so when Jonathan L. Steinberg sold his failing business media company in 2001, his chances of a comeback were slim, <a href="//www.nytimes.com/2015/05/08/business/dealbook/how-jonathan-steinberg-made-good-on-a-second-chance.html">Landon Thomas Jr. writes in DealBook</a>. Not only did he have to bear the burden of his own history, but he had to contend with investorsâ memories of the failures of his father, Saul, a noted corporate raider whose financial decline attracted wide scrutiny. But the younger Mr. Steinberg, also known as Jono, heeded his late fatherâs advice â to have the courage of his convictions â and the tiny stock indexing division that the younger Mr. Steinberg pulled from the ruins of his old firm has become one of the fastest-growing fund companies. </p>
+<p class="story-body-text" itemprop="articleBody">In the first quarter of this year, Mr. Steinbergâs firm, WisdomTree Investments, which oversees $60 billion, took in more cash than any other asset management company save for the fund giants Vanguard and BlackRock. âJono has gone from <b>zero to $60 billion in less than 10 years</b>,â said Michael H. Steinhardt, the retired hedge fund pioneer who took a big stake in WisdomTree in 2004 and remains its chairman and largest shareholder. âThat is almost too good.â </p>
+<p class="story-body-text" itemprop="articleBody">Arthur Levitt Jr., the former head of the Securities and Exchange Commission, says the younger Mr. Steinberg shares many of his late fatherâs good qualities, âand many better qualities on top of that.â And the father is not far from his sonâs mind: âI always saw myself running a publicly traded financial services company,â Mr. Steinberg said. âI am the product of my father â doing exactly what I expected to be doing.â<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The Bureau of Labor Statistics will release <b>monthly employment figures</b> at 8:30 a.m. <b>William C. Dudley</b>, president of the New York Fed, speaks at the Bronx Bankers Breakfast, which begins at 8:30 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BRITISH POUND AND STOCKS GAIN ON ELECTION RESULTS</strong> <span class="divider"> | </span></span> The British pound and stocks climbed sharply in London in early trading on Friday after projections and partial results showed that Prime Minister David Cameron and his Conservative Party won a surprisingly solid victory in the British general election, <a href="//www.nytimes.com/live/uk-elections-2015/conservatives-win-pound-rises-and-markets-cheer/">David Jolly reports in The New York Timesâs live-blog coverage of the results</a>. The market reaction reflected relief among investors who had braced for days of uncertainty in the event of a muddled electoral outcome. </p>
+<p class="story-body-text" itemprop="articleBody">Analysts at Barclays said the market cheered âthe removal of substantial uncertainties and the likely introduction of policies generally believed to be more favorable to business.â The Barclays analysts said <b>the market rise could be short-lived</b>, however, as investors look toward threats to stability like the Conservative Partyâs plans for a referendum in 2017 on Britainâs membership in the European Union. They called the referendum âan event that is likely to generate a substantial amount of uncertainty, particularly if polls fail to show more substantial support for E.U. membership in the coming weeks and months.â The Wall Street Journalâs MoneyBeat blog also rounded up <a href="//blogs.wsj.com/moneybeat/2015/05/08/u-k-election-what-the-street-thinks-of-david-camerons-victory/">the opinions of top British fund managers and strategists.</a><br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Uber Joins the Bidding for Here, Nokiaâs Digital Mapping Service" src="https://static01.nyt.com/images/2015/05/08/business/maps/maps-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uber Joins the Bidding for Here, Nokiaâs Digital Mapping Service</strong> <span class="divider"> | </span></span> The battle to buy Here highlights the growing importance of digital mapping services as companies connect their products to the Internet.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/08/business/uber-joins-the-bidding-for-here-nokias-digital-mapping-service.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Yelp Said to Be Seeking a Sale</strong> <span class="divider"> | </span></span> Yelp has hired investment bankers to explore a possible sale, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/yelp-is-exploring-a-sale-1431018383"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Alibaba Said to Seek $1.2 Billion Stake in Indian Smartphone Maker</strong> <span class="divider"> | </span></span> Alibaba is in talks with Micromax Informatics to buy a 20 percent stake in the Indian smartphone maker for as much as $1.2 billion, Reuters reports, citing several people with direct knowledge of the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/05/08/alibaba-micromax-ma-idUSL4N0XZ4B320150508"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Li Ka-shing Sells Wireless Operator Stake to Singapore</strong> <span class="divider"> | </span></span> The billionaire Li Ka-shing, whose Hutchison Whampoa conglomerate is merging its British mobile operator with O2, said it will sell a $1.7 billion stake in the new entity to the Singapore wealth fund GIC, Bloomberg News reports. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-05-08/tycoon-li-taps-singapore-inc-for-16-billion-wireless-ambitions"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>UBS Rebuilding Investment Banking Business in U.S.</strong> <span class="divider"> | </span></span> Since the beginning of last year, UBS has increased its ranks of senior investment bankers in the United States by about 25, or 20 percent, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/ubs-sets-sights-on-u-s-investment-banking-again-1431029564"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Boutique Investment Bank Expands With Two Hires</strong> <span class="divider"> | </span></span> Dean Bradley Osborne has recruited the tech deal makers Mathew Hein and David DeRuff as partners and will change its name to DBO Partners.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/08/business/dealbook/boutique-investment-bank-expands-with-two-hires.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>G.E. Trying to Keep Bankers from Jumping Ship</strong> <span class="divider"> | </span></span> General Electric is taking steps to prevent key employees at GE Capital from leaving while it is in the process of selling its finance unit, The Wall Street Journal reports. <br /><span class="kicker"><a href="//www.wsj.com/articles/general-electric-acts-to-prevent-ge-capital-employees-from-leaving-1431020480"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstone Said to Raise $17 Billion for Buyout Fund</strong> <span class="divider"> | </span></span> The enthusiasm of investors for the new fund reflects the sense that private equity firms are poised to strike big deals â and mint money.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/08/business/dealbook/blackstone-said-to-raise-17-billion-for-buyout-fund.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Apollo Global Management Profit Falls 57%</strong> <span class="divider"> | </span></span> The firmâs credit business played a role in the decline in Apolloâs first-quarter profit, which was $30.9 million, down from $72.2 million, The Wall Street Journal reports.<br /><span class="kicker"><a href="//www.wsj.com/articles/apollo-management-profit-drops-57-1430998373"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="T. Boone Pickens, With Cash, Backs Jeb Bush" src="https://static01.nyt.com/images/2015/05/07/us/politics/07firstdraft-tboone-pickens/07firstdraft-tboone-pickens--square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>T. Boone Pickens, With Cash, Backs Jeb Bush</strong> <span class="divider"> | </span></span> The oil tycoon T. Boone Pickens is backing former Gov. Jeb Bush of Florida for president, saying he had donated $100,000 to help give Mr. Bush a leg up in the 2016 election.<br /><span class="kicker"><a href="//www.nytimes.com/politics/first-draft/2015/05/07/t-boone-pickens-with-cash-backs-jeb-bush/">First Draft &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Fitbit Files to Go Public" src="https://static01.nyt.com/images/2015/05/08/business/08FITBIT/08FITBIT-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fitbit Files to Go Public</strong> <span class="divider"> | </span></span> The pursuit of an I.P.O. reflects a wager that consumers will remain interested in tracking their health through devices strapped to their bodies.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/08/business/dealbook/fitbit-files-to-go-public.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Bitcoin Exchange Receives First License in New York State" src="https://static01.nyt.com/images/2015/05/08/business/08BITCOIN/08BITCOIN-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bitcoin Exchange Receives First License in New York State</strong> <span class="divider"> | </span></span> The exchange, itBit, said it was taking on customers after receiving a banking trust charter from Benjamin Lawsky, the stateâs financial regulator.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/08/business/dealbook/bitcoin-exchange-receives-first-license-in-new-york-state.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Greece Will Make Next Debt Payment, Varoufakis Says" src="https://static01.nyt.com/images/2015/05/08/business/08greekdebt-web2/08greekdebt-web2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Greece Will Make Next Debt Payment, Varoufakis Says</strong> <span class="divider"> | </span></span> The finance minister says Athens is getting closer to a deal with its international creditors that would unlock 7.2 billion euros in bailout funds.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/08/business/international/greece-will-make-next-debt-payment-varoufakis-says.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Reportâs Author Is Former Football Player Known Best as Trial Lawyer" src="https://static01.nyt.com/images/2015/05/07/sports/Y-WELLS/Y-WELLS-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Reportâs Author Is Former Football Player Known Best as Trial Lawyer</strong> <span class="divider"> | </span></span> Theodore V. Wells Jr., who led the investigation into the case of the Patriotsâ deflated footballs, was a lineman at Holy Cross and earned his reputation as a lawyer in public corruption and insider trading cases.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/07/sports/football/ted-wells-reports-author-is-former-football-player-known-best-as-trial-lawyer.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Trucking Company Shows Facebook Road to Future</strong> <span class="divider"> | </span></span> Both Swift Transportation and the social networking giant face shareholder votes to dump feudalistic dual-share structures.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/08/business/dealbook/trucking-company-shows-facebook-road-to-future.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/05/08/morning-agenda-2-banks-agree-to-erase-zombie-debts/"
+					data-title="Morning Agenda: 2 Banks Agree to Erase Zombie Debts"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;2 Banks Agree to Erase Zombie Debts | Syngenta Rejects Monsanto&#039;s $45 Billion Bid | Jonathan Steinberg&#039;s Rebirth | British Pound and Stocks Gain on Election Results&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/05/08/morning-agenda-2-banks-agree-to-erase-zombie-debts/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":65,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

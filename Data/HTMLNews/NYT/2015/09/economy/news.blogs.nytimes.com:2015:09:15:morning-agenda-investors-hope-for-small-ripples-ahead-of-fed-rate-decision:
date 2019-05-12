@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003912111"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1442312001" />
+<meta name="PUD" content="20150915" />
+<meta name="pdate" content="20150915" />
+<meta name="ptime" content="20150915061321" />
+<meta name="utime" content="20150915101321" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-09-15T10:13:21-04:00" />
+<meta name="DISPLAYDATE" content="September 15, 2015" />
+<meta name="dat" content="September 15, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Bush, Jeb;Hayes, Tom;Kravis, Henry R">
+<meta name="des" content="Corporate Taxes;Credit and Debt;Exchange Traded Funds;Income Tax;Insider Trading;Interest Rates;Libor (London Interbank Offered Rate);Mergers, Acquisitions and Divestitures;Private Equity;Real Estate (Commercial);Real Estate and Housing (Residential)">
+<meta name="org" content="Alibaba Group Holding Ltd;Bank of New York Mellon Corporation;Credit Suisse Group AG;Deutsche Bank AG;Federal Reserve System;Goldman Sachs Group Inc;HSBC Holdings PLC.;Internal Revenue Service;London Stock Exchange;Securities and Exchange Commission;Stripe Inc;United Airlines;Yahoo! Inc">
+<meta name="geo" content="Puerto Rico">
+<meta name="ticker" content="Bank of New York Mellon Corporation|BK|NYSE;Credit Suisse Group AG|CS|NYSE;Deutsche Bank AG|DB|NYSE;Goldman Sachs Group Inc|GS|NYSE;HSBC Holdings PLC.|HSBC|NYSE;Yahoo! Inc|YHOO|NASDAQ" />
+<meta property="article:tag" content="Bush Jeb" />
+<meta property="article:tag" content="Hayes Tom" />
+<meta property="article:tag" content="Kravis Henry R" />
+<meta property="article:tag" content="Corporate Taxes" />
+<meta property="article:tag" content="Credit and Debt" />
+<meta property="article:tag" content="Exchange Traded Funds" />
+<meta property="article:tag" content="Income Tax" />
+<meta property="article:tag" content="Insider Trading" />
+<meta property="article:tag" content="Interest Rates" />
+<meta property="article:tag" content="Libor (London Interbank Offered Rate)" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Real Estate (Commercial)" />
+<meta property="article:tag" content="Real Estate and Housing (Residential)" />
+<meta property="article:tag" content="Alibaba Group Holding Ltd" />
+<meta property="article:tag" content="Bank of New York Mellon Corporation" />
+<meta property="article:tag" content="Credit Suisse Group AG" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="HSBC Holdings PLC." />
+<meta property="article:tag" content="Internal Revenue Service" />
+<meta property="article:tag" content="London Stock Exchange" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Stripe Inc" />
+<meta property="article:tag" content="United Airlines" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Bush Jeb,Hayes Tom,Kravis Henry R,Corporate Taxes,Credit and Debt,Exchange Traded Funds,Income Tax,Insider Trading,Interest Rates,Libor (London Interbank Offered Rate),Mergers Acquisitions and Divestitures,Private Equity,Real Estate (Commercial),Real Estate and Housing (Residential),Alibaba Group Holding Ltd,Bank of New York Mellon Corporation,Credit Suisse Group AG,Deutsche Bank AG,Federal Reserve System,Goldman Sachs Group Inc,HSBC Holdings PLC.,Internal Revenue Service,London Stock Exchange,Securities and Exchange Commission,Stripe Inc,United Airlines,Yahoo! Inc,Puerto Rico,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F09%2F15%2Fmorning-agenda-investors-hope-for-small-ripples-ahead-of-fed-rate-decision%2F" title="Morning Agenda: Investors Hope for Small Ripples Ahead of Fed Rate Decision" />
+<meta name="description" content="The Surprising Target of Jeb Bush&#8217;s Tax Plan &#124; New Blow for Yahoo Spin-Off" />
+<meta name="hdl" content="Morning Agenda: Investors Hope for Small Ripples Ahead of Fed Rate Decision" />
+<meta property="og:title" content="Morning Agenda: Investors Hope for Small Ripples Ahead of Fed Rate Decision" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/09/15/morning-agenda-investors-hope-for-small-ripples-ahead-of-fed-rate-decision/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="The Surprising Target of Jeb Bush&#8217;s Tax Plan &#124; New Blow for Yahoo Spin-Off" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Investors Hope for Small Ripples Ahead of Fed Rate Decision" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/09/15/morning-agenda-investors-hope-for-small-ripples-ahead-of-fed-rate-decision/" />
+<meta name="twitter:description" content="The Surprising Target of Jeb Bush&#8217;s Tax Plan &#124; New Blow for Yahoo Spin-Off" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Pitfalls on the Frontiers of Banking' href='//news.blogs.nytimes.com/2015/09/14/morning-agenda-pitfalls-on-the-frontiers-of-banking/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/09/15/what-were-reading-89/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/09/15/morning-agenda-investors-hope-for-small-ripples-ahead-of-fed-rate-decision/' />
+<link rel='shortlink' href='//nyti.ms/1KcjA0x' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/09/15/morning-agenda-investors-hope-for-small-ripples-ahead-of-fed-rate-decision/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Investors Hope for Small Ripples Ahead of Fed Rate Decision - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3235 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Investors Hope for Small Ripples Ahead of Fed Rate Decision        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/09/15/morning-agenda-investors-hope-for-small-ripples-ahead-of-fed-rate-decision/"
+	 data-title="Morning Agenda: Investors Hope for Small Ripples Ahead of Fed Rate Decision"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;The Surprising Target of Jeb Bush&#039;s Tax Plan | New Blow for Yahoo Spin-Off&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/09/15/morning-agenda-investors-hope-for-small-ripples-ahead-of-fed-rate-decision/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="September 15, 2015 6:13 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Investors Hope for Small Ripples Ahead of Fed Rate Decision</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-09-15T10:13:21+00:00" itemprop="datePublished">September 15, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">September 15, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3235 post type-post status-publish hentry category-dealbook tag-alibaba-group-holding-ltd tag-bank-of-new-york-mellon-corporation tag-bush-jeb tag-corporate-taxes tag-credit-and-debt tag-credit-suisse-group-ag tag-deutsche-bank-ag tag-exchange-traded-funds tag-federal-reserve-system tag-goldman-sachs-group-inc tag-hayes-tom tag-hsbc-holdings-plc tag-income-tax tag-insider-trading tag-interest-rates tag-internal-revenue-service tag-kravis-henry-r tag-libor-london-interbank-offered-rate tag-london-stock-exchange tag-mergers-acquisitions-and-divestitures tag-private-equity tag-puerto-rico tag-real-estate-commercial tag-real-estate-and-housing-residential tag-securities-and-exchange-commission tag-stripe-inc tag-united-airlines tag-yahoo-inc per-bush-jeb per-hayes-tom per-kravis-henry-r des-corporate-taxes des-credit-and-debt des-exchange-traded-funds des-income-tax des-insider-trading des-interest-rates des-libor-london-interbank-offered-rate des-mergers-acquisitions-and-divestitures des-private-equity des-real-estate-commercial des-real-estate-and-housing-residential org-alibaba-group-holding-ltd org-bank-of-new-york-mellon-corporation org-credit-suisse-group-ag org-deutsche-bank-ag org-federal-reserve-system org-goldman-sachs-group-inc org-hsbc-holdings-plc org-internal-revenue-service org-london-stock-exchange org-securities-and-exchange-commission org-stripe-inc org-united-airlines org-yahoo-inc geo-puerto-rico" id="post-3235">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Investors Hope for Small Ripples Ahead of Fed Rate Decision</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-09-15T10:13:21+00:00" itemprop="datePublished">September 15, 2015 6:13 am</time>
+			<!-- date updated --><span class="visually-hidden updated">September 15, 2015 6:13 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/09/15/morning-agenda-investors-hope-for-small-ripples-ahead-of-fed-rate-decision/" data-title="Morning Agenda: Investors Hope for Small Ripples Ahead of Fed Rate Decision" data-description="The Surprising Target of Jeb Bush&#039;s Tax Plan | New Blow for Yahoo Spin-Off">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>INVESTORS HOPE FOR SMALL RIPPLES AHEAD OF FED RATE DECISION</strong> <span class="divider"> | </span></span> On Thursday, the Federal Reserve could increase interest rates for the first time in more than nine years. It may still hold after a violent downturn in global stock markets last month, but <b>this moment has long been dreaded on Wall Street</b>, and investors are hoping it wonât unleash too much turmoil, <a href="//www.nytimes.com/2015/09/15/business/poised-for-rate-increase-investors-hope-for-small-ripples.html?ref=dealbook">Peter Eavis writes in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody"> History shows that booms financed with cheap money often leave the financial system weaker, not stronger, and the <b>fault lines become obvious when the Fed starts to tighten monetary policy</b>. </p>
+<p class="story-body-text" itemprop="articleBody"> In theory, a small increase in interest rates should not be enough to wreak havoc, but some analysts have a darker view of the weak links in the system. They say financial markets have funneled trillions of dollars into <b>investments that will prove unsustainable when interest rates go up</b>. </p>
+<p class="story-body-text" itemprop="articleBody"> And the <b>signs of excess are everywhere</b>. Technology companies have been able to raise huge sums even before they tap into the public markets. Debt markets have appeared overly eager to lend. Low interest rates mean investors more willing to buy stocks at historically high valuations and companies are able to borrow money cheaply to buy back their own shares and bolster earnings. </p>
+<p class="story-body-text" itemprop="articleBody"> Doomsayers think these activities have <b>continued for so long that companies are more vulnerable</b> to a slight increase in interest rates. </p>
+<p class="story-body-text" itemprop="articleBody"> However, even gloomier analysts have predicted a great reckoning for years and it has not yet happened, Mr. Eavis notes. The <b>new restraints on Wall Street and the housing market</b> have so far prevented a resurgence in the toxic real estate lending that occurred a decade ago. </p>
+<p class="story-body-text" itemprop="articleBody"> Corporationsâ <b>borrowing costs are no cheaper</b> when accounting for inflation. Since the end of 2008, the average, inflation-adjusted yield on corporate bonds of moderate credit risk has been 4.1 percent, compared with 3.94 percent for most of the postwar period.</p>
+<p class="story-body-text" itemprop="articleBody"> The Fedâs policies also appear to have prompted a surge in <b>lending that is more stable</b> than the securities markets under higher interest rates. Buybacks are not certain to become less attractive, but if they do, it might prompt executives to invest spare capital in operations in an effort to increase productivity. </p>
+<p class="story-body-text" itemprop="articleBody"> Yet <b>fears about the markets themselves remain</b>. High-frequency trading has ballooned over the last decade. Firms using automated trading account for about half of all trades in the market for Treasury Securities. Exchange-traded funds are a major force in the stock market. </p>
+<p class="story-body-text" itemprop="articleBody"> E.T.F.s, whose shares are supposed to be closely tied to the value of their underlying assets, have created concerns recently. On Aug. 24, shares in some funds briefly fell to prices well below the value that they would have commanded had they stayed in line with the <b>fundâs underlying holdings</b>. An investor selling at that discount might take an unnecessary loss. </p>
+<p class="story-body-text" itemprop="articleBody"> If heavy selling is widespread across many markets, the <b>smooth functioning of these products and markets may be tested</b>.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>THE SURPRISING TARGET OF JEB BUSHâS TAX PLAN</strong> <span class="divider"> | </span></span> This year, Henry R. Kravis, the private equity investor, held a <b>fund-raising dinner for Jeb Bush</b> at his apartment in Manhattan. The guest list was a whoâs who of private equity and real estate executives and the event raised more than $4 million.</p>
+<p class="story-body-text" itemprop="articleBody"> This made it all the more surprising <b>when Mr. Bush unveiled his tax reform plan</b>, which seems to target the very people who filled tables that night to support him, <a href="//www.nytimes.com/2015/09/15/business/dealbook/jeb-bushs-tax-plan-is-brimming-with-surprises.html?ref=dealbook">Andrew Ross Sorkin writes in the DealBook column</a>. </p>
+<p class="story-body-text" itemprop="articleBody"> Mr. Bushâs proposal calls for raising taxes and closing a longtime loophole on carried interest, which represents investment gains largely from private equity and hedge funds. He also wants to <b>eliminate the ability of companies to deduct the cost of interest payments</b>, essentially getting rid of an incentive for American companies to borrow money. </p>
+<p class="story-body-text" itemprop="articleBody"> His policy would have a profound impact on the private equity and real estate industries, which have long relied on debt to increase profits. Eliminating the ability to deduct the cost of interest payments would make <b>pursuing a leveraged buyout significantly less attractive</b>. </p>
+<p class="story-body-text" itemprop="articleBody"> Mr. Bushâs plan would also hamper the tactics of activist hedge funds that like to pressure companies to load up on debt to buy back stock. âIf you believe share buybacks do little more than help chief executives increase their own compensation, or think private equity executives get paid too much, Mr. Bushâs plan has great appeal,â Mr. Sorkin writes. But he also âappears to have <b>bitten the hand that has fed him</b>.â </p>
+<p class="story-body-text" itemprop="articleBody"> The industry isnât howling, possibly because the tax plan <b>also reduced individual and corporate rates</b> so much that it is unclear that the wealthy would be put at a disadvantage. In fact it has been referred to as the âR.R.H.â â or Reverse Robin Hood. </p>
+<p class="story-body-text" itemprop="articleBody"> The plan could still address some of the <b>big challenges in a debt-fueled economy</b>. </p>
+<p class="story-body-text" itemprop="articleBody"> The International Monetary Fund has long maintained that <b>companiesâ bias toward debt</b> âcreates significant inequities, complexities, and economic distortions.â But it has also acknowledged that abolishing interest deductibility would be difficult to carry out, and as such no country has ever moved to eliminate it.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> Data on  <b>retail sales in August</b> will be released at 8:30 a.m.  <b>Industrial production</b>  data will be released at 9:15 a.m.  <b>J. Kyle Bass</b>, founder of Hayman Capital Management is a guest on CNBC at 10:40 a.m. <b>Richard Fisher</b>, former president of the Federal Reserve Bank of Dallas, will be a guest on CNBC at 3 p.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>NEW BLOW FOR YAHOO SPIN-OFF</strong> <span class="divider"> | </span></span> The Internal Revenue Service said on Monday that it was concerned about spin-offs in which a new company with a minimal operating business was combined with a substantially larger investment vehicle, <a href="//www.ft.com/intl/cms/s/0/af419784-5b29-11e5-a28b-50226830d644.html#axzz3lld4AmYT">The Financial Times reports</a>. This is <b>another setback to Yahooâs plan to spin off its $24 billion stake in Alibaba</b> after it was denied a tax ruling last week ahead of the move. </p>
+<p class="story-body-text" itemprop="articleBody"> The I.R.S. issued a document saying that it and the Treasury were âmost concernedâ about the <b>balance between investment assets and operating business</b> in spin-off corporations. </p>
+<p class="story-body-text" itemprop="articleBody"> âThe Treasury Department and the service are also concerned about transactions in which the distributing corporation or the controlled corporation owns a small amount of qualifying business assets compared to its other assets,â it noted. </p>
+<p class="story-body-text" itemprop="articleBody"> The agencies âhave concluded that, under current law, <b>distributions involving small qualifying businesses may have become less justifiable</b>,â the document added.</p>
+<p class="story-body-text" itemprop="articleBody"> Yahoo had intended to spin off its 15 percent stake in the Chinese ecommerce group into a new entity, Aabaco, alongside a minor operating business formed from Yahoo Small Business, which provides domain hosting services and website design for small-business owners. The denial of a ruling last week left investors worried that the <b>proposed spin-off could result in a hefty tax bill</b>. Last week, Yahoo also lost some key members of staff, including its chief marketing officer and the head of the Europe, Middle East and Africa region.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>London Stock Exchange Group Sells Proquote Business to Iress</strong> <span class="divider"> | </span></span> The stock exchange operator said that the market data provider was no longer âcentral to its strategyâ for its information services business.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/16/business/dealbook/london-stock-exchange-group-sells-proquote-business-to-iress.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinese Group Buys Majority Stake in Henry Bath</strong> <span class="divider"> | </span></span> A Chinese logistics group listed on the Shanghai stock exchange looks set to buy a majority stake in the 220-year-old metals warehousing business owned by the commodities trader Mercuria.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/122831ce-5b29-11e5-a28b-50226830d644.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3lgdFvMwf"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Despite Shake-Up at Top, United Faces Steep Climb " src="https://static01.nyt.com/images/2015/09/15/business/15itineraries-web/15itineraries-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Despite Shake-Up at Top, United Faces Steep Climb </strong> <span class="divider"> | </span></span> Despite the 2010 merger of United Airlines and the well-regarded Continental Airlines, United has not won high ratings.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/15/business/despite-shake-up-at-top-united-faces-steep-climb.html">Itineraries &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/09/10/business/the-rail-executive-united-airlines-tapped-to-lift-its-fortunes.html">Airline Turns to a Rail Executive (Sept. 9, 2015)</a> <span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Wall Street Banks Reach Deal With Regulators on Data Retention</strong> <span class="divider"> | </span></span> Deutsche Bank, Goldman Sachs, Credit Suisse and Bank of New York Mellon will keep communications that could be used to track evidence of rigging schemes among traders.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/15/business/dealbook/wall-street-banks-reach-deal-with-regulators-on-data-retention.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Credit Suisse Nears Deal to Settle Claims Over Dark Pool</strong> <span class="divider"> | </span></span> Credit Suisse is expected to pay at least $80 million to settle allegations that it misled clients about its dark pool, The Financial Times reports, citing people familiar with the matter. Dark pools, trading venues that allow asset managers to trade large blocks of shares without moving the price against them, have come under increased scrutiny.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/53603e46-5b0d-11e5-a28b-50226830d644.html?ftcamp=published_links%2Frss%2Fmarkets%2Ffeed%2F%2Fproduct#axzz3lgdFvMwf"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A New Hong Kong Head for HSBC</strong> <span class="divider"> | </span></span> Diana Cesar was named chief of HSBC Holdings for Hong Kong after 15 years with the bank, including her most recent role, as head of retail banking and wealth management in the city.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-09-15/diana-cesar-named-hsbc-s-hong-kong-head-after-15-years-with-bank"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bargains Still Scarce in Leveraged Buyouts</strong> <span class="divider"> | </span></span> Even as public markets become cheaper, leveraged buyout  activity may not increase.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/3/49de1c24-5afb-11e5-a28b-50226830d644.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3lgdFvMwf"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Citic Securities Draws Beijingâs Ire After Meltdown</strong> <span class="divider"> | </span></span> The brokerage arm of Chinaâs most politically pedigreed financial firm is contending with a near meltdown in markets and a government crackdown that has entangled several top executives.<br /><span class="kicker"><a href="//www.wsj.com/articles/citic-securities-draws-beijings-ire-after-meltdown-1442272270?mod=asia_home"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Stripe Simplifies Mobile Purchases on Twitter</strong> <span class="divider"> | </span></span> The online payments start-up unveiled a service, called Relay, that lets merchants sell products through a buy button that developers can easily place inside their apps.<br /><span class="kicker"><a href="//blogs.wsj.com/venturecapital/2015/09/14/stripe-offers-new-buy-button-tool-for-retailers/?mod=WSJBlog"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="TheÂ Prospects for Pursuing Corporate Executives" src="https://static01.nyt.com/images/2015/09/15/business/15db-whitecollar-web1/15db-whitecollar-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TheÂ Prospects for Pursuing Corporate Executives</strong> <span class="divider"> | </span></span> The Justice Department is telling companies to investigate wrongdoing more thoroughly â or else. The challenge is figuring out what âor elseâ might be.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/15/business/dealbook/theprospects-for-pursuing-corporate-executives.html">White Collar Watch &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Hispanics in Congress Ask Treasury to Prevent âCatastropheâ in Puerto Rico" src="https://static01.nyt.com/images/2015/09/15/business/15db-rico-web/15db-rico-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hispanics in Congress Ask Treasury to Prevent âCatastropheâ in Puerto Rico</strong> <span class="divider"> | </span></span> Eight Hispanic lawmakers urged Secretary Jacob J. Lew to intervene on behalf of the financially struggling island as his predecessors helped automakers.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/15/business/dealbook/puerto-rico-needs-treasurys-help-secretary-lew-is-told.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>$30 Million Settlement in Insider Trading Ring Linked to Hacking</strong> <span class="divider"> | </span></span> Jaspen Capital Partners and its chief settled S.E.C. claims that they illegally profited from corporate information stolen from newswire services.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/15/business/dealbook/30-million-settlement-in-insider-trading-ring-linked-to-hack.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Insider Trading Charges Against Former Wells Fargo Trader Dismissed</strong> <span class="divider"> | </span></span> Joseph C. Ruggieri has been cleared of insider-trading charges, a move tied to an appeals-court decision last year that overturned the convictions of two former hedge-fund traders.<br /><span class="kicker"><a href="//www.wsj.com/articles/insider-trading-charges-against-former-wells-fargo-trader-dismissed-1442270256?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tom Hayes to Appeal Sentence for Libor Rigging</strong> <span class="divider"> | </span></span> Tom Hayes, the former trader convicted of Libor rigging, is seeking to appeal  his 14-year prison sentence â the longest handed down in Britain for financial fraud<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/e494f15e-5af9-11e5-a28b-50226830d644.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3lgdFvMwf"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Unraveling of Tom Hayes</strong> <span class="divider"> | </span></span> The Wall Street Journal follows Tom Hayesâs decision to cooperate with Britainâs Serious Fraud Office after being charged by the United States government with fraud and antitrust violations.<br /><span class="kicker"><a href="//graphics.wsj.com/libor-unraveling-tom-hayes/2"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/09/15/morning-agenda-investors-hope-for-small-ripples-ahead-of-fed-rate-decision/"
+					data-title="Morning Agenda: Investors Hope for Small Ripples Ahead of Fed Rate Decision"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;The Surprising Target of Jeb Bush&#039;s Tax Plan | New Blow for Yahoo Spin-Off&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/09/15/morning-agenda-investors-hope-for-small-ripples-ahead-of-fed-rate-decision/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":49,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

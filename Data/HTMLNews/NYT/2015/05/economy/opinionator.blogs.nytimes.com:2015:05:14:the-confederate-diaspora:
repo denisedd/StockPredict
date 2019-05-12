@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-opinionator section-opinion"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-opinionator section-opinion" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-opinionator section-opinion" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-opinionator section-opinion" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/opinionator/The Confederate Diaspora ( 20150514 )" />
+<meta name="communityAssetURL" content="//opinionator.blogs.nytimes.com/2015/05/14/the-confederate-diaspora/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003683798"><meta name="author" content="Phil Leigh" />
+<meta name="CLMST" content="Phil Leigh" />
+<meta name="byl" content="Phil Leigh" />
+<meta name="GBLC" content="Disunion">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1431601253" />
+<meta name="PUD" content="20150514" />
+<meta name="pdate" content="20150514" />
+<meta name="ptime" content="20150514070053" />
+<meta name="utime" content="20150514143141" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-05-14T14:31:41-04:00" />
+<meta name="DISPLAYDATE" content="May 14, 2015" />
+<meta name="dat" content="May 14, 2015" />
+<meta itemprop="articleSection" property="article:section" content="Opinion" />
+<meta name="CG" content="Opinion" />
+<meta name="SCG" content="opinionator" />
+<meta name="BN" content="opinionator" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Breckinridge, John C">
+<meta name="des" content="Civil War (US) (1861-65)">
+<meta name="org" content="Diaspora">
+<meta property="article:tag" content="Breckinridge John C" />
+<meta property="article:tag" content="Civil War (US) (1861-65)" />
+<meta property="article:tag" content="Diaspora" />
+<meta property="article:tag" content="Disunion" />
+<meta name="keywords" content="Breckinridge John C,Civil War (US) (1861-65),Diaspora,Disunion" />
+<meta name="news_keywords" content="American Civil War,Diaspora,John C Breckinridge" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fopinionator.blogs.nytimes.com%2F2015%2F05%2F14%2Fthe-confederate-diaspora%2F" title="The Confederate Diaspora" />
+<meta name="description" content="When the South fell, its leaders fled, often to Europe and the Caribbean." />
+<meta name="hdl" content="The Confederate Diaspora" />
+<meta property="og:title" content="The Confederate Diaspora" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//opinionator.blogs.nytimes.com/2015/05/14/the-confederate-diaspora/" />
+<meta property="og:site_name" content="Opinionator" />
+<meta property="og:description" content="When the South fell, its leaders fled, often to Europe and the Caribbean." />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_291_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2014/04/25/opinion/opinionator-pog-disunion/opinionator-pog-disunion-thumbLarge.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="The Confederate Diaspora" />
+<meta name="twitter:url" content="//opinionator.blogs.nytimes.com/2015/05/14/the-confederate-diaspora/" />
+<meta name="twitter:description" content="When the South fell, its leaders fled, often to Europe and the Caribbean." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2014/04/25/opinion/opinionator-pog-disunion/opinionator-pog-disunion-thumbLarge.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2014/04/25/opinion/opinionator-pog-disunion/opinionator-pog-disunion-thumbLarge.png" name="thumbnail" />
+<meta name="twitter:site" content="@nytopinionator">
+<link rel='prev' title='Shopping for Antiques, Finding My Mother' href='//opinionator.blogs.nytimes.com/2015/05/14/shopping-for-antiques-finding-my-mother/' />
+<link rel='next' title='Editorsâ Note' href='//opinionator.blogs.nytimes.com/2015/05/14/editors-note/' />
+<link rel='canonical' href='//opinionator.blogs.nytimes.com/2015/05/14/the-confederate-diaspora/' />
+<link rel='shortlink' href='//nyti.ms/1F9N3rD' />
+<link rel='https://github.com/WP-API/WP-API' href='//opinionator.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/opinionator/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//opinionator.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/opinion/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/opinionator/2015/05/14/the-confederate-diaspora/" />
+<meta name="dfp-ad-unit-path" content="opinion/opinionator" />			<title>The Confederate Diaspora - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/opinionator.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-156972 blog-universal nyt-blog-opinionator" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'Opinion', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//opinionator.blogs.nytimes.com">
+                Opinionator            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        The Confederate Diaspora        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//opinionator.blogs.nytimes.com/2015/05/14/the-confederate-diaspora/"
+	 data-title="The Confederate Diaspora"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;When the South fell, its leaders fled, often to Europe and the Caribbean. &lt;/span&gt;&lt;a href=&quot;//opinionator.blogs.nytimes.com/2015/05/14/the-confederate-diaspora/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 14, 2015 7:00 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="opinionator" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+			<a href="//www.nytimes.com/pages/opinion/" class="opinion-kicker">
+			<img src="https://static01.nyt.com/images/blogs_v5/_misc/kicker-opinionpages.png" />
+		</a>
+		<div class="element1">
+	<a href="//opinionator.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=Opinion"><div id="logo" class="archived-blog-post"><div class="w75 left site-header-logo"><img src="https://static01.nyt.com/images/blogs_v3/opinionator/opinionator75.gif" alt="Opinionator"/></div><div class="site-title">Opinionator</div><div class="site-description">A Gathering of Opinion From Around the Web</div></div></a>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//opinionator.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Opinionator">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-156972 post type-post status-publish hentry category-disunion tag-breckinridge-john-c tag-civil-war-us-1861-65 tag-diaspora per-breckinridge-john-c des-civil-war-us-1861-65 org-diaspora news_keywords-american-civil-war news_keywords-diaspora news_keywords-john-c-breckinridge-2" id="post-156972">
+	<header class="postHeader">
+				<div class="postKicker">
+			<span class="kicker"><a href="//opinionator.blogs.nytimes.com/category/disunion/?module=BlogCategory&version=Blog Post&action=Click&contentCollection=Opinion&pgtype=Blogs&region=Header">Disunion</a></span>
+		</div>
+				<h1 itemprop="headline" class="entry-title">The Confederate Diaspora</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Phil Leigh			</address>
+			<!-- date published --><time class="dateline " datetime="2015-05-14T11:00:53+00:00" itemprop="datePublished">May 14, 2015 7:00 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 14, 2015 7:00 am</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div class="inlineModule"><div class="entry"><div class="thumb"><img alt="Disunion" src="https://static01.nyt.com/images/blogs_v3/opinionator/disunion/disunion45.gif" width="50" height="50"></div><p class="summary"> <a href="//opinionator.blogs.nytimes.com/category/disunion/">Disunion</a> follows the Civil War as it unfolded.</p></div></div>
+<p class="story-body-text" itemprop="articleBody">By early May 1865, a month after Gen. Robert E. Leeâs surrender at Appomattox, most of the remaining Confederate soldiers had laid down their arms. While some Southerners were angry, and others were relieved, nearly all were apprehensive about the future. Many moved west and north; some decided to leave the United States completely. </p>
+<p class="story-body-text" itemprop="articleBody">Many Southerners were pessimistic about the regionâs economic future. Partly because of the monetary value of slaves, in 1860 seven of the 10 states with the highest per capita wealth would join the Confederacy. Much of that wealth was wiped out, and today Virginia is the only former rebel state to rank among the top 10 in per capita income, while five of the bottom 10 are former Confederate states. The classic example is Mississippi, which ranked No. 1 in 1860, and 50th in the 2010 census. </p>
+<p class="story-body-text" itemprop="articleBody">It took 85 years for the Southâs per capita income to return to where it was in 1860 &#8212; an already low 72 percent of the national average. (The delay partly reflected protective tariffs, which were injurious to the Southâs export economy and lasted until after World War II.) Not surprisingly, such concerns put Southerners on the move, either outside the region or to less war-torn parts of it, like Texas. In 1860 Texas ranked ninth among the Southern states in population; 20 years later it was first.</p>
+<p class="story-body-text" itemprop="articleBody">Above all, many leaders feared being tried for treason. Although the Appomattox agreement stipulated that surrendered soldiers could return home, where they were ânot to be disturbed by US authority so long as they observe their paroles and the laws in force where they may reside,â many Northern politicians wanted to ignore those provisions. Confederate civilian politicians were even more vulnerable, because they could not lay claim to a defense under the armyâs surrender terms.<span id="more-156972"></span></p>
+<p class="story-body-text" itemprop="articleBody">And Lincolnâs assassination within a week of Appomattox inflamed Northern political blood lust. Indeed, Lee was indicted on a charge of treason on June 7, 1865, prompting General in Chief Ulysses S. Grant to tell President Andrew Johnson that he considered the indictment a violation of the surrender terms as he wrote them, and would resign if the prosecution proceeded.</p>
+<p class="story-body-text" itemprop="articleBody">Two of the most prominent Southerners who fled out of fear of a treason indictment were John C. Breckinridge and Judah Benjamin. Breckinridge, from Kentucky, was vice president under James Buchanan and an 1860 presidential candidate; he received more electoral votes than any other save Abraham Lincoln. Although Breckinridge lost the 1860 presidential race, he was elected a Kentucky senator. In October 1861 he was the last senator to leave Congress to join the Confederacy. Two months later the Senate declared him a traitor. He served as a general in the Confederate army; when Lee surrendered, Breckinridge was the Confederate secretary of war.</p>
+<p class="story-body-text" itemprop="articleBody">Benjamin, a former senator from Louisiana, was equally senior in the Confederacy, serving variously as attorney general, secretary of war and secretary of state, the position he held when the Confederacy collapsed. </p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2015/05/14/opinion/14disunionweb1/14disunionweb1-articleInline.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/05/14/opinion/14disunionweb1/14disunionweb1-articleInline.jpg" src="https://static01.nyt.com/images/2015/05/14/opinion/14disunionweb1/14disunionweb1-articleInline.jpg" id="100000003682472" width="190" height="265" alt="Judah Benjamin"   /><meta itemprop="height" content="265"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Judah Benjamin</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Library of Congress</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">Two weeks after Leeâs surrender, President Jefferson Davis and his cabinet were near Charlotte, N.C., attempting to flee the Eastern Theater and reform the government elsewhere. Within days cabinet members started to conclude that the situation was hopeless and began to resign. In perhaps his greatest service to posterity, on April 26 Breckenridge instructed a subordinate to store the Confederate government archives in Charlotte and surrender them to the federals when the enemy occupied the city. By May 4, while camped in north Georgia, Breckinridge and Benjamin had resigned and left the presidential party to try to escape individually.</p>
+<p class="story-body-text" itemprop="articleBody">Before leaving, Benjamin met privately with Davis, ostensibly to arrange a Texas rendezvous. To help finance Benjaminâs escape, Davis instructed a subordinate to give him some gold from the remaining Confederate Treasury. Benjaminâs final words to the postmaster general, John Regan, were: âI am going to the farthest place from the United States, if it takes me to the middle of China.â</p>
+<p class="story-body-text" itemprop="articleBody">Benjamin bought a farmerâs buggy and disguised himself as a Frenchman named Monsieur Bonfals who could speak but little English. Accompanied by a rebel officer who acted as his âinterpreter,â the two set off for Florida. Shortly after crossing the state line, Benjaminâs companion left for his New Orleans home. Simultaneously, Benjamin changed his disguise to that of a South Carolina planter named Howard. He persuaded a nearby farmerâs housewife to make him some ill-fitting homespun clothes. His immediate destination was Tampa, where he hoped to hire a boat to take him out of the country. </p>
+<p class="story-body-text" itemprop="articleBody">He covered about 30 miles a day southward down the Florida peninsula, traveling alone at night. One day a high-pitched voice woke him up, saying, âHi for Jeff.â It was a parrot in a tree branch. Reasoning that the bird had escaped a nearby owner, who might be sympathetic, Benjamin threw rocks at it until it flew home. He followed it to a farmhouse, where the owner was indeed a Confederate partisan, who helped him on his way. </p>
+<p class="story-body-text" itemprop="articleBody">For $1,500 in gold, Benjamin hired two fishermen near Sarasota to take him to the Bahamas, a British possession. Whenever they saw federal gunboats they hid their yawl amid mangroves and clouds of mosquitoes.</p>
+<p class="story-body-text" itemprop="articleBody">After entering the Gulf Stream beyond the Florida Keys, Benjamin fulfilled a boyhood ambition to see a waterspout, as two of them nearly swamped the boat. In late July he arrived in Nassau, Bahamas, where he caught a steamer for Havana. From there Benjamin took passage for London, where he became prosperous as a lawyer. He lived out the last two decades of his life in London and Paris.</p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2015/05/14/opinion/14disunionweb2/14disunionweb2-articleInline.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/05/14/opinion/14disunionweb2/14disunionweb2-articleInline.jpg" src="https://static01.nyt.com/images/2015/05/14/opinion/14disunionweb2/14disunionweb2-articleInline.jpg" id="100000003682482" width="190" height="234" alt="John C. Breckinridge"   /><meta itemprop="height" content="234"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text">John C. Breckinridge</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Library of Congress</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">To make his own escape, Breckinridge shaved his prominent mustache and instructed companions to call him âColonel Cabell.â When he learned, on May 14, that President Davis had been captured, he dismissed his military escort and rode south with three other men. When they arrived in Gainesville, Fla., he met Col. J.J. Dickison, who was renowned for leading raiding parties through the thickets of the north Florida rivers and swamps. Dickison advised Breckinridge to head east to reach the St. Johns River, where the colonel had a converted federal navy lifeboat hidden. </p>
+<p class="story-body-text" itemprop="articleBody">Once aboard, Breckinridgeâs party followed the river southward, anchoring in midstream at night to avoid mosquitoes. To reach the Atlantic Ocean they portaged from the St. Johns River to the Indian River lagoon, and then across the barrier island to the beach. Near Palm Beach a federal ship halted the suspicious-looking craft, but concluded the occupants were merely fishermen, as they claimed.</p>
+<p class="story-body-text" itemprop="articleBody">Partly due to unfavorable winds, the boat was unable to make Nassau, and the party instead tried for Cuba. During the voyage they met a better-equipped sloop; Breckinridge paid to switch boats. En route to Havana the Breckinridge group was hit by a gale that nearly sank the sloop and left the men without food or water. Fortunately, the next day they were able to hail an American merchant ship that gave them ample drinking water. On June 10 they arrived in Cardenas, Cuba, and when they arrived in Havana, Breckinridge was given a heroâs welcome.</p>
+<div class="w151 right module">
+<div class="entry">
+<h6 class="kicker">Related</h6>
+<h5><a href="//www.nytimes.com/interactive/2010/10/29/opinion/20101029-civil-war.html">Disunion Highlights</a></h5>
+<p class="story-body-text" itemprop="articleBody"><img class="w75" src="https://static01.nyt.com/images/2010/11/08/opinion/civil-war-sumter75/civil-war-sumter75-popup.jpg" alt="Fort Sumter" /></p>
+<p class="summary">Explore multimedia from the series and navigate through past posts, as well as photos and articles from the Times archive.</p>
+<ul class="refer">
+<li><a href="//www.nytimes.com/interactive/2010/10/29/opinion/20101029-civil-war.html">See the Highlights Â»</a></li>
+</ul>
+</div>
+</div>
+<p class="story-body-text" itemprop="articleBody">In August, Breckinridge departed Havana for Britain, but soon left Europe for Canada. He was there on Christmas Day 1868 when President Johnson announced a general amnesty to former Confederates. Breckinridge returned to Lexington, Ky., early the following year, where he remained until his untimely death in 1875 at age 54.</p>
+<p class="story-body-text" itemprop="articleBody">Of course, numerous Southern leaders simply refused to admit defeat. Most prominently Brig. Gen. J.O. Shelby, who led a remnant of his cavalry division, several hundred men, into Mexico. They never surrendered.</p>
+<p class="story-body-text" itemprop="articleBody">Alfred Pleasanton, who once commanded the cavalry corps of the Union Army of the Potomac, where he battled the more famous General J.E.B. Stuart, judged Shelby to be best of all Confederate cavalry commanders. When the war started, the 30-year-old Shelby owned a hemp plantation near Kansas City; earlier he had been a border ruffian during the Bleeding Kansas era. During the Civil War he was in every major battle in Arkansas and Missouri, though by the end he was fighting in Texas. </p>
+<p class="story-body-text" itemprop="articleBody">On June 2, 1865, Shelby organized his division for a final review on open prairie about 50 miles southeast of Dallas. Announcing that he would never abide Yankee rule, he asked for volunteers to march into Mexico. âWe will do this: we will hang together, we will keep our organization, our arms, our discipline, our hatred of oppression,â he said, choosing âexile to submission, death to dishonor.â </p>
+<p class="story-body-text" itemprop="articleBody">Upon reaching Mexico City he offered his well-armed battalion to Emperor Maximilian, whom the French had installed as a puppet monarch. But Maximilian turned him down in order to avoid antagonizing the United States; instead, he offered Shelbyâs men, and other refugee Confederates, free land in the Cordoba Valley.</p>
+<p class="story-body-text" itemprop="articleBody">By the time Maximilianâs government fell, two years later, most of the refugees, including Shelby, had returned to the United States. Back home in Missouri, Shelby never showed signs of bitterness toward the North, but he refused to take an oath to the Constitution until appointed a federal marshal in 1893. A few years before his death in 1897, he concluded that the passions aroused by the debate over slavery made men âirresponsible,â and added, âI now see I was so myself.â</p>
+<p class="story-body-text" itemprop="articleBody"><em>Follow Disunion at <a href="https://www.twitter.com/NYTcivilwar/">twitter.com/NYTcivilwar</a> or join us <a href="//www.facebook.com/pages/Civil-War-The-New-York-Times/171184126228555">on Facebook</a>.</em></p>
+<hr/>
+<p class="story-body-text" itemprop="articleBody"><em>Sources: James McPherson, âBattle Cry of Freedomâ; Emory Thomas, âRobert E. Leeâ; James Kibler, âOur Fathersâ Fieldsâ; Daniel E. Sutherland, âExiles, Emigrants, And Sojourners: The Post-Civil War Confederate Exodus in Perspective,â Civil War History (Vol. 31, No. 3) 1985; Bureau of Census, Population of the United States in 1860; Bureau of Census Population of the United States at the 10th Census; Andrew Rolle, âThe Lost Cause: The Confederate Exodus to Mexicoâ; Burke Davis, âThe Long Surrenderâ; David Eicher, âThe Longest Nightâ; Burton Hendrick, âStatesmen of the Lost Causeâ; William C. Davis, âA Government of Our Ownâ; Lowell H. Harrison, âJohn C. Breckinridge,â in The Confederacy: Macmillan Information Now Encyclopedia; Jack Epstein, âA Bit of the Confederacy Survives in the Deep, Deep South,â The Christian Science Monitor May 4, 1995; Daniel OâFlaherty, âGeneral J.O. Shelbyâ; Anthony Arthur, âGeneral J.O. Shelbyâs March,â ; William J. Cooper and Thomas Terrill, âThe American South Volume II.&#8221;â</em></p>
+<div class="w75 left"><img src="https://static01.nyt.com/images/2012/01/20/opinion/disunion-phil-leigh/disunion-phil-leigh-thumbStandard.jpg" alt="Phil Leigh" /></div>
+<p class="story-body-text" itemprop="articleBody"><em>Phil Leigh is the author of three booksâ on the Civil War: an annotated and illustrated version of the memoirs of Confederate Private Sam Watkins entitled â&#8221;â<a href="//www.amazon.com/Co-Aytch-Side-Show-Big/dp/1594161798/ref=sr_1_1?s=books&#038;ie=UTF8&#038;qid=1401890135&#038;sr=1-1&#038;keywords=co+aytch+leigh">Co. Aytch</a>â&#8221;; â&#8221;â<a href="//www.amazon.com/Trading-Enemy-Covert-Economy-American/dp/1594161992/ref=sr_1_1?s=books&#038;ie=UTF8&#038;qid=1401890182&#038;sr=1-1&#038;keywords=trading+with+the+enemy+leigh">Trading With the Enemy</a>,â&#8221;â about intersectional wartime commerce between the North and South; and â&#8221;â<a href="//www.amazon.com/Lees-Dispatch-Other-Civil-Controversies/dp/1594162263" title="Lee's Lost Dispatches">Leeâs Lost Dispatch and Other Civil War Controversies</a>.&#8221;</em></p>
+<hr/>
+<p class="story-body-text" itemprop="articleBody"><em>Follow The New York Times Opinion section on <a href="https://www.facebook.com/nytopinion">Facebook</a> and <a href="https://www.twitter.com/NYTOpinion">Twitter</a>, and sign up for the <a href="//www.nytimes.com/newsletters/opiniontoday/">Opinion Today newsletter</a>.<br />
+</em></p>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//opinionator.blogs.nytimes.com/2015/05/14/the-confederate-diaspora/" data-title="Disunion: The Confederate Diaspora" data-description="When the South fell, its leaders fled, often to Europe and the Caribbean. ">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//opinionator.blogs.nytimes.com/2015/05/14/shopping-for-antiques-finding-my-mother/" title="Shopping for Antiques, Finding My Mother">
+				Shopping for Antiques, Finding My Mother			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//opinionator.blogs.nytimes.com/2015/05/14/editors-note/" title="Editorsâ Note">
+				Editorsâ Note			</a>
+					</li>
+	</ul>
+</div>
+<div id="categorydescription-3" class="module nocontent widget_categorydescription"><div class=âentryâ><p class=âsummary flushBottomâ><em>One-hundred-and-fifty years ago, Americans went to  war with themselves. Disunion revisits and reconsiders America&#8217;s most  perilous period &#8212; using contemporary accounts, diaries, images and historical  assessments to follow the Civil War as it unfolded.</em></p><p><em><a href="//www.facebook.com/pages/Civil-War-The-New-York-Times/171184126228555">Join Disunion on Facebook Â»</a></em></p></div>
+</div>	<div class="box module verticalTabSet">
+		<h4 class="moduleHeader">Inside Opinionator</h4>		<div id="tabWidget-togglr-3" class="wrap tabAutoLoad">
+			<div class="tabsContainer">
+				<ul class="tabs">
+				<li class="selected"><div class="pointer"></div><div class="wrap"><img src="https://static01.nyt.com/images/blogs_v3/opinionator/pogs/fixes25.gif" alt="Fixes" class="left" /><a href="javascript:void(0);">Fixes</a></div></li>
+<li><div class="pointer"></div><div class="wrap"><img src="https://static01.nyt.com/images/blogs_v3/firstperson/firstperson25.png" alt="Private Lives" class="left" /><a href="javascript:void(0);">Private Lives</a></div></li>
+<li><div class="pointer"></div><div class="wrap"><img src="https://static01.nyt.com/images/blogs_v3/opinionator/pogs/couch25.png" alt="Couch" class="left" /><a href="javascript:void(0);">Couch</a></div></li>
+<li><div class="pointer"></div><div class="wrap"><img src="https://static01.nyt.com/images/blogs_v3/opinionator/pogs/thestone25.gif" alt="The Stone" class="left" /><a href="javascript:void(0);">The Stone</a></div></li>
+<li><div class="pointer"></div><div class="wrap"><img src="https://static01.nyt.com/images/blogs/opinionator/moviegoers/moviegoers25.png" alt="Moviegoers" class="left" /><a href="javascript:void(0);">Moviegoers</a></div></li>
+		<li id="overlayTriggerController" class="moreContributors">
+			<a href="javascript:void(0);">More Contributors</a>
+			<div class="opposingFloatControl tabOverlayShadow clearfix hidden">
+				<ul class="element1 flushBottom">
+					<li><a href="//opinionator.blogs.nytimes.com/category/anxiety/" class="wrap"><img src="https://static01.nyt.com/images/blogs_v3/opinionator/anxiety/anxiety25.gif" alt="Anxiety" class="left" /><span class="author">Anxiety</span></a></li>
+<li><a href="//opinionator.blogs.nytimes.com/category/bedside/" class="wrap"><img src="https://static01.nyt.com/images/blogs_v3/opinionator/bedside/bedside25.gif" alt="Bedside" class="left" /><span class="author">Bedside</span></a></li>
+<li><a href="//opinionator.blogs.nytimes.com/category/disunion/" class="wrap"><img src="https://static01.nyt.com/images/blogs_v3/opinionator/disunion/disunion25.gif" alt="Disunion" class="left" /><span class="author">Disunion</span></a></li>
+<li><a href="//opinionator.blogs.nytimes.com/category/draft/" class="wrap"><img src="https://static01.nyt.com/images/blogs_v3/opinionator/draft/draft25.png" alt="Draft" class="left" /><span class="author">Draft</span></a></li>
+<li><a href="//opinionator.blogs.nytimes.com/category/errol-morris/" class="wrap"><img src="https://static01.nyt.com/images/2011/06/14/opinion/Morris_Photo/Morris_Photo-custom2.jpg" alt="Errol Morris" class="left" /><span class="author">Errol Morris</span></a></li>				</ul>
+				<ul class="element2 flushBottom">
+					<li><a href="//opinionator.blogs.nytimes.com/category/menagerie/" class="wrap"><img src="https://static01.nyt.com/images/blogs_v3/opinionator/pogs/menagerie25.png" alt="Menagerie" class="left" /><span class="author">Menagerie</span></a></li>
+<li><a href="//opinionator.blogs.nytimes.com/category/the-conversation/" class="wrap"><img src="https://static01.nyt.com/images/blogs_v3/opinionator/pogs/theconversation25.gif" alt="The Conversation" class="left" /><span class="author">The Conversation</span></a></li>
+<li><a href="//opinionator.blogs.nytimes.com/category/the-end/" class="wrap"><img src="https://static01.nyt.com/images/blogs_v3/opinionator/pogs/theend25.png" alt="The End" class="left" /><span class="author">The End</span></a></li>
+<li><a href="//opinionator.blogs.nytimes.com/category/the-great-divide/" class="wrap"><img src="https://static01.nyt.com/images/blogs_v3/opinionator/pogs/greatdivide25.png" alt="The Great Divide" class="left" /><span class="author">The Great Divide</span></a></li>
+<li class="allContributors"><a href="/contributors/" class="wrap"><span class="author">All Contributors & Series Â»</span></a></li>				</ul>
+			</div>
+		</li>
+						</ul>
+			</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">April 26, 2016</span><h5><a href="//opinionator.blogs.nytimes.com/2016/04/26/guiding-a-first-generation-to-college/" title="Guiding a First Generation to College">Guiding a First Generation to College</a></h5><p><span class="excerpt-inner">Students who are new to America or lack college-educated parents often donât know their options.</span><a href="//opinionator.blogs.nytimes.com/2016/04/26/guiding-a-first-generation-to-college/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">April 19, 2016</span><h5><a href="//opinionator.blogs.nytimes.com/2016/04/19/how-dwindling-fish-stocks-got-a-reprieve/" title="How Dwindling Fish Stocks Got a Reprieve">How Dwindling Fish Stocks Got a Reprieve</a></h5><p><span class="excerpt-inner">Giving fishermen a business incentive to fish sustainably can âunleash their creative capacityâ to help solve the problem, says one expert. </span><a href="//opinionator.blogs.nytimes.com/2016/04/19/how-dwindling-fish-stocks-got-a-reprieve/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/fixes/">More From Fixes &raquo;</a></p></div>		</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">April 21, 2016</span><h5><a href="//opinionator.blogs.nytimes.com/2016/04/21/fractured-a-first-date/" title="Fractured: A First Date">Fractured: A First Date</a></h5><p><span class="excerpt-inner">It wasn&#8217;t my heart that he broke.</span><a href="//opinionator.blogs.nytimes.com/2016/04/21/fractured-a-first-date/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">March 17, 2016</span><h5><a href="//opinionator.blogs.nytimes.com/2016/03/17/steph-curry-the-prophet-of-basketball/" title="Steph Curry, the Prophet of Basketball">Steph Curry, the Prophet of Basketball</a></h5><p><span class="excerpt-inner">What desperate, humiliating steps would I take in order to watch him play?</span><a href="//opinionator.blogs.nytimes.com/2016/03/17/steph-curry-the-prophet-of-basketball/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/private-lives/">More From Private Lives &raquo;</a></p></div>		</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">April 19, 2016</span><h5><a href="//opinionator.blogs.nytimes.com/2016/04/19/should-therapists-write-about-patients/" title="Should Therapists Write About Patients?">Should Therapists Write About Patients?</a></h5><p><span class="excerpt-inner">Even when we disguise their identities, we risk betraying them.</span><a href="//opinionator.blogs.nytimes.com/2016/04/19/should-therapists-write-about-patients/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">April 12, 2016</span><h5><a href="//opinionator.blogs.nytimes.com/2016/04/12/grieving-my-patients-friend/" title="Grieving My Patient&#8217;s Friend">Grieving My Patient&#8217;s Friend</a></h5><p><span class="excerpt-inner">It isnât unusual for therapists to get emotionally attached to people we&#8217;ve never met. </span><a href="//opinionator.blogs.nytimes.com/2016/04/12/grieving-my-patients-friend/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/couch/">More From Couch &raquo;</a></p></div>		</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">April 18, 2016</span><h5><a href="//opinionator.blogs.nytimes.com/2016/04/18/the-perils-of-being-a-black-philosopher/" title="The Perils of Being a Black Philosopher">The Perils of Being a Black Philosopher</a></h5><p><span class="excerpt-inner"> After reading so many hateful messages I began to feel sick, literally.</span><a href="//opinionator.blogs.nytimes.com/2016/04/18/the-perils-of-being-a-black-philosopher/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">April 16, 2016</span><h5><a href="//opinionator.blogs.nytimes.com/2016/04/16/is-that-even-a-thing/" title="Is That Even a Thing?">Is That Even a Thing?</a></h5><p><span class="excerpt-inner">What this language trend says about us.</span><a href="//opinionator.blogs.nytimes.com/2016/04/16/is-that-even-a-thing/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/the-stone/">More From The Stone &raquo;</a></p></div>		</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">February 26, 2016</span><h5><a href="//opinionator.blogs.nytimes.com/2016/02/26/bruni-and-douthat-agree-oscarssopolitical/" title="Bruni and Douthat Agree: #OscarsSoPolitical">Bruni and Douthat Agree: #OscarsSoPolitical</a></h5><p><span class="excerpt-inner">The Moviegoers pick who should and who will win at the Academy Awards âÂ and pick apart Hollywood&#8217;s diversity problem.</span><a href="//opinionator.blogs.nytimes.com/2016/02/26/bruni-and-douthat-agree-oscarssopolitical/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">December 28, 2015</span><h5><a href="//opinionator.blogs.nytimes.com/2015/12/28/escaping-to-a-galaxy-far-far-away/" title="Escaping to a Galaxy Far, Far, Far Away">Escaping to a Galaxy Far, Far, Far Away</a></h5><p><span class="excerpt-inner">The âForceâ holds great appeal compared with our anxieties here on earth, as seen in other films this season. </span><a href="//opinionator.blogs.nytimes.com/2015/12/28/escaping-to-a-galaxy-far-far-away/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/moviegoers/">More From Moviegoers &raquo;</a></p></div>		</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">February 6, 2016</span><h5><a href="//opinionator.blogs.nytimes.com/2016/02/06/system-failure/" title="Not Just a Death, a System Failure">Not Just a Death, a System Failure</a></h5><p><span class="excerpt-inner">My motherâs death was so wrenching that I applied to medical school to help change the way people die in America. </span><a href="//opinionator.blogs.nytimes.com/2016/02/06/system-failure/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">January 27, 2016</span><h5><a href="//opinionator.blogs.nytimes.com/2016/01/27/when-the-hospital-cant-help/" title="When the Hospital Is Not a Haven">When the Hospital Is Not a Haven</a></h5><p><span class="excerpt-inner"> Had I prolonged my Indian grandmotherâs suffering with my stubborn belief in the power of medicine to fix things? </span><a href="//opinionator.blogs.nytimes.com/2016/01/27/when-the-hospital-cant-help/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/the-end/">More From The End &raquo;</a></p></div>		</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">August 15, 2015</span><h5><a href="//opinionator.blogs.nytimes.com/2015/08/15/puzzling-through-my-fiction/" title="Puzzling Through My Fiction">Puzzling Through My Fiction</a></h5><p><span class="excerpt-inner">What I learned about writing from doing crossword puzzles.</span><a href="//opinionator.blogs.nytimes.com/2015/08/15/puzzling-through-my-fiction/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">July 11, 2015</span><h5><a href="//opinionator.blogs.nytimes.com/2015/07/11/writing-books-very-few-will-read/" title="Writing Books Very Few Will Read">Writing Books Very Few Will Read</a></h5><p><span class="excerpt-inner">When a family commissions a work, theyâre more interested in stories, lessons and values, rather than in sensation.</span><a href="//opinionator.blogs.nytimes.com/2015/07/11/writing-books-very-few-will-read/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/draft/">More From Draft &raquo;</a></p></div>		</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">July 27, 2015</span><h5><a href="//opinionator.blogs.nytimes.com/2015/07/27/10-things-id-tell-my-former-medicated-self/" title="10 Things I&#8217;d Tell My Former (Medicated) Self">10 Things I&#8217;d Tell My Former (Medicated) Self</a></h5><p><span class="excerpt-inner">I&#8217;ve been drug-free for nearly a month. Here is what I learned about my own seven-month weaning process. </span><a href="//opinionator.blogs.nytimes.com/2015/07/27/10-things-id-tell-my-former-medicated-self/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">June 26, 2015</span><h5><a href="//opinionator.blogs.nytimes.com/2015/06/26/singleminded/" title="Singleminded">Singleminded</a></h5><p><span class="excerpt-inner">As I decrease my medications, the urgency I feel around men and relationships subsides. </span><a href="//opinionator.blogs.nytimes.com/2015/06/26/singleminded/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/anxiety/">More From Anxiety &raquo;</a></p></div>		</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">June 22, 2015</span><h5><a href="//opinionator.blogs.nytimes.com/2015/06/22/every-creeping-thing-that-creepeth/" title="Every Creeping Thing That Creepeth">Every Creeping Thing That Creepeth</a></h5><p><span class="excerpt-inner">Why can&#8217;t we all just get along?</span><a href="//opinionator.blogs.nytimes.com/2015/06/22/every-creeping-thing-that-creepeth/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">June 13, 2015</span><h5><a href="//opinionator.blogs.nytimes.com/2015/06/13/birds-of-new-york-a-soundscape/" title="Birds of New York: A Soundscape">Birds of New York: A Soundscape</a></h5><p><span class="excerpt-inner">Composing with orchestral instruments was fine. But I found a richer palette of melody, counterpoint and rhythm already in the air.</span><a href="//opinionator.blogs.nytimes.com/2015/06/13/birds-of-new-york-a-soundscape/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/menagerie/">More From Menagerie &raquo;</a></p></div>		</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">June 10, 2015</span><h5><a href="//opinionator.blogs.nytimes.com/2015/06/10/disunion-the-final-q-a/" title="Disunion: The Final Q &amp; A">Disunion: The Final Q &#038; A</a></h5><p><span class="excerpt-inner">Four years ago, Disunion convened a panel of experts to discuss the outbreak of the Civil War. Now, those experts are back to discuss the war&#8217;s end, and its legacy.</span><a href="//opinionator.blogs.nytimes.com/2015/06/10/disunion-the-final-q-a/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">June 4, 2015</span><h5><a href="//opinionator.blogs.nytimes.com/2015/06/04/what-do-you-know-a-civil-war-pop-quiz/" title="What Do You Know? A Civil War Pop Quiz.">What Do You Know? A Civil War Pop Quiz.</a></h5><p><span class="excerpt-inner">If you read the series (or if you&#8217;re just a huge Civil War nerd), what have you learned? </span><a href="//opinionator.blogs.nytimes.com/2015/06/04/what-do-you-know-a-civil-war-pop-quiz/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/disunion/">More From Disunion &raquo;</a></p></div>		</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">January 3, 2015</span><h5><a href="//opinionator.blogs.nytimes.com/2015/01/03/when-prisoners-are-patients/" title="When Prisoners Are Patients">When Prisoners Are Patients</a></h5><p><span class="excerpt-inner">Should convicted felons receive free health care?</span><a href="//opinionator.blogs.nytimes.com/2015/01/03/when-prisoners-are-patients/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">September 6, 2014</span><h5><a href="//opinionator.blogs.nytimes.com/2014/09/06/when-its-the-doctor-who-cant-let-go/" title="When It&#8217;s the Doctor Who Can&#8217;t Let Go">When It&#8217;s the Doctor Who Can&#8217;t Let Go</a></h5><p><span class="excerpt-inner">Too many physicians think palliative care means giving up.</span><a href="//opinionator.blogs.nytimes.com/2014/09/06/when-its-the-doctor-who-cant-let-go/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/bedside/">More From Bedside &raquo;</a></p></div>		</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">November 5, 2014</span><h5><a href="//opinionator.blogs.nytimes.com/2014/11/05/the-republican-party-in-triumph/" title="The Republican Party In Triumph">The Republican Party In Triumph</a></h5><p><span class="excerpt-inner">Brooks and Collins on the full extent of the Election Day devastation of Democrats, including some who weren&#8217;t on the ballot.</span><a href="//opinionator.blogs.nytimes.com/2014/11/05/the-republican-party-in-triumph/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">October 28, 2014</span><h5><a href="//opinionator.blogs.nytimes.com/2014/10/28/political-infections/" title="Political Infections">Political Infections</a></h5><p><span class="excerpt-inner">Brooks and Collins on conflicting responses to Ebola, the meaning of the midterms and the pleasure of voting for effective crooks.</span><a href="//opinionator.blogs.nytimes.com/2014/10/28/political-infections/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/the-conversation/">More From The Conversation &raquo;</a></p></div>		</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">June 27, 2014</span><h5><a href="//opinionator.blogs.nytimes.com/2014/06/27/inequality-is-not-inevitable/" title="Inequality Is Not Inevitable">Inequality Is Not Inevitable</a></h5><p><span class="excerpt-inner">Inexorable laws of economics arenât tearing us apart. Our policies are.</span><a href="//opinionator.blogs.nytimes.com/2014/06/27/inequality-is-not-inevitable/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">June 21, 2014</span><h5><a href="//opinionator.blogs.nytimes.com/2014/06/21/gaming-the-poor/" title="Gaming the Poor">Gaming the Poor</a></h5><p><span class="excerpt-inner">Modern slot machine parlors have sophisticated methods of milking less affluent gamblers.</span><a href="//opinionator.blogs.nytimes.com/2014/06/21/gaming-the-poor/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/the-great-divide/">More From The Great Divide &raquo;</a></p></div>		</div>
+				<div class="tabContent">
+		<div class="entry"><span class="date">March 28, 2014</span><h5><a href="//opinionator.blogs.nytimes.com/2014/03/28/the-certainty-of-donald-rumsfeld-part-4/" title="The Certainty of Donald Rumsfeld (Part 4)">The Certainty of Donald Rumsfeld (Part 4)</a></h5><p><span class="excerpt-inner">The absence of evidence, the evidence of absence, and the Iraq War.</span><a href="//opinionator.blogs.nytimes.com/2014/03/28/the-certainty-of-donald-rumsfeld-part-4/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><span class="date">March 27, 2014</span><h5><a href="//opinionator.blogs.nytimes.com/2014/03/27/the-certainty-of-donald-rumsfeld-part-3/" title="The Certainty of Donald Rumsfeld (Part 3)">The Certainty of Donald Rumsfeld (Part 3)</a></h5><p><span class="excerpt-inner">Could Pearl Harbor be called a &#8220;failure of imagination,&#8221; and in that sense was it similar to the attacks of 9/11?</span><a href="//opinionator.blogs.nytimes.com/2014/03/27/the-certainty-of-donald-rumsfeld-part-3/" class="more-link">Read&nbsp;more&#8230;</a></p></div><div class="entry"><p class="more"><a href="//opinionator.blogs.nytimes.com/category/errol-morris/">More From Errol Morris &raquo;</a></p></div>		</div>
+				</div>
+	</div>
+			<div class="module ad" id="MiddleRight"></div>
+        		<div class="module archivesModule clearfix nocontent">
+			<h4 class="moduleHeader">Archive</h4>			<select name="archive_chrono" onchange="window.location.href=this.value; this.selectedIndex=this.options[0]">
+				<option class="archiveform_option" value="">Select Month</option>
+					<option value='//opinionator.blogs.nytimes.com/2016/04/'> April 2016 </option>
+	<option value='//opinionator.blogs.nytimes.com/2016/03/'> March 2016 </option>
+	<option value='//opinionator.blogs.nytimes.com/2016/02/'> February 2016 </option>
+	<option value='//opinionator.blogs.nytimes.com/2016/01/'> January 2016 </option>
+	<option value='//opinionator.blogs.nytimes.com/2015/12/'> December 2015 </option>
+	<option value='//opinionator.blogs.nytimes.com/2015/11/'> November 2015 </option>
+	<option value='//opinionator.blogs.nytimes.com/2015/10/'> October 2015 </option>
+	<option value='//opinionator.blogs.nytimes.com/2015/09/'> September 2015 </option>
+	<option value='//opinionator.blogs.nytimes.com/2015/08/'> August 2015 </option>
+	<option value='//opinionator.blogs.nytimes.com/2015/07/'> July 2015 </option>
+	<option value='//opinionator.blogs.nytimes.com/2015/06/'> June 2015 </option>
+	<option value='//opinionator.blogs.nytimes.com/2015/05/'> May 2015 </option>
+	<option value='//opinionator.blogs.nytimes.com/2015/04/'> April 2015 </option>
+	<option value='//opinionator.blogs.nytimes.com/2015/03/'> March 2015 </option>
+	<option value='//opinionator.blogs.nytimes.com/2015/02/'> February 2015 </option>
+			</select>
+		</div>
+        <div id="recentposts-2" class="module nocontent widget_recentposts"><h4 class="moduleHeader">Recent Posts</h4>				<div class="entry">
+						<div class="w50 right">
+				<a href="//opinionator.blogs.nytimes.com/2016/04/26/guiding-a-first-generation-to-college/"><img src="https://static01.nyt.com/images/2016/04/26/opinion/26fixesWeb/26fixesWeb-thumbStandard.jpg" width="50" height="50" /></a>
+			</div>
+							<h6 class="kicker">
+					<a href="//opinionator.blogs.nytimes.com/category/fixes/">Fixes</a>
+				</h6>
+							<h5><a href="//opinionator.blogs.nytimes.com/2016/04/26/guiding-a-first-generation-to-college/" title="Read: Guiding a First Generation to College">Guiding a First Generation to College</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//opinionator.blogs.nytimes.com/2016/04/26/guiding-a-first-generation-to-college/"></a>
+				</span>			</h5>
+			<p class="summary">
+			Students who are new to America or lack college-educated parents often don&#8217;t know their options.<a href="//opinionator.blogs.nytimes.com/2016/04/26/guiding-a-first-generation-to-college/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<div class="w50 right">
+				<a href="//opinionator.blogs.nytimes.com/2016/04/21/fractured-a-first-date/"><img src="https://static01.nyt.com/images/2016/04/20/opinion/20PRIVATE/20PRIVATE-thumbStandard.jpg" width="50" height="50" /></a>
+			</div>
+							<h6 class="kicker">
+					<a href="//opinionator.blogs.nytimes.com/category/private-lives/">Private Lives</a>
+				</h6>
+							<h5><a href="//opinionator.blogs.nytimes.com/2016/04/21/fractured-a-first-date/" title="Read: Fractured: A First Date">Fractured: A First Date</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//opinionator.blogs.nytimes.com/2016/04/21/fractured-a-first-date/"></a>
+				</span>			</h5>
+			<p class="summary">
+			It wasn&#8217;t my heart that he broke.<a href="//opinionator.blogs.nytimes.com/2016/04/21/fractured-a-first-date/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<div class="w50 right">
+				<a href="//opinionator.blogs.nytimes.com/2016/04/19/how-dwindling-fish-stocks-got-a-reprieve/"><img src="https://static01.nyt.com/images/2016/04/19/opinion/19fixesWeb/19fixesWeb-thumbStandard.jpg" width="50" height="50" /></a>
+			</div>
+							<h6 class="kicker">
+					<a href="//opinionator.blogs.nytimes.com/category/fixes/">Fixes</a>
+				</h6>
+							<h5><a href="//opinionator.blogs.nytimes.com/2016/04/19/how-dwindling-fish-stocks-got-a-reprieve/" title="Read: How Dwindling Fish Stocks Got a Reprieve">How Dwindling Fish Stocks Got a Reprieve</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//opinionator.blogs.nytimes.com/2016/04/19/how-dwindling-fish-stocks-got-a-reprieve/"></a>
+				</span>			</h5>
+			<p class="summary">
+			Giving fishermen a business incentive to fish sustainably can &#8220;unleash their creative capacity&#8221; to help solve the problem, says one expert. <a href="//opinionator.blogs.nytimes.com/2016/04/19/how-dwindling-fish-stocks-got-a-reprieve/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<div class="w50 right">
+				<a href="//opinionator.blogs.nytimes.com/2016/04/19/should-therapists-write-about-patients/"><img src="https://static01.nyt.com/images/2016/04/19/opinion/19couchWeb/19couchWeb-thumbStandard.jpg" width="50" height="50" /></a>
+			</div>
+							<h6 class="kicker">
+					<a href="//opinionator.blogs.nytimes.com/category/couch/">Couch</a>
+				</h6>
+							<h5><a href="//opinionator.blogs.nytimes.com/2016/04/19/should-therapists-write-about-patients/" title="Read: Should Therapists Write About Patients?">Should Therapists Write About Patients?</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//opinionator.blogs.nytimes.com/2016/04/19/should-therapists-write-about-patients/"></a>
+				</span>			</h5>
+			<p class="summary">
+			Even when we disguise their identities, we risk betraying them.<a href="//opinionator.blogs.nytimes.com/2016/04/19/should-therapists-write-about-patients/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<div class="w50 right">
+				<a href="//opinionator.blogs.nytimes.com/2016/04/18/the-perils-of-being-a-black-philosopher/"><img src="https://static01.nyt.com/images/2016/04/18/opinion/18stoneWeb/18stoneWeb-thumbStandard.jpg" width="50" height="50" /></a>
+			</div>
+							<h6 class="kicker">
+					<a href="//opinionator.blogs.nytimes.com/category/the-stone/">The Stone</a>
+				</h6>
+							<h5><a href="//opinionator.blogs.nytimes.com/2016/04/18/the-perils-of-being-a-black-philosopher/" title="Read: The Perils of Being a Black Philosopher">The Perils of Being a Black Philosopher</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//opinionator.blogs.nytimes.com/2016/04/18/the-perils-of-being-a-black-philosopher/"></a>
+				</span>			</h5>
+			<p class="summary">
+			After reading so many hateful messages I began to feel sick, literally.<a href="//opinionator.blogs.nytimes.com/2016/04/18/the-perils-of-being-a-black-philosopher/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+		</div><!-- end Recent Posts side tool -->
+    		<div class="module ad" id="Box1"></div>
+        <div id="nyt_blog_social_media-3" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-single ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">us on</span></span>
+<span class="blog-fw-specific-followmessage"><span class="blog-fw-username"><a href="https://twitter.com/nytopinionator" title="Follow @nytopinionator on twitter">@nytopinionator</a></span> on <span class="blog-fw-twitter">twitter</span></span></h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/nytopinionator" title="Follow nytopinionator on Twitter">Twitter</a></li></ul>
+<p class="blog-fw-followbutton"><a href="https://twitter.com/nytopinionator" title="Follow @nytopinionator on twitter">Follow</a></p></div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-50',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":68,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

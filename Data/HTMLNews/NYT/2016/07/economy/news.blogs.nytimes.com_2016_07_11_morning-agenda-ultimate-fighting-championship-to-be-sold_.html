@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004522897"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1468230163" />
+<meta name="PUD" content="20160711" />
+<meta name="pdate" content="20160711" />
+<meta name="ptime" content="20160711054243" />
+<meta name="utime" content="20160711094243" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-07-11T09:42:43-04:00" />
+<meta name="DISPLAYDATE" content="July 11, 2016" />
+<meta name="dat" content="July 11, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Dell, Michael S;Fertitta, Lorenzo J (1969- );Holmes, Elizabeth (1984- );Osborne, George;Price, Daniel J (1984- );Rousey, Ronda">
+<meta name="des" content="Banking and Financial Institutions;Great Britain Withdrawal from EU (Brexit);Initial Public Offerings;Mergers, Acquisitions and Divestitures;Mixed Martial Arts;Suits and Litigation (Civil)">
+<meta name="org" content="Bank of England;Citigroup Inc;Gravity Payments Inc;Kinder Morgan Inc;KKR &amp; Co LP;LaFarge Coppee SA;Line Corp;National Highway Traffic Safety Administration;Silver Lake Partners;Southern Company;Standard Chartered Bank PLC;Theranos Inc;Ultimate Fighting Championship;WME-IMG">
+<meta name="ticker" content="Citigroup Inc|C|NYSE;Kinder Morgan Inc|KMI|NYSE;Southern Company|SO|NYSE" />
+<meta property="article:tag" content="Dell Michael S" />
+<meta property="article:tag" content="Fertitta Lorenzo J (1969- )" />
+<meta property="article:tag" content="Holmes Elizabeth (1984- )" />
+<meta property="article:tag" content="Osborne George" />
+<meta property="article:tag" content="Price Daniel J (1984- )" />
+<meta property="article:tag" content="Rousey Ronda" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Great Britain Withdrawal from EU (Brexit)" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Mixed Martial Arts" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="Bank of England" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="Gravity Payments Inc" />
+<meta property="article:tag" content="Kinder Morgan Inc" />
+<meta property="article:tag" content="KKR &amp; Co LP" />
+<meta property="article:tag" content="LaFarge Coppee SA" />
+<meta property="article:tag" content="Line Corp" />
+<meta property="article:tag" content="National Highway Traffic Safety Administration" />
+<meta property="article:tag" content="Silver Lake Partners" />
+<meta property="article:tag" content="Southern Company" />
+<meta property="article:tag" content="Standard Chartered Bank PLC" />
+<meta property="article:tag" content="Theranos Inc" />
+<meta property="article:tag" content="Ultimate Fighting Championship" />
+<meta property="article:tag" content="WME-IMG" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Dell Michael S,Fertitta Lorenzo J (1969- ),Holmes Elizabeth (1984- ),Osborne George,Price Daniel J (1984- ),Rousey Ronda,Banking and Financial Institutions,Great Britain Withdrawal from EU (Brexit),Initial Public Offerings,Mergers Acquisitions and Divestitures,Mixed Martial Arts,Suits and Litigation (Civil),Bank of England,Citigroup Inc,Gravity Payments Inc,Kinder Morgan Inc,KKR &amp; Co LP,LaFarge Coppee SA,Line Corp,National Highway Traffic Safety Administration,Silver Lake Partners,Southern Company,Standard Chartered Bank PLC,Theranos Inc,Ultimate Fighting Championship,WME-IMG,DealBook" />
+<meta name="news_keywords" content="WME-IMG" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F07%2F11%2Fmorning-agenda-ultimate-fighting-championship-to-be-sold%2F" title="Morning Agenda:  Ultimate Fighting Championship to Be Sold" />
+<meta name="description" content="Line Prices I.P.O. in Year&#8217;s Biggest Tech Debut &#124; Chief Executive Who Promised $70,000 Salaries Wins Suit Filed by Brother" />
+<meta name="hdl" content="Morning Agenda:  Ultimate Fighting Championship to Be Sold" />
+<meta property="og:title" content="Morning Agenda:  Ultimate Fighting Championship to Be Sold" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/07/11/morning-agenda-ultimate-fighting-championship-to-be-sold/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Line Prices I.P.O. in Year&#8217;s Biggest Tech Debut &#124; Chief Executive Who Promised $70,000 Salaries Wins Suit Filed by Brother" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda:  Ultimate Fighting Championship to Be Sold" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/07/11/morning-agenda-ultimate-fighting-championship-to-be-sold/" />
+<meta name="twitter:description" content="Line Prices I.P.O. in Year&#8217;s Biggest Tech Debut &#124; Chief Executive Who Promised $70,000 Salaries Wins Suit Filed by Brother" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/07/08/what-were-reading-169/' />
+<link rel='next' title='Morning Agenda:  S.E.C. Said to Be Investigating Tesla' href='//news.blogs.nytimes.com/2016/07/12/morning-agenda-s-e-c-said-to-be-investigating-tesla/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/07/11/morning-agenda-ultimate-fighting-championship-to-be-sold/' />
+<link rel='shortlink' href='//nyti.ms/29Iy6nH' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/07/11/morning-agenda-ultimate-fighting-championship-to-be-sold/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda:  Ultimate Fighting Championship to Be Sold - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5251 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda:  Ultimate Fighting Championship to Be Sold        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/07/11/morning-agenda-ultimate-fighting-championship-to-be-sold/"
+	 data-title="Morning Agenda:  Ultimate Fighting Championship to Be Sold"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Line Prices I.P.O. in Year&#039;s Biggest Tech Debut | Chief Executive Who Promised $70,000 Salaries Wins Suit Filed by Brother &lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/11/morning-agenda-ultimate-fighting-championship-to-be-sold/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 11, 2016 5:42 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda:  Ultimate Fighting Championship to Be Sold</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-07-11T09:42:43+00:00" itemprop="datePublished">July 11, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">July 11, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5251 post type-post status-publish hentry category-dealbook tag-bank-of-england tag-banking-and-financial-institutions tag-citigroup-inc tag-dell-michael-s tag-fertitta-lorenzo-j-1969 tag-gravity-payments-inc tag-great-britain-withdrawal-from-eu-brexit tag-holmes-elizabeth-1984 tag-initial-public-offerings tag-kinder-morgan-inc tag-kkr-co-lp tag-lafarge-coppee-sa tag-line-corp tag-mergers-acquisitions-and-divestitures tag-mixed-martial-arts tag-national-highway-traffic-safety-administration tag-osborne-george tag-price-daniel-j-1984 tag-rousey-ronda tag-silver-lake-partners tag-southern-company tag-standard-chartered-bank-plc tag-suits-and-litigation-civil tag-theranos-inc tag-ultimate-fighting-championship tag-wme-img per-dell-michael-s per-fertitta-lorenzo-j-1969 per-holmes-elizabeth-1984 per-osborne-george per-price-daniel-j-1984 per-rousey-ronda des-banking-and-financial-institutions des-great-britain-withdrawal-from-eu-brexit des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-mixed-martial-arts des-suits-and-litigation-civil org-bank-of-england org-citigroup-inc org-gravity-payments-inc org-kinder-morgan-inc org-kkr-co-lp org-lafarge-coppee-sa org-line-corp org-national-highway-traffic-safety-administration org-silver-lake-partners org-southern-company org-standard-chartered-bank-plc org-theranos-inc org-ultimate-fighting-championship org-wme-img news_keywords-wme-img" id="post-5251">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda:  Ultimate Fighting Championship to Be Sold</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-07-11T09:42:43+00:00" itemprop="datePublished">July 11, 2016 5:42 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 11, 2016 5:42 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/07/11/morning-agenda-ultimate-fighting-championship-to-be-sold/" data-title="Morning Agenda:  Ultimate Fighting Championship to Be Sold" data-description="Line Prices I.P.O. in Year&#039;s Biggest Tech Debut | Chief Executive Who Promised $70,000 Salaries Wins Suit Filed by Brother ">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>ULTIMATE FIGHTING CHAMPIONSHIP TO BE SOLD</strong> Ultimate Fighting Championship has become a global sports empire, with an eye-popping price tag to match, <a href="//www.nytimes.com/2016/07/11/business/dealbook/ufc-sells-itself-for-4-billion.html?nl=dealbook&amp;emc=edit_dlbkam_20160711">Michael J. de la Merced reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">The league, which promotes mixed martial arts, is expected to announce as soon as Monday that it has <strong>sold itself to a group led by the talent giant WME-IMG for about $4 billion</strong>, according to people with direct knowledge of the matter. The private equity firms Silver Lake and Kohlberg Kravis Roberts and the investment firm of the billionaire Michael S. Dell are backing the deal.</p>
+<p class="story-body-text" itemprop="articleBody">U.F.C. says <strong>millennials make up about 45 percent of its audience</strong> and it is shown in more than 156 countries. As well as headline fights, the new owners will get about 2,000 hours of material each year, much of it streaming on its Fight Pass service.</p>
+<p class="story-body-text" itemprop="articleBody">The deal will be a <strong>windfall for U.F.C.&#8217;s primary owners, the casino entrepreneurs Frank and Lorenzo Fertitta</strong>, who will become minority investors. The brothers bought U.F.C. in 2000 for just $2 million, and spent years and millions of dollars battling to win approval from state athletic commissions.</p>
+<p class="story-body-text" itemprop="articleBody">The league had come up against opposition because of the brutality of its fights, with Senator John McCain of Arizona deriding it as &#8220;human cocktfighting,&#8221; but the Fertitta brothers put in place rules meant to curb the excesses of early fights and get approval from each state&#8217;s athletic commission. They also pushed promotions and distribution until revenue came to about $600 million last year. This year, New York lifted its ban on the sport.</p>
+<p class="story-body-text" itemprop="articleBody">U.F.C. swallowed up many of its competitors, pushing aggressively abroad and eventually <strong>selling a minority stake to an arm of the Abu Dhabi government</strong> six years ago. Concerns over its brutality have not completely dissipated, but the company was popular enough to draw interest from a number of suitors. Dalian Wanda Group, which owns the AMC theater chain, and China Media Capital, which owns stakes in teams like the Manchester City soccer club, were reported to be interested.</p>
+<p class="story-body-text" itemprop="articleBody">WME-IMG, which represents the fighter Ronda Rousey, emerged victorious, but it <strong>will not get involved in the actual pay negotiations with athletes</strong>, said people with direct knowledge of the matter.<br />
+<strong>LINE PRICES I.P.O. IN YEAR&#8217;S BIGGEST TECH DEBUT</strong> Line Corporation of Japan set the price of its initial public offering at the top of the targeted range and <strong>will sell 35 million shares at 3,300 yen, or about $33, each</strong>, <a href="//www.bloomberg.com/news/articles/2016-07-11/line-sets-1-1-billion-ipo-at-top-of-increased-price-range?nl=dealbook&amp;emc=edit_dlbkam_20160711">Bloomberg reports.</a></p>
+<p class="story-body-text" itemprop="articleBody">It will also sell 5.25 million shares through a so-called greenshow, which allows it to increase the amount of stock sold, bringing the total raised to $1.3 billion. The price values the company at about $6.9 billion and <strong>will be the biggest technology debut of the year.</strong></p>
+<p class="story-body-text" itemprop="articleBody">The company&#8217;s New York traded stock was priced at $32.84, with Line selling 25.3 million shares in the United States, including the greenshoe.</p>
+<p class="story-body-text" itemprop="articleBody">Line had announced its I.P.O. plans before Britain voted to leave the European Union, but <strong>delayed establishing its price ranges as markets were roiled by the referendum result.</strong></p>
+<p class="story-body-text" itemprop="articleBody">The company, which made its debut in 2011, pioneered the business model of selling stickers and games, but it has met stiff competition from Facebook Messenger, WhatsApp and WeChat. Sales grew 40 percent last year to 120.7 billion yen, but Line made a net loss of 7.6 billion yen.<br />
+<strong>ON THE AGENDA Esther George</strong>, the president of the Kansas City Fed, will speak at the Mid-America Labor Management Conference in Lake Ozark, Mo., at 10 a.m.<br />
+<strong>CHIEF EXECUTIVE WHO PROMISED $70,000 SALARIES WINS SUIT FILED BY BROTHER</strong> Dan Price, the chief executive of a small Seattle company who promised last year to pay every one of his workers at least $70,000 a year, has won a court battle with his brother, <a href="//www.nytimes.com/2016/07/11/business/seattle-ceo-who-promised-70000-salaries-wins-suit-filed-by-brother.html?ref=dealbook&amp;_r=&amp;nl=dealbook&amp;emc=edit_dlbkam_20160711">Reed Abelson reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">Judge Theresa B. Doyle of Superior Court in King County, in Washington State, <strong>ruled that Lucas Price had failed to prove his claims that Dan Price had overpaid himself and inappropriately used a corporate credit card for personal expenses</strong>. The judge ordered Lucas to pay Dan&#8217;s legal fees.</p>
+<p class="story-body-text" itemprop="articleBody">The lawsuit showed what the judge called &#8220;the volatility and downward spiraling&#8221; of the relationship between the brothers, who had founded Gravity Payments, a credit card payment processing company. The brothers had agreed to restructure the company so that Dan would have a majority 60 percent share and serve as chief executive. Lucas would retain a minority 40 percent interest, but would not be involved in the day-to-day management.</p>
+<p class="story-body-text" itemprop="articleBody">The brothers argued over how to compensate Dan and how to pay dividends to shareholders. When Dan announced his plan to pay everyone at Gravity Payments a minimum salary of $70,000, <strong>Lucas said he was not informed of the decision until shortly before it was made public.</strong></p>
+<p class="story-body-text" itemprop="articleBody">Lucas&#8217;s lawyer, Gregory J. Hollon, argued that Dan failed to meet the terms of the brothers&#8217; agreement over the restructuring of the company. In a statement on Sunday, Lucas Price said, &#8220;I am shocked and disappointed with the decision and I will be considering my options.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Dan Price praised the ruling in a Facebook post, but emphasized his ties to his brother. <strong>&#8220;My love for my brother is unconditional,&#8221;</strong> he said, noting Lucas&#8217;s &#8220;incredibly valuable role&#8221; in creating Gravity Payments.<br />
+<em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/?nl=dealbook&amp;emc=edit_dlbkam_20160711"><strong>MERGERS &amp; ACQUISITIONS Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>LafargeHolcim to Sell Lafarge India Cement Business</strong> LafargeHolcim, the Swiss building materials group, said it had agreed to sell its interest in Lafarge India to the local conglomerate Nirma for an enterprise value of $1.4 billion as it adjusts to tough conditions in some of its most important markets.<br />
+<a href="//www.wsj.com/articles/lafargeholcim-sells-lafarge-india-cement-business-to-nirma-1468219067?nl=dealbook&amp;emc=edit_dlbkam_20160711">THE WALL STREET JOURNAL</a><br />
+<strong>Southern Expands Gas Footprint With $1.5 Billion Deal</strong> Southern Company bought a 50 percent stake in Kinder Morgan&#8217;s Southern Natural Gas pipeline system in the latest expansion into gas shipping by a power generator.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-10/southern-company-buys-half-of-kinder-s-southern-gas-system?nl=dealbook&amp;emc=edit_dlbkam_20160711">BLOOMBERG</a><br />
+<strong>Chinese Billions Flood Soccer</strong> Long a soccer backwater, China has gone on a buying spree unprecedented in the history of the game. Chinese companies have invested $1.7 billion in sports assets, mostly soccer-related, since the beginning of 2015.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-10/chinese-billions-flood-into-soccer-snaring-hulk-in-record-deal?nl=dealbook&amp;emc=edit_dlbkam_20160711">BLOOMBERG</a><br />
+<a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160711"><strong>INVESTMENT BANKING Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Wall Street Analysts Cut Big Banks&#8217; Profit Forecasts</strong> Wall Street analysts have cut profit forecasts for the biggest banks in the United States, fearing that the Federal Reserve, spooked by sluggish job growth and the British vote to leave the European Union, will hold off on pushing up interest rates.<br />
+<a href="//www.ft.com/cms/s/0/039d8e14-454e-11e6-9b66-0712b3873ae1.html?nl=dealbook&amp;emc=edit_dlbkam_20160711#axzz4E4fvddjx">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Years of Red Ink for Citi&#8217;s Consumer Business in China</strong> Citigroup&#8217;s difficulty getting traction in basic consumer banking shows how hard it can be to exploit the once-heralded opening of what has become the world&#8217;s second-largest economy.<br />
+<a href="//www.wsj.com/articles/citis-consumer-business-in-china-nine-years-of-red-ink-1468162180?mod=asia_home&amp;nl=dealbook&amp;emc=edit_dlbkam_20160711">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Osborne Seeks to Reassure Wall Street</strong> George Osborne, the chancellor of the Exchequer, will tell Wall Street investors that Britain will not retreat into a &#8220;Little Britain&#8221; mind-set after last month&#8217;s vote to leave the European Union, as part of his tour to bolster trade links with the rest of the world.<br />
+<a href="//www.ft.com/cms/s/0/64612b68-472c-11e6-8d68-72e9211e86ab.html?nl=dealbook&amp;emc=edit_dlbkam_20160711#axzz4E4fvddjx">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Standard Chartered Starts Brokerage Firm in Japan</strong> Standard Chartered started its first brokerage business in Japan with 100 employees as institutional investors in the country seek products from emerging markets in Asia, the Middle East and Africa for better returns.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-11/standard-chartered-starts-brokerage-in-japan-with-100-employees?nl=dealbook&amp;emc=edit_dlbkam_20160711">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Italian Banks: Essential Repairs</strong> Italian bank shares are down by a third, raising doubts over reform and pitting Rome against Brussels.<br />
+<a href="//www.ft.com/cms/s/0/a594eb58-443c-11e6-b22f-79eb4891c97d.html?nl=dealbook&amp;emc=edit_dlbkam_20160711#axzz4E4fvddjx">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><em>For the latest updates, go to <a href="//www.nytimes.com/pages/business/dealbook/index.html">NYTimes.com/DealBook</a></em></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160711"><strong>VENTURE CAPITAL Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>A Start-Up Shies Away From the Gig Economy</strong> Redfin, a Seattle company that considers itself a real estate and tech company, has challenged the conventions of both by hiring full-time agents.<br />
+<a href="//www.nytimes.com/2016/07/10/technology/a-start-up-shies-away-from-the-gig-economy.html?nl=dealbook&amp;emc=edit_dlbkam_20160711">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160711"><strong>LEGAL/REGULATORY Â»</strong></a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Theranos Chief Stifled Bad News</strong> The chief, Elizabeth Holmes, has continued to put a positive spin on her embattled blood-testing company, while keeping employees in the dark on many issues.<br />
+<a href="//www.wsj.com/articles/under-fire-theranos-ceo-stifled-bad-news-1468195377?nl=dealbook&amp;emc=edit_dlbkam_20160711">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>What Trump and the G.O.P. Can Agree On: Tax Cuts for the Rich</strong> The tax plan shepherded by House Speaker Paul Ryan would fundamentally change the system, but both plans reduce taxes on capital gains and high incomes.<br />
+<a href="//www.nytimes.com/2016/07/11/business/what-trump-and-the-gop-can-agree-on-tax-cuts-for-the-rich.html?nl=dealbook&amp;emc=edit_dlbkam_20160711">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Fatal Tesla Crash Draws In Transportation Safety Board</strong> In addition to the National Highway Traffic Safety Administration, the transportation safety board will investigate a Florida crash involving a Tesla operating in Autopilot mode.<br />
+<a href="//www.nytimes.com/2016/07/11/business/fatal-tesla-crash-draws-in-transportation-safety-board.html?nl=dealbook&amp;emc=edit_dlbkam_20160711">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Bank of England Set to Cut Rates</strong> The Bank of England is expected to cut interest rates to new historic lows on Thursday in an attempt to ease the pain of the slowdown that is expected as a result of Britain&#8217;s vote to leave the European Union.<br />
+<a href="//www.ft.com/cms/s/0/5916974e-467c-11e6-8d68-72e9211e86ab.html?nl=dealbook&amp;emc=edit_dlbkam_20160711#axzz4E4fvddjx">THE FINANCIAL TIMES</a></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/07/11/morning-agenda-ultimate-fighting-championship-to-be-sold/"
+					data-title="Morning Agenda:  Ultimate Fighting Championship to Be Sold"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Line Prices I.P.O. in Year&#039;s Biggest Tech Debut | Chief Executive Who Promised $70,000 Salaries Wins Suit Filed by Brother &lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/11/morning-agenda-ultimate-fighting-championship-to-be-sold/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":50,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

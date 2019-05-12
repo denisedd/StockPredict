@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003914981"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1442397440" />
+<meta name="PUD" content="20150916" />
+<meta name="pdate" content="20150916" />
+<meta name="ptime" content="20150916055720" />
+<meta name="utime" content="20150916095720" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-09-16T09:57:20-04:00" />
+<meta name="DISPLAYDATE" content="September 16, 2015" />
+<meta name="dat" content="September 16, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Hewlett-Packard Company;Whitman, Margaret C">
+<meta name="des" content="Alibaba Group Holding Ltd;Banking and Financial Institutions;Cloud Computing;Computer Printers;Credit and Debt;Credit Default Swaps;France;Hedge Funds;Novo Banco SA;Private Equity;Real Estate and Housing (Residential);Recession and Depression;Taxation;Trichet, Jean-Claude;Yahoo! Inc">
+<meta name="org" content="AMC Networks Inc;Anheuser-Busch InBev NV;Bridgewater Associates;California;Darden Restaurants Inc;European Central Bank;European Commission;European Court of Justice;Federal Reserve System;Goldman Sachs Group Inc;Gross Domestic Product;Inflation (Economics);Interest Rates;Macy&#039;s Inc;McDonald&#039;s Corporation;NBCUniversal;Regulation and Deregulation of Industry;Uber Technologies Inc;United States Economy;Universal Studios Inc">
+<meta name="ticker" content="Anheuser-Busch InBev NV|BUD|NYSE;Darden Restaurants Inc|DRI|NYSE;Goldman Sachs Group Inc|GS|NYSE;Macy's Inc|M|NYSE;McDonald's Corporation|MCD|NYSE" />
+<meta property="article:tag" content="Hewlett-Packard Company" />
+<meta property="article:tag" content="Whitman Margaret C" />
+<meta property="article:tag" content="Alibaba Group Holding Ltd" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Cloud Computing" />
+<meta property="article:tag" content="Computer Printers" />
+<meta property="article:tag" content="Credit and Debt" />
+<meta property="article:tag" content="Credit Default Swaps" />
+<meta property="article:tag" content="France" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Novo Banco SA" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Real Estate and Housing (Residential)" />
+<meta property="article:tag" content="Recession and Depression" />
+<meta property="article:tag" content="Taxation" />
+<meta property="article:tag" content="Trichet Jean-Claude" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="AMC Networks Inc" />
+<meta property="article:tag" content="Anheuser-Busch InBev NV" />
+<meta property="article:tag" content="Bridgewater Associates" />
+<meta property="article:tag" content="California" />
+<meta property="article:tag" content="Darden Restaurants Inc" />
+<meta property="article:tag" content="European Central Bank" />
+<meta property="article:tag" content="European Commission" />
+<meta property="article:tag" content="European Court of Justice" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Gross Domestic Product" />
+<meta property="article:tag" content="Inflation (Economics)" />
+<meta property="article:tag" content="Interest Rates" />
+<meta property="article:tag" content="Macy&#039;s Inc" />
+<meta property="article:tag" content="McDonald&#039;s Corporation" />
+<meta property="article:tag" content="NBCUniversal" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="United States Economy" />
+<meta property="article:tag" content="Universal Studios Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Hewlett-Packard Company,Whitman Margaret C,Alibaba Group Holding Ltd,Banking and Financial Institutions,Cloud Computing,Computer Printers,Credit and Debt,Credit Default Swaps,France,Hedge Funds,Novo Banco SA,Private Equity,Real Estate and Housing (Residential),Recession and Depression,Taxation,Trichet Jean-Claude,Yahoo! Inc,AMC Networks Inc,Anheuser-Busch InBev NV,Bridgewater Associates,California,Darden Restaurants Inc,European Central Bank,European Commission,European Court of Justice,Federal Reserve System,Goldman Sachs Group Inc,Gross Domestic Product,Inflation (Economics),Interest Rates,Macy&#039;s Inc,McDonald&#039;s Corporation,NBCUniversal,Regulation and Deregulation of Industry,Uber Technologies Inc,United States Economy,Universal Studios Inc,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F09%2F16%2Fmorning-agenda-hp-to-cut-30000-jobs%2F" title="Morning Agenda: HP to Cut 30,000 Jobs" />
+<meta name="description" content="Lessons From Raising Rates Too Soon &#124; I.R.S. Concern Over Real Estate Spin-Offs &#124; Uber and Outdated Worker Protection Laws" />
+<meta name="hdl" content="Morning Agenda: HP to Cut 30,000 Jobs" />
+<meta property="og:title" content="Morning Agenda: HP to Cut 30,000 Jobs" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/09/16/morning-agenda-hp-to-cut-30000-jobs/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Lessons From Raising Rates Too Soon &#124; I.R.S. Concern Over Real Estate Spin-Offs &#124; Uber and Outdated Worker Protection Laws" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: HP to Cut 30,000 Jobs" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/09/16/morning-agenda-hp-to-cut-30000-jobs/" />
+<meta name="twitter:description" content="Lessons From Raising Rates Too Soon &#124; I.R.S. Concern Over Real Estate Spin-Offs &#124; Uber and Outdated Worker Protection Laws" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/09/15/what-were-reading-89/' />
+<link rel='next' title='Morning Agenda: Altice to Buy Cablevision' href='//news.blogs.nytimes.com/2015/09/17/morning-agenda-altice-to-buy-cablevision/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/09/16/morning-agenda-hp-to-cut-30000-jobs/' />
+<link rel='shortlink' href='//nyti.ms/1KfELip' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/09/16/morning-agenda-hp-to-cut-30000-jobs/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: HP to Cut 30,000 Jobs - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3252 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: HP to Cut 30,000 Jobs        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/09/16/morning-agenda-hp-to-cut-30000-jobs/"
+	 data-title="Morning Agenda: HP to Cut 30,000 Jobs"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Lessons From Raising Rates Too Soon | I.R.S. Concern Over Real Estate Spin-Offs | Uber and Outdated Worker Protection Laws&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/09/16/morning-agenda-hp-to-cut-30000-jobs/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="September 16, 2015 5:57 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: HP to Cut 30,000 Jobs</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-09-16T09:57:20+00:00" itemprop="datePublished">September 16, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">September 16, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3252 post type-post status-publish hentry category-dealbook tag-alibaba-group-holding-ltd tag-amc-networks-inc tag-anheuser-busch-inbev-nv tag-banking-and-financial-institutions tag-bridgewater-associates tag-california tag-cloud-computing tag-computer-printers tag-credit-and-debt tag-credit-default-swaps tag-darden-restaurants-inc tag-european-central-bank tag-european-commission tag-european-court-of-justice tag-federal-reserve-system tag-france tag-goldman-sachs-group-inc tag-gross-domestic-product tag-hedge-funds tag-hewlett-packard-company tag-inflation-economics tag-interest-rates tag-macys-inc tag-mcdonalds-corporation tag-nbcuniversal tag-novo-banco-sa tag-private-equity tag-real-estate-and-housing-residential tag-recession-and-depression tag-regulation-and-deregulation-of-industry tag-taxation tag-trichet-jean-claude tag-uber-technologies-inc tag-united-states-economy tag-universal-studios-inc tag-whitman-margaret-c tag-yahoo-inc per-hewlett-packard-company per-whitman-margaret-c des-alibaba-group-holding-ltd des-banking-and-financial-institutions des-cloud-computing des-computer-printers des-credit-and-debt des-credit-default-swaps des-france des-hedge-funds des-novo-banco-sa des-private-equity des-real-estate-and-housing-residential des-recession-and-depression des-taxation des-trichet-jean-claude des-yahoo-inc org-amc-networks-inc org-anheuser-busch-inbev-nv org-bridgewater-associates org-california org-darden-restaurants-inc org-european-central-bank org-european-commission org-european-court-of-justice org-federal-reserve-system org-goldman-sachs-group-inc org-gross-domestic-product org-inflation-economics org-interest-rates org-macys-inc org-mcdonalds-corporation org-nbcuniversal org-regulation-and-deregulation-of-industry org-uber-technologies-inc org-united-states-economy org-universal-studios-inc" id="post-3252">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: HP to Cut 30,000 Jobs</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-09-16T09:57:20+00:00" itemprop="datePublished">September 16, 2015 5:57 am</time>
+			<!-- date updated --><span class="visually-hidden updated">September 16, 2015 5:57 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/09/16/morning-agenda-hp-to-cut-30000-jobs/" data-title="Morning Agenda: HP to Cut 30,000 Jobs" data-description="Lessons From Raising Rates Too Soon | I.R.S. Concern Over Real Estate Spin-Offs | Uber and Outdated Worker Protection Laws">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HP TO CUT 30,000 JOBS</strong> <span class="divider"> | </span></span> Hewlett-Packard is <b>cutting 10 percent of its work force</b> as the company splits in two, <a href="//bits.blogs.nytimes.com/2015/09/15/hewlett-packard-to-cut-about-10-percent-of-work-force/?ref=business">Quentin Hardy reports on the Bits blog</a>. </p>
+<p class="story-body-text" itemprop="articleBody"> âWeâre looking forward to operating as two industry-leading companies,â said Meg Whitman, the chief executive. <b>âYouâll see us doing more pruning of businesses that donât fit.â</b></p>
+<p class="story-body-text" itemprop="articleBody"> In November, Ms. Whitman will become chief executive of HP Enterprise, or HPE, which will <b>sell computer servers, data storage, software and services to businesses</b>. The other company, HP Inc., will focus on printers and personal computers. </p>
+<p class="story-body-text" itemprop="articleBody"> The big cuts will come from HPE, particularly <b>jobs at call centers and service centers in developed countries</b>. HP plans to automate many of the jobs and move positions to countries like Costa Rica and India. The services business had been dependent on just a few customers and lost important accounts in 2014. </p>
+<p class="story-body-text" itemprop="articleBody"> Cathie Lesjak, HPâs chief financial officer, said <b>HP Inc. would reduce its headcount by about 3,300</b> by the end of 2018. </p>
+<p class="story-body-text" itemprop="articleBody"> As part of an earlier restructuring, 54,000 jobs have already been cut.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>LESSONS FROM RAISING RATES TOO SOON</strong> <span class="divider"> | </span></span> Since the global financial crisis, <b>when major central banks have made mistakes</b>, they have generally been too fearful of inflation and too complacent about growth, <a href="//www.nytimes.com/2015/09/16/upshot/central-banks-keep-making-the-same-mistake.html?ref=business">Neil Irwin writes in The Upshot</a>. </p>
+<p class="story-body-text" itemprop="articleBody"> If the Fed chooses to raise interest rates this week, it would indicate that officials think the United States faces the <b>risk of overheating and financial excess</b>. Other central banks have been in a similar position. </p>
+<p class="story-body-text" itemprop="articleBody"> The European economy slumped into a recession in 2011, after the <b>European Central Bank raised short-term interest rates</b> in April and July. Energy prices had spiked and officials feared that this might create broader-based inflation. Jean-Claude Trichet, then the E.C.B. president, may have wanted to signal his inflation-fighting credentials when he was coming under fire by Germans for the buying of Greek bonds. </p>
+<p class="story-body-text" itemprop="articleBody"> The lesson? Monetary policy is <b>not a device for political signaling</b>. </p>
+<p class="story-body-text" itemprop="articleBody"> From 2010 to 2011, Australia, Israel, Norway and Sweden all escaped the brunt of the 2008 financial crisis and hurried to get their interest rates back to normal. Their connections to other countries meant they remained vulnerable to continued turmoil elsewhere. All reversed their rate increases soon after â evidence that it can be a <b>mistake to raise rates based solely on domestic considerations</b> if the world is a mess. </p>
+<p class="story-body-text" itemprop="articleBody"> In 2010, Fed officials started looking toward monetary exits, but the economic recovery proved sorely disappointing. Economic conditions have to justify an increase and it is <b>not enough to be exhausted with monetary activism</b>. </p>
+<p class="story-body-text" itemprop="articleBody"> These examples do not, of course, mean that a rate increase this week would be a mistake, Mr. Irwin notes. There is a solid economic case for the move. But there are <b>plenty of reasons to be wary</b>.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>I.R.S. CONCERN OVER REAL ESTATE SPIN-OFFS</strong> <span class="divider"> | </span></span> Activist investors have been pushing for companies to spin off their real estate, but the <b>tax authorities have put a hold on these moves</b>, <a href="//www.wsj.com/articles/irs-raises-red-flag-on-real-estate-spinoffs-1442359003">The Wall Street Journal reports</a>. The Internal Revenue Service indicated its discomfort with deals in which companies split their real estate and physical assets from their mainstream operations. </p>
+<p class="story-body-text" itemprop="articleBody"> It said it was concerned that some of these transactions may violate rules intended to ensure that companies donât disguise dividends and other taxable transactions as <b>spin-offs to avoid paying taxes</b>. </p>
+<p class="story-body-text" itemprop="articleBody"> The agency said it would largely <b>stop giving advance approval for such deals</b> while examining the issue. </p>
+<p class="story-body-text" itemprop="articleBody"> This <b>could affect Darden Restaurantâs plan</b> to spin off its restaurant properties, which Starboard Value championed. Macyâs and McDonaldâs are under shareholder pressure to make similar moves. Yahoo is considering options after the I.R.S. declined to rule on whether its spin-off of its stake in Alibaba would be tax-free.</p>
+<p class="story-body-text" itemprop="articleBody"> It has become popular to split off real-estate assets in recent years as <b>companies can get higher valuations</b> by putting the assets into a separate structure like a real-estate investment trust.</p>
+<p class="story-body-text" itemprop="articleBody"> These deals are generally tax free as long as they include small businesses alongside the properties so that they can count as being in âactive trade or business.â But the I.R.S. is <b>not convinced that these businesses are big enough</b> in comparison to the size of the real estate.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> Data on <b>consumer prices in August</b> will be published at 8:30 a.m. <b>Oracle</b> holds a conference call on its first-quarter earnings at 5 p.m.  <b>FedEx</b> will release earnings for its first quarter at 7:30 a.m. and follow up with a conference call at 8:30 a.m. <b>Ray Dalio</b>, founder of Bridgewater Associates, is a guest on Bloomberg Television at 6 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>UBER AND OUTDATED WORKER PROTECTION LAWS</strong> <span class="divider"> | </span></span> A dispute in California over whether Uberâs drivers are employees or contractors is becoming <b>a Rorschach test for peopleâs views of the sharing economy</b>, <a href="//www.nytimes.com/2015/09/16/business/dealbook/uber-case-highlights-outdated-worker-protection-laws.html?ref=dealbook">Steven Davidoff Solomon writes in the Deal Professor column</a>. </p>
+<p class="story-body-text" itemprop="articleBody"> A law firm based in Boston contends that its drivers are illegally paid as <b>independent contractors, not employees</b>. If Uberâs drivers were employees, they would be entitled to the benefits that go with the classification â unemployment, overtime. </p>
+<p class="story-body-text" itemprop="articleBody"> Uber argues that it is just matching drivers with customers, <b>acting as a middleman</b> in the same way that Etsy or eBay do. Now, courts are trying to decide whether Uber drivers are contractors or employers based on a standard rooted in 19th-century labor law.</p>
+<p class="story-body-text" itemprop="articleBody"> Californiaâs <b>definition of an employee is worker-friendly</b>. The test for whether a worker is an employee or a contractor is whether the employer retains all ânecessaryâ control over the worker. </p>
+<p class="story-body-text" itemprop="articleBody"> In California, <b>Uber has an uphill battle</b>, Mr. Solomn writes. It specifies enough in standards, such as licensing, that someone can find that ânecessaryâ control is established. Under California law, if an employer has the power to terminate someone at will, then the employer has enough control. </p>
+<p class="story-body-text" itemprop="articleBody"> But the test has <b>little to do with Uberâs relationship</b> with its drivers and whether they need protection given their ability to quit at any time. </p>
+<p class="story-body-text" itemprop="articleBody"> And the legal case is <b>likely to have little impact</b>. Uber has all its drivers sign arbitration agreements, which waive the right to bring class-action lawsuits, so this case covers only California drivers who opted out since 2014 or who drove before then. </p>
+<p class="story-body-text" itemprop="articleBody"> The litigation <b>will not force Uber to change its practices</b> because it doesnât work unless its drivers have the flexibility that employees do not have. It could also choose to go through companies that hire workers or contractors. </p>
+<p class="story-body-text" itemprop="articleBody"> This case truly highlights the <b>outdated nature of workersâ laws in America</b>, Mr. Solomon says. </p>
+<p class="story-body-text" itemprop="articleBody"> <b>In Europe</b>, Uber is waiting for a ruling by Franceâs Constitutional Court on the legality of its services. The European Commission is also examining France and Germanyâs bans on the Uberâs services and whether their laws violate competition rules. The European Court of Justice is considering whether it should be classified as a transport company or a digital service, a decision that could overturn bans across the continent. </p>
+<p class="story-body-text" itemprop="articleBody"> If the authorities there rule against Uber, its model may struggle. <a href="//www.ft.com/intl/cms/s/0/c5fb29b8-5796-11e5-9846-de406ccb37f2.html#axzz3lommqBWv">The Financial Times</a> has looked at how the ride-hailing company <b>misjudged regulators in Europe</b> and may have prompted stronger regulatory pushback with its hardball strategies. Two of its top European executives will stand trial this month, drivers have been arrested, offices raided and it has been targeted by protests in several countries.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AB InBev Approaches SABMiller to Explore $250 Billion Tie-Up</strong> <span class="divider"> | </span></span> Anheuser-Busch InBev, the worldâs largest brewer by sales, has approached rival SABMiller to explore a tie-up that would create a company with a joint market capitalization of about $250 billion.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/52162e9c-5c3e-11e5-9846-de406ccb37f2.html#axzz3lgdFvMwf">  THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Dentsply to Acquire Sirona Dental for $5.5 Billion</strong> <span class="divider"> | </span></span> The deal, involving the two largest makers of dental products, would create a dental health giant with a combined market value of $13.3 billion.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/16/business/dealbook/dentsply-to-acquire-sirona-dental-for-5-5-billion.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Berkshire Partners Said to Be Near Buying Affordable Care</strong> <span class="divider"> | </span></span> The private equity firm Berkshire Partners is nearing a deal to acquire Affordable Care, the largest denture services provider in the United States, for more than $800 million, including debt, Reuters reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/09/15/us-affordablecare-m-a-berkshirepartners-idUSKCN0RF2RK20150915"> Reuters </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="TheAudience, a Social Media Company, Is Sold to Al Ahli Holding Group" src="https://static01.nyt.com/images/2015/09/16/business/16audience-web/16audience-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TheAudience, a Social Media Company, Is Sold to Al Ahli Holding Group</strong> <span class="divider"> | </span></span> Focused on building the careers of celebrities, theAudience will expand its reach and include Al Ahliâs enterprises, said Oliver Luckett, the firmâs co-founder.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/16/business/media/theaudience-a-social-media-company-is-sold-to-al-ahli-holding-group.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AMC Networks Said to Be in Talks to Buy Starz</strong> <span class="divider"> | </span></span> AMC Networks, the cable network operator, is back in talks to acquire Starz, another TV programmer, from the billionaire John Malone, Bloomberg News reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-09-15/amc-networks-said-in-talks-to-acquire-john-malone-s-starz"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Universal Studios Japan Owners in Talks to Sell Stake</strong> <span class="divider"> | </span></span> Goldman Sachs Group and the other owners of Universal Studios Japan are in talks to sell a stake in the theme park to Comcastâs NBCUniversal in a deal that could value the Japanese company at $6 billion, The Wall Street Journal reports, citing people familiar with the deal.<br /><span class="kicker"><a href="//www.wsj.com/articles/universal-studios-japan-owners-in-talks-to-sell-stake-1442332978"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BTG Pactual Is Cleared to Acquire Swiss Private Bank BSI</strong> <span class="divider"> | </span></span> One of Latin Americaâs largest banks continues to push into global private banking as Brazilâs economy contracts.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/16/business/dealbook/btg-pactual-is-cleared-to-acquire-swiss-private-bank-bsi.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Investment Banks Back Blockchain Initiative</strong> <span class="divider"> | </span></span> Nine of the largest investment banks, including Goldman Sachs, JPMorgan and Credit Suisse, are planning to develop common standards for blockchain technology in an effort to broaden its use across financial services.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/f358ed6c-5ae0-11e5-9846-de406ccb37f2.html#axzz3lgdFvMwf"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Portugalâs Auction of Novo Banco Collapses</strong> <span class="divider"> | </span></span> Portugal has cancelled a multibillion-euro auction of Novo Banco, the so-called good bank carved out of the ruins of Banco EspÃ­rito Santo, after rejecting offers from Chinese and American bidders as too low.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/ef10f0e2-5b8f-11e5-a28b-50226830d644.html#axzz3lgdFvMwf"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>RBS in 84.4 Million Pound Mortgage Securities Deal With U.S. Regulator</strong> <span class="divider"> | </span></span> Royal Bank of Scotland Group agreed to pay Â£88.4 million to resolve claims by the National Credit Union Administration that it sold toxic mortgage-backed securities to now-failed credit unions.<br /><span class="kicker"><a href="//uk.reuters.com/article/2015/09/16/uk-rbs-settlement-mbs-idUKKCN0RF2UM20150916">  REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Symphonyâs Disruptive Message for Traders</strong> <span class="divider"> | </span></span> Other providers have tried, and failed, to weaken Bloombergâs grip on tradersâ messaging traffic, but the lessons learned from that experience have helped shape the new challenger.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/d0f358f0-5bb9-11e5-a28b-50226830d644.html#axzz3lgdFvMwf"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="G.O.P. Discord Over Ex-Im Bank Intensifies, as G.E. Shifts Jobs Abroad" src="https://static01.nyt.com/images/2015/09/16/business/16EXIM/16EXIM-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>G.O.P. Discord Over Ex-Im Bank Intensifies, as G.E. Shifts Jobs Abroad</strong> <span class="divider"> | </span></span> General Electric and Boeing blamed a halt in export credit for job transfers and a loss of contracts, reigniting Republican infighting over the fate of the Ex-Im Bank.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/16/business/economy/export-import-bank-general-electric-boeing.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Private Equity Urged to Embrace the Digital Revolution</strong> <span class="divider"> | </span></span> Thomas von Koch, the head of the Swedish buyout group EQT, has said private equity fund managers must do more to stop tech-savvy entrepreneurs disrupting the companies they own.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/df6a9c48-5891-11e5-9846-de406ccb37f2.html#axzz3lgdFvMwf"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>WorldPayâs Owners Seek Improved Bid for WorldPay</strong> <span class="divider"> | </span></span> The private equity owners of WorldPay, the British payment services provider, are pressing its French rival Ingenico to improve an offer of more than Â£6 billion  for the business, ahead of a meeting to decide whether to list or sell their investment.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/926cf2b8-5bb3-11e5-a28b-50226830d644.html?ftcamp=engage/extensions/404_web_design_feedback/web/404/ftlabs#axzz3lgdFvMwf"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bridgewater Defends Risk Parity Strategy</strong> <span class="divider"> | </span></span> The hedge fund group defended one of its most successful investment strategies after it was accused of exacerbating recent stock market volatility.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/97b7da7a-5c18-11e5-9846-de406ccb37f2.html#axzz3lgdFvMwf"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>No Escape for China Hedge Funds Overwhelmed by Stocks Crash</strong> <span class="divider"> | </span></span> Chinaâs hedge fund industry has seen almost 1,300 funds liquidate amid Chinaâs $5 trillion selloff, and a similar number may be at risk.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-09-15/no-escape-for-china-hedge-funds-overwhelmed-by-stocks-collapse"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Suit Accusing Dakota Co-op Board of Bias Against Blacks and Hispanics Fails" src="https://static01.nyt.com/images/2015/09/16/nyregion/yDAKOTA/yDAKOTA-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Suit Accusing Dakota Co-op Board of Bias Against Blacks and Hispanics Fails</strong> <span class="divider"> | </span></span> A judge rejected claims by the financier Alphonse Fletcher Jr. that the buildingâs board members racially discriminated against him by refusing to let him buy an apartment.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/16/nyregion/suit-accusing-dakota-co-op-board-of-bias-against-blacks-and-hispanics-fails.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Goldman Eyes 400% Return With Hastings Float</strong> <span class="divider"> | </span></span> Goldman Sachs is on track for a return of 400 percent from its stake in Hastings within two years after giving the British motor insurer the green light to float on the stock market.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/58e0656a-5b82-11e5-9846-de406ccb37f2.html#axzz3lgdFvMwf"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Glencore Raises $2.5 Billion in Share Sale to Rein in Debt</strong> <span class="divider"> | </span></span> The mining and trading group Glencore said on Wednesday that it had raised $2.5 billion through a share placement as part of its plans to cut debt built up through years of rapid expansion.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2015/09/16/business/16reuters-glencore-secondaryissues.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="French Economists Protest Hollandeâs Nomination of Central Bank Chief" src="https://static01.nyt.com/images/2015/09/16/business/16frenchbank-web/16frenchbank-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>French Economists Protest Hollandeâs Nomination of Central Bank Chief</strong> <span class="divider"> | </span></span> French legislators were asked to block the appointment of FranÃ§ois Villeroy de Galhau, a former BNP Paribas executive, over concerns that he was too close to the banking sector.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/16/business/french-economists-protest-hollandes-nomination-of-central-bank-chief.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Changes in Credit Default Swap Market Bode Well for Transparency</strong> <span class="divider"> | </span></span> While change has been slow in coming, new regulations are bringing less risk and more openness to the market.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/16/business/dealbook/changes-in-credit-default-swap-market-bode-well-for-transparency.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Quest for Yield Still Trumping Safety in Debt Markets</strong> <span class="divider"> | </span></span> The fallout will be seen in future restructurings, where troubled companies are apt to be real basket cases by the time they default, Stephen J. Lubben writes in the In Debt column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/16/business/dealbook/quest-for-yield-still-trumping-safety-in-debt-markets.html">In Debt &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/09/16/morning-agenda-hp-to-cut-30000-jobs/"
+					data-title="Morning Agenda: HP to Cut 30,000 Jobs"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Lessons From Raising Rates Too Soon | I.R.S. Concern Over Real Estate Spin-Offs | Uber and Outdated Worker Protection Laws&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/09/16/morning-agenda-hp-to-cut-30000-jobs/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":48,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

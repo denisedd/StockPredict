@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-open section-technology"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-open section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-open section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-open section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/open/Improving Startup Time in the NYTimes Android App ( 20160211 )" />
+<meta name="communityAssetURL" content="//open.blogs.nytimes.com/2016/02/11/improving-startup-time-in-the-nytimes-android-app/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004202135"><meta name="author" content="Mike Nakhimovich" />
+<meta name="CLMST" content="Mike Nakhimovich" />
+<meta name="byl" content="Mike Nakhimovich" />
+<meta name="GBLC" content="Code">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1455216982" />
+<meta name="PUD" content="20160211" />
+<meta name="pdate" content="20160211" />
+<meta name="ptime" content="20160211135622" />
+<meta name="utime" content="20160211193533" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-02-11T19:35:33-05:00" />
+<meta name="DISPLAYDATE" content="February 11, 2016" />
+<meta name="dat" content="February 11, 2016" />
+<meta itemprop="articleSection" property="article:section" content="General" />
+<meta name="CG" content="General" />
+<meta name="SCG" content="open" />
+<meta name="BN" content="open" />
+<meta name="robots" content="noodp">
+<meta property="article:tag" content="Code" />
+<meta name="keywords" content="Code" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fopen.blogs.nytimes.com%2F2016%2F02%2F11%2Fimproving-startup-time-in-the-nytimes-android-app%2F" title="Improving Startup Time in the NYTimes Android App" />
+<meta name="description" content="Here&#8217;s how we improved startup time for our Android application." />
+<meta name="hdl" content="Improving Startup Time in the NYTimes Android App" />
+<meta property="og:title" content="Improving Startup Time in the NYTimes Android App" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//open.blogs.nytimes.com/2016/02/11/improving-startup-time-in-the-nytimes-android-app/" />
+<meta property="og:site_name" content="Open Blog" />
+<meta property="og:description" content="Here&#8217;s how we improved startup time for our Android application." />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_291_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Improving Startup Time in the NYTimes Android App" />
+<meta name="twitter:url" content="//open.blogs.nytimes.com/2016/02/11/improving-startup-time-in-the-nytimes-android-app/" />
+<meta name="twitter:description" content="Here&#8217;s how we improved startup time for our Android application." />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<meta name="twitter:site" content="@nytdevs">
+<link rel='stylesheet' id='wp-syntax-css-css'  href='https://static01.nyt.com/packages/css/blogs/open/wp-syntax.css?ver=1.0' type='text/css' media='all' />
+<link rel='prev' title='Flash-Free Video in 2016' href='//open.blogs.nytimes.com/2016/02/08/flash-free-video-in-2016/' />
+<link rel='next' title='Learning and Exploring on 100% Day' href='//open.blogs.nytimes.com/2016/04/07/learning-and-exploring-on-100-day/' />
+<link rel='canonical' href='//open.blogs.nytimes.com/2016/02/11/improving-startup-time-in-the-nytimes-android-app/' />
+<link rel='shortlink' href='//nyti.ms/1mv8UVc' />
+<link rel='https://github.com/WP-API/WP-API' href='//open.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/open/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//open.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/technology/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/open/2016/02/11/improving-startup-time-in-the-nytimes-android-app/" />
+<meta name="dfp-ad-unit-path" content="general/open" />			<title>Improving Startup Time in the NYTimes Android App - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/universal.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-7147 blog-universal nyt-blog-open" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'General', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//open.blogs.nytimes.com">
+                Open            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Improving Startup Time in the NYTimes Android App        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//open.blogs.nytimes.com/2016/02/11/improving-startup-time-in-the-nytimes-android-app/"
+	 data-title="Improving Startup Time in the NYTimes Android App"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Here&#039;s how we improved startup time for our Android application.&lt;/span&gt;&lt;a href=&quot;//open.blogs.nytimes.com/2016/02/11/improving-startup-time-in-the-nytimes-android-app/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="February 11, 2016 1:56 pm">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="open" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+		<div class="element1">
+	<a href="//open.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=General"><div id="logo" class="archived-blog-post"><div class="w75 left site-header-logo"><img src="https://static01.nyt.com/images/blogs_v3/open/open75.gif" alt="Open"/></div><div class="site-title">Open</div><div class="site-description">All the Code That&#039;s Fit to Print</div></div></a>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//open.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Open">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-7147 post type-post status-publish hentry category-code" id="post-7147">
+	<header class="postHeader">
+				<div class="postKicker">
+					</div>
+				<h1 itemprop="headline" class="entry-title">Improving Startup Time in the NYTimes Android App</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Mike Nakhimovich			</address>
+			<!-- date published --><time class="dateline " datetime="2016-02-11T18:56:22+00:00" itemprop="datePublished">February 11, 2016 1:56 pm</time>
+			<!-- date updated --><span class="visually-hidden updated">February 11, 2016 1:56 pm</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//open.blogs.nytimes.com/2016/02/11/improving-startup-time-in-the-nytimes-android-app/" data-title="Improving Startup Time in the NYTimes Android App" data-description="Here&#039;s how we improved startup time for our Android application.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody">Improving application startup and load time has been a priority for The New York Times Android development team, and weâre not alone. As device manufacturers continue to offer faster and more fluid experiences, users expect their native apps to be faster still. </p>
+<p class="story-body-text" itemprop="articleBody">Our team recently rewrote our news app to take advantage of modern patterns such as dependency injection and reactive programming. The rewrite offered improvements in maintenance, code modernization and modularization benefits, but required some adjustments to optimize.</p>
+<p class="story-body-text" itemprop="articleBody">When we initially released our new app, which we nicknamed Phoenix, startup time was a modest 5.6 seconds on a Nexus 5. This was longer than our goal: 2 seconds or less. This motivated us to put some effort into improving our performance.</p>
+<p class="story-body-text" itemprop="articleBody">We found that most of the slowdown was caused by issues with reflection. After addressing these and fixing other smaller things, weâve reduced our current startup time to 1.6 seconds.</p>
+<h4>How We Did It</h4>
+<p class="story-body-text" itemprop="articleBody">First, we captured our appâs startup time with Androidâs method tracing feature. We measured from the Application Class constructor to the end of the progress indicator appearing on screen (see the <a href="//bit.ly/1NHcCWH">documentation</a>). </p>
+<p class="story-body-text" itemprop="articleBody">We then collected the resulting trace files for analysis by loading the trace into DDMS and finding the largest performance offender. We eventually switched to using <a href="https://www.nimbledroid.com/">NimbleDroid</a>, which also offered a simple way to identify bottleneck issues, making it easier to compare performance across traces.</p>
+<h4>The Low Hanging Fruit</h4>
+<p class="story-body-text" itemprop="articleBody">The first major slowdown we found was related to the large number of classes, memory-intensive runtime and expensive calls to loading Jar resources required by Groovy, something previously identified as a problem in other libraries such as <a href="//blog.danlew.net/2013/08/20/joda_time_s_memory_issue_in_android/">Joda Time</a>. We primarily used Groovy for closures; improvements in code folding within Android Studio have resolved that need. Since we didn&#8217;t use any other constructs of the language, we decided to move away from it. We reverted back to plain old Java 7 syntax and stripped our codebase of Groovy. Weâre currently exploring other options but enhancements in IDE support for viewing anonymous classes in Java have made it less of a priority. </p>
+<p class="story-body-text" itemprop="articleBody">Next, we found some slowdowns within <a href="https://github.com/ReactiveX/RxJava/issues/3119">RxJava</a> which were costing us about a second. Thankfully, a fix was issued in the <a href="https://github.com/ReactiveX/RxJava/issues/3119">next release</a>.  </p>
+<p class="story-body-text" itemprop="articleBody">Some third-party analytics clients we have incorporated into our app had some blocking calls during app startup. We made some changes to how they were being instantiated and worked with vendors to help improve large upfront instantiation.</p>
+<p class="story-body-text" itemprop="articleBody">We also uncovered a number of small technical debt issues in our codebase: blocking object instantiation on an md5 calculation, blocking in constructors and generally doing too much work up front.</p>
+<p class="story-body-text" itemprop="articleBody">After these tweaks were implemented, we cut our startup time to about <a href="https://nimbledroid.com/play/com.nytimes.android?p=2ms858ga8INTPO#Summary">3.2 seconds</a> &mdash; half of what it had been and faster than before the rewrite. Our next focus was optimizing data flows. This is especially critical for our app, which is highly data-intensive.</p>
+<h4>Introducing Data Stores</h4>
+<p class="story-body-text" itemprop="articleBody">Since all of our data observations are asynchronous, we initially started with a single content manager to act as an abstraction between presentation and data layer. While this helped with encapsulation, it caused slowdowns by instantiating what gradually became a <a href="https://en.wikipedia.org/wiki/God_object">god object</a> any time data was needed from persistent storage. </p>
+<p class="story-body-text" itemprop="articleBody">This became a pain point when, for example, an analytics configuration value was needed from the disk during app launch but had to wait for blocking SSL-enabled network clients to instantiate. As the app grew and more dependencies were added, our content manager instantiation time increased, causing subsequent app starts to be as slow as initial installs.</p>
+<p class="story-body-text" itemprop="articleBody">Rather than using a content manager as a single gatekeeper, we have moved toward individualized data stores, which let us load cached data as quickly as possible. Similar to recent work done by the <a href="https://code.facebook.com/posts/872547912839369/improving-facebook-s-performance-on-android-with-flatbuffers/">Facebook Android team</a>, we made sure to optimize the code path from disk to UI as much as possible.</p>
+<p class="story-body-text" itemprop="articleBody">We began by breaking our content manager into individual singleton data stores backed by disk and network DAOs. For example, we broke out a ConfigStore backed by ConfigNetworkDAO and ConfigDiskDAO from our content manager. </p>
+<p class="story-body-text" itemprop="articleBody"><script src="https://gist.github.com/anonymous/d387121b1ed5f6c90cbb.js"></script></p>
+<p class="story-body-text" itemprop="articleBody">We leaned on Dagger&#8217;s Lazy instantiation, which allowed us to inject a lazy network client and not instantiate it until we actually do a network operation &mdash; important when offline or after the first load. Our architecture relies heavily on downloading data using background services. As a result, data is mostly loaded from disk storage to UI rather than having to make a network call. After we were able to create an optimal path from disk to screen we came to our next major speed hog: reflection. </p>
+<h4>Removing Reflection</h4>
+<p class="story-body-text" itemprop="articleBody">While trying to improve performance in data loading, we found that it was taking 700 milliseconds or more to parse the data for our Top Stories section, regardless of whether we were fetching from persistent storage or over the network. It surprised us to see how poorly Gson performed by default on Android for a largely data-driven app like ours. By analyzing startup traces, we zoomed in on calls to Reflective Type Adapters as <a href="https://nimbledroid.com/play/com.nytimes.android?p=2rjCRXQykF102a#ReflectiveTypeAdapterFactory.getBoundFields">the culprit</a>.</p>
+<p class="story-body-text" itemprop="articleBody">We tried to minimize and remove reflective calls from Gson, but the only viable approach was to painstakingly write type adapters by hand. This led to a long and fruitless journey to find serialization techniques that do not use reflection and do not have an expensive startup time. We were left with only a few options, all of which required adding additional code to our models. So we went back to the simplest working solution: <a href="https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/TypeAdapter.html">Gson with custom type adapters</a>. </p>
+<p class="story-body-text" itemprop="articleBody">We saw a tenfold improvement in parsing performance after writing our own type adapters. To keep developer overhead to a minimum, we have leaned heavily on the <a href="//immutables.github.io/json.html">Immutables library</a>. This generates custom type adapters for our data models at compile time and also gives us the added benefit of immutability in a manner similar to AutoValue.</p>
+<p class="story-body-text" itemprop="articleBody"><script src="https://gist.github.com/anonymous/f22b3fe024fd6c46f19f.js"></script></p>
+<p class="story-body-text" itemprop="articleBody">Our current data flow looks something like this:</p>
+<p class="story-body-text" itemprop="articleBody">A background Service subscribes to an RxStore which lazily instantiates a network client and downloads fresh data in JSON. This is done on a schedule or from a push alert. We then stream the JSON data to disk. We use the streaming API rather than saving the JSON as a single object because it prevents us from needing to instantiate value objects over one megabyte into memory. </p>
+<p class="story-body-text" itemprop="articleBody">Now when the UI needs data, it subscribes to immutable data from a data store that is backed by caches in memory (<a href="https://code.google.com/p/guava-libraries/wiki/CachesExplained">Guava</a>) and on disk. We only instantiate a network client if disk values are not present or if the format has changed since the last save. Data flows unidirectionally from persistent storage to UI and never directly from the network to our UI. This unidirectional data flow means that 99 percent of subscriptions to data store observables will never have to hit anything but disk values.</p>
+<p class="story-body-text" itemprop="articleBody">We will continue to explore other methods such as FlatBuffers for serializing data for disk storage; however, we are generally pleased with our current results. A relaunch of our app offers users a full view of the home page in under two seconds.</p>
+<h4>The Bottom Line</h4>
+<p class="story-body-text" itemprop="articleBody">Reflection can cause significant performance issues on Android, especially for large, data-driven apps. For this reason, it should be avoided whenever possible, especially during app startup. </p>
+<p class="story-body-text" itemprop="articleBody">Finally, weâd like to challenge our fellow Android developers working on performance issues: Tweet your startup times with the hashtag #StartupTrace. Our current time on a Nexus 5 is <a href="https://nimbledroid.com/my_apps/com.nytimes.android?p=2zz7Qrr6hqocYL#Summary">1.6 seconds</a> and always improving.</p>
+<p class="story-body-text" itemprop="articleBody">For our typical users on newer devices (Nexus 6P, for example), relaunches take under 1.5 seconds to go from the home screen to all the news that&#8217;s fit to scroll (at 60 frames per second, of course).<br />
+<em><br />
+Interested in working on ambitious Android problems at The New York Times? <a href="//developers.nytimes.com/careers/mobile/#Senior%20Software%20Engineer%20-%20Android">Come join us.</a></em></p>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//open.blogs.nytimes.com/2016/02/11/improving-startup-time-in-the-nytimes-android-app/" data-title="Improving Startup Time in the NYTimes Android App" data-description="Here&#039;s how we improved startup time for our Android application.">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//open.blogs.nytimes.com/2016/02/08/flash-free-video-in-2016/" title="Flash-Free Video in 2016">
+				Flash-Free Video in 2016			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//open.blogs.nytimes.com/2016/04/07/learning-and-exploring-on-100-day/" title="Learning and Exploring on 100% Day">
+				Learning and Exploring on 100% Day			</a>
+					</li>
+	</ul>
+</div>
+		<div class="module ad" id="MiddleRight"></div>
+        <div id="nyt_about_blog-3" class="module nocontent widget_nyt_about_blog"><h4 class="moduleHeader">About</h4><div class="entry">
+<p class="summary">Open is a blog about code and development written by New York Times developers. We cover everything from our open source projects and APIs to the technology powering our latest products.</p>
+</div>
+</div>		<div class="module archivesModule clearfix nocontent">
+			<h4 class="moduleHeader">Archive</h4>			<select name="archive_chrono" onchange="window.location.href=this.value; this.selectedIndex=this.options[0]">
+				<option class="archiveform_option" value="">Select Month</option>
+					<option value='//open.blogs.nytimes.com/2017/02/'> February 2017 </option>
+	<option value='//open.blogs.nytimes.com/2017/01/'> January 2017 </option>
+	<option value='//open.blogs.nytimes.com/2016/11/'> November 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/10/'> October 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/09/'> September 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/08/'> August 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/07/'> July 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/06/'> June 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/04/'> April 2016 </option>
+	<option value='//open.blogs.nytimes.com/2016/02/'> February 2016 </option>
+	<option value='//open.blogs.nytimes.com/2015/12/'> December 2015 </option>
+	<option value='//open.blogs.nytimes.com/2015/11/'> November 2015 </option>
+	<option value='//open.blogs.nytimes.com/2015/08/'> August 2015 </option>
+	<option value='//open.blogs.nytimes.com/2015/04/'> April 2015 </option>
+	<option value='//open.blogs.nytimes.com/2015/03/'> March 2015 </option>
+			</select>
+		</div>
+        <div id="recentposts-2" class="module nocontent widget_recentposts"><h4 class="moduleHeader">Recent Posts</h4>				<div class="entry">
+						<h5><a href="//open.blogs.nytimes.com/2017/02/06/quick-and-statistically-useful-validation-of-page-performance-tweaks/" title="Read: Quick and Statistically Useful Validation of Page Performance Tweaks">Quick and Statistically Useful Validation of Page Performance Tweaks</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//open.blogs.nytimes.com/2017/02/06/quick-and-statistically-useful-validation-of-page-performance-tweaks/"></a>
+				</span>			</h5>
+			<p class="summary">
+			We wanted to share how we measure modest performance changes when a page has many assets of variable speed and complexity that can impact its performance.<a href="//open.blogs.nytimes.com/2017/02/06/quick-and-statistically-useful-validation-of-page-performance-tweaks/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//open.blogs.nytimes.com/2017/01/13/store-grand-opening-wrangling-android-data-loading-and-caching/" title="Read: Store Grand Opening &mdash; Wrangling Android Data Loading and Caching">Store Grand Opening &mdash; Wrangling Android Data Loading and Caching</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//open.blogs.nytimes.com/2017/01/13/store-grand-opening-wrangling-android-data-loading-and-caching/"></a>
+				</span>			</h5>
+			<p class="summary">
+			Today we&#8217;re open-sourcing Store &#8212; a magical middle piece that aims to simplify fetching, parsing, storage, and retrieval of data in your Android application. <a href="//open.blogs.nytimes.com/2017/01/13/store-grand-opening-wrangling-android-data-loading-and-caching/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//open.blogs.nytimes.com/2017/01/12/continuous-deployment-to-google-cloud-platform-with-drone/" title="Read: Continuous Deployment to Google Cloud Platform with Drone">Continuous Deployment to Google Cloud Platform with Drone</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//open.blogs.nytimes.com/2017/01/12/continuous-deployment-to-google-cloud-platform-with-drone/"></a>
+				</span>			</h5>
+			<p class="summary">
+			From our exploratory work, we&#8217;ve come up with two open source plugins to share with the community: drone-gke for Google Container Engine and drone-gae for Google App Engine.<a href="//open.blogs.nytimes.com/2017/01/12/continuous-deployment-to-google-cloud-platform-with-drone/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//open.blogs.nytimes.com/2017/01/10/https-on-nytimes-com/" title="Read: HTTPS on NYTimes.com">HTTPS on NYTimes.com</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//open.blogs.nytimes.com/2017/01/10/https-on-nytimes-com/"></a>
+				</span>			</h5>
+			<p class="summary">
+			We are thrilled to announce that we have begun to enable HTTPS on NYTimes.com, an effort that helps protect the privacy of our readers and ensures the authenticity of our content.<a href="//open.blogs.nytimes.com/2017/01/10/https-on-nytimes-com/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+					<div class="entry">
+						<h5><a href="//open.blogs.nytimes.com/2016/11/11/building-a-cross-platform-360-degree-video-experience-at-the-new-york-times/" title="Read: Building a Cross Platform 360-degree Video Experience at The New York Times">Building a Cross Platform 360-degree Video Experience at The New York Times</a>
+			<span class="postMetaHeaderCommentCount commentCount hidden">
+					<i class="icon"></i>
+					<a class="commentCountLink commentCountNumberOnly commentCountNoPrompt" href="//open.blogs.nytimes.com/2016/11/11/building-a-cross-platform-360-degree-video-experience-at-the-new-york-times/"></a>
+				</span>			</h5>
+			<p class="summary">
+			This month, we added support for 360-degree videos into our core news products &#8212; and today, we&#8217;re open sourcing our 360 video framework for iOS and 360 presets.<a href="//open.blogs.nytimes.com/2016/11/11/building-a-cross-platform-360-degree-video-experience-at-the-new-york-times/" class="more-link">Read&#160;more&#8230;</a></p>
+		</div>
+		</div><!-- end Recent Posts side tool -->
+    		<div class="module ad" id="Box1"></div>
+        <div id="nyt_blog_social_media-3" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-single ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">us on</span></span>
+<span class="blog-fw-specific-followmessage"><span class="blog-fw-username"><a href="https://twitter.com/nytdevs" title="Follow @nytdevs on twitter">@nytdevs</a></span> on <span class="blog-fw-twitter">twitter</span></span></h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/nytdevs" title="Follow nytdevs on Twitter">Twitter</a></li></ul>
+<p class="blog-fw-followbutton"><a href="https://twitter.com/nytdevs" title="Follow @nytdevs on twitter">Follow</a></p></div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-130',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":49,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/news/Morning Agenda: Hedge Fund Sues U.S. Prosecutor ( 20150227 )" />
+<meta name="communityAssetURL" content="//news.blogs.nytimes.com/2015/02/27/morning-agenda-hedge-fund-sues-u-s-prosecutor/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003539719"><meta name="author" content="Sydney Ember" />
+<meta name="CLMST" content="Sydney Ember" />
+<meta name="byl" content="Sydney Ember" />
+<meta name="article:author" content="//topics.nytimes.com/top/reference/timestopics/people/e/sydney_ember/index.html" /><meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1425039791" />
+<meta name="PUD" content="20150227" />
+<meta name="pdate" content="20150227" />
+<meta name="ptime" content="20150227072311" />
+<meta name="utime" content="20150227122311" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-02-27T12:23:11-05:00" />
+<meta name="DISPLAYDATE" content="February 27, 2015" />
+<meta name="dat" content="February 27, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta property="article:tag" content="DealBook" />
+<meta property="article:tag" content="Uncategorized" />
+<meta name="keywords" content="DealBook,Uncategorized" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F02%2F27%2Fmorning-agenda-hedge-fund-sues-u-s-prosecutor%2F" title="Morning Agenda: Hedge Fund Sues U.S. Prosecutor" />
+<meta name="description" content="A hedge fund is fighting back against Preet Bharara. &#124; Standard Chartered overhauls its leadership. &#124; Hedge funds are still attracting money from big investors. &#124; K.K.R.-backed Samson Resources hires restructuring advisers." />
+<meta name="hdl" content="Morning Agenda: Hedge Fund Sues U.S. Prosecutor" />
+<meta property="og:title" content="Morning Agenda: Hedge Fund Sues U.S. Prosecutor" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/02/27/morning-agenda-hedge-fund-sues-u-s-prosecutor/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="A hedge fund is fighting back against Preet Bharara. &#124; Standard Chartered overhauls its leadership. &#124; Hedge funds are still attracting money from big investors. &#124; K.K.R.-backed Samson Resources hires restructuring advisers." />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Hedge Fund Sues U.S. Prosecutor" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/02/27/morning-agenda-hedge-fund-sues-u-s-prosecutor/" />
+<meta name="twitter:description" content="A hedge fund is fighting back against Preet Bharara. &#124; Standard Chartered overhauls its leadership. &#124; Hedge funds are still attracting money from big investors. &#124; K.K.R.-backed Samson Resources hires restructuring advisers." />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Morgan Stanley&#8217;s Mortgage Settlement' href='//news.blogs.nytimes.com/2015/02/26/morning-agenda-morgan-stanleys-mortgage-settlement/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/02/27/what-were-reading-33/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/02/27/morning-agenda-hedge-fund-sues-u-s-prosecutor/' />
+<link rel='shortlink' href='//nyti.ms/1JUdWFl' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/02/27/morning-agenda-hedge-fund-sues-u-s-prosecutor/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Hedge Fund Sues U.S. Prosecutor - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2014 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Hedge Fund Sues U.S. Prosecutor        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/02/27/morning-agenda-hedge-fund-sues-u-s-prosecutor/"
+	 data-title="Morning Agenda: Hedge Fund Sues U.S. Prosecutor"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;A hedge fund is fighting back against Preet Bharara. | Standard Chartered overhauls its leadership. | Hedge funds are still attracting money from big investors. | K.K.R.-backed Samson Resources hires restructuring advisers.&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/02/27/morning-agenda-hedge-fund-sues-u-s-prosecutor/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="February 27, 2015 7:23 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+		<button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Hedge Fund Sues U.S. Prosecutor</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Sydney Ember			</address>
+			<!-- date published --><time class="dateline " datetime="2015-02-27T12:23:11+00:00" itemprop="datePublished">February 27, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">February 27, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2014 post type-post status-publish hentry category-dealbook" id="post-2014">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Hedge Fund Sues U.S. Prosecutor</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Sydney Ember                </span>
+                <!-- date published --><time class="dateline " datetime="2015-02-27T12:23:11+00:00" itemprop="datePublished">February 27, 2015 7:23 am</time>
+			<!-- date updated --><span class="visually-hidden updated">February 27, 2015 7:23 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/02/27/morning-agenda-hedge-fund-sues-u-s-prosecutor/" data-title="Morning Agenda: Hedge Fund Sues U.S. Prosecutor" data-description="A hedge fund is fighting back against Preet Bharara. | Standard Chartered overhauls its leadership. | Hedge funds are still attracting money from big investors. | K.K.R.-backed Samson Resources hires restructuring advisers.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong> HEDGE FUND SUES U.S. PROSECUTOR</strong> <span class="divider"> | </span></span> More than four years and dozens of insider trading convictions after F.B.I. agents staged a surprise raid of three hedge funds â feeding the national reputation of the prosecutor Preet Bharara as the new sheriff of Wall Street â one of those funds is fighting back, <a href="//www.nytimes.com/2015/02/27/business/dealbook/fbi-warrant-in-insider-trading-cases-is-unsealed.html">Matthew Goldstein, Ben Protess and Andrew Ross Sorkin report in DealBook</a>. On Thursday, David Ganek, a Manhattan socialite and art collector whose $4 billion Level Global was one of the funds raided, sued Mr. Bharara, the United States attorney in Manhattan, contending that official misconduct violated his constitutional rights.</p>
+<p class="story-body-text" itemprop="articleBody">âWhile legal experts said <b>Mr. Ganekâs lawsuit could be a long shot</b>, it comes at a time when Mr. Bhararaâs image as an invincible prosecutor â racking up convictions on Wall Street and setting his sights on Albanyâs power brokers â is beginning to fray,â DealBook writes. Recently, for instance, a federal appeals court ruling overturned the convictions of two hedge fund traders, including Anthony Chiasson, Mr. Ganekâs partner at Level Global.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Ganekâs lawsuit was filed just hours after the confidential warrant was unsealed by a federal judge at the request of The New York Times, which first sought the documents in January. âTogether, the lawsuit and the warrant draw back the curtain on one of the governmentâs signature insider trading investigations, showing the breadth of suspicion surrounding Level Global, but also they also raise new questions about whether some of the <b>governmentâs aggressive tactics crossed a line</b>,â DealBook writes. Within months of the raid, Level Global shut its doors and shed about 80 jobs.</p>
+<p class="story-body-text" itemprop="articleBody"><b>The government never charged Mr. Ganek</b>, though they labeled him an âunindicted co-conspirator.â His lawsuit contends that the warrant underpinning the raid âfalsely representedâ that Mr. Ganek was involved in insider trading. In responding to Mr. Ganekâs lawsuit, the United States attorneyâs office is likely to argue that the raids were necessary, a point the F.B.I. made in the warrant application. At the time, the government suspected that traders, heeding media reports of the looming investigation, were destroying emails and other evidence.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>STANDARD CHARTERED OVERHAULS LEADERSHIP</strong> <span class="divider"> | </span></span> The British bank Standard Chartered responded on Thursday to shareholdersâ calls for change, announcing a sweeping management overhaul including the departure of its chief executive, its chairman, the head of Asian markets and several directors, <a href="//www.nytimes.com/2015/02/27/business/dealbook/standard-chartered-chief-executive-bill-winters-peter-sands.html">Jenny Anderson and Chad Bray write in DealBook</a>. In a move that surprised many, it named William T. Winters, the 53-year-old former head of JPMorgan Chaseâs investment bank â who was once seen as a candidate to succeed Jamie Dimon â to take the helm.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Winters, who will join the bank on May 1 and become chief executive in June, will succeed Peter Sands, one of the longest-serving chief executives in British finance. He will receive a base salary of 1.15 million pounds, or about $1.8 million, as well as a pension and other benefits. As the bankâs leader, <b>Mr. Winters will not have it easy</b>. The bank has been hurt in recent years by regulatory fines and investigations and by its focus on emerging markets. It has slashed thousands of jobs, closed its stock trading and underwriting unit and is looking to cut $400 million in costs. Impairments for bad loans, including in the mining sector, have soared.</p>
+<p class="story-body-text" itemprop="articleBody">But Mr. Winters, an American, appears up to the task. In a call with reporters, John W. Peace, the chairman, said that Mr. Winters had âgreat respect among regulators, clients and the marketâ and a solid understanding of the global regulatory environment. Temasek Holdings, which owns almost 18 percent of Standard Chartered, declined to comment on whether it had pressed for management changes. But it said that it welcomed Mr. Winters, who âbrings with him considerable experience, as well as an excellent reputation for building good teams.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HEDGE FUNDS KEEP ATTRACTING CASH</strong> <span class="divider"> | </span></span> Hedge funds have underperformed a simple blend of index funds &amp;#x2012 60 percent stocks and 40 percent bonds &amp;#x2012 for three-, five- and 10-year periods, but the lure of higher returns with lower risk â or even zero risk â continues to beckon, <a href="//www.nytimes.com/2015/02/27/business/hedge-fund-returns-falter-yet-money-continues-to-flow-in.html">James B. Stewart writes in the Common Sense column</a>. Large investors added $1 billion during January and more than $88 billion in 2014, according to data compiled by the investment consultancy eVestment. Total hedge fund assets are now more than $3 trillion.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Painful memories of the financial crisis</b> and the persistent low interest rate environment may be driving investor interest, said Peter Laurelli, vice president for research at eVestment. Many funds promise to address both issues by blunting the impact of another market crash while generating higher returns than United States Treasury bonds. âInstitutions are not only pouring more money into hedge funds, but they also appear to be engaging in a classic pattern of many individual investors, which is to chase returns and shun losers,â Mr. Stewart writes.</p>
+<p class="story-body-text" itemprop="articleBody">He adds: âOf course, how todayâs ever-growing universe of hedge funds will perform in the next crisis remains to be seen. Unlike United States stocks and bonds, they are lightly regulated. They arenât that transparent. Many arenât that liquid.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The second reading of <b>fourth-quarter G.D.P.</b> is out at 8:30 a.m. The University of Michiganâs <b>consumer sentiment index</b> comes out at 10 a.m. The <b>pending home sales index</b> is released at 10 a.m. Data on <b>farm prices</b> comes out at 3 p.m. The University of Chicago Booth School of Business hosts the annual <b>U.S. Monetary Policy Forum</b> in New York. Among the speakers are the Federal Reserve vice chairman, <b>Stanley Fischer</b>, and <b>William C. Dudley</b>, president of the New York Fed.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>K.K.R.-BACKED SAMSON HIRES ADVISERS</strong> <span class="divider"> | </span></span> Samson Resources, an oil and natural gas producer backed by the private equity firm Kohlberg Kravis Roberts, has hired two restructuring advisers as it grapples with mounting losses and a large amount of debt, <a href="//www.nytimes.com/2015/02/27/business/dealbook/kkr-owned-oil-and-gas-producer-is-said-to-hire-restructuring-advisers.html">DealBookâs William Alden reports</a>, citing two people briefed on the matter. The advisers â the restructuring teams of the law firm Kirkland &amp; Ellis and the investment giant Blackstone Group â could help Samson pursue a number of possible strategies to repair its business, including asset sales or broader restructuring.</p>
+<p class="story-body-text" itemprop="articleBody">Samson, which was purchased for $7.2 billion in 2011 by a consortium led by K.K.R. in one of the biggest buyouts since the financial crisis, has been <b>struggling for some time</b> because of declines in natural gas and oil prices. The company reported a $470.7 million loss for the nine months through September. It has $3.8 billion of long-term debt.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"> <span class="divider"> | </span></span> <em>Contact: <a href="https://www.twitter.com/melbournecoal">@melbournecoal</a> | <a href="mailto:sydney.ember@nytimes.com">E-mail</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &amp; Acquisitions Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2015/02/27/nyregion/27DAILYNEWSsub/27DAILYNEWSsub-square320.jpg" alt="Owner of New Yorkâs Daily News Considering Sale" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Owner of New Yorkâs Daily News Considering Sale</strong> <span class="divider"> | </span></span> In a memo to staff members, Mortimer Zuckerman said he had been approached about a sale of the tabloid and had retained advisers on the matter.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/02/27/business/media/zuckerman-says-he-will-explore-selling-daily-news.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2015/02/27/business/27DB-BANK/27DB-BANK-square320.jpg" alt="In Unusual Step, Regulators Invite Public to Open Meeting on Bank Merger " width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>In Unusual Step, Regulators Invite Public to Open Meeting on Bank Merger </strong> <span class="divider"> | </span></span> Federal regulators and the chiefs of the CIT Group and OneWest got an earful on the need for more investment in the community, especially from two banks that received federal aid.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/02/27/business/dealbook/in-unusual-step-regulators-invite-public-to-open-meeting-on-bank-merger.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Nikon Agrees to Acquire British Retinal Imaging Firm</strong> <span class="divider"> | </span></span> Nikon, the Japanese company best known for its cameras, has agreed to buy the British retinal imaging firm Optos for $400 million, Reuters writes.<br />
+<span class="kicker"><a href="//www.reuters.com/article/2015/02/27/us-optos-m-a-nikon-idUSKBN0LV0W020150227"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Penn Virginia Said to Be Weighing Sale </strong> <span class="divider"> | </span></span> The energy producer Penn Virginia is said to be exploring a sale as its stock price has fallen, its reserves have lost value and the billionaire investor George Soros â whose investment fund, Soros Fund Management, has been in and out of the companyâs stock since at least 2009 â has urged it to find a buyer, The Wall Street Journal writes, citing unidentified people familiar with the matter.<br />
+<span class="kicker"><a href="//on.wsj.com/1AaTWDb"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lloyds Banking Group Returns to Profit and Resumes Dividend Payments</strong> <span class="divider"> | </span></span> The British lenderâs payout to shareholders is a milestone in its turnaround since being bailed out by the government during the financial crisis.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/02/28/business/dealbook/lloyds-banking-group-returns-to-profit-and-resumes-dividend-payments.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Goldman Names New Co-Heads of Mergers Team</strong> <span class="divider"> | </span></span> The investment bank promoted two regional heads of mergers, Michael Carr and Gilberto Pozzi, to global co-heads of the business.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/02/27/business/dealbook/goldman-names-new-co-heads-of-mergers-team.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2015/02/27/business/27amex-web/27amex-web-square320.jpg" alt="With Revamped Gold Cards, Bruised American Express Returns Focus to Affluent" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>With Revamped Gold Cards, Bruised American Express Returns Focus to Affluent</strong> <span class="divider"> | </span></span> The company, seeking to reinvigorate its brand after some setbacks, plans to enhance the benefits of its popular gold card but also raise the fees.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/02/27/business/american-express-turns-to-its-core-customers-the-affluent.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2015/02/27/business/27kahn-obit/27kahn-obit-square320.jpg" alt="Irving Kahn, Oldest Active Wall Street Investor, Dies at 109" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Irving Kahn, Oldest Active Wall Street Investor, Dies at 109</strong> <span class="divider"> | </span></span> Mr. Kahn was a contrarian adherent who left Lehman Brothers in 1978 to open the Kahn Brothers Group with two of his sons.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/02/27/business/irving-kahn-oldest-active-wall-street-investor-dies-at-109.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2015/02/27/business/dbpix-carlyle/dbpix-carlyle-square320-v3.jpg" alt="Carlyleâs 3 Founders Got $800 Million Haul in 2014" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Carlyleâs 3 Founders Got $800 Million Haul in 2014</strong> <span class="divider"> | </span></span> The cash paid to David M. Rubenstein, Daniel A. DâAniello and William E. Conway Jr. included dividends, base salary and investment profits.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/02/27/business/dealbook/carlyles-3-founders-get-pay-packages-of-800-million.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Cast and Crew Said to Be Exploring Sale</strong> <span class="divider"> | </span></span> The Hollywood payroll company Cast and Crew Entertainment Services, owned by the private equity firm ZelnickMedia, is said to be weighing a sale and is working with the investment banks Moelis &amp; Company and Morgan Stanley on an auction of the company, Reuters reports, citing unidentified people familiar with the matter.<br />
+<span class="kicker"><a href="//www.reuters.com/article/2015/02/26/us-cast-crew-m-a-idUSKBN0LU1YM20150226"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TPG to Buy Stake in Indiaâs Manipal Health</strong> <span class="divider"> | </span></span> The private equity firm TPG Capital will acquire a âsignificant minority stakeâ in the Indian private hospital operator Manipal Health Enterprises for about $145.9 million, the companies said in a joint statement on Thursday.<br />
+<span class="kicker"><a href="//www.reuters.com/article/2015/02/26/us-manipal-health-equity-tpg-capital-idUSKBN0LU1EL20150226"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Argentina Bond Sale Is Suspended Amid Hedge Fund Pressure</strong> <span class="divider"> | </span></span> Demands by a federal judge in Manhattan are said to have led JPMorgan Chase and Deutsche Bank to pull back on their deal preparations.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/02/27/business/dealbook/argentina-bond-sale-is-suspended-amid-hedge-fund-pressure.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Investors Pull $800 Million From Fortress Fund</strong> <span class="divider"> | </span></span> Investors asked to withdraw nearly $800 million from the Fortress Investment Groupâs flagship hedge fund over the last few months, equaling about a quarter of the $3.2 billion in assets under management the fund had at the beginning of the year, The Wall Street Journal writes.<br />
+<span class="kicker"><a href="//on.wsj.com/17BqpvN">WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2015/02/26/business/dealbook/dbpix-nook/dbpix-nook-square320.jpg" alt="Barnes &amp; Noble to Spin Off College Bookstores Unit" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Barnes &amp; Noble to Spin Off College Bookstores Unit</strong> <span class="divider"> | </span></span> The retailer will spin out its education business, its best-performing division, instead of its struggling Nook unit.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/02/27/business/dealbook/barnes-noble-to-spin-off-college-bookstores-unit.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Alibabaâs Affiliate Ant Financial Said to Plan I.P.O.</strong> <span class="divider"> | </span></span> The Alibaba Groupâs financial services affiliate, known as Ant Financial, is said to be planning an initial public offering in mainland China, which could take place as soon as next year, The Wall Street Journal reports, citing an unidentified person familiar with the situation.<br />
+<span class="kicker"><a href="//on.wsj.com/1AfkGlW">WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Aereo Bankruptcy Auction Raises Less Than $2 Million</strong> <span class="divider"> | </span></span> Aereo, a streaming TV service that had raised about $100 million in venture capital, has sold its assets in a bankruptcy auction that raised less than $2 million, ReCode writes. The company lost a Supreme Court battle last summer.<br />
+<span class="kicker"><a href="//recode.net/2015/02/26/aereos-bankruptcy-fire-sale-raises-less-than-2-million/"> RECODE </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Will.i.am Start-Up Hires Sony Electronics Executive</strong> <span class="divider"> | </span></span> Phil Molyneux, who most recently was president and chief operating officer of Sony Electronics in the United States, will take on the same role at i.am+, a 60-person wearables start-up, the Bits blog writes.<br />
+<span class="kicker"><a href="//bits.blogs.nytimes.com/2015/02/26/will-i-am-start-up-hires-sony-electronics-executive"> NEW YORK TIMES BITS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>How One Man Became a Start-Up Millionaire in Weeks</strong> <span class="divider"> | </span></span> A new highly-funded e-commerce company is offering early users a chance to get shares in the company. One man took advantage of the scheme, Kevin Roose of Fusion writes.<br />
+<span class="kicker"><a href="//fusion.net/story/54990/guy-got-rich-using-jet/"> FUSION </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>F.C.C. Approves Net Neutrality Rules, Classifying Broadband Internet Service as a Utility </strong> <span class="divider"> | </span></span> The agencyâs 3-to-2 vote is intended to ensure a level playing field for Internet content providers, with no so-called pay-to-play fast lanes.</p>
+<p class="story-body-text" itemprop="articleBody"><span class="kicker"><a href="//www.nytimes.com/2015/02/27/technology/net-neutrality-fcc-vote-internet-utility.html"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Germany Backs 4-Month Extension of Greeceâs Bailout</strong> <span class="divider"> | </span></span> The German finance minister urged lawmakers to support the move to ensure Europeâs future success, even as he conceded that doing so was ânot easy for me.â<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/02/28/business/international/germany-greece-bailout-extension-vote.html"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2015/02/27/us/27lynch-web-01/27lynch-web-01-square320.jpg" alt="Senate Panel Approves Loretta Lynch to Be Attorney General" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Senate Panel Approves Loretta Lynch to Be Attorney General</strong> <span class="divider"> | </span></span> The Senate Judiciary Committee sent the nomination of Ms. Lynch to the full Senate for what is likely to be a contentious vote.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/02/27/us/senate-panel-votes-to-approve-loretta-lynch-as-attorney-general.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2015/02/27/business/dbpix-batista-court/dbpix-batista-court-square320.jpg" alt="Judge in Batistaâs Insider Trading Trial in Brazil Is Removed From Case" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Judge in Batistaâs Insider Trading Trial in Brazil Is Removed From Case</strong> <span class="divider"> | </span></span> The courtâs inspector general removed the judge, FlÃ¡vio Roberto de Souza, after he was filmed driving a Porsche that the police had seized from Eike Batista.<br />
+<span class="kicker"><a href="//www.nytimes.com/2015/02/27/business/dealbook/judge-in-batistas-insider-trading-trial-in-brazil-is-removed-from-case.html?ref=dealbook"> NYT </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody">&nbsp;</p>
+</div>
+			<footer class="entry-footer">
+								<button class="button comments-button  theme-speech-bubble"></button>
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/02/27/morning-agenda-hedge-fund-sues-u-s-prosecutor/"
+					data-title="Morning Agenda: Hedge Fund Sues U.S. Prosecutor"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;A hedge fund is fighting back against Preet Bharara. | Standard Chartered overhauls its leadership. | Hedge funds are still attracting money from big investors. | K.K.R.-backed Samson Resources hires restructuring advisers.&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/02/27/morning-agenda-hedge-fund-sues-u-s-prosecutor/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":55,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

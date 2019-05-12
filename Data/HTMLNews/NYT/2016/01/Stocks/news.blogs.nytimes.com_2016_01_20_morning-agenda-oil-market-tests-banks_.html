@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004155540"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1453288201" />
+<meta name="PUD" content="20160120" />
+<meta name="pdate" content="20160120" />
+<meta name="ptime" content="20160120061001" />
+<meta name="utime" content="20160120111001" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-01-20T11:10:01-05:00" />
+<meta name="DISPLAYDATE" content="January 20, 2016" />
+<meta name="dat" content="January 20, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Giuliani, Rudolph W;Greenlight Capital Re Ltd;Icahn, Carl C;Shkreli, Martin (1983- )">
+<meta name="des" content="Art;China;Cohen, Steven A;Credit Ratings and Credit Rating Agencies;Gender;Insider Trading;Shareholder Rights and Activism;Start-ups;Supreme Court (US);Trump, Donald J;Venture Capital">
+<meta name="org" content="Atmel Corporation;Bank of America Corporation;Bank of England;Citigroup Inc;Consumer Financial Protection Bureau;Deutsche Bank AG;Goldman Sachs Group Inc;JPMorgan Chase &amp; Company;Lazard Ltd;Microchip Technology Inc;Morgan Stanley;Nikkei Stock Average;Oil (Petroleum) and Gasoline;Regulation and Deregulation of Industry;Securities and Exchange Commission;Symantec Corporation;Viacom Inc;Wells Fargo &amp; Company">
+<meta name="geo" content="Davos (Switzerland);Macy&#039;s Inc;World Economic Forum">
+<meta name="ticker" content="Atmel Corporation|ATML|NASDAQ;Bank of America Corporation|BAC|NYSE;Citigroup Inc|C|NYSE;Deutsche Bank AG|DB|NYSE;Goldman Sachs Group Inc|GS|NYSE;JPMorgan Chase & Company|JPM|NYSE;Microchip Technology Inc|MCHP|NASDAQ;Morgan Stanley|MS|NYSE;Symantec Corporation|SYMC|NASDAQ;Viacom Inc|VIAB|NASDAQ;Wells Fargo & Company|WFC|NYSE" />
+<meta property="article:tag" content="Giuliani Rudolph W" />
+<meta property="article:tag" content="Greenlight Capital Re Ltd" />
+<meta property="article:tag" content="Icahn Carl C" />
+<meta property="article:tag" content="Shkreli Martin (1983- )" />
+<meta property="article:tag" content="Art" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Cohen Steven A" />
+<meta property="article:tag" content="Credit Ratings and Credit Rating Agencies" />
+<meta property="article:tag" content="Gender" />
+<meta property="article:tag" content="Insider Trading" />
+<meta property="article:tag" content="Shareholder Rights and Activism" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Supreme Court (US)" />
+<meta property="article:tag" content="Trump Donald J" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Atmel Corporation" />
+<meta property="article:tag" content="Bank of America Corporation" />
+<meta property="article:tag" content="Bank of England" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="Consumer Financial Protection Bureau" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="Lazard Ltd" />
+<meta property="article:tag" content="Microchip Technology Inc" />
+<meta property="article:tag" content="Morgan Stanley" />
+<meta property="article:tag" content="Nikkei Stock Average" />
+<meta property="article:tag" content="Oil (Petroleum) and Gasoline" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Symantec Corporation" />
+<meta property="article:tag" content="Viacom Inc" />
+<meta property="article:tag" content="Wells Fargo &amp; Company" />
+<meta property="article:tag" content="Davos (Switzerland)" />
+<meta property="article:tag" content="Macy&#039;s Inc" />
+<meta property="article:tag" content="World Economic Forum" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Giuliani Rudolph W,Greenlight Capital Re Ltd,Icahn Carl C,Shkreli Martin (1983- ),Art,China,Cohen Steven A,Credit Ratings and Credit Rating Agencies,Gender,Insider Trading,Shareholder Rights and Activism,Start-ups,Supreme Court (US),Trump Donald J,Venture Capital,Atmel Corporation,Bank of America Corporation,Bank of England,Citigroup Inc,Consumer Financial Protection Bureau,Deutsche Bank AG,Goldman Sachs Group Inc,JPMorgan Chase &amp; Company,Lazard Ltd,Microchip Technology Inc,Morgan Stanley,Nikkei Stock Average,Oil (Petroleum) and Gasoline,Regulation and Deregulation of Industry,Securities and Exchange Commission,Symantec Corporation,Viacom Inc,Wells Fargo &amp; Company,Davos (Switzerland),Macy&#039;s Inc,World Economic Forum,DealBook" />
+<meta name="news_keywords" content="Art,Gender,Startup" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F01%2F20%2Fmorning-agenda-oil-market-tests-banks%2F" title="Morning Agenda: Oil Market Tests Banks" />
+<meta name="description" content="Expect Some Unicorns to Lose Their Horns &#124; Legislation Could Add to Scrutiny of Regulators &#124; Steven Cohen&#8217;s Loan Secured by Art" />
+<meta name="hdl" content="Morning Agenda: Oil Market Tests Banks" />
+<meta property="og:title" content="Morning Agenda: Oil Market Tests Banks" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/01/20/morning-agenda-oil-market-tests-banks/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Expect Some Unicorns to Lose Their Horns &#124; Legislation Could Add to Scrutiny of Regulators &#124; Steven Cohen&#8217;s Loan Secured by Art" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Oil Market Tests Banks" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/01/20/morning-agenda-oil-market-tests-banks/" />
+<meta name="twitter:description" content="Expect Some Unicorns to Lose Their Horns &#124; Legislation Could Add to Scrutiny of Regulators &#124; Steven Cohen&#8217;s Loan Secured by Art" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/01/19/what-were-reading-122/' />
+<link rel='next' title='Morning Agenda: Asia Markets Succumb to Jitters' href='//news.blogs.nytimes.com/2016/01/21/morning-agenda-asia-markets-succumb-to-jitters/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/01/20/morning-agenda-oil-market-tests-banks/' />
+<link rel='shortlink' href='//nyti.ms/1luF6Yf' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/01/20/morning-agenda-oil-market-tests-banks/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Oil Market Tests Banks - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4085 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Oil Market Tests Banks        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/01/20/morning-agenda-oil-market-tests-banks/"
+	 data-title="Morning Agenda: Oil Market Tests Banks"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Expect Some Unicorns to Lose Their Horns | Legislation Could Add to Scrutiny of Regulators | Steven Cohen&#039;s Loan Secured by Art&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/01/20/morning-agenda-oil-market-tests-banks/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="January 20, 2016 6:10 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Oil Market Tests Banks</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-01-20T11:10:01+00:00" itemprop="datePublished">January 20, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">January 20, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4085 post type-post status-publish hentry category-dealbook tag-art tag-atmel-corporation tag-bank-of-america-corporation tag-bank-of-england tag-china tag-citigroup-inc tag-cohen-steven-a tag-consumer-financial-protection-bureau tag-credit-ratings-and-credit-rating-agencies tag-davos-switzerland tag-deutsche-bank-ag tag-gender tag-giuliani-rudolph-w tag-goldman-sachs-group-inc tag-greenlight-capital-re-ltd tag-icahn-carl-c tag-insider-trading tag-jpmorgan-chase-company tag-lazard-ltd tag-macys-inc tag-microchip-technology-inc tag-morgan-stanley tag-nikkei-stock-average tag-oil-petroleum-and-gasoline tag-regulation-and-deregulation-of-industry tag-securities-and-exchange-commission tag-shareholder-rights-and-activism tag-shkreli-martin-1983 tag-start-ups tag-supreme-court-us tag-symantec-corporation tag-trump-donald-j tag-venture-capital tag-viacom-inc tag-wells-fargo-company tag-world-economic-forum per-giuliani-rudolph-w per-greenlight-capital-re-ltd per-icahn-carl-c per-shkreli-martin-1983 des-art des-china des-cohen-steven-a des-credit-ratings-and-credit-rating-agencies des-gender des-insider-trading des-shareholder-rights-and-activism des-start-ups des-supreme-court-us des-trump-donald-j des-venture-capital org-atmel-corporation org-bank-of-america-corporation org-bank-of-england org-citigroup-inc org-consumer-financial-protection-bureau org-deutsche-bank-ag org-goldman-sachs-group-inc org-jpmorgan-chase-company org-lazard-ltd org-microchip-technology-inc org-morgan-stanley org-nikkei-stock-average org-oil-petroleum-and-gasoline org-regulation-and-deregulation-of-industry org-securities-and-exchange-commission org-symantec-corporation org-viacom-inc org-wells-fargo-company geo-davos-switzerland geo-macys-inc geo-world-economic-forum news_keywords-art news_keywords-gender news_keywords-startup" id="post-4085">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Oil Market Tests Banks</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-01-20T11:10:01+00:00" itemprop="datePublished">January 20, 2016 6:10 am</time>
+			<!-- date updated --><span class="visually-hidden updated">January 20, 2016 6:10 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/01/20/morning-agenda-oil-market-tests-banks/" data-title="Morning Agenda: Oil Market Tests Banks" data-description="Expect Some Unicorns to Lose Their Horns | Legislation Could Add to Scrutiny of Regulators | Steven Cohen&#039;s Loan Secured by Art">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>OIL MARKET TESTS BANKS</strong> <span class="divider"> | </span></span> Markets and economies have already been rattled by low oil prices, and now the <b>United States banking system is being tested too</b>, </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/01/20/business/oil-market-tests-banks-ability-to-weather-losses.html">Michael Corkery reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">Banks are marking down the value of loans and setting aside reserves to absorb losses as oil producers struggle to pay their debts. </p>
+<p class="story-body-text" itemprop="articleBody">On Tuesday, <a href="//www.nytimes.com/2016/01/20/business/dealbook/bank-of-americas-profit-tops-expectations.html?ref=topics">Bank of America said</a> provisions for credit losses increased by $364 million in the fourth quarter because of the downturn in the energy sector. Citigroup, Wells Fargo and JPMorgan Chase have also said that <b>oil issues affected their earnings</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Although profits are being squeezed, <b>the big banksâ capital cushions are not threatened</b>. Analysts say this is a testament to the regulations put in place after the collapse of the mortgage market in 2008. </p>
+<p class="story-body-text" itemprop="articleBody"><b>But the worst pain could lie ahead.</b> Although many  banks have reduced credit lines to oil producers, some lenders are loath to cut off financing completely for fear of forcing energy companies into bankruptcy, energy lawyers and consultants say. </p>
+<p class="story-body-text" itemprop="articleBody">Banks and regulators are also trying to determine the value of loans and forecast future losses, <b>in the face of conflicting opinions about whether prices could rebound.</b> </p>
+<p class="story-body-text" itemprop="articleBody"><b>The hedges that energy companies made to protect against price drops are also set to expire early this year</b> â some companies are still receiving as much as $80 a barrel. </p>
+<p class="story-body-text" itemprop="articleBody">Bank executives have stressed that oil and gas exposure makes up a small percentage of overall loans, but analysts are still questioning whether banks have stored away enough reserves and bank stocks have been hammered.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>EXPECT SOME UNICORNS TO LOSE THEIR HORNS</strong> <span class="divider"> | </span></span> With the market forcing highfliers among tech start-ups to seek money at lower valuations, <b>you can expect a bloodbath</b> as employers, founders and investors clash,<br />
+<a href="//www.nytimes.com/2016/01/20/business/dealbook/expect-some-unicorns-to-lose-their-horns-and-it-wont-be-pretty.html?ref=dealbook">Steven Davidoff Solomon writes in the Deal Professor</a>. </p>
+<p class="story-body-text" itemprop="articleBody">The biggest battle at unicorns, or start-ups with a valuation of $1 billion or more, will be between <b>the common and preferred shareholders</b>.<br />
+Employees and founders often hold common shares that sit below the preferred shares held by venture capitalists, which have protections not given to common shareholders. </p>
+<p class="story-body-text" itemprop="articleBody">Liquidation preferences mean preferred shareholders receive a minimum payment if the company is sold. Anti-dilution rights provide that when new money comes in at a lower valuation â a so-called down round â investors from prior rounds get compensated. </p>
+<p class="story-body-text" itemprop="articleBody">A down round hits employees and founders hard.<br />
+<b>Directors on the board of a unicorn will have to be careful to avoid a lawsuit.</b> </p>
+<p class="story-body-text" itemprop="articleBody">The second battle will be <b>the fight to retain employees</b>. One of the thorniest issues in dealing with down rounds is how a former unicorn keeps its employees after destroying the value of their shares. </p>
+<p class="story-body-text" itemprop="articleBody">If stock incentives are no longer an option, cash bonus plans or other incentive plans that pay cash in the event of a success may be necessary. But that just isnât as good as stock with a potential for a big payout, so expect some hard bargaining. </p>
+<p class="story-body-text" itemprop="articleBody"><b>These efforts are likely to fail</b>, Mr. Solomon says. Some companies do not survive down rounds, not because of finances but because they cannot keep their employees. </p>
+<p class="story-body-text" itemprop="articleBody"><b>There will also be battles between new and old money</b> as preferred-stock holders duke it out with new down-round investors. The old money may rely on their protections as preferred shareholders, but a desperate company may try to seize control. </p>
+<p class="story-body-text" itemprop="articleBody">The new money could also insist on super-contractual protections, like more aggressive anti-dilution rights and higher liquidation preferences. </p>
+<p class="story-body-text" itemprop="articleBody"><b>There might also be fights between the founders and everyone else.</b> The new money could be in a position to decide whether to keep the founders, who will have to work harder and own a smaller stake if they stay.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>LEGISLATION COULD ADD TO SCRUTINY OF REGULATORS</strong> <span class="divider"> | </span></span> Congressional efforts to scrutinize the regulators that write the rules for Wall Street are gaining momentum, <b>potentially creating more obstacles to closer financial oversight</b>, </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/01/20/business/dealbook/proposed-legislation-would-add-new-scrutiny-of-wall-street-regulators.html?ref=dealbook">Victoria Finkle reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody"><b>A bipartisan group of senators is working on a package of regulatory reform bills</b> that is likely to include a measure to subject the Consumer Financial Protection Bureau, the Securities and Exchange Commission and other independent agencies to a heightened cost-benefit analysis and review process, people briefed on the plans said. </p>
+<p class="story-body-text" itemprop="articleBody">Supporters say the legislation would provide more <b>consistency and transparency in the rule-making process</b>. Critics warn that it is intended to create <b>additional burdens and delays</b>, while making rules more vulnerable to legal challenges. </p>
+<p class="story-body-text" itemprop="articleBody"><b>The Senate group needs at least two more Democrats to support the legislation</b> to avoid having the package blocked on the floor. The measures could be introduced in the coming weeks.</p>
+<p class="story-body-text" itemprop="articleBody">Other proposals are being considered as part of the Senate effort, including measures to establish a nine-person commission to review duplicative and outdated rules already on the books, and a requirement that regulators publish advance notices for all major rule-makings.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA </strong> <span class="divider"> | </span></span> The Bureau for Labor Statistics will release the <b>Consumer Price Index</b> for December at 8:30 a.m. <b>Goldman Sachs</b> will release its fourth-quarter results at about 7:30 a.m; a conference call will follow at 9:30 a.m. <b>The Bank of Canada</b> will publish its decision on interest rates and monetary policy at 10 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>STEVEN COHENâS LOAN SECURED BY ART</strong> <span class="divider"> | </span></span> At the end of last year, Morgan Stanleyâs private bank arranged a personal loan of an unspecified sum for Steven A. Cohen, the billionaire investor,<br />
+<a href="//www.nytimes.com/2016/01/20/business/dealbook/morgan-stanley-backs-billionaire-steven-cohen-with-loan-secured-by-art.html?ref=dealbook">Matthew Goldstein reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">The loan is secured by <b>âartwork collateral piecesâ</b> and related documents, according to a filing with the Connecticut secretary of stateâs office. </p>
+<p class="story-body-text" itemprop="articleBody">It is common for wealthy art collectors to take out multiple lines of credit to fund purchases. Mr. Cohen has used similar personal loans from other Wall Street banks to finance big art purchases, which have included works by Jeff Koons and Pablo Picasso. <b>His art collection is estimated to be worth about $1 billion.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Two years ago, Goldman Sachs provided him with a line of credit after Deutsche Bank decided not to continue a personal loan it made to him in 2009. <b>Deutsche Bank pulled back on its ties to Mr. Cohen</b> after his former hedge fund, SAC Capital Advisors, agreed to plead guilty to insider trading charges. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Cohenâs prospects are looking brighter now, though, and <b>it could be a shrewd move for Morgan Stanley</b>, given that SAC Capital once accounted for 3 percent of the daily trading volume on the New York Stock Exchange. </p>
+<p class="story-body-text" itemprop="articleBody">His new firm, Point72 Asset Management, is an $11 billion family office, which has been no slouch. It made a gross profit of more than $2.5 billion in 2014, and a person briefed on its performance in 2015 said it was âhighly profitable.â <b>On Tuesday, the firm announced that it was opening an office in London</b> that could employ up to 70 people, <a href="//www.nytimes.com/2016/01/20/business/dealbook/point72-steven-cohens-firm-reopens-office-in-london.html?ref=international&#038;nl=dealbook&#038;emc=edit_dlbkam_20160120">Chad Bray reports in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Cohen also reached a civil settlement with the Securities and Exchange Commission in an administrative matter that will allow him and his firm to  <b>begin managing money from outside investors in two years</b> â a victory, considering that the S.E.C. initially sought a lifetime ban.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Microchip Technology to Buy Atmel for Nearly $3.6 Billion</strong> <span class="divider"> | </span></span> The acquisition is the latest in a series of mergers and acquisitions in the semiconductor industry as chip makers combine to cut costs.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/dealbook/microchip-technology-to-buy-atmel-for-nearly-3-6-billion.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Univision Buys a Stake in The Onion to Reach Millennials" src="https://static01.nyt.com/images/2016/01/19/us/20xp-1onion/20xp-1onion-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Univision Buys a Stake in The Onion to Reach Millennials</strong> <span class="divider"> | </span></span> Univision, the Spanish-language media company, is trying to expand its reach to as diverse an audience as possible.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/media/univision-buying-large-stake-in-the-onion.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BTG Pactual Is Said to Be Close to Selling Its Swiss Private Bank </strong> <span class="divider"> | </span></span> EFG, the Zurich-based private banking group, is the highest bidder in the auction of BSI, the Swiss private bank owned by BTG, and is expected to enter exclusive talks on a deal expected to value BSI above 1.2 billion Swiss francs, or about $1.2 billion, The Financial Times reports, citing  people familiar with the matter.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/0bc99ef0-beb9-11e5-9fdb-87b8d15baec2.html#axzz3xZ8f60wY">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Symantec Agrees to Cut-Price Sale of Veritas </strong> <span class="divider"> | </span></span> Carlyle has agreed to pay $7.4 billion for Veritas, Symantecâs data-storage business, down from the $8 billion purchase price agreed to last August when the transaction was first announced.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/dd114fa4-bf12-11e5-846f-79b0e3d20eaf.html#axzz3xZ8f60wY"> THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Morgan Stanley Posts Profit as It Charts a New Course" src="https://static01.nyt.com/images/2016/01/20/business/db-morgan-web1/db-morgan-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Morgan Stanley Posts Profit as It Charts a New Course</strong> <span class="divider"> | </span></span> The bank says it is planning to exit entire areas of the fixed-income business that are ânot strategically significant.â<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/dealbook/morgan-stanley-posts-profit-as-it-details-new-strategy.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="At New Digital Lenders, Math Rules" src="https://static01.nyt.com/images/2016/01/08/technology/08bits-levchin/08bits-levchin-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>At New Digital Lenders, Math Rules</strong> <span class="divider"> | </span></span> Lending start-ups that rely on data-driven algorithms could widen the availability of credit and reduce costs for borrowers. But the new math raises questions of effectiveness and fairness.<br /><span class="kicker"><a href="//bits.blogs.nytimes.com/2016/01/19/at-new-digital-lenders-math-rules/">Bits Blog &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Goldman Sachs Wants to Make More Giant Loans</strong> <span class="divider"> | </span></span> With its mergers-and-acquisitions operation facing more limited growth prospects and debt trading under pressure from new regulations, Goldman has identified loans and bond underwriting as key sources of additional profit, The Wall Street Journal reports, citing officials at the firm.<br /><span class="kicker"><a href="//www.wsj.com/articles/goldman-turns-to-loans-bond-underwriting-1453199400">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lazard Hires Managing Director to Bolster Restructuring Business</strong> <span class="divider"> | </span></span> The new executive, Ken Ziman, was recruited from Skadden, Arps, Slate, Meagher &#038; Flom, where he served as the deputy practice leader of corporate restructuring.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/dealbook/lazard-hires-managing-director-to-bolster-restructuring-business.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Big Data Meets Big Brother in China </strong> <span class="divider"> | </span></span> New rating systems are part of a government-backed effort to increase lending to hundreds of millions of citizens, but companies are using online activity to determine credit ratings, adding to fears about privacy.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/b5b13a5e-b847-11e5-b151-8e15c9a029fb.html#axzz3xZ8f60wY"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Viacom in Cross Hairs of Activist Investor" src="https://static01.nyt.com/images/2016/01/20/business/cnbc-viacom/cnbc-viacom-square320.png"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Viacom in Cross Hairs of Activist Investor</strong> <span class="divider"> | </span></span> Eric Jackson of SpringOwl Asset Management outlined a plan â including replacing Viacomâs management and board â that he said could increase the stock price by 135 percent.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/dealbook/viacom-in-cross-hairs-of-activist-investor.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Icahn Adds Pressure on A.I.G. to Make Major Changes" src="https://static01.nyt.com/images/2015/01/23/business/dbpix-icahn1/dbpix-icahn1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Icahn Adds Pressure on A.I.G. to Make Major Changes</strong> <span class="divider"> | </span></span> Mr. Icahn urged the board to sell, spin off or separate operations to tailor A.I.G. as highly focused property and casualty insurer.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/dealbook/icahn-adds-pressure-on-aig-to-make-major-changes.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Greenlight Capital Is Said to Have Taken a Stake in Macyâs</strong> <span class="divider"> | </span></span> In a letter to investors obtained by The Financial Times, Greenlight did not disclose the size of its stake or the exact time of the purchase, but it said it had built its holding last year at an average price of $45.69.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/a052086a-bef4-11e5-9fdb-87b8d15baec2.html">THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Practice Fusion Said to Hire JPMorgan Chase to Explore I.P.O.</strong> <span class="divider"> | </span></span> The electronic health records start-up asked JPMorgan Chase last year to explore an I.P.O. in 2017, according to people with knowledge of the matter.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/dealbook/practice-fusion-said-to-hire-jpmorgan-chase-to-explore-ipo.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Investment in Internet Start-Ups Appears to Slow in China" src="https://static01.nyt.com/images/2016/01/20/business/20Chinaventure-web1/20Chinaventure-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Investment in Internet Start-Ups Appears to Slow in China</strong> <span class="divider"> | </span></span> Venture capital investment in tech start-ups fell 29 percent in the last quarter, and a new report links this to economic uncertainty in the region.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/international/china-startups-investment.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/01/20/world/asia/china-us-college-application.html">Chinese Students and U.S. Universities Connect Through a Third Party</a> </span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="For Young Entrepreneurs, a Chance to Network With Top Leaders" src="https://static01.nyt.com/images/2016/01/18/business/18db-entrepreneurs-web1/18db-entrepreneurs-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>For Young Entrepreneurs, a Chance to Network With Top Leaders</strong> <span class="divider"> | </span></span> Every year, a few dozen start-up founders receive an invitation to the World Economic Forum for the opportunity to build connections with the global elite.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/21/business/dealbook/for-young-entrepreneurs-a-chance-to-network-with-top-leaders.html">Davos Special Report &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Meituan-Dianping of China Raises $3.3 Billion</strong> <span class="divider"> | </span></span> Meituan-Dianping, Chinaâs top online seller of movie tickets and restaurant bookings, was valued at more than $18 billion by the fundraising.<br /><span class="kicker"><a href="//www.wsj.com/articles/chinas-meituan-dianping-raises-3-3-billion-in-biggest-startup-round-ever-1453211614"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Dick Costolo Takes on Role at Fitness and Venture Companies</strong> <span class="divider"> | </span></span> Dick Costolo, a former chief executive of Twitter, is taking on two new jobs, founding a platform to improve usersâ personal fitness and joining Index Ventures as a venture partner.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/9832570a-bece-11e5-846f-79b0e3d20eaf.html#axzz3xZ8f60wY">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Global Markets Fall Amid Skepticism From European and Asian Investors" src="https://static01.nyt.com/images/2016/01/21/world/21Markets-web/21Markets-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Global Markets Fall Amid Skepticism From European and Asian Investors</strong> <span class="divider"> | </span></span> Stocks in Japan plunged into bear-market territory, as concerns about Chinaâs prospects, dropping oil prices and signs of weakness elsewhere, have weighed on global markets.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/21/business/international/asia-europe-stock-markets.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Supreme Court Will Hear a California Insider Trading Case</strong> <span class="divider"> | </span></span> The court refused in October to address the issue of what prosecutors need to prove to obtain convictions.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/supreme-court-agrees-to-hear-insider-trading-case.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Martin Shkreli Seeks New Legal Team in Securities Fraud Case" src="https://static01.nyt.com/images/2016/01/20/business/20db-shkreli-web/20db-shkreli-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Martin Shkreli Seeks New Legal Team in Securities Fraud Case</strong> <span class="divider"> | </span></span> Mr. Shkreliâs law firm, Arnold &#038; Porter, notified the court to say the pharmaceutical executive was retaining new lawyers.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/dealbook/martin-shkreli-fires-lawyers-and-seeks-new-team.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bank of England Has No Timetable for Raising Rates, Carney Says</strong> <span class="divider"> | </span></span> Mark Carney, the governor of the British central bank, said on Tuesday that he had no timetable for raising interest rates, and he avoided giving one of his trademark hints on what was likely to happen to them against a backdrop of a weakening global economy.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2016/01/19/business/19reuters-britain-boe.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Rudolph Giuliani to Join Greenberg Traurig Law Firm" src="https://static01.nyt.com/images/2016/01/20/business/20db-giuliani-web1/20db-giuliani-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Rudolph Giuliani to Join Greenberg Traurig Law Firm</strong> <span class="divider"> | </span></span> The former New York mayor is leaving the Houston law firm Bracewell &#038; Giuliani, along with Marc L. Mukasey.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/dealbook/rudolph-giuliani-to-join-greenbergtraurig.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="A Push for Gender Equality at the World Economic Forum, and Beyond" src="https://static01.nyt.com/images/2016/01/20/business/20db-women-web/20db-women-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Push for Gender Equality at the World Economic Forum, and Beyond</strong> <span class="divider"> | </span></span> Investments are expected to be diversified, so why is that logic not applied to gender? asks Theresa Whitmarsh, one of the women leading an initiative for parity in finance at the gathering in Davos, Switzerland.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/dealbook/a-push-for-gender-equality-at-the-world-economic-forum-and-beyond.html">Davos Special Report &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Why Donald Trumpâs Shadow Looms Over Davos</strong> <span class="divider"> | </span></span> The presidential candidate will not be at the World Economic Forum, but the force behind his campaign for the White House will be a focus, Rob Cox writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/dealbook/why-donald-trumps-shadow-looms-over-davos.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Davos Takes a Fresh Look at Emerging Markets" src="https://static01.nyt.com/images/2016/01/19/business/19DB-EMERGE-web/19DB-EMERGE-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Davos Takes a Fresh Look at Emerging Markets</strong> <span class="divider"> | </span></span> As capital moves out of China, the Middle East and Latin America, many say that the notion of a world powered by emerging-market growth needs to be reconsidered.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/20/business/dealbook/davos-takes-a-fresh-look-at-emerging-markets.html">Davos Special Report &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/news-event/davos-world-economic-forum">More Coverage of the World Economic Forum Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/01/20/morning-agenda-oil-market-tests-banks/"
+					data-title="Morning Agenda: Oil Market Tests Banks"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Expect Some Unicorns to Lose Their Horns | Legislation Could Add to Scrutiny of Regulators | Steven Cohen&#039;s Loan Secured by Art&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/01/20/morning-agenda-oil-market-tests-banks/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":50,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

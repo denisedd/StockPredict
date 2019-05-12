@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-well section-health"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-well section-health" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="channels" content="NytNow" />
+<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/well/The Yogurt Must Be Greek ( 20141205 )" />
+<meta name="communityAssetURL" content="//well.blogs.nytimes.com/2014/12/05/greek-yogurt-recipes/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003273433"><meta name="author" content="Anahad O&#039;Connor" />
+<meta name="CLMST" content="Anahad O&#039;Connor" />
+<meta name="byl" content="Anahad O&#039;Connor" />
+<meta name="article:author" content="//topics.nytimes.com/topics/reference/timestopics/people/o/anahad_oconnor/index.html" /><meta name="GBLC" content="Eat;Featured">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1417804637" />
+<meta name="PUD" content="20141205" />
+<meta name="pdate" content="20141205" />
+<meta name="ptime" content="20141205133717" />
+<meta name="utime" content="20160315203057" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-03-15T20:30:57-04:00" />
+<meta name="DISPLAYDATE" content="December 5, 2014" />
+<meta name="dat" content="December 5, 2014" />
+<meta itemprop="articleSection" property="article:section" content="Health" />
+<meta name="CG" content="Health" />
+<meta name="SCG" content="well" />
+<meta name="BN" content="well" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Cooking and Cookbooks;Greek-Americans;Recipes;Yogurt">
+<meta property="article:tag" content="Cooking and Cookbooks" />
+<meta property="article:tag" content="Greek-Americans" />
+<meta property="article:tag" content="Recipes" />
+<meta property="article:tag" content="Yogurt" />
+<meta property="article:tag" content="Eat" />
+<meta property="article:tag" content="Featured" />
+<meta name="keywords" content="Cooking and Cookbooks,Greek-Americans,Recipes,Yogurt,Eat,Featured" />
+<meta name="news_keywords" content="Cooking,Greek-Americans,Recipe,Yogurt" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fwell.blogs.nytimes.com%2F2014%2F12%2F05%2Fgreek-yogurt-recipes%2F" title="The Yogurt Must Be Greek" />
+<meta name="description" content="Few people have as much appreciation for Greek yogurt &#8211; or expertise in making it &#8211; as Maria Loi, an acclaimed chef, author and host of television cooking shows." />
+<meta name="hdl" content="The Yogurt Must Be Greek" />
+<meta property="og:title" content="The Yogurt Must Be Greek" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//well.blogs.nytimes.com/2014/12/05/greek-yogurt-recipes/" />
+<meta property="og:site_name" content="Well" />
+<meta property="og:description" content="Few people have as much appreciation for Greek yogurt &#8211; or expertise in making it &#8211; as Maria Loi, an acclaimed chef, author and host of television cooking shows." />
+<meta property="og:image" content="https://static01.nyt.com/images/2014/12/03/health/Greek-yogurt/Greek-yogurt-videoSixteenByNine600.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2014/12/03/health/Greek-yogurt/Greek-yogurt-thumbLarge.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="The Yogurt Must Be Greek" />
+<meta name="twitter:url" content="//well.blogs.nytimes.com/2014/12/05/greek-yogurt-recipes/" />
+<meta name="twitter:description" content="Few people have as much appreciation for Greek yogurt &#8211; or expertise in making it &#8211; as Maria Loi, an acclaimed chef, author and host of television cooking shows." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2014/12/03/health/Greek-yogurt/Greek-yogurt-thumbLarge.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2014/12/03/health/Greek-yogurt/Greek-yogurt-thumbLarge.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@nytimeswell">
+<link rel='prev' title='After a Cancer Diagnosis, Learning to Let Go' href='//well.blogs.nytimes.com/2014/12/04/after-a-cancer-diagnosis-learning-to-let-go/' />
+<link rel='next' title='Wild About Mushrooms' href='//well.blogs.nytimes.com/2014/12/05/mushroom-recipes-for-health/' />
+<link rel='canonical' href='//well.blogs.nytimes.com/2014/12/05/greek-yogurt-recipes/' />
+<link rel='shortlink' href='//nyti.ms/12INKKk' />
+<link rel='https://github.com/WP-API/WP-API' href='//well.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/well/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//well.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/health/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/well/2014/12/05/greek-yogurt-recipes/" />
+<meta name="dfp-ad-unit-path" content="health/well/eat" /><meta name="categories" content="eat" />			<title>The Yogurt Must Be Greek - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/well.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-105652 blog-universal nyt-blog-well" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'Health', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//well.blogs.nytimes.com">
+                Well            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        The Yogurt Must Be Greek        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//well.blogs.nytimes.com/2014/12/05/greek-yogurt-recipes/"
+	 data-title="The Yogurt Must Be Greek"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Few people have as much appreciation for Greek yogurt â or expertise in making it â as Maria Loi, an acclaimed chef, author and host of television cooking shows.&lt;/span&gt;&lt;a href=&quot;//well.blogs.nytimes.com/2014/12/05/greek-yogurt-recipes/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="December 5, 2014 1:37 pm">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="well" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+		<div class="element1">
+	<div id="logo" ><a href="//well.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=Health" title="Go to Well Home"><img src="https://static01.nyt.com/images/blogs_v5/well/well_post.png" alt="Well - Tara Parker-Pope on Health"/></a></div>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//well.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Well">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-105652 post type-post status-publish hentry category-eat tag-cooking-and-cookbooks tag-greek-americans tag-recipes tag-yogurt des-cooking-and-cookbooks des-greek-americans des-recipes des-yogurt news_keywords-cooking-2 news_keywords-greek-americans news_keywords-recipe news_keywords-yogurt" id="post-105652">
+	<header class="postHeader">
+				<div class="postKicker">
+			<span class="kicker"><a href="?module=BlogCategory&version=Blog Post&action=Click&contentCollection=Health&pgtype=Blogs&region=Header">Food</a></span>
+		</div>
+				<h1 itemprop="headline" class="entry-title">The Yogurt Must Be Greek</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Anahad O'Connor			</address>
+			<!-- date published --><time class="dateline " datetime="2014-12-05T18:37:17+00:00" itemprop="datePublished">December 5, 2014 1:37 pm</time>
+			<!-- date updated --><span class="visually-hidden updated">December 5, 2014 1:37 pm</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div class="w592"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2014/12/03/health/Greek-yogurt/Greek-yogurt-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2014/12/03/health/Greek-yogurt/Greek-yogurt-tmagArticle.jpg" src="https://static01.nyt.com/images/2014/12/03/health/Greek-yogurt/Greek-yogurt-tmagArticle.jpg" id="100000003268759" width="592" height="452" alt="Maria Loi&#039;s Greek yogurt is much thicker than the store-bought variety."   /><meta itemprop="height" content="452"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Maria Loi's Greek yogurt is much thicker than the store-bought variety.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Sasha Gitin, Sasha Gitin Productions</span></figcaption></figure></div>
+<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//well.blogs.nytimes.com/2014/12/05/greek-yogurt-recipes/" data-title="The Yogurt Must Be Greek" data-description="Few people have as much appreciation for Greek yogurt â or expertise in making it â as Maria Loi, an acclaimed chef, author and host of television cooking shows.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody">Greek yogurt, with its beneficial probiotic bacteria, high protein content and rich flavor, is one of the most popular health foods in America, comprising a billion dollar market. </p>
+<p class="story-body-text" itemprop="articleBody">But few people have as much appreciation for Greek yogurt â or expertise in making it â as Maria Loi, an acclaimed chef, author and host of television cooking shows that have aired in her native Greece and on PBS. </p>
+<p class="story-body-text" itemprop="articleBody">For Ms. Loi, Greek yogurt is far more than a snack or breakfast item. It finds its way into nearly all of her recipes. She uses it in place of butter when baking cakes, cookies, brownies, pie crusts and quick breads. Where other chefs might use milk, cream, mayonnaise or sour cream, Ms. Loiâs recipes call for Greek yogurt instead.</p>
+<div class="w315"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2014/12/03/health/Maria-Loi/Maria-Loi-master315.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2014/12/03/health/Maria-Loi/Maria-Loi-master315.jpg" src="https://static01.nyt.com/images/2014/12/03/health/Maria-Loi/Maria-Loi-master315.jpg" id="100000003268770" width="315" height="209" alt="Maria Loi"   /><meta itemprop="height" content="209"><meta itemprop="width" content="315"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Maria Loi</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> </span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">Ms. Loi finds that the yogurt keeps these foods moist and flavorful, and as an added bonus it gives them a boost of protein. But donât mention the commercial varieties of Greek yogurt found in many supermarkets. Many of these are loaded with sugar and stripped of their natural fats, which Ms. Loi considers sacrilege. She only trusts one or two brands, and usually prefers to make her own yogurt using a family recipe, as she has since she was a child.</p>
+<p class="story-body-text" itemprop="articleBody">Born and raised in Nafpaktos, about three hours west of Athens, Ms. Loi has owned gourmet restaurants in Greece and in New York City, where her homemade yogurt is used to make everything from parfaits to cheesecake and even ice cream. She is the author of âAncient Dining,â the official book of the 2004 Athens Olympic Games. </p>
+<p class="story-body-text" itemprop="articleBody">Recently she published her latest cookbook, âThe Greek Diet,â with recipes rich in yogurt, nuts and olive oil. We caught up with Ms. Loi to talk about her new book, her love of Greek cuisine, and why she considers real Greek yogurt one of the pillars of a healthful diet &#8212; and even a beauty product. </p>
+<div class="q left">Q.</div>
+<p class="story-body-text" itemprop="articleBody">How did you learn to cook? Did you learn from your parents?</p>
+<div class="a left">A.</div>
+<p class="story-body-text" itemprop="articleBody">I have to confess: My mother didnât know how to cook. But she used to make the best yogurt ever. Thatâs how I got the recipe. My grandmother, and my great-grandmother, they were amazing in the kitchen. They could make 10 different dishes in half an hour. Thatâs a talent that I got from them. As a child I would cook different foods every day, and my grandmother would help me. But as I got older, I left Greece, stopped cooking and started eating bad foods. </p>
+<div class="q left">Q.</div>
+<p class="story-body-text" itemprop="articleBody">What happened?</p>
+<div class="a left">A.</div>
+<p class="story-body-text" itemprop="articleBody">I became a lobbyist, and I had to travel a lot. I thought this kind of life would be better for me. But I was always on the road, and I was eating more Americanized foods â lots of packaged snacks, chips and prepared food at airports. I gained so much weight â 40 pounds in two and a half years. I tried dieting and would lose a few pounds, but then it would come back.</p>
+<p class="story-body-text" itemprop="articleBody">Then one day I said to myself, &#8220;Enough! Iâm changing my life. Iâm going to cook!â People thought I was crazy. &#8220;How could she leave her career to do this?&#8221; But thank God I did, because cooking makes me happy. </p>
+<div class="q left">Q.</div>
+<p class="story-body-text" itemprop="articleBody">What happened after you gave up life as a lobbyist?</p>
+<div class="a left">A.</div>
+<p class="story-body-text" itemprop="articleBody">I closed the book on that career and I went back to Thermo, my village in Greece. I wanted my life to be simple again. I started growing tomatoes, a lot of herbs, making yogurt again. And I went back to eating olive oil. I lost so much weight and I wasnât as hungry anymore. That was almost 15 years ago.</p>
+<p class="story-body-text" itemprop="articleBody">I didnât have the expertise as a chef back then, but I had the expertise to cook. And all of my friends would come over to eat. Iâd have 30 people in my house for dinner. Then one day my friend, who was an anchorwoman, said &#8220;Maria, come cook on TV with us. You have to have a show!&#8221; The show became very popular. Eventually I came to New York and opened a restaurant, and here I am. I love this town. </p>
+<div class="q left">Q.</div>
+<p class="story-body-text" itemprop="articleBody">Whatâs your favorite recipe in the new book?</p>
+<div class="a left">A.</div>
+<p class="story-body-text" itemprop="articleBody">I love things with yogurt and olive oil. If you cut my vein, olive oil will spill out. But my favorite recipe in the book is the black-eyed beans with spinach and Swiss chard. You can have it with two or three tablespoons of yogurt. Itâs tasty and so easy to make. </p>
+<div class="q left">Q.</div>
+<p class="story-body-text" itemprop="articleBody">In the book, you say that yogurt was a big part of your childhood. How so?</p>
+<div class="a left">A.</div>
+<p class="story-body-text" itemprop="articleBody">When I was growing up, we always had a big bowl of homemade yogurt in the kitchen. When my siblings and I complained that we were hungry, my parents didnât give us junk food. There were no potato chips, cookies or packaged foods. They would tell us, âGo eat yogurt!â My grandmother used to say it was the food for everyone in our family, from babies to the very old. </p>
+<div class="q left">Q.</div>
+<p class="story-body-text" itemprop="articleBody">Greek yogurt is a staple in your recipes. What do you think of the commercial varieties in stores?</p>
+<div class="a left">A.</div>
+<p class="story-body-text" itemprop="articleBody">When I was growing up in Greece, I never saw my mother or grandmother making zero percent yogurt. Iâm sorry, but thatâs not Greek yogurt. Thatâs another kind of yogurt. These yogurts have a lot of sugar and if you look at the small print on the labels, they add thickeners to them. Greek yogurt for me has to be strained and it has to have fat. With real Greek yogurt, you donât have to eat a lot. You can eat three tablespoons and thatâs enough. Youâll be full and youâll love it. </p>
+<div class="q left">Q.</div>
+<p class="story-body-text" itemprop="articleBody">Where can people find real Greek yogurt?</p>
+<div class="a left">A.</div>
+<p class="story-body-text" itemprop="articleBody">Iâve seen real Greek yogurt in some supermarkets. In New York, you can find one at Zabarâs. The brand name is âKeso.â Itâs very good, full-fat yogurt. It doesnât have thickeners in it like the other yogurt, or sugar. If you put sugar in there, it changes everything. </p>
+<div class="q left">Q.</div>
+<p class="story-body-text" itemprop="articleBody">Do you always replace butter with Greek yogurt? </p>
+<div class="a left">A.</div>
+<p class="story-body-text" itemprop="articleBody">For me, Greek yogurt works with everything, and itâs better for food and life in general â as long as it&#8217;s 2 percent fat and up.  I never cook with butter, so I don&#8217;t think about yogurt replacing butter, as I usually replace butter with olive oil.  But in some of my cakes I do use yogurt instead of other fats.  </p>
+<p class="story-body-text" itemprop="articleBody">That being said, I believe in appropriate fats for appropriate foods. What I mean by this has to do with location and availability. In Greece, we have lots and lots of olives, and therefore lots of olive oil. If we were to use butter, it would come from goat&#8217;s milk because goats are much more prevalent in Greece â and goat butter is different, both in flavor and in its health benefits.  </p>
+<div class="q left">Q.</div>
+<p class="story-body-text" itemprop="articleBody">In your book, you mentioned using Greek yogurt as a beauty product. How so?</p>
+<p class="story-body-text" itemprop="articleBody">Greek yogurt isnât only for eating. When I was a child, I learned from my grandmother that it helps hydrate your skin, making it soft and smooth. My grandmother would use it as a beauty mask when all the men were working in the field. She said it was better for you than any other beauty remedy. And on very sunny days in Greece when I got sunburned, my grandmother would use a thick layer of yogurt to coat my skin, soothing it and cutting the healing time. I still do this today, and it still works perfectly for me.</p>
+<div class="q left">Q.</div>
+<p class="story-body-text" itemprop="articleBody">Whatâs your favorite dessert?</p>
+<div class="a left">A.</div>
+<p class="story-body-text" itemprop="articleBody">I love yogurt with some sesame and some honey, or pomegranate seeds. Itâs fantastic. And I always have Greek coffee for dessert. I can drink it at 12 oâclock at night and still go to sleep. Thatâs exactly like my grandfather used to do. He used to say I never did anything bad to anyone, thatâs why I can sleep. Itâs not the coffee that is keeping you up â itâs whatever you did that day.</p>
+<div class="q left">Q.</div>
+<p class="story-body-text" itemprop="articleBody">In your book, you talk about the health benefits of eating Greek. But <a href="//www.nytimes.com/2008/09/24/world/europe/24diet.html">obesity rates have climbed</a> in the Mediterranean as people eat more processed foods. Have you noticed these changes in your village? </p>
+<div class="a left">A.</div>
+<p class="story-body-text" itemprop="articleBody">This happened because people started eating a more westernized diet. But now, with the bad economy in Greece, people in my village have gone back to eating the way they did in the past. Theyâre eating more beans, nuts, seeds, whole grains and eggs. Theyâre growing more herbs, fruits and vegetables. Theyâre eating yogurt that they make every day. And they drink their own wine.</p>
+<p class="story-body-text" itemprop="articleBody">Young people now know what to eat. Theyâre eating the way theyâre grandparents ate. Theyâre eating healthy again. Not just in my village but throughout Greece. So the bad economy is actually improving peopleâs health â least something good came out of it!</p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2014/12/05/health/tzatziki/tzatziki-articleInline.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2014/12/05/health/tzatziki/tzatziki-articleInline.jpg" src="https://static01.nyt.com/images/2014/12/05/health/tzatziki/tzatziki-articleInline.jpg" id="100000003273246" width="190" height="177" alt="Maria Loi&#039;s Tzatziki"   /><meta itemprop="height" content="177"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Maria Loi's Tzatziki</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Yiannis Lois, Studio L Photography</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody"><strong>Maria Loi&#8217;s Tzatziki</strong></p>
+<p class="story-body-text" itemprop="articleBody">Tzatziki is one of the most well-known Greek condiments available, and for good reason â it pairs perfectly with most foods, and adds a healthy, herbaceous kick to anything it touches. Serve as a sauce for vegetables, chicken, pasta, or eggs, or as an appetizer with cruditÃ©s or grilled whole-grain pita.</p>
+<p class="story-body-text" itemprop="articleBody">2 cucumbers<br />
+Salt<br />
+16 ounces 2% plain Greek yogurt<br />
+3 garlic cloves, peeled<br />
+3 tablespoons extra-virgin<br />
+olive oil<br />
+2 tablespoons red wine vinegar<br />
+3 to 4 sprigs of fresh dill, stems removed and roughly chopped, or 1 teaspoon dried dill</p>
+<p class="story-body-text" itemprop="articleBody"><strong>1.</strong> Peel the cucumbers. Using the large holes of a box grater, grate them into a sieve or colander. Lightly salt the grated cucumber (this helps draw out the moisture), cover the sieve with plastic wrap, and allow the cucumber to drain overnight. (Note: Placing a heavy plate or glass on top of the covered cucumbers will help the draining process.)</p>
+<p class="story-body-text" itemprop="articleBody"><strong>2.</strong> In a large bowl, combine the drained cucumber and yogurt. Mix very well. Using a Microplane grater or a small, sharp knife, grate or mince the garlic. Stir the garlic into the yogurt mixture. Stir in the olive oil and vinegar and mix well. Cover the bowl with plastic and refrigerate for about 1 hour.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>3. </strong>Stir in the dill and refrigerate until serving.</p>
+<div class="w190 right"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2014/12/05/health/baked-apples/baked-apples-articleInline.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2014/12/05/health/baked-apples/baked-apples-articleInline.jpg" src="https://static01.nyt.com/images/2014/12/05/health/baked-apples/baked-apples-articleInline.jpg" id="100000003273239" width="190" height="285" alt="Maria Loi&#039;s Baked Apples"   /><meta itemprop="height" content="285"><meta itemprop="width" content="190"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Maria Loi's Baked Apples</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Yiannis Lois, Studio L Photography</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody"><strong>Maria Loi&#8217;s Greek Baked Apples</strong></p>
+<p class="story-body-text" itemprop="articleBody">These baked apples are my ode to the Big Apple! Served warm with a dollop of Greek yogurt or chilled with a hot cup of tea, these apples are a satisfying sweet treat with a fiber kick.</p>
+<p class="story-body-text" itemprop="articleBody">Â½ cup raisins (dark or golden)<br />
+Apple juice<br />
+6 firm apples, such as Granny Smith, Pink Lady, Honeycrisp, or Braeburn (see Cookâs note)<br />
+1 cup walnuts, roughly chopped<br />
+Â½ cup almonds, roughly chopped<br />
+2 teaspoons ground cinnamon, plus more for garnish<br />
+Â¼ teaspoon ground cloves<br />
+Â½ cup honey, warmed<br />
+Â½ cup Greek yogurt, for serving</p>
+<p class="story-body-text" itemprop="articleBody"><strong>1. </strong>The night before you plan to serve the apples, place the raisins in a small bowl, add apple juice to cover them by about 2 inches, cover, and set aside.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>2. </strong>The following day, use an apple corer to remove the cores from the apples. Donât cut all the way through the core, though, as you will be stuffing them. Wash and dry them. Peel them if you like, and set aside.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>3. </strong>Preheat the oven to 350Â°F. Line the bottom of a baking dish with parchment paper.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>4. </strong>In a medium bowl, combine the walnuts, almonds, cinnamon, cloves, and 2 tablespoons honey. Fill the hollowed-out center of each apple with some of the nut mixture. Arrange the apples in the baking dish. Pour the remaining honey over the apples.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>5</strong>. Bake the apples for 25 to 30 minutes, until they have softened and cooked through.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>6. </strong>Drain the raisins. Combine the raisins with the yogurt. To serve, place an apple on a serving dish. Top with a dollop of yogurt and sprinkle with some cinnamon.</p>
+<p class="story-body-text" itemprop="articleBody"><em>Cookâs note:</em> You may leave on the apple skin or peel it â itâs your choice. Firmer apples are better candidates for leaving the skin on. Softer apples are more likely to lose their shape and crumble from the steam if not peeled.</p>
+<p class="story-body-text" itemprop="articleBody">Yield: Serves 6</p>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//well.blogs.nytimes.com/2014/12/05/greek-yogurt-recipes/" data-title="The Yogurt Must Be Greek" data-description="Few people have as much appreciation for Greek yogurt â or expertise in making it â as Maria Loi, an acclaimed chef, author and host of television cooking shows.">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//well.blogs.nytimes.com/2014/12/04/after-a-cancer-diagnosis-learning-to-let-go/" title="After a Cancer Diagnosis, Learning to Let Go">
+				After a Cancer Diagnosis, Learning to Let Go			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//well.blogs.nytimes.com/2014/12/05/mushroom-recipes-for-health/" title="Wild About Mushrooms">
+				Wild About Mushrooms			</a>
+					</li>
+	</ul>
+</div>
+<div id="nytint-qa-well-widget" class="nytint-qa-widget module qaModule noContent">
+  <a class="nytint-qa-module-header" href="//well.blogs.nytimes.com/ask/well/questions"><h4 class="moduleHeader">Ask Well</h4></a>
+  <div class="nytint-qa-header-spacer">&nbsp;</div>
+  <p class="summary">Your health questions answered by Times journalists and&nbsp;experts.</p>
+  <form action="/svc/int/qa/questions/well/submit" method="POST" id="nytint-qa-ask-form" class="qaQuestionForm">
+    <!-- askbox.jst rendered here -->
+    <!-- these lines replaced by jst render--><div id="nytint-qa-question-box">
+      <!-- these lines replaced by jst render--><textarea name="question" class="textarea qaTextarea nytint-qa-form-element" id="nytint-qa-question-input" placeholder="What would you like to know?" disabled="disabled"></textarea>
+    <!-- these lines replaced by jst render--></div>
+  </form>
+  <div class="nytint-qa-recent-questions-wrapper clearfix nytint-qa-hidden">
+    <div class="nytint-qa-liner">
+      <h5><!-- (Recent/Related Questions) filled by javascript from nytqa.recent_questions.js --></h5>
+      <div class="nytint-qa-seemore">
+        <p><a href="//well.blogs.nytimes.com/ask/well/questions/yours" title="Your questions">Your Questions</a> | <a href="//well.blogs.nytimes.com/ask/well/questions">All &raquo;</a></p>
+      </div>
+      <ul class="nytint-qa-recent-questions clearfix">
+        <!-- question views get rendered into here -->
+      </ul>
+    </div>
+  </div>
+    <link href="https://int.nyt.com/applications/qa/assets/well-f0b8f674afd653cf65ff12f13234cb39.css" media="screen" rel="stylesheet" type="text/css" />
+    <script>
+  var NYTD = NYTD || {};
+      NYTD.NYTINT = NYTD.NYTINT || {};
+      NYTD.NYTINT.QA = NYTD.NYTINT.QA || {};
+      NYTD.NYTINT.QA.app_root_path = "/ask/";
+      NYTD.NYTINT.QA.svc_root_path = "/svc/int/qa/";
+      NYTD.NYTINT.QA.event_root_url = "/ask/well/questions";
+      NYTD.NYTINT.QA.event_slug = "well";
+      NYTD.NYTINT.QA.A_COL_FORM = false;
+  </script>
+    <script src="https://int.nyt.com/applications/qa/assets/well_base-7dc69e7a081837e27503446314bb2b89.js" type="text/javascript"></script>
+  <script src="https://int.nyt.com/applications/qa/assets/well_widget-2fbcafade4829875da7ba7c9cd2ced3c.js" type="text/javascript"></script>
+    <script>
+  require(['foundation/main'], function (Foundation) {
+    require(['nytint/qa/well_widget'], function () {});
+  });
+  </script>
+</div>
+
+<div id="nyt_featured_posts-11" class="module nocontent widget_nyt_featured_posts"><h4 class="moduleHeader"></h4>			<div class="subColumn-2">	<div class="column">
+		<div class="entry">
+						<div class="w190">
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">
+					<img src="https://static01.nyt.com/images/2016/08/31/well/family/well-family-exerciseask/well-family-exerciseask-articleInline.jpg" width="190" height="126" />
+				</a>
+			</div>
+			<div class="w600 hidden">
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">
+					<img src="https://static01.nyt.com/images/2016/08/31/well/family/well-family-exerciseask/well-family-exerciseask-videoSixteenByNine600.jpg" width="224" height="126" />
+				</a>
+			</div>
+						<h6 class="kicker">
+				<a href="//well.blogs.nytimes.com/category/ask-well/">Ask Well</a>
+			</h6>
+						<h5>
+				<a href="//well.blogs.nytimes.com/2016/09/02/can-you-safely-lose-weight-while-breast-feeding/">Can You Safely Lose Weight While Breast-Feeding?</a>
+							</h5>
+		</div><!--end of entry-->
+	</div><!--end of column-->
+						<div class="column lastColumn">
+		<div class="entry">
+						<div class="w190">
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">
+					<img src="https://static01.nyt.com/images/2016/08/29/science/well-klass-smallpenis/well-klass-smallpenis-articleInline.jpg" width="190" height="126" />
+				</a>
+			</div>
+			<div class="w600 hidden">
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">
+					<img src="https://static01.nyt.com/images/2016/08/29/science/well-klass-smallpenis/well-klass-smallpenis-videoSixteenByNine600.jpg" width="224" height="126" />
+				</a>
+			</div>
+						<h6 class="kicker">
+				<a href="//well.blogs.nytimes.com/category/family/the-checkup/">The Checkup</a>
+			</h6>
+						<h5>
+				<a href="//well.blogs.nytimes.com/2016/08/29/as-boys-get-fatter-parents-worry-one-body-part-is-too-small/">As Boys Get Fatter, Parents Worry One Body Part Is Too Small</a>
+							</h5>
+		</div><!--end of entry-->
+	</div><!--end of column-->
+		</div><!--end of sub-column2--></div><div id="nyt_promo_widget-14" class="module nocontent widget_nyt_promo_widget"><!-- Regilite iFrame 20140820 ~dj.paris -->
+<style>
+#regilite-bigad {
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding:10px;
+  height:250px;
+}
+#regilite-bigad h1 {
+  font-family: "nyt-franklin", "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 5px 0 15px 10px;
+  font-size: 16px;
+  line-height: 18px;
+}
+#regilite-bigad h1 a {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+#regi-image img {
+  display: block;
+  float: left;
+  padding: 0 10px;
+  width: 50px;
+}
+p#regi-copy {
+  font-size: 12px; 
+  line-height: 16px; 
+  margin: 0;
+  font-family: Georgia, "Times New Roman", sans-serif;
+  color: #333;
+  text-align: left;
+  padding: 0 10px 15px 0;
+}
+#regiframe-wrapper {
+  padding: 0 10px;
+}
+#regiframe-wrapper iframe {
+  border: 0;
+  width: 280px;
+  height: 180px;
+}
+</style>
+  
+
+  
+<div id="regilite-bigad">
+  <h1>
+   Sign Up for the Running Email
+  </h1>
+
+  <div id="regi-image">
+    <img src="https://static01.nyt.com/marketing/newsletters/images/Running_75.jpg" alt="Running Newsletter">
+  </div>
+
+  <p id="regi-copy">Get Well's Running email for practical tips, expert advice, exclusive content and a bit of motivation delivered to your inbox every week to help you on your running journey. Coming soon.</p>
+
+  <div id="regiframe-wrapper">
+    <iframe title="regilite" src="https://regilite.nytimes.com/regilite?product=RU&theme=Transparent&landing=true&addSlot=true&app=newsletter&sourceApp=nyt-v5&title=Running"></iframe>
+  </div>
+</div>
+
+<span class="adxInfo" style="display:none;">campaign: %%CAMP%% -- %%CAMP_UID%%, creative: %%ADID%% -- %%AD_UID%%, page: %%PAGE%%, targetedPage: %%TARGETEDPAGE%%, position: %%POS%%</span>
+</div>		<div class="module ad" id="MiddleRight"></div>
+        <div id="nyt_feed_in_flat_tabs-6" class="module nocontent widget_nyt_feed_in_flat_tabs">		<h4 class="moduleHeader left">Times Health</h4>
+		<div id="tabWidget-nyt_feed_in_flat_tabs-6" class="tabAutoLoad">
+			<div class="tabsContainer">
+				<ul class="tabs right">
+										<li class="selected">
+							<a href="javascript:void(0);">Most Viewed</a>
+						</li>
+												<li class="">
+							<a href="javascript:void(0);">Most E-mailed</a>
+						</li>
+										</ul>
+		   </div>
+		<div class="tabContent">
+	<div class="blog-story">
+		<ul class="refer">
+					<li>
+				<a href="//well.blogs.nytimes.com/2016/02/17/which-type-of-exercise-is-best-for-the-brain/">Which Type of Exercise Is Best for the Brain?</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2013/10/03/well-quiz-the-mind-behind-the-eyes/">Can You Read People&#8217;s Emotions?</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2011/01/28/how-meditation-may-change-the-brain/">How Meditation May Change the Brain</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2015/11/10/ask-well-the-health-benefits-of-meditation/">Ask The Health Benefits of Meditation</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2010/12/15/phys-ed-the-benefits-of-exercising-before-breakfast/">Phys Ed: The Benefits of Exercising Before Breakfast</a>
+			</li>
+						<li>
+				<a href="//well.blogs.nytimes.com/2015/07/07/dog-needs-a-walk-theres-an-app-for-that/">Dog Needs a Walk? There&#8217;s an App for That</a>
+			</li>
+					</ul>
+	</div>
+</div>
+		<div class="tabContent">
+	<div class="blog-story">
+		<ul class="refer">
+				</ul>
+	</div>
+</div>
+				</div>
+	</div>
+			<div class="module ad" id="Box1"></div>
+        <div id="nyt_blog_social_media-4" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-double ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">Well on</span></span>
+</h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/nytimeswell" title="Follow nytimeswell on Twitter">Twitter</a></li><li class="blog-fw-facebook double"><a href="https://facebook.com/WellNYT" title="Follow WellNYT on Facebook">Facebook</a></li></ul>
+</div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-39',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":76,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003605258"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1427889564" />
+<meta name="PUD" content="20150401" />
+<meta name="pdate" content="20150401" />
+<meta name="ptime" content="20150401075924" />
+<meta name="utime" content="20150401115924" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-04-01T11:59:24-04:00" />
+<meta name="DISPLAYDATE" content="April 1, 2015" />
+<meta name="dat" content="April 1, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Appointments and Executive Changes;Banking and Financial Institutions;Legal Profession;Mergers, Acquisitions and Divestitures;Venture Capital">
+<meta property="article:tag" content="Appointments and Executive Changes" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Legal Profession" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Appointments and Executive Changes,Banking and Financial Institutions,Legal Profession,Mergers Acquisitions and Divestitures,Venture Capital,DealBook" />
+<meta name="news_keywords" content="Appointments and Executive Changes,Banking and Finance,Lawyer,Mergers and Acquistions,Venture capital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F04%2F01%2Fmorning-agenda-simon-property-withdraws-offer-for-rival%2F" title="Morning Agenda: Simon Property Withdraws Offer For Rival" />
+<meta name="description" content="Simon Property Withdraws Offer For Rival &#124; GoDaddy Worth Above $3 Billion &#124; For Lawyers, Signs of Recovery &#124;The Start-Up Economy" />
+<meta name="hdl" content="Morning Agenda: Simon Property Withdraws Offer For Rival" />
+<meta property="og:title" content="Morning Agenda: Simon Property Withdraws Offer For Rival" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/04/01/morning-agenda-simon-property-withdraws-offer-for-rival/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Simon Property Withdraws Offer For Rival &#124; GoDaddy Worth Above $3 Billion &#124; For Lawyers, Signs of Recovery &#124;The Start-Up Economy" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Simon Property Withdraws Offer For Rival" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/04/01/morning-agenda-simon-property-withdraws-offer-for-rival/" />
+<meta name="twitter:description" content="Simon Property Withdraws Offer For Rival &#124; GoDaddy Worth Above $3 Billion &#124; For Lawyers, Signs of Recovery &#124;The Start-Up Economy" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/03/31/what-were-reading-42/' />
+<link rel='next' title='Morning Agenda: HSBC Criticized Over Compliance' href='//news.blogs.nytimes.com/2015/04/02/morning-agenda-hsbc-criticized-over-compliance/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/04/01/morning-agenda-simon-property-withdraws-offer-for-rival/' />
+<link rel='shortlink' href='//nyti.ms/1Mz1xrH' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/04/01/morning-agenda-simon-property-withdraws-offer-for-rival/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Simon Property Withdraws Offer For Rival - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2176 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Simon Property Withdraws Offer For Rival        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/04/01/morning-agenda-simon-property-withdraws-offer-for-rival/"
+	 data-title="Morning Agenda: Simon Property Withdraws Offer For Rival"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Simon Property Withdraws Offer For Rival | GoDaddy Worth Above $3 Billion | For Lawyers, Signs of Recovery |The Start-Up Economy&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/04/01/morning-agenda-simon-property-withdraws-offer-for-rival/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="April 1, 2015 7:59 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Simon Property Withdraws Offer For Rival</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-04-01T11:59:24+00:00" itemprop="datePublished">April 1, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">April 1, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2176 post type-post status-publish hentry category-dealbook tag-appointments-and-executive-changes tag-banking-and-financial-institutions tag-legal-profession tag-mergers-acquisitions-and-divestitures tag-venture-capital des-appointments-and-executive-changes des-banking-and-financial-institutions des-legal-profession des-mergers-acquisitions-and-divestitures des-venture-capital news_keywords-appointments-and-executive-changes news_keywords-banking-and-finance news_keywords-lawyer news_keywords-mergers-and-acquistions news_keywords-venture-capital-2" id="post-2176">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Simon Property Withdraws Offer For Rival</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-04-01T11:59:24+00:00" itemprop="datePublished">April 1, 2015 7:59 am</time>
+			<!-- date updated --><span class="visually-hidden updated">April 1, 2015 7:59 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/04/01/morning-agenda-simon-property-withdraws-offer-for-rival/" data-title="Morning Agenda: Simon Property Withdraws Offer For Rival" data-description="Simon Property Withdraws Offer For Rival | GoDaddy Worth Above $3 Billion | For Lawyers, Signs of Recovery |The Start-Up Economy">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SIMON PROPERTY WITHDRAWS OFFER FOR RIVAL</strong> <span class="divider"> | </span></span> The Simon Property Group withdrew its $23.2 billion offer for the Macerich Company after the rival mall operatorâs board rejected the unsolicited bid, <a href="//www.nytimes.com/2015/04/02/business/dealbook/simon-property-withdraws-offer-for-mall-rival-macerich.html">Chad Bray writes in DealBook</a>. Macerich said its directors determined that Simonâs sweetened proposal âcontinues to substantially undervalueâ the company.</p>
+<p class="story-body-text" itemprop="articleBody">Simon, the largest mall operator in the United States, had previously <a href="//www.prnewswire.com/news-releases/simon-property-group-makes-best-and-final-offer-to-acquire-macerich-for-9550-per-share-in-cash-and-stock-300053552.html">threatened to withdraw</a> its âbest and final offerâ if Macerich did not agree to meet to negotiate by the close of business on Wednesday. Macerich is the third-largest mall operator in the United States.</p>
+<p class="story-body-text" itemprop="articleBody">Late on Tuesday, Simon said Macerich chose not to âengage in discussions.â Macerich had shown little interest in Simonâs bid and had adopted measures to make a takeover more difficult, including a shareholder-rights plan, often referred to as a poison pill.</p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>GODADDY WORTH MORE THAN $3 BILLION</strong> <span class="divider"> | </span></span> As GoDaddy gets ready for its new life as a publicly traded company Wednesday, the largest Internet registrar is eager to prove to investors that it is now all grown up, <a href="//www.nytimes.com/2015/04/01/business/dealbook/godaddy-said-to-price-ipo-above-expected-range.html">Michael J. de la Merced writes in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Founded in 1997 by Bob Parsons, GoDaddy built a reputation for brashness through its series of risquÃ© ads (clips of the most infamous ones have been <a href="https://www.youtube.com/watch?v=u7yFCqOAb9Y">compiled by CNNMoney</a>). But since the investment firms Silver Lake, Kohlberg Kravis Roberts and Technology Crossover Ventures bought GoDaddy in 2011, the company has sought to <b>remake its image as well as its business model</b>, distancing itself from the scantily clad spokeswomen of the past and promoting itself as a guide to the Internet for small businesses.</p>
+<p class="story-body-text" itemprop="articleBody">Internet site registration remains GoDaddyâs biggest source of revenue, accounting for just more than half of its sales last year, but website hosting services and tools made up 39 percent of its bookings in the same period. GoDaddy is also one of the biggest resellers of Microsoft Officeâs 365 suite of productivity and email services.</p>
+<p class="story-body-text" itemprop="articleBody">This version of GoDaddy appears to be resonating with investors. The company <b>raised $440 million</b> after pricing its initial public offering at $20 a share late Tuesday, above its expected range of $17 to $19 a share, according to a person close to the transaction. At that price, the company has a market value of <b>just more than $3 billion</b>. GoDaddy will trade on the New York Stock Exchange <b>under the ticker symbol GDDY</b>.</p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FOR LAWYERS, SIGNS OF RECOVERY</strong> <span class="divider"> | </span></span> Although law school enrollment has fallen to levels not seen in decades and jobs are being lost to automation, itâs too soon to write off the legal sector, contends <a href="//www.nytimes.com/2015/04/01/business/dealbook/despite-forecasts-of-doom-signs-of-life-in-the-legal-industry.html">Steven Davidoff Solomon in the Deal Professor column,</a> citing several new studies to show that life is returning to the legal job market and that law school applications for this year may be stabilizing. </p>
+<p class="story-body-text" itemprop="articleBody">What may be more heartening to aspiring lawyers is a study of lawyer salaries from 1984 to 2013. The two co-authors, Frank McIntyre and Michael Simkovic, found that unemployment in a bad economy did lower the amount of money lawyers made relative to similarly educated people who did not go to law school, at least in the first four years of their careers. But the lawyers can make up the shortfall rapidly, the authors reported in another paper. That study found that âsuch acceleration in compensation results in <b>a premium of $1 million</b> for lawyers over their lifetime compared with those who did not go to law school.â In other words, it didnât matter whether the lawyers started school in a good or a bad economy.</p>
+<p class="story-body-text" itemprop="articleBody">The most compelling argument against going to law school is that transformations in the market have eliminated some jobs for good, but Mr. Solomon argues that the legal profession is growing in importance because of corporate compliance and regulatory issues. âIt is hard to see lawyers going away in the United States economy,â he writes. âThere will be disruptions, but this is likely to be a case of lawyers shifting from law firms to corporate departments and compliance becoming its own industry.â</p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The <b>ADP employment report for March</b> comes out at 8:15 a.m. The Markit <b>purchasing managersâ index for manufacturing for March</b> is released at 9:45 a.m. The <b>ISM manufacturing composite index for March</b> and <b>data on construction spending for February</b> will come out at 10 a.m. <b>Monsanto</b> reports its second-quarter earnings. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>THE START-UP ECONOMY</strong> <span class="divider"> | </span></span> On Thursday, DealBook will publish a special section on the challenges and trends that are shaping fledgling tech companies. Here is a preview of some of the articles that will be featured:</p>
+<p class="story-body-text" itemprop="articleBody"><b><a href="//www.nytimes.com/2015/04/02/business/dealbook/female-run-venture-funds-alter-the-status-quo.html?ref=dealbook">Female-Run Venture Funds Alter the Status Quo</a></b> A number of new investment firms started by women are bringing fresh perspectives, and funding appetites, to a field long dominated by men, Claire Cain Miller writes.<br />
+<b><a href="//www.nytimes.com/2015/04/02/business/dealbook/angel-investors-lend-expertise-as-well-as-cash.html?ref=dealbook">Angel Investors Lend Expertise as Well as Cash</a></b> A tech entrepreneur is tapping into his angel investors as more than a source of funds, Quentin Hardy writes.<br />
+<b><a href="//www.nytimes.com/2015/04/02/business/dealbook/nasdaq-builds-nursery-for-start-ups.html?ref=dealbook"><br />
+Nasdaq Builds Nursery for Start-Ups</a></b> Nasdaq is building a space aimed at teaching future generations of Mark Zuckerbergs how to create and run successful businesses, writes Michael J. de la Merced.</p>
+<p class="story-body-text" itemprop="articleBody"><b><a href="//www.nytimes.com/2015/04/02/business/dealbook/investing-early-on-for-insights-not-profits.html?ref=dealbook">Investing Early on for Insights, Not Profits</a></b> BBVA is one of many big banks that are trying to decode the ever-evolving world of financial technology, or âfin tech,â covering realms as varied as payment systems and debt collection, Michael Corkery writes.</p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Charter to Buy Bright House Networks Amid Merger Boom" src="https://static01.nyt.com/images/2015/04/01/business/db-charter-web2/db-charter-web2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Charter to Buy Bright House Networks Amid Merger Boom</strong> <span class="divider"> | </span></span> Charter Communicationsâ $10 billion bid for Bright House is one of more than $843 billion in deals that have been announced so far this year, as big corporations in industries including technology, media and health care carry out expensive mergers and acquisitions.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/01/business/dealbook/charter-to-buy-bright-house-networks-in-10-billion-deal.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/04/01/business/media/michael-angelakis-steps-down-as-comcast-finance-officer.html">Michael Angelakis to Step Down as Comcast Finance Officer</a> <span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Charterâs Deal May Not Be the Last Word on Bright House</strong> <span class="divider"> | </span></span> With Comcast-Time Warner Cable still in play, the cable landscape could realign again.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/01/business/dealbook/charters-deal-may-not-be-the-last-word-on-bright-house.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Michael Angelakis to Step Down as Comcast Finance Officer" src="https://static01.nyt.com/images/2015/04/01/business/01comcast/01comcast-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Michael Angelakis to Step Down as Comcast Finance Officer</strong> <span class="divider"> | </span></span> Mr. Angelakis was instrumental in Comcastâs $45 billion bid for Time Warner Cable, a deal that remains in regulatory limbo. He will lead a new Comcast-based investment venture.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/01/business/media/michael-angelakis-steps-down-as-comcast-finance-officer.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="New Lawsuits Emerge in HPâs Long-Running Autonomy Dispute" src="https://static01.nyt.com/images/2015/03/31/technology/31bits-hp/31bits-hp-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>New Lawsuits Emerge in HPâs Long-Running Autonomy Dispute</strong> <span class="divider"> | </span></span> Hewlett-Packard announced it was suing Autonomyâs executives, and the executives are suing back. It is all related to an $11 billion acquisition that went bad.<br /><span class="kicker"><a href="//bits.blogs.nytimes.com/2015/03/31/new-lawsuits-emerge-in-hps-long-running-autonomy-dispute/">Bits Blog &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="In Advertising Technology Deal, Rubicon Buys Chango " src="https://static01.nyt.com/images/2015/04/01/business/01RUBICON/01RUBICON-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>In Advertising Technology Deal, Rubicon Buys Chango </strong> <span class="divider"> | </span></span> The deal gives Rubicon access to Changoâs intent marketing technology, which delivers ads based on a consumerâs intent to buy a product or service.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/01/business/media/in-advertising-technology-deal-rubicon-buys-chango.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Harman to Buy Bang &#038; Olufsenâs Car-Stereo Business</strong> <span class="divider"> | </span></span> The $156 million deal will give Harman International, a maker of in-car multimedia systems, a dominant position in the car sound-system business.<br /><span class="kicker"><a href="//www.wsj.com/articles/harman-to-buy-bang-olufsens-car-stereo-business-1427808010"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Procter &#038; Gamble Sells a Vicks Product Line to Helen of Troy</strong> <span class="divider"> | </span></span> Procter &#038; Gamble, which has been selling brands to focus on its largest, most profitable operations, has sold its Vicks VapoSteam United States liquid inhalant business to Helen of Troy.<br /><span class="kicker"><a href="//www.wsj.com/articles/procter-gamble-sells-vicks-vapostream-u-s-business-to-helen-of-troy-1427842613?mod=WSJ_hp_LEFTWhatsNewsCollection"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Daily News Said to Get Bids From Cablevision and Billionaire Grocer</strong> <span class="divider"> | </span></span> John A. Catsimatidis, the owner of Gristedes, and Cablevision, led by James L. Dolan, are said to have made bids to buy the newspaper.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/01/business/media/daily-news-said-to-get-bids-from-cablevision-and-billionaire-grocer.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Warburg Pincus to Invest $500 Million in Oil and Gas Firm I.R.M.</strong> <span class="divider"> | </span></span> Warburg Pincus has become one of the few private equity firms to strike such a deal amid the uncertainty over fuel prices.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/01/business/dealbook/warburg-pincus-to-invest-500-million-in-oil-and-gas-firm-irm.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bob Diamondâs African Banking Venture Runs Into Problem</strong> <span class="divider"> | </span></span> Just over a year after the former Barclays chief Bob Diamond founded Atlas Mara to build an African banking empire, some investors have questioned lavish executive pay and the vehicleâs share price has tumbled.<br /><span class="kicker"><a href="//www.wsj.com/articles/bob-diamonds-african-banking-venture-runs-into-problems-1427868648?mod=WSJ_hp_RightTopStories"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>UBS Shareholders to Vote for First Time on Executive and Board Pay</strong> <span class="divider"> | </span></span> The vote, set for the annual meeting in May, comes after Switzerland adopted new rules intended to limit excessive compensation at companies listed there.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/02/business/dealbook/ubs-shareholders-to-vote-for-first-time-on-executive-and-board-pay.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Japan, Sticking With U.S., Says It Wonât Join China-Led Bank</strong> <span class="divider"> | </span></span> Prime Minister Shinzo Abe said it was important for strategic reasons that Japan back the United States, which has urged allies not to join the bank.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/01/world/asia/japan-says-no-to-asian-infrastructure-investment-bank.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Apax Said to Return $4.5 Billion to Investors in 3 Months</strong> <span class="divider"> | </span></span> The move is a turnaround for Apaxâs seventh pool, a 11.2 billion-euro fund raised in 2007, which the firmâs executives had expected to deliver a 30 percent loss during the financial crisis; it is now valued at 60 percent more than its backersâ original pledges.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-04-01/apax-said-to-return-4-5-billion-to-investors-in-three-months"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Viswanathan Shankar to Leave Standard Chartered</strong> <span class="divider"> | </span></span> The head of the British bankâs Europe, Middle East, Africa and Americas business is said to be planning to start a private equity fund.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/02/business/dealbook/viswanathan-shankar-to-leave-standard-chartered.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Plan to Keep 1,700 RadioShack Stores Open Is Approved</strong> <span class="divider"> | </span></span> Judge Brendan L. Shannon of Federal Bankruptcy Court cleared the way for RadioShack to sell 1,740 of its locations to Standard General, a hedge fund.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/01/business/dealbook/plan-to-keep-1700-radioshack-stores-open-is-approved.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>One Womanâs Crusade for Samsung Family to Repay $2.2 Billion I.P.O. Windfall</strong> <span class="divider"> | </span></span> Bloomberg News profiles Park Young Sun, who has taken aim at the chaebol system in South Korea and says Samsung should pay back profits from a 1999 deal later ruled by courts to be illegal â money she says the family may use to fund the transfer of assets to the children of the Samsung patriarch Lee Kun Hee. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-04-01/-chaebol-sniper-targets-samsung-lees-2-2-billion-ipo-windfall"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Etsy Sets Price Range for Its I.P.O.</strong> <span class="divider"> | </span></span> At the midpoint of the range, the online marketplace beloved by makers of handmade jewelry and yoga bags would be valued at $1.2 billion.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/01/business/dealbook/etsy-sets-price-range-for-its-ipo.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Andreessen Horowitz Invests Another $52 Million in Network Start-Up Tanium</strong> <span class="divider"> | </span></span> The new investment values the start-up at about $1.75 billion, or nearly double the valuation attached to its financing round last summer.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/01/business/dealbook/andreessen-horowitz-invests-another-52-million-in-network-start-up-tanium.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Energy Company Samson Hints at Bankruptcy</strong> <span class="divider"> | </span></span> The energy company disclosed in a regulatory filing that it might try to reorganize under Chapter 11 and had hired advisers to assist in its efforts.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/01/business/dealbook/energy-company-samson-hints-at-bankruptcy.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>OAS, Brazilian Engineering Company, Seeks Bankruptcy Protection</strong> <span class="divider"> | </span></span> OAS is the third big Petrobras subcontractor to request a bankruptcy courtâs protection as an investigation into a pay-for-play scheme continues.<br /><span class="kicker"><a href="//www.nytimes.com/2015/04/01/business/dealbook/oas-brazilian-engineering-company-seeks-bankruptcy-protection.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/04/01/morning-agenda-simon-property-withdraws-offer-for-rival/"
+					data-title="Morning Agenda: Simon Property Withdraws Offer For Rival"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Simon Property Withdraws Offer For Rival | GoDaddy Worth Above $3 Billion | For Lawyers, Signs of Recovery |The Start-Up Economy&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/04/01/morning-agenda-simon-property-withdraws-offer-for-rival/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":59,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

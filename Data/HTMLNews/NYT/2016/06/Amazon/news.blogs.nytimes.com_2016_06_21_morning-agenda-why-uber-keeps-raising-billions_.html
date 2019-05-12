@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004484034"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1466503790" />
+<meta name="PUD" content="20160621" />
+<meta name="pdate" content="20160621" />
+<meta name="ptime" content="20160621060950" />
+<meta name="utime" content="20160621100950" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-06-21T10:09:50-04:00" />
+<meta name="DISPLAYDATE" content="June 21, 2016" />
+<meta name="dat" content="June 21, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Soros, George;Thiam, Tidjane;Winterkorn, Martin;Yellen, Janet L">
+<meta name="des" content="Banking and Financial Institutions;British Pound (Currency);Currency;Endowments;Gun Control;Hedge Funds;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Polls and Public Opinion;Private Equity;Racketeering and Racketeers;Referendums;Regulation and Deregulation of Industry;Stocks and Bonds;Suits and Litigation (Civil);Venture Capital">
+<meta name="org" content="Carlyle Group LP;Credit Suisse Group AG;Deutsche Borse AG;European Union;Federal Reserve System;Financial Stability Oversight Council;JD.com;LVMH Moet Hennessy Louis Vuitton SA;Reynolds, R J, Tobacco Co;Supreme Court (US);Uber Technologies Inc;Volkswagen AG">
+<meta name="ticker" content="Carlyle Group LP|CG|NASDAQ;Credit Suisse Group AG|CS|NYSE;Volkswagen AG|VLKAY|Other OTC" />
+<meta property="article:tag" content="Soros George" />
+<meta property="article:tag" content="Thiam Tidjane" />
+<meta property="article:tag" content="Winterkorn Martin" />
+<meta property="article:tag" content="Yellen Janet L" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="British Pound (Currency)" />
+<meta property="article:tag" content="Currency" />
+<meta property="article:tag" content="Endowments" />
+<meta property="article:tag" content="Gun Control" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Polls and Public Opinion" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Racketeering and Racketeers" />
+<meta property="article:tag" content="Referendums" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Carlyle Group LP" />
+<meta property="article:tag" content="Credit Suisse Group AG" />
+<meta property="article:tag" content="Deutsche Borse AG" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Financial Stability Oversight Council" />
+<meta property="article:tag" content="JD.com" />
+<meta property="article:tag" content="LVMH Moet Hennessy Louis Vuitton SA" />
+<meta property="article:tag" content="Reynolds R J Tobacco Co" />
+<meta property="article:tag" content="Supreme Court (US)" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="Volkswagen AG" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Soros George,Thiam Tidjane,Winterkorn Martin,Yellen Janet L,Banking and Financial Institutions,British Pound (Currency),Currency,Endowments,Gun Control,Hedge Funds,Initial Public Offerings,Mergers Acquisitions and Divestitures,Polls and Public Opinion,Private Equity,Racketeering and Racketeers,Referendums,Regulation and Deregulation of Industry,Stocks and Bonds,Suits and Litigation (Civil),Venture Capital,Carlyle Group LP,Credit Suisse Group AG,Deutsche Borse AG,European Union,Federal Reserve System,Financial Stability Oversight Council,JD.com,LVMH Moet Hennessy Louis Vuitton SA,Reynolds R J Tobacco Co,Supreme Court (US),Uber Technologies Inc,Volkswagen AG,DealBook" />
+<meta name="news_keywords" content="Currency,Endowments,Referendum" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F06%2F21%2Fmorning-agenda-why-uber-keeps-raising-billions%2F" title="Morning Agenda: Why Uber Keeps Raising Billions" />
+<meta name="description" content="Credit Suisse Chief Contends With Rising Tensions &#124; Caution and Uncertainty Before Britain&#8217;s Referendum" />
+<meta name="hdl" content="Morning Agenda: Why Uber Keeps Raising Billions" />
+<meta property="og:title" content="Morning Agenda: Why Uber Keeps Raising Billions" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/06/21/morning-agenda-why-uber-keeps-raising-billions/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Credit Suisse Chief Contends With Rising Tensions &#124; Caution and Uncertainty Before Britain&#8217;s Referendum" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Why Uber Keeps Raising Billions" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/06/21/morning-agenda-why-uber-keeps-raising-billions/" />
+<meta name="twitter:description" content="Credit Suisse Chief Contends With Rising Tensions &#124; Caution and Uncertainty Before Britain&#8217;s Referendum" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Energy Transfer and Williams Near a Reckoning' href='//news.blogs.nytimes.com/2016/06/20/morning-agenda-energy-transfer-and-williams-near-a-reckoning/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/06/21/what-were-reading-164/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/06/21/morning-agenda-why-uber-keeps-raising-billions/' />
+<link rel='shortlink' href='//nyti.ms/28JyQI1' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/06/21/morning-agenda-why-uber-keeps-raising-billions/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Why Uber Keeps Raising Billions - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5088 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Why Uber Keeps Raising Billions        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/06/21/morning-agenda-why-uber-keeps-raising-billions/"
+	 data-title="Morning Agenda: Why Uber Keeps Raising Billions"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Credit Suisse Chief Contends With Rising Tensions | Caution and Uncertainty Before Britain&#039;s Referendum&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/21/morning-agenda-why-uber-keeps-raising-billions/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 21, 2016 6:09 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Why Uber Keeps Raising Billions</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-06-21T10:09:50+00:00" itemprop="datePublished">June 21, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">June 21, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5088 post type-post status-publish hentry category-dealbook tag-banking-and-financial-institutions tag-british-pound-currency tag-carlyle-group-lp tag-credit-suisse-group-ag tag-currency tag-deutsche-borse-ag tag-endowments tag-european-union tag-federal-reserve-system tag-financial-stability-oversight-council tag-gun-control tag-hedge-funds tag-initial-public-offerings tag-jd-com tag-lvmh-moet-hennessy-louis-vuitton-sa tag-mergers-acquisitions-and-divestitures tag-polls-and-public-opinion tag-private-equity tag-racketeering-and-racketeers tag-referendums tag-regulation-and-deregulation-of-industry tag-reynolds-r-j-tobacco-co tag-soros-george tag-stocks-and-bonds tag-suits-and-litigation-civil tag-supreme-court-us tag-thiam-tidjane tag-uber-technologies-inc tag-venture-capital tag-volkswagen-ag tag-winterkorn-martin tag-yellen-janet-l per-soros-george per-thiam-tidjane per-winterkorn-martin per-yellen-janet-l des-banking-and-financial-institutions des-british-pound-currency des-currency des-endowments des-gun-control des-hedge-funds des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-polls-and-public-opinion des-private-equity des-racketeering-and-racketeers des-referendums des-regulation-and-deregulation-of-industry des-stocks-and-bonds des-suits-and-litigation-civil des-venture-capital org-carlyle-group-lp org-credit-suisse-group-ag org-deutsche-borse-ag org-european-union org-federal-reserve-system org-financial-stability-oversight-council org-jd-com org-lvmh-moet-hennessy-louis-vuitton-sa org-reynolds-r-j-tobacco-co org-supreme-court-us org-uber-technologies-inc org-volkswagen-ag news_keywords-currency news_keywords-endowments news_keywords-referendum" id="post-5088">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Why Uber Keeps Raising Billions</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-06-21T10:09:50+00:00" itemprop="datePublished">June 21, 2016 6:09 am</time>
+			<!-- date updated --><span class="visually-hidden updated">June 21, 2016 6:09 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/06/21/morning-agenda-why-uber-keeps-raising-billions/" data-title="Morning Agenda: Why Uber Keeps Raising Billions" data-description="Credit Suisse Chief Contends With Rising Tensions | Caution and Uncertainty Before Britain&#039;s Referendum">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>WHY UBER KEEPS RAISING BILLIONS</strong> <span class="divider"> | </span></span> It feels like almost every other week there is a new headline about Uber raising more money,<br />
+<a href="//www.nytimes.com/2016/06/21/business/dealbook/why-uber-keeps-raising-billions.html">Andrew Ross Sorkin writes in the DealBook column. </a></p>
+<p class="story-body-text" itemprop="articleBody">If you add up all the money the company has raised since it started in 2009, <b>it is on its way to amassing $15 billion</b> and has a valuation of $68 billion â all while remaining a private company.</p>
+<p class="story-body-text" itemprop="articleBody">When Amazon went public in 1997, it had raised $54 million and was valued at $438 million. </p>
+<p class="story-body-text" itemprop="articleBody">Uber has to finance its efforts to grab market share in China and India, but <b>it is also trying to mark its territory</b>. Every time Uber raises another $1 billion, investors find it less attractive to back one of Uberâs rivals: Didi Chuxing, Lyft, Gett, Halo, Juno. It is a war of attrition, to starve the competition of cash. </p>
+<p class="story-body-text" itemprop="articleBody">Uberâs efforts seem to have had the opposite effect so far, spawning a long list of rivals, but <b>as the smaller competitors run out of cash, venture capitalists should be less inclined to put up more money.</b> </p>
+<p class="story-body-text" itemprop="articleBody">This arms race comes against the backdrop of falling valuations and there is a rush to take the money while it is still available. Bill Gurley, a venture capitalist who has a stake in Uber and sits on its board, warned investors about unicorns seeking funds: âYou are not being invited to a special dance, you are being approached because you are the lender of last resort.â </p>
+<p class="story-body-text" itemprop="articleBody">The question is whether investors will look at Uberâs balance sheet and throw up the white flag. It still has formidable competition from Didi, the market leader in China, which just raised $7 billion. And some of the same investors that have backed Uber are also backing Didi, including BlackRock and Tiger Global. (Some may be hoping that Uber might one day merge its Chinese operation with Didi.)</p>
+<p class="story-body-text" itemprop="articleBody">Uberâs most recent fund-raising effort â <b>focused on the leveraged loan market</b> â aims to avoid diluting the current base of shareholders and having to sell itself at an even higher valuation. It will have to pay up for the financing, but if its valuation continues to grow, it would be a bargain compared with the value of the equity. Uber is hoping to sell debt with a yield of 4 or 4.5 percent.  </p>
+<p class="story-body-text" itemprop="articleBody"><b>The question between now and the probable initial public offering in a few years is whether it will have starved all of its competitors along the way.</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CREDIT SUISSE CHIEF CONTENDS WITH RISING TENSIONS</strong> <span class="divider"> | </span></span> Tidjane Thiam, Credit Suisseâs chief executive, is on the defensive again after its stock sank again,<br />
+<a href="//www.nytimes.com/2016/06/21/business/dealbook/credit-suisse-chief-contends-with-growing-tensions-and-a-sinking-stock.html?ref=business">Landon Thomas Jr. reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Mr. Thiam sent employees a memorandum that said hedge funds were betting against Credit Suisse shares with the view that Mr. Thiam would have to raise more capital from investors. <b>Mr. Thiam, who regularly sends updates to employees, called these concerns unfounded. </b></p>
+<p class="story-body-text" itemprop="articleBody">Shares in Credit Suisse have sunk by more than 50 percent since Mr. Thiam took over last summer. Last week, its stock touched a new low of 11.8 Swiss francs, or about $12.25, but recovered a little and closed at 12.83 Swiss francs on Monday. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Thiam has been blunt about how the bank needed to shift from its model of riskier, capital-intensive trading and banking business toward providing financial services to wealthy clients in fast-growing emerging markets. But his brusque manner and the perception that he is not making the same sacrifices that he asks of the bankers have created tension. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Mr. Thiam has repeatedly said that he would not backtrack as a result of investment bankersâ complaints.</b><br />
+He met last week with David Herro of Harris Associates, which owns nearly 10 percent of Credit Suisse. <b>Mr. Herro endorsed the new strategy</b>, but did say it was important for Mr. Thiam to get his message across internally. âIf change is going to happen, it has to be done with good communication and empathy toward employees,â he said. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Herro also said that he saw no need for Credit Suisse to raise new funds.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>Janet L. Yellen</b>, the chairwoman of the Federal Reserve, will testify on monetary policy before Congress at 10 a.m.  <b>The Financial Stability Oversight Council</b> meets at 4:30 p.m. at the Treasury Department. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CAUTION AND UNCERTAINTY BEFORE BRITAINâS REFERENDUM</strong> <span class="divider"> | </span></span> Asian markets rose tentatively on Tuesday, after a rally on Monday prompted by growing expectations that Britain would vote to remain in the European Union, <a href="//www.reuters.com/article/us-global-markets-idUSKCN0Z701O">Reuters reports.</a> The sterling hit a seven-week high against the dollar, while markets were more mixed.  <b>Investors were still wary ahead of the vote on Thursday and the testimony of Janet L. Yellen before Congress.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Stocks had soared on Monday after opinion polls and betting markets suggested it was more likely that Britain would stay within the European Union.  Investors dumped haven assets like gold and the British pound rose sharply, <a href="//www.nytimes.com/2016/06/21/business/daily-stock-market-activity.html?em_pos=small&#038;ref=headline&#038;nl_art=0&#038;te=1&#038;nl=dealbook&#038;emc=edit_dk_20160620">The Associated Press reports. </a></p>
+<p class="story-body-text" itemprop="articleBody">There may have been swings in the markets, but <b>in the run-up to the vote, many have chosen to keep their powder dry</b>. Investors have been reluctant to invest in new London listings and companies have delayed announcing their intention to file until after the vote, <a href="//www.nytimes.com/2016/06/21/business/dealbook/uncertainty-over-brexit-vote-damps-ipos-in-london.html?em_pos=small&#038;ref=headline&#038;nl_art=2&#038;te=1&#038;nl=dealbook&#038;emc=edit_dk_20160620">Chad Bray reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Britain has been one of the most active markets for initial public offerings in Europe in recent years, but <b>uncertainty about the referendum has kept many on the sidelines</b>.  Edward Sankey, the co-head of equity capital markets for Europe, the Middle East and Africa at Deutsche Bank, said he expected little activity in new stocks for a while. European companies have warned that a so-called Brexit could affect their listing plans.  </p>
+<p class="story-body-text" itemprop="articleBody">Hedge funds have opted to shy away from making big bets on the referendum, <a href="//www.ft.com/cms/s/0/7ffd5674-349b-11e6-bda0-04585c31b153.html#axzz4C5g32OMW">The Financial Times reports.</a> Many have already had a painful first half of the year and are unwilling to risk further losses. With the outcome so uncertain, many large hedge funds have reduced their overall market exposure rather than trying to predict a result. </p>
+<p class="story-body-text" itemprop="articleBody">One hedge fund manager controlling a multibillion-dollar fund told The Financial Times that traders were finding it hard to find a clear edge: âThere is a lot of defensive positioning,â he said. âMost people think it is too close to call. <b>It would be crazy to make any large bets on it due to the poor start to the year.</b>&#8221; </p>
+<p class="story-body-text" itemprop="articleBody">Stan Miranda, the chief executive at Partners Capital in London, said his fund had put on smaller trades and  expected sterling to fall as much as 15 percent on an exit vote. </p>
+<p class="story-body-text" itemprop="articleBody">George  Soros, who earned fame with a bet against the British pound in 1992, warned <a href="https://www.theguardian.com/commentisfree/2016/jun/20/brexit-crash-pound-living-standards-george-soros">in The Guardian</a> that a vote to leave the European Union would be worse than âBlack Fridayâ for Britain, referring to the day in September 1992 when it dropped out of the European Exchange Rate Mechanism because the pound fell lower than its minimum level. Mr. Soros argued that while the devaluation was healthy then, a large devaluation would be much more damaging for Britain now. </p>
+<p class="story-body-text" itemprop="articleBody"><b>âA vote for Brexit would make some people very rich â but most voters considerably poorer,â he wrote.</b> </p>
+<p class="story-body-text" itemprop="articleBody">It may look as if there are big profits to be made, but  industry changes mean that even market makers could struggle to ensure normal service, <a href="//www.nytimes.com/2016/06/21/business/dealbook/brexit-vote-spurs-concerns-over-market-liquidity.html?em_pos=small&#038;ref=headline&#038;nl_art=1&#038;te=1&#038;nl=dealbook&#038;emc=edit_dk_20160620">Swaha Pattanaik writes in Breakingviews.</a> <b>Banks and stock exchanges have warned their clients about difficult and volatile trading conditions</b>, in which there will be risk of gaps in the pricing of assets. There are also potential problems with one-way traffic and illiquidity. There has been huge appetite for options to sell the pound and little for ones to buy it. The skewed demand leaves market makers saddled with more risk and they have reacted by pushing up the price of such options. </p>
+<p class="story-body-text" itemprop="articleBody">Banks have also scaled back risk limits, partly because of postcrisis regulations, and market makers have been scarred by the sharp moves that came after the Swiss National Bankâs decision to ditch its currency cap in 2015. </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.ft.com/cms/s/0/94491576-34d4-11e6-bda0-04585c31b153.html#axzz4C5g32OMW">The Financial Times reports</a> that banks in the United States taking part in the Federal Reserveâs annual stress tests had included the risk of Brexit in their submissions. <b>Concerns have mounted on Wall Street about Brexit</b>  and a KBW report estimated that if Britain left the European Union, it would knock 5 to 9 percent off the profits of the five largest banks in the United States next year. </p>
+<p class="story-body-text" itemprop="articleBody">All this makes life a lot less fun â and profitable â for traders today than in 1992, Ms. Pattanaik writes.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Elliott and Private Equity Firm to Buy Dellâs Software Unit" src="https://static01.nyt.com/images/2016/06/21/business/db-dell1/db-dell1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Elliott and Private Equity Firm to Buy Dellâs Software Unit</strong> <span class="divider"> | </span></span> The buyers are getting a mix of software makers that Dell acquired over the years, including SonicWall and Quest Software.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/21/business/dealbook/elliott-and-private-equity-firm-to-buy-dells-software-unit.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>McKesson Said to Consider Merging I.T. Unit With Change Healthcare</strong> <span class="divider"> | </span></span> McKesson, one of the largest drug distributors in the United States, has held talks about merging its information technology unit with the health care technology company Change Healthcare to create a company that could be worth more than $10 billion, Reuters reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/us-mckesson-m-a-changehealthcare-idUSKCN0Z70A6?feedType=RSS&#038;feedName=innovationNews">reuters </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Walmart Sells E-Commerce Site in China, Forging Strategic Alliance</strong> <span class="divider"> | </span></span> Walmart is selling its Chinese online business, Yihaodian, to Chinaâs No. 2 e-commerce site, JD.com, in an effort to bolster its presence there.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/21/business/international/walmart-sells-e-commerce-site-in-china-forging-strategic-alliance.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>LVMH-Backed Private Equity Fund Sued by Former Executive</strong> <span class="divider"> | </span></span> L Capital Asia Advisors, an Asian private equity unit backed by LVMH, is being sued by Uday Mehra, a former executive, who says that he was fired for revealing wrongdoing at the business.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-06-21/lvmh-backed-asia-private-equity-fund-sued-by-fired-executive"> bloomberg</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Carlyle Group Hires Former Johnson &#038; Johnson Executive to Advise Asia Buyout Fund </strong> <span class="divider"> | </span></span> Carlyle Group has hired Jesse Wu, a former senior executive at Johnson &#038; Johnson, to advise on investing in Chinaâs health care sector, as a series of measures attracts more private equity firms to the industry.<br /><span class="kicker"><a href="//www.wsj.com/articles/carlyle-group-hires-former-j-j-executive-to-advise-asia-buyout-fund-1466442004">the wall street journal</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche BÃ¶rse to Create Financial Technology Venture Fund </strong> <span class="divider"> | </span></span> Deutsche BÃ¶rse, Europeâs largest exchanges operator, plans to make investments in emerging technology and offload some of its existing minority shareholdings in start-up companies. <br /><span class="kicker"><a href="//www.ft.com/cms/s/0/2ad7b42c-370d-11e6-a780-b48ed7b6126f.html?ftcamp=published_links%2Frss%2Fmarkets%2Ffeed%2F%2Fproduct#axzz4C5g32OMW">the financial times </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Supreme Court Sides With R.J. Reynolds in RICO Case" src="https://static01.nyt.com/images/2016/06/21/business/21BIZCOURT/21BIZCOURT-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Supreme Court Sides With R.J. Reynolds in RICO Case</strong> <span class="divider"> | </span></span> The Supreme Court ruled 4 to 3 that the tobacco company could not be sued for money-laundering by the European Union under an American racketeering law.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/21/business/international/justices-side-with-rj-reynolds-in-rico-case.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Former Chief of Volkswagen Is Under Investigation" src="https://static01.nyt.com/images/2016/06/21/business/21VOLKSWAGEN-1/21VOLKSWAGEN-1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Former Chief of Volkswagen Is Under Investigation</strong> <span class="divider"> | </span></span> The chief, Martin Winterkorn, who resigned in September, is the first member of the carmakerâs top management to be identified as a suspect in the emissions scandal.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/21/business/international/volkswagen-winterkorn-germany.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Message to Workers Under Scrutiny: Cooperate or Get Fired" src="https://static01.nyt.com/images/2016/06/21/business/21DB-WHITECOLLAR/21DB-WHITECOLLAR-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Message to Workers Under Scrutiny: Cooperate or Get Fired</strong> <span class="divider"> | </span></span> A recent court decision makes it clear that a company under government investigation can fire uncooperative employees with little fear of reprisal, Peter J. Henning writes in White Collar Watch.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/21/business/dealbook/message-to-workers-under-scrutiny-cooperate-or-get-fired.html">White Collar Watch &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Hoping Jobs for India Follow, Modi Clears Investorsâ Path" src="https://static01.nyt.com/images/2016/06/21/world/21modi-web4/21modi-web4-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hoping Jobs for India Follow, Modi Clears Investorsâ Path</strong> <span class="divider"> | </span></span> The changes are the most significant loosening of market restrictions since India began economic liberalization, with foreigners now permitted to own 100 percent of many companies.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/21/world/asia/india-needing-jobs-eases-rules-on-foreign-investment.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2016/06/19/business/head-of-indias-central-bank-says-he-will-step-down.html">Raghuram Rajan Says Heâll Step Down as Head of Indiaâs Central Bank</a> <time class="timestamp" data-eastern-timestamp="3:20 PM" datetime="2016-06-18" data-utc-timestamp="1466277648000">3:20 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Supreme Court Turns Away Challenge to Connecticut Ban on Semiautomatic Weapons" src="https://static01.nyt.com/images/2016/06/21/us/21gunsscotus/21gunsscotus-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Supreme Court Turns Away Challenge to Connecticut Ban on Semiautomatic Weapons</strong> <span class="divider"> | </span></span> The justices on Monday refused to hear a Second Amendment challenge to gun-control measures put in place after the Sandy Hook Elementary School massacre.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/21/us/politics/supreme-court-gun-control-semiautomatic-connecticut.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Harvard Shifts More Investment to Outside Money Managers </strong> <span class="divider"> | </span></span> Harvard University trimmed staff at its $37.6 billion endowment and will redirect more investment to outside money managers while the chief executive is on temporary medical leave, Bloomberg reports, citing an internal email. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-06-20/harvard-trims-staff-at-37-billion-endowment-with-ceo-on-leave">bloomberg </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/06/21/morning-agenda-why-uber-keeps-raising-billions/"
+					data-title="Morning Agenda: Why Uber Keeps Raising Billions"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Credit Suisse Chief Contends With Rising Tensions | Caution and Uncertainty Before Britain&#039;s Referendum&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/21/morning-agenda-why-uber-keeps-raising-billions/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":66,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

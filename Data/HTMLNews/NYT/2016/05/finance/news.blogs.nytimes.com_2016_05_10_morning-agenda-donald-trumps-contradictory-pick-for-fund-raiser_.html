@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004397363"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1462875590" />
+<meta name="PUD" content="20160510" />
+<meta name="pdate" content="20160510" />
+<meta name="ptime" content="20160510061950" />
+<meta name="utime" content="20160510101950" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-05-10T10:19:50-04:00" />
+<meta name="DISPLAYDATE" content="May 10, 2016" />
+<meta name="dat" content="May 10, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Ackman, William A;Dalio, Raymond (1949- );Dudley, William C;Griffin, Kenneth C;Icahn, Carl C;Laplanche, Renaud;Lew, Jacob J;Loeb, Daniel S;Mnuchin, Steven T;Redstone, Shari;Redstone, Sumner M;Simons, James Harris;Trump, Donald J">
+<meta name="des" content="Banking and Financial Institutions;European Sovereign Debt Crisis (2010- );Executive Compensation;Hedge Funds;Hotels and Travel Lodgings;Initial Public Offerings;Insider Trading;Mergers, Acquisitions and Divestitures;Ponzi and Pyramid Schemes;Presidential Election of 2016;Private and Sectarian Schools;Private Equity;Regulation and Deregulation of Industry;Stocks and Bonds;Tax Evasion">
+<meta name="org" content="Anbang Insurance Group Co;Bridgewater Associates;China Securities Regulatory Commission;Citadel Investment Group;Goldman Sachs Group Inc;Institutional Investor;Law School Admission Council;Lending Club;Medivation Inc;Morgans Hotel Group LLC;Pershing Square Capital Management;Prosper Marketplace Inc;Renaissance Technologies;Sanofi SA;Treasury Department;Zoetis Inc">
+<meta name="geo" content="Puerto Rico">
+<meta property="article:tag" content="Ackman William A" />
+<meta property="article:tag" content="Dalio Raymond (1949- )" />
+<meta property="article:tag" content="Dudley William C" />
+<meta property="article:tag" content="Griffin Kenneth C" />
+<meta property="article:tag" content="Icahn Carl C" />
+<meta property="article:tag" content="Laplanche Renaud" />
+<meta property="article:tag" content="Lew Jacob J" />
+<meta property="article:tag" content="Loeb Daniel S" />
+<meta property="article:tag" content="Mnuchin Steven T" />
+<meta property="article:tag" content="Redstone Shari" />
+<meta property="article:tag" content="Redstone Sumner M" />
+<meta property="article:tag" content="Simons James Harris" />
+<meta property="article:tag" content="Trump Donald J" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="European Sovereign Debt Crisis (2010- )" />
+<meta property="article:tag" content="Executive Compensation" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Hotels and Travel Lodgings" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Insider Trading" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Ponzi and Pyramid Schemes" />
+<meta property="article:tag" content="Presidential Election of 2016" />
+<meta property="article:tag" content="Private and Sectarian Schools" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Tax Evasion" />
+<meta property="article:tag" content="Anbang Insurance Group Co" />
+<meta property="article:tag" content="Bridgewater Associates" />
+<meta property="article:tag" content="China Securities Regulatory Commission" />
+<meta property="article:tag" content="Citadel Investment Group" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Institutional Investor" />
+<meta property="article:tag" content="Law School Admission Council" />
+<meta property="article:tag" content="Lending Club" />
+<meta property="article:tag" content="Medivation Inc" />
+<meta property="article:tag" content="Morgans Hotel Group LLC" />
+<meta property="article:tag" content="Pershing Square Capital Management" />
+<meta property="article:tag" content="Prosper Marketplace Inc" />
+<meta property="article:tag" content="Renaissance Technologies" />
+<meta property="article:tag" content="Sanofi SA" />
+<meta property="article:tag" content="Treasury Department" />
+<meta property="article:tag" content="Zoetis Inc" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Ackman William A,Dalio Raymond (1949- ),Dudley William C,Griffin Kenneth C,Icahn Carl C,Laplanche Renaud,Lew Jacob J,Loeb Daniel S,Mnuchin Steven T,Redstone Shari,Redstone Sumner M,Simons James Harris,Trump Donald J,Banking and Financial Institutions,European Sovereign Debt Crisis (2010- ),Executive Compensation,Hedge Funds,Hotels and Travel Lodgings,Initial Public Offerings,Insider Trading,Mergers Acquisitions and Divestitures,Ponzi and Pyramid Schemes,Presidential Election of 2016,Private and Sectarian Schools,Private Equity,Regulation and Deregulation of Industry,Stocks and Bonds,Tax Evasion,Anbang Insurance Group Co,Bridgewater Associates,China Securities Regulatory Commission,Citadel Investment Group,Goldman Sachs Group Inc,Institutional Investor,Law School Admission Council,Lending Club,Medivation Inc,Morgans Hotel Group LLC,Pershing Square Capital Management,Prosper Marketplace Inc,Renaissance Technologies,Sanofi SA,Treasury Department,Zoetis Inc,Puerto Rico,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F05%2F10%2Fmorning-agenda-donald-trumps-contradictory-pick-for-fund-raiser%2F" title="Morning Agenda: Donald Trump&#8217;s Contradictory Pick for Fund-Raiser" />
+<meta name="description" content="Hedge Fund Chiefs Cashed In Despite Choppy Waters in 2015 &#124; Lending Club Stumbles and the Industry Faces Skepticism" />
+<meta name="hdl" content="Morning Agenda: Donald Trump&#039;s Contradictory Pick for Fund-Raiser" />
+<meta property="og:title" content="Morning Agenda: Donald Trump&#039;s Contradictory Pick for Fund-Raiser" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/05/10/morning-agenda-donald-trumps-contradictory-pick-for-fund-raiser/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Hedge Fund Chiefs Cashed In Despite Choppy Waters in 2015 &#124; Lending Club Stumbles and the Industry Faces Skepticism" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Donald Trump&#039;s Contradictory Pick for Fund-Raiser" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/05/10/morning-agenda-donald-trumps-contradictory-pick-for-fund-raiser/" />
+<meta name="twitter:description" content="Hedge Fund Chiefs Cashed In Despite Choppy Waters in 2015 &#124; Lending Club Stumbles and the Industry Faces Skepticism" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='The Morning Agenda: The Challenge of Easing Saudi Arabia&#8217;s Dependence on Oil' href='//news.blogs.nytimes.com/2016/05/09/the-morning-agenda-the-challenge-of-easing-saudi-arabias-dependence-on-oil/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/05/10/what-were-reading-152/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/05/10/morning-agenda-donald-trumps-contradictory-pick-for-fund-raiser/' />
+<link rel='shortlink' href='//nyti.ms/1Oe13Zr' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/05/10/morning-agenda-donald-trumps-contradictory-pick-for-fund-raiser/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Donald Trump&#039;s Contradictory Pick for Fund-Raiser - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4761 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Donald Trump&#8217;s Contradictory Pick for Fund-Raiser        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/05/10/morning-agenda-donald-trumps-contradictory-pick-for-fund-raiser/"
+	 data-title="Morning Agenda: Donald Trump&#8217;s Contradictory Pick for Fund-Raiser"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Hedge Fund Chiefs Cashed In Despite Choppy Waters in 2015 | Lending Club Stumbles and the Industry Faces Skepticism&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/10/morning-agenda-donald-trumps-contradictory-pick-for-fund-raiser/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 10, 2016 6:19 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Donald Trump&#8217;s Contradictory Pick for Fund-Raiser</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-05-10T10:19:50+00:00" itemprop="datePublished">May 10, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">May 10, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4761 post type-post status-publish hentry category-dealbook tag-ackman-william-a tag-anbang-insurance-group-co tag-banking-and-financial-institutions tag-bridgewater-associates tag-china-securities-regulatory-commission tag-citadel-investment-group tag-dalio-raymond-1949 tag-dudley-william-c tag-european-sovereign-debt-crisis-2010 tag-executive-compensation tag-goldman-sachs-group-inc tag-griffin-kenneth-c tag-hedge-funds tag-hotels-and-travel-lodgings tag-icahn-carl-c tag-initial-public-offerings tag-insider-trading tag-institutional-investor tag-laplanche-renaud tag-law-school-admission-council tag-lending-club tag-lew-jacob-j tag-loeb-daniel-s tag-medivation-inc tag-mergers-acquisitions-and-divestitures tag-mnuchin-steven-t tag-morgans-hotel-group-llc tag-pershing-square-capital-management tag-ponzi-and-pyramid-schemes tag-presidential-election-of-2016 tag-private-and-sectarian-schools tag-private-equity tag-prosper-marketplace-inc tag-puerto-rico tag-redstone-shari tag-redstone-sumner-m tag-regulation-and-deregulation-of-industry tag-renaissance-technologies tag-sanofi-sa tag-simons-james-harris tag-stocks-and-bonds tag-tax-evasion tag-treasury-department tag-trump-donald-j tag-zoetis-inc per-ackman-william-a per-dalio-raymond-1949 per-dudley-william-c per-griffin-kenneth-c per-icahn-carl-c per-laplanche-renaud per-lew-jacob-j per-loeb-daniel-s per-mnuchin-steven-t per-redstone-shari per-redstone-sumner-m per-simons-james-harris per-trump-donald-j des-banking-and-financial-institutions des-european-sovereign-debt-crisis-2010 des-executive-compensation des-hedge-funds des-hotels-and-travel-lodgings des-initial-public-offerings des-insider-trading des-mergers-acquisitions-and-divestitures des-ponzi-and-pyramid-schemes des-presidential-election-of-2016 des-private-and-sectarian-schools des-private-equity des-regulation-and-deregulation-of-industry des-stocks-and-bonds des-tax-evasion org-anbang-insurance-group-co org-bridgewater-associates org-china-securities-regulatory-commission org-citadel-investment-group org-goldman-sachs-group-inc org-institutional-investor org-law-school-admission-council org-lending-club org-medivation-inc org-morgans-hotel-group-llc org-pershing-square-capital-management org-prosper-marketplace-inc org-renaissance-technologies org-sanofi-sa org-treasury-department org-zoetis-inc geo-puerto-rico" id="post-4761">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Donald Trump&#8217;s Contradictory Pick for Fund-Raiser</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-05-10T10:19:50+00:00" itemprop="datePublished">May 10, 2016 6:19 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 10, 2016 6:19 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/05/10/morning-agenda-donald-trumps-contradictory-pick-for-fund-raiser/" data-title="Morning Agenda: Donald Trump&#8217;s Contradictory Pick for Fund-Raiser" data-description="Hedge Fund Chiefs Cashed In Despite Choppy Waters in 2015 | Lending Club Stumbles and the Industry Faces Skepticism">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DONALD TRUMPâS CONTRADICTORY PICK FOR FUND-RAISER</strong> <span class="divider"> | </span></span> Donald Trump is an unconventional political candidate and his appointment of Steven Mnuchin as his national finance chairman is the epitome of just how unconventional this election has become,</p>
+<p class="story-body-text" itemprop="articleBody"><a href="â//www.nytimes.com/2016/05/10/business/dealbook/donald-trumps-pick-for-fund-raiser-is-rife-with-contradictions.html?ref=dealbookâ">Andrew Ross Sorkin writes in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Mnuchin said the two men had been friends for 15 years, but Mr. Trump has attacked Mr. Mnuchinâs investment company, Goldman Sachs (where Mr. Mnuchin made his fortune), and institutions that Mr. Mnuchin has supported, like the Democratic Party.</p>
+<p class="story-body-text" itemprop="articleBody"><b>âIâm not a traditional fund-raiser â I think that was part of the appeal I had for Donald,â</b> Mr. Mnuchin told Mr. Sorkin. âI have given to Democrats in the past. Iâve always believed in supporting the best candidate at the time.â</p>
+<p class="story-body-text" itemprop="articleBody">When it came to Mr. Trumpâs broadsides against Goldman Sachs, Mr. Mnuchin emphasized that it was âquite a while agoâ that he worked there â he left in 2002. More recently, he said, âIâve been focused on the West Coast economy and being a banker and lending in these markets.â</p>
+<p class="story-body-text" itemprop="articleBody">Few big names on Wall Street have endorsed Mr. Trump, aside from a handful of financiers like Carl Icahn. And many of the nationâs largest banks have not done business with Mr. Trump in years. Goldman Sachs does not solicit business from Mr. Trump and has declined at least one project, according to former Goldman executives.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Mr. Mnuchin said he didnât think it was true that Goldman refuses to work with Mr. Trump</b>, adding: âThere is a long, long list of some of the largest banks in the country that have done business with him. He has had no problem finding people who want to lend to his businesses.â</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Mnuchinâs Dune Capital has extended credit to Mr. Trump. It was among a syndicate of lenders led by Deutsche Bank for the construction of Trump International Hotel &amp; Tower. <b>Mr. Trump sued them to extend the terms of the loan</b> on the basis of âunprecedented financial crisis in the credit markets.â The suit was later settled.</p>
+<p class="story-body-text" itemprop="articleBody">Dune Capital was also involved in investing in Trump Waikiki in Hawaii. <b>âI havenât really commented on what business weâve done together,â</b> Mr. Mnuchin said. âI would describe it as more of a personal relationship than a professional relationship.â</p>
+<p class="story-body-text" itemprop="articleBody">In spite of Mr. Trumpâs changing rhetoric, Mr. Mnuchin was bullish, telling Mr. Sorkin: âEven on Wall Street, notwithstanding certain comments heâs made and things like that, <b>Iâve gotten hundreds of calls from people who want to support him.â</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HEDGE FUND CHIEFS CASH IN DESPITE CHOPPY WATERS IN 2015</strong> <span class="divider"> | </span></span> While regulators have pushed to rein in compensation at Wall Street banks, hedge fund managers are earning more than 50 times what the top executives at banks are paid,<br />
+<a href="â//www.nytimes.com/2016/05/10/business/dealbook/hedge-fund-manager-compensation.html?ref=dealbookâ">Alexandra Stevenson reports in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">And those riches came in spite of market volatility that created what Daniel S. Loeb called a <b>âhedge fund killing field.â</b> Some of the biggest names lost their investors billions of dollars, while others funds closed.<br />
+Yet the 25 best-paid hedge fund managers took home a collective $12.94 billion in income last year, <a href="â//www.institutionalinvestorsalpha.com/Article/3552805/The-2016-Rich-List-of-the-Worlds-Top-Earning-Hedge-Fund-Managers.htmlâ">according to an annual ranking</a> published by Institutional Investorâs Alpha magazine.</p>
+<p class="story-body-text" itemprop="articleBody">At the biggest hedge fund managers, <b>these men (and the occasional woman) have more money and more influence than ever before.</b></p>
+<p class="story-body-text" itemprop="articleBody">The industry has ballooned to $2.9 trillion, from $539 billion in 2001, and its firms are doing more business in some parts of the financial world than many banks.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Kenneth C. Griffin topped the list for a second year in a row</b> with the $1.7 billion he took home in 2015. His firm Citadel has grown from a hedge fund that managed family and pension money into a $25 billion firm that has expanded into the securities business, taking business away from the brokerage units of banks. Forbes has estimated his personal wealth at $7.5 billion.</p>
+<p class="story-body-text" itemprop="articleBody">In addition to making headlines for his art collection and a property purchase, he was the biggest donor to the re-election campaign of Mayor Rahm Emanuel of Chicago. He has also poured billions into the failed presidential campaigns of Marco Rubio, Jeb Bush and Scott Walker, as well as the Republican National Committee.</p>
+<p class="story-body-text" itemprop="articleBody">Citadelâs flagship hedge funds, Kensington and Wellington, returned 14.3 percent over 2015.</p>
+<p class="story-body-text" itemprop="articleBody"><b>James H. Simons, a former math professor, shared the top position</b> with Mr. Griffin this year. His hedge fund, Renaissance Technologies, uses computers to track and outsmart the stock market. It has worked â the main funds gained 15.6 percent to 16.5 percent.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Mr. Simons has also used his wealth for political purposes</b>, donating $9.2 million to the Democrats in 2016.</p>
+<p class="story-body-text" itemprop="articleBody">Among 2015âs top hedge fund earners are <b>five men who actually lost money for some investors last year but still made handsome profits because their firms are so big</b>.</p>
+<p class="story-body-text" itemprop="articleBody">Ray Dalio, 66, made $1.4 billion in 2015 through Bridgewater Associates, the worldâs biggest hedge fund firm. Mr. Dalio frequently promotes a strategy he calls risk parity. Yet Bridgewaterâs risk parity fund lost investors 7 percent in 2015.</p>
+<p class="story-body-text" itemprop="articleBody">Still, two funds using a different strategy had gains: Pure Alpha II was up 4.7 percent, and Pure Alpha Major Markets was up 10.6 percent.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Dalioâs associates and Bridgewater co-chief investment officers, Robert Prince and Greg Jensen, also made the top earners list, with each bringing home $250 million.</p>
+<p class="story-body-text" itemprop="articleBody">Leda Braga, whose $9 billion quantitative trading hedge fund, Systematica Investments, was spun off from BlueCrest in 2014, became <b>the first woman to make Alphaâs more extended 50 top earners list this year</b>, taking home $60 million in 2015. She ranked 44th.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>Disney</b> will hold a conference call to discuss its quarterly earnings at 5 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>LENDING CLUB STUMBLES AND THE INDUSTRY FACES SKEPTICISM</strong> <span class="divider"> | </span></span> Renaud Laplanche, the founder of Lending Club, has resigned after an internal <a href="â//www.nytimes.com/2016/05/10/business/dealbook/lending-club-leading-online-lender-says-its-chief-resigns.html?ref=dealbookâ">investigation found improprieties</a> in the lending process. The companyâs stock price plummeted after the news. But this is just a <b>part of a broader reckoning in the online money-lending industry</b>, <a href="â//www.nytimes.com/2016/05/10/business/dealbook/as-lending-club-stumbles-its-entire-industry-faces-skepticism.html?ref=dealbookâ">Michael Corkery reports in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">At Lending Club, problems have begun to surface as pressure to sell loans has mounted, according to two people briefed on the companyâs internal investigation.</p>
+<p class="story-body-text" itemprop="articleBody">In early April, a Lending Club employee discovered that the <b>dates on about $3 million of loan applications appeared to have been altered</b>. The issue was raised with Mr. Laplanche, who alerted the internal auditor. This led to more irregularities being found.</p>
+<p class="story-body-text" itemprop="articleBody">About <b>$22 million in loans sold to Jefferies</b> did not meet the investment bankâs criteria. The discrepancy was minor, but the company bought back the loans.</p>
+<p class="story-body-text" itemprop="articleBody">Then the investigation found that <b>Mr. Laplanche had a stake in an investment fund</b> that the company was also considering investing in, but had failed to disclose his personal investment to the board.</p>
+<p class="story-body-text" itemprop="articleBody">The board informed Mr. Laplanche of the conclusions of the investigation and <b>Scott Sanborn, the president, was named acting chief</b>. Three senior managers involved in the loan sales have either resigned or been fired.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Other companies have also faced problems.</b> Prosper, another online lender, laid off more than a quarter of its workforce last week and the chief executive said he was forgoing his salary for the year.</p>
+<p class="story-body-text" itemprop="articleBody">The latest news at Lending Club has confirmed Wall Street fears that weaker economic conditions will reveal shaky internal controls at these upstart companies trying to upend traditional banking.</p>
+<p class="story-body-text" itemprop="articleBody">These marketplace lenders have created easy-to-use websites that match consumers and small business with investors looking to lend money in a matter of days. Unburdened by the costs of bricks-and-mortar branches and federal regulations, they have been able to expand quickly.</p>
+<p class="story-body-text" itemprop="articleBody">Investors like hedge funds, insurance companies and pension funds were still clamoring to buy pools of these loans just months ago, but this year the marketplace lenders have struggled to convince others that their business models are sound.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Wall Street investors, worried about increasing defaults, are steering clear</b>, and leaving the marketplace lenders without funding for their loans.</p>
+<p class="story-body-text" itemprop="articleBody">Before the recent turmoil, traditional banks had bet on the industryâs low-cost system, buying loans from marketplace lenders and forming partnerships with them. Now, analysts are predicting that <b>continued funding pressure could lead to large banks acquiring these lenders.</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &amp; Acquisitions Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/05/10/business/10db-krispy2/10db-krispy2-square320.jpg" alt="Krispy Kremeâs New Owner Dunks Doughnuts in Coffee Empire" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Krispy Kremeâs New Owner Dunks Doughnuts in Coffee Empire</strong> <span class="divider"> | </span></span> JAB Holding, which has been on an acquisition spree, owns several coffee chains, including Peetâs Coffee &amp; Tea and Keurig Green Mountain.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/05/10/business/krispy-kreme-bought-by-jab-holding-a-german-conglomerate.html">NYT Â»</a></span><span class="divider">Â |Â </span><span class="kicker"><a href="//www.nytimes.com/2016/05/10/business/dealbook/other-acquirers-may-have-a-taste-for-krispy-kreme.html">Breakingviews: Other Acquirers May Have a Taste for Krispy Kreme</a> <time class="timestamp" datetime="2016-05-09" data-eastern-timestamp="4:08 PM" data-utc-timestamp="1462824503000">4:08 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/05/10/business/10db-krispyweb1/10db-krispyweb1-square320.jpg" alt="Other Acquirers May Have a Taste for Krispy Kreme" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Other Acquirers May Have a Taste for Krispy Kreme</strong> <span class="divider"> | </span></span> Krispy Kreme stands to benefit from a $1.4 billion deal with JAB Holding, but the doughnut chain may prove too appetizing for others to pass up, Kevin Allison writes in Breakingviews.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/05/10/business/dealbook/other-acquirers-may-have-a-taste-for-krispy-kreme.html">Breakingviews Â»</a></span><span class="divider">Â |Â </span><span class="kicker"><a href="//www.nytimes.com/2016/05/10/business/krispy-kreme-bought-by-jab-holding-a-german-conglomerate.html">Krispy Kremeâs New Owner Dunks Doughnuts in Coffee Empire</a> <time class="timestamp" datetime="2016-05-09" data-eastern-timestamp="12:43 PM" data-utc-timestamp="1462812195000">12:43 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Morgans Hotel Agrees to Be Sold </strong> <span class="divider"> | </span></span> SBE Entertainment Group, a hotel operator, has agreed to buy Morgans Hotel Group, reaching a deal worth about $800 million, including debt.<br />
+<span class="kicker"><a href="//www.wsj.com/articles/sbe-entertainment-to-acquire-morgans-hotel-group-1462822391">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Medivation Said to Succumb to Pressure to Explore Sale</strong> <span class="divider"> | </span></span> The cancer drug maker Medivation has decided to explore a sale after a $9.3 billion offer from Sanofi of France and interest from other companies, Reuters reports, citing people familiar with the matter.<br />
+<span class="kicker"><a href="//www.reuters.com/article/us-medivation-m-a-exclusive-idUSKCN0Y020U?feedType=RSS&amp;feedName=innovationNews">REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Credit Suisse Reports First-Quarter Loss on Turbulent Markets</strong> <span class="divider"> | </span></span> The Swiss bank is in the middle of an extensive overhaul as it seeks to shrink its investment bank and place more emphasis on wealth management.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/05/11/business/dealbook/credit-suisse-earnings.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Private Equity Investing in Europe Rises 14%</strong> <span class="divider"> | </span></span> Private equity groups invested more in fast-growing European companies last year than at any time since 2008, according to data from Invest Europe.<br />
+<span class="kicker"><a href="//www.ft.com/intl/cms/s/0/c0cee40c-15cd-11e6-9d98-00386a18e39d.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz48E0JajP4">THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/05/10/business/10db-ackman/10db-ackman-square320.jpg" alt="William Ackman Sets Out to Sell $800 Million in Shares of Zoetis" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>William Ackman Sets Out to Sell $800 Million in Shares of Zoetis</strong> <span class="divider"> | </span></span> Mr. Ackmanâs Pershing Square Capital has had a difficult year, particularly over its stake in Valeant, the drug company that has come under intense scrutiny.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/05/10/business/dealbook/william-ackman-sets-out-to-sell-800-million-in-shares-of-zoetis.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Global Private School Operator Said to Be in Early I.P.O. Talks</strong> <span class="divider"> | </span></span> GEMS Education, which operates more than 80 schools across 14 countries, is in the early stages of preparing for an initial public offering, Bloomberg reports, citing people familiar with the matter.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-09/global-private-school-operator-gems-said-in-early-talks-for-ipo">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China to Mull Curbs on Domestic Backdoor Listing Valuations</strong> <span class="divider"> | </span></span> The China Securities Regulatory Commission is weighing possible restrictions on reverse mergers, including capping valuation multiples for deals involving companies that previously traded overseas, Bloomberg reports, citing people with knowledge of the matter.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-10/china-said-to-mull-curbs-on-domestic-backdoor-listing-valuations">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/05/07/business/09redstone-copy/07redstone1-square320.jpg" alt="Sumner Redstone Competency Case Abruptly Dismissed by Judge" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sumner Redstone Competency Case Abruptly Dismissed by Judge</strong> <span class="divider"> | </span></span> A former loverâs challenge to the media titanâs mental competency was rejected by a judge in a case that had drawn wide attention on Wall Street and in Hollywood.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/05/10/business/media/sumner-redstone-competency-lawsuit.html">NYT Â»</a></span><span class="divider">Â |Â </span><span class="kicker"><a href="//www.nytimes.com/2016/03/13/business/media/shari-redstone-prepares-for-battle-to-control-a-media-empire.html">Shari Redstone Prepares for Battle to Control a Media Empire (March 13, 2016)</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/05/10/business/10db-insider/10db-insider-square320.jpg" alt="Two Convicted in Insider Trading Conspiracy in London" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Two Convicted in Insider Trading Conspiracy in London</strong> <span class="divider"> | </span></span> Martyn Dodgson, a former banker, and Andrew Hind, a businessman and trained accountant, were convicted on Monday of conspiracy to âinsider deal,â as insider trading is described in Britain.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/05/10/business/dealbook/insider-trading-conviction-london.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/05/10/business/db-whitecollar1/db-whitecollar1-square320.jpg" alt="The Treasury Departmentâs Fight to Combat Tax Cheats" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Treasury Departmentâs Fight to Combat Tax Cheats</strong> <span class="divider"> | </span></span> New proposals to fight corruption will be only a modest impediment to the flood of illicit funds that course through the economy, Peter J. Henning writes in White Collar Watch.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/05/10/business/dealbook/treasury-depts-never-ending-fight-to-combat-tax-cheats.html">White Collar Watch Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/05/10/upshot/10UP-Fed/10UP-Fed-square320.jpg" alt="A Fast Talk With New Yorkâs Fed Chief, and a View of a Steady Economy" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Fast Talk With New Yorkâs Fed Chief, and a View of a Steady Economy</strong> <span class="divider"> | </span></span> The chief, William Dudley, expects âgrowth that will cause the labor market to continue to tighten, which is what we would like.â<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/05/10/upshot/a-fast-talk-with-new-yorks-fed-chief-and-a-view-of-a-steady-economy.html">The Upshot Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Anbang Said to Face Inspection by Chinaâs Insurance Regulator</strong> <span class="divider"> | </span></span> Chinaâs insurance regulator is planning to send inspectors to Anbang Insurance Group, Bloomberg reports, citing a person with knowledge of the matter.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-05-09/anbang-said-to-face-inspection-by-china-s-insurance-regulator">BLOOMBERG </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Law School That Accepts GRE Scores Can Continue On</strong> <span class="divider"> | </span></span> The Law School Admission Council refrained from penalizing the James E. Rogers College of Law in Arizona after most of the nationâs law school deans rallied to support the school.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/05/10/business/dealbook/law-school-that-accepts-gre-scores-can-continue-on.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/05/10/business/10LEW/10LEW-square320.jpg" alt="Treasury Secretary Jacob Lew Puts a Face on Puerto Rico Debt Crisis" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Treasury Secretary Jacob Lew Puts a Face on Puerto Rico Debt Crisis</strong> <span class="divider"> | </span></span> Mr. Lewâs visit to San Juan was intended to dramatize the stakes as the territory faces a financial collapse and the spread of the Zika virus.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/05/10/business/dealbook/treasury-secretary-jacob-lew-puts-a-face-on-puerto-rico-debt-crisis.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/05/10/business/10greecedebt/10greecedebt-square320.jpg" alt="Greek Debt Talks Enter Familiar Summer Tumult" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Greek Debt Talks Enter Familiar Summer Tumult</strong> <span class="divider"> | </span></span> Eurozone finance ministers discuss bailout terms, but there are again wide gulfs separating European officials, Greece and the I.M.F.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/05/10/business/international/greece-debt-eurogroup.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ponzi Victims in $35 Million Settlement with N.Y. Law Firm </strong> <span class="divider"> | </span></span> A large New York law firm that once represented the now-imprisoned Texas financier Allen Stanford has reached a $35 million settlement with victims of his estimated $7.2 billion Ponzi scheme.<br />
+<span class="kicker"><a href="//www.reuters.com/article/stanford-fraud-chadbourne-idUSL2N1861AG?feedType=RSS&amp;feedName=USLegal">REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Manhattan Prosecutor Heads to Private Law Firm</strong> <span class="divider"> | </span></span> Carrie H. Cohen, who helped prosecute Sheldon Silver, the former New York State assembly speaker, and other big names, has joined Morrison &amp; Foerster as a partner.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/05/10/business/dealbook/manhattan-prosecutor-heads-to-private-law-firm.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody">&nbsp;</p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/05/10/morning-agenda-donald-trumps-contradictory-pick-for-fund-raiser/"
+					data-title="Morning Agenda: Donald Trump&#8217;s Contradictory Pick for Fund-Raiser"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Hedge Fund Chiefs Cashed In Despite Choppy Waters in 2015 | Lending Club Stumbles and the Industry Faces Skepticism&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/10/morning-agenda-donald-trumps-contradictory-pick-for-fund-raiser/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":5072,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

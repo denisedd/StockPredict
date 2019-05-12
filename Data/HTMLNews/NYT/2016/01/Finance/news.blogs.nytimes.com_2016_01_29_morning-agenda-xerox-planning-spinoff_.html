@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004176045"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1454064326" />
+<meta name="PUD" content="20160129" />
+<meta name="pdate" content="20160129" />
+<meta name="ptime" content="20160129054526" />
+<meta name="utime" content="20160129104526" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-01-29T10:45:26-05:00" />
+<meta name="DISPLAYDATE" content="January 29, 2016" />
+<meta name="dat" content="January 29, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Icahn, Carl C;Xerox Corporation">
+<meta name="des" content="Barclays PLC;Credit and Debt;Insider Trading;Interest Rates;Legal Profession;Lloyds Banking Group Plc;Puerto Rico;Supreme Court (US);The Blackstone Group">
+<meta name="org" content="Alibaba Group Holding Ltd;Bank of Japan;Deutsche Bank AG;New York Stock Exchange;Venezuela;Volkswagen AG;Walgreen Co.">
+<meta name="ticker" content="Deutsche Bank AG|DB|NYSE;Volkswagen AG|VLKAY|Other OTC;Walgreen Co.|WBA|NASDAQ" />
+<meta property="article:tag" content="Icahn Carl C" />
+<meta property="article:tag" content="Xerox Corporation" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="Credit and Debt" />
+<meta property="article:tag" content="Insider Trading" />
+<meta property="article:tag" content="Interest Rates" />
+<meta property="article:tag" content="Legal Profession" />
+<meta property="article:tag" content="Lloyds Banking Group Plc" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="Supreme Court (US)" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="Alibaba Group Holding Ltd" />
+<meta property="article:tag" content="Bank of Japan" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="New York Stock Exchange" />
+<meta property="article:tag" content="Venezuela" />
+<meta property="article:tag" content="Volkswagen AG" />
+<meta property="article:tag" content="Walgreen Co." />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Icahn Carl C,Xerox Corporation,Barclays PLC,Credit and Debt,Insider Trading,Interest Rates,Legal Profession,Lloyds Banking Group Plc,Puerto Rico,Supreme Court (US),The Blackstone Group,Alibaba Group Holding Ltd,Bank of Japan,Deutsche Bank AG,New York Stock Exchange,Venezuela,Volkswagen AG,Walgreen Co.,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F01%2F29%2Fmorning-agenda-xerox-planning-spinoff%2F" title="Morning Agenda: Xerox Planning Spinoff" />
+<meta name="description" content="Puerto Rico Debt Negotiations Resume &#124; Record Loss Means No Bonuses for Deutsche Bank Managers &#124; Bank of Japan Moves to Negative Interest Rates" />
+<meta name="hdl" content="Morning Agenda: Xerox Planning Spinoff" />
+<meta property="og:title" content="Morning Agenda: Xerox Planning Spinoff" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/01/29/morning-agenda-xerox-planning-spinoff/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Puerto Rico Debt Negotiations Resume &#124; Record Loss Means No Bonuses for Deutsche Bank Managers &#124; Bank of Japan Moves to Negative Interest Rates" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Xerox Planning Spinoff" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/01/29/morning-agenda-xerox-planning-spinoff/" />
+<meta name="twitter:description" content="Puerto Rico Debt Negotiations Resume &#124; Record Loss Means No Bonuses for Deutsche Bank Managers &#124; Bank of Japan Moves to Negative Interest Rates" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Markets Wobble After Fed Affirms Its Plan' href='//news.blogs.nytimes.com/2016/01/28/morning-agenda-markets-wobble-after-fed-affirms-its-plan/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/01/29/what-were-reading-125/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/01/29/morning-agenda-xerox-planning-spinoff/' />
+<link rel='shortlink' href='//nyti.ms/1KeNA1o' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/01/29/morning-agenda-xerox-planning-spinoff/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Xerox Planning Spinoff - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4146 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Xerox Planning Spinoff        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/01/29/morning-agenda-xerox-planning-spinoff/"
+	 data-title="Morning Agenda: Xerox Planning Spinoff"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Puerto Rico Debt Negotiations Resume | Record Loss Means No Bonuses for Deutsche Bank Managers | Bank of Japan Moves to Negative Interest Rates&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/01/29/morning-agenda-xerox-planning-spinoff/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="January 29, 2016 5:45 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Xerox Planning Spinoff</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-01-29T10:45:26+00:00" itemprop="datePublished">January 29, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">January 29, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4146 post type-post status-publish hentry category-dealbook tag-alibaba-group-holding-ltd tag-bank-of-japan tag-barclays-plc tag-credit-and-debt tag-deutsche-bank-ag tag-icahn-carl-c tag-insider-trading tag-interest-rates tag-legal-profession tag-lloyds-banking-group-plc tag-new-york-stock-exchange tag-puerto-rico tag-supreme-court-us tag-the-blackstone-group tag-venezuela tag-volkswagen-ag tag-walgreen-co tag-xerox-corporation per-icahn-carl-c per-xerox-corporation des-barclays-plc des-credit-and-debt des-insider-trading des-interest-rates des-legal-profession des-lloyds-banking-group-plc des-puerto-rico des-supreme-court-us des-the-blackstone-group org-alibaba-group-holding-ltd org-bank-of-japan org-deutsche-bank-ag org-new-york-stock-exchange org-venezuela org-volkswagen-ag org-walgreen-co" id="post-4146">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Xerox Planning Spinoff</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-01-29T10:45:26+00:00" itemprop="datePublished">January 29, 2016 5:45 am</time>
+			<!-- date updated --><span class="visually-hidden updated">January 29, 2016 5:45 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/01/29/morning-agenda-xerox-planning-spinoff/" data-title="Morning Agenda: Xerox Planning Spinoff" data-description="Puerto Rico Debt Negotiations Resume | Record Loss Means No Bonuses for Deutsche Bank Managers | Bank of Japan Moves to Negative Interest Rates">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>XEROX PLANNING SPINOFF</strong> <span class="divider"> | </span></span> Xerox has agreed to spin off its services business to its shareholders by the end of the year, separating it from the legacy hardware side,<br />
+<a href="â//www.nytimes.com/2016/01/29/business/dealbook/pressured-by-icahn-xerox-will-split-in-2.html?ref=dealbookâ">Leslie Picker and Liz Moyer report in DealBook</a>. A person briefed on the decision said that <b>a large part of the spinoff would incorporate Affiliated Computer Services</b>, the business outsourcing company that Xerox bought for $6.4 billion in 2010.</p>
+<p class="story-body-text" itemprop="articleBody">The remaining company would focus on office products like copiers, scanners and fax machines.</p>
+<p class="story-body-text" itemprop="articleBody"><b>The plan is expected to be announced when Xerox reports fourth-quarter financial results on Friday.</b></p>
+<p class="story-body-text" itemprop="articleBody">Xerox joins the ranks of other big American corporations, which have split or pared their operations, partly under pressure from activist hedge funds.</p>
+<p class="story-body-text" itemprop="articleBody">Carl C. Icahn was the activist who helped drive Xeroxâs decision. He amassed an 8.13 percent stake in Xerox at the end of last year, saying the shares were undervalued.</p>
+<p class="story-body-text" itemprop="articleBody">Shares of Xerox have fallen 28 percent in the last year and 13.5 percent since Nov. 23, when Mr. Icahn first announced he had taken a stake.</p>
+<p class="story-body-text" itemprop="articleBody">The person briefed on the decision said that <b>three of Mr. Icahnâs representatives would serve on the board of the services company after the spinoff.</b></p>
+<p class="story-body-text" itemprop="articleBody">Ursula M. Burns, the chief executive, said she was in favor of keeping the company together in October, when the company held a strategic review. The company had been struggling with declining revenue for several years. Mr. Icahn revealed his stake a month later.</p>
+<p class="story-body-text" itemprop="articleBody">According to <a href="â//www.wsj.com/articles/xerox-plans-to-split-in-two-1454015527â">The Wall Street Journal</a>, which earlier reported the plan to split, <b>both sides have largely agreed in talks about a breakup since.</b></p>
+<p class="story-body-text" itemprop="articleBody">Mr. Icahn on CNBC on Thursday that he applauded and respected Ms. Burns for doing what she believed shareholders wanted.</p>
+<p class="story-body-text" itemprop="articleBody">&nbsp;</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PUERTO RICO DEBT NEGOTIATIONS RESUME</strong> <span class="divider"> | </span></span> Negotiations to restructure about $9 billion of the debt of Puerto Ricoâs power company have resumed, reviving hopes that a default can be avoided,<br />
+<a href="â//www.nytimes.com/2016/01/29/business/dealbook/puerto-rico-debt-negotiations-resume.html?ref=dealbookâ">Mary Williams Walsh reports in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Creditors have been trying to work out a restructuring deal with the utility for a year and a half. They declared the deal dead when a crucial Jan. 22 deadline passed without a vote by the Puerto Rican Legislature to approve the plan and blamed Puerto Rico for failing to honor its commitment to enact an enabling law on time. The Puerto Rico Electric and Power Authority, or Prepa, had countered that the creditors had changed some terms at the last minute.</p>
+<p class="story-body-text" itemprop="articleBody">Both sides announced on Wednesday that <b>talks had resumed and that they had agreed to wait until Feb. 16 for the Legislature to enact the required statute. </b></p>
+<p class="story-body-text" itemprop="articleBody">Stephen Spencer, a spokesman for the creditors, known as the Bondholders Group, said they had been <b>encouraged by statements from Puerto Rico legislators</b>, making it âunequivocally clear that they want to get this deal done and that the additional 25 days we are extending beyond the original deadline is sufficient for the legislation to be passed.â</p>
+<p class="story-body-text" itemprop="articleBody">The new $115 million loan from the bondholders to cover part of a debt payment Prepa made on Jan. 1 has become a point of contention in negotiations. Prepa accused the bondholders of tightening the conditions on the loan at the last minute.</p>
+<p class="story-body-text" itemprop="articleBody">Under the arrangement announced on Wednesday, <b>the loan will be lowered to $111 million</b>. Half would go to Prepa when the Puerto Rico Legislature passed the required legislation and the other half when the restructuring was approved by the islandâs Energy Commission.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>RECORD LOSS MEANS NO BONUSES FOR DEUTSCHE BANK MANAGERS</strong> <span class="divider"> | </span></span> Deutsche Bank confirmed a record loss for 2015 and said that its management board would not receive bonuses for the year,<br />
+<a href="â//www.nytimes.com/2016/01/29/business/dealbook/deutsche-bank-loss-2015.html?ref=dealbookâ">Chad Bray and Jack Ewing report in DealBook</a>. It also said <b>shareholders should not expect a dividend until 2017 at the earliest.</b></p>
+<p class="story-body-text" itemprop="articleBody">The German bank has had to grapple with a long list of accusations of wrongdoing and a management upheaval. A decline in revenues from its investment banking unit added to its woes.</p>
+<p class="story-body-text" itemprop="articleBody">With the money it set aside to cover lawsuits and official investigations, <b>Deutsche posted a loss of 6.8 billion euros, or $7.4 billion, in 2015.</b></p>
+<p class="story-body-text" itemprop="articleBody">John Cryan, the co-chief executive, said that the general bonus pool would be smaller âas a matter of justice.â</p>
+<p class="story-body-text" itemprop="articleBody">âBy and large, I think we are underpaying against our international peer group this year, and I hope that many staff understand why,â he said. <b>âThe bonus pool this year will be down by a fair amount on the previous year.â</b></p>
+<p class="story-body-text" itemprop="articleBody">Mr. Cryanâs measures to address the bankâs legal and organizational problems have hurt profit, but they could pay off if he succeeds in making the bank less complex and easier to manage. He said he was optimistic that the bank could make âsignificant inroadsâ on its outstanding legal matters.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The Commerce Department will publish its estimate of <b>fourth-quarter and annual growth</b> for 2015 at 8:30 am. <b>Chevron</b> will hold a conference call on its fourth-quarter earnings at 11 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BANK OF JAPAN MOVES TO NEGATIVE INTEREST RATES</strong> <span class="divider"> | </span></span> The Bank of Japan unexpectedly introduced a negative interest rate for some of the deposits that it holds for the countryâs commercial banks,<br />
+<a href="â//www.nytimes.com/2016/01/30/business/international/japan-interest-rate.htmlâ">Keith Bradsher reports in The New York Times</a>.</p>
+<p class="story-body-text" itemprop="articleBody">The move is one of the clearest signs yet of concern over plummeting oil prices, stalled international trade and slowing growth in China.</p>
+<p class="story-body-text" itemprop="articleBody">The Bank of Japan had resisted setting rates below zero to stimulate the economy, despite nearly a quarter-century of slow growth. <b>The 5-to-4 vote in the committee showed its reluctance.</b></p>
+<p class="story-body-text" itemprop="articleBody">The decision to charge commercial banks for holding their money, instead of paying them interest, signaled a <b>new willingness to pull out all the stops to reinforce business confidence and fight deflation.</b></p>
+<p class="story-body-text" itemprop="articleBody">âJapanâs economy has continued to recover moderately,â the bank said. âRecently, however, global financial markets have been volatile against the backdrop of the further decline in crude oil prices.â</p>
+<p class="story-body-text" itemprop="articleBody">Those changes might hurt the business confidence of Japanese companies and encourage deflation, the bank added, and the measures announced on Friday would âpre-empt the manifestation of this risk.â</p>
+<p class="story-body-text" itemprop="articleBody">The move, which surprised investors, <b>sent the Nikkei 225 seesawing</b>. It ended the day with a gain of 2.8 percent, leading a rally of stocks that included a 3.1 percent rebound in the Shanghai stock market after months of losses there.</p>
+<p class="story-body-text" itemprop="articleBody">By late Tuesday afternoon, the yen was trading at 120.66 to the dollar. That represented a <b>weakening of 1.84 yen for the day</b>, or 1.55 percent.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &amp; Acquisitions Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>EQT Near Deal for Swiss Travel Firm Kuoni</strong> <span class="divider"> | </span></span> Kuoniâs board confirmed that the private equity firm EQT was the preferred candidate for a potential takeover of the company, but no financial decision has been made on the terms of the offer.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-01-28/buyout-firm-eqt-said-to-near-deal-for-swiss-travel-firm-kuoni"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Noble Group Investors Approve Sale of Farm Division</strong> <span class="divider"> | </span></span> The planned sale of Noble Agri to China National Cereals, Oils and Foodstuffs Corporation for $750 million was backed by 90 percent of shareholders who voted at a special meeting in Singapore.<br />
+<span class="kicker"><a href="//www.ft.com/intl/cms/s/0/49112098-c5ae-11e5-b3b1-7b2481276e45.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3yb2SQjrC">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Government to Delay Retail Sale of Lloyds Stake</strong> <span class="divider"> | </span></span> The government still owns about 9 percent of the bank, which received a $24 billion bailout during the financial crisis in 2008.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/01/29/business/dealbook/british-government-to-delay-retail-sale-of-lloyds-stake.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BTG Cuts 305 Workers in Brazil </strong> <span class="divider"> | </span></span> Grupo BTG Pactual, the Brazilian investment bank that sought rescue financing last month after the arrest of its founder, cut 305 people from its work force of 1,653 in Brazil in an effort to reduce expenses by a quarter.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-01-28/btg-said-to-cut-18-of-brazil-staff-nyc-office-also-affected"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deal Maker Sues Barclays for About $1.4 Billion </strong> <span class="divider"> | </span></span> Barclays has been hit with a lawsuit for nearly 1 billion pounds, or about $1.4 billion, from Amanda Staveley, the deal maker known for her Middle Eastern connections, over the lenderâs emergency Â£5.8 billion fund-raising in 2008.<br />
+<span class="kicker"><a href="//www.ft.com/intl/cms/s/0/471dc3de-c5f1-11e5-808f-8231cd71622e.html">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/01/20/business/cnbc-blackstone/cnbc-blackstone-square320.png" alt="Blackstoneâs Fourth-Quarter Profit Plunges" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstoneâs Fourth-Quarter Profit Plunges</strong> <span class="divider"> | </span></span> But the investment company reported a small increase in assets under management at time when most big asset managers had withdrawals.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/01/29/business/dealbook/blackstones-profit-slumps-in-fourth-quarter.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>With Eye on Growth, Imagine Entertainment Seeks an Investment </strong> <span class="divider"> | </span></span> If the deal is completed, Imagine would gain capital and supporters to expand its ability to back film and television productions and make acquisitions.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/01/29/business/dealbook/with-eye-on-growth-imagine-entertainment-seeks-an-investment.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Corporate Lawyers Say They Are Spending More In-House</strong> <span class="divider"> | </span></span> A study says the increase is a result of more regulatory scrutiny as corporate dealings become increasingly multinational.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/01/29/business/dealbook/corporate-lawyers-say-they-are-spending-more-in-house.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/01/29/business/db-indebt-web1/db-indebt-web1-square320.jpg" alt="The Coming Mess in Venezuelan Debt" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Coming Mess in Venezuelan Debt</strong> <span class="divider"> | </span></span> With oil prices low, and $10 billion in debt due this year, many challenges to a restructuring await, Stephen J. Lubben writes in the In Debt column.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/01/29/business/dealbook/the-coming-mess-in-venezuelan-debt.html">In Debt Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/01/29/business/29stewart-web/29stewart-web-square320.jpg" alt="Justices Take On a Muddled Issue: Insider Trading" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Justices Take On a Muddled Issue: Insider Trading</strong> <span class="divider"> | </span></span> If the Supreme Court upholds a conviction in a case from California, it could provide guidelines on the requirement of proof that a defendant in such cases sought personal gain, James B. Stewart writes in the Common Sense column.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/01/29/business/justices-take-on-a-muddled-issue-insider-trading.html">Common Sense Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chad Johnson of New York Attorney Generalâs Office Moves to Private Practice</strong> <span class="divider"> | </span></span> Mr. Johnson, head of the Investor Protection Bureau, was involved in some of the largest settlements with banks over misdeeds in the mortgage market.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/01/29/business/dealbook/chad-johnson-of-new-york-attorney-generals-office-moves-to-private-practice.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>N.Y.S.E. Proposes Changes as It Braces for More Volatility</strong> <span class="divider"> | </span></span> Many of the proposals are widely agreed upon among exchanges and market participants, but they donât include changes to some of the more contentious issues such as a rarely used rule, which allows market-makers to open trading of stocks later on volatile days.<br />
+<span class="kicker"><a href="//www.wsj.com/articles/nyse-outlines-priorities-for-enhancing-market-structure-in-periods-of-volatility-1453990529?mod=rss_markets_main">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/01/29/business/29theranos-web/29theranos-web-square320.jpg" alt="Walgreens Says No Customersâ Tests Will Be Done at Theranos Lab in California" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Walgreens Says No Customersâ Tests Will Be Done at Theranos Lab in California</strong> <span class="divider"> | </span></span> The lab, in Newark, Calif., was cited on Monday by federal regulators for violations of clinical standards.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/01/29/business/walgreens-says-no-customers-tests-will-be-done-at-theranos-lab-in-california.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/01/29/business/29Volkswagen/29Volkswagen-square320.jpg" alt="Volkswagen May Buy Back Diesel Cars It Canât Fix" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Volkswagen May Buy Back Diesel Cars It Canât Fix</strong> <span class="divider"> | </span></span> A lawyer for the carmaker said the company might have to buy back some tainted cars in the United States because it would take too long to correct emissions problems.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/01/29/business/international/volkswagen-says-a-diesel-fix-may-not-be-possible-for-some-cars.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/01/29/business/29alilbaba-web1/29alilbaba-web1-square320.jpg" alt="Alibabaâs Strong Earnings Are Seen as Good News for Chinaâs Economy" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Alibabaâs Strong Earnings Are Seen as Good News for Chinaâs Economy</strong> <span class="divider"> | </span></span> The announcement that the companyâs profit doubled in the most recent quarter is a potentially positive sign for consumer strength in China.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/01/29/business/alibaba-quarterly-earnings.html">NYT Â»</a></span><span class="divider">Â |Â </span><span class="kicker"><a href="//www.nytimes.com/2016/01/29/business/dealbook/alibaba-searching-for-new-revenue-sources.html">Breakingviews: Alibaba Searching for New Revenue Sources</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Alibaba Searching for New Revenue Sources</strong> <span class="divider"> | </span></span> In China, growth in property investment is sagging, and the trend from bricks-and-mortar to online retailing is positive for Alibabaâs top-line growth story, Robyn Mak writes in Breakingviews.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/01/29/business/dealbook/alibaba-searching-for-new-revenue-sources.html">Breakingviews Â»</a></span><span class="divider">Â |Â </span><span class="kicker"><a href="//www.nytimes.com/2016/01/29/business/alibaba-quarterly-earnings.html">Alibabaâs Strong Earnings Are Seen as Good News for Chinaâs Economy</a> <time class="timestamp" datetime="2016-01-28" data-eastern-timestamp="12:47 PM" data-utc-timestamp="1454003233000">12:47 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody">&nbsp;</p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/01/29/morning-agenda-xerox-planning-spinoff/"
+					data-title="Morning Agenda: Xerox Planning Spinoff"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Puerto Rico Debt Negotiations Resume | Record Loss Means No Bonuses for Deutsche Bank Managers | Bank of Japan Moves to Negative Interest Rates&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/01/29/morning-agenda-xerox-planning-spinoff/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":55,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004541086"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1469008077" />
+<meta name="PUD" content="20160720" />
+<meta name="pdate" content="20160720" />
+<meta name="ptime" content="20160720054757" />
+<meta name="utime" content="20160720094757" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-07-20T09:47:57-04:00" />
+<meta name="DISPLAYDATE" content="July 20, 2016" />
+<meta name="dat" content="July 20, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Ailes, Roger E;Carlson, Gretchen;Clinton, Hillary Rodham;Denton, Nick;May, Theresa M;Murdoch, Lachlan;Murdoch, Rupert;Trump, Donald J">
+<meta name="des" content="Antitrust Laws and Competition Issues;Appointments and Executive Changes;Banking and Financial Institutions;Cyberharassment;Ethics and Official Misconduct;Glass-Steagall Act (1933);Health Insurance and Managed Care;Mergers, Acquisitions and Divestitures;Personal Bankruptcies;Presidential Election of 2016;Regulation and Deregulation of Industry;Republican National Convention;Sexual Harassment;Social Media;Sovereign Wealth Funds;Start-ups;Suits and Litigation (Civil)">
+<meta name="org" content="1Malaysia Development Berhad (1MDB);21st Century Fox;Aetna Inc;Anthem Inc.;Baker Hughes Inc;Bayer AG;Charter Communications Inc;China Resources Holdings;CIGNA Corporation;Conservative Party (Great Britain);Democratic Party;Dollar Shave Club;Fox News Channel;Gawker.com;Humana Inc;Hyperloop Technologies Inc;Intel Corporation;Man Group;Monsanto Company;Morgan Stanley;Office Depot Inc.;Qualcomm Inc;Republican Party;Time Warner Cable Inc;Twitter;Unilever NV;Volkswagen AG;WhatsApp Inc">
+<meta name="ticker" content="Aetna Inc|AET|NYSE;Baker Hughes Inc|BHI|NYSE;Bayer AG|BAYRY|Other OTC;Charter Communications Inc|CHTR|NASDAQ;CIGNA Corporation|CI|NYSE;Humana Inc|HUM|NYSE;Intel Corporation|INTC|NASDAQ;Monsanto Company|MON|NYSE;Morgan Stanley|MS|NYSE;Office Depot Inc.|ODP|NASDAQ;Qualcomm Inc|QCOM|NASDAQ;Time Warner Cable Inc|TWC|NYSE;Twitter|TWTR|NYSE;Unilever NV|UN|NYSE;Volkswagen AG|VLKAY|Other OTC" />
+<meta property="article:tag" content="Ailes Roger E" />
+<meta property="article:tag" content="Carlson Gretchen" />
+<meta property="article:tag" content="Clinton Hillary Rodham" />
+<meta property="article:tag" content="Denton Nick" />
+<meta property="article:tag" content="May Theresa M" />
+<meta property="article:tag" content="Murdoch Lachlan" />
+<meta property="article:tag" content="Murdoch Rupert" />
+<meta property="article:tag" content="Trump Donald J" />
+<meta property="article:tag" content="Antitrust Laws and Competition Issues" />
+<meta property="article:tag" content="Appointments and Executive Changes" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Cyberharassment" />
+<meta property="article:tag" content="Ethics and Official Misconduct" />
+<meta property="article:tag" content="Glass-Steagall Act (1933)" />
+<meta property="article:tag" content="Health Insurance and Managed Care" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Personal Bankruptcies" />
+<meta property="article:tag" content="Presidential Election of 2016" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Republican National Convention" />
+<meta property="article:tag" content="Sexual Harassment" />
+<meta property="article:tag" content="Social Media" />
+<meta property="article:tag" content="Sovereign Wealth Funds" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="1Malaysia Development Berhad (1MDB)" />
+<meta property="article:tag" content="21st Century Fox" />
+<meta property="article:tag" content="Aetna Inc" />
+<meta property="article:tag" content="Anthem Inc." />
+<meta property="article:tag" content="Baker Hughes Inc" />
+<meta property="article:tag" content="Bayer AG" />
+<meta property="article:tag" content="Charter Communications Inc" />
+<meta property="article:tag" content="China Resources Holdings" />
+<meta property="article:tag" content="CIGNA Corporation" />
+<meta property="article:tag" content="Conservative Party (Great Britain)" />
+<meta property="article:tag" content="Democratic Party" />
+<meta property="article:tag" content="Dollar Shave Club" />
+<meta property="article:tag" content="Fox News Channel" />
+<meta property="article:tag" content="Gawker.com" />
+<meta property="article:tag" content="Humana Inc" />
+<meta property="article:tag" content="Hyperloop Technologies Inc" />
+<meta property="article:tag" content="Intel Corporation" />
+<meta property="article:tag" content="Man Group" />
+<meta property="article:tag" content="Monsanto Company" />
+<meta property="article:tag" content="Morgan Stanley" />
+<meta property="article:tag" content="Office Depot Inc." />
+<meta property="article:tag" content="Qualcomm Inc" />
+<meta property="article:tag" content="Republican Party" />
+<meta property="article:tag" content="Time Warner Cable Inc" />
+<meta property="article:tag" content="Twitter" />
+<meta property="article:tag" content="Unilever NV" />
+<meta property="article:tag" content="Volkswagen AG" />
+<meta property="article:tag" content="WhatsApp Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Ailes Roger E,Carlson Gretchen,Clinton Hillary Rodham,Denton Nick,May Theresa M,Murdoch Lachlan,Murdoch Rupert,Trump Donald J,Antitrust Laws and Competition Issues,Appointments and Executive Changes,Banking and Financial Institutions,Cyberharassment,Ethics and Official Misconduct,Glass-Steagall Act (1933),Health Insurance and Managed Care,Mergers Acquisitions and Divestitures,Personal Bankruptcies,Presidential Election of 2016,Regulation and Deregulation of Industry,Republican National Convention,Sexual Harassment,Social Media,Sovereign Wealth Funds,Start-ups,Suits and Litigation (Civil),1Malaysia Development Berhad (1MDB),21st Century Fox,Aetna Inc,Anthem Inc.,Baker Hughes Inc,Bayer AG,Charter Communications Inc,China Resources Holdings,CIGNA Corporation,Conservative Party (Great Britain),Democratic Party,Dollar Shave Club,Fox News Channel,Gawker.com,Humana Inc,Hyperloop Technologies Inc,Intel Corporation,Man Group,Monsanto Company,Morgan Stanley,Office Depot Inc.,Qualcomm Inc,Republican Party,Time Warner Cable Inc,Twitter,Unilever NV,Volkswagen AG,WhatsApp Inc,DealBook" />
+<meta name="news_keywords" content="Cyberharassment;Online harassment,Gawker.com,Startup,Twitter" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F07%2F20%2Fmorning-agenda-justice-department-will-seek-to-block-2-health-insurance-mergers%2F" title="Morning Agenda: Justice Department Will Seek to Block 2 Health Insurance Mergers" />
+<meta name="description" content="Roger Ailes Negotiates His Departure as Chairman of Fox News &#124; Embracing Populism as Policy" />
+<meta name="hdl" content="Morning Agenda: Justice Department Will Seek to Block 2 Health Insurance Mergers" />
+<meta property="og:title" content="Morning Agenda: Justice Department Will Seek to Block 2 Health Insurance Mergers" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/07/20/morning-agenda-justice-department-will-seek-to-block-2-health-insurance-mergers/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Roger Ailes Negotiates His Departure as Chairman of Fox News &#124; Embracing Populism as Policy" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Justice Department Will Seek to Block 2 Health Insurance Mergers" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/07/20/morning-agenda-justice-department-will-seek-to-block-2-health-insurance-mergers/" />
+<meta name="twitter:description" content="Roger Ailes Negotiates His Departure as Chairman of Fox News &#124; Embracing Populism as Policy" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/07/19/what-were-reading-172/' />
+<link rel='next' title='Morning Agenda: Tesla&#8217;s New Grand Plan' href='//news.blogs.nytimes.com/2016/07/21/morning-agenda-teslas-new-grand-plan/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/07/20/morning-agenda-justice-department-will-seek-to-block-2-health-insurance-mergers/' />
+<link rel='shortlink' href='//nyti.ms/2afOrTX' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/07/20/morning-agenda-justice-department-will-seek-to-block-2-health-insurance-mergers/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Justice Department Will Seek to Block 2 Health Insurance Mergers - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5326 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Justice Department Will Seek to Block 2 Health Insurance Mergers        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/07/20/morning-agenda-justice-department-will-seek-to-block-2-health-insurance-mergers/"
+	 data-title="Morning Agenda: Justice Department Will Seek to Block 2 Health Insurance Mergers"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Roger Ailes Negotiates His Departure as Chairman of Fox News | Embracing Populism as Policy&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/20/morning-agenda-justice-department-will-seek-to-block-2-health-insurance-mergers/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 20, 2016 5:47 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Justice Department Will Seek to Block 2 Health Insurance Mergers</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-07-20T09:47:57+00:00" itemprop="datePublished">July 20, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">July 20, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5326 post type-post status-publish hentry category-dealbook tag-1malaysia-development-berhad-1mdb tag-21st-century-fox tag-aetna-inc tag-ailes-roger-e tag-anthem-inc tag-antitrust-laws-and-competition-issues tag-appointments-and-executive-changes tag-baker-hughes-inc tag-banking-and-financial-institutions tag-bayer-ag tag-carlson-gretchen tag-charter-communications-inc tag-china-resources-holdings tag-cigna-corporation tag-clinton-hillary-rodham tag-conservative-party-great-britain tag-cyberharassment tag-democratic-party tag-denton-nick tag-dollar-shave-club tag-ethics-and-official-misconduct tag-fox-news-channel tag-gawker-com tag-glass-steagall-act-1933 tag-health-insurance-and-managed-care tag-humana-inc tag-hyperloop-technologies-inc tag-intel-corporation tag-man-group tag-may-theresa-m tag-mergers-acquisitions-and-divestitures tag-monsanto-company tag-morgan-stanley tag-murdoch-lachlan tag-murdoch-rupert tag-office-depot-inc tag-personal-bankruptcies tag-presidential-election-of-2016 tag-qualcomm-inc tag-regulation-and-deregulation-of-industry tag-republican-national-convention tag-republican-party tag-sexual-harassment tag-social-media tag-sovereign-wealth-funds tag-start-ups tag-suits-and-litigation-civil tag-time-warner-cable-inc tag-trump-donald-j tag-twitter tag-unilever-nv tag-volkswagen-ag tag-whatsapp-inc per-ailes-roger-e per-carlson-gretchen per-clinton-hillary-rodham per-denton-nick per-may-theresa-m per-murdoch-lachlan per-murdoch-rupert per-trump-donald-j des-antitrust-laws-and-competition-issues des-appointments-and-executive-changes des-banking-and-financial-institutions des-cyberharassment des-ethics-and-official-misconduct des-glass-steagall-act-1933 des-health-insurance-and-managed-care des-mergers-acquisitions-and-divestitures des-personal-bankruptcies des-presidential-election-of-2016 des-regulation-and-deregulation-of-industry des-republican-national-convention des-sexual-harassment des-social-media des-sovereign-wealth-funds des-start-ups des-suits-and-litigation-civil org-1malaysia-development-berhad-1mdb org-21st-century-fox org-aetna-inc org-anthem-inc org-baker-hughes-inc org-bayer-ag org-charter-communications-inc org-china-resources-holdings org-cigna-corporation org-conservative-party-great-britain org-democratic-party org-dollar-shave-club org-fox-news-channel org-gawker-com org-humana-inc org-hyperloop-technologies-inc org-intel-corporation org-man-group org-monsanto-company org-morgan-stanley org-office-depot-inc org-qualcomm-inc org-republican-party org-time-warner-cable-inc org-twitter org-unilever-nv org-volkswagen-ag org-whatsapp-inc news_keywords-cyberharassmentonline-harassment news_keywords-gawker-com news_keywords-startup news_keywords-twitter" id="post-5326">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Justice Department Will Seek to Block 2 Health Insurance Mergers</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-07-20T09:47:57+00:00" itemprop="datePublished">July 20, 2016 5:47 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 20, 2016 5:47 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/07/20/morning-agenda-justice-department-will-seek-to-block-2-health-insurance-mergers/" data-title="Morning Agenda: Justice Department Will Seek to Block 2 Health Insurance Mergers" data-description="Roger Ailes Negotiates His Departure as Chairman of Fox News | Embracing Populism as Policy">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div>
+<p class="story-body-text" itemprop="articleBody">JUSTICE DEPARTMENT WILL SEEK TO BLOCK 2 HEALTH INSURANCE MERGERS The Justice Department is preparing lawsuits to block the merger of Aetna with Humana and Anthem&#8217;s purchase of Cigna, <a href="//www.nytimes.com/2016/07/20/business/dealbook/anthem-cigna-aetna-humana-health-care-mergers.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160720">Leslie Picker and Reed Abelson report in DealBook.</a> Antitrust officials are concerned that <b>Aetna&#8217;s $37 billion deal with Humana and Anthem&#8217;s $48 billion pursuit of Cigna</b> will hurt competition in the health insurance industry, a person briefed on the matter said.</p>
+<p class="story-body-text" itemprop="articleBody">The deals would have reduced the ranks of the largest insurers to three from five.</p>
+<p class="story-body-text" itemprop="articleBody">A person familiar with the matter told <a href="//www.bloomberg.com/news/articles/2016-07-19/u-s-said-readying-suits-against-anthem-aetna-insurer-deals?nl=dealbook&amp;emc=edit_dlbkam_20160720">Bloomberg</a>, which earlier reported the suits, that <b>antitrust officials were unlikely to be persuaded by offers from the companies to sell assets</b>.</p>
+<p class="story-body-text" itemprop="articleBody">The lawsuits would be the latest in a series of challenges to mergers that the government perceives to be anticompetitive. Similar concerns prompted the end of the proposed $35 billion tie-up between the oil-field services companies Baker Hughes and Halliburton. Antitrust concerns also thwarted the $6.3 billion merger between Staples and Office Depot.</p>
+<p class="story-body-text" itemprop="articleBody">If the Justice Department succeeds, <b>Anthem would have to pay a $1.85 billion breakup fee to Cigna and Aetna would have to give $1 billion to Humana.</b></p>
+<p class="story-body-text" itemprop="articleBody">Investors have suspected for some time that trouble was brewing for the Anthem-Cigna deal, because of fighting between the two companies. But the Aetna-Humana deal was given better odds because the companies could divest themselves of businesses where they had too much market share.</p>
+<div></div>
+<p class="story-body-text" itemprop="articleBody">ROGER AILES NEGOTIATES HIS DEPARTURE AS CHAIRMAN OF FOX NEWS Roger Ailes and 21st Century Fox, the parent company of Fox News, are in the advanced stages of discussions about Mr. Ailes&#8217;s stepping down from his role as chairman, <a href="//www.nytimes.com/2016/07/20/business/media/roger-ailes-fox-news-murdoch.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160720">John Koblin and Jim Rutenberg report in The New York Times.</a> Susan Estrich, one of Mr. Ailes&#8217;s lawyers, said <b>the terms could include Mr. Ailes staying on in a consulting role</b>, but nothing had been completed.</p>
+<p class="story-body-text" itemprop="articleBody">The discussions come after Gretchen Carlson, a former anchor, filed a sexual harassment suit against Mr. Ailes, which in turn prompted an internal review at 21st Century Fox.</p>
+<p class="story-body-text" itemprop="articleBody"><b>A departure could be a humbling and startlingly sudden fall from power for Mr. Ailes</b>, who started Fox News from scratch 20 years ago and built it into a profitable top-rated cable news network as well as a leading platform for conservative politics.</p>
+<p class="story-body-text" itemprop="articleBody">News of Mr. Ailes&#8217;s impending exit landed like a shock wave at the Republican National Convention in Cleveland, where many of the nation&#8217;s leading television executives and personalities were gathered in tight quarters.</p>
+<p class="story-body-text" itemprop="articleBody">Rupert Murdoch has been in constant contact with his sons, James and Lachlan, on the matter and all three had agreed on Mr. Ailes&#8217;s fate, according to a person familiar with the matter. Although Mr. Ailes has had a successful partnership with Rupert Murdoch, he has had disagreements with James and Lachlan.</p>
+<div></div>
+<p class="story-body-text" itemprop="articleBody">ON THE AGENDA <b>Morgan Stanley</b> will publish its second-quarter results at 7 a.m. <b>Qualcomm&#8217;s</b> conference call on its third-quarter earnings starts at 4:30 p.m. <b>Intel</b> will hold a conference call on its latest quarterly earnings at 5:30 p.m.</p>
+<div></div>
+<p class="story-body-text" itemprop="articleBody">EMBRACING POPULISM AS POLICY Theresa May&#8217;s vision for a corporate Britain, which she outlined just before she became prime minister, is more Bernie Sanders than Margaret Thatcher, <a href="//www.nytimes.com/2016/07/20/business/dealbook/theresa-mays-vision-of-radical-conservatism.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160720">Steven Davidoff Solomon writes in Deal Professor</a> She calls for <b>more protectionism, a greater say for workers, more vigorous antitrust enforcement and limitations on pay for chief executives.</b></p>
+<p class="story-body-text" itemprop="articleBody">She has argued that <b>communities should be taken into account when foreign companies attempt takeovers</b>. Ms. May has also urged that Britain should adopt regulations requiring companies to publish the ratio of pay between their chief executives and their employees&#8217; median pay. She has called for a more rigorous antitrust regime in markets like banking and utilities too.</p>
+<p class="story-body-text" itemprop="articleBody"><b>This is more than populist political talk</b>, Mr. Davidoff Solomon writes. The changes she described, tying corporations more closely to the state, represent a significant shift from the generally laissez-faire positions the Conservatives have held since the time of Mrs. Thatcher.</p>
+<p class="story-body-text" itemprop="articleBody">With similar problems of inequality percolating in the United States, <b>it may not be long before Ms. May&#8217;s ideas are picked up there too</b>. The only question is whether Democrats or Republicans will do so, Mr. Davidoff Solomon writes.</p>
+<p class="story-body-text" itemprop="articleBody">Both parties have taken a leave out of the pages of the populist playbook already with their <b>attacks on big banks</b>, <a href="//www.nytimes.com/2016/07/20/business/economy/gop-joins-democrats-urging-glass-steagalls-revival-dont-hold-your-breath.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160720">Jeff Sommer writes in Strategies</a></p>
+<p class="story-body-text" itemprop="articleBody">The Republicans inserted a plank in the party platform calling for the restoration of the Glass-Steagall Acts, a Depression-era law that separated commercial and investment banking but was repealed in 1999. A draft of the Democratic platform also calls for the restoration of Glass-Steagall.</p>
+<p class="story-body-text" itemprop="articleBody">It is not clear that Glass-Steagall would have staved off the financial crisis had it remained in place, but <b>the law has become a way for both parties to poke a finger in Wall Street&#8217;s eye.</b></p>
+<p class="story-body-text" itemprop="articleBody">These pronouncements may not mean much. Party platforms are often irrelevant. Donald Trump has not made Glass-Steagall a campaign theme and Hillary Clinton has expressed skepticism about the utility of reviving it.</p>
+<p class="story-body-text" itemprop="articleBody"><b>They may also want to be careful about attacking big banks right now.</b> Who, after all, was the father of national banking in the United States? Alexander Hamilton, the founder of the first Bank of the United States, has become a populist hero and it might not be the smartest move to campaign against his well-heeled descendants, Mr. Sommer writes.</p>
+<div></div>
+</div>
+<div><em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+<div></div>
+</div>
+<div>
+<h6><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/?nl=dealbook&amp;emc=edit_dlbkam_20160720" name="mna">MERGERS &amp; ACQUISITIONS Â»</a></h6>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/20/100000004540741/20db-shave-thumbStandard.jpg" alt="Michael Dubin, the chief executive of Dollar Shave Club, would retain the post after the company's sale to Unilever." width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">Dollar Shave Club Sells to Unilever for $1 Billion The deal with the huge European company is a high point for digital commerce start-ups.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/20/business/dealbook/unilever-dollar-shave-club.html?nl=dealbook&amp;emc=edit_dlbkam_20160720">NYT Â»</a></li>
+</ul>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/19/100000004539151/20DB-MONSANTO-thumbStandard-v2.jpg" alt="Monsanto agribusiness greenhouses in St. Louis. Bayer is hoping to merge with Monsanto to create a one-stop shop for farmers." width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">Monsanto Rejects Bayer&#8217;s Revised Takeover Bid of $125 a Share Monsanto, which produces genetically modified crop seeds, said that its board viewed Bayer&#8217;s new takeover bid as too cheap.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/20/business/dealbook/monsanto-rejects-bayers-revised-takeover-bid.html?nl=dealbook&amp;emc=edit_dlbkam_20160720">NYT Â»</a> | <a href="//www.nytimes.com/2016/07/20/business/dealbook/monsanto-rejects-bayers-64-billion-takeover-bid-as-too-low.html?nl=dealbook&amp;emc=edit_dlbkam_20160720">REJECTION OF BAYER BID MAY SHORTCHANGE MONSANTO SHAREHOLDERS</a></li>
+</ul>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/19/100000004539642/20DB-BREAKINGVIEWS-thumbStandard.jpg" alt="At the post that handles Monsanto on the floor of the New York Stock Exchange earlier this year." width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">Rejection of Bayer Bid May Shortchange Monsanto Shareholders Monsanto is overvaluing its independence, Kevin Allison and Olaf Storbeck write in Breakingviews.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/20/business/dealbook/monsanto-rejects-bayers-64-billion-takeover-bid-as-too-low.html?nl=dealbook&amp;emc=edit_dlbkam_20160720">NYT Â»</a></li>
+</ul>
+<p class="story-body-text" itemprop="articleBody">China Resources Poised to Buy Australian Cancer and Cardiac Services Business China Resources Group is leading a consortium poised to buy a stake in Genesis Care, an Australian cancer therapy provider, The Wall Street Journal reports, citing a note sent by the managing director of Genesis Care to employees.</p>
+<ul>
+<li><a href="//www.wsj.com/articles/china-resources-poised-to-buy-australian-cancer-services-business-genesis-care-1468917725?mod=asia_home&amp;nl=dealbook&amp;emc=edit_dlbkam_20160720">THE WALL STREET JOURNAL</a></li>
+</ul>
+</div>
+<table>
+<tbody>
+<tr>
+<td height="47">
+<table>
+<tbody>
+<tr>
+<td>For the latest updates, go to <a href="//www.nytimes.com/pages/business/dealbook/index.html">NYTimes.com/DealBook</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table border="0" width="358" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+<tr>
+<td align="center">ADVERTISEMENT</td>
+</tr>
+<tr>
+<td align="center"><a href="//www.nytimes.com/adx/bin/adx_click.html?type=goto&amp;opzn&amp;page=email.nytimes.com/business/dealbookemail/html&amp;pos=Position5&amp;sn2=7cb3730e/cd35de0d&amp;sn1=5bbb0fb3/8fb5a0d9&amp;camp=nyt2015_300x250_em_crossword_nonsub_pos5&amp;ad=CRS-8944_300x250_Crossword_nonsubs_Free_2x&amp;goto=http%3A%2F%2Fwww%2Enytimes%2Ecom%2Fsubscriptions%2Fgames%2Flp897H9%2Ehtml%3FcampaignId%3D4Y8QR" target="_blank"><img src="https://static01.nyt.com/adx/images/ADS/41/21/ad.412104/CRS-8944_300x250_Crossword_freemonth_SS_2x.png" alt="" width="300" height="250" border="0" /></a></td>
+</tr>
+</tbody>
+</table>
+<div>
+<h6><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160720" name="hedgefunds">HEDGE FUNDS Â»</a></h6>
+<p class="story-body-text" itemprop="articleBody">Man Group Names New Chief Luke Ellis, the president of Man Group, has been named the chief executive, succeeding Emmanuel Roman, who will join Pimco as chief executive.</p>
+<ul>
+<li><a href="//www.bloomberg.com/news/articles/2016-07-20/man-group-names-luke-ellis-as-ceo-to-replace-departing-roman?nl=dealbook&amp;emc=edit_dlbkam_20160720">BLOOMBERG</a></li>
+</ul>
+</div>
+<div>
+<h6><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160720" name="offerings">I.P.O./OFFERINGS Â»</a></h6>
+<p class="story-body-text" itemprop="articleBody">China Film Plans Nation&#8217;s Largest Entertainment-Industry I.P.O. China Film, the nation&#8217;s largest movie distributor, is planning a $611 million initial public offering, the biggest in the country&#8217;s entertainment industry</p>
+<ul>
+<li><a href="//www.bloomberg.com/news/articles/2016-07-20/china-film-plans-biggest-ipo-in-country-s-entertainment-industry?nl=dealbook&amp;emc=edit_dlbkam_20160720">BLOOMBERG</a></li>
+</ul>
+</div>
+<div>
+<h6><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160720" name="legal">LEGAL/REGULATORY Â»</a></h6>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/19/100000004540562/20malaysia1-thumbStandard.jpg" alt="Prime Minister Najib Razak of Malaysia leaving the Time Warner Center in New York, where he has an apartment, in 2014." width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">U.S. Targets $1 Billion in Assets in Malaysian Embezzlement Case The Justice Department hopes to seize more than $1 billion in assets bought with money that it believes was stolen from 1MDB, a Malaysian sovereign wealth fund.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/21/world/asia/1mdb-malaysia-us-assets-seized.html?nl=dealbook&amp;emc=edit_dlbkam_20160720">NYT Â»</a> | <a href="//www.nytimes.com/news-event/shell-company-towers-of-secrecy-real-estate?nl=dealbook&amp;emc=edit_dlbkam_20160720">THE TOWERS OF SECRECY SERIES</a></li>
+</ul>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/19/100000004539537/20VOLKSWAGEN-2-thumbStandard.jpg" alt="Maura Healey, the Massachusetts attorney general, center, with Eric Schneiderman, the New York attorney general, left. They, along with Maryland's attorney general, filed lawsuits over Volkswagen's emissions deception." width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">Volkswagen Scandal Reaches All the Way to the Top, Lawsuits Say The suits claim the decision to thwart pollution tests involved dozens of engineers and managers and reached into the company&#8217;s boardroom.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/20/business/international/volkswagen-ny-attorney-general-emissions-scandal.html?nl=dealbook&amp;emc=edit_dlbkam_20160720">NYT Â»</a></li>
+</ul>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/19/100000004540493/19hyperloopjpg-thumbStandard.jpg" alt="A test of Hyperloop One's propulsion system in Nevada. The company is suing four of its former executives who had charged it with harassment and mismanagement." width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">Hyperloop One Sues 4 Who Accused the Start-Up of Harassment The company, which is developing a high-speed train, accuses its accusers of trying to start a competing venture with poached employees.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/20/business/dealbook/hyperloop-one-sues-4-who-accused-the-start-up-of-harassment.html?nl=dealbook&amp;emc=edit_dlbkam_20160720">NYT Â»</a></li>
+</ul>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/19/100000004540465/19disneylawjpg-thumbStandard.jpg" alt="Fireworks over Shanghai Disney Resort. A survey found Alan Braverman, Disney's general counsel, was the best paid among in-house lawyers, taking home $7.03 million in cash last year, up 5 percent from 2014." width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">Cash Pay Dips a Bit for Corporate Lawyers As a group, corporate lawyers were paid 2 percent less in cash in 2015 than in 2014. Those at the top fared better. And noncash pay wasn&#8217;t included.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/20/business/dealbook/cash-pay-dips-a-bit-for-corporate-lawyers.html?nl=dealbook&amp;emc=edit_dlbkam_20160720">NYT Â»</a></li>
+</ul>
+<p class="story-body-text" itemprop="articleBody">Fox News Sues Charter Communications Over Carriage Rate Fox News claims that Charter Communications is illegally seeking to apply Time Warner Cable&#8217;s channel-carriage rates to carry Fox News Channel and its sister channel Fox Business Network in all of its 17 million homes.</p>
+<ul>
+<li><a href="//www.wsj.com/articles/fox-news-sues-charter-communications-over-carriage-rate-1468949656?mod=pls_whats_news_us_business_f&amp;nl=dealbook&amp;emc=edit_dlbkam_20160720">THE WALL STREET JOURNAL</a></li>
+</ul>
+<p class="story-body-text" itemprop="articleBody">Judge Denies Lawsuit Shield for Founder of Gawker A federal judge said Gawker had failed to show that a personal bankruptcy filing by Nick Denton, the founder and chief executive of Gawker, would cause &#8220;imminent, irreparable harm&#8221; to the business he founded.</p>
+<ul>
+<li><a href="//www.wsj.com/articles/judge-denies-lawsuit-shield-for-gawkers-nick-denton-1468965653?mod=pls_whats_news_us_business_f&amp;nl=dealbook&amp;emc=edit_dlbkam_20160720">THE WALL STREET JOURNAL</a></li>
+</ul>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/19/100000004540581/20twitter01-thumbStandard.jpg" alt="Milo Yiannopoulos was barred by Twitter after a campaign of prolonged online abuse directed at Leslie Jones, one of the stars of the recent " width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">Twitter Bars Editor Over Torrent of Abusive Comments The action against the editor, Milo Yiannopoulos, who works at the conservative news site Breitbart, followed a campaign of prolonged abuse against the comedian Leslie Jones, a co-star in &#8220;Ghostbusters.&#8221;</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/20/technology/twitter-bars-milo-yiannopoulos-in-crackdown-on-abusive-comments.html?nl=dealbook&amp;emc=edit_dlbkam_20160720">NYT Â»</a> | <a href="//www.nytimes.com/2016/07/20/movies/leslie-jones-star-of-ghostbusters-becomes-a-target-of-online-trolls.html?nl=dealbook&amp;emc=edit_dlbkam_20160720">LESLIE JONES, STAR OF &#8216;GHOSTBUSTERS,&#8217; BECOMES A TARGET OF ONLINE TROLLS</a></li>
+</ul>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/19/100000004539984/20WHATSAPP-thumbStandard.jpg" alt="A driver checking WhatsApp in SÃ£o Paulo, Brazil. A state criminal court sought to punish WhatsApp for not handing over data requested by authorities as part of a criminal investigation." width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">WhatsApp Is Briefly Shut Down in Brazil for a Third Time The app, owned by Facebook, was shut down by a state criminal court when it did not hand over data requested by authorities. The order was overturned.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/20/technology/whatsapp-is-briefly-shut-down-in-brazil-for-a-third-time.html?nl=dealbook&amp;emc=edit_dlbkam_20160720">NYT Â»</a></li>
+</ul>
+<table border="0" cellspacing="0" cellpadding="0" align="right">
+<tbody>
+<tr>
+<td><img src="//cms-service.prd.nytimes.com/data/cms/files/2016/07/18/100000004537059/19GOOGLELOBBY-2-thumbStandard.jpg" alt="Google installed this interactive high-resolution display, which shows a series of artwork including Van Gogh's " width="75" height="75" border="0" /></td>
+</tr>
+</tbody>
+</table>
+<p class="story-body-text" itemprop="articleBody">Google, Trying to Endear Itself to Europe, Spreads $450 Million Around The company is financing a series of projects supporting European culture and education as its regulatory woes continue to compound.</p>
+<ul>
+<li><a href="//www.nytimes.com/2016/07/20/technology/google-europe-lobbying-eu.html?nl=dealbook&amp;emc=edit_dlbkam_20160720">NYT Â»</a></li>
+</ul>
+</div>
+<p class="story-body-text" itemprop="articleBody">&nbsp;</p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/07/20/morning-agenda-justice-department-will-seek-to-block-2-health-insurance-mergers/"
+					data-title="Morning Agenda: Justice Department Will Seek to Block 2 Health Insurance Mergers"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Roger Ailes Negotiates His Departure as Chairman of Fox News | Embracing Populism as Policy&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/20/morning-agenda-justice-department-will-seek-to-block-2-health-insurance-mergers/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":53,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

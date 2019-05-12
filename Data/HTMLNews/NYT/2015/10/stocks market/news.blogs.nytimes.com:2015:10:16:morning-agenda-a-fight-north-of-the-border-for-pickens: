@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003981475"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1444990354" />
+<meta name="PUD" content="20151016" />
+<meta name="pdate" content="20151016" />
+<meta name="ptime" content="20151016061234" />
+<meta name="utime" content="20151016101234" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-10-16T10:12:34-04:00" />
+<meta name="DISPLAYDATE" content="October 16, 2015" />
+<meta name="dat" content="October 16, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Buffett, Warren E;Morgan Stanley">
+<meta name="des" content="Alternative and Renewable Energy;Banking and Financial Institutions;Bonuses;Goldman Sachs Group Inc;Hedge Funds;Initial Public Offerings;Start-ups;Venture Capital;Wind Power">
+<meta name="org" content="Albertsons Companies Inc.;American International Group Inc;Citigroup Inc;Deutsche Bank AG;Federal Reserve System;Galleon Group;Goldman Sachs Group Inc;HSBC Holdings PLC.;JPMorgan Chase &amp; Company;The Blackstone Group;YUM! BRANDS INC">
+<meta name="geo" content="NextEra Energy Inc;Ontario (Canada)">
+<meta name="ticker" content="American International Group Inc|AIG|NYSE;Citigroup Inc|C|NYSE;Deutsche Bank AG|DB|NYSE;Goldman Sachs Group Inc|GS|NYSE;HSBC Holdings PLC.|HSBC|NYSE;JPMorgan Chase & Company|JPM|NYSE" />
+<meta property="article:tag" content="Buffett Warren E" />
+<meta property="article:tag" content="Morgan Stanley" />
+<meta property="article:tag" content="Alternative and Renewable Energy" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Bonuses" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Wind Power" />
+<meta property="article:tag" content="Albertsons Companies Inc." />
+<meta property="article:tag" content="American International Group Inc" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Galleon Group" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="HSBC Holdings PLC." />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="YUM! BRANDS INC" />
+<meta property="article:tag" content="NextEra Energy Inc" />
+<meta property="article:tag" content="Ontario (Canada)" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Buffett Warren E,Morgan Stanley,Alternative and Renewable Energy,Banking and Financial Institutions,Bonuses,Goldman Sachs Group Inc,Hedge Funds,Initial Public Offerings,Start-ups,Venture Capital,Wind Power,Albertsons Companies Inc.,American International Group Inc,Citigroup Inc,Deutsche Bank AG,Federal Reserve System,Galleon Group,Goldman Sachs Group Inc,HSBC Holdings PLC.,JPMorgan Chase &amp; Company,The Blackstone Group,YUM! BRANDS INC,NextEra Energy Inc,Ontario (Canada),DealBook" />
+<meta name="news_keywords" content="American International Group,Banking and Finance,Blackstone Group,Bonuses,Citigroup,Deutsche Bank,Federal Reserve,Galleon Group,Goldman Sachs Group,Hedge fund,IPO,JPMorgan Chase,Ontario,Renewable energy,Startup,Venture capital,Warren Buffett,Wind power,YUM! BRANDS" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F10%2F16%2Fmorning-agenda-a-fight-north-of-the-border-for-pickens%2F" title="Morning Agenda: A Fight North of the Border for Pickens" />
+<meta name="description" content="Trading Slump Hurts Goldman Earnings &#124; Y Combinator to Fund Later-Stage Companies &#124; Morgan Stanley Deal Maker Leaves for BDT &amp; Co." />
+<meta name="hdl" content="Morning Agenda: A Fight North of the Border for Pickens" />
+<meta property="og:title" content="Morning Agenda: A Fight North of the Border for Pickens" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/10/16/morning-agenda-a-fight-north-of-the-border-for-pickens/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Trading Slump Hurts Goldman Earnings &#124; Y Combinator to Fund Later-Stage Companies &#124; Morgan Stanley Deal Maker Leaves for BDT &amp; Co." />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: A Fight North of the Border for Pickens" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/10/16/morning-agenda-a-fight-north-of-the-border-for-pickens/" />
+<meta name="twitter:description" content="Trading Slump Hurts Goldman Earnings &#124; Y Combinator to Fund Later-Stage Companies &#124; Morgan Stanley Deal Maker Leaves for BDT &amp; Co." />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Companies Test Inhospitable Market for Public Offerings' href='//news.blogs.nytimes.com/2015/10/15/morning-agenda-companies-test-inhospitable-market-for-public-offerings/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/10/16/what-were-reading-98/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/10/16/morning-agenda-a-fight-north-of-the-border-for-pickens/' />
+<link rel='shortlink' href='//nyti.ms/1VWoUjp' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/10/16/morning-agenda-a-fight-north-of-the-border-for-pickens/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: A Fight North of the Border for Pickens - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3446 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: A Fight North of the Border for Pickens        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/10/16/morning-agenda-a-fight-north-of-the-border-for-pickens/"
+	 data-title="Morning Agenda: A Fight North of the Border for Pickens"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Trading Slump Hurts Goldman Earnings | Y Combinator to Fund Later-Stage Companies | Morgan Stanley Deal Maker Leaves for BDT &amp; Co.&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/10/16/morning-agenda-a-fight-north-of-the-border-for-pickens/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="October 16, 2015 6:12 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: A Fight North of the Border for Pickens</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-10-16T10:12:34+00:00" itemprop="datePublished">October 16, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">October 16, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3446 post type-post status-publish hentry category-dealbook tag-albertsons-companies-inc tag-alternative-and-renewable-energy tag-american-international-group-inc tag-banking-and-financial-institutions tag-bonuses tag-buffett-warren-e tag-citigroup-inc tag-deutsche-bank-ag tag-federal-reserve-system tag-galleon-group tag-goldman-sachs-group-inc tag-hedge-funds tag-hsbc-holdings-plc tag-initial-public-offerings tag-jpmorgan-chase-company tag-morgan-stanley tag-nextera-energy-inc tag-ontario-canada tag-start-ups tag-the-blackstone-group tag-venture-capital tag-wind-power tag-yum-brands-inc per-buffett-warren-e per-morgan-stanley des-alternative-and-renewable-energy des-banking-and-financial-institutions des-bonuses des-goldman-sachs-group-inc des-hedge-funds des-initial-public-offerings des-start-ups des-venture-capital des-wind-power org-albertsons-companies-inc org-american-international-group-inc org-citigroup-inc org-deutsche-bank-ag org-federal-reserve-system org-galleon-group org-goldman-sachs-group-inc org-hsbc-holdings-plc org-jpmorgan-chase-company org-the-blackstone-group org-yum-brands-inc geo-nextera-energy-inc geo-ontario-canada news_keywords-american-international-group news_keywords-banking-and-finance news_keywords-blackstone-group news_keywords-bonuses news_keywords-citigroup news_keywords-deutsche-bank news_keywords-federal-reserve news_keywords-galleon-group news_keywords-goldman-sachs-group news_keywords-hedge-fund news_keywords-ipo news_keywords-jpmorgan-chase news_keywords-ontario news_keywords-renewable-energy news_keywords-startup news_keywords-venture-capital-2 news_keywords-warren-buffett news_keywords-wind-power news_keywords-yum-brands" id="post-3446">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: A Fight North of the Border for Pickens</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-10-16T10:12:34+00:00" itemprop="datePublished">October 16, 2015 6:12 am</time>
+			<!-- date updated --><span class="visually-hidden updated">October 16, 2015 6:12 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/10/16/morning-agenda-a-fight-north-of-the-border-for-pickens/" data-title="Morning Agenda: A Fight North of the Border for Pickens" data-description="Trading Slump Hurts Goldman Earnings | Y Combinator to Fund Later-Stage Companies | Morgan Stanley Deal Maker Leaves for BDT &amp; Co.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A FIGHT NORTH OF THE BORDER FOR PICKENS</strong> <span class="divider"> | </span></span> T. Boone Pickens, the 87-year-old tycoon who made billions drilling for oil and gas, is fighting what may be the last big battle of his career,<br />
+<a href="//www.nytimes.com/2015/10/16/business/dealbook/for-pickens-wind-claim-may-be-last-power-play.html?ref=business">Alexandra Stevenson reports in DealBook.</a> He is no stranger to corporate takeover bouts, but this time he is <b>in a dispute over wind power</b> â and thousands of miles north of his Texas home. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Pickens is using his rights under the North American Free Trade Agreement to bring claims against the Canadian province of Ontario. He is <b>seeking $700 million in damages</b> for future losses related to bids that his power company, Mesa Power, lost in wind power auctions in Ontario. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Pickens and Mesa Power contend that NextEra, a Florida company that is usually on Mr. Pickensâs side when it comes to regulation and politics, was <b>granted exclusive access</b> through private meetings with important government officials. They have argued that $18,600 in donations that NextEra made to the governing Liberal Party in Ontario before elections in 2011 had undue influence on the auction.    </p>
+<p class="story-body-text" itemprop="articleBody">Political contributions are not unusual for NextEra. The company has <b>spent millions of dollars in political donations</b> to both the Republican and Democratic parties in the United States. Mr. Pickens has also donated to Republican candidates.  </p>
+<p class="story-body-text" itemprop="articleBody">Ontario granted NextEra $3.8 billion in energy contracts. </p>
+<p class="story-body-text" itemprop="articleBody">Mesa Powerâs arbitration notice also includes <b>allegations of favoritism</b> toward Samsung C&#038;T and the Korea Electric Power Corporation, both of which entered into a separate energy deal with the government. </p>
+<p class="story-body-text" itemprop="articleBody">Mesa Powerâs projects in Ontario would have been the <b>cornerstone of its wind energy business</b>. Mr. Pickens created the company in 2007 to develop and finance renewable energy projects.</p>
+<p class="story-body-text" itemprop="articleBody">Ontario enacted a Green Energy Act in 2009 and provided incentives for companies to invest in renewable energy. Companies that were awarded contracts would be <b>paid premium guaranteed prices</b> set by the government. In one auction, more than 500 applications were submitted, exceeding the governmentâs expectations.</p>
+<p class="story-body-text" itemprop="articleBody">Mesa Power submitted several project proposals. Its executives <b>disputed the government assessments</b> when they first came out in 2010, but government officials said Mesa Power did not submit its applications properly. </p>
+<p class="story-body-text" itemprop="articleBody">It also disputed an auction in 2011, complaining about the <b>lack of transparency around the process</b> of awarding contracts. Mr Pickens took his case to an international tribunal after the government rejected his projects and it is expected to rule as soon as this month.   </p>
+<p class="story-body-text" itemprop="articleBody">A review of documents shows that although Mesa Power executives were told they could not speak to officials until contracts were awarded, NextEra executives <b>met and held calls with high-level officials</b> at the Ontario Ministry of Energy, the premierâs office and the power authority. Officials also responded within hours when NextEra lobbyists asked for more information.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TRADING SLUMP HURTS GOLDMAN EARNINGS</strong> <span class="divider"> | </span></span> It has been a tough quarter for most banks, but Goldman Sachs has taken a particularly big hit as it struggles with market volatility,<br />
+<a href="//www.nytimes.com/2015/10/16/business/dealbook/slump-in-trading-hurts-goldman-sachs.html?ref=dealbook">Nathaniel Popper reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Its <b>trading desks saw a decline of 34 percent in revenues</b>, while its biggest competitor, JPMorgan Chase, saw a drop of 11 percent. </p>
+<p class="story-body-text" itemprop="articleBody">Total revenue at the bank fell 18 percent from a year earlier, to $6.9 billion. <b>Profit fell 38 percent</b>, to $1.3 billion, or $2.90 a share, in the third quarter from the quarter a year ago. </p>
+<p class="story-body-text" itemprop="articleBody">Its <b>investing and lending division</b> saw revenue drop 60 percent from the same quarter a year ago and 63 percent from the previous quarter. Goldman said that was caused by a decline in the price of the public stocks it held.</p>
+<p class="story-body-text" itemprop="articleBody">Goldmanâs chief financial officer, Harvey M. Schwartz, defended the companyâs long-term strategy of <b>sticking with difficult businesses</b> even as others are scaling back. It has also been cutting costs, but its bonus cuts have not kept up with the decline in revenue.</p>
+<p class="story-body-text" itemprop="articleBody">Some analysts expressed concern that the strategy was not playing out as expected, but others seemed willing to accept Mr. Schwartzâs argument that the results should not be viewed as a long-term danger.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Y COMBINATOR TO FUND LATER-STAGE COMPANIES</strong> <span class="divider"> | </span></span> Y Combinator, the start-up incubator, wants to help companies grow into young adults,<br />
+<a href="//www.nytimes.com/2015/10/16/technology/y-combinator-will-fund-later-stage-companies.html?ref=technology&#038;mtrref=www.nytimes.com">Mike Isaac reports in The New York Times.</a> It has raised a <b>$700 million fund</b> aimed at investing in later-stage companies â a departure from its traditional focus. </p>
+<p class="story-body-text" itemprop="articleBody">The new fund, called the Y Combinator Continuity Fund, will be run by Ali Rowghani, a former Twitter executive who joined Y Combinator as a part-time partner last year.</p>
+<p class="story-body-text" itemprop="articleBody">Traditionally, Y Combinator accepts start-ups twice a year in a semester-like system and gives them money, advice and access to a vast network of start-up founders and technologists. It also makes a $120,000 investment into each of the companies. Y Combinator is <b>typically granted a 7 percent stake</b> in each company.</p>
+<p class="story-body-text" itemprop="articleBody">When these companies âgraduate,â they are largely left on their own. The new fund will allow Y Combinator to <b>participate in subsequent funding rounds</b> and increase its stake. </p>
+<p class="story-body-text" itemprop="articleBody">It could prove to be a lucrative move â the incubator has been home to companies such as Airbnb, Dropbox and Stripe. But it could put itself into a <b>precarious position</b> by picking some of the more promising companies in its classes over others.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>General Electric</b> will discuss its third-quarter results at 8:30 a.m. The latest <b>industrial production data</b> will be released at 9:15 a.m. <b>Job openings and labor turnover</b> data for August will be released at 10 a.m. The University of Michigan will release preliminary data on <b>consumer sentiment</b> in October at 10 a.m. <b>Mary Jo White</b>, the S.E.C. chairwoman, will give the keynote address at the Managed Funds Association conference at 9:30 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>MORGAN STANLEY DEAL MAKER LEAVES FOR BDT &#038; CO.</strong> <span class="divider"> | </span></span> Jim Head, one of Morgan Stanleyâs top deal makers, is leaving for the merchant bank BDT &#038; Company,</p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2015/10/16/business/dealbook/morgan-stanley-deal-maker-to-join-bdt-co.html?ref=dealbook">Michael J. de la Merced reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">BDT is an adviser and investor with a focus on advising some of the worldâs wealthiest families. Byron D. Trott, the former Goldman Sachs rainmaker who founded the bank, is known as <b>Warren E. Buffettâs favorite banker</b>. </p>
+<p class="story-body-text" itemprop="articleBody">The bank has advised on deals including the <b>pending takeover of the insurer PartnerRe</b> by Exor, the investment vehicle of the Agnelli family, and various takeovers by Germanyâs Joh. A. Benckiser, including those of Peetâs Coffee &#038; Tea and Caribou Coffee. </p>
+<p class="story-body-text" itemprop="articleBody">Its <b>own investments</b> include stakes in the fashion company Tory Burch and the barbecue grill marker Weber-Stephen. </p>
+<p class="story-body-text" itemprop="articleBody">At Morgan Stanley, Mr. Head has advised the Federal Reserve Bank of New York on its response to the American International Groupâs troubles and worked on <b>Cignaâs $48 billion sale</b> to Anthem. </p>
+<p class="story-body-text" itemprop="articleBody">The Financial Times, which <a href="//www.ft.com/intl/cms/s/0/b8035dcc-734c-11e5-a129-3fcc4f641d98.html#axzz3oKAfvxSI">earlier reported</a> Mr. Headâs departure, notes that several deal makers have left their banks for <b>less regulated firms</b>, raising questions about the attractiveness of big banks in a tightly regulated environment.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A.I.G. to Sell Central American Units</strong> <span class="divider"> | </span></span> The American International Group has agreed to sell operations in Central America to Assa CompaÃ±Ã­a de Seguros, based in Panama, as the insurer continues to sell assets to free up capital.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-15/aig-plans-to-sell-central-american-operations-to-assa-compania"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Citigroupâs Profits Surged Last Quarter, Exceeding Expectations" src="https://static01.nyt.com/images/2015/07/23/business/23DB-CITIsub/23DB-CITIsub-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Citigroupâs Profits Surged Last Quarter, Exceeding Expectations</strong> <span class="divider"> | </span></span> But the bank also struggled with a drop in revenue in the third quarter during a rocky period of trading this summer.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/16/business/dealbook/citigroups-profit-surges-for-quarter.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HSBC Reducing Pay for Contractors in Cost-Cutting Push</strong> <span class="divider"> | </span></span> The British bank is requiring contractors in its investment business to take a 10 percent cut and unpaid leave as it tries to shave annual costs by $5 billion.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/16/business/dealbook/hsbc-reducing-pay-for-contractors-in-cost-cutting-push.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Banks May Need to Keep Billions More on Hand Under New Rules</strong> <span class="divider"> | </span></span> The lenders may be forced to raise the capital they keep by as much as $5 billion to comply with measures meant to protect their British retail banking businesses in a crisis.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/16/business/dealbook/british-banks-may-need-to-keep-billions-more-on-hand-under-new-rules.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PERELLA WEINBERG PARTNERS FORMS STRATEGIC ADVISORY BOARD</strong> <span class="divider"> | </span></span> The boutique investment bank Perella Weinberg Partners has formed a strategic advisory board. The members include Jorma Ollila, the former chairman of Royal Dutch Shell, and Robert Pozen, the former vice chairman of Fidelity Investments. <br /><span class="kicker"><a href="https://www.pwpartners.com/media/152931/PWP%20Release%20(10.15.2015).pdf"> PERELLA WEINBERG PARTNERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Bank Said to Plan Sale of U.S. Private Client Unit</strong> <span class="divider"> | </span></span> Deutsche Bank plans to sell its private client brokerage in the United States, Bloomberg News reports, citing people briefed on the matter. The sale doesnât include Deutsche Bankâs private bank in the United States.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-15/deutsche-bank-said-to-plan-sale-of-u-s-private-client-brokerage"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Bank Board Member Said to Leave</strong> <span class="divider"> | </span></span> Stephan Leithner, once a rising star at the company, is leaving to join the private equity firm EQT Partners as Germanyâs biggest bank reshapes its businesses, Bloomberg News reports, citing people with knowledge of the situation.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-15/deutsche-bank-s-board-member-leithner-said-to-leave-for-eqt"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>U.S. Bancorp Reports Higher Profit</strong> <span class="divider"> | </span></span> The Minneapolis-based bank said its profit rose in the third quarter, as loan growth and higher credit and debit card fees offset increased expenses.<br /><span class="kicker"><a href="//www.wsj.com/articles/u-s-bancorp-reports-higher-profit-1444910833?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Blackstone Posts Loss as Market Volatility Weighed on Investments" src="https://static01.nyt.com/images/2015/07/17/business/db-blackstone-web1/db-blackstone-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstone Posts Loss as Market Volatility Weighed on Investments</strong> <span class="divider"> | </span></span> While the firm has moved toward more consistent, fee-driven businesses, the results are a reminder of how volatile the Blackstone model can still be.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/16/business/dealbook/blackstone-posts-loss-for-quarter-as-value-of-holdings-drops.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Founder of Galleon Group Is Sued by Younger Brother</strong> <span class="divider"> | </span></span> Raj Rajaratnam, who is serving 11 years in prison for insider trading, and the Galleon Group have been sued by his younger brother for $13.5 million.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/16/business/founder-of-galleon-group-is-sued-by-younger-brother.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Yum Bows to Activist Investor Pressure</strong> <span class="divider"> | </span></span> Yum Brands appointed the activist investor Keith Meister to its board after his investment firm built a nearly 5 percent stake in the company, whose chain restaurants include KFC and Pizza Hut.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/c19b5114-7383-11e5-bdb1-e6e4767162cc.html#axzz3oKAfvxSI"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Albertsons Postpones I.P.O. Plans for the Time Being</strong> <span class="divider"> | </span></span> The company had already delayed its offering a day while it assessed the fallout from Walmartâs lowered sales forecasts.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/16/business/dealbook/albertsons-postpones-ipo-plans-for-the-time-being.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lackluster Trading Debut for First Data Shares</strong> <span class="divider"> | </span></span> The largest initial public offering of stock of the year ends below its offering price amid concerns about the health of the market.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/16/business/dealbook/lackluster-trading-debut-for-first-data-shares.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/10/15/business/dealbook/companies-eyeing-public-offerings-reckon-with-inhospitable-market.html">Companies Eyeing Public Offerings Reckon With Inhospitable Market</a> </span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Struggling to Cash Out in the I.P.O. Market</strong> <span class="divider"> | </span></span> Choppy markets around the world have frightened investors into becoming more risk-averse, and late arrivals to market are facing greater scrutiny, Jeffrey Goldfarb writes.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/16/business/dealbook/struggling-to-cash-out-in-the-ipo-market.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Bank of Internet Denies Accusation That It Defied Regulators" src="https://static01.nyt.com/images/2015/10/16/business/16db-bank-web/16db-bank-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bank of Internet Denies Accusation That It Defied Regulators</strong> <span class="divider"> | </span></span> After a 30 percent decline in the bankâs stock, the chief executive fiercely criticized a lawsuit filed by a former employee.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/16/business/dealbook/bank-of-internet-denies-accusation-that-it-defied-regulators.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fed Policy Makers Downplay Divisions</strong> <span class="divider"> | </span></span> Federal Reserve policy makers are not as divided as it may appear and are generally operating under the same framework for determining when to raise interest rates, one Fed official said.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/10/16/us-usa-fed-idUSKCN0S92YN20151016"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Nevada Says It Will Treat Daily Fantasy Sports Sites as Gambling" src="https://static01.nyt.com/images/2015/10/16/sports/16FANTASY2/16FANTASY2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Nevada Says It Will Treat Daily Fantasy Sports Sites as Gambling</strong> <span class="divider"> | </span></span> Nevada regulators ruled that playing daily fantasy sports should be considered gambling, not a game of skill, and ordered websites like DraftKings and FanDuel to stop operating immediately.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/16/sports/gambling-regulators-block-daily-fantasy-sites-in-nevada.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/10/16/morning-agenda-a-fight-north-of-the-border-for-pickens/"
+					data-title="Morning Agenda: A Fight North of the Border for Pickens"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Trading Slump Hurts Goldman Earnings | Y Combinator to Fund Later-Stage Companies | Morgan Stanley Deal Maker Leaves for BDT &amp; Co.&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/10/16/morning-agenda-a-fight-north-of-the-border-for-pickens/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":63,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-learning section-education"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-learning section-education" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-learning section-education" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-learning section-education" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004439915"><meta name="author" content="Shannon Doyne" />
+<meta name="CLMST" content="Shannon Doyne" />
+<meta name="byl" content="Shannon Doyne" />
+<meta name="article:author" content="//learning.blogs.nytimes.com/author/shannon-doyne/" /><meta name="GBLC" content="Featured;Teens in The Times">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1464347027" />
+<meta name="PUD" content="20160527" />
+<meta name="pdate" content="20160527" />
+<meta name="ptime" content="20160527070347" />
+<meta name="utime" content="20170920195915" />
+<meta property="article:modified_time" itemprop="dateModified" content="2017-09-20T19:59:15-04:00" />
+<meta name="DISPLAYDATE" content="May 27, 2016" />
+<meta name="dat" content="May 27, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="learning" />
+<meta name="BN" content="learning" />
+<meta name="robots" content="noodp">
+<meta property="article:tag" content="Featured" />
+<meta property="article:tag" content="Teens in The Times" />
+<meta name="keywords" content="Featured,Teens in The Times" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Flearning.blogs.nytimes.com%2F2016%2F05%2F27%2Fteenagers-in-the-times-may-2016%2F" title="Teenagers in The Times | May 2016" />
+<meta name="description" content="A roundup of news articles about young people that appeared in May, Teenagers in The Times is a monthly feature." />
+<meta name="hdl" content="Teenagers in The Times &#124; May 2016" />
+<meta property="og:title" content="Teenagers in The Times &#124; May 2016" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//learning.blogs.nytimes.com/2016/05/27/teenagers-in-the-times-may-2016/" />
+<meta property="og:site_name" content="The Learning Network" />
+<meta property="og:description" content="A roundup of news articles about young people that appeared in May, Teenagers in The Times is a monthly feature." />
+<meta property="og:image" content="https://static01.nyt.com/images/2016/05/01/us/00xp-gap-LN/00xp-gap-facebookJumbo.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2016/05/01/us/00xp-gap-LN/00xp-gap-thumbLarge.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Teenagers in The Times &#124; May 2016" />
+<meta name="twitter:url" content="//learning.blogs.nytimes.com/2016/05/27/teenagers-in-the-times-may-2016/" />
+<meta name="twitter:description" content="A roundup of news articles about young people that appeared in May, Teenagers in The Times is a monthly feature." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2016/05/01/us/00xp-gap-LN/00xp-gap-thumbLarge.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2016/05/01/us/00xp-gap-LN/00xp-gap-thumbLarge.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@NYTimesLearning">
+<link rel='prev' title='Student Question | Do You Hang Out in the Park?' href='//learning.blogs.nytimes.com/2016/05/27/student-question-do-you-hang-out-in-the-park/' />
+<link rel='next' title='Honoring Memorial Day' href='//learning.blogs.nytimes.com/2016/05/30/honoring-memorial-day/' />
+<link rel='canonical' href='//learning.blogs.nytimes.com/2016/05/27/teenagers-in-the-times-may-2016/' />
+<link rel='shortlink' href='//nyti.ms/1TILBE0' />
+<link rel='https://github.com/WP-API/WP-API' href='//learning.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/learning/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//learning.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/education/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/learning/2016/05/27/teenagers-in-the-times-may-2016/" />
+<meta name="dfp-ad-unit-path" content="learning" />			<title>Teenagers in The Times &#124; May 2016 - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/universal.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-168866 blog-universal nyt-blog-learning" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//learning.blogs.nytimes.com">
+                The Learning Network            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Teenagers in The Times | May 2016        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//learning.blogs.nytimes.com/2016/05/27/teenagers-in-the-times-may-2016/"
+	 data-title="Teenagers in The Times | May 2016"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;A roundup of news articles about young people that appeared in May, Teenagers in The Times is a monthly feature.&lt;/span&gt;&lt;a href=&quot;//learning.blogs.nytimes.com/2016/05/27/teenagers-in-the-times-may-2016/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 27, 2016 7:03 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>NYTD.jQuery = jQuery.noConflict();</script>
+<div id="learning" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+		<div class="element1">
+	<div id="logo" ><a href="//learning.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post" title="Go to The Learning Network Home"><img src="https://static01.nyt.com/images/blogs_v5/learning/learning_post.png" alt="The Learning Network - Teaching and Learning With The New York Times"/></a></div>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//learning.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search The Learning Network">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-168866 post type-post status-publish hentry category-teens-in-the-times" id="post-168866">
+	<header class="postHeader">
+				<div class="postKicker">
+					</div>
+				<h1 itemprop="headline" class="entry-title">Teenagers in The Times | May 2016</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Shannon Doyne			</address>
+			<!-- date published --><time class="dateline " datetime="2016-05-27T11:03:47+00:00" itemprop="datePublished">May 27, 2016 7:03 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 27, 2016 7:03 am</span>		</div>
+			</header>
+		<div class="entry-content"><div class="w592"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2016/05/01/us/00xp-gap-LN/00xp-gap-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2016/05/01/us/00xp-gap-LN/00xp-gap-tmagArticle.jpg" src="https://static01.nyt.com/images/2016/05/01/us/00xp-gap-LN/00xp-gap-tmagArticle.jpg" id="100000004437854" width="592" height="380" alt="The White House announced that Malia Obama, 17, would be delaying her college start date. It didnât say how she would spend her year. &lt;a href=&quot;//www.nytimes.com/2016/05/03/us/malia-obamas-gap-year-is-part-of-a-growing-and-expensive-trend.html&quot;&gt;Related Article&lt;/a&gt;"   /><meta itemprop="height" content="380"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">The White House announced that Malia Obama, 17, would be delaying her college start date. It didnât say how she would spend her year. <a href="//www.nytimes.com/2016/05/03/us/malia-obamas-gap-year-is-part-of-a-growing-and-expensive-trend.html">Related Article</a></span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Stephen Crowley/The New York Times</span></figcaption></figure></div>
+<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//learning.blogs.nytimes.com/2016/05/27/teenagers-in-the-times-may-2016/" data-title="Teenagers in The Times | May 2016" data-description="A roundup of news articles about young people that appeared in May, Teenagers in The Times is a monthly feature.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><webonly><span id="t15h24s" class="update">Updated, June 20 | </span></webonly></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Please Note: Teenagers in The Times is on summer hiatus and will be back in early September.</strong> </p>
+<p class="story-body-text" itemprop="articleBody">Please check our <a href="//learning.blogs.nytimes.com/2016/06/16/our-summer-calendar/">summer calendar</a> to learn more, and to find out how to participate in the <a href="//learning.blogs.nytimes.com/2016/05/12/the-seventh-annual-new-york-times-summer-reading-contest/">Seventh Annual New York Times Summer Reading Contest</a> any week from now to Aug. 26. </p>
+<hr/>
+<p class="story-body-text" itemprop="articleBody">News stories about teenagers were plentiful this month, as you&#8217;ll see in this edition of <a href="//learning.blogs.nytimes.com/category/teens-in-the-times/">Teenagers in the Times</a>. Among the articles about young people that have appeared in The Times, you&#8217;ll read about the continuing debate about school restroom access for transgender students &#8212; and how the Obama administration has gotten involved.</p>
+<p class="story-body-text" itemprop="articleBody">Speaking of President Obama, his daughter Malia made the news this month when the White House announced she would be among the thousands of students to take a so-called gap year between high school and college. Harvard University, where Malia plans to start in the fall of 2017, has for decades been urging members of its incoming class to consider taking a gap year before enrolling.</p>
+<p class="story-body-text" itemprop="articleBody">And donât forget that we have both <a href="//learning.blogs.nytimes.com/2012/11/08/teaching-with-teenagers-in-the-times/">teaching ideas</a> and a <a href="https://static01.nyt.com/images/blogs/learning/pdf/2014/TeenagersinTheTimesHandout.pdf">special activity sheet</a> that you can use with this or any edition of this feature.</p>
+<p class="story-body-text" itemprop="articleBody"><span id="more-168866"></span></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Education News</strong></p>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/13/us/politics/obama-administration-to-issue-decree-on-transgender-access-to-school-restrooms.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/13/us/13TRANSGENDER/13TRANSGENDER-thumbWide-v2.jpg" width="190" height="126" alt="U.S. Directs Public Schools to Allow Transgender Access to Restrooms" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/13/us/politics/obama-administration-to-issue-decree-on-transgender-access-to-school-restrooms.html?ref=learning">U.S. Directs Public Schools to Allow Transgender Access to Restrooms</a></h4>
+<p class="nyt-article-byline">By JULIE HIRSCHFELD DAVIS and MATT APUZZO</p>
+<p class="nyt-article-summary">The letter to school districts does not have the force of law. But it contains an implicit threat of possible lawsuits or a loss of federal aid.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/18/us/national-debate-over-transgender-bathrooms-turns-personal-at-rural-vermont-high-school.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/18/us/18VERMONT/18VERMONT-thumbWide.jpg" width="190" height="126" alt="Transgender Bathroom Debate Turns Personal at a Vermont High School" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/18/us/national-debate-over-transgender-bathrooms-turns-personal-at-rural-vermont-high-school.html?ref=learning">Transgender Bathroom Debate Turns Personal at a Vermont High School</a></h4>
+<p class="nyt-article-byline">By ANEMONA HARTOCOLLIS</p>
+<p class="nyt-article-summary">An announcement supporting a transgender studentâs use of the restroom of his choice has divided students and parents in Chester.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/21/us/separate-bathrooms-by-religion-oklahoma-opens-new-front-in-transgender-debate.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/21/us/21XP-OKLAHOMALGBT/21XP-OKLAHOMALGBT-thumbWide.jpg" width="190" height="126" alt="Separate Bathrooms by Religion? Oklahoma Opens New Front in Transgender Debate" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/21/us/separate-bathrooms-by-religion-oklahoma-opens-new-front-in-transgender-debate.html?ref=learning">Separate Bathrooms by Religion? Oklahoma Opens New Front in Transgender Debate</a></h4>
+<p class="nyt-article-byline">By CHRISTINE HAUSER</p>
+<p class="nyt-article-summary">Proposed state legislation would let students cite religious grounds to request a bathroom that bars transgender people.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/18/us/cleveland-mississippi-school-district-desegregate.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/17/us/18xp-mississippi/18xp-mississippi-thumbWide.jpg" width="190" height="126" alt="Mississippi District Ordered to Desegregate Its Schools" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/18/us/cleveland-mississippi-school-district-desegregate.html?ref=learning">Mississippi District Ordered to Desegregate Its Schools</a></h4>
+<p class="nyt-article-byline">By CHRISTINE HAUSER</p>
+<p class="nyt-article-summary">The court decision in Cleveland, Miss., after a five-decade legal battle, requires the district to combine its middle and high schools.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/01/opinion/sunday/what-can-stop-kids-from-dropping-out.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/01/opinion/sunday/01kirp/01kirp-thumbWide.jpg" width="190" height="126" alt="What Can Stop Kids From Dropping Out" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/01/opinion/sunday/what-can-stop-kids-from-dropping-out.html?ref=learning">What Can Stop Kids From Dropping Out</a></h4>
+<p class="nyt-article-byline">By DAVID L. KIRP</p>
+<p class="nyt-article-summary">Simple steps raise the graduation rate, especially among minority students.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/03/us/malia-obamas-gap-year-is-part-of-a-growing-and-expensive-trend.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/01/us/00xp-gap/00xp-gap-thumbWide.jpg" width="190" height="126" alt="Malia Obamaâs âGap Yearâ Is Part of a Growing (and Expensive) Trend" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/03/us/malia-obamas-gap-year-is-part-of-a-growing-and-expensive-trend.html?ref=learning">Malia Obamaâs âGap Yearâ Is Part of a Growing (and Expensive) Trend</a></h4>
+<p class="nyt-article-byline">By MIKE McPHATE</p>
+<p class="nyt-article-summary">Thousands of students take a year off before officially entering college, but many point out that not everyone can afford to do so.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/02/us/politics/malia-obama-to-attend-harvard-but-not-until-2017.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/02/us/02malia-web01/02malia-web01-thumbWide.jpg" width="190" height="126" alt="Malia Obama to Attend Harvard, but Not Until 2017" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/02/us/politics/malia-obama-to-attend-harvard-but-not-until-2017.html?ref=learning">Malia Obama to Attend Harvard, but Not Until 2017</a></h4>
+<p class="nyt-article-byline">By JULIE HIRSCHFELD DAVIS and NICHOLAS FANDOS</p>
+<p class="nyt-article-summary">President Obamaâs oldest daughter will defer her college career until after her father leaves office.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/06/us/debate-erupts-over-californias-india-history-curriculum.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/06/us/06textbooks_web2/06textbooks_web2-thumbWide.jpg" width="190" height="126" alt="Debate Erupts in California Over Curriculum on Indiaâs History" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/06/us/debate-erupts-over-californias-india-history-curriculum.html?ref=learning">Debate Erupts in California Over Curriculum on Indiaâs History</a></h4>
+<p class="nyt-article-byline">By JENNIFER MEDINA</p>
+<p class="nyt-article-summary">The dispute centers on what to call the region of South Asia and how to portray its culture in the stateâs textbooks.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/06/nyregion/students-at-fake-university-say-they-were-collateral-damage-in-sting-operation.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/03/nyregion/03students-web1/03students-web1-thumbWide.jpg" width="190" height="126" alt="Students at Fake University Say They Were Collateral Damage in Sting Operation" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/06/nyregion/students-at-fake-university-say-they-were-collateral-damage-in-sting-operation.html?ref=learning">Students at Fake University Say They Were Collateral Damage in Sting Operation</a></h4>
+<p class="nyt-article-byline">By LIZ ROBBINS</p>
+<p class="nyt-article-summary">The federal governmentâs fictitious University of Northern New Jersey was aimed at dishonest recruiters, but foreign students who signed up lost thousands and face deportation.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/07/us/raised-fist-photo-by-black-women-at-west-point-spurs-inquiry.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/07/us/07WESTPOINT/07WESTPOINT-thumbWide-v2.jpg" width="190" height="126" alt="Raised-Fist Photo by Black Women at West Point Spurs Inquiry" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/07/us/raised-fist-photo-by-black-women-at-west-point-spurs-inquiry.html?ref=learning">Raised-Fist Photo by Black Women at West Point Spurs Inquiry</a></h4>
+<p class="nyt-article-byline">By DAVE PHILIPPS</p>
+<p class="nyt-article-summary">The military academy has opened an investigation into whether the women violated Army rules that prohibit political activities while in uniform.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/11/us/citadel-denies-students-request-to-wear-a-hijab.html?ref=learning"><img src="https://static01.nyt.com/images/2016/04/15/us/16xp-CITADEL/16xp-CITADEL-thumbWide.jpg" width="190" height="126" alt="Citadel Denies Studentâs Request to Wear a Hijab" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/11/us/citadel-denies-students-request-to-wear-a-hijab.html?ref=learning">Citadel Denies Studentâs Request to Wear a Hijab</a></h4>
+<p class="nyt-article-byline">By KATIE ROGERS</p>
+<p class="nyt-article-summary">A spokesman for the studentâs family said she would not attend the military college in South Carolina after officials said the institution would not change the uniform.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/11/business/media/cornell-university-daily-sun.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/10/us/10xp-cornell-2/10xp-cornell-2-thumbWide.jpg" width="190" height="126" alt="At Cornell, the College Daily Will No Longer Be Daily" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/11/business/media/cornell-university-daily-sun.html?ref=learning">At Cornell, the College Daily Will No Longer Be Daily</a></h4>
+<p class="nyt-article-byline">By DANIEL VICTOR</p>
+<p class="nyt-article-summary">The Daily Sun, the latest college newspaper to downsize, said it would decrease print production to three days from five and focus more online.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/14/your-money/in-college-essays-about-money-echoes-of-parents-attitudes.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/13/business/14MONEYLISTY-1/14MONEYLISTY-1-thumbWide.jpg" width="190" height="126" alt="In College Essays About Money, Echoes of Parentsâ Attitudes" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/14/your-money/in-college-essays-about-money-echoes-of-parents-attitudes.html?ref=learning">In College Essays About Money, Echoes of Parentsâ Attitudes</a></h4>
+<p class="nyt-article-byline">By RON LIEBER</p>
+<p class="nyt-article-summary">Among the best essays college applicants sent us this year are ones featuring an artist father, an affluent suburb and a frugal Dominican family.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/interactive/2016/05/12/your-money/student-college-essays-about-money.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/13/business/14MONEYLISTY-1/14MONEYLISTY-1-thumbWide.jpg" width="190" height="126" alt="Memories and Hopes: The Top Essays" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/interactive/2016/05/12/your-money/student-college-essays-about-money.html?ref=learning">Memories and Hopes: The Top Essays</a></h4>
+<p class="nyt-article-byline">
+<p class="nyt-article-summary">The four best college application essays about money that students sent us in 2016.</p>
+</p></div>
+<hr/>
+<p class="story-body-text" itemprop="articleBody">Civics, Politics, Geography, Government, Economics and Business</p>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/14/us/states-move-to-treat-17-year-old-offenders-as-juveniles.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/11/us/juvenile-web1/juvenile-web1-thumbWide.jpg" width="190" height="126" alt="States Move Toward Treating 17-Year-Old Offenders as Juveniles, Not Adults" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/14/us/states-move-to-treat-17-year-old-offenders-as-juveniles.html?ref=learning">States Move Toward Treating 17-Year-Old Offenders as Juveniles, Not Adults</a></h4>
+<p class="nyt-article-byline">By ERIK ECKHOLM</p>
+<p class="nyt-article-summary">Louisiana is among a dwindling number of states where 17-year-olds are automatically treated as adults, and among a growing number that are looking at revising those laws.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/04/30/us/a-few-miles-from-san-bernardino-a-muslim-prom-queen-reigns.html?ref=learning"><img src="https://static01.nyt.com/images/2016/04/29/us/30prom-web1/30prom-web1-thumbWide.jpg" width="190" height="126" alt="A Few Miles From San Bernardino, a Muslim Prom Queen Reigns" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/04/30/us/a-few-miles-from-san-bernardino-a-muslim-prom-queen-reigns.html?ref=learning">A Few Miles From San Bernardino, a Muslim Prom Queen Reigns</a></h4>
+<p class="nyt-article-byline">By JENNIFER MEDINA</p>
+<p class="nyt-article-summary">Zarifeh Shalabi received the ultimate symbol of teenage acceptance when her non-Muslim friends campaigned for her by wearing hijabs in solidarity.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/04/us/snapchat-speeding-teenager-crash-lawsuit.html?ref=learning"><img src="https://static01.nyt.com/images/2016/04/29/nytnow/30xp-snapchat/30xp-snapchat-thumbWide-v6.png" width="190" height="126" alt="Snapchat at 107 M.P.H.? Lawsuit Blames Teenager (and Snapchat)" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/04/us/snapchat-speeding-teenager-crash-lawsuit.html?ref=learning">Snapchat at 107 M.P.H.? Lawsuit Blames Teenager (and Snapchat)</a></h4>
+<p class="nyt-article-byline">By KATIE ROGERS</p>
+<p class="nyt-article-summary">A Georgia man severely injured in a car wreck is accusing the teenager who hit him of using Snapchat while driving excessive speeds.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/11/science/climate-change-citizen-lawsuits.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/10/science/10CLIMATECOURTS2/10CLIMATECOURTS2-thumbWide.jpg" width="190" height="126" alt="In Novel Tactic on Climate Change, Citizens Sue Their Governments" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/11/science/climate-change-citizen-lawsuits.html?ref=learning">In Novel Tactic on Climate Change, Citizens Sue Their Governments</a></h4>
+<p class="nyt-article-byline">By JOHN SCHWARTZ</p>
+<p class="nyt-article-summary">An American nonprofit is suing on behalf of 21 young plaintiffs, and a farmer in Peru sued a German energy utility over its part in causing global warming.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/13/business/economy/for-some-job-seekers-success-for-others-still-waiting.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/12/business/gradaugustine-pic/gradaugustine-pic-thumbWide.jpg" width="190" height="126" alt="For Some Job Seekers, Success. For Others, Still Waiting." /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/13/business/economy/for-some-job-seekers-success-for-others-still-waiting.html?ref=learning">For Some Job Seekers, Success. For Others, Still Waiting.</a></h4>
+<p class="nyt-article-byline">By PATRICIA COHEN</p>
+<p class="nyt-article-summary">Many graduates are receiving diplomas, sending rÃ©sumÃ©s and keeping their fingers crossed. We asked some graduates to talk about their job search.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/11/business/economy/its-a-tough-job-market-for-the-young-without-college-degrees.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/04/business/05GRAD1/05GRAD1-thumbWide.jpg" width="190" height="126" alt="Itâs a Tough Job Market for the Young Without College Degrees" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/11/business/economy/its-a-tough-job-market-for-the-young-without-college-degrees.html?ref=learning">Itâs a Tough Job Market for the Young Without College Degrees</a></h4>
+<p class="nyt-article-byline">By PATRICIA COHEN</p>
+<p class="nyt-article-summary">A national study shows that high school graduates often struggle to find work. Their jobless rate is 17.8 percent, and itâs much worse for dropouts.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/04/30/world/middleeast/surge-in-palestinian-youths-in-prison-tests-israels-justice-system.html?ref=learning"><img src="https://static01.nyt.com/images/2016/04/30/world/30Minors-web1/30Minors-web1-thumbWide.jpg" width="190" height="126" alt="Surge in Palestinian Youths in Prison Tests Israelâs Justice System" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/04/30/world/middleeast/surge-in-palestinian-youths-in-prison-tests-israels-justice-system.html?ref=learning">Surge in Palestinian Youths in Prison Tests Israelâs Justice System</a></h4>
+<p class="nyt-article-byline">By DIAA HADID</p>
+<p class="nyt-article-summary">Dima al-Wawi, a 12-year-old jailed for two months for planning to stab an Israeli soldier, was one of hundreds of Palestinian children jailed since attacks on Israelis surged.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/25/world/americas/canada-indigenous-women-highway-16.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/24/world/25canadatears-web/25canadatears-web-thumbWide-v3.jpg" width="190" height="126" alt="Dozens of Women Vanish on Canadaâs Highway of Tears, and Most Cases Are Unsolved" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/25/world/americas/canada-indigenous-women-highway-16.html?ref=learning">Dozens of Women Vanish on Canadaâs Highway of Tears, and Most Cases Are Unsolved</a></h4>
+<p class="nyt-article-byline">By DAN LEVIN</p>
+<p class="nyt-article-summary">Prime Minister Justin Trudeau announced an inquiry into a series of disappearances and murders, part of a promise to renew the countryâs relationship with its indigenous citizens.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/19/world/africa/boko-haram-chibok-abductions.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/19/world/19chibok-girl-web/19chibok-girl-web-thumbWide.jpg" width="190" height="126" alt="Nigerian Girl Abducted by Boko Haram From Chibok Is Found" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/19/world/africa/boko-haram-chibok-abductions.html?ref=learning">Nigerian Girl Abducted by Boko Haram From Chibok Is Found</a></h4>
+<p class="nyt-article-byline">By CHRIS STEIN and DIONNE SEARCEY</p>
+<p class="nyt-article-summary">The girl was wandering in the forest Tuesday when a vigilante group lying in wait to ambush a Boko Haram camp came across her, a commander said.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/19/world/africa/boko-haram-victims-nigeria.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/18/world/africa/20160519BOKO-slide-I5NF/20160519BOKO-slide-I5NF-thumbWide.jpg" width="190" height="126" alt="Victims of Boko Haram, and Now Shunned by Their Communities" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/19/world/africa/boko-haram-victims-nigeria.html?ref=learning">Victims of Boko Haram, and Now Shunned by Their Communities</a></h4>
+<p class="nyt-article-byline">By DIONNE SEARCEY</p>
+<p class="nyt-article-summary">Nigerians who return from captivity after being kidnapped and raped by Boko Haram are met with suspicion that they have joined the militantsâ ranks.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/20/world/africa/boko-haram-abducted-nigeria-schoolgirls-found-rescue-chibok.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/20/world/NIGERIA/NIGERIA-thumbWide.jpg" width="190" height="126" alt="Another Chibok Schoolgirl Kidnapped by Boko Haram Is Found, Nigeria Says" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/20/world/africa/boko-haram-abducted-nigeria-schoolgirls-found-rescue-chibok.html?ref=learning">Another Chibok Schoolgirl Kidnapped by Boko Haram Is Found, Nigeria Says</a></h4>
+<p class="nyt-article-byline">By CHRIS STEIN and DIONNE SEARCEY</p>
+<p class="nyt-article-summary">The discovery of Serah Luka on Thursday was announced hours after Amina Ali, another kidnapping victim who was found Tuesday, met with President Muhammadu Buhari in the capital.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/22/opinion/new-york-teenagers-dumped-in-adult-jails.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/22/opinion/22sun3web/22sun3web-thumbWide.jpg" width="190" height="126" alt="New York Teenagers Dumped in Adult Jails" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/22/opinion/new-york-teenagers-dumped-in-adult-jails.html?ref=learning">New York Teenagers Dumped in Adult Jails</a></h4>
+<p class="nyt-article-byline">By THE EDITORIAL BOARD</p>
+<p class="nyt-article-summary">Prosecuting adolescents as adults needlessly destroys their lives.</p>
+</p></div>
+<div class="nyt-article-promo">
+<h4><a href="//www.nytimes.com/2016/05/25/us/millennials-roommates-now-more-likely-to-be-parents-than-partners.html?ref=learning">Millennialsâ Roommates Now More Likely to Be Parents Than Partners</a></h4>
+<p class="nyt-article-byline">By TAMAR LEWIN</p>
+<p class="nyt-article-summary">For the first time in modern history, adults ages 18 to 34 are more likely to live with a parent than with a romantic partner, a new report found.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/01/opinion/sunday/dont-treat-young-adults-as-teenagers.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/01/opinion/sunday/01gray/01gray-thumbWide.jpg" width="190" height="126" alt="Donât Treat Young Adults as Teenagers" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/01/opinion/sunday/dont-treat-young-adults-as-teenagers.html?ref=learning">Donât Treat Young Adults as Teenagers</a></h4>
+<p class="nyt-article-byline">By LAURENCE STEINBERG, THOMAS GRISSO, ELIZABETH S. SCOTT and RICHARD J. BONNIE</p>
+<p class="nyt-article-summary">Raising the age of juvenile court jurisdiction to 21 is misguided.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/04/us/snapchat-speeding-teenager-crash-lawsuit.html?ref=learning"><img src="https://static01.nyt.com/images/2016/04/29/nytnow/30xp-snapchat/30xp-snapchat-thumbWide-v6.png" width="190" height="126" alt="Snapchat at 107 M.P.H.? Lawsuit Blames Teenager (and Snapchat)" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/04/us/snapchat-speeding-teenager-crash-lawsuit.html?ref=learning">Snapchat at 107 M.P.H.? Lawsuit Blames Teenager (and Snapchat)</a></h4>
+<p class="nyt-article-byline">By KATIE ROGERS</p>
+<p class="nyt-article-summary">A Georgia man severely injured in a car wreck is accusing the teenager who hit him of using Snapchat while driving excessive speeds.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/17/us/teenager-sues-over-taser-arrest-while-riding-bicycle-outside-tacoma-mall.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/16/us/17xp-TACOMA/17xp-TACOMA-thumbWide.jpg" width="190" height="126" alt="Teenager Sues Over Being Pulled From Bike, Tasered and Arrested Outside Tacoma Mall" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/17/us/teenager-sues-over-taser-arrest-while-riding-bicycle-outside-tacoma-mall.html?ref=learning">Teenager Sues Over Being Pulled From Bike, Tasered and Arrested Outside Tacoma Mall</a></h4>
+<p class="nyt-article-byline">By CHRISTINE HAUSER</p>
+<p class="nyt-article-summary">Monique Tillman, 17, is suing a police officer, the mall and others for damages over the 2014 episode in which she says she was slammed to the ground.</p>
+</p></div>
+<hr/>
+<p class="story-body-text" itemprop="articleBody"><strong>Science, Technology, Math, Health and Sports</strong></p>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/18/science/transgender-children.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/18/science/18TRANSGENDER1/18TRANSGENDER1-thumbWide-v2.jpg" width="190" height="126" alt="As Attention Grows, Transgender Childrenâs Numbers Are Elusive" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/18/science/transgender-children.html?ref=learning">As Attention Grows, Transgender Childrenâs Numbers Are Elusive</a></h4>
+<p class="nyt-article-byline">By JAN HOFFMAN</p>
+<p class="nyt-article-summary">For all the heated debate about bathroom access, a central fact remains unclear: how many children in the United States identify as transgender.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/10/technology/apple-computer-museum-maine-teenager-alex-jason.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/06/business/00xp-applekid_web4/00xp-applekid_web4-thumbWide.jpg" width="190" height="126" alt="15-Year-Oldâs 200 Vintage Apple Computers Are Now a Mac Museum" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/10/technology/apple-computer-museum-maine-teenager-alex-jason.html?ref=learning">15-Year-Oldâs 200 Vintage Apple Computers Are Now a Mac Museum</a></h4>
+<p class="nyt-article-byline">By CHRISTOPHER MELE</p>
+<p class="nyt-article-summary">Alex Jason has 200 vintage Apple computers, including a rare Apple I model from 1976, that he hopes to display in a new technology museum in Maine.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/26/technology/corporate-america-chases-the-mythical-millennial.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/25/business/26state/26state-thumbWide.jpg" width="190" height="126" alt="Corporate America Chases the Mythical Millennial" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/26/technology/corporate-america-chases-the-mythical-millennial.html?ref=learning">Corporate America Chases the Mythical Millennial</a></h4>
+<p class="nyt-article-byline">By FARHAD MANJOO</p>
+<p class="nyt-article-summary">The expensive quest to discover what millennials want misses two things: Each is an individual, and collectively they are much like other generations.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/19/sports/max-verstappen-teenage-sports-stars.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/18/sports/18TEENSweb1/18TEENSweb1-thumbWide.jpg" width="190" height="126" alt="Teenage Sports Stars, From Young Tom Morris to Max Verstappen" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/19/sports/max-verstappen-teenage-sports-stars.html?ref=learning">Teenage Sports Stars, From Young Tom Morris to Max Verstappen</a></h4>
+<p class="nyt-article-byline">By VICTOR MATHER</p>
+<p class="nyt-article-summary">For some athletes, teenage success heralds a long career. Others are destined never to match those youthful heights again.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/10/sports/at-16-reece-whitley-stands-tall-in-and-out-of-water.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/10/sports/10WHITLEY1/10WHITLEY1-thumbWide.jpg" width="190" height="126" alt="At 16, Reece Whitley Stands Tall in and Out of Water" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/10/sports/at-16-reece-whitley-stands-tall-in-and-out-of-water.html?ref=learning">At 16, Reece Whitley Stands Tall in and Out of Water</a></h4>
+<p class="nyt-article-byline">By KAREN CROUSE</p>
+<p class="nyt-article-summary">There is so much more than meets the eye to Reece Whitley, 16, a 6-foot-8 African-American who is a top breaststroker.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/12/sports/high-school-football-stadium-texas-63-million.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/10/us/11xp-mckinney/11xp-mckinney-thumbWide.jpg" width="190" height="126" alt="Thatâs Right, $63 Million for a Football Stadium â¦ for High Schoolers" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/12/sports/high-school-football-stadium-texas-63-million.html?ref=learning">Thatâs Right, $63 Million for a Football Stadium â¦ for High Schoolers</a></h4>
+<p class="nyt-article-byline">By MIKE McPHATE</p>
+<p class="nyt-article-summary">Itâs in Texas, of course, where football is revered. And itâs not the only massive facility, leading some to argue that local schools are engaged in an arms race.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//well.blogs.nytimes.com/2016/05/11/talking-with-teenagers-about-marijuana/?ref=learning"><img src="https://static01.nyt.com/images/2016/05/11/science/wellpot/wellpot-thumbWide.jpg" width="190" height="126" alt="Talking With Teenagers About Marijuana" /></a>
+				</div>
+<h4><a href="//well.blogs.nytimes.com/2016/05/11/talking-with-teenagers-about-marijuana/?ref=learning">Talking With Teenagers About Marijuana</a></h4>
+<p class="nyt-article-byline">By LISA DAMOUR</p>
+<p class="nyt-article-summary">Adults can use the evolving laws as a jumping-off point to talk with teenagers about how theyâll approach any number of dicey decisions.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//well.blogs.nytimes.com/2016/05/20/how-much-do-you-know-about-raising-introverted-teenagers/?ref=learning"><img src="https://static01.nyt.com/images/2016/05/19/health/well_introvert/well_introvert-thumbWide.jpg" width="190" height="126" alt="How Much Do You Know About Raising Introverted Teenagers?" /></a>
+				</div>
+<h4><a href="//well.blogs.nytimes.com/2016/05/20/how-much-do-you-know-about-raising-introverted-teenagers/?ref=learning">How Much Do You Know About Raising Introverted Teenagers?</a></h4>
+<p class="nyt-article-byline">By SUSAN CAIN</p>
+<p class="nyt-article-summary">Take this quiz to find out.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/06/sports/tennis/louisa-chirico-american-teenager-leaves-her-mark.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/06/sports/06-Y-TENNIS/06-Y-TENNIS-thumbWide.jpg" width="190" height="126" alt="With Rare Comfort on the Clay Court, a Teenager Leaves Her Mark" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/06/sports/tennis/louisa-chirico-american-teenager-leaves-her-mark.html?ref=learning">With Rare Comfort on the Clay Court, a Teenager Leaves Her Mark</a></h4>
+<p class="nyt-article-byline">By BEN ROTHENBERG</p>
+<p class="nyt-article-summary">Louisa Chirico, a 19-year-old from Harrison, N.Y., is into her first WTA semifinal after beating 39th-ranked Daria Gavrilova at the Madrid Open.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/16/sports/autoracing/teen-max-verstappen-wins-spanish-grand-prix-after-mercedes-drivers-crash.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/16/sports/16iht-prix16/16iht-prix16-thumbWide.jpg" width="190" height="126" alt="Teenager Verstappen Wins Spanish Grand Prix After Mercedes Drivers Crash" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/16/sports/autoracing/teen-max-verstappen-wins-spanish-grand-prix-after-mercedes-drivers-crash.html?ref=learning">Teenager Verstappen Wins Spanish Grand Prix After Mercedes Drivers Crash</a></h4>
+<p class="nyt-article-byline">By BRAD SPURGEON</p>
+<p class="nyt-article-summary">Max Verstappen became Formula One&#8217;s youngest winner at age 18 after the Mercedes teammates Lewis Hamilton and Nico Rosberg crashed into each other.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//well.blogs.nytimes.com/2016/05/02/bodily-changes-are-driving-girls-out-of-sports/?ref=learning"><img src="https://static01.nyt.com/images/2016/05/03/science/03BREASTS/03BREASTS-thumbWide.jpg" width="190" height="126" alt="Breast and Body Changes Are Driving Teen Girls Out of Sports" /></a>
+				</div>
+<h4><a href="//well.blogs.nytimes.com/2016/05/02/bodily-changes-are-driving-girls-out-of-sports/?ref=learning">Breast and Body Changes Are Driving Teen Girls Out of Sports</a></h4>
+<p class="nyt-article-byline">By JAN HOFFMAN</p>
+<p class="nyt-article-summary">Research shows that girls, many feeling self-conscious, start dropping out of sports or skipping gym classes around the onset of puberty.</p>
+</p></div>
+<hr/>
+<p class="story-body-text" itemprop="articleBody"><strong>Arts, Media and Culture</strong></p>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/16/business/media/boom-box-comics-tell-stories-of-teenagers-with-a-light-heart.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/16/business/16boompix/16boompix-thumbWide.jpg" width="190" height="126" alt="Boom Box Comics Tell Stories of Teenagers, With a Light Heart" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/16/business/media/boom-box-comics-tell-stories-of-teenagers-with-a-light-heart.html?ref=learning">Boom Box Comics Tell Stories of Teenagers, With a Light Heart</a></h4>
+<p class="nyt-article-byline">By GEORGE GENE GUSTINES</p>
+<p class="nyt-article-summary">Boom Box, an imprint of the comic book publisher Boom Studios, is drawing critical acclaim for its coming-of-age adventures told with a sprinkle of glee.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/01/nyregion/eli-paperboy-reed-lifts-young-voices-in-the-gospel-spirit.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/01/nyregion/01JPGOSPEL1/01jpGOSPEL1-thumbWide.jpg" width="190" height="126" alt="Eli Paperboy Reed Lifts Young Voices in the Gospel Spirit" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/01/nyregion/eli-paperboy-reed-lifts-young-voices-in-the-gospel-spirit.html?ref=learning">Eli Paperboy Reed Lifts Young Voices in the Gospel Spirit</a></h4>
+<p class="nyt-article-byline">By JOHN LELAND</p>
+<p class="nyt-article-summary">In Mr. Reedâs class, students are encouraged to explore their full vocal range, and sometimes they feel guided by a higher power.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/01/nyregion/photographer-cassandra-giraldo-brooklyn-teenagers.html?ref=learning"><img src="https://static01.nyt.com/images/2016/04/27/nyregion/01album-slide-RF6Z/01album-slide-RF6Z-thumbWide.jpg" width="190" height="126" alt="Brooklyn Teenagers Capture a Photographerâs Eye" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/01/nyregion/photographer-cassandra-giraldo-brooklyn-teenagers.html?ref=learning">Brooklyn Teenagers Capture a Photographerâs Eye</a></h4>
+<p class="nyt-article-byline">By ANNIE CORREAL</p>
+<p class="nyt-article-summary">Cassandra Giraldo began studying the youngstersâ world five years ago, concentrating on how they spent the time between school and home.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/01/movies/royalty-hightower-michael-barbieri-parker-sawyers-sarah-gadon-breakthrough.html?ref=learning"><img src="https://static01.nyt.com/images/2016/04/28/multimedia/the-fits-clip/the-fits-clip-thumbWide-v2.jpg" width="190" height="126" alt="Breakthrough Performances From the Summer Movies Season" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/01/movies/royalty-hightower-michael-barbieri-parker-sawyers-sarah-gadon-breakthrough.html?ref=learning">Breakthrough Performances From the Summer Movies Season</a></h4>
+<p class="nyt-article-byline">By LOGAN HILL</p>
+<p class="nyt-article-summary">Playing a dancer, a Brooklynite, a future president or a college student, these actors shine in new films.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/04/arts/design/suitland-high-school-a-maryland-arts-crucible.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/04/arts/04SUITLAND/04SUITLAND-thumbWide.jpg" width="190" height="126" alt="Against Tough Odds, a High School Arts Program Fosters Success" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/04/arts/design/suitland-high-school-a-maryland-arts-crucible.html?ref=learning">Against Tough Odds, a High School Arts Program Fosters Success</a></h4>
+<p class="nyt-article-byline">By MIRANDA S. SPIVACK</p>
+<p class="nyt-article-summary">Suitland High School in Maryland is producing graduates who rise to national prominence despite budget cuts and other challenges.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//lens.blogs.nytimes.com/2016/05/17/menil-root-shift-houstons-young-curators-look-at-culture-and-environment/?ref=learning"><img src="https://static01.nyt.com/images/2016/05/17/blogs/17-lens-root-slide-KDRS/17-lens-root-slide-KDRS-thumbWide.jpg" width="190" height="126" alt="Houstonâs Young Curators Look at Culture and Environment" /></a>
+				</div>
+<h4><a href="//lens.blogs.nytimes.com/2016/05/17/menil-root-shift-houstons-young-curators-look-at-culture-and-environment/?ref=learning">Houstonâs Young Curators Look at Culture and Environment</a></h4>
+<p class="nyt-article-byline">By JONATHAN BLAUSTEIN</p>
+<p class="nyt-article-summary">A Houston museumâs Teen Council learned a lot about photography â and themselves â while curating a show of masterworks.</p>
+</p></div>
+<div class="nyt-article-promo">
+<div class="w190">
+					<a href="//www.nytimes.com/2016/05/31/arts/sfmoma-glasses-prank.html?ref=learning"><img src="https://static01.nyt.com/images/2016/05/28/us/00xp-glasses/00xp-glasses-thumbWide.jpg" width="190" height="126" alt="Is It Art? Eyeglasses on Museum Floor Began as Teenagersâ Prank" /></a>
+				</div>
+<h4><a href="//www.nytimes.com/2016/05/31/arts/sfmoma-glasses-prank.html?ref=learning">Is It Art? Eyeglasses on Museum Floor Began as Teenagersâ Prank</a></h4>
+<p class="nyt-article-byline">By CHRISTOPHER MELE</p>
+<p class="nyt-article-summary">During a visit to the San Francisco Museum of Modern Art, the youths wondered if they could do better than some of the real exhibits.</p>
+</p></div>
+<hr/>
+	</div>
+		<footer class="entry-footer">
+					<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//learning.blogs.nytimes.com/2016/05/27/teenagers-in-the-times-may-2016/" data-title="Teenagers in The Times | May 2016" data-description="A roundup of news articles about young people that appeared in May, Teenagers in The Times is a monthly feature.">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//learning.blogs.nytimes.com/2016/05/27/student-question-do-you-hang-out-in-the-park/" title="Student Question | Do You Hang Out in the Park?">
+				Student Question | Do You Hang Out in the Park?			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//learning.blogs.nytimes.com/2016/05/30/honoring-memorial-day/" title="Honoring Memorial Day">
+				Honoring Memorial Day			</a>
+					</li>
+	</ul>
+</div>
+<div id="nyt_promo_widget-16" class="module nocontent widget_nyt_promo_widget"><style>
+.cColumn.nocontent .module .entry.category{width: 100%;float: none;}
+</style>
+<div class="column">
+<div class="entry">
+
+	<a  href="//www.nytimes.com/section/learning" title="activities for students"><img src="https://static01.nyt.com/images/2016/10/05/learning/activitiesbandvertical2/activitiesbandvertical2-superJumbo.jpg"></a>
+
+</div>
+</div></div>		<div class="module ad" id="Box1"></div>
+        <div id="nyt_promo_widget-7" class="module nocontent widget_nyt_promo_widget"><div id="nyt_promo_widget-7" class="module nocontent widget_nyt_promo_widget"><h4 class="moduleHeader">Weekly Newsletter</h4><style type="text/css" media="screen">
+
+button {
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 500;
+    font-family: "nyt-franklin",arial,helvetica,sans-serif;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #e2e2e2;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0;
+    padding: 7px 9px;
+    
+    vertical-align:middle;
+    -webkit-appearance: button;
+}
+
+.button:hover, .button:active, .button.active {
+    background-color:#f7f7f5;
+}
+
+.button.disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+</style>
+<div class="entry">
+<div class="w50 right"><a href="//www.nytimes.com/newsletters/thelearningnetwork/" title="Learning Network"><img src="https://static01.nyt.com/images/blogs_v3/learning/learning75.gif" alt="Subscribe to our Newsletter"></a></div>
+<p class="summary">Sign up for our free <a href="//www.nytimes.com/newsletters/thelearningnetwork/" title="Learning Network">newsletter</a>. Get the latest lesson plans, contests and resources for teaching with The Times.</p>
+<a href="//www.nytimes.com/newsletters/thelearningnetwork/" title="Learning Network" class="btn-subscribe"><button class="button">Subscribe Now</button></a></div><div id="nyt_blog_social_media-3" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-double ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">The Learning Network on</span></span>
+</h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/NYTimesLearning" title="Follow NYTimesLearning on Twitter">Twitter</a></li><li class="blog-fw-facebook double"><a href="https://facebook.com/nytimeslearning" title="Follow nytimeslearning on Facebook">Facebook</a></li></ul>
+</div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-101',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="//www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":67,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

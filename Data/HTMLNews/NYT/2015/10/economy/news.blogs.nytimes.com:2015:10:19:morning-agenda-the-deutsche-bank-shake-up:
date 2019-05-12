@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003985477"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1445261615" />
+<meta name="PUD" content="20151019" />
+<meta name="pdate" content="20151019" />
+<meta name="ptime" content="20151019093335" />
+<meta name="utime" content="20151019133335" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-10-19T13:33:35-04:00" />
+<meta name="DISPLAYDATE" content="October 19, 2015" />
+<meta name="dat" content="October 19, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Antitrust Laws and Competition Issues;Banking and Financial Institutions;Hedge Funds;Initial Public Offerings;Private Equity;Regulation and Deregulation of Industry">
+<meta name="org" content="Anheuser-Busch InBev NV;Carlyle Group LP;Deutsche Bank AG;Federal Reserve System;KKR &amp; Co LP;Mergers, Acquisitions and Divestitures;The Blackstone Group">
+<meta name="ticker" content="Anheuser-Busch InBev NV|BUD|NYSE;Carlyle Group LP|CG|NASDAQ;Deutsche Bank AG|DB|NYSE;KKR & Co LP|KKR|NYSE" />
+<meta property="article:tag" content="Antitrust Laws and Competition Issues" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Anheuser-Busch InBev NV" />
+<meta property="article:tag" content="Carlyle Group LP" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="KKR &amp; Co LP" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Antitrust Laws and Competition Issues,Banking and Financial Institutions,Hedge Funds,Initial Public Offerings,Private Equity,Regulation and Deregulation of Industry,Anheuser-Busch InBev NV,Carlyle Group LP,Deutsche Bank AG,Federal Reserve System,KKR &amp; Co LP,Mergers Acquisitions and Divestitures,The Blackstone Group,DealBook" />
+<meta name="news_keywords" content="Anheuser-Busch InBev,Banking and Finance,Blackstone Group,Carlyle Group,Competition law,Deutsche Bank,Federal Reserve,Hedge fund,IPO,KKR,Private equity,Regulation and Deregulation" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F10%2F19%2Fmorning-agenda-the-deutsche-bank-shake-up%2F" title="Morning Agenda: The Deutsche Bank Shake-Up" />
+<meta name="description" content="Challenging Private Equity Fees &#124; Mega-Deals Test Antitrust Limits" />
+<meta name="hdl" content="Morning Agenda: The Deutsche Bank Shake-Up" />
+<meta property="og:title" content="Morning Agenda: The Deutsche Bank Shake-Up" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/10/19/morning-agenda-the-deutsche-bank-shake-up/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Challenging Private Equity Fees &#124; Mega-Deals Test Antitrust Limits" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: The Deutsche Bank Shake-Up" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/10/19/morning-agenda-the-deutsche-bank-shake-up/" />
+<meta name="twitter:description" content="Challenging Private Equity Fees &#124; Mega-Deals Test Antitrust Limits" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/10/16/what-were-reading-98/' />
+<link rel='next' title='Morning Agenda: Drums Beat Louder for a Bloomberg Run' href='//news.blogs.nytimes.com/2015/10/20/morning-agenda-drums-beat-louder-for-a-bloomberg-run/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/10/19/morning-agenda-the-deutsche-bank-shake-up/' />
+<link rel='shortlink' href='//nyti.ms/1RRz5Qy' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/10/19/morning-agenda-the-deutsche-bank-shake-up/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: The Deutsche Bank Shake-Up - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3460 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: The Deutsche Bank Shake-Up        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/10/19/morning-agenda-the-deutsche-bank-shake-up/"
+	 data-title="Morning Agenda: The Deutsche Bank Shake-Up"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Challenging Private Equity Fees | Mega-Deals Test Antitrust Limits&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/10/19/morning-agenda-the-deutsche-bank-shake-up/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="October 19, 2015 9:33 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: The Deutsche Bank Shake-Up</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-10-19T13:33:35+00:00" itemprop="datePublished">October 19, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">October 19, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3460 post type-post status-publish hentry category-dealbook tag-anheuser-busch-inbev-nv tag-antitrust-laws-and-competition-issues tag-banking-and-financial-institutions tag-carlyle-group-lp tag-deutsche-bank-ag tag-federal-reserve-system tag-hedge-funds tag-initial-public-offerings tag-kkr-co-lp tag-mergers-acquisitions-and-divestitures tag-private-equity tag-regulation-and-deregulation-of-industry tag-the-blackstone-group des-antitrust-laws-and-competition-issues des-banking-and-financial-institutions des-hedge-funds des-initial-public-offerings des-private-equity des-regulation-and-deregulation-of-industry org-anheuser-busch-inbev-nv org-carlyle-group-lp org-deutsche-bank-ag org-federal-reserve-system org-kkr-co-lp org-mergers-acquisitions-and-divestitures org-the-blackstone-group news_keywords-anheuser-busch-inbev news_keywords-banking-and-finance news_keywords-blackstone-group news_keywords-carlyle-group news_keywords-competition-law news_keywords-deutsche-bank news_keywords-federal-reserve news_keywords-hedge-fund news_keywords-ipo news_keywords-kkr news_keywords-private-equity-2 news_keywords-regulation-and-deregulation" id="post-3460">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: The Deutsche Bank Shake-Up</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-10-19T13:33:35+00:00" itemprop="datePublished">October 19, 2015 9:33 am</time>
+			<!-- date updated --><span class="visually-hidden updated">October 19, 2015 9:33 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/10/19/morning-agenda-the-deutsche-bank-shake-up/" data-title="Morning Agenda: The Deutsche Bank Shake-Up" data-description="Challenging Private Equity Fees | Mega-Deals Test Antitrust Limits">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>THE DEUTSCHE BANK SHAKE-UP</strong> <span class="divider"> | </span></span> Germanyâs largest lender will <b>split its investment bank in two</b> and overhaul its top management,  <a href="//www.nytimes.com/2015/10/19/business/dealbook/deutsche-bank-reorganizes-its-top-ranks.html?ref=dealbook&#038;_r=0">Jack Ewing reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">This is the first major move by John Cryan, the bankâs co-chief executive since July, to address complaints about the efficiency of the firm. </p>
+<p class="story-body-text" itemprop="articleBody">Most of Deutsche Bankâs investment banking activities have been in the Corporate Banking and Securities division, which will be split. One part will <b>focus on corporate and investment banking</b>, and be run by Jeff Urwin, who has been co-head of the Corporate Banking and Securities unit. Garth Ritchie, head of equities, will be responsible for the new Global Markets unit, which will focus on sales and trading.  </p>
+<p class="story-body-text" itemprop="articleBody">Sylvie Matherat, head of government and regulatory affairs at Deutsche Bank, will become <b>chief regulatory officer</b>. Kim Hammonds, a former Boeing executive who is chief information officer at Deutsche Bank, will become chief operating officer as part of the reorganization.</p>
+<p class="story-body-text" itemprop="articleBody">Several <b>top executives will leave</b>, including Michele Faissola, head of the bankâs asset management unit, and Stephan Leithner, a member of the Deutsche Bank management board whose responsibilities included regulatory affairs and combating financial crime. They were criticized for their handling of accusations that the bank colluded with other banks to rig benchmark interest rates. Deutsche Bank paid $2.5 billion in penalties to the United States and British authorities to settle the accusations. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Stefan Krause</b>, a member of the management board who was previously chief financial officer, will also resign.</p>
+<p class="story-body-text" itemprop="articleBody">The bank will also abolish its <b>group executive committee</b>, which is made up of 19 senior managers. The management board will be expanded from eight to 10 members.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CHALLENGING PRIVATE EQUITY FEES </strong> <span class="divider"> | </span></span> John Chiang, the treasurer of California, is calling for legislation requiring full transparency in the reporting of fees charged by private equity firms,<br />
+<a href="//www.nytimes.com/2015/10/18/business/challenging-private-equity-fees-tucked-in-footnotes.html?ref=dealbook">Gretchen Morgenson writes in the Fair Game column.</a> Mr. Chiang has urged the California Public Employeesâ Retirement System and California State Teachersâ Retirement System to help him devise legislation that would solve the problem of investors not knowing how much they will have to pay in fees. Tens of millions of people have <b>entrusted their retirement to funds with substantial stakes in private equity investments</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Giants like Blackstone, TPG and the Carlyle Group have said that disclosing their agreements would <b>reveal trade secrets</b>. Pension funds have also refused to disclose documents. They say that private equity firms would bar them from future deals if they did so. </p>
+<p class="story-body-text" itemprop="articleBody">The âtwo and 20â structure â 2 percent management fee, based on assets, and 20 percent of any profits generated by the private equity fund â is common knowledge. But <b>private equity firms impose other charges</b>, including fees for transactions and legal advice, for monitoring a companyâs progress and for the payment of legal settlements involving private equity executives. The complexity of these fee structures masks the full cost to investors. </p>
+<p class="story-body-text" itemprop="articleBody">Costs are also <b>hard to spot</b> because they are simply deducted from the proceeds of the sale of a portfolio company. If a cost isnât clearly identified, then an investor is less likely to question it. </p>
+<p class="story-body-text" itemprop="articleBody">In a recent auditor report on a 2006 fund operated by Kohlberg Kravis Roberts &#038; Company, or K.K.R, the footnotes revealed that investors were being <b>charged $3.6 million to cover a legal settlement in a 2007 collusion case</b> filed by shareholders of public companies taken private by Bain &#038; Company, Blackstone, K.K.R. and other big private equity firms. </p>
+<p class="story-body-text" itemprop="articleBody">As is typical, K.K.R.âs 2006 fund agreement required its investors to cover the costs of such legal settlements. K.K.R. settled the collusion matter in 2014. </p>
+<p class="story-body-text" itemprop="articleBody">Rather than show the $38.6 million charge to investors as an expense in the financial statements, K.K.R. noted it on <b>Page 35 of the 37-page report</b>. The obligation would be paid to K.K.R. out of ârealization proceeds allocable to the fundâ upon the sale of fund investments, it said. The charge had been deducted from the portfolio companiesâ values as presented to investors, the report said. </p>
+<p class="story-body-text" itemprop="articleBody">A K.K.R. spokeswoman said in a statement that reimbursing K.K.R. for the cost through proceeds from portfolio sales was âmore advantageousâ to fund investors than âhaving to âcome out of pocketâ for their share of the settlement.â </p>
+<p class="story-body-text" itemprop="articleBody">The K.K.R. report is confidential, so <b>few beneficiaries of pensions invested in the 2006 fund knew</b> that they were paying toward $38.6 million in settlement costs. </p>
+<p class="story-body-text" itemprop="articleBody">Comparing investor materials with <b>regulatory filings</b> can raise even more questions. </p>
+<p class="story-body-text" itemprop="articleBody">Materials sent this year to investors in the K.K.R. 2006 fund contained a list of <b>transaction and monitoring fees</b> paid to K.K.R. by 14 portfolio companies. A portion of these fees, totaling $7.2 million, offset or reduced K.K.R.âs management fees. </p>
+<p class="story-body-text" itemprop="articleBody">Some of the figures in the table are <b>lower than the fees reported in regulatory filings</b>. The K.K.R. 2006 fund report showed Samson Resources, a troubled oil and gas company, paid transaction and monitoring fees of almost $1.1 million for the quarter that ended on Dec. 31, 2014. But public filings state that Samson is contracted to pay K.K.R. at least $2.8 million each quarter. </p>
+<p class="story-body-text" itemprop="articleBody">K.K.R. said that the 2006 fund document reflected <b>only the expenses that were allocated to investors in that particular fund</b> and that the additional money paid by Samson was allocated to investors in other K.K.R. vehicles. </p>
+<p class="story-body-text" itemprop="articleBody">But K.K.R.âs investment advisory filings state that <b>the firm may not use the expenses allocated to other vehicles</b> to offset management fees. So if investors think the 2006 fund table reflects all the monitoring and transaction fees received by K.K.R. from their portfolio companies, they are most likely wrong, Ms. Morgenson writes.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The Fed policy makers <b>Lael Brainard and Charles L. Evans</b> speak at the Economic Growth and Regulatory Paperwork Reduction Act outreach session in Chicago at 9 a.m. <b>Morgan Stanley</b> announces its third-quarter results at 7 a.m. <b>Valeant</b> holds a conference call on its third-quarter earnings at 8 a.m. <b>IBM</b>  announces earnings at 5 p.m.  <b>Jacob J. Lew</b> is a guest on CNBC at 7 a.m. <b> Jamie Dimon</b> will be a guest on Bloomberg Television at 9:20 a.m.  <b>John Williams</b>, president of the Federal Reserve Bank of San Francisco, is a guest on Bloomberg Television at 2 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>MEGA-DEALS TEST ANTITRUST LIMITS</strong> <span class="divider"> | </span></span> Nearly a third of industries in the United States are <b>considered highly concentrated</b> under current federal antitrust standards, up from about a quarter in 1996,<br />
+<a href="//www.wsj.com/articles/wave-of-megadeals-tests-antitrust-limits-in-u-s-1445213306?cb=logged0.06299717957153916">The Wall Street Journal reports.</a> </p>
+<p class="story-body-text" itemprop="articleBody">Mergers can preserve jobs at companies too weak to survive alone and create economies of scale that push prices down, but they also <b>allow dominant companies to raise prices</b> and block competitors that might offer superior products. </p>
+<p class="story-body-text" itemprop="articleBody">Gordon Phillips, professor of finance and business economics at the University of Southern California, who gathered the data used by The Wall Street Journal, said that mergers have tended to result in <b>greater corporate profits</b> â generally bad news for consumers because the benefit of the merger is not being passed along. But they also resulted in more product offerings. </p>
+<p class="story-body-text" itemprop="articleBody">The deal between Anheuser-Busch InBev and SABMiller last week is a prime example of such consolidation, but the <b>trend has extended</b> into sectors like household appliances and mobile phone services. </p>
+<p class="story-body-text" itemprop="articleBody">The <b>wireless industry</b> in the United States is now dominated by just four national players, with AT&#038;T and Verizon Communications towering over T-Mobile and Sprint. At the same time, smaller companies are struggling to stay afloat. In the <b>grocery business</b>, large businesses like Kroger and Walmart dwarf their rivals. In 1996, 40 publicly traded companies operated food retailers, according to S&#038;P Capital IQ. As of this year, only 18 do.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Weather Company in Talks Over Sale of Digital Assets</strong> <span class="divider"> | </span></span> The owner of the Weather Channel is in advanced talks with IBM about the sale of its digital assets, ReCode reports, citing unidentified sources.<br /><span class="kicker"><a href="//recode.net/2015/10/18/the-weather-company-is-in-talks-with-ibm-about-sale-of-digital-assets/"> ReCode </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Japan Tobacco Bolsters Dominance in Iran</strong> <span class="divider"> | </span></span> Japan Tobacco has bought an Iranian cigarette maker in an effort to reinforce its position as the market leader in a country that hopes to open up to Western companies once international sanctions over its nuclear program are removed.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/626e5c5a-7576-11e5-a95a-27d368e1ddf7.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3oyY7LSyS"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Symphony Takes On the Bloomberg Terminal</strong> <span class="divider"> | </span></span> Other companies should also be worried by the rise of Symphony, which is seeking customers beyond its first financial sector users, according to the Lex column. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/3/f0d2f9da-7547-11e5-933d-efcdc3c11c89.html#axzz3oyY7LSyS"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Performance Fees of Hedge Funds Decline Sharply</strong> <span class="divider"> | </span></span> The income that hedge funds receive from performance fees has fallen drastically this year, dropping more in the first half of 2015 than in the previous seven years combined.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/693d9b74-73f3-11e5-bdb1-e6e4767162cc.html?ftcamp=published_links%2Frss%2Fmarkets%2Ffeed%2F%2Fproduct#axzz3oyY7LSyS"> THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Japan Post Bank and Insurance Units Are Priced at Top of Range for I.P.O.</strong> <span class="divider"> | </span></span> The Japanese government will raise $6.2 billion from the sales of the bank and insurance units, according to Bloomberg calculations. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-19/japan-post-bank-insurance-units-priced-at-top-of-range-for-ipo"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bank of China Votes for I.P.O. of Aviation Leasing Unit</strong> <span class="divider"> | </span></span> Bank of China, one of Chinaâs biggest commercial banks, has voted to spin off its aviation leasing unit in a Hong Kong share sale.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/10/18/us-bank-of-china-ipo-idUSKCN0SC08F20151018?feedType=RSS&#038;feedName=innovationNews"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ferrari Prepares for Initial Public Offering</strong> <span class="divider"> | </span></span> After a flashy roadshow, Ferrariâs long-awaited initial public offering is here, with the stock likely to be priced on Tuesday and the first day of trading on the New York Stock Exchange expected on Wednesday.<br /><span class="kicker"><a href="//www.wsj.com/articles/ferrari-revs-up-for-ipo-1445201554?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Meituan and Dianping Said to Be Raising Up to $3 Billion</strong> <span class="divider"> | </span></span> Chinaâs largest group-buying platforms are seeking to raise $2 billion to $3 billion in new funds, Bloomberg News reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-19/meituan-dianping-said-seeking-to-raise-as-much-as-3-billion"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Meet Venture Capitalâs Teenage Analyst</strong> <span class="divider"> | </span></span> Tiffany Zhong has a job at the venture capital firm Binary Capital that is usually reserved for a start-up founder or  someone with an M.B.A.<br /><span class="kicker"><a href="//www.wsj.com/articles/meet-venture-capitals-teenage-analyst-1445227201?mod=asia_home"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Chinaâs Growth Slows to 6.9%" src="https://static01.nyt.com/images/2015/10/19/business/19chinagdp-web/19chinagdp-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinaâs Growth Slows to 6.9%</strong> <span class="divider"> | </span></span> The weak result compares with 7 percent growth in the previous two quarters, but was slightly better than the 6.8 percent economists had forecast.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/19/business/international/chinas-growth-slows-to-6-9.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>French Police Search Volkswagen Offices in Emissions Inquiry</strong> <span class="divider"> | </span></span> The searches were carried out as part of an investigation into the automakerâs cheating on diesel emissions tests.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/10/18/us-volkswagen-emissions-france-idUSKCN0SC0SM20151018"> REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Economists Still Forecast Rise in Fed Rate Before Yearâs End</strong> <span class="divider"> | </span></span> Despite a tempering in the labor market, 65 percent of the 46 economists from leading banks polled by The Financial Times said the central bank would increase the federal funds rate at its December meeting.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/be1ba54e-7459-11e5-bdb1-e6e4767162cc.html?ftcamp=published_links%2Frss%2Fmarkets%2Ffeed%2F%2Fproduct#axzz3oyY7LSyS"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DraftKings Continues to Operate in Nevada</strong> <span class="divider"> | </span></span> The daily fantasy sports website accepted entries into its contests for the weekend, apparently defying an order from the Nevada Gaming Control Board to quit operating immediately.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/19/sports/draftkings-continues-to-operate-in-nevada.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/10/19/morning-agenda-the-deutsche-bank-shake-up/"
+					data-title="Morning Agenda: The Deutsche Bank Shake-Up"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Challenging Private Equity Fees | Mega-Deals Test Antitrust Limits&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/10/19/morning-agenda-the-deutsche-bank-shake-up/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":54,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

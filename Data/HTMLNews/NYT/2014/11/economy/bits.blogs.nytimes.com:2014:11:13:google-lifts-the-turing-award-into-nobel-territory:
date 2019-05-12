@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-bits section-technology"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-bits section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-bits section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-bits section-technology" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/bits/Google to Quadruple Computer Science Prize Winnings to $1 Million ( 20141113 )" />
+<meta name="communityAssetURL" content="//bits.blogs.nytimes.com/2014/11/13/google-lifts-the-turing-award-into-nobel-territory/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003233991"><meta name="author" content="Steve Lohr" />
+<meta name="CLMST" content="Steve Lohr" />
+<meta name="byl" content="Steve Lohr" />
+<meta name="article:author" content="//topics.nytimes.com/top/reference/timestopics/people/l/steve_lohr/index.html" /><meta name="GBLC" content="Computer science;Policy;Software">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1415914816" />
+<meta name="PUD" content="20141113" />
+<meta name="pdate" content="20141113" />
+<meta name="ptime" content="20141113164016" />
+<meta name="utime" content="20141117002727" />
+<meta property="article:modified_time" itemprop="dateModified" content="2014-11-17T00:27:27-05:00" />
+<meta name="DISPLAYDATE" content="November 13, 2014" />
+<meta name="dat" content="November 13, 2014" />
+<meta itemprop="articleSection" property="article:section" content="Technology" />
+<meta name="CG" content="Technology" />
+<meta name="SCG" content="bits" />
+<meta name="BN" content="bits" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Turing, Alan M">
+<meta name="des" content="Awards, Decorations and Honors;Computers and the Internet">
+<meta name="org" content="Assn for Computing Machinery">
+<meta name="geo" content="United States">
+<meta name="ttl" content="The Imitation Game (Movie)"/>
+<meta property="article:tag" content="Turing Alan M" />
+<meta property="article:tag" content="Awards Decorations and Honors" />
+<meta property="article:tag" content="Computers and the Internet" />
+<meta property="article:tag" content="Assn for Computing Machinery" />
+<meta property="article:tag" content="United States" />
+<meta property="article:tag" content="The Imitation Game (Movie)" />
+<meta property="article:tag" content="Computer science" />
+<meta property="article:tag" content="Policy" />
+<meta property="article:tag" content="Software" />
+<meta property="article:tag" content="Computer Science" />
+<meta name="keywords" content="Turing Alan M,Awards Decorations and Honors,Computers and the Internet,Assn for Computing Machinery,United States,The Imitation Game (Movie),Computer science,Policy,Software,Computer Science" />
+<meta name="news_keywords" content="Alan M Turing,Assn for Computing Machinery,Awards,Computers and the Internet,US" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fbits.blogs.nytimes.com%2F2014%2F11%2F13%2Fgoogle-lifts-the-turing-award-into-nobel-territory%2F" title="Google to Quadruple Computer Science Prize Winnings to $1 Million" />
+<meta name="description" content="The Turing prize for computer science will be quadrupled to $1 million, a jump funded by Google." />
+<meta name="hdl_p" content="Google to Quadruple Computer Science Prize Winnings to $1 Million" />
+<meta name="hdl" content="Google to Quadruple Computer Science Prize Winnings to $1 Million" />
+<meta property="og:title" content="Google to Quadruple Computer Science Prize Winnings to $1 Million" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//bits.blogs.nytimes.com/2014/11/13/google-lifts-the-turing-award-into-nobel-territory/" />
+<meta property="og:site_name" content="Bits Blog" />
+<meta property="og:description" content="The Turing prize for computer science will be quadrupled to $1 million, a jump funded by Google." />
+<meta property="og:image" content="https://static01.nyt.com/images/2014/11/13/business/13bits-turing/13bits-turing-videoSixteenByNine600.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2014/11/13/business/13bits-turing/13bits-turing-thumbLarge.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Google to Quadruple Computer Science Prize Winnings to $1 Million" />
+<meta name="twitter:url" content="//bits.blogs.nytimes.com/2014/11/13/google-lifts-the-turing-award-into-nobel-territory/" />
+<meta name="twitter:description" content="The Turing prize for computer science will be quadrupled to $1 million, a jump funded by Google." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2014/11/13/business/13bits-turing/13bits-turing-thumbLarge.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2014/11/13/business/13bits-turing/13bits-turing-thumbLarge.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@nytimesbits">
+<link rel='prev' title='Reddit Chief Executive Resigns as Company Shuffles Top Ranks' href='//bits.blogs.nytimes.com/2014/11/13/reddit-chief-executive-resigns-as-company-shuffles-top-ranks/' />
+<link rel='next' title='Daily Report: E-Book Standoff Is Over, but Fear of Amazon Persists' href='//bits.blogs.nytimes.com/2014/11/14/daily-report-e-book-standoff-is-over-but-fear-of-amazon-persists/' />
+<link rel='canonical' href='//bits.blogs.nytimes.com/2014/11/13/google-lifts-the-turing-award-into-nobel-territory/' />
+<link rel='shortlink' href='//nyti.ms/1EAvzlv' />
+<link rel='https://github.com/WP-API/WP-API' href='//bits.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/bits/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//bits.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/technology/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/bits/2014/11/13/google-lifts-the-turing-award-into-nobel-territory/" />
+<meta name="dfp-ad-unit-path" content="technology/bits" />			<title>Google to Quadruple Computer Science Prize Winnings to $1 Million - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/bits.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-166018 blog-universal nyt-blog-bits" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', 'Technology', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//bits.blogs.nytimes.com">
+                Bits            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Google to Quadruple Computer Science Prize Winnings to $1 Million        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//bits.blogs.nytimes.com/2014/11/13/google-lifts-the-turing-award-into-nobel-territory/"
+	 data-title="Google to Quadruple Computer Science Prize Winnings to $1 Million"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;The Turing prize for computer science will be quadrupled to $1 million, a jump funded by Google.&lt;/span&gt;&lt;a href=&quot;//bits.blogs.nytimes.com/2014/11/13/google-lifts-the-turing-award-into-nobel-territory/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="November 13, 2014 4:40 pm">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="bits" class="spanAC blog">
+			<header id="blogs-masthead" class="wrap">
+	<div class="ad sponsortile-ad hidden nocontent robots-nocontent">
+		<div class="caption">Supported by</div>
+		<div id="sponsortile" class="ad sponsortile-ad-creative"></div>
+	</div>
+		<div class="element1">
+	<a href="//bits.blogs.nytimes.com/?module=BlogMain&action=Click&region=Header&pgtype=Blogs&version=Blog Post&contentCollection=Technology"><div id="logo" class="archived-blog-post"><div class="w75 left site-header-logo"><img src="https://static01.nyt.com/images/blogs_v3/bits/bits75.gif" alt="Bits"/></div><div class="site-title">Bits</div><div class="site-description">Business, Innovation, Technology, Society</div></div></a>    </div>
+    <div class="element2">
+    <div class="inlineSearchControl">
+	<form method="get" id="searchform" action="//bits.blogs.nytimes.com/">
+		<input type="text" value="" name="s" id="s" class="text" placeholder="Search Bits">
+		<button type="submit" class="searchsubmit">Search</button>
+	</form>
+</div>	</div>
+	<div class="clear"></div>
+		</header>
+	<div class="a-column " id="a-col">
+	<div id="content" class="hfeed">
+	<article class="post-166018 post type-post status-publish hentry category-computer-science-2 category-policy category-software tag-assn-for-computing-machinery tag-awards-decorations-and-honors tag-computer-science tag-computers-and-the-internet tag-the-imitation-game-movie tag-turing-alan-m tag-united-states per-turing-alan-m des-awards-decorations-and-honors des-computers-and-the-internet org-assn-for-computing-machinery geo-united-states ttl-the-imitation-game-movie nyt_request_keyword-computer-science news_keywords-alan-m-turing news_keywords-assn-for-computing-machinery news_keywords-awards news_keywords-computers-and-the-internet news_keywords-us splitPostView" id="post-166018">
+	<header class="postHeader">
+				<div class="postKicker">
+			<span class="kicker"><a href="//bits.blogs.nytimes.com/category/computer-science-2/?module=BlogCategory&version=Blog Post&action=Click&contentCollection=Technology&pgtype=Blogs&region=Header">Computer science</a></span>
+		</div>
+				<h1 itemprop="headline" class="entry-title">Google to Quadruple Computer Science Prize Winnings to $1 Million</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Steve Lohr			</address>
+			<!-- date published --><time class="dateline " datetime="2014-11-13T21:40:16+00:00" itemprop="datePublished">November 13, 2014 4:40 pm</time>
+			<!-- date updated --><span class="visually-hidden updated">November 13, 2014 4:40 pm</span><button class="button comments-button  theme-kicker" data-skip-to-para-id="">
+</button>
+		</div>
+			</header>
+		<div class="entry-content"><div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//bits.blogs.nytimes.com/2014/11/13/google-lifts-the-turing-award-into-nobel-territory/" data-title="Google to Quadruple Computer Science Prize Winnings to $1 Million" data-description="The Turing prize for computer science will be quadrupled to $1 million, a jump funded by Google.">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody">The A.M. Turing Award is often called the Nobel Prize of computer science. Now, thanks to Googleâs largess, it will be a Nobel-level prize financially: $1 million.</p>
+<p class="story-body-text" itemprop="articleBody">The quadrupling of the prize money, announced on Thursday by the Association for Computing Machinery, the professional organization that administers the award, is intended to elevate the prominence and recognition of computer science. The move can be seen as another sign of the boom times in technology.</p>
+<p class="story-body-text" itemprop="articleBody">Computing is increasingly an ingredient in every field, from biology to business. College students, encouraged by their parents, are rushing to take computer science courses. Itâs not just a skill but a mind-set. Computational thinking is the future, where the excitement and money is. Quants rule.</p>
+<p class="story-body-text" itemprop="articleBody">But the Turing Award celebrates the slower and deeper side of computing. It is given, said Alexander L. Wolf, president of the association and a professor of computer science at Imperial College London, to the âtrue pioneersâ who are âfundamental contributors to the science and technology of computing.â</p>
+<p class="story-body-text" itemprop="articleBody">Previous recipients have not been household names, except in very geeky households. They did not make fortunes, but they created the underlying insights in mathematics, and in software and hardware design, that helped make personal computers, the Internet, online commerce, social networks and smartphones a reality.</p>
+<p class="story-body-text" itemprop="articleBody">Yet computer science is also a practical, problem-solving discipline.</p>
+<p class="story-body-text" itemprop="articleBody">At the announcement event on Thursday morning in New York, Stuart Feldman, vice president for engineering at Google, said he had been impressed by the blend of the theoretical and practical sides of computing in reading over the Turing Award citations since 1966. The prize, he said, recognizes both âthe finest of thought and the broadest of impact.â</p>
+<p class="story-body-text" itemprop="articleBody">The Turing Award had carried prize money of $250,000 and was jointly underwritten by Google and Intel since 2007. But Intel decided to step away as a funder, and Google stepped up and upped the ante. The million-dollar award essentially matches the Nobel Prizeâs eight million Swedish kronor, which is a bit more than $1 million at current exchange rates.</p>
+<p class="story-body-text" itemprop="articleBody">Increasing the financial reward, Mr. Feldman said, lifts the Turing Award into the âmajor league of scientific prizes.â</p>
+<p class="story-body-text" itemprop="articleBody">For Google, being the deep-pocketed benefactor of the Turing Award is both good branding and a public statement that it takes fundamental research seriously.</p>
+<p class="story-body-text" itemprop="articleBody">âComputing is our lifeblood,â Mr. Feldman said. The company, he added, hopes that increasing the prize money will give greater public prominence and recognition to the importance of computer science.</p>
+<p class="story-body-text" itemprop="articleBody">Silvio Micali, one of the handful of Turing winners in attendance, spoke of the spread of computer science into other disciplines. By now, Mr. Micali said, computing is well established in the sciences. But the importance of computing and its reach, he said, is destined to accelerate further across the economy and society.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Micali, a professor at the Massachusetts Institute of Technology who won the 2012 prize, urged young computer scientists to go deep and take on big challenges instead of focusing on âlesser and easier targetsâ with quicker payoffs.</p>
+<p class="story-body-text" itemprop="articleBody">The patient pursuit of computing research can seem out of step at a time when even many undergraduate computer science students drop out of school to join start-ups. When asked about that, Mr. Wolf said both the creation and the commercialization of technology are needed. âSome people invent the foundations on which others can build,â he said, âand others â some of them dropouts â are those that make these technologies massively available to people and society.â</p>
+<p class="story-body-text" itemprop="articleBody">Google itself reflects that combination. Its founders, Larry Page and Sergey Brin, were both Ph.D. candidates in computer science at Stanford when they created the concepts behind Google search technology.</p>
+<p class="story-body-text" itemprop="articleBody">The legacy of Alan Turing is certainly getting a boost this month, and not just from more money for his namesake award. Next comes the release (on Friday in Britain, and later this month in the United States) of âThe Imitation Game,â a movie version of Turingâs life, starring Benedict Cumberbatch as the English polymath and Keira Knightley as Joan Clarke, a friend and fellow code-breaker at Bletchley Park, where German World War II codes were successfully deciphered.</p>
+<p class="story-body-text" itemprop="articleBody">There is also the reissue in paperback of âAlan Turing: The Enigma,â a biography of the man known as the father of theoretical computer science and artificial intelligence. The book, written by Andrew Hodges, was originally published in 1983. The new version carries the additional subtitle, âThe Book That Inspired the Film, The Imitation Game.â</p>
+<p class="story-body-text" itemprop="articleBody">Past Turing winners, though, will not be getting a felicitous bump. The enriched prizes will not be retroactive.</p>
+<p class="story-body-text" itemprop="articleBody">âI just asked,â Butler W. Lampson joked at the announcement event in New York. Mr. Lampson was a leader in the 1970s at Xerox PARC, where so much of the underlying technology of personal computing, adopted by Apple and Microsoft, was built.</p>
+<p class="story-body-text" itemprop="articleBody">For that work, Mr. Lampson won a Turing Award in 1992. Today, Mr. Lampson is a scientist in Microsoftâs research labs and an adjunct professor at M.I.T. Envious of the paychecks for future winners? âOh, Iâll get by,â he replied, smiling.</p>
+<footer class="story-footer">
+    <div class="story-meta">
+	<p class="story-print-citation">A version of this article appears in print on 11/17/2014, on page <span itemprop="printSection">B</span><span itemprop="printPage">8</span> of the <span itemprop="printEdition">NewYork</span> edition with the headline: Google to Quadruple Computer Science Prize Winnings to $1 Million.</p>    </div>
+</footer>
+	</div>
+		<footer class="entry-footer">
+			<button class="button comments-button theme-speech-bubble"></button>		<div id="sharetools-post-footer" class="sharetools theme-classic" data-shares="show-all|Share" data-url="//bits.blogs.nytimes.com/2014/11/13/google-lifts-the-turing-award-into-nobel-territory/" data-title="Google to Quadruple Computer Science Prize Winnings to $1 Million" data-description="The Turing prize for computer science will be quadrupled to $1 million, a jump funded by Google.">
+				<div class="ad sharetools-inline-article-ad hidden"></div>
+			</div>		<div class="footer-tags">
+					</div>
+		</footer>
+</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+			</div><!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+	<div class="postNavigation">
+	<ul class="opposingFloatControl wrap">
+		<li class="element1">
+						<span class="previous">Previous Post</span>
+			<div class="arrow arrow-left">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//bits.blogs.nytimes.com/2014/11/13/reddit-chief-executive-resigns-as-company-shuffles-top-ranks/" title="Reddit Chief Executive Resigns as Company Shuffles Top Ranks">
+				Reddit Chief Executive Resigns as Company Shuffles Top Ranks			</a>
+					</li>
+		<li class="element2">
+						<span class="next">Next Post</span>
+			<div class="arrow arrow-right">
+				<div class="arrow-conceal"></div>
+			</div>
+			<a class="postTitle" href="//bits.blogs.nytimes.com/2014/11/14/daily-report-e-book-standoff-is-over-but-fear-of-amazon-persists/" title="Daily Report: E-Book Standoff Is Over, but Fear of Amazon Persists ">
+				Daily Report: E-Book Standoff Is Over, but Fear of Amazon Persists 			</a>
+					</li>
+	</ul>
+</div>
+<div id="nyt_promo_widget-10" class="module nocontent widget_nyt_promo_widget"><div style="font-family: nyt-franklin, arial, sans-serif; padding-top: 12px; font-size: 14px; line-height: 17px;">
+Visit the <a href="//nytimes.com/technology" style="font-weight: 600;">Technology section</a> for complete coverage of the industry. <a href="//nytimes.com/technology" style="font-family: nyt-franklin, arial, sans-serif; font-weight: 600;">Â»</a>
+</div></div>		<div class="module ad" id="MiddleRight"></div>
+        		<div class="module ad" id="Box3"></div>
+        		<div class="module ad" id="Box1"></div>
+        <div id="nyt_blog_social_media-5" class="module nocontent widget_nyt_blog_social_media"><!-- begin #blog-follow-widget -->
+<div id="blog-follow-widget" class="blog-fw-single ">
+<h4 class="">
+<span class="blog-fw-generic-followmessage">Follow <span class="blog-fw-desk">us on</span></span>
+<span class="blog-fw-specific-followmessage"><span class="blog-fw-username"><a href="https://twitter.com/nytimesbits" title="Follow @nytimesbits on twitter">@nytimesbits</a></span> on <span class="blog-fw-twitter">twitter</span></span></h4>
+<ul>
+<li class="blog-fw-twitter single"><a href="https://twitter.com/nytimesbits" title="Follow nytimesbits on Twitter">Twitter</a></li></ul>
+<p class="blog-fw-followbutton"><a href="https://twitter.com/nytimesbits" title="Follow @nytimesbits on twitter">Follow</a></p></div> <!-- end #blog-follow-widget -->
+</div>	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-9',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":69,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

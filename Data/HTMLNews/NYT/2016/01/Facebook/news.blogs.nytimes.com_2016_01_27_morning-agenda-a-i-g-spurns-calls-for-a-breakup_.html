@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004170610"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1453892096" />
+<meta name="PUD" content="20160127" />
+<meta name="pdate" content="20160127" />
+<meta name="ptime" content="20160127055456" />
+<meta name="utime" content="20160127105456" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-01-27T10:54:56-05:00" />
+<meta name="DISPLAYDATE" content="January 27, 2016" />
+<meta name="dat" content="January 27, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Ackman, William A;Argentina;Bank of England;Christie, Christopher J;Hedge Funds;Icahn, Carl C">
+<meta name="des" content="American International Group Inc;Apple Inc;Banking and Financial Institutions;China;Cook, Timothy D;Initial Public Offerings;iPhone;Mortgages;Shareholder Rights and Activism;Statistics;US Dollar (Currency)">
+<meta name="org" content="Barclays PLC;European Union;HSBC Holdings PLC.;Italy;JPMorgan Chase &amp; Company;Media General Inc;Meredith Corporation;Morgan Stanley;New York Stock Exchange;Nexstar Broadcasting Group Inc;Pershing Square Holdings;Royal Bank of Scotland PLC;SunEdison Inc;Terex Corporation;Toyota Motor Corp">
+<meta name="geo" content="Hong Kong;Saudi Arabia;United Continental Holdings Inc">
+<meta name="ticker" content="Barclays PLC|BCS|NYSE;HSBC Holdings PLC.|HSBC|NYSE;JPMorgan Chase & Company|JPM|NYSE;Media General Inc|MEG|NYSE;Morgan Stanley|MS|NYSE;SunEdison Inc|SUNE|NYSE;Toyota Motor Corp|TM|NYSE" />
+<meta property="article:tag" content="Ackman William A" />
+<meta property="article:tag" content="Argentina" />
+<meta property="article:tag" content="Bank of England" />
+<meta property="article:tag" content="Christie Christopher J" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Icahn Carl C" />
+<meta property="article:tag" content="American International Group Inc" />
+<meta property="article:tag" content="Apple Inc" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Cook Timothy D" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="iPhone" />
+<meta property="article:tag" content="Mortgages" />
+<meta property="article:tag" content="Shareholder Rights and Activism" />
+<meta property="article:tag" content="Statistics" />
+<meta property="article:tag" content="US Dollar (Currency)" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="HSBC Holdings PLC." />
+<meta property="article:tag" content="Italy" />
+<meta property="article:tag" content="JPMorgan Chase &amp; Company" />
+<meta property="article:tag" content="Media General Inc" />
+<meta property="article:tag" content="Meredith Corporation" />
+<meta property="article:tag" content="Morgan Stanley" />
+<meta property="article:tag" content="New York Stock Exchange" />
+<meta property="article:tag" content="Nexstar Broadcasting Group Inc" />
+<meta property="article:tag" content="Pershing Square Holdings" />
+<meta property="article:tag" content="Royal Bank of Scotland PLC" />
+<meta property="article:tag" content="SunEdison Inc" />
+<meta property="article:tag" content="Terex Corporation" />
+<meta property="article:tag" content="Toyota Motor Corp" />
+<meta property="article:tag" content="Hong Kong" />
+<meta property="article:tag" content="Saudi Arabia" />
+<meta property="article:tag" content="United Continental Holdings Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Ackman William A,Argentina,Bank of England,Christie Christopher J,Hedge Funds,Icahn Carl C,American International Group Inc,Apple Inc,Banking and Financial Institutions,China,Cook Timothy D,Initial Public Offerings,iPhone,Mortgages,Shareholder Rights and Activism,Statistics,US Dollar (Currency),Barclays PLC,European Union,HSBC Holdings PLC.,Italy,JPMorgan Chase &amp; Company,Media General Inc,Meredith Corporation,Morgan Stanley,New York Stock Exchange,Nexstar Broadcasting Group Inc,Pershing Square Holdings,Royal Bank of Scotland PLC,SunEdison Inc,Terex Corporation,Toyota Motor Corp,Hong Kong,Saudi Arabia,United Continental Holdings Inc,DealBook" />
+<meta name="news_keywords" content="iPhone,Mortgage loan,Statistics" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F01%2F27%2Fmorning-agenda-a-i-g-spurns-calls-for-a-breakup%2F" title="Morning Agenda: A.I.G. Spurns Calls for a Breakup" />
+<meta name="description" content="IPhones Sales Slow &#124; Activist Investors Meet Their Match &#124; Inquiry in China Adds to Doubts About Economic Data" />
+<meta name="hdl" content="Morning Agenda: A.I.G. Spurns Calls for a Breakup" />
+<meta property="og:title" content="Morning Agenda: A.I.G. Spurns Calls for a Breakup" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/01/27/morning-agenda-a-i-g-spurns-calls-for-a-breakup/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="IPhones Sales Slow &#124; Activist Investors Meet Their Match &#124; Inquiry in China Adds to Doubts About Economic Data" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: A.I.G. Spurns Calls for a Breakup" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/01/27/morning-agenda-a-i-g-spurns-calls-for-a-breakup/" />
+<meta name="twitter:description" content="IPhones Sales Slow &#124; Activist Investors Meet Their Match &#124; Inquiry in China Adds to Doubts About Economic Data" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/01/26/what-were-reading-124/' />
+<link rel='next' title='Morning Agenda: Markets Wobble After Fed Affirms Its Plan' href='//news.blogs.nytimes.com/2016/01/28/morning-agenda-markets-wobble-after-fed-affirms-its-plan/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/01/27/morning-agenda-a-i-g-spurns-calls-for-a-breakup/' />
+<link rel='shortlink' href='//nyti.ms/1KahxzK' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/01/27/morning-agenda-a-i-g-spurns-calls-for-a-breakup/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: A.I.G. Spurns Calls for a Breakup - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4139 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: A.I.G. Spurns Calls for a Breakup        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/01/27/morning-agenda-a-i-g-spurns-calls-for-a-breakup/"
+	 data-title="Morning Agenda: A.I.G. Spurns Calls for a Breakup"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;IPhones Sales Slow | Activist Investors Meet Their Match | Inquiry in China Adds to Doubts About Economic Data &lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/01/27/morning-agenda-a-i-g-spurns-calls-for-a-breakup/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="January 27, 2016 5:54 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: A.I.G. Spurns Calls for a Breakup</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-01-27T10:54:56+00:00" itemprop="datePublished">January 27, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">January 27, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4139 post type-post status-publish hentry category-dealbook tag-ackman-william-a tag-american-international-group-inc tag-apple-inc tag-argentina tag-bank-of-england tag-banking-and-financial-institutions tag-barclays-plc tag-china tag-christie-christopher-j tag-cook-timothy-d tag-european-union tag-hedge-funds tag-hong-kong tag-hsbc-holdings-plc tag-icahn-carl-c tag-initial-public-offerings tag-iphone tag-italy tag-jpmorgan-chase-company tag-media-general-inc tag-meredith-corporation tag-morgan-stanley tag-mortgages tag-new-york-stock-exchange tag-nexstar-broadcasting-group-inc tag-pershing-square-holdings tag-royal-bank-of-scotland-plc tag-saudi-arabia tag-shareholder-rights-and-activism tag-statistics tag-sunedison-inc tag-terex-corporation tag-toyota-motor-corp tag-united-continental-holdings-inc tag-us-dollar-currency per-ackman-william-a per-argentina per-bank-of-england per-christie-christopher-j per-hedge-funds per-icahn-carl-c des-american-international-group-inc des-apple-inc des-banking-and-financial-institutions des-china des-cook-timothy-d des-initial-public-offerings des-iphone des-mortgages des-shareholder-rights-and-activism des-statistics des-us-dollar-currency org-barclays-plc org-european-union org-hsbc-holdings-plc org-italy org-jpmorgan-chase-company org-media-general-inc org-meredith-corporation org-morgan-stanley org-new-york-stock-exchange org-nexstar-broadcasting-group-inc org-pershing-square-holdings org-royal-bank-of-scotland-plc org-sunedison-inc org-terex-corporation org-toyota-motor-corp geo-hong-kong geo-saudi-arabia geo-united-continental-holdings-inc news_keywords-iphone news_keywords-mortgage-loan news_keywords-statistics" id="post-4139">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: A.I.G. Spurns Calls for a Breakup</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-01-27T10:54:56+00:00" itemprop="datePublished">January 27, 2016 5:54 am</time>
+			<!-- date updated --><span class="visually-hidden updated">January 27, 2016 5:54 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/01/27/morning-agenda-a-i-g-spurns-calls-for-a-breakup/" data-title="Morning Agenda: A.I.G. Spurns Calls for a Breakup" data-description="IPhones Sales Slow | Activist Investors Meet Their Match | Inquiry in China Adds to Doubts About Economic Data ">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A.I.G. SPURNS CALLS FOR A BREAKUP</strong> <span class="divider"> | </span></span> American International Group has decided to streamline itself, but it remains to be seen whether it can shake off the activist investors that have been pushing for a breakup. </p>
+<p class="story-body-text" itemprop="articleBody">The insurance giant, which became the starkest example of âtoo big to failâ when it had to be rescued during the financial crisis, <b>stopped well short of the outright breakup that some had called for</b>,<br />
+<a href="//www.nytimes.com/2016/01/27/business/dealbook/aig-sets-plan-to-streamline.html?ref=dealbook">Liz Moyer reports in DealBook.</a> It said it would offer part of its mortgage insurance unit in an initial public offering, sell its financial advisory business and create nine distinct operations in its commercial and consumer divisions that could pave the way for future sales or spinoffs. </p>
+<p class="story-body-text" itemprop="articleBody"><b>It also plans to spend $25 billion on stock buybacks and dividends over two years, while cutting $1.6 billion from operating costs.</b> </p>
+<p class="story-body-text" itemprop="articleBody">Investors, led by Carl C. Icahn, have pushed for a radical breakup so that A.I.G. can avoid the regulatory burden of being labeled a systemically important financial institution, or SIFI, by the government. </p>
+<p class="story-body-text" itemprop="articleBody">A.I.G. has resisted this, but <b>Peter D. Hancock, the president and chief executive, has not closed the door entirely to further divestments</b>. âThere are no sacred cows,â he said. </p>
+<p class="story-body-text" itemprop="articleBody">The strategic shift it has made, however, will only push the insurer toward mediocrity, <a href="//www.nytimes.com/2016/01/27/business/dealbook/aig-does-not-go-far-enough-in-overhaul.html">Antony Currie writes in Breakingviews.</a> Mr. Hancock plans to elevate return on equity next year to a subpar 9 percent. MetLife is expected to do slightly better and Prudential is on track for 14.4 percent. </p>
+<p class="story-body-text" itemprop="articleBody">The SIFI designation only costs $150 million a year, but that could change once regulators complete the rules for insurers. Carving up A.I.G. now, though, would mean forgoing almost 10 times that amount in tax benefits. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Mr. Hancock may just be providing investors with a road map for a reorganization that creates nine separate divisions.</b> This restructuring story  probably has further to go, Mr. Currie says.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>IPHONES SALES SLOW</strong> <span class="divider"> | </span></span> Appleâs latest earnings report shows that iPhone sales rose less than 1 percent from a year earlier â <b>the slowest pace ever for the device</b> which accounts for about two-thirds of the companyâs revenue,<br />
+<a href="//www.nytimes.com/2016/01/27/technology/apple-earnings-iphone-sales.html?ref=business">Katie Benner reports in The New York Times.</a> Appleâs sales forecast was not much more optimistic, indicating that the sluggishness would continue and projecting the first revenue decline in more than a decade. </p>
+<p class="story-body-text" itemprop="articleBody">The numbers raise questions about how Apple will satisfy investors who want growth and consumers who want new, cutting-edge technology. </p>
+<p class="story-body-text" itemprop="articleBody">Timothy D. Cook, Appleâs chief executive, said the slowdown reflected <b>greater uncertainties in economies and financial markets.</b> âWeâre seeing extreme conditions, unlike anything weâve experienced before, just about everywhere we look,â he said. </p>
+<p class="story-body-text" itemprop="articleBody">Luca Maestri, Appleâs chief financial officer, also said <b>the strength of the dollar had affected the companyâs earnings.</b> âIn the December quarter alone, the foreign exchange impact was $5 billion to our revenue line,â he said. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Other growth areas that Apple has relied upon are also slowing.</b> Sales in the greater China region rose 14 percent in the quarter from a year ago, but annual revenue growth from the region has been 70 percent or more in the previous four quarters. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ACTIVIST INVESTORS MEET THEIR MATCH</strong> <span class="divider"> | </span></span> The stock market slump has raised the question of whether shareholder activism can survive a down market, </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/01/27/business/dealbook/activist-investors-may-have-met-their-match-a-down-market.html?ref=dealbook">Steven Davidoff Solomon writes in the Deal Professor column.</a></p>
+<p class="story-body-text" itemprop="articleBody">In the rising stock market, acquisitions were hot and exits were easy. <b>Mistakes in picking targets were covered up by gains in the market.</b> </p>
+<p class="story-body-text" itemprop="articleBody">In a down market, what was volatile on the upside is now shooting downward, bringing this exuberance tumbling back to earth. </p>
+<p class="story-body-text" itemprop="articleBody"><b>With troubled companies becoming more troubled and harder to turn around, activists beat a hasty retreat.</b> </p>
+<p class="story-body-text" itemprop="articleBody">This happened in the financial crisis of 2008, and history seems to be repeating itself this year with hedge funds, including Pershing Square and Icahn Enterprises, buffeted by the downturn. </p>
+<p class="story-body-text" itemprop="articleBody"><b>If the downturn persists, we are likely to see a sharp drop in activism.</b> Many activist hedge funds have only one-year lockups, and the money that has flooded into them could reverse. </p>
+<p class="story-body-text" itemprop="articleBody">The result would not only be a reduction in the number of activist attacks. One or two highflying funds may collapse, and some of the stronger funds may survive and buy opportunistically. But not all funds will be able to keep enough cash on hand to invest. </p>
+<p class="story-body-text" itemprop="articleBody">In the interim, companies may get the breather they have been desperate for. It is also <b>likely to pause the trend for spinoffs</b> as these companies focus on their core operations rather than financial engineering. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The <b>Federal Reserve</b> will publish its latest economic outlook and the decisions made in its latest policy meeting at 2 p.m. <b>Facebook</b> will discuss its full year earnings at 5 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>INQUIRY IN CHINA ADDS TO DOUBTS ABOUT ECONOMIC DATA</strong> <span class="divider"> | </span></span> The Communist Partyâs anticorruption commission announced on Tuesday that it was <b>investigating the head of Chinaâs statistics agency over what it called âserious violations,â</b><br />
+<a href="//www.nytimes.com/2016/01/27/business/international/china-economy-data-statistics-inquiry.html?ref=business">Keith Bradsher reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">It is unclear whether the scrutiny of Wang Baoan, the agency head, is related to his current role or his previous one as vice minister of finance. </p>
+<p class="story-body-text" itemprop="articleBody"><b>The statistics bureauâs responsibilities are hard to balance at the best of times.</b> It is supposed to provide Chinaâs leaders with an unvarnished assessment of the countryâs economic strengths and weaknesses, while reassuring the public about growth, maintaining consumer confidence and releasing detailed and accurate information for investors and corporate leaders. </p>
+<p class="story-body-text" itemprop="articleBody">Few doubt that China has grown enormously, but many believe that the bureau smooths the data, underestimating growth during booms and overestimating it during downturns. <b>Many also point to the underlying numbers to support their skepticism.</b> Electricity consumption, for example, was nearly unchanged last year, instead of rising in line with growth in Chinaâs gross domestic product. </p>
+<p class="story-body-text" itemprop="articleBody">With the veracity of Chinaâs economic data already in question and investors unnerved by the slowing rate of growth and volatile stock markets, <b>further doubts could exacerbate the pain in the markets.</b><br />
+Stocks in Shanghai closed down 6.4 percent on Tuesday and were 0.5 percent lower on Wednesday.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Meredith Is Said to Be Set to End Media General Deal</strong> <span class="divider"> | </span></span> The move would allow Media General, which operates 71 television stations across the United States, to be acquired by Nexstar for $2.3 billion.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/27/business/dealbook/meredith-is-said-to-be-set-to-end-media-general-deal.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Terex Is Said to Rebuff Approach from Zoomlion of China</strong> <span class="divider"> | </span></span> Terex, an American maker of crane and construction machinery, is said to have rebuffed an all-cash offer of $30 a share from Zoomlion to focus on completing its merger with Konecranes of Finland. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-01-26/terex-said-to-rebuff-takeover-approach-from-china-s-zoomlion"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Toyota Considers Daihatsu Buyout </strong> <span class="divider"> | </span></span> Toyota said it was considering buying out the shares it does not already own in  the  minivehicle maker Daihatsu, a $3.2 billion deal at current market prices, but denied a report that it was in partnership talks with Daihatsuâs rival Suzuki.<br /><span class="kicker"><a href="//www.reuters.com/article/us-toyota-suzuki-motor-idUSKCN0V42JD">REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Vivint Solarâs Assets Offered by SunEdison</strong> <span class="divider"> | </span></span> SunEdison, a solar energy provider, is trying to find a buyer for some of Vivint Solarâs assets before it completes its $1.9 billion purchase of the company.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-01-26/sunedison-shopping-vivint-assets-before-1-9-billion-deal-closes"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="R.B.S. Expects to Report an Annual Loss for 2015" src="https://static01.nyt.com/images/2016/01/28/world/28db-RBS-web/28db-RBS-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>R.B.S. Expects to Report an Annual Loss for 2015</strong> <span class="divider"> | </span></span> Royal Bank of Scotland, which is based in Edinburgh and is in the middle of a large restructuring plan, has not posted an annual profit since 2007.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/28/business/dealbook/rbs-earnings.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinaâs Role in Hong Kong Becomes a Factor in HSBC Debate Over Headquarters</strong> <span class="divider"> | </span></span> HSBCâs board meets on Wednesday to consider moving its headquarters to Hong Kong, and concerns about Chinaâs influence over the financial hub may be a factor in the decision, Reuters reports, citing a senior source at the bank.<br /><span class="kicker"><a href="//uk.reuters.com/article/uk-hsbc-headquarters-idUKKCN0V41NE">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Computerized Trading Firm to Take Over Barclaysâs N.Y.S.E. Seats" src="https://static01.nyt.com/images/2016/01/27/business/db-exchange-web1/db-exchange-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Computerized Trading Firm to Take Over Barclaysâs N.Y.S.E. Seats</strong> <span class="divider"> | </span></span> High-speed trading firms now dominate one of the last places where humans still play a crucial role in the stock markets.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/27/business/dealbook/computerized-trading-firm-to-take-over-barclayss-nyse-seats.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Former Morgan Stanley Banker to Revive Phibro Name</strong> <span class="divider"> | </span></span> Simon Greenshields, the former co-head of Morgan Stanleyâs commodities business, has acquired the name and assets of the commodities trading firm.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/27/business/dealbook/former-morgan-stanley-banker-to-revive-phibro-name.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JPMorgan to Pay Ambac $995 Million to Settle Mortgage-Related Claims</strong> <span class="divider"> | </span></span> The bond insurer Ambac Financial Group said JPMorgan Chase will pay $995 million to settle disputes related to residential mortgage-backed securities.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2016/01/26/business/26reuters-jpmorgan-ambac-finl-grp.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Italy Strikes âBad Bankâ Deal </strong> <span class="divider"> | </span></span> Italy and the European Union have reached an agreement on a guarantee program designed to help Italian banks sell their large portfolios of nonperforming loans to private investors, in an effort to ease market pressure on the financial sector in the eurozoneâs third-largest economy.<br /><span class="kicker"><a href="//www.ft.com/cms/s/0/ef7fe9e8-c4d0-11e5-b3b1-7b2481276e45.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3yJpuYdmJ">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ackman Acknowledges His Mistakes </strong> <span class="divider"> | </span></span> William A. Ackman, whose Pershing Square Capital Management lost between 16 percent and 20 percent in its funds in 2015, said it was a âvery costlyâ mistake that he did not sell drug maker Valeant Pharmaceuticals when the stock price rose to $200 over the summer.<br /><span class="kicker"><a href="//www.reuters.com/article/us-hedgefunds-ackman-idUSKCN0V500X">REUTERS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Argentina and Aramco Are Deals for Difficult Times</strong> <span class="divider"> | </span></span> Talk of two potential big transactions dominated in Davos. Given the worldâs parlous state, there are reasons to hope that both deals are made, Rob Cox writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/27/business/dealbook/argentina-and-aramco-are-deals-for-difficult-times.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>One of United Continentalâs Largest Shareholders Declares Activist Position</strong> <span class="divider"> | </span></span> Altimeter Capital disclosed a 3.1 percent stake in United and said it has engaged in discussions with other United shareholders about various aspects of Unitedâs strategic direction. <br /><span class="kicker"><a href="//www.wsj.com/articles/two-united-investors-report-activist-stakes-1453847880?mod=pls_whats_news_us_business_f">THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Octo Telematics, Whose Technology Monitors Driving, Prepares I.P.O.</strong> <span class="divider"> | </span></span> Octo Telematics of Italy, whose devices help auto insurers set rates, is preparing its United States offering at a difficult time for market debuts.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/27/business/dealbook/octo-telematics-whose-technology-monitors-driving-prepares-ipo.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinese Online Lender Lufax to List in Hong Kong or Shanghai</strong> <span class="divider"> | </span></span> The Chinese online lender Lufax, whose $18.5 billion valuation makes it one of the worldâs biggest Internet finance companies, is considering a Hong Kong or Shanghai initial public offering as early as this year.<br /><span class="kicker"><a href="//www.wsj.com/articles/chinese-online-lender-lufax-to-list-in-hong-kong-or-shanghai-1453803838"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ratan Tata Turns Venture Investor</strong> <span class="divider"> | </span></span> Ratan Tata, who stepped down as the chairman of the $100 billion Tata Group in 2012, is taking a stake in an online startup that sells premium teas.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-01-27/ratan-tata-turns-venture-investor-in-retirement-backing-teabox"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Regulators to Return $21.5 Million to Hedge Fund Shut After Raid" src="https://static01.nyt.com/images/2016/01/26/business/0126chiassonjpg/0126chiassonjpg-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Regulators to Return $21.5 Million to Hedge Fund Shut After Raid</strong> <span class="divider"> | </span></span> A federal judge orders that the 2013 settlement by the now-defunct Level Global Investors be vacated.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/27/business/dealbook/regulators-to-return-21-5-million-to-hedge-fund-shut-after-raid.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="The Dollar Keeps Rising, for Good or Evil" src="https://static01.nyt.com/images/2016/01/27/business/27porter-web/27porter-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Dollar Keeps Rising, for Good or Evil</strong> <span class="divider"> | </span></span> Despite global economic turmoil, many economists argue that the American currencyâs rise is mostly a good thing. But there are downsides, and not all in the United States, Eduardo Porter writes in the Economic Scene column.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/27/business/economy/the-dollar-keeps-rising-for-good-or-evil.html">Economic Scene &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bank of Englandâs Andrew Bailey Named C.E.O. of Financial Conduct Authority</strong> <span class="divider"> | </span></span> Mr. Bailey, the chief executive of the central bankâs Prudential Regulation Authority, would take the top job at the financial markets regulator this year.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/27/business/dealbook/bank-of-englands-andrew-bailey-named-ceo-of-financial-conduct-authority.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Christie Announces Plan for State Control of Atlantic Cityâs Finances" src="https://static01.nyt.com/images/2016/01/27/nyregion/27lastresort-web2/27lastresort-web2-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Christie Announces Plan for State Control of Atlantic Cityâs Finances</strong> <span class="divider"> | </span></span> Under the agreement, New Jersey officials would be in charge of reducing the cityâs debt of $240 million and making cuts to the size and cost of its civil services.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/27/nyregion/chris-christie-proposes-state-takeover-of-atlantic-citys-finances.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/01/27/morning-agenda-a-i-g-spurns-calls-for-a-breakup/"
+					data-title="Morning Agenda: A.I.G. Spurns Calls for a Breakup"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;IPhones Sales Slow | Activist Investors Meet Their Match | Inquiry in China Adds to Doubts About Economic Data &lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/01/27/morning-agenda-a-i-g-spurns-calls-for-a-breakup/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":52,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

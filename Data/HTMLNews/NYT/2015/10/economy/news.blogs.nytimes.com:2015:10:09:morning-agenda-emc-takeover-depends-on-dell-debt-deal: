@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003967982"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1444384029" />
+<meta name="PUD" content="20151009" />
+<meta name="pdate" content="20151009" />
+<meta name="ptime" content="20151009054709" />
+<meta name="utime" content="20151009094709" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-10-09T09:47:09-04:00" />
+<meta name="DISPLAYDATE" content="October 9, 2015" />
+<meta name="dat" content="October 9, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Advertising and Marketing;Art;Automobile Racing;Credit and Debt;Formula One;IMAX Corporation;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Microsoft Corp;Public Relations and Publicity;Student Loans;Wells Fargo &amp; Company">
+<meta name="org" content="Allianz SE;Anheuser-Busch InBev NV;Banking and Financial Institutions;Carlyle Group LP;Dell, Michael S;Deutsche Bank AG;Elliott Management Corp;EMC Corporation;Gross, William H;Telecom Italia SpA;The Blackstone Group;Volkswagen AG">
+<meta name="ticker" content="Allianz SE|AZSEY|Other OTC;Anheuser-Busch InBev NV|BUD|NYSE;Carlyle Group LP|CG|NASDAQ;Deutsche Bank AG|DB|NYSE;EMC Corporation|EMC|NYSE;Telecom Italia SpA|TI|NYSE;Volkswagen AG|VLKAY|Other OTC" />
+<meta property="article:tag" content="Advertising and Marketing" />
+<meta property="article:tag" content="Art" />
+<meta property="article:tag" content="Automobile Racing" />
+<meta property="article:tag" content="Credit and Debt" />
+<meta property="article:tag" content="Formula One" />
+<meta property="article:tag" content="IMAX Corporation" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Microsoft Corp" />
+<meta property="article:tag" content="Public Relations and Publicity" />
+<meta property="article:tag" content="Student Loans" />
+<meta property="article:tag" content="Wells Fargo &amp; Company" />
+<meta property="article:tag" content="Allianz SE" />
+<meta property="article:tag" content="Anheuser-Busch InBev NV" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Carlyle Group LP" />
+<meta property="article:tag" content="Dell Michael S" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Elliott Management Corp" />
+<meta property="article:tag" content="EMC Corporation" />
+<meta property="article:tag" content="Gross William H" />
+<meta property="article:tag" content="Telecom Italia SpA" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="Volkswagen AG" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Advertising and Marketing,Art,Automobile Racing,Credit and Debt,Formula One,IMAX Corporation,Initial Public Offerings,Mergers Acquisitions and Divestitures,Microsoft Corp,Public Relations and Publicity,Student Loans,Wells Fargo &amp; Company,Allianz SE,Anheuser-Busch InBev NV,Banking and Financial Institutions,Carlyle Group LP,Dell Michael S,Deutsche Bank AG,Elliott Management Corp,EMC Corporation,Gross William H,Telecom Italia SpA,The Blackstone Group,Volkswagen AG,DealBook" />
+<meta name="news_keywords" content="Advertising Marketing,Allianz SE,Anheuser-Busch InBev,Art,Blackstone Group,Car Racing,Carlyle Group,Debt,Deutsche Bank,Elliott Management,EMC Corporation,IPO,Mergers and Acquisitions,Public relations,Student loan,Telecom Italia,Volkswagen" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F10%2F09%2Fmorning-agenda-emc-takeover-depends-on-dell-debt-deal%2F" title="Morning Agenda: EMC Takeover Depends on Dell Debt Deal" />
+<meta name="description" content="Stagwell Group to Buy SKDKnickerbocker &#124; Bond King Sues Over Dismissal &#124; How Hillary Clinton Would Regulate Wall Street" />
+<meta name="hdl" content="Morning Agenda: EMC Takeover Depends on Dell Debt Deal" />
+<meta property="og:title" content="Morning Agenda: EMC Takeover Depends on Dell Debt Deal" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/10/09/morning-agenda-emc-takeover-depends-on-dell-debt-deal/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Stagwell Group to Buy SKDKnickerbocker &#124; Bond King Sues Over Dismissal &#124; How Hillary Clinton Would Regulate Wall Street" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: EMC Takeover Depends on Dell Debt Deal" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/10/09/morning-agenda-emc-takeover-depends-on-dell-debt-deal/" />
+<meta name="twitter:description" content="Stagwell Group to Buy SKDKnickerbocker &#124; Bond King Sues Over Dismissal &#124; How Hillary Clinton Would Regulate Wall Street" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Dell is Said to Be in Talks to Buy EMC' href='//news.blogs.nytimes.com/2015/10/08/morning-agenda-dell-is-said-to-be-in-talks-to-buy-emc/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/10/09/what-were-reading-96/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/10/09/morning-agenda-emc-takeover-depends-on-dell-debt-deal/' />
+<link rel='shortlink' href='//nyti.ms/1VIYMbH' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/10/09/morning-agenda-emc-takeover-depends-on-dell-debt-deal/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: EMC Takeover Depends on Dell Debt Deal - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3412 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: EMC Takeover Depends on Dell Debt Deal        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/10/09/morning-agenda-emc-takeover-depends-on-dell-debt-deal/"
+	 data-title="Morning Agenda: EMC Takeover Depends on Dell Debt Deal"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Stagwell Group to Buy SKDKnickerbocker | Bond King Sues Over Dismissal | How Hillary Clinton Would Regulate Wall Street&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/10/09/morning-agenda-emc-takeover-depends-on-dell-debt-deal/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="October 9, 2015 5:47 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: EMC Takeover Depends on Dell Debt Deal</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-10-09T09:47:09+00:00" itemprop="datePublished">October 9, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">October 9, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3412 post type-post status-publish hentry category-dealbook tag-advertising-and-marketing tag-allianz-se tag-anheuser-busch-inbev-nv tag-art tag-automobile-racing tag-banking-and-financial-institutions tag-carlyle-group-lp tag-credit-and-debt tag-dell-michael-s tag-deutsche-bank-ag tag-elliott-management-corp tag-emc-corporation tag-formula-one tag-gross-william-h tag-imax-corporation tag-initial-public-offerings tag-mergers-acquisitions-and-divestitures tag-microsoft-corp tag-public-relations-and-publicity tag-student-loans tag-telecom-italia-spa tag-the-blackstone-group tag-volkswagen-ag tag-wells-fargo-company des-advertising-and-marketing des-art des-automobile-racing des-credit-and-debt des-formula-one des-imax-corporation des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-microsoft-corp des-public-relations-and-publicity des-student-loans des-wells-fargo-company org-allianz-se org-anheuser-busch-inbev-nv org-banking-and-financial-institutions org-carlyle-group-lp org-dell-michael-s org-deutsche-bank-ag org-elliott-management-corp org-emc-corporation org-gross-william-h org-telecom-italia-spa org-the-blackstone-group org-volkswagen-ag news_keywords-advertising-marketing news_keywords-allianz-se news_keywords-anheuser-busch-inbev news_keywords-art news_keywords-blackstone-group news_keywords-car-racing news_keywords-carlyle-group news_keywords-debt news_keywords-deutsche-bank news_keywords-elliott-management news_keywords-emc-corporation news_keywords-ipo news_keywords-mergers-and-acquisitions news_keywords-public-relations news_keywords-student-loan news_keywords-telecom-italia news_keywords-volkswagen" id="post-3412">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: EMC Takeover Depends on Dell Debt Deal</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-10-09T09:47:09+00:00" itemprop="datePublished">October 9, 2015 5:47 am</time>
+			<!-- date updated --><span class="visually-hidden updated">October 9, 2015 5:47 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/10/09/morning-agenda-emc-takeover-depends-on-dell-debt-deal/" data-title="Morning Agenda: EMC Takeover Depends on Dell Debt Deal" data-description="Stagwell Group to Buy SKDKnickerbocker | Bond King Sues Over Dismissal | How Hillary Clinton Would Regulate Wall Street">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>EMC TAKEOVER DEPENDS ON DELL DEBT DEAL</strong> <span class="divider"> | </span></span> The 2013 leveraged buyout of Dell may be a gift that keeps on giving for deal makers,<br />
+<a href="//www.nytimes.com/2015/10/09/business/dealbook/dell-is-the-straw-that-stirs-tech-ma.html?ref=dealbook&#038;_r=0">Michael J. de la Merced reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Dell now plans to acquire EMC in what would be the <b>biggest technology takeover on record</b>.<br />
+If it succeeds, it would take another step away from being a computer manufacturer.</p>
+<p class="story-body-text" itemprop="articleBody">Michael S. Dell has insisted that the company bearing his name is headed toward a future built on business services. It has already spent billions of dollars on building up its <b>enterprise services division</b>. EMC would bolster his efforts to create a system that blended computing, storage and network. </p>
+<p class="story-body-text" itemprop="articleBody">The deal would require a <b>huge amount of debt financing</b> at a time when credit markets have become less hospitable to mergers. Dell and the private equity firm Silver Lake are trying to secure a debt package that could come to more than $40 billion to fund the acquisition, <a href="//www.wsj.com/articles/debt-markets-hold-key-to-dells-bold-emc-bid-1444349220"> The Wall Street Journal reports, citing people familiar with the deal.</a> </p>
+<p class="story-body-text" itemprop="articleBody">The talks have become more urgent as the parties want to come to an agreement <b>before credit tightens further</b>. </p>
+<p class="story-body-text" itemprop="articleBody">The Wall Street Journal reports that Dell and Silver Lake have assembled a group of lenders that includes JPMorgan Chase, Bank of America and Credit Suisse to help them secure the debt. The banks would <b>provide a bridge loan</b> that could later be replaced by investment-grade bonds and syndicated loans.</p>
+<p class="story-body-text" itemprop="articleBody">To pay for the deal, Dell and Silver Lake may also need to come up with as much as <b>$20 billion themselves</b>. There is a possibility of them selling shares in EMCâs VMware unit to fund that. </p>
+<p class="story-body-text" itemprop="articleBody">This bid for EMC could be a <b>peak in the mergers and acquisitions market</b>,<br />
+<a href="//www.nytimes.com/2015/10/09/business/dealbook/dell-would-face-major-challenges-in-emc-acquisition.html?ref=dealbook">Robert Cyran argues in Breakingviews.</a> EMCâs size and the scale of the borrowing both present challenges to a deal. </p>
+<p class="story-body-text" itemprop="articleBody">Spinning off Vware to EMC shareholders could cut the size of the deal by half, but it is probably the most attractive asset. Even a spin-off of 30 percent of the $10 billion company would leave <b>an ambitious deal</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Dellâs interest in EMC is in keeping with the tail end of a mergers and acquisitions cycle, when complex deals with nonobvious benefits swing into view, Mr. Cyran writes. âWhile Dell managed to overcome plenty of hurdles to go private, an attempt to make a merger with EMC work for everyone involved could be <b>a step too far</b>.â </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>STAGWELL GROUP TO BUY SKDKNICKERBOCKER</strong> <span class="divider"> | </span></span> The private equity firm founded with a check from the former Microsoft chief Steven A. Ballmer has made its first purchase,<br />
+<a HREF="//www.nytimes.com/2015/10/09/business/dealbook/stagwell-group-will-acquire-skdknickerbocker.html?ref=dealbook">David Gelles reports in DealBook.</a> The firm, <b>the Stagwell Group, will buy SKDKnickerbocker</b>, the public relations group known for its campaign work for prominent Democratic clients.</p>
+<p class="story-body-text" itemprop="articleBody">Mark Penn, the former advertising executive who runs Stagwell, said it would try to <b>create a cohesive group</b> of advertising, research, public relations and marketing companies. He said he also expected to acquire companies that specialize in digital design, Hollywood ventures, ad buying and financial communications. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Penn had served as chief strategy officer and <b>an adviser to Mr. Ballmer</b> during his tenure at Microsoft. Before that, he had worked in advertising and politics. He sold a market research company he founded to WPP, the worldâs biggest advertising group. At WPP, he became chief executive of Burson Marsteller, the public relations firm. He also worked with Ed Koch, President Bill Clinton and Hillary Rodham Clinton. </p>
+<p class="story-body-text" itemprop="articleBody">SKDKnickerbocker is <b>a familiar company</b> for him. Mr. Penn collaborated with them on a television commercial featuring Bill Gates when antitrust regulators were pressing to break up Microsoft. </p>
+<p class="story-body-text" itemprop="articleBody">SKDKnickerbocker has in recent years started to put its <b>campaign tactics to use for corporate clients</b>, including AT&#038;T, Pfizer, and Herbalife. </p>
+<p class="story-body-text" itemprop="articleBody">The SKDKnickerbocker partners have signed long-term contracts, ensuring that the core of the firm will stay together after the deal. </p>
+<p class="story-body-text" itemprop="articleBody">While Mr. Penn plans to<b> encourage collaboration between companies in the Stagwell portfolio</b>, he intends to leave the partners in charge of what they know.<br />
+âThe big holdings companies are run primarily by accountants, instead of people who came out of the core disciplines,â he said. âFolks at this firm have been the communications director at the White House.â</p>
+<p class="story-body-text" itemprop="articleBody">He also said that despite being a private equity firm, he and Mr. Ballmer were <b>looking to hold onto companies</b>.</p>
+<p class="story-body-text" itemprop="articleBody">âWeâre looking to buy, hold and grow,â he said. âWeâre unlikely to be flipping assets.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BOND KING SUES OVER DISMISSAL</strong> <span class="divider"> | </span></span> William H. Gross, also known as the bond king, is suing the company he built into one of the largest asset managers in the world,<br />
+<a href="//www.nytimes.com/2015/10/09/business/dealbook/william-gross-sues-pimco-over-dismissal.html?ref=dealbook">Nathaniel Popper reports in DealBook.</a> The suit is a bold effort to <b>repair the damage done to his reputation</b> around the time he was fired and provides a colorful interpretation of the feud that led to his departure. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Gross is seeking <b>âin no event less than $200 millionâ</b> from Pimco for breach of covenant of good faith and fair dealing, and has promised to donate any money he might get to charity. </p>
+<p class="story-body-text" itemprop="articleBody">The lawsuit presents Pimco as a <b>den of intrigue</b> riven by back stabbing and competing egos. The first sentence of it says that Mr. Gross was pushed out by a âcabalâ of managing directors who were âdriven by a lust for power, greed, and a desire to improve their own financial position.â</p>
+<p class="story-body-text" itemprop="articleBody">âTheir improper, dishonest, and unethical behavior must now be exposed,â the opening paragraph concludes.</p>
+<p class="story-body-text" itemprop="articleBody">It also criticizes Mohamed El-Erian, who was once in line to succeed Mr. Gross and is now the chief economic adviser at Allianz, Pimcoâs parent company, as well as Pimcoâs group chief investment officer, Daniel J. Ivascyn.<br />
+Both men are accused of trying to take Pimco away from its traditional focus on bond funds and <b>into riskier investment strategies</b> that would earn it higher fees and bigger bonuses for top executives. </p>
+<p class="story-body-text" itemprop="articleBody">The suit said that Mr. Gross was entitled to 20 percent of the firmâs bonus pool and his <b>overthrow was motivated</b> by the wish of executives like Mr. Ivascyn to take home more of the money. </p>
+<p class="story-body-text" itemprop="articleBody">The suitâs bold claims and theatrical language could play into perceptions of Mr. Gross as an <b>unpredictable and volatile character</b>, something that was cited as part of the reason for his problems at Pimco. </p>
+<p class="story-body-text" itemprop="articleBody">The legal challenge comes just as Pimco appears to be <b>recovering from the damage done</b> by Mr. Grossâs departure.<br />
+Investors pulled over $100 billion from the enormous bond fund that Mr. Gross used to run, but those outflows have slowed and the fundâs returns have been relatively good.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Gross, by contrast, has <b>attracted only around $1 billion to a new bond fund</b> he created at the Janus Capital Group, the Denver company he joined immediately after leaving Pimco. The new Janus fund has significantly underperformed both its benchmark and the Pimco fund Mr. Gross used to lead. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>Dennis P. Lockhart</b>, President of the Federal Reserve Bank of Atlanta, will speak at the Society of American Business Editors and Writers conference in New York at 9 a.m. <b>Charles Evans</b>, President of the Federal Reserve Bank of Chicago, will speak at the CFA Society Milwaukee at midday. The Financial Services Committee will hold a hearing on the <b>future of multilateral development banks</b> at 10:30 a.m. <b>Import and export prices</b> for September will be released at 8:30 a.m.<br />
+<b>David M. Rubenstein</b> of The Carlyle Group is a guest on Bloomberg Television at 7 a.m. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HOW HILLARY CLINTON WOULD REGULATE WALL STREET</strong> <span class="divider"> | </span></span> Hillary Clinton favors more intensive regulation of Wall Street, and bank executives and lobbyists will find little to like in her plan, <a HREF="//www.nytimes.com/2015/10/09/upshot/how-hillary-clinton-would-regulate-the-too-big-to-fail-banks.html?ref=dealbook">Neil Irwin writes in The Upshot.</a></p>
+<p class="story-body-text" itemprop="articleBody">But her approach stops short of the wholesale breakup of too-big-to-fail banks favored by Bernie Sanders and Elizabeth Warren. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Irwin summarizes the <a href="//www.nytimes.com/2015/10/09/upshot/how-hillary-clinton-would-regulate-the-too-big-to-fail-banks.html?ref=dealbook">key elements of her plan. </a></p>
+<p class="story-body-text" itemprop="articleBody"><b>A new ârisk feeâ on the largest financial firms.</b> The fee would be payable to the United States Treasury and would be paid by large, potentially risky firms. The level is not decided by the size of the firm, but by the amount it relies upon volatile short-term funding to finance its operations. Goldman Sachs would have more to fear than Wells Fargo, as it is more complex and relies more on fast-moving capital markets for funding. </p>
+<p class="story-body-text" itemprop="articleBody"><b>More power for regulators to break up financial firms.</b></p>
+<p class="story-body-text" itemprop="articleBody">Dodd-Frank requires that major banks prepare âliving willsâ that describe the legal details of how they would be unwound in the event of a failure. But Mrs. Clintonâs proposed legislation would grant regulators more power to determine that, for example, a bank that had multiple ethics scandals might just be too complex to manage and could endanger financial stability.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Regulate âshadow bankingâ more intensively.</b> The segments of the financial system that resemble banks in important ways, but are not regulated like them, include money market mutual funds, hedge funds and parts of the insurance industry.</p>
+<p class="story-body-text" itemprop="articleBody">Mrs. Clintonâs plans still seem vague but she calls for new international rules governing disclosure, margin and collateral requirements to try to make the failure of one global bank or insurer less likely to endanger the entire world economy. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DSV Group Agrees to Acquire UTi Worldwide in $1.35 Billion Deal</strong> <span class="divider"> | </span></span> The transaction is expected to bolster DSVâs annual revenue by about 50 percent and give it a more balanced geographic footprint.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/10/business/dealbook/dsv-group-agrees-to-acquire-uti-worldwide-in-1-35-billion-deal.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstone to Acquire BioMed Realty Trust for $8 Billion</strong> <span class="divider"> | </span></span> Affiliates of a Blackstone real estate fund are to pay $23.75 a share for BioMed Realty, a 10 percent premium to its closing price on Wednesday.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/09/business/dealbook/blackstone-to-acquire-biomed-realty-trust-for-8-billion.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Anheuser-Busch InBev Says Itâs âSurprisedâ by SABMiller Rejection</strong> <span class="divider"> | </span></span> The brewing giant is trying to keep up the pressure on its longtime rival in hopes of securing the largest beer merger in history before a looming deadline.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/09/business/dealbook/anheuser-busch-inbev-says-its-surprised-by-sabmiller-rejection.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/10/08/business/dealbook/nudging-a-huge-beer-deal-down-a-long-road.html">Deal Professor: Nudging a Huge Beer Deal Down a Long Road</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/10/08/business/dealbook/anheuser-busch-inbev-sabmiller.html">SABMiller Rejects Increased Bid From Anheuser-Busch</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Formula One Closes in on a Sale </strong> <span class="divider"> | </span></span> The sale of Formula One is nearing completion as a US-Qatari consortium closes in on a deal valuing the motor racing company at $8.5 billion, The Financial Times reports, citing two people close to the negotiations.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/715195e4-6dcd-11e5-8171-ba1968cf791a.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3o3cMV9K8"> THE FINANCIAL TIMES  </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Telecom Italia Said to Work With Deutsche Bank on Tower Sale</strong> <span class="divider"> | </span></span> Telecom Italia hired Deutsche Bank to sell its $1.8 billion stake in Inwit, the mobile-phone tower division that had an initial public offering this year, Bloomberg News reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-09/telecom-italia-said-to-hire-deutsche-bank-to-sell-inwit-stake"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ladbrokes Gets $2.1 Billion in Financing to Fund Coral Deal</strong> <span class="divider"> | </span></span> The bookmaker Ladbrokes said it had signed a 1.35 billion pound, or about $2.07 billion, facility with banks to fund its proposed merger with Gala Coral.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/10/09/us-ladbrokes-financing-idUSKCN0S30FM20151009?feedType=RSS&#038;feedName=innovationNews">REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Wells Fargo Said to Be Under Investigation Over Student Loans</strong> <span class="divider"> | </span></span> The Consumer Financial Protection Bureau is investigating Wells Fargo over its student loan servicing practices, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/cfpb-investigating-wells-fargo-on-student-loan-servicing-1444333614"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Bank Is Tip of Iceberg for Cutbacks at European Banks</strong> <span class="divider"> | </span></span> Restructuring âremains top of the agendaâ for Europeâs banks, analysts at Morgan Stanley wrote in a note this week. <br /><span class="kicker"><a href="//www.wsj.com/articles/deutsche-bank-tip-of-the-iceberg-for-cutbacks-at-european-banks-1444328932?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Carlyle in Art Financing Venture</strong> <span class="divider"> | </span></span> The private equity giant has teamed up with Banque Pictet to offer loans to collectors using their art as collateral.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/09/business/dealbook/carlyle-in-art-financing-venture.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TA Associates to Buy Russell Investments for $1.15 Billion</strong> <span class="divider"> | </span></span> The private equity firm will acquire the asset management business from the London Stock Exchange Group, which bought the company for its index business last year.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/09/business/dealbook/ta-associates-to-buy-russell-investments-for-1-15-billion.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Golden Gate Reports Stake in Ascena Retail</strong> <span class="divider"> | </span></span> The private equity firm Golden Gate Capital disclosed a 9 percent stake in Ascena Retail Group and said it is in early stages of discussions on ways to create value for shareholders.<br /><span class="kicker"><a href="//www.wsj.com/articles/golden-gate-reports-stake-in-ann-taylor-parent-ascena-retail-1444338568?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Elliott Management Acquires Stakes in Polycom and Mitel</strong> <span class="divider"> | </span></span> The $27 billion hedge fund recommended that the two providers of voice and video communications equipment merge, as part of a wave of consolidation in the telecom equipment sector.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/09/business/dealbook/elliott-management-acquires-stakes-in-polycom-and-mitel.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Valentinoâs Owner Said to Explore I.P.O.</strong> <span class="divider"> | </span></span> The Qatari investment firm Mayhoola for Investments, which owns Valentino Fashion Group, is working on a potential initial public offering, which may seek a valuation of as much as $2.26 billion, Bloomberg News reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-08/valentino-s-qatari-owner-said-to-explore-ipo-of-fashion-designer"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Ferrari Said to Push for $12.4 Billion Valuation in I.P.O.</strong> <span class="divider"> | </span></span> Based on talks with possible investors, Ferrari could be valued as much as $12.4 billion when Fiat Chrysler sells a 10 percent stake in it on the New York Stock Exchange, Bloomberg News reports, citing people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-08/ferrari-said-to-push-for-12-4-billion-valuation-in-ipo"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>IMAX China Makes It Big With Hong Kong Listing</strong> <span class="divider"> | </span></span> Shares of IMAX China surged 10 percent as investors bought into the prospects for booming box-office receipts on the Chinese mainland, the worldâs second-largest market for movies after the United States.<br /><span class="kicker"><a href="//www.wsj.com/articles/imax-china-makes-it-big-with-hong-kong-listing-1444332600"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uber Rejects Proposal That Would Legalize Its Service in Brazilâs Largest City</strong> <span class="divider"> | </span></span> The mayor of SÃ£o Paulo, Brazil, signed a bill banning ride-hailing services but offered a proposal that would let such services continue legally. Uber is having none of it.<br /><span class="kicker"><a href="//bits.blogs.nytimes.com/2015/10/08/uber-rejects-proposal-that-would-legalize-its-service-in-brazils-largest-city/">Bits Blog &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uber Data Breach Investigation Said to Focus on Lyft Executive</strong> <span class="divider"> | </span></span> After a major data breach, Uber is focusing its legal efforts on learning more about an Internet address that it has persuaded a court could lead to identifying the hacker. The address can be traced to the chief of technology at a rival, Lyft, Reuters reports, citing sources familiar with the matter. <br /><span class="kicker"><a href="//www.reuters.com/article/2015/10/08/us-uber-tech-lyft-hacking-exclusive-idUSKCN0S20D420151008"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Silicon Valley Investors Look North</strong> <span class="divider"> | </span></span> As Canadian software startuups have begun to flourish,  venture firms from the United States are looking north. Canadian venture capital has doubled in five years, to $2.4 billion.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-08/canada-software-boom-lures-silicon-valley-investors"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Regulators Investigating 2nd VW Computer Program on Emissions" src="https://static01.nyt.com/images/2015/10/08/multimedia/vw-head-congress/vw-head-congress-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Regulators Investigating 2nd VW Computer Program on Emissions</strong> <span class="divider"> | </span></span> Volkswagen and regulators declined to say whether the software in diesel cars, newly disclosed during congressional testimony, was intended to defeat emissions control tests.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/09/business/international/vw-diesel-emissions-scandal-congressional-hearing.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/10/08/business/international/volkswagen-diesel-emissions-fix.html">VW&#8217;s U.S. Chief Knew of &#8216;Defeat Device&#8217; in 2014</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/interactive/2015/business/international/vw-diesel-emissions-scandal-explained.html"><span class="icon graphic">Graphic</span>: How Volkswagen Got Away With Diesel Deception</a> <time class="timestamp" data-eastern-timestamp="6:25 PM" datetime="2015-10-08" data-utc-timestamp="1444343128000">6:25 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/10/09/morning-agenda-emc-takeover-depends-on-dell-debt-deal/"
+					data-title="Morning Agenda: EMC Takeover Depends on Dell Debt Deal"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Stagwell Group to Buy SKDKnickerbocker | Bond King Sues Over Dismissal | How Hillary Clinton Would Regulate Wall Street&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/10/09/morning-agenda-emc-takeover-depends-on-dell-debt-deal/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":49,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

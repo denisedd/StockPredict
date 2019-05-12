@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004421795"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1463656996" />
+<meta name="PUD" content="20160519" />
+<meta name="pdate" content="20160519" />
+<meta name="ptime" content="20160519072316" />
+<meta name="utime" content="20160519112316" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-05-19T11:23:16-04:00" />
+<meta name="DISPLAYDATE" content="May 19, 2016" />
+<meta name="dat" content="May 19, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Thiam, Tidjane;Weill, Joan H;Weill, Sanford I">
+<meta name="des" content="Antitrust Laws and Competition Issues;Appointments and Executive Changes;Banking and Financial Institutions;Glass-Steagall Act (1933);Mergers, Acquisitions and Divestitures;Private Equity;Regulation and Deregulation of Industry;Suits and Litigation (Civil);United States Economy;Wages and Salaries">
+<meta name="org" content="Bayer AG;Citigroup Inc;Credit Suisse Group AG;Deutsche Bank AG;Monsanto Company">
+<meta name="ticker" content="Citigroup Inc|C|NYSE;Credit Suisse Group AG|CS|NYSE;Deutsche Bank AG|DB|NYSE;Monsanto Company|MON|NYSE" />
+<meta property="article:tag" content="Thiam Tidjane" />
+<meta property="article:tag" content="Weill Joan H" />
+<meta property="article:tag" content="Weill Sanford I" />
+<meta property="article:tag" content="Antitrust Laws and Competition Issues" />
+<meta property="article:tag" content="Appointments and Executive Changes" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Glass-Steagall Act (1933)" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="United States Economy" />
+<meta property="article:tag" content="Wages and Salaries" />
+<meta property="article:tag" content="Bayer AG" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="Credit Suisse Group AG" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Monsanto Company" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Thiam Tidjane,Weill Joan H,Weill Sanford I,Antitrust Laws and Competition Issues,Appointments and Executive Changes,Banking and Financial Institutions,Glass-Steagall Act (1933),Mergers Acquisitions and Divestitures,Private Equity,Regulation and Deregulation of Industry,Suits and Litigation (Civil),United States Economy,Wages and Salaries,Bayer AG,Citigroup Inc,Credit Suisse Group AG,Deutsche Bank AG,Monsanto Company,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F05%2F19%2Fmorning-agenda-bayer-offers-to-buy-monsanto%2F" title="Morning Agenda: Bayer Offers to Buy Monsanto" />
+<meta name="description" content="Sandy Weill&#8217;s Wine Country Retirement &#124; Exodus Continues at Credit Suisse" />
+<meta name="hdl" content="Morning Agenda: Bayer Offers to Buy Monsanto" />
+<meta property="og:title" content="Morning Agenda: Bayer Offers to Buy Monsanto" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/05/19/morning-agenda-bayer-offers-to-buy-monsanto/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Sandy Weill&#8217;s Wine Country Retirement &#124; Exodus Continues at Credit Suisse" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Bayer Offers to Buy Monsanto" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/05/19/morning-agenda-bayer-offers-to-buy-monsanto/" />
+<meta name="twitter:description" content="Sandy Weill&#8217;s Wine Country Retirement &#124; Exodus Continues at Credit Suisse" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: A Tale of Two Silicon Valleys' href='//news.blogs.nytimes.com/2016/05/18/morning-agenda-a-tale-of-two-silicon-valleys/' />
+<link rel='next' title='Morning Agenda: Push Continues on Insider Trading Cases Despite Limits on Prosecutors' href='//news.blogs.nytimes.com/2016/05/20/morning-agenda-push-continues-on-insider-trading-cases-despite-limits-on-prosecutors/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/05/19/morning-agenda-bayer-offers-to-buy-monsanto/' />
+<link rel='shortlink' href='//nyti.ms/1TgWS16' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/05/19/morning-agenda-bayer-offers-to-buy-monsanto/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Bayer Offers to Buy Monsanto - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4837 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Bayer Offers to Buy Monsanto        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/05/19/morning-agenda-bayer-offers-to-buy-monsanto/"
+	 data-title="Morning Agenda: Bayer Offers to Buy Monsanto"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Sandy Weill&#039;s Wine Country Retirement | Exodus Continues at Credit Suisse&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/19/morning-agenda-bayer-offers-to-buy-monsanto/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 19, 2016 7:23 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Bayer Offers to Buy Monsanto</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-05-19T11:23:16+00:00" itemprop="datePublished">May 19, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">May 19, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4837 post type-post status-publish hentry category-dealbook tag-antitrust-laws-and-competition-issues tag-appointments-and-executive-changes tag-banking-and-financial-institutions tag-bayer-ag tag-citigroup-inc tag-credit-suisse-group-ag tag-deutsche-bank-ag tag-glass-steagall-act-1933 tag-mergers-acquisitions-and-divestitures tag-monsanto-company tag-private-equity tag-regulation-and-deregulation-of-industry tag-suits-and-litigation-civil tag-thiam-tidjane tag-united-states-economy tag-wages-and-salaries tag-weill-joan-h tag-weill-sanford-i per-thiam-tidjane per-weill-joan-h per-weill-sanford-i des-antitrust-laws-and-competition-issues des-appointments-and-executive-changes des-banking-and-financial-institutions des-glass-steagall-act-1933 des-mergers-acquisitions-and-divestitures des-private-equity des-regulation-and-deregulation-of-industry des-suits-and-litigation-civil des-united-states-economy des-wages-and-salaries org-bayer-ag org-citigroup-inc org-credit-suisse-group-ag org-deutsche-bank-ag org-monsanto-company" id="post-4837">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Bayer Offers to Buy Monsanto</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-05-19T11:23:16+00:00" itemprop="datePublished">May 19, 2016 7:23 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 19, 2016 7:23 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/05/19/morning-agenda-bayer-offers-to-buy-monsanto/" data-title="Morning Agenda: Bayer Offers to Buy Monsanto" data-description="Sandy Weill&#039;s Wine Country Retirement | Exodus Continues at Credit Suisse">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>BAYER OFFERS TO BUY MONSANTO</strong> Monsanto said on Wednesday that it had received a takeover bid from Bayer of Germany, <a href="//www.nytimes.com/2016/05/19/business/dealbook/monsanto-confirms-it-has-offer-for-a-mega-merger-with-bayer.html?emc=edit_dlbkam_20160519&amp;nl=dealbook&amp;nlid=72489293&amp;ref=dealbook">Michael J. de la Merced reported in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Monsanto did not disclose details of the offer, but said its board was reviewing the proposal. A merger would create a giant in antibiotics, genetically modified crop seeds and pesticides with an <strong>annual revenue of more than $67 billion.</strong></p>
+<p class="story-body-text" itemprop="articleBody">There had been speculation about Bayer&#8217;s interest in Monsanto with crop prices falling. Dow Chemical and DuPont agreed to merge last year.</p>
+<p class="story-body-text" itemprop="articleBody">Monsanto, as the world&#8217;s biggest seller of seeds, was seen as an attractive target. <a href="//www.bloomberg.com/news/articles/2016-05-19/monsanto-s-litany-of-woes-makes-it-ripe-for-bayer-takeover-bid">As Bloomberg reports</a>,<strong> its problems also made it vulnerable.</strong> It cut its earnings forecast, clashed with some of the world&#8217;s largest commodity trading companies and became locked in disputes with the governments of Argentina and India. Its shares have slipped 1.4 percent so far this year.</p>
+<p class="story-body-text" itemprop="articleBody">It had tried to bid for Syngenta in a deal worth $47 billion, but Syngenta rejected it and was taken over by the China National Chemical Corporation this year. After the bid failed, <strong>Monsanto said it was no longer interested in huge mergers.</strong> As recently as Wednesday, Brett D. Begemann, Monsanto&#8217;s president and chief operating officer, <a href="//p.nytimes.com/email/re?location=gTrU3W/9enQ1Zr28ArRCQOc1cshR6d6GloTFxMeRJ+YD9ti98BRbC+rqbeED4G5LH6g7ZcAaHFKCDSdXZ19nmKu0D3xMftMmRlcqaJDmNgaOXJPiBMLXVcabIF7F2TRm&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">told Reuters</a> that talk of a takeover was &#8220;wild speculation.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Bayer confirmed to <a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVlB14i4cAMFU+d0NSu9j6Zuh2Nz6AP5AzHo933D0B/ZHPMDGdkJBWpneqnHhdWBv0+UwN+XvUTVk3/QpnZP2KAieuUaYeu1671hvswm446ZmIcSJMwNHhC5PXEvEFZv1yZjJVJsCASI+rh5iQAYcSW&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">The Wall Street Journal</a> and <a href="//www.bloomberg.com/news/articles/2016-05-19/monsanto-says-it-received-unsolicited-offer-from-germany-s-bayer?nl=dealbook&amp;emc=edit_dlbkam_20160519">Bloomberg</a> that it had met with Monsanto executives to discuss buying the company.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>SANDY WEILL&#8217;S WINE COUNTRY RETIREMENT</strong> Sanford I. Weill built Citigroup into a too-big-to-fail colossus, and dominated the New York charity and social circuit for more than a decade. Now he can be found attending wine country social events or riding his John Deere farm utility vehicle across his property to visit the neighbours, <a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pg4Nf+G/ZuekveVv5Wno5GvB/ZqTf6HH1elog7DI9zwIkwo07nGHn0IbERKly4dYzLSQDTuPzNc/DvBgMRiZV9bs6IHk2HjSOJUD/hsG5YSZt2jI81fjFxaO1EsGPoYgX+zmyTPUmIBbDZod4Ld2ZqVcSt77vJcVPKFv5/+dL62KWmJf7KxfqIQleMS9eXWjQnq7QPfEx+0yZGVypokOY2Bo5ck+IEwtdVxpsgXsXZNGY=&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">Randall Smith reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">In spite of being a quintessential Brooklyn native, <strong>he and his wife, Joan, have decamped for Sonoma, Calif.</strong>, and spend more than half their time there far from Wall Street&#8217;s high-octane environment and its critical onlookers.</p>
+<p class="story-body-text" itemprop="articleBody">The fate of Citigroup and the role that giant banks played in the financial crisis of 2008 do not get discussed much there.</p>
+<p class="story-body-text" itemprop="articleBody">In his heyday in the 1990s, Mr. Weill was renowned for his deal making. He made a series of ever-larger mergers that culminated with Citicorp and Travelers Group forming the behemoth Citigroup in 1998. This last deal helped knock down the Depression-era Glass-Steagall Act, which separated banking from the riskier securities business.</p>
+<p class="story-body-text" itemprop="articleBody">But Citigroup suffered setbacks and he stepped down as chief executive in 2003 after a bruising regulatory investigation of biased Wall Street research uncovered his personal efforts to get a star telecommunications analyst to reconsider a tepid neutral rating on AT&amp;T stock at a time when AT&amp;T&#8217;s chief executive was a Citigroup director. Mr. Weill was not charged.</p>
+<p class="story-body-text" itemprop="articleBody">He and Citigroup were also cited as contributors to the 2008 financial crisis. When he retired as chairman in 2006, Mr. Weill held 16.6 million Citigroup shares, then worth $768 million. Forbes listed his net worth at $1.8 billion in 2007. But the stock lost more than 90 percent of its value after his handpicked successor allowed Citigroup to build up huge exposure to toxic subprime assets.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Weill disputed suggestions by two friends that the move west was motivated partly by a wish to get away from &#8220;all the noise around Citi.&#8221; Mike Conway, Mr. Weill&#8217;s chief of staff, said, &#8220;<strong>The Weills are not running away from anything.</strong> They are just trying to expand their horizons.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Weill does not appear to have lost his thirst for success. <strong>His property includes a vineyard that produces syrah under the &#8220;Weill a Way&#8221; label.</strong> The 2012 Weill a Way Exposition 3 Syrah, which retails for about $79, got a 99 score from the wine critic Robert Parker in 2015.</p>
+<p class="story-body-text" itemprop="articleBody">Morgan Twain-Peterson, the owner of Bedrock Wine, which produces Weill a Way, said Mr. Weill has suggested increasing profit margins by raising the price. &#8220;He often says, &#8216;I don&#8217;t understand your business model at all.&#8217; He always wants the wine to be priced higher.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody"><strong>ON THE AGENDA</strong> Walmart will publish its latest quarterly earnings at 7 a.m. The Federal Reserve Bank of Philadelphia will release its latest <strong>manufacturing business outlook survey</strong> at 8:30 a.m. <strong>Stanley Fischer</strong>, the vice chairman of the Federal Reserve, will speak at a conference to honor Michael Woodford&#8217;s contributions to economics at 9:15 a.m. The House of Representatives Financial Services Committee will hold a hearing on whether <strong>bank settlement agreements made after the financial crisis subverted congressional appropriation</strong> powers at 9:15 a.m. The Senate Committee on Banking, Housing and Urban Affairs will hold a hearing on<strong> improving community and business access to capital and economic development</strong> at 10 a.m. The latest data for the <strong>Conference Board Leading Economic Index</strong> will be released at 10 a.m. The Federal Reserve Bank of New York will publish its <strong>May overview of economic and financial developments</strong> in the U.S. at 10:30 a.m.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>EXODUS CONTINUES AT CREDIT SUISSE</strong> Five technology bankers at Credit Suisse defected to the Jefferies investment firm on Tuesday, <a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pg4Nf+G/ZuekveVv5Wno5GvB/ZqTf6HH1exmVaqcOgeRyqmz0Dg7S6jaJtmZa9Rr1iQNaj3CB1G4oiM2Mf2/3+aC2SIFAUQ2Yeq7QPfEx+0yZGVypokOY2Bo5ck+IEwtdVxpsgXsXZNGY=&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">Leslie Picker reported in DealBook.</a> <strong>Most had spent decades at Credit Suisse</strong>, according to six people briefed on the moves. Another consumer banker also quit last week to work at Royal Bank of Canada, three of these people said.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Departures having been accumulating.</strong> Bankers covering health care resigned this month to join Centerview Partners, while another banker who handles private equity relationships went to Goldman Sachs.</p>
+<p class="story-body-text" itemprop="articleBody">People with direct knowledge of the moves said <strong>there was concern that investment banking had become less of a priority since Tidjane Thiam became chief executive of Credit Suisse.</strong> Mr. Thiam had announced a plan to realign the investment bank, and its traders and deal makers, to serve the needs of private banking and wealth management. Bankers were worried about a shift away from trading, mergers and acquisitions and initial public offerings to low-risk activities.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>European banks in general have been struggling to retain vital employees.</strong> Other firms, like Deutsche Bank, have lost several prominent bankers recently. They are more restricted in how much they can divide bonuses in cash versus stock, making it easier for an American competitor to poach bankers. Shares at Credit Suisse and Deutsche Bank have been cut in half over the last year, shrinking the potential stock value of their compensation.</p>
+<p class="story-body-text" itemprop="articleBody">Jefferies and smaller advisory firms have been able to capitalize on this because they are not required by regulators to defer compensation and have the firepower to offer big pay packages and build up investment banking groups.</p>
+<p class="story-body-text" itemprop="articleBody">Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>MERGERS &amp; ACQUISITIONS Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Leaks Abound as Yahoo Auction Gets Underway</strong> Leaks can work both ways for companies, though the conventional wisdom is that they hurt deals more than help, Steven Davidoff Solomon writes in Deal Professor.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pg4Nf+G/ZuekveVv5Wno5GvB/ZqTf6HH1eV60D/BwkaEdQbdjJcYg6ElCMEApEqtxoO9XzxD7fSoogVgBqEswTAvgwFOLDHtgJbNeLVVT3FmLZod4Ld2ZqVUJzhTEwqtoPwWYyuH9XKvAewf+gofb8VLAJiKJr+NNH&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Tribune Shareholder Urges Talks with Gannett</strong> Oaktree Capital Management, Tribune Publishing&#8217;s second-largest shareholder, urged the board to engage immediately in talks with Gannett after it raised its bid this week.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVlB14i4cAMFU+d0NSu9j6Zb037T/womZs7L+kQewQ4y1qkKhXpkk9Axitwi3s2UWL1ZEiucdu3GHZbnO865Pfupqof8kWFU4BJ7736JBQpJidRob378O8sgCe2uXA+xPEAMhAMcG/XOCrtGZJ5xsI7CJQLbriNlPyIgXMD4FrppmJaT4is0DflTPjqKGfqkQpX55LuMjOx9OoZBPz188UKmJsoDYfau6fspOiRH0LDcg==&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Onex Explored Breaking Up Carestream Health</strong> The buyout firm Onex has revived an auction for Carestream Health that could value it at more than $3 billion, including debt, and is considering a break up of the medical imaging company, Reuters reports, citing people familiar with the matter.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KWDQ2dUa3ABzTtDGkJ87/vnn1oVOAp1j3X/cTDEVhzqk832vqlriHpIVfbyDZjlFCAlo+wDnCBuZT7BqbTpsV5q8sqAI2JyLSuvKOj31aeLWoV/IvawS68zTTHbnzR3ohoSBL+k2EtEs9G7enGx8TEh&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">REUTERS</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Bidding for Yum Brands Advances to Second Round</strong> Temasek Holdings of Singapore, and a consortium that includes the China Investment Corporation and Kohlberg Kravis Roberts have moved onto the second round, along with another consortium backed by private equity, Reuters reports, citing people familiar with the matter.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KWDQ2dUa3ABzTtDGkJ87/vnn1oVOAp1j3UYFtUWzeQRElTRZSSizzWmwHBEQbhUgxM0YxR5N9/lSLEZRV21IFVIo4dn/rCQfy2yW5j0CK8xQvHh1upvpFpEvi9JfAvaCDeugBvBsFSMrv+TlstIW/S6KH7pilVGwlxxKIWkMgXEepIbZ9QjMQWe&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">REUTERS</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Sotheby&#8217;s Shareholder Gets Approval to Increase Stake</strong> Shanda Group, which is based in Singapore, received antitrust approval allowing it to purchase more shares. This came shortly after Sotheby&#8217;s said that an investor might increase its stake to as much as 10 percent, fueling speculation about an acquisition.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KWdRQP9hbGa63VB0atKD7D5vrXjGrBWSfFi5yTGFMbwIrVDHoMfxi+L7atuIIq7rK2m0OoCzhhpVBKsBPb2PHpqwWX2IYwgzE5iD0euDpLOVdePuhiuRpoIxVH8TYGr/IFGv79Ny1L3BP+TlstIW/S6KH7pilVGwlxxKIWkMgXEepIbZ9QjMQWe&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>INVESTMENT BANKING Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Big Banks Back Off From Attacks on Financial Reform</strong> Concerned by a change in the political mood, Wall Street is withholding support from a bill to repeal the Dodd-Frank Act, Gina Chon wrote in Breakingviews.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pg4Nf+G/ZuekveVv5Wno5GvB/ZqTf6HH1epEqa4loWI7gAbSKREoFXQ1YrLgmRQthHSTgKEkKp1g5szeI/HdBpinCTXntjc8RdHcDXPyqmYPhs14tVVPcWYtmh3gt3ZmpVQnOFMTCq2g/BZjK4f1cq8B7B/6Ch9vxUsAmIomv400c=&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Former Nomura Trader Says Bank Made Him a Scapegoat for Client Demise</strong> Giovanni Lombardo, a former bond salesman at Nomura, claims the bank blamed him for mistakes made by others at the bank.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KWdRQP9hbGa63VB0atKD7D5vrXjGrBWSfFi5yTGFMbwIrVDHoMfxi+LTlksoUsyTDbRt0oSF8pJHZADX+SKMWoXOggwOW7CKol82KQzVW0+Ve707lFfuqghRh9m16ryZTU86Bqhi9hEIfWG+zCbjjpmYhxIkzA0eELk9cS8QVm/XJmMlUmwIBIj6uHmJABhxJY=&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>PRIVATE EQUITY Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>&#8216;Blank Checks&#8217; Look for Bargains in Private Equity Portfolios</strong> &#8220;Blank-check&#8221; companies that raise money from public markets for future acquisitions are staging a comeback as investors see opportunity for bargains in private equity sales.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVlB14i4cAMFU+d0NSu9j6ZLP1zR7902u340yaVLEO5GqZiwCqiIn1bGhWY0I3hDIN4/mgKfZK1OOCGtlgUQ4xitlRaG8c6zzzU1P/hqoWrJnVaE5IEK1QX0VhkPwv8hB7/k5bLSFv0uih+6YpVRsJccSiFpDIFxHqSG2fUIzEFng==&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>HEDGE FUNDS Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Activist Investors Ally to Form Lobby Group</strong> The billionaire investors Paul Singer, Carl Icahn, Barry Rosenstein, William Ackman and Daniel Loeb are setting aside their political differences to start a Washington-based lobbying group to make their case to lawmakers and the American public that their investment strategy helps, rather than harms, companies and the economy.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVlB14i4cAMFU+d0NSu9j6ZlqM4kI8sKvpRLOjqxBS7ys72FRGLwLeQ62ET53dvWdoX7kxz+ZuTIHM5I2G08lOUueaQ2gongUYHdYF6NHXIvIxePwC6peKXCtsX4mEOkS5iHEiTMDR4QuT1xLxBWb9cmYyVSbAgEiPq4eYkAGHElg==&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>LEGAL/REGULATORY Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Fed Is Seriously Considering Raising Interest Rates in June, Meeting Minutes Say</strong> The central bank sent an unusually frank message to Wall Street, delivered in the official account of the April meeting of Federal Reserve policy makers.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pg4Nf+G/ZuekveVv5Wno5GvN9icYmY6J0Ijq5JKyN5AcL3Bojf8RbI52rXWkkF6ZzshexacPuIBhBnNTLiR5nB82IMU5y72WMIrRGmU/MfetevKOj31aeLWoV/IvawS68zTTHbnzR3ohoSBL+k2EtEs9G7enGx8TEh&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Ill-Fated Strategy in Staples-Office Depot Deal</strong> In a challenge to the planned merger of the two retail giants, the defense rested without presenting evidence, a strategy that appeared to backfire, Chris Sagers writes in Another View.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pg4Nf+G/ZuekveVv5Wno5GvB/ZqTf6HH1evx4j0dVbUYKNNmLd9PWfsvRYMEBG7eC429W/LRlfl4AN/5ThvPj8XnK7UDZtD7VXuA8WDHx59oH1hvswm446ZmIcSJMwNHhC5PXEvEFZv1yZjJVJsCASI+rh5iQAYcSW&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Banks Sued Over Agency Bond-Rigging Claims</strong> Bank of America, Deutsche Bank, CrÃ©dit Agricole, Credit Suisse and Nomura were sued over claims that traders conspired to manipulate trading agency bonds issued by government entities and institutions like the World Bank.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KWdRQP9hbGa63VB0atKD7D5vrXjGrBWSfFi5yTGFMbwIrVDHoMfxi+LjmZwAlYpq5ffs+dBwLhfvVL7CCqscfdZpCkC5yAsyfIOtnHfhvMTKahbNcXEkX//hyp+GwpmiqW1YArGVawSOAsv2bTbbWqCQnzJrndt7RA7d+8ZG9q01/eUBzifFn4kavLjA0UQemI=&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Theranos Voids Two Years of Edison Blood Test Results</strong> Theranos told federal health regulators that it voided two years of results from its Edison blood-testing device, The Wall Street Journal reports, citing a person familiar with the matter.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVlB14i4cAMFU+d0NSu9j6ZH7bXJLKV5KOVyUB5QetDB0ceJ8x6/rM/Cr/8WZ14AyVRj0Xn9hQaGSpNiHlEP1vv01q2rrxFdkYaaAK/sQQ28K4IfvqK0Gf5C5jLXhnxzHDZod4Ld2ZqVUJzhTEwqtoPwWYyuH9XKvAewf+gofb8VLAJiKJr+NNH&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Malaysian Prime Minister&#8217;s Stepson Said to Have Bought London House With 1MDB Funds</strong> Riza Aziz, the stepson of the Malaysian prime minister Najib Razak, bought a $33.6 million house in central London with money originating from the troubled Malaysian state investment fund 1Malaysia Development Bhd, The Wall Street Journal reports, citing people familiar with the situation.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVlB14i4cAMFU+d0NSu9j6ZL8xCXUAWU2Y1IcYDq+GbfbUrZ2A4/WnK/kcKwT7JCjnawms7+oa1/YLtssUlxVNzEOfCNDkwOHDdk1h8Mu6K8MWzuNP1Sa1J/TWL9EIRmUjFHdx/H+NkGXFsVrAvFYUYryjo99Wni1qFfyL2sEuvM00x2580d6IaEgS/pNhLRLPRu3pxsfExIQ==&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Fewer Shareholders Pay U.S. Taxes on Dividends</strong> Tax-exempt and tax-preferred entities &#8211; like 401(k) plans and other retirement accounts &#8211; own more than 75 percent of American corporate stock, nearly opposite the prevailing pattern from 50 years ago, according to a study by the Tax Policy Center.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVlB14i4cAMFU+d0NSu9j6ZxhEwg/tth+dXslTPz4Jmcn4wgBaZpLYDjPUqhbGVevkqdOdAfM1zpjTJbiMTTSbBGmgCv7EENvChcTj87pfqayrtGZJ5xsI7CJQLbriNlPyIgXMD4FrppmJaT4is0DflTPjqKGfqkQpX55LuMjOx9OoZBPz188UKmJsoDYfau6fspOiRH0LDcg==&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Viacom&#8217;s Board Said to End Salary for Sumner Redstone</strong> Board members decided last week to review Mr. Redstone&#8217;s compensation after details emerged about his condition at a trial over his mental competency.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pg4Nf+G/ZuekveVv5Wno5GvJqtlFrC29B4lbwtQnPEPFoldpwyV6JfBN0VEex9ZmTnBFvvrshf51k9BX9w97e1pObRCSajjAKBMgQ5FtWN8Xb72kQfK/cOwQ61h3EbujqYW8B1yYb1I7nNpDcAfQx39gieOrWr9L3G&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>In Japan&#8217;s Slow Economy, Rare Price Rise Prompts Surplus of Remorse</strong> An advertisement apologizing for the higher cost of an ice cream bar reflects the vicious cycle of falling prices and incomes as the country&#8217;s economy struggles.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pg4Nf+G/ZuekveVv5Wno5GvENg/sxDfBOA8Ncp2zHGvI0b0QlceM+LGQImD97myoJx9M497wcRTrxu5YW30fjKcmzXi1VU9xZi2aHeC3dmalVCc4UxMKraD8FmMrh/VyrwHsH/oKH2/FSwCYiia/jTRw==&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>For Facebook and Conservatives, a Collegial Meeting in Silicon Valley</strong> The tÃªte-Ã -tÃªte at Facebook headquarters was an attempt to mend fences with conservatives, and most said it was a step in the right direction.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pg4Nf+G/ZuekveVv5Wno5GvBYYiUy9Bp4HjQ9DmBUxb5vVskfwWcxLnL66Q3hiVtJDyVATI+Nj/nPYDsTHuCqORicHlc5qYhEtV1/SQvpyA2l4fI3HBhO+F2zXi1VU9xZi2aHeC3dmalVCc4UxMKraD8FmMrh/VyrwHsH/oKH2/FSwCYiia/jTRw==&amp;campaign_id=97&amp;instance_id=76447&amp;segment_id=89707&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/05/19/morning-agenda-bayer-offers-to-buy-monsanto/"
+					data-title="Morning Agenda: Bayer Offers to Buy Monsanto"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Sandy Weill&#039;s Wine Country Retirement | Exodus Continues at Credit Suisse&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/19/morning-agenda-bayer-offers-to-buy-monsanto/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":54,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

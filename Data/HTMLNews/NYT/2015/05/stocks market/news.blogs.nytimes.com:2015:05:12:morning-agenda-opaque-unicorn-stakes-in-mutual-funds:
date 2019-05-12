@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003679015"><meta name="author" content="Dealbook" />
+<meta name="CLMST" content="Dealbook" />
+<meta name="byl" content="Dealbook" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1431430081" />
+<meta name="PUD" content="20150512" />
+<meta name="pdate" content="20150512" />
+<meta name="ptime" content="20150512072801" />
+<meta name="utime" content="20150512112801" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-05-12T11:28:01-04:00" />
+<meta name="DISPLAYDATE" content="May 12, 2015" />
+<meta name="dat" content="May 12, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Banking and Financial Institutions;Courts and the Judiciary;Mergers, Acquisitions and Divestitures;Mutual Funds;Supermarkets and Grocery Stores;Venture Capital">
+<meta name="org" content="Delhaize Group;Federal Home Loan Mortgage Corp (Freddie Mac);Federal National Mortgage Assn (Fannie Mae);Koninklijke Ahold N.V.;Nomura Holdings Inc;Royal Bank of Scotland PLC;Securities and Exchange Commission;T Rowe Price Group Inc">
+<meta name="ticker" content="Delhaize Group|DEG|NYSE;Federal Home Loan Mortgage Corp (Freddie Mac)|FMCC|OTCBB;Federal National Mortgage Assn (Fannie Mae)|FNMA|OTCBB;Koninklijke Ahold N.V.|AHONY|Other OTC;Nomura Holdings Inc|NMR|NYSE" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Courts and the Judiciary" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Mutual Funds" />
+<meta property="article:tag" content="Supermarkets and Grocery Stores" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Delhaize Group" />
+<meta property="article:tag" content="Federal Home Loan Mortgage Corp (Freddie Mac)" />
+<meta property="article:tag" content="Federal National Mortgage Assn (Fannie Mae)" />
+<meta property="article:tag" content="Koninklijke Ahold N.V." />
+<meta property="article:tag" content="Nomura Holdings Inc" />
+<meta property="article:tag" content="Royal Bank of Scotland PLC" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="T Rowe Price Group Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Banking and Financial Institutions,Courts and the Judiciary,Mergers Acquisitions and Divestitures,Mutual Funds,Supermarkets and Grocery Stores,Venture Capital,Delhaize Group,Federal Home Loan Mortgage Corp (Freddie Mac),Federal National Mortgage Assn (Fannie Mae),Koninklijke Ahold N.V.,Nomura Holdings Inc,Royal Bank of Scotland PLC,Securities and Exchange Commission,T Rowe Price Group Inc,DealBook" />
+<meta name="news_keywords" content="Banking and Finance,Judiciary,Mergers and Acquistions,Mutual fund,Royal Bank of Scotland,SEC,Supermarkets,Venture capital" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F05%2F12%2Fmorning-agenda-opaque-unicorn-stakes-in-mutual-funds%2F" title="Morning Agenda: Opaque &#8216;Unicorn&#8217; Stakes in Mutual Funds" />
+<meta name="description" content="Opaque &#8216;Unicorn&#8217; Stakes in Mutual Funds &#124; Ahold and Delhaize in Early Takeover Talks &#124; Nomura and R.B.S. Misled Investors, Judge Says &#124; Picking a Battleground in S.E.C. Cases" />
+<meta name="hdl" content="Morning Agenda: Opaque &#039;Unicorn&#039; Stakes in Mutual Funds" />
+<meta property="og:title" content="Morning Agenda: Opaque &#039;Unicorn&#039; Stakes in Mutual Funds" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/05/12/morning-agenda-opaque-unicorn-stakes-in-mutual-funds/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Opaque &#8216;Unicorn&#8217; Stakes in Mutual Funds &#124; Ahold and Delhaize in Early Takeover Talks &#124; Nomura and R.B.S. Misled Investors, Judge Says &#124; Picking a Battleground in S.E.C. Cases" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Opaque &#039;Unicorn&#039; Stakes in Mutual Funds" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/05/12/morning-agenda-opaque-unicorn-stakes-in-mutual-funds/" />
+<meta name="twitter:description" content="Opaque &#8216;Unicorn&#8217; Stakes in Mutual Funds &#124; Ahold and Delhaize in Early Takeover Talks &#124; Nomura and R.B.S. Misled Investors, Judge Says &#124; Picking a Battleground in S.E.C. Cases" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Speedy Start-Up Financing' href='//news.blogs.nytimes.com/2015/05/11/morning-agenda-speedy-start-up-financing/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/05/12/what-were-reading-54/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/05/12/morning-agenda-opaque-unicorn-stakes-in-mutual-funds/' />
+<link rel='shortlink' href='//nyti.ms/1G2vbRn' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/05/12/morning-agenda-opaque-unicorn-stakes-in-mutual-funds/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Opaque &#039;Unicorn&#039; Stakes in Mutual Funds - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2391 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Opaque &#8216;Unicorn&#8217; Stakes in Mutual Funds        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/05/12/morning-agenda-opaque-unicorn-stakes-in-mutual-funds/"
+	 data-title="Morning Agenda: Opaque &#8216;Unicorn&#8217; Stakes in Mutual Funds"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Opaque &#039;Unicorn&#039; Stakes in Mutual Funds | Ahold and Delhaize in Early Takeover Talks | Nomura and R.B.S. Misled Investors, Judge Says | Picking a Battleground in S.E.C. Cases&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/05/12/morning-agenda-opaque-unicorn-stakes-in-mutual-funds/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 12, 2015 7:28 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Opaque &#8216;Unicorn&#8217; Stakes in Mutual Funds</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Dealbook			</address>
+			<!-- date published --><time class="dateline " datetime="2015-05-12T11:28:01+00:00" itemprop="datePublished">May 12, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">May 12, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2391 post type-post status-publish hentry category-dealbook tag-banking-and-financial-institutions tag-courts-and-the-judiciary tag-delhaize-group tag-federal-home-loan-mortgage-corp-freddie-mac tag-federal-national-mortgage-assn-fannie-mae tag-koninklijke-ahold-n-v tag-mergers-acquisitions-and-divestitures tag-mutual-funds tag-nomura-holdings-inc tag-royal-bank-of-scotland-plc tag-securities-and-exchange-commission tag-supermarkets-and-grocery-stores tag-t-rowe-price-group-inc tag-venture-capital des-banking-and-financial-institutions des-courts-and-the-judiciary des-mergers-acquisitions-and-divestitures des-mutual-funds des-supermarkets-and-grocery-stores des-venture-capital org-delhaize-group org-federal-home-loan-mortgage-corp-freddie-mac org-federal-national-mortgage-assn-fannie-mae org-koninklijke-ahold-n-v org-nomura-holdings-inc org-royal-bank-of-scotland-plc org-securities-and-exchange-commission org-t-rowe-price-group-inc news_keywords-banking-and-finance news_keywords-judiciary news_keywords-mergers-and-acquistions news_keywords-mutual-fund news_keywords-royal-bank-of-scotland news_keywords-sec news_keywords-supermarkets news_keywords-venture-capital-2" id="post-2391">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Opaque &#8216;Unicorn&#8217; Stakes in Mutual Funds</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Dealbook                </span>
+                <!-- date published --><time class="dateline " datetime="2015-05-12T11:28:01+00:00" itemprop="datePublished">May 12, 2015 7:28 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 12, 2015 7:28 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/05/12/morning-agenda-opaque-unicorn-stakes-in-mutual-funds/" data-title="Morning Agenda: Opaque &#8216;Unicorn&#8217; Stakes in Mutual Funds" data-description="Opaque &#039;Unicorn&#039; Stakes in Mutual Funds | Ahold and Delhaize in Early Takeover Talks | Nomura and R.B.S. Misled Investors, Judge Says | Picking a Battleground in S.E.C. Cases">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>OPAQUE âUNICORNâ STAKES IN MUTUAL FUNDS</strong> <span class="divider"> | </span></span> Big money managers are increasingly <a href="//www.nytimes.com/2015/03/23/business/dealbook/tech-money-sends-funds-on-the-hunt-for-unicorns.html">adding shares of the high-flying start-ups known as unicorns to mutual funds</a> that go into the 401(k)âs and individual retirement accounts of many Americans, arguing that this gives the average investor exposure to hot technology stocks before they go public. <a href="//www.nytimes.com/2015/05/12/business/dealbook/main-street-portfolios-are-investing-in-unicorns.html">In his DealBook column</a>, Andrew Ross Sorkin asks whether this trend is as beneficial to the Main Street investor as the fund managers say. </p>
+<p class="story-body-text" itemprop="articleBody">âThe good news is that investors across a broad range are able to invest in these pseudo-private companies, democratizing, to some degree, the investment process,â he writes. âThe bad news is that should the bubble pop, these investors have already bought shares in the companies at sky-high valuations. And these people may not even realize it.â Many mutual fund companies do not even disclose their stakes in private companies, Mr. Sorkin writes, and not one of the mutual fund companies he spoke to was willing to fully explain its <b>methodology in determining the value of the start-ups</b>. </p>
+<p class="story-body-text" itemprop="articleBody">Equally opaque are the <b>terms of these investments</b>. âIn some cases, people involved in these transactions say, special deals are struck for preferred shares that include downside protection; some of the deals include deadlines for the companies to go public and penalties if they donât,â Mr. Sorkin writes. âAnd some mutual funds have sold their private shares even before the start-up has gone public, people involved in the transactions say.â But if the lack of transparency worries the average investor, itâs worth noting that these stakes are usually a tiny portion of a mutual fundâs portfolio. âSo if youâre an investor looking for a lot of exposure to unicorn technology companies, these mutual funds are hardly going to give you a concentrated bet,â Mr. Sorkin writes. âAnd thatâs probably a good thing.â<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AHOLD AND DELHAIZE IN EARLY TAKEOVER TALKS</strong> <span class="divider"> | </span></span> The Dutch supermarket operator Ahold and Delhaize Group of Belgium said on Tuesday that they had entered early stage discussions about a potential merger, <a href="//www.nytimes.com/2015/05/13/business/dealbook/ahold-and-delhaize-group-enter-preliminary-talks-on-a-merger.html">Chad Bray reports in DealBook</a>. The deal would combine Delhaize, the owner of the Food Lion grocery store chain, with Ahold, which owns the Stop &#038; Shop and Giant chains in the United States, creating a company worth about <b>25.6 billion euros, or about $28.6 billion,</b> based on market capitalization. </p>
+<p class="story-body-text" itemprop="articleBody">If the transaction is completed, it would create a company with 54 billion euros in combined sales and more than 6,600 stores, with the United States accounting for about 60 percent of its revenue. The companies did not disclose financial details of any potential transaction.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>NOMURA AND R.B.S. MISLED INVESTORS, JUDGE SAYS</strong> <span class="divider"> | </span></span> On Monday, a federal judge had some scathing words for Nomura Holdings and the Royal Bank of Scotland in ruling that the two banks had misled Fannie Mae and Freddie Mac in selling them shoddy mortgage bonds in the lead-up to the 2008 financial crisis, <a href="//www.nytimes.com/2015/05/12/business/dealbook/nomura-found-liable-in-us-mortgage-suit-tied-to-financial-crisis.html">Peter Eavis reports in DealBook</a>. <b>âThe magnitude of falsity, conservatively measured, is enormous,â</b> Judge Denise L. Cote of Federal District Court in Manhattan wrote. </p>
+<p class="story-body-text" itemprop="articleBody">Nomura and Royal Bank of Scotland were the only two of 18 financial companies that decided to go to trial to defend the mortgage bonds they sold to investors, and their trial shed some light on the behavior of banks heavily involved in subprime mortgages at the peak of the housing boom. The judgeâs ruling represented another victory for the Federal Housing Finance Agency, whose lawyers have aggressively pursued the banks, helping the government secure huge settlements. Judge Cote has asked the F.H.F.A. to submit a proposal for damages, which are <b>expected to be about $500 million</b>.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The Treasury Department releases the <b>budget statement for April</b> at 2 p.m. Companies reporting earnings today include <b>Zillow and GoDaddy</b>. <b>John Williams</b> of the Federal Reserve Bank of San Francisco, who is also a voting member of the Fedâs policy-setting committee, will speak about the economic outlook at the New York Association for Business Economics luncheon, which begins at noon. The two-day <b>Global Private Equity Conference</b>, hosted by the World Bankâs International Finance Corporation, begins in Washington.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PICKING A BATTLEGROUND IN S.E.C. CASES</strong> <span class="divider"> | </span></span> For defendants in Securities and Exchange Commission cases, picking the right forum is half the battle, <a href="//www.nytimes.com/2015/05/12/business/dealbook/choosing-the-battlefield-in-sec-cases.html">Peter J. Henning writes in the White Collar Watch column</a>. Defendants generally prefer to litigate in a federal district court because of the rights afforded there, but the Dodd-Frank Act allows the S.E.C. to argue its case before an administrative law judge employed by the commission. This allows a much more expedited proceeding that generally limits discovery by the parties to the evidence gathered during an investigation.</p>
+<p class="story-body-text" itemprop="articleBody">The S.E.C.âs enforcement division issued guidance last week about which forum it will choose when a case will be contested, but the guidelines offered little concrete information. âIndeed, the guidance may cause even greater consternation among defense lawyers who see the agency sending the toughest cases to its own judges to develop the law as it prefers rather than using federal district judges,â Mr. Henning writes. âUntil a federal court steps in to curtail the practice, there is little that can be done to challenge the S.E.C.âs choice.â<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>E.U. Competition Fears Cast Doubt on G.E. Deal for Alstomâs Energy Unit</strong> <span class="divider"> | </span></span> The European Commission has asked G.E. for more information on the proposed agreement, adding to concerns that it is prepared to block it.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/13/business/dealbook/ge-alstom-european-union.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Glaxoâs C.E.O. Warns of âPoorâ Takeover Choices</strong> <span class="divider"> | </span></span> Andrew Witty, chief executive of the drug maker GlaxoSmithKline, said in an interview with The Financial Times that cheap money has increased the risk that pharmaceutical companies will make âpoor choicesâ in acquisitions.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/823dcc20-f7d9-11e4-8bd5-00144feab7de.html"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Government Cuts Lloyds Stake to Below 20%</strong> <span class="divider"> | </span></span> The latest sale, part of a trading plan that will run through June, continues efforts to end state ownership of the lender after a bailout.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/13/business/dealbook/british-government-cuts-lloyds-stake-to-below-20.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Head of Barclays Credit Card Business to Step Down</strong> <span class="divider"> | </span></span> Valerie Soranno Keating, the chief executive, joined the bank in 2009 after a 16-year career with American Express.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/13/business/dealbook/barclaycard-chief-executive-to-step-down.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bank of America Merrill Lynch Hires Tech Banker</strong> <span class="divider"> | </span></span> Bill Frauenhofer, who will be based in Palo Alto, Calif., is a longtime adviser to chip-making companies.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/12/business/dealbook/bank-of-america-merrill-lynch-hires-tech-banker.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JPMorgan Hires Banker for Private Financing</strong> <span class="divider"> | </span></span> Keith Canton, formerly of Lehman Brothers and Barclays, will become head of private capital markets at the bank.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/12/business/dealbook/jpmorgan-hires-banker-for-private-financing.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Stephen A. SchwarzmanÂ Gives $150 Million for Yale Cultural Hub" src="https://static01.nyt.com/images/2015/05/12/arts/12BIG/12BIG-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Stephen A. SchwarzmanÂ Gives $150 Million for Yale Cultural Hub</strong> <span class="divider"> | </span></span> A $150 million donation from the Wall Street financier will fund a plan to transform Commons at Yale and its attached buildings into a performing arts center and hub.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/12/arts/design/stephen-a-schwarzmangives-150-million-for-yale-cultural-hub.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Comcast Hires Michael Cavanagh as Chief Financial Officer" src="https://static01.nyt.com/images/2015/05/17/business/comcast-web1/comcast-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Comcast Hires Michael Cavanagh as Chief Financial Officer</strong> <span class="divider"> | </span></span> Mr. Cavanagh, a prominent figure on Wall Street, will succeed Michael Angelakis, Comcastâs C.F.O. since 2008.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/12/business/media/comcast-hires-michael-cavanagh-as-chief-financial-officer.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>JAT Capital to Shut Down</strong> <span class="divider"> | </span></span> John Thaler, founder of JAT Capital, said in a letter to investors that he is returning client money to turn his $1.7 billion hedge fund firm into a family office, Bloomberg News reports.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-05-11/hedge-fund-jat-capital-says-it-s-closing-to-become-family-office"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blue Apron Said to Be Seeking $2 Billion Valuation</strong> <span class="divider"> | </span></span> Blue Apron, a start-up that ships ingredients to home cooks, is in talks to raise more than $100 million from investors at a valuation of around $2 billion, The Wall Street Journal reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.wsj.com/articles/blue-apron-seeking-2-billion-valuation-in-new-funding-round-1431384151"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Uber Tests Cash Payments in India</strong> <span class="divider"> | </span></span> Uber will allow customers in the southern Indian technology hub of Hyderabad to pay in cash, the first time Uber has offered the option in any market, The Financial Times reports. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/11ae3e32-f7ec-11e4-962b-00144feab7de.html#axzz3ZoawrsT2"> THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Senate Banking Chairmanâs Bill Said to Increase Fed Scrutiny</strong> <span class="divider"> | </span></span> Richard Shelby, chairman of the Senate Banking Committee, plans to introduce legislation on Tuesday that would intensify congressional scrutiny of the Federal Reserve and revamp rules for smaller banks, The Wall Street Journal reports, citing Republican committee aides.<br /><span class="kicker"><a href="//www.wsj.com/articles/sen-shelby-to-unveil-legislation-heightening-fed-scrutiny-1431393248"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Greece Moves to Pay Debt, but European Finance Ministers Unsatisfied" src="https://static01.nyt.com/images/2015/05/12/business/12SUB-JP-GREEKDEBT/12SUB-JP-GREEKDEBT-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Greece Moves to Pay Debt, but European Finance Ministers Unsatisfied</strong> <span class="divider"> | </span></span> Athens authorized a payment to the International Monetary Fund as eurozone officials noted âopen issues.â<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/12/business/international/greece-debt-talks-eurozone-finance-ministers.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/05/11/business/dealbook/imf-and-central-bank-loom-large-over-greeces-debt-talks.html">I.M.F. and Central Bank Loom Large Over Greeceâs Debt Talks</a> <time class="timestamp" data-eastern-timestamp="5:20 PM" datetime="2015-05-10" data-utc-timestamp="1431292826000">5:20 PM</time><span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Alexandre Lamfalussy, a Euro Founder, Dies at 86" src="https://static01.nyt.com/images/2015/05/12/business/12lamfalussy-obit/12lamfalussy-obit-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Alexandre Lamfalussy, a Euro Founder, Dies at 86</strong> <span class="divider"> | </span></span> Mr. Lamfalussy, an economist and banker, was the founding president of the European Monetary Institute, which became the European Central Bank.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/12/business/alexandre-lamfalussy-a-euro-founder-dies-at-86.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Tempur Sealy C.E.O. and Chairman to Resign in Corporate Governance Fight" src="https://static01.nyt.com/images/2015/05/12/business/dbpix-tempur/dbpix-tempur-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Tempur Sealy C.E.O. and Chairman to Resign in Corporate Governance Fight</strong> <span class="divider"> | </span></span> Tempur Sealyâs moves were prompted after shareholders backed a campaign by H Partners, a hedge fund that challenged the companyâs governance.<br /><span class="kicker"><a href="//www.nytimes.com/2015/05/12/business/dealbook/tempur-sealy-ceo-and-chairman-to-resign-in-corporate-governance-fight.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/05/12/morning-agenda-opaque-unicorn-stakes-in-mutual-funds/"
+					data-title="Morning Agenda: Opaque &#8216;Unicorn&#8217; Stakes in Mutual Funds"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Opaque &#039;Unicorn&#039; Stakes in Mutual Funds | Ahold and Delhaize in Early Takeover Talks | Nomura and R.B.S. Misled Investors, Judge Says | Picking a Battleground in S.E.C. Cases&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/05/12/morning-agenda-opaque-unicorn-stakes-in-mutual-funds/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":51,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

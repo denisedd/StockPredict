@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" lang="en-US" itemscope xmlns:og="//opengraphprotocol.org/schema/">
+<head profile="//gmpg.org/xfn/11"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>Into the Wild With Sarah Ryhanen</title>
+<link rel="shortcut icon" href="https://static01.nyt.com/packages/images/blogs/tmagazine/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="https://static01.nyt.com/js/common.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/app/lib/NYTD/0.0.1/tabset.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/common.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/memberTools.js"></script>
+<!--[if lt IE 9]>
+<script src="https://static01.nyt.com/js/html5shiv.js"></script>
+<![endif]-->
+<script type="text/javascript" src="https://static01.nyt.com/js/common/screen/modifyNavigationDisplay.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/tabsetoverlayrevealer.js"></script>
+<!--[if lt IE 7]><script defer type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/pngfix.js"></script><![endif]-->
+<script type="text/JavaScript">
+// <![CDATA[
+var nyt_google_hints = "";
+var nyt_google_ad_channel = "bl_t-magazine";
+// ]]>
+</script>
+<script type="text/JavaScript">
+NYTD.Blogs.Ads = {};function processBlogsAds(data) { NYTD.Blogs.Ads = data.ads; }
+</script>
+<script type="text/javascript">
+if ((document.referrer).indexOf("nytimes.com") !== -1) {var nyt_doc_referrer = 'nytimes.com;';}else {var nyt_doc_referrer = '';}
+document.write( '<script id="adxScript" src="'+ '//www.nytimes.com' +'/adx/bin/adxrun.html?v=3&jsonp=processBlogsAds&page=' + 'blog.nytimes.com/tmagazine/post&positions=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&query=qstring&keywords='+ encodeURIComponent(nyt_doc_referrer) +';A-list;celebrity;chic;collections;concierge;design;designers;fashion;first+class;gossip;hotel;jet+set;luxury;models;New+York+Times;restaurant;runway;shopping;style;T+Magazine;travel;Men&#039;s+wear;Women&#039;s+wear;design-living;in_nature;t-summer-entertainment-2015;Ryhanen+Sarah;Florists;Flowers+and+Plants;Gardens+and+Gardening;Brooklyn+(NYC);Design;In+Nature;T+Summer+Entertainment+2015;_featured;' + '"' + '>' + '</' + 'script>');
+</script>
+<script type="text/javascript" src="https://static01.nyt.com/js/common/sharetools/2.0/shareTools.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/app/save/crossPlatformSave.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/js/blogs_v3/nyt_universal/js/blogscrnr.js"></script>
+<link rel="stylesheet" type="text/css" href="https://static01.nyt.com/css/blogs/3.1/screen/themes/tmagazine/style.css" media="screen" />
+<meta name="communityAssetLabels" content="NYT_Blogs" />
+<meta name="communityAssetTaxonomy" content="blogs/tmagazine/Into the Wild With Sarah Ryhanen ( 20150713 )" />
+<meta name="communityAssetURL" content="//tmagazine.blogs.nytimes.com/2015/07/13/sarah-ryhanen-saipua-worlds-end/" />
+<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta name="author" content="Sadie Stein" />
+<meta name="CLMST" content="Sadie Stein" />
+<meta name="byl" content="Sadie Stein" />
+<meta name="GBLC" content="Design;In Nature;T Summer Entertainment 2015">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1436780732" />
+<meta name="PUD" content="20150713" />
+<meta name="pdate" content="20150713" />
+<meta name="ptime" content="20150713054532" />
+<meta name="utime" content="20150713094539" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-07-13T09:45:39-04:00" />
+<meta name="DISPLAYDATE" content="July 13, 2015" />
+<meta name="dat" content="July 13, 2015" />
+<meta itemprop="articleSection" property="article:section" content="T:Style" />
+<meta name="CG" content="T:Style" />
+<meta name="SCG" content="tmagazine" />
+<meta name="BN" content="tmagazine" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Ryhanen, Sarah">
+<meta name="des" content="Florists;Flowers and Plants;Gardens and Gardening">
+<meta name="geo" content="Brooklyn (NYC)">
+<meta property="article:tag" content="Ryhanen Sarah" />
+<meta property="article:tag" content="Florists" />
+<meta property="article:tag" content="Flowers and Plants" />
+<meta property="article:tag" content="Gardens and Gardening" />
+<meta property="article:tag" content="Brooklyn (NYC)" />
+<meta property="article:tag" content="Design" />
+<meta property="article:tag" content="In Nature" />
+<meta property="article:tag" content="T Summer Entertainment 2015" />
+<meta property="article:tag" content="_featured" />
+<meta name="keywords" content="Ryhanen Sarah,Florists,Flowers and Plants,Gardens and Gardening,Brooklyn (NYC),Design,In Nature,T Summer Entertainment 2015,_featured" />
+<meta name="news_keywords" content="Brooklyn,Florists,Flowers and Plants,Gardens and Gardening,Sarah Ryhanen" />
+<meta name="description" content="The imaginative Brooklyn florist wanted to grow flowers on her own terms. Long winters, lost crops and a creaky old house aside, it&#8217;s worked out perfectly." />
+<meta name="hdl_p" content="Into the Wild" />
+<meta name="hdl" content="Into the Wild With Sarah Ryhanen" />
+<meta property="og:title" content="Into the Wild With Sarah Ryhanen" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//tmagazine.blogs.nytimes.com/2015/07/13/sarah-ryhanen-saipua-worlds-end/" />
+<meta property="og:site_name" content="T Magazine" />
+<meta property="og:description" content="The imaginative Brooklyn florist wanted to grow flowers on her own terms. Long winters, lost crops and a creaky old house aside, it&#8217;s worked out perfectly." />
+<meta property="og:image" content="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm3/19entertain-arena-farm3-facebookJumbo.jpg"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm3/19entertain-arena-farm3-thumbLarge.jpg"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Into the Wild With Sarah Ryhanen" />
+<meta name="twitter:url" content="//tmagazine.blogs.nytimes.com/2015/07/13/sarah-ryhanen-saipua-worlds-end/" />
+<meta name="twitter:description" content="The imaginative Brooklyn florist wanted to grow flowers on her own terms. Long winters, lost crops and a creaky old house aside, it&#8217;s worked out perfectly." />
+<meta name="twitter:image" content="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm3/19entertain-arena-farm3-thumbLarge.jpg"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm3/19entertain-arena-farm3-thumbLarge.jpg" name="thumbnail" />
+<meta name="twitter:site" content="@https://twitter.com/tmagazine">
+<script src="https://static01.nyt.com/js/app/lib/jquery/jquery-1.6.2.min.js" type="text/javascript"></script><script src="https://static01.nyt.com/js/EmbeddedComments/embeddedComments.js" type="text/javascript"></script>
+<link rel='prev' title='The Top 10 Moments From Couture Week' href='//tmagazine.blogs.nytimes.com/2015/07/10/top-10-paris-couture-week-moments/' />
+<link rel='next' title='Outdoor Pillows' href='//tmagazine.blogs.nytimes.com/2015/07/13/outdoor-pillows/' />
+<link rel='canonical' href='//tmagazine.blogs.nytimes.com/2015/07/13/sarah-ryhanen-saipua-worlds-end/' />
+<link rel='shortlink' href='//tmagazine.blogs.nytimes.com/?p=302082' />
+<link rel='https://github.com/WP-API/WP-API' href='//tmagazine.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/tmagazine/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//tmagazine.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/t-magazine/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/tmagazine/2015/07/13/sarah-ryhanen-saipua-worlds-end/" />
+<style type="text/css">
+address {font-style: normal;display: inline;}.story-meta-footer span + time {border: 0;}.story-meta-footer .kicker + time, .story-meta-footer .kicker + span {border-left: 1px solid #ccc;}.has-kicker .byline {border-left: 1px solid #ccc;padding: 0 5px 0 8px;}figure {    margin: 0px;}.credit {    display: inline;}.visually-hidden {    border: 0;    clip: rect(0 0 0 0);    height: 1px;    margin: -1px;    overflow: hidden;    padding: 0;    position: absolute;    width: 1px;}.entry-content .story-addendum {    color: #333;    font-style: italic;    font-size: 1rem;    line-height: 1.4375rem;    font-weight: 400;    font-family: georgia,"times new roman",times,serif;    margin-bottom: 1em;    max-width: 540px;}.entry-content .story-footer {    margin-top: 24px;    margin-bottom: 45px;}.entry-content .story-footer .story-notes p {    font-size: .875rem;    line-height: 1.125rem;    font-weight: 500;    font-family: "nyt-franklin", arial, helvetica, sans-serif;    margin-bottom: 14px;}.entry-content .story-footer:before {    content: "";    width: 60px;    height: 1px;    display: inline-block;    background-color: #000;    margin: 0 0 13px;}.entry-content .story-print-citation {    font-size: .6875rem;    line-height: .9375rem;    font-weight: 300;    font-family: "nyt-franklin", arial, helvetica, sans-serif;    color: #999;}body.single article.hentry {    padding: 15px 10px 0;}.fullScreenSlideShow #fullScreenWrapper {    z-index: 10000000;}figure .image {    margin-bottom: 7px;}figure .credit {    font-size: 1em;line-height: 1.2em;}.caption {    font-size: 1.2em;}body.blogHome.nyt-blog-tmagazine .hfeed .hentry:first-child,body.blogAuthor.nyt-blog-tmagazine .hfeed div:first-child+ .hentry {    margin-top: 0px!important;    padding-top: 0px!important;    background:none;}body.blogAuthor.nyt-blog-tmagazine .hfeed div:first-child+ .hentry,body.blogCategories.nyt-blog-tmagazine .hfeed div:first-child+ .hentry {    background:none;}body.blogHome.nyt-blog-tmagazine .hfeed .hentry,body.blogAuthor.nyt-blog-tmagazine .hfeed .hentry {    margin-top: 40px;    padding-top: 40px;}body.blogCategories.nyt-blog-tmagazine .resultsLabel,body.blogAuthor.nyt-blog-tmagazine .resultsLabel,body.blogTags.nyt-blog-tmagazine .resultsLabel {    margin-left: 15px;    margin-top: 15px;    border-bottom: 1px solid #e2e2e2;    padding-bottom: 15px;}body.nyt-blog-tmagazine #aCol .nav .next {    margin-left: 135px;}body.nyt-blog-tmagazine .entry-content .related-coverage {    margin-bottom: 1em;}body.nyt-blog-tmagazine .entry-content .related-coverage h6.kicker {    margin-bottom:5px;}body.nyt-blog-tmagazine .entry-content .related-coverage li {    margin-bottom: 0;}body.nyt-blog-tmagazine #cCol .nav .next {    margin-left: 45px;}body.nyt-blog-tmagazine #cCol .nav li {    max-width: 110px;}body.nyt-blog-tmagazine #aCol .nav li {    max-width: 190px;}body.nyt-blog-tmagazine .nav li a {    overflow: hidden;}body.nyt-blog-tmagazine.wideAd #aCol .nav .element1, body.nyt-blog-tmagazine.wideAd #aCol .nav .element2 {    width: 50%;}body.nyt-blog-tmagazine.wideAd #aCol .nav ul {    background: url("https://static01.nyt.com/images/layout/vertical_rule.gif") repeat-y center;}body.nyt-blog-tmagazine.wideAd #aCol .nav .next {    margin-left: 182px;}body.nyt-blog-tmagazine.wideAd #aCol .nav .w75 {    display: none;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo {    margin: 0 0 20px;    padding: 22px 22px 10px;    background: #f9f9f9;    overflow: hidden;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo .w190 {    float: right;    margin: 0 0 10px;    padding: 0;    width: auto;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo img {    width: 155px;    height: 103px;    margin: 0 0 0 10px;    padding: 0;    display: block !important;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo .nyt-article-byline {    margin-bottom: 4px;    font-size: 10px;    line-height: 13px;    font-weight: 500;    color: #808080;    font-family: arial;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo h4 {    font-size: 17px;    line-height: 21px;    font-weight: 500;    margin-bottom: 5px;    font-family: georgia;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo h4 a {    color: #000;    text-decoration: none;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo h4 a:hover {    color: #f00;    text-decoration: underline;}body.nyt-blog-tmagazine #aCol .entry-content .nyt-article-promo .nyt-article-summary {    font-size: 13px;    line-height: 18px;    margin-bottom: 0;    font-family: georgia;    font-style: italic;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module {    border-bottom: 1px solid #000;    border-top: 1px solid #000;    padding: 10px 0 10px 0;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module .entry {    padding: 10px 0 0 0;    text-align: left;    border: none;}body.nyt-blog-tmagazine #aCol .postHeader .postSubHeader {    text-align: center;    margin-bottom: 5px;}body.nyt-blog-tmagazine #aCol .postHeader .postSubHeader .post-kicker {    text-transform: uppercase;    font-weight: bold;    font-size: 11px;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module {    border-bottom: 1px solid #000;    border-top: 1px solid #000;    padding: 10px 0 10px 0;}body.nyt-blog-tmagazine #aCol .entry-content .w190.right.module .entry {    padding: 10px 0 0 0;    text-align: left;    border: none;}body.nyt-blog-tmagazine .entry-content .w190 .entry h6.kicker {    font-weight: 700;    margin-bottom: 5px;}body.nyt-blog-tmagazine .entry-content .w190 .entry h5 {    margin-bottom: 3px;}body.nyt-blog-tmagazine .entry-content .w190 .entry p.summary,body.nyt-blog-tmagazine .entry-content .w190 ul li {    font-family: arial;    font-size: 1.2em;    line-height: 1.5em;}body.nyt-blog-tmagazine .entry-content .w190 ul li a {    font-size: 0.9em;}body.nyt-blog-tmagazine .postMetaHeader .byline {    text-transform: uppercase;}body.nyt-blog-tmagazine.wideAd .w480,body.nyt-blog-tmagazine.wideAd .w592,body.nyt-blog-tmagazine.wideAd .w480 img,body.nyt-blog-tmagazine.wideAd .w592 img,body.nyt-blog-tmagazine.wideAd .videoplayerContainer,body.nyt-blog-tmagazine.wideAd .videoplayerContainer object,body.nyt-blog-tmagazine.wideAd .nytd-player-poster {height: 266px !important;}</style>
+</head>
+<body id=design class="single postid-302082 blogPost  blog-universal nyt-blog-tmagazine" data-env="production" data-region="ewr1">
+<!-- Header1 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header1 != "undefined" ){document.write(NYTD.Blogs.Ads.Header1.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header1 != "undefined" ) { NYTD.jQuery("#Header1").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Header1"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Header1&query=qstring&keywords=?"></a></noscript>
+<!-- Header2 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header2 != "undefined" ){document.write(NYTD.Blogs.Ads.Header2.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header2 != "undefined" ) { NYTD.jQuery("#Header2").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Header2"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Header2&query=qstring&keywords=?"></a></noscript>
+<!-- Header3 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header3 != "undefined" ){document.write(NYTD.Blogs.Ads.Header3.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Header3 != "undefined" ) { NYTD.jQuery("#Header3").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Header3"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Header3&query=qstring&keywords=?"></a></noscript>
+<a name="top"></a>
+<div id="shell" class="wrap">
+  <div id="PushDown" class="leaderboard ad clearfix">
+    <script type="text/javascript">
+      if ((typeof adxpos_PushDown == "undefined") || (typeof adxads[adxpos_PushDown] == "undefined") ) {
+        if ( $( "PushDown") ) {
+          $( "PushDown").hide();
+        }
+      }
+      if ((typeof adxpos_PushDown != "undefined") && (typeof adxads[adxpos_PushDown] != "undefined") ){
+        document.write(adxads[adxpos_PushDown]);
+      }
+    </script>
+  </div>
+  <div id="masthead-nav" class="wrap">
+    <div id="masthead">
+      <h2>
+        <a href="//www.nytimes.com/pages/t-magazine/index.html">
+          Go Back To Home
+        </a>
+      </h2>
+    </div>
+    <div class="navigation" id="topNav">
+      <ul id="mainNavigation" class="flush">
+        <li class="firstItem">
+          <a href="//www.nytimes.com/pages/t-magazine/womens-fashion/index.html">
+            Women's Fashion
+          </a>
+        </li>
+        <li class="secondItem">
+          <a href="//www.nytimes.com/pages/t-magazine/mens-fashion/index.html">
+            Men's Fashion
+          </a>
+        </li>
+        <li class="thirdItem">
+          <a href="//www.nytimes.com/pages/t-magazine/design/index.html">
+            Design
+          </a>
+        </li>
+        <li class="fourthItem">
+          <a href="//www.nytimes.com/pages/t-magazine/travel/index.html">
+            Travel
+          </a>
+        </li>
+        <li class="fifthItem">
+          <a href="//www.nytimes.com/pages/t-magazine/food/index.html">
+            Food
+          </a>
+        </li>
+        <li class="sixthItem">
+          <a href="//www.nytimes.com/pages/t-magazine/culture/index.html">
+            Culture
+          </a>
+        </li>
+        <li class="lastItem">
+          <a href="//www.nytimes.com/gst/tmagazine/video/index.html">
+            Video
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="masthead-nav-divider" class="singleRuleDivider">
+  </div>
+  <div class="searchModule">
+    <div class="insetV">
+      <div class="inlineSearchControl">
+        <form method="get" action="https://query.nytimes.com/search/tmagazine" enctype="application/x-www-form-urlencoded">
+          <input type="text" id="searchQuery" name="query" size="" value="SEARCH" class="text" onblur="if (this.value=='')this.value='SEARCH';" onfocus="if (this.value=='SEARCH')this.value='';">
+          <input type="image" src="//static01.nyt.com/images/tmagazine/buttons/search-button.gif" alt="Search" title="Search" id="searchSubmit">
+        </form>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+// <![CDATA[
+if ((typeof NYTD.Blogs.Ads != "undefined") && (typeof NYTD.Blogs.Ads.XXL != "undefined") ) {$(document.body).addClassName( "wideAd");}
+// ]]>
+</script><hr />
+<!-- Here is the start of everything good -->
+<div id="tmagazine" class="spanAC blog wrap">
+<div id="aCol">
+<hr />	<div id="content" class="hfeed">
+	<article class="post-302082 post type-post status-publish hentry category-design-living category-in_nature category-t-summer-entertainment-2015 category-featured per-ryhanen-sarah des-florists des-flowers-and-plants des-gardens-and-gardening geo-brooklyn-nyc news_keywords-brooklyn news_keywords-florists news_keywords-flowers-and-plants news_keywords-gardens-and-gardening news_keywords-sarah-ryhanen" id="post-302082">
+<header class="postHeader">
+    <div class="postSubHeader"><span class="post-kicker"><a href="//tmagazine.blogs.nytimes.com/category/in_nature/?module=BlogCategory&version=Blog Post&action=Click&contentCollection=T:Style&pgtype=Blogs&region=Header">In Nature</a></span>
+</div>
+	<h1 itemprop="headline" class="entry-title">Into the Wild With Sarah Ryhanen</h1>		<div class="postMetaHeader story-meta-footer centeredText has-kicker">
+		<span class="kicker"><a href="//tmagazine.blogs.nytimes.com/category/design-living/">Design</a></span>
+				<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+			By Sadie Stein		</address>
+		<!-- date published --><time class="dateline " datetime="2015-07-13T09:45:32-04:00" itemprop="datePublished">July 13, 2015 5:45 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 13, 2015 5:45 am</span><span class="postMetaHeaderCommentCount commentCount hidden">
+					<a class="commentCountLink icon commentIcon" href="//tmagazine.blogs.nytimes.com/2015/07/13/sarah-ryhanen-saipua-worlds-end/"></a>
+				</span>	</div>
+</header>
+<div class="entry-content">
+    <p class="story-body-text" itemprop="articleBody"><em>The imaginative Brooklyn florist wanted to grow flowers on her own terms. Long winters, lost crops and a creaky old house aside, it&#8217;s worked out perfectly. </em></p>
+<div class="w592"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm1/19entertain-arena-farm1-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm1/19entertain-arena-farm1-tmagArticle.jpg" src="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm1/19entertain-arena-farm1-tmagArticle.jpg" id="100000003783658" width="592" height="444" alt="From left: vessels and pots of peony, foxglove and nicotiana in Sarah Ryhanenâs studio at Worldâs End, her 107-acre farm near Albany; a Touch of Mahogany brown iris."   /><meta itemprop="height" content="444"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">From left: vessels and pots of peony, foxglove and nicotiana in Sarah Ryhanenâs studio at Worldâs End, her 107-acre farm near Albany; a Touch of Mahogany brown iris.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Ngoc Minh Ngo</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">World&#8217;s End, a three-year-old <a href="//worldsendfarm.com/">flower farm</a> in Montgomery County, N.Y., is a city girl&#8217;s dream of a country idyll. The white farmhouse, built in 1825, is low and sprawling, flanked by old-growth lilac, a weathered barn and a lily-filled pond. The kitchen garden is thriving; a small apiary produces honey. Behind the house, fluffy Icelandic sheep graze on rolling fields bordered with neat rows of flowers. From the columbine and the found bird&#8217;s nest on the workbench table to the weathered pots of white-striped elephant&#8217;s ears on the piano, from the porch with its gingerbread-house-style moldings to the dust motes dancing in the afternoon air that can only be called sepia-toned â it is enchanting.</p>
+<p class="story-body-text" itemprop="articleBody">I am particularly taken with the distressed layers of antique wallpaper in the front room: tattered 1940s day lilies over variegated green stripes atop an older, vaguely colonial print of washed-out fruit baskets. The effect is highly desirable but, as Sarah Ryhanen explains, the paper isn&#8217;t intentionally shabby chic â it&#8217;s just shabby. After making a couple of rooms in the house habitable, she and her partner, Eric Famisan, put everything else into their flower farm. They also have plans to install a stove, she says; in the meantime, they&#8217;ve been canning home-grown tomatoes over a fire pit.<span id="more-302082"></span></p>
+<p class="story-body-text" itemprop="articleBody">Ryhanen and Famisan have been making hard work look beautiful for a long time. Their Red Hook shop, <a href="//www.saipua.com/">Saipua</a>, is legendary among New York flower lovers for its unusual arrangements that might combine, say, an heirloom tea rose with a branch of native berries that, in another context, might be passed over as a weed. Saipua bouquets are special. Often involving unusual blooms in rare colors, they&#8217;re somewhere between a Dutch master&#8217;s still life and the most extravagant bunch of wildflowers you&#8217;ve ever gathered, at once effortless-looking and imperfectly decadent. As one friend put it, &#8220;Even by Brooklyn flower standards, her aesthetic is truly wild.&#8221;</p>
+<div class="w592"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm2/19entertain-arena-farm2-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm2/19entertain-arena-farm2-tmagArticle.jpg" src="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm2/19entertain-arena-farm2-tmagArticle.jpg" id="100000003783660" width="592" height="395" alt="Ryhanen with her partner, Eric Famisan, their sheepdog and Icelandic sheep."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Ryhanen with her partner, Eric Famisan, their sheepdog and Icelandic sheep.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Ngoc Minh Ngo</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">And yet neither Ryhanen, 34, or Famisan, 40, grew up around much nature. Ryhanen&#8217;s love affair with flowers began when, as a 25-year-old assistant curator at an art gallery, she was given a bunch of black dahlias by Famisan. &#8220;By the next morning, they had died,&#8221; Ryhanen remembered, driving me back to the farm from Albany&#8217;s train station earlier this year. &#8220;But I realized it didn&#8217;t matter. Its work had already been done.&#8221; In 2006, the couple launched their brick-and-mortar outlet for bouquets and the olive-oil soaps Ryhanen&#8217;s mother had started making â the name of the store derives from the Finnish word &#8220;saippua&#8221; or soap â and, as her passion for flowers grew, Ryhanen&#8217;s arrangements became an increasingly large part of the business. Initially, she knew the names of &#8220;maybe five common flowers.&#8221; She has still never formally studied floral arrangement or horticulture, relying instead on images, instinct and the community of professionals whose work she admires.</p>
+<p class="story-body-text" itemprop="articleBody">In a tough economy, florists are often a casualty. A pleasure rather than an essential, flowers become associated with weddings, funerals and Valentine&#8217;s Day more than everyday life. What&#8217;s more, they are costly â and the most expensive varieties are often the shortest-lived. Not everyone wants to see a memento mori on their dining table. After the crash of 2008, Ryhanen was no longer able to find the unique specimens that were so crucial to her signature arrangements. Wholesalers had started to play it safe; New York&#8217;s 28th Street flower district was made up of walls of tulips, hothouse roses and South American carnations, the sturdy varieties that always sell. The couple came to realize that, if they wanted auricula, black hellebores or bearded brown irises, they were going to have to grow them themselves.</p>
+<script type="text/javascript" src="https://static01.nyt.com/js/app/lib/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="https://static01.nyt.com/video/vhs/build/vhs-2.x.js" id="nyt-blogs-video-js"></script>
+<script type="text/javascript">$.noConflict();</script>
+		<script type="text/javascript">		jQuery(document).ready(function(){
+			(function (config) {
+				var cfg = {
+					container: config.container,
+					id: config.id,
+					autoplay: config.autoplay || false,
+					type: config.type || "blogs",
+					width: config.width || 600,
+					height: config.height || 388,
+					mode: "flash",
+					cover: true,
+					controlsOverlay: {
+						"mode": "article",
+						"url": config.shareURL,
+					},
+					endSlate: true,
+					env: "production"
+				};
+				VHS.player(cfg);
+			})({
+				container: "video-container-rnd1734414391", // id of the container OR HTMLElement
+				id: "100000002878751", // Reference ID of initial video to play
+				width: typeof NYTD.Blogs.Ads.XXL != "undefined" ? 480 : 592,
+				height: typeof NYTD.Blogs.Ads.XXL != "undefined" ? 270 : 334,
+				autoplay: false,
+				type: "blog" // web trends -- indicates type of player
+			});
+		});
+		</script>
+		<div class="w592">
+			<div class="videoplayerContainer" id="video-container-rnd1734414391" data-video-id="100000002878751" data-ads=""></div>
+			<div class="credit videoCredit">Video: Oscar Hudson</div>
+		</div>
+<div class="w592"><span class="caption"><strong>FLOWER ARRANGING 101</strong> Nicolette Owen and Sarah Ryhanen of Brooklynâs Little Flower School share tips on how to create an effortless, whimsical floral arrangement.</span></div>
+<p class="story-body-text" itemprop="articleBody">And so they found World&#8217;s End (named for a favorite T.C. Boyle novel). At first, the couple simply planned to grow everything they couldn&#8217;t find elsewhere. Of course, it didn&#8217;t take them long to learn why it&#8217;s so hard to find, say, a blue Himalayan poppy in New York â particularly growing in the kind of &#8220;challenging&#8221; soil that&#8217;s more often used for dairy farms than flower beds. But their peony, iris and lilac crops have been robust, and the less tangible rewards have also been great. Ryhanen and Famisan now imagine the farm as a locus for the flower community and an example to other businesses. On a tour of the grounds, she shows me with some pride her compost pile, made largely of leftovers from events, and Saipua&#8217;s and other florists&#8217; waste. Past the lily pond is the 19th-century barn, the refurbishment of which was much more trouble than building a new one would have been â but has provided a characterful space for teaching, cooking demonstrations and celebrations.</p>
+<p class="story-body-text" itemprop="articleBody">Saipua â and, indeed, Ryhanen herself â has a cult following among a certain sort of aesthete, attested to by the more than 45,000 followers of the business&#8217;s <a href="https://instagram.com/saipua/">Instagram feed</a>, replete with pictures of sheep, buckets of fruit, exquisite bouquets and progress at the farm. Although Ryhanen&#8217;s blog deals frankly with the realities of agricultural life â harsh weather, financial challenges and unending hard work â it is easy for an outsider to cast the whole enterprise in a sort of Hollywood glow. Wandering around, I found myself thinking that the story of the farm would make for a wonderful book â before realizing that I was anticipating the pleasure of reading such a memoir, at my leisure, rather than imagining the process of writing it while also running two businesses, organizing countless events and coordinating different growing seasons, while also regularly commuting the four hours between Brooklyn and the Hudson Valley. Ryhanen&#8217;s lifestyle may appear aspirational, just as her seemingly effortless arrangements make a secret part of us feel that maybe we too could conjure such beauty. And yet, experiencing it firsthand, the primary response is awe: She has done it, and the amount of sweat and heartache and energy and sheer competence it has taken is staggering to behold.</p>
+<div class="w592"><figure class="media photo promo" itemprop="" itemscope="" itemid="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm4/19entertain-arena-farm4-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm4/19entertain-arena-farm4-tmagArticle.jpg" src="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm4/19entertain-arena-farm4-tmagArticle.jpg" id="100000003783662" width="592" height="444" alt="Clockwise from top left: the house at Worldâs End, fronted by a 300-year-old maple tree; columbine, rubus, clematis and bearded iris in the unrenovated kitchen; rows of dahlias in autumn."   /><meta itemprop="height" content="444"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">Clockwise from top left: the house at Worldâs End, fronted by a 300-year-old maple tree; columbine, rubus, clematis and bearded iris in the unrenovated kitchen; rows of dahlias in autumn.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Ngoc Minh Ngo</span></figcaption></figure></div>
+<p class="story-body-text" itemprop="articleBody">After our tour â accompanied by the couple&#8217;s city-country dog, Nea, and by Ziggy, an excitable young border collie who&#8217;s just learning how to herd â we eat bread and cheese and cherries under the shade of an enormous maple tree that the house&#8217;s former occupant refused to register for fear of hordes of tree lovers descending on the property. Famisan appears from the fields, smiling and calm, with two of the hands (several former summer interns have gone on to be full-time employees of Saipua) and they head into town for ice cream. It&#8217;s heavenly â but then, it&#8217;s spring. This past brutal winter took a major toll on the farm. The isolation, exhaustion and pressure would put strain on any relationship â but Ryhanen and Famisan work well together. He runs the farm; she looks after the flower store. Her impatience is matched by his steadier temperament. He tackles the myriad engineering challenges. She is more indulgent of the interns&#8217; mistakes.</p>
+<p class="story-body-text" itemprop="articleBody">The pace of New York retail is fast and exhilarating, but farm work requires a different relationship to time. As Ryhanen explains, you begin to think in terms of potential: what a field will yield in 10 years, a magnolia tree in 35. To say the least, it requires patience as well as acceptance. &#8220;The chaos in nature is quiet, latent,&#8221; she says. &#8220;A lamb&#8217;s death is quiet; so is the gradual death of a crop of flowers.&#8221; Sitting on the lawn, birds singing from the trees, she remembers that long-ago bunch of black dahlias and sighs. &#8220;People look at flowers as objects â as a decorating element, not a living thing. But sometimes the most beautiful thing is the most fleeting. The most fragrant, delicate rose â often those wilt in minutes. Flowers are about living in the moment, and then letting go.&#8221;</p>
+<div class="w592"><figure class="media photo promo" itemprop="associatedMedia" itemscope="" itemid="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm3/19entertain-arena-farm3-tmagArticle.jpg" itemtype="//schema.org/ImageObject" role="group"><span class="visually-hidden">Photo</span><div class="image"><img itemprop="url" itemid="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm3/19entertain-arena-farm3-tmagArticle.jpg" src="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-arena-farm3/19entertain-arena-farm3-tmagArticle.jpg" id="100000003783661" width="592" height="395" alt="From left: a crop of Hello Darkness iris in the field; an arrangement of dahlia, marigold and cosmos on the outdoor work and dining table."   /><meta itemprop="height" content="395"><meta itemprop="width" content="592"></div><figcaption class="caption" itemprop="description"><span class="caption-text">From left: a crop of Hello Darkness iris in the field; an arrangement of dahlia, marigold and cosmos on the outdoor work and dining table.</span><span class="credit" itemprop="copyrightHolder"><span class="visually-hidden">Credit</span> Ngoc Minh Ngo</span></figcaption></figure></div>
+<!-- invalid article title --><p class="story-body-text" itemprop="articleBody">
+			<div class="nyt-article-promo">
+								<div class="w190">
+					<a href="//tmagazine.blogs.nytimes.com/2014/12/16/megan-fowler-sarah-ryhanen-perennial-flower-calendar/?ref=tmagazine"><img src="https://static01.nyt.com/images/2014/12/16/t-magazine/16calendar-allen-slide-7V2A/16calendar-allen-slide-7V2A-thumbWide-v3.jpg" width="190" height="126" alt="Preserving 2014âs Most Beautiful Georgia Blooms for All of 2015" /></a>
+				</div>
+                				<h4><a href="//tmagazine.blogs.nytimes.com/2014/12/16/megan-fowler-sarah-ryhanen-perennial-flower-calendar/?ref=tmagazine">Preserving 2014âs Most Beautiful Georgia Blooms for All of 2015</a></h4>
+				<p class="nyt-article-byline">By RINNE ALLEN</p>
+				<p class="nyt-article-summary">Two Southern entrepreneurs âÂ one with a floral design studio, the other with a letterpress company âÂ collaborated on a limited-edition calendar for the new year.</p>
+			</div>
+			</p>
+    <footer class="story-footer">
+    <div class="story-meta">
+        <p class="story-print-citation">A version of this article appears in print on 07/19/2015, on page <span itemprop="printSection">M2</span><span itemprop="printPage">44</span> of the <span itemprop="printEdition">NewYork</span> edition with the headline: Into the Wild.</p>    </div>
+</footer>
+</div>
+</article>
+<div class="entry-meta">
+        <div class="shareTools shareToolsThemeClassic shareToolsThemeClassicHorizontal articleShareToolsBottom " data-shares="facebook|,twitter|,google|,save,email,showall|Share,print" data-url="//tmagazine.blogs.nytimes.com/2015/07/13/sarah-ryhanen-saipua-worlds-end/" data-title="Into the Wild With Sarah Ryhanen" data-description="The imaginative Brooklyn florist wanted to grow flowers on her own terms. Long winters, lost crops and a creaky old house aside, itâs worked out perfectly. "></div>
+    </div><!-- end .entry-meta -->		<hr />
+		<div class="w75 left"><img src="https://static01.nyt.com/images/2015/07/10/t-magazine/10top-couture-gilchrist-slide-W4AB/10top-couture-gilchrist-slide-W4AB-thumbStandard.jpg" width="75" height="75"></div><div class="w75 right"><img src="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-look-pillows-slide-Q37B/19entertain-look-pillows-slide-Q37B-thumbStandard-v2.jpg" width="75" height="75"></div>	<div class="module box nav">
+		<ul class="opposingFloatControl wrap">
+			<li class="element1">
+								<span class="previous">Previous Post</span>
+				<!-- date published --><time class="dateline " datetime="2015-07-10T19:27:52-04:00" itemprop="datePublished">July 10, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">July 10, 2015</span>				<a href="//tmagazine.blogs.nytimes.com/2015/07/10/top-10-paris-couture-week-moments/" title="The Top 10 Moments From Couture Week">The Top 10 Moments From Couture Week</a>
+							</li>
+			<li class="element2">
+								<span class="next">Next Post</span>
+				<!-- date published --><time class="dateline " datetime="2015-07-13T16:01:45-04:00" itemprop="datePublished">July 13, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">July 13, 2015</span>				<a href="//tmagazine.blogs.nytimes.com/2015/07/13/outdoor-pillows/" title="Outdoor Pillows">Outdoor Pillows</a>
+							</li>
+		</ul>
+	</div>
+<!-- community comments -->
+<a id="postComment"></a>
+<div id="commentsContainer" class="commentsContainer"></div>
+<script type="text/javascript">
+NYTD.jQuery(document).ready(function ($) {
+   NYTD.commentsInstance = new EmbeddedComments($, 'NYTD.commentsInstance' );
+   NYTD.commentsInstance.init({configName: 'default'});
+});
+</script>
+	</div> <!-- end content -->
+	<div id="google_ads_aCol">
+<!-- SponLink2 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink2 != "undefined" ){document.write(NYTD.Blogs.Ads.SponLink2.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink2 != "undefined" ) { NYTD.jQuery("#SponLink2").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=SponLink2"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=SponLink2&query=qstring&keywords=?"></a></noscript>
+</div>
+</div><!-- end aCol -->
+<div id="cCol">
+<div id="blog-index">
+	<a href="//www.nytimes.com/blogs/" title="Blogs - The New York Times">All NYTimes.com Blogs Â»</a>
+</div>
+<div class="w50 left"><img src="https://static01.nyt.com/images/2015/07/10/t-magazine/10top-couture-gilchrist-slide-W4AB/10top-couture-gilchrist-slide-W4AB-thumbStandard.jpg" width="50" height="50"></div><div class="w50 right"><img src="https://static01.nyt.com/images/2015/07/19/t-magazine/19entertain-look-pillows-slide-Q37B/19entertain-look-pillows-slide-Q37B-thumbStandard-v2.jpg" width="50" height="50"></div>	<div class="module box nav">
+		<ul class="opposingFloatControl wrap">
+			<li class="element1">
+								<span class="previous">Previous Post</span>
+								<a href="//tmagazine.blogs.nytimes.com/2015/07/10/top-10-paris-couture-week-moments/" title="The Top 10 Moments From Couture Week">The Top 10 Moments From Couture Week</a>
+							</li>
+			<li class="element2">
+								<span class="next">Next Post</span>
+								<a href="//tmagazine.blogs.nytimes.com/2015/07/13/outdoor-pillows/" title="Outdoor Pillows">Outdoor Pillows</a>
+							</li>
+		</ul>
+	</div>
+<div class=" module ad" id="XXL">
+	<!-- XXL position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.XXL != "undefined" ){document.write(NYTD.Blogs.Ads.XXL.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.XXL != "undefined" ) { NYTD.jQuery("#XXL").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=XXL"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=XXL&query=qstring&keywords=?"></a></noscript>
+</div>
+	    <div class='box module ad nocontent' id="MiddleRight">
+			<div class='bigAdContainer'>
+				<!-- MiddleRight position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.MiddleRight != "undefined" ){document.write(NYTD.Blogs.Ads.MiddleRight.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.MiddleRight != "undefined" ) { NYTD.jQuery("#MiddleRight").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=MiddleRight"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=MiddleRight&query=qstring&keywords=?"></a></noscript>
+			</div>
+	    </div>
+	    	<div class='box module ad nocontent' id="Box1">
+	<!-- Box1 position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Box1 != "undefined" ){document.write(NYTD.Blogs.Ads.Box1.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.Box1 != "undefined" ) { NYTD.jQuery("#Box1").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=Box1"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=Box1&query=qstring&keywords=?"></a></noscript>
+	</div>
+	<div id="google_ads" class="box module ad">
+<!-- SponLink position -->
+<script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink != "undefined" ){document.write(NYTD.Blogs.Ads.SponLink.creative);}
+</script><script type="text/javascript">
+if ( typeof NYTD.Blogs.Ads != "undefined" && typeof NYTD.Blogs.Ads.SponLink != "undefined" ) { NYTD.jQuery("#SponLink").hide(); }
+</script>
+<noscript><a href="//www.nytimes.com/adx/bin/adx_click.html?type=cookie&pos=SponLink"><img src="//www.nytimes.com/adx/bin/adx_remote.html?type=noscript&page=blog.nytimes.com//blog.nytimes.com/tmagazine/post&posall=XXL,AdShareData,PushDown,FixedPanel,Bar1,Position1,Position1B,Top5,SponLink,MiddleRight,Box1,Box3,Box3A,Bottom3,Right5A,Right6A,Right7A,Right8A,Middle1C,Bottom7,Bottom8,Bottom9,Header1,Header2,Header3,Inv1,Inv2,CcolumnSS,Middle4,Left1B,Frame6A,Left2,Left3,Left4,Left5,Left6,Left7,Left8,Left9,JMNow1,JMNow2,JMNow3,JMNow4,JMNow5,JMNow6,Feature1,Spon3,ADX_CLIENTSIDE,SponLink2&pos=SponLink&query=qstring&keywords=?"></a></noscript>
+</div>
+</div><!-- end cCol --></div><!-- end blog wrap --><div id="footer" class="singleRule">
+	<div class="opposingFloatControl wrap">
+		<div class="element1">
+			<ul id="footerNavigation" class="flush">
+				<li class="firstItem">
+					<a href="//www.nytimes.com">NYTIMES.COM</a></li>
+				<li class="secondItem">
+					<a href="//www.nytimes.com/ref/membercenter/help/infoservdirectory.html">CONTACT US</a>
+				</li>
+				<li class="thirdItem">
+					<a href="//nytmediakit.com/">MEDIA KIT</a>
+				</li>
+				<li class="fourthItem">
+					<a href="//www.nytimes.com/ref/membercenter/help/privacysummary.html">PRIVACY POLICY</a>
+				</li>
+				<li class="lastItem">
+					<a href="//www.nytco.com/">THE NEW YORK TIMES COMPANY</a>
+				</li>
+			</ul>
+		</div>
+		<div class="element2">
+			<div id="footerLogo">
+				<a href="//www.nytimes.com/pages/t-magazine/index.html">The New York Times Style Magazine</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div> <!-- end page --><!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-23',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":31,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004564250"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1470134793" />
+<meta name="PUD" content="20160802" />
+<meta name="pdate" content="20160802" />
+<meta name="ptime" content="20160802064633" />
+<meta name="utime" content="20160802104633" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-08-02T10:46:33-04:00" />
+<meta name="DISPLAYDATE" content="August 2, 2016" />
+<meta name="dat" content="August 2, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Ackman, William A;Buffett, Warren E;Denton, Nick;Holmes, Elizabeth (1984- );Kalanick, Travis;May, Theresa M;Musk, Elon;Ramirez, Edith">
+<meta name="des" content="Banking and Financial Institutions;Boards of Directors;Corporations;Enterprise Computing;Initial Public Offerings;Insider Trading;Law and Legislation;Mergers, Acquisitions and Divestitures;Private Equity;Relocation of Business;Software;Start-ups;Taxation;Venture Capital">
+<meta name="org" content="Bank of America Corporation;Federal Bureau of Investigation;Federal Trade Commission;Gawker.com;Herbalife Ltd;Misys PLC;Oracle Corporation;Quip;Salesforce.com Inc;Securities and Exchange Commission;SolarCity Inc;Supreme Court (US);Technology Crossover Ventures;Theranos Inc;Uber Technologies Inc;Volkswagen AG">
+<meta name="ticker" content="Bank of America Corporation|BAC|NYSE;Herbalife Ltd|HLF|NYSE;Oracle Corporation|ORCL|NYSE;Volkswagen AG|VLKAY|Other OTC" />
+<meta property="article:tag" content="Ackman William A" />
+<meta property="article:tag" content="Buffett Warren E" />
+<meta property="article:tag" content="Denton Nick" />
+<meta property="article:tag" content="Holmes Elizabeth (1984- )" />
+<meta property="article:tag" content="Kalanick Travis" />
+<meta property="article:tag" content="May Theresa M" />
+<meta property="article:tag" content="Musk Elon" />
+<meta property="article:tag" content="Ramirez Edith" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Boards of Directors" />
+<meta property="article:tag" content="Corporations" />
+<meta property="article:tag" content="Enterprise Computing" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Insider Trading" />
+<meta property="article:tag" content="Law and Legislation" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Relocation of Business" />
+<meta property="article:tag" content="Software" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Taxation" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Bank of America Corporation" />
+<meta property="article:tag" content="Federal Bureau of Investigation" />
+<meta property="article:tag" content="Federal Trade Commission" />
+<meta property="article:tag" content="Gawker.com" />
+<meta property="article:tag" content="Herbalife Ltd" />
+<meta property="article:tag" content="Misys PLC" />
+<meta property="article:tag" content="Oracle Corporation" />
+<meta property="article:tag" content="Quip" />
+<meta property="article:tag" content="Salesforce.com Inc" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="SolarCity Inc" />
+<meta property="article:tag" content="Supreme Court (US)" />
+<meta property="article:tag" content="Technology Crossover Ventures" />
+<meta property="article:tag" content="Theranos Inc" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="Volkswagen AG" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Ackman William A,Buffett Warren E,Denton Nick,Holmes Elizabeth (1984- ),Kalanick Travis,May Theresa M,Musk Elon,Ramirez Edith,Banking and Financial Institutions,Boards of Directors,Corporations,Enterprise Computing,Initial Public Offerings,Insider Trading,Law and Legislation,Mergers Acquisitions and Divestitures,Private Equity,Relocation of Business,Software,Start-ups,Taxation,Venture Capital,Bank of America Corporation,Federal Bureau of Investigation,Federal Trade Commission,Gawker.com,Herbalife Ltd,Misys PLC,Oracle Corporation,Quip,Salesforce.com Inc,Securities and Exchange Commission,SolarCity Inc,Supreme Court (US),Technology Crossover Ventures,Theranos Inc,Uber Technologies Inc,Volkswagen AG,DealBook" />
+<meta name="news_keywords" content="Companies,Gawker.com,Quip,Software,Startup,Tax" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F08%2F02%2Fmorning-agenda-herbalife-vs-activist-just-maybe-hes-right%2F" title="Morning Agenda: Herbalife vs. Activist: Just Maybe He&#8217;s Right" />
+<meta name="description" content="Uber Waves the White Flag &#124; Big Banks Push Instant Payments" />
+<meta name="hdl" content="Morning Agenda: Herbalife vs. Activist: Just Maybe He&#039;s Right" />
+<meta property="og:title" content="Morning Agenda: Herbalife vs. Activist: Just Maybe He&#039;s Right" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/08/02/morning-agenda-herbalife-vs-activist-just-maybe-hes-right/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Uber Waves the White Flag &#124; Big Banks Push Instant Payments" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Herbalife vs. Activist: Just Maybe He&#039;s Right" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/08/02/morning-agenda-herbalife-vs-activist-just-maybe-hes-right/" />
+<meta name="twitter:description" content="Uber Waves the White Flag &#124; Big Banks Push Instant Payments" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Uber and Didi Chuxing Team Up in China' href='//news.blogs.nytimes.com/2016/08/01/morning-agenda-uber-and-didi-chuxing-team-up-in-china/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/08/02/what-were-reading-176/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/08/02/morning-agenda-herbalife-vs-activist-just-maybe-hes-right/' />
+<link rel='shortlink' href='//nyti.ms/2awudAH' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/08/02/morning-agenda-herbalife-vs-activist-just-maybe-hes-right/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Herbalife vs. Activist: Just Maybe He&#039;s Right - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5412 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Herbalife vs. Activist: Just Maybe He&#8217;s Right        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/08/02/morning-agenda-herbalife-vs-activist-just-maybe-hes-right/"
+	 data-title="Morning Agenda: Herbalife vs. Activist: Just Maybe He&#8217;s Right"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Uber Waves the White Flag | Big Banks Push Instant Payments&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/08/02/morning-agenda-herbalife-vs-activist-just-maybe-hes-right/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="August 2, 2016 6:46 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Herbalife vs. Activist: Just Maybe He&#8217;s Right</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-08-02T10:46:33+00:00" itemprop="datePublished">August 2, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">August 2, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5412 post type-post status-publish hentry category-dealbook tag-ackman-william-a tag-bank-of-america-corporation tag-banking-and-financial-institutions tag-boards-of-directors tag-buffett-warren-e tag-corporations tag-denton-nick tag-enterprise-computing tag-federal-bureau-of-investigation tag-federal-trade-commission tag-gawker-com tag-herbalife-ltd tag-holmes-elizabeth-1984 tag-initial-public-offerings tag-insider-trading tag-kalanick-travis tag-law-and-legislation tag-may-theresa-m tag-mergers-acquisitions-and-divestitures tag-misys-plc tag-musk-elon tag-oracle-corporation tag-private-equity tag-quip tag-ramirez-edith tag-relocation-of-business tag-salesforce-com-inc tag-securities-and-exchange-commission tag-software tag-solarcity-inc tag-start-ups tag-supreme-court-us tag-taxation tag-technology-crossover-ventures tag-theranos-inc tag-uber-technologies-inc tag-venture-capital tag-volkswagen-ag per-ackman-william-a per-buffett-warren-e per-denton-nick per-holmes-elizabeth-1984 per-kalanick-travis per-may-theresa-m per-musk-elon per-ramirez-edith des-banking-and-financial-institutions des-boards-of-directors des-corporations des-enterprise-computing des-initial-public-offerings des-insider-trading des-law-and-legislation des-mergers-acquisitions-and-divestitures des-private-equity des-relocation-of-business des-software des-start-ups des-taxation des-venture-capital org-bank-of-america-corporation org-federal-bureau-of-investigation org-federal-trade-commission org-gawker-com org-herbalife-ltd org-misys-plc org-oracle-corporation org-quip org-salesforce-com-inc org-securities-and-exchange-commission org-solarcity-inc org-supreme-court-us org-technology-crossover-ventures org-theranos-inc org-uber-technologies-inc org-volkswagen-ag news_keywords-companies news_keywords-gawker-com news_keywords-quip news_keywords-software news_keywords-startup news_keywords-tax" id="post-5412">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Herbalife vs. Activist: Just Maybe He&#8217;s Right</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-08-02T10:46:33+00:00" itemprop="datePublished">August 2, 2016 6:46 am</time>
+			<!-- date updated --><span class="visually-hidden updated">August 2, 2016 6:46 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/08/02/morning-agenda-herbalife-vs-activist-just-maybe-hes-right/" data-title="Morning Agenda: Herbalife vs. Activist: Just Maybe He&#8217;s Right" data-description="Uber Waves the White Flag | Big Banks Push Instant Payments">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>HERBALIFE VS. ACTIVIST: JUST MAYBE HE&#8217;S RIGHT</strong> Bill Ackman, the activist investor, has been painted as a loser in his quest to shut down Herbalife, the nutritional supplement company, but a Federal Trade Commission&#8217;s complaint has vindicated his claims, <a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUkX6jrpfwo+Eh/ZqTf6HH1ecAIGTzNe4tNkUEyl+Fg+dKeWbfDJgVonuJyDL/YN6jBwah9S19HfonyFm/dpQeota+tFHQFLI0V5k5HHcldFkkBOLVOlY2V0dUVaiFKAOTn/k5bLSFv0uih+6YpVRsJccSiFpDIFxHpSfR0XrcYh4w==&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">Andrew Ross Sorkin</a> writes.</p>
+<p class="story-body-text" itemprop="articleBody">Herbalife was responsible for &#8220;deceiving hundreds of thousands of hopeful people,&#8221; said Edith Ramirez, who oversees the F.T.C. &#8220;The small minority of Herbalife distributors who did make a lot of money were paid by Herbalife not for selling the company&#8217;s products, but for buying the products themselves and then successfully recruiting large networks of others to do the same.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">There have been questions about Mr. Ackman&#8217;s tactics, lobbying regulators and members of Congress, as well as moral questions about &#8220;shorting,&#8221; or betting against a company&#8217;s stock, but this does seem to be an example where an investor acted as a check on the market.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>UBER WAVES THE WHITE FLAG IN CHINA</strong> Uber has become yet another company that has failed to capitalize on its foothold in China, but it avoided making many of the same mistakes as its American tech forebears along the way. It created local teams that were able to respond quickly, and the co-founder and chief executive, Travis Kalanick, put in time meeting with Chinese officials. But Didi made it clear it was in the fight for the long run and <a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUkX6jrpfwo+Eh/ZqTf6HH1eDGduyRgML0ozH23GNgBpCmhubnJevUBm4JKQj3Icb8qOBu5AOB7iFEIFMcRkOM4GTPjqKGfqkQpX55LuMjOx9OoZBPz188UKU9SV0G7D2LTLFw3r5Z+ZCg==&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">Uber&#8217;s investors</a> wanted an end to the battle.</p>
+<p class="story-body-text" itemprop="articleBody">They may be reassured, but customers and drivers in China could be hurt as commissions drop. Uber may well want to focus on building national monopolies elsewhere now, but its stake in Didi now makes it an indirect part owner of its competitor Lyft, which has also been a useful ally in battles with regulators and taxi drivers. This all seems to point to a less directly competitive future, <a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KWdRQP9hbGa63VB0atKD7D51vazWrOTUFNi5yTGFMbwIvemEQ/OLHac9PHjImjUPtISxaQ2Fx8tHR190DgWlRt6mG3+LeAgPX0JdnjdXCdThV2TzBKW12HGQfwmDRL1ZHVM2eKdg5Iwtw61h3EbujqYW8B1yYb1I7nNpDcAfQx39mIATEYVfQ6A&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">Justin Fox</a> writes on Bloomberg View.</p>
+<p class="story-body-text" itemprop="articleBody">Some view having two poles of leadership as beneficial with the giants of China and the United States competing for customers in emerging markets like India, the Middle East and Africa. But others foresee a series of deals in which those titans carve out their<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUk0vPnuj1Q7VY3/erXLQHRu00Dtb7ZSCRcqKNtp7zgc+v5SSSdLlQFsTPjqKGfqkQpX55LuMjOx9OoZBPz188UKU9SV0G7D2LTLFw3r5Z+ZCg==&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293"> spheres of influence.</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>ON THE AGENDA</strong> The Securities and Exchange Commission Equity Market Structure Advisory Committee meets at 9:30 a.m. Data on income and spending for June will be published at 8:30 a.m. Pfizer and Procter &amp; Gamble report their second-quarter earnings.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>BIG BANKS PUSH INSTANT PAYMENTS</strong> The snail&#8217;s pace at which money is processed has led many Americans to use mobile payments services like Paypal&#8217;s Venmo or Square Cash. Offerings like Apple Pay and pressure from the Federal Reserve&#8217;s &#8220;faster payments committee&#8221; have also heightened competition to control the payment network of the future. And banks are catching up &#8211; allowing their customers to send money to accounts in seconds &#8211; in the hope of vying with these companies, as well as Visa and MasterCard, in the market for instant payments.</p>
+<p class="story-body-text" itemprop="articleBody">If they do not respond, <a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUkX6jrpfwo+Eh/ZqTf6HH1eVVyi0S/+WwoGWkn/qPB1SjA9Slp/aW7Irf5Uk7gwTRd6ASPstYhdTIYJUlCZjXP8LREzHcDJ7fOvKOj31aeLWoV/IvawS68zTTHbnzR3ohoSBL+k2EtEs/MSDJS9qGw3&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">banks could be relegated</a> to performing less profitable back-office functions for newer payment companies and they would lose their first point of contact with a consumer, which allows them to sell other products, like loans.</p>
+<p class="story-body-text" itemprop="articleBody"><em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Why Corporate America Is Leaving the Suburbs for the City</strong> Companies including McDonald&#8217;s and General Electric are moving headquarters to cities like Boston and Chicago, partly as a lure to younger employees.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUkX6jrpfwo+Et9icYmY6J0IqVGm9RxtCGnGuqp5YLwnY5GHKcJYugYbi5/onEXTUhmLSel38GHibUXAzb7ZUuUzHh/vyu2CjAJj6U/zjTQ//vvaRB8r9w7BDrWHcRu6OphbwHXJhvUjuc2kNwB9DHf2YgBMRhV9DoA=&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Warren Buffett Is Latest Billionaire to Excoriate Donald Trump</strong> Mr. Buffett, in Omaha with Hillary Clinton, unleashed a withering attack on Mr. Trump for refusing to release his tax returns and for misleading voters about his success as a businessman.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUnGU/3bNb5Zd4Uc5TVV+KVye0ahT6fGO/hh4S/imGFUld/WvBJVOxeULZIgUBRDZh6rtA98TH7TJkZXKmiQ5jYGjlyT4gTC11UYLlBu0wjvaA==&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//p.nytimes.com/email/re?location=0dXGRy9agdjg/3PGxMox15cO+JEZkG243empz0btCl17jq+Alf96O966P8pOC5gI8T8kcubQX5ytNdIAufpHOfWG+zCbjjpmYhxIkzA0eELk9cS8QVm/XJmMlUmwIBIjpySDt8K4vCI=&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">MERGERS &amp; ACQUISITIONS Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>In Tesla and SolarCity Deal, a Glimpse of Musk&#8217;s Clean-Energy Aspirations</strong> Boards of both companies approved a $2.6 billion merger, putting their faith in Elon Musk&#8217;s idea of a clean-energy powerhouse.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUkX6jrpfwo+Eh/ZqTf6HH1eRe+SzSmqHIZ60zPG8Wke2vgBgi7aOuXyA67njqQ7jlo+EihCSpMYIIjvK6zoogXf/5OWy0hb9LoofumKVUbCXHEohaQyBcR6Un0dF63GIeM=&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â» </a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Tesla-SolarCity Deal Could Distract the Carmaker</strong> The $2.6 billion purchase of SolarCity, a solar-panel installer, comes at a crucial time for a company with lofty goals and a habit of missing them.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUkX6jrpfwo+Eh/ZqTf6HH1eRe+SzSmqHIYPeycaYk3rrCYgnyFhwoZDlbJpI8CVkka7blhLXGc8W8VcnekGUjzEDvVT22uWYtb72kQfK/cOwQ61h3EbujqYW8B1yYb1I7nNpDcAfQx39mIATEYVfQ6A&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Salesforce to Buy Maker of Productivity Software</strong> Salesforce will buy Quip, which makes products to help collaboration on mobile devices, for $582 million in stock.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVlB14i4cAMFU+d0NSu9j6ZvN2nqbXlH/XtzW4sfp0sYMP2r3OcXOV36NQ0Tc9r7gh05hcpICjtKqy47ZqIqD9XlXi9jQ7OJHu62aia1c1eGKTrP4wZODf1fS08vQNP6cAdr+ZRVYOGyuh+ra90Kgd1/5OWy0hb9LoofumKVUbCXHEohaQyBcR6Un0dF63GIeM=&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Oracle, Having Bet Billions on Its Future, Sets Sights on Data Analysis</strong> The biggest business-software company thinks that information gathering could become a valuable adjunct to many of its database and applications efforts, and it has more data than anybody.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUk0vPnuj1Q7Vax8outSJxeIcpFzuUeUYnysqPe+etJcN0906s6uTW4QtrChBHf0iWctOLiSACG//o68tWrnLxVOSZC7+42RCmAEsPO+TTpXwYL9NJnfKX5GCy/ZtNttaoJCfMmud23tEDt37xkb2rTX95QHOJ8WfiRTTSaKQK/WRg==&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><em>For the latest updates, go to <a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACKQh1JEPAsZdUn1DP2ei/kI/cHAl4sn5paD1Z4Po4evqkRgUdXGpIwF2Id9gmnx6jg==&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYTimes.com/DealBook</a></em><br />
+<a href="//p.nytimes.com/email/re?location=vzewYO/FHLTwPZVO2nH9zd3pqc9G7QpdPk3reFpveyN4LX2H7iMYPKsKmghXRLWIDCYxX7RKlARbLMZWqfEAv7Tv+fRCRHGGi9KqjM8lynYkHBFWGHf32vWG+zCbjjpmYhxIkzA0eELk9cS8QVm/XJmMlUmwIBIjpySDt8K4vCI=&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">PRIVATE EQUITY Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>This Is Your Life, Brought to You by Private Equity</strong> Since the financial crisis, the private equity industry has become hugely influential. Here&#8217;s how it plays out in your daily life.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACDuqzkg7rwCIpWawmrQ9HHDghrZYFEOMYpt5a3q9l9dbzRta7DwfAXrSUhuQg2vq6Asv2bTbbWqCQnzJrndt7RA7d+8ZG9q01/eUBzifFn4kU00mikCv1kY=&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">READ MORE IN THIS SERIES Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//p.nytimes.com/email/re?location=vzewYO/FHLTwPZVO2nH9zd3pqc9G7QpdPk3reFpveyN4LX2H7iMYPKsKmghXRLWIDCYxX7RKlAQYQ+K1jm4nMcV36L2u8RwA1alqVwK4YCJpp+qGCHIHw/BJQ7hjiSldiO8rrOiiBd//k5bLSFv0uih+6YpVRsJccSiFpDIFxHpSfR0XrcYh4w==&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">I.P.O./OFFERINGS Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Vista Said to Hire Advisers for Financial Software I.P.O.</strong> The private equity firm has hired Goldman Sachs and Bank of America for a potential initial public offering of Misys, a provider of financial software, Bloomberg reports, citing people familiar with the matter.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KWdRQP9hbGa63VB0atKD7D5vrXjGrBWSfFi5yTGFMbwIvemEQ/OLHacBz4oA1DySB9iYZUD2PxW99FeTMwN7tcq8puA7yIrObyDjLONYtdYnsmCXK3/OwtwCoFSMH3bwUom8PUIr/itN/WG+zCbjjpmYhxIkzA0eELk9cS8QVm/XJmMlUmwIBIjpySDt8K4vCI=&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//p.nytimes.com/email/re?location=vzewYO/FHLTwPZVO2nH9zd3pqc9G7QpdPk3reFpveyN4LX2H7iMYPKsKmghXRLWIDCYxX7RKlAT+RcTOWY7CbI6IQSgAxz6+gyGcJUduTNqRGBR1cakjAfvaRB8r9w7BDrWHcRu6OphbwHXJhvUjuc2kNwB9DHf2YgBMRhV9DoA=&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">VENTURE CAPITAL Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>New Fund From Technology Crossover Ventures Draws $2.5 Billion</strong> Though some worry about a cooling tech boom, the venture capital money keeps pouring in.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUk0vPnuj1Q7VU71n25brU6GV9hGzJkoUtBaKg303Br89aGYBul5Fxnl7t5r/smIykC6IGvVuYreBpnVs+HaWxZ0s2Gjvf6mKVtJmVCWU4lsBwsv2bTbbWqCQnzJrndt7RA7d+8ZG9q01/eUBzifFn4kU00mikCv1kY=&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a><br />
+<strong>The Silicon Valley of Space Start-Ups? It Could be Seattle.</strong> Commercial aerospace start-ups are attracting access to investors with deep pockets and an abundance of software talent.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUkzTiba1XeSBH1YQ9DoZ5ySqjlrJBN4TAZmzC0CtzFDBXGPaIK9Vr326sfTR+vdz9z+UkknS5UBbEz46ihn6pEKV+eS7jIzsfTqGQT89fPFClPUldBuw9i0yxcN6+WfmQo=&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//p.nytimes.com/email/re?location=vzewYO/FHLTwPZVO2nH9zd3pqc9G7QpdPk3reFpveyN4LX2H7iMYPKsKmghXRLWIDCYxX7RKlAQzGzkUp5o6MQTPBh4sEGhESGZHJOZCzESnF+GIlz7Z/9olTeqaELbs4Z2UzLmdR4Oz2+JVfMnyKS2SIFAUQ2Yeq7QPfEx+0yZGVypokOY2Bo5ck+IEwtdVGC5QbtMI72g=&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">LEGAL/REGULATORY Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>South Korea Bars Volkswagen From Selling 80 Models in Country</strong> Penalties include a $16 million fine for the German automaker, which prosecutors said falsified emissions and noise-level documentation.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUnezDmuqSZfyENg/sxDfBOA8Ncp2zHGvI1risOAo5Rk/n/43EfGx+aU5Qx1FD+mmQCea+1wccOeaq0RplPzH3rXryjo99Wni1qFfyL2sEuvM00x2580d6IaEgS/pNhLRLPzEgyUvahsNw==&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Supreme Court Could Redefine Insider Trading Law</strong> The court will decide what benefit must be provided to prove a quid pro quo arrangement, and it could take insider trading law in a new direction.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUkX6jrpfwo+Eh/ZqTf6HH1ewjFIrcjBSVC3RN2tXLc4984w/SqJmSxvywQSf3pEsbZLLdvfjgbY7I+trlEmQwZ4iZqsxUOaI+v1hvswm446ZmIcSJMwNHhC5PXEvEFZv1yZjJVJsCASI6ckg7fCuLwi&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>A United Effort to Overhaul Corporate Governance</strong> A recently released list of common sense boardroom principles is intended to stir conversation in the business community and stimulate economic growth.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUkX6jrpfwo+Eh/ZqTf6HH1eRUAe3/1a5hBCO1xuKCJQKEy4Z4I2NubWdiyqA0qYK2JfXnp1VVqWQ/60V+DsOlHrhGJHooElKS372kQfK/cOwQ61h3EbujqYW8B1yYb1I7nNpDcAfQx39mIATEYVfQ6A&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Theranos, Embattled Laboratory, Shifts to Medical Machines</strong> Elizabeth Holmes, chief executive, introduced technology called the miniLab, suggesting a new business model for the embattled blood-testing company.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUkX6jrpfwo+Ek9c0eHxhbBGubYK990V1k4uGlFXlANsRMgULoG+RrXt0tw3BeNM85+w9yKmwZF5RQFndlhQDA8G1V5ZfUk6YcD1hvswm446ZmIcSJMwNHhC5PXEvEFZv1yZjJVJsCASI6ckg7fCuLwi&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Nick Denton Files for Bankruptcy, Just Weeks After Gawker Did</strong> The long-anticipated move protects the media company&#8217;s founder from the $115 million legal judgment awarded to Hulk Hogan, who won an invasion-of-privacy lawsuit against Gawker.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUkX6jrpfwo+EpqtlFrC29B4A8J4gKx3IwG08yCIaTB8DS/Gugjo5SXFoZyFLtI9xTEtkiBQFENmHqu0D3xMftMmRlcqaJDmNgaOXJPiBMLXVRguUG7TCO9o&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>F.B.I. Employee Pleads Guilty to Acting as an Agent of China</strong> The employee, Kun Shan Chun, who worked in the bureau&#8217;s New York office, had been accused of lying about his relationship with a Chinese technology company and various Chinese associates.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUnhKjn7/eo6/xpUpxmkCM0qJWg0fbei0JGN06Oib4J1FKLKqxBSdGt8gKul8130ENhka7Rry11ChdqWcjHFHeMWV8O0cZg0XE372kQfK/cOwQ61h3EbujqYW8B1yYb1I7nNpDcAfQx39mIATEYVfQ6A&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>British Decision on Nuclear Plant Angers China and France</strong> Prime Minister Theresa May&#8217;s decision to delay the project is seen as a potentially major break from her predecessor&#8217;s policy toward Beijing.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUks4mcTb1RVf0bFovNpYh4Pf/YIKuou6etdXjc1mlu7qxezNBfG79qa4JPFqjSXf606O1j8b4MuoBCrUreCMt53HM4I/hop02b+UkknS5UBbEz46ihn6pEKV+eS7jIzsfTqGQT89fPFClPUldBuw9i0yxcN6+WfmQo=&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Restaurant Owner Spurns Those Who Are O.K. With AR-15s</strong> A Maine restaurateur joined other establishments in taking a stand against gun violence, but she went further, spurning people over their beliefs as well as actions.<br />
+<a href="//p.nytimes.com/email/re?location=4z5Q7LhI+KVBjmEgFdYACPLKh239P3pgf8jIzNgNYUmSOT5GOHdm/XnPZ9xVwu5zsN6xhzUeTf4hT8DlNIRlSzR0sw78hd9PV5Bn5/jPucTDf2gR8gJIaVHVcHdcec5mHa/mUVWDhsr+UkknS5UBbEz46ihn6pEKV+eS7jIzsfTqGQT89fPFClPUldBuw9i0yxcN6+WfmQo=&amp;campaign_id=97&amp;instance_id=79976&amp;segment_id=93081&amp;user_id=a17d64ad249adfd588c6df81d8c6c5b4&amp;regi_id=72489293">NYT Â»</a></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/08/02/morning-agenda-herbalife-vs-activist-just-maybe-hes-right/"
+					data-title="Morning Agenda: Herbalife vs. Activist: Just Maybe He&#8217;s Right"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Uber Waves the White Flag | Big Banks Push Instant Payments&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/08/02/morning-agenda-herbalife-vs-activist-just-maybe-hes-right/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":70,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

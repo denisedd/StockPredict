@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004423862"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1463740453" />
+<meta name="PUD" content="20160520" />
+<meta name="pdate" content="20160520" />
+<meta name="ptime" content="20160520063413" />
+<meta name="utime" content="20160520103413" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-05-20T10:34:13-04:00" />
+<meta name="DISPLAYDATE" content="May 20, 2016" />
+<meta name="dat" content="May 20, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Bharara, Preet;Buffett, Warren E;Chiasson, Anthony;Cohen, Steven A;Kashkari, Neel T;Mickelson, Phil;Newman, Todd (1965- );Ryan, Paul D Jr;Walters, William T;Warren, Elizabeth;Warren, Kelcy (1955- )">
+<meta name="des" content="Appointments and Executive Changes;Banking and Financial Institutions;Hedge Funds;Insider Trading;Law and Legislation;Mergers, Acquisitions and Divestitures;Regulation and Deregulation of Industry;Relocation of Business;Securities and Commodities Violations;Start-ups;Suits and Litigation (Civil);Venture Capital">
+<meta name="org" content="BASF SE;Cravath Swaine &amp; Moore;Energy Transfer Equity LP;Federal Reserve Bank of Minneapolis;FMC Technologies Inc;Goldman Sachs Group Inc;Google Inc;HSBC Holdings PLC.;Latham &amp; Watkins LLP;Lyft Inc;Monsanto Company;Morgan Stanley;National Assn of Insurance Commissioners;Och-Ziff Capital Management Group LLC;Securities and Exchange Commission;Technip SA;Uber Technologies Inc;UBS AG;Williams Companies Inc;Yahoo! Inc">
+<meta name="geo" content="Puerto Rico">
+<meta name="ticker" content="BASF SE|BASFY|Other OTC;Energy Transfer Equity LP|ETE|NYSE;FMC Technologies Inc|FTI|NYSE;Goldman Sachs Group Inc|GS|NYSE;Monsanto Company|MON|NYSE;Morgan Stanley|MS|NYSE;Williams Companies Inc|WMB|NYSE;Yahoo! Inc|YHOO|NASDAQ" />
+<meta property="article:tag" content="Bharara Preet" />
+<meta property="article:tag" content="Buffett Warren E" />
+<meta property="article:tag" content="Chiasson Anthony" />
+<meta property="article:tag" content="Cohen Steven A" />
+<meta property="article:tag" content="Kashkari Neel T" />
+<meta property="article:tag" content="Mickelson Phil" />
+<meta property="article:tag" content="Newman Todd (1965- )" />
+<meta property="article:tag" content="Ryan Paul D Jr" />
+<meta property="article:tag" content="Walters William T" />
+<meta property="article:tag" content="Warren Elizabeth" />
+<meta property="article:tag" content="Warren Kelcy (1955- )" />
+<meta property="article:tag" content="Appointments and Executive Changes" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Insider Trading" />
+<meta property="article:tag" content="Law and Legislation" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Relocation of Business" />
+<meta property="article:tag" content="Securities and Commodities Violations" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="BASF SE" />
+<meta property="article:tag" content="Cravath Swaine &amp; Moore" />
+<meta property="article:tag" content="Energy Transfer Equity LP" />
+<meta property="article:tag" content="Federal Reserve Bank of Minneapolis" />
+<meta property="article:tag" content="FMC Technologies Inc" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Google Inc" />
+<meta property="article:tag" content="HSBC Holdings PLC." />
+<meta property="article:tag" content="Latham &amp; Watkins LLP" />
+<meta property="article:tag" content="Lyft Inc" />
+<meta property="article:tag" content="Monsanto Company" />
+<meta property="article:tag" content="Morgan Stanley" />
+<meta property="article:tag" content="National Assn of Insurance Commissioners" />
+<meta property="article:tag" content="Och-Ziff Capital Management Group LLC" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Technip SA" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="UBS AG" />
+<meta property="article:tag" content="Williams Companies Inc" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Bharara Preet,Buffett Warren E,Chiasson Anthony,Cohen Steven A,Kashkari Neel T,Mickelson Phil,Newman Todd (1965- ),Ryan Paul D Jr,Walters William T,Warren Elizabeth,Warren Kelcy (1955- ),Appointments and Executive Changes,Banking and Financial Institutions,Hedge Funds,Insider Trading,Law and Legislation,Mergers Acquisitions and Divestitures,Regulation and Deregulation of Industry,Relocation of Business,Securities and Commodities Violations,Start-ups,Suits and Litigation (Civil),Venture Capital,BASF SE,Cravath Swaine &amp; Moore,Energy Transfer Equity LP,Federal Reserve Bank of Minneapolis,FMC Technologies Inc,Goldman Sachs Group Inc,Google Inc,HSBC Holdings PLC.,Latham &amp; Watkins LLP,Lyft Inc,Monsanto Company,Morgan Stanley,National Assn of Insurance Commissioners,Och-Ziff Capital Management Group LLC,Securities and Exchange Commission,Technip SA,Uber Technologies Inc,UBS AG,Williams Companies Inc,Yahoo! Inc,Puerto Rico,DealBook" />
+<meta name="news_keywords" content="Startup" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F05%2F20%2Fmorning-agenda-push-continues-on-insider-trading-cases-despite-limits-on-prosecutors%2F" title="Morning Agenda: Push Continues on Insider Trading Cases Despite Limits on Prosecutors" />
+<meta name="description" content="Puerto Rico&#8217;s Debt Crisis Addressed in Bipartisan Bill &#124; Energy Transfer Delays Could Scuttle Merger with Williams" />
+<meta name="hdl" content="Morning Agenda: Push Continues on Insider Trading Cases Despite Limits on Prosecutors" />
+<meta property="og:title" content="Morning Agenda: Push Continues on Insider Trading Cases Despite Limits on Prosecutors" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/05/20/morning-agenda-push-continues-on-insider-trading-cases-despite-limits-on-prosecutors/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Puerto Rico&#8217;s Debt Crisis Addressed in Bipartisan Bill &#124; Energy Transfer Delays Could Scuttle Merger with Williams" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Push Continues on Insider Trading Cases Despite Limits on Prosecutors" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/05/20/morning-agenda-push-continues-on-insider-trading-cases-despite-limits-on-prosecutors/" />
+<meta name="twitter:description" content="Puerto Rico&#8217;s Debt Crisis Addressed in Bipartisan Bill &#124; Energy Transfer Delays Could Scuttle Merger with Williams" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Bayer Offers to Buy Monsanto' href='//news.blogs.nytimes.com/2016/05/19/morning-agenda-bayer-offers-to-buy-monsanto/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/05/20/what-were-reading-155/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/05/20/morning-agenda-push-continues-on-insider-trading-cases-despite-limits-on-prosecutors/' />
+<link rel='shortlink' href='//nyti.ms/1Tj9GUM' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/05/20/morning-agenda-push-continues-on-insider-trading-cases-despite-limits-on-prosecutors/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Push Continues on Insider Trading Cases Despite Limits on Prosecutors - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4852 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Push Continues on Insider Trading Cases Despite Limits on Prosecutors        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/05/20/morning-agenda-push-continues-on-insider-trading-cases-despite-limits-on-prosecutors/"
+	 data-title="Morning Agenda: Push Continues on Insider Trading Cases Despite Limits on Prosecutors"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Puerto Rico&#039;s Debt Crisis Addressed in Bipartisan Bill | Energy Transfer Delays Could Scuttle Merger with Williams&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/20/morning-agenda-push-continues-on-insider-trading-cases-despite-limits-on-prosecutors/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="May 20, 2016 6:34 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Push Continues on Insider Trading Cases Despite Limits on Prosecutors</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-05-20T10:34:13+00:00" itemprop="datePublished">May 20, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">May 20, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4852 post type-post status-publish hentry category-dealbook tag-appointments-and-executive-changes tag-banking-and-financial-institutions tag-basf-se tag-bharara-preet tag-buffett-warren-e tag-chiasson-anthony tag-cohen-steven-a tag-cravath-swaine-moore tag-energy-transfer-equity-lp tag-federal-reserve-bank-of-minneapolis tag-fmc-technologies-inc tag-goldman-sachs-group-inc tag-google-inc tag-hedge-funds tag-hsbc-holdings-plc tag-insider-trading tag-kashkari-neel-t tag-latham-watkins-llp tag-law-and-legislation tag-lyft-inc tag-mergers-acquisitions-and-divestitures tag-mickelson-phil tag-monsanto-company tag-morgan-stanley tag-national-assn-of-insurance-commissioners tag-newman-todd-1965 tag-och-ziff-capital-management-group-llc tag-puerto-rico tag-regulation-and-deregulation-of-industry tag-relocation-of-business tag-ryan-paul-d-jr tag-securities-and-commodities-violations tag-securities-and-exchange-commission tag-start-ups tag-suits-and-litigation-civil tag-technip-sa tag-uber-technologies-inc tag-ubs-ag tag-venture-capital tag-walters-william-t tag-warren-elizabeth tag-warren-kelcy-1955 tag-williams-companies-inc tag-yahoo-inc per-bharara-preet per-buffett-warren-e per-chiasson-anthony per-cohen-steven-a per-kashkari-neel-t per-mickelson-phil per-newman-todd-1965 per-ryan-paul-d-jr per-walters-william-t per-warren-elizabeth per-warren-kelcy-1955 des-appointments-and-executive-changes des-banking-and-financial-institutions des-hedge-funds des-insider-trading des-law-and-legislation des-mergers-acquisitions-and-divestitures des-regulation-and-deregulation-of-industry des-relocation-of-business des-securities-and-commodities-violations des-start-ups des-suits-and-litigation-civil des-venture-capital org-basf-se org-cravath-swaine-moore org-energy-transfer-equity-lp org-federal-reserve-bank-of-minneapolis org-fmc-technologies-inc org-goldman-sachs-group-inc org-google-inc org-hsbc-holdings-plc org-latham-watkins-llp org-lyft-inc org-monsanto-company org-morgan-stanley org-national-assn-of-insurance-commissioners org-och-ziff-capital-management-group-llc org-securities-and-exchange-commission org-technip-sa org-uber-technologies-inc org-ubs-ag org-williams-companies-inc org-yahoo-inc geo-puerto-rico news_keywords-startup" id="post-4852">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Push Continues on Insider Trading Cases Despite Limits on Prosecutors</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-05-20T10:34:13+00:00" itemprop="datePublished">May 20, 2016 6:34 am</time>
+			<!-- date updated --><span class="visually-hidden updated">May 20, 2016 6:34 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/05/20/morning-agenda-push-continues-on-insider-trading-cases-despite-limits-on-prosecutors/" data-title="Morning Agenda: Push Continues on Insider Trading Cases Despite Limits on Prosecutors" data-description="Puerto Rico&#039;s Debt Crisis Addressed in Bipartisan Bill | Energy Transfer Delays Could Scuttle Merger with Williams">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>PUSH CONTINUES ON INSIDER TRADING CASES DESPITE LIMITS ON PROSECUTORS</strong> Federal prosecutors want to send a message that insider trading cases can still be made, <a href="//www.nytimes.com/2016/05/20/business/dealbook/insider-trading-billy-walters-sports-gambler.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160520">Matthew Goldstein, Ben Protess and Alexandra Stevenson report in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">When the United States Court of Appeals for the Second Circuit overturned the convictions of two hedge fund managers, Todd Newman and Anthony Chiasson, it imposed the greatest limits on prosecutors in a generation. <strong>And the government predicted a chilling effect on future insider trading investigations.</strong></p>
+<p class="story-body-text" itemprop="articleBody">But the office of Preet Bharara, the United States attorney in Manhattan, and the Securities and Exchange Commission have pushed on, <strong>charging William T. Walters, a high-rolling Las Vegas kingmaker, and Thomas C. Davis, a former investment banker, with insider trading.</strong></p>
+<p class="story-body-text" itemprop="articleBody">&#8220;Brazen insider trading continues to be a blot in our securities markets, and <strong>so the integrity of our markets continues to be a priority for this office</strong>,&#8221; Mr. Bharara said at a news conference to announce the charges on Thursday. But he did add that &#8220;there is conduct that we think is nefarious and undermines faith in the market and undermines the strength of the market that will not be able to be prosecuted because of the Newman decision.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Walters, often considered the most successful sports bettor in the United States, was owed money by Phil Mickelson, the golfer, and Mr. Davis, a former chairman of Dean Foods. Prosecutors say that the debts were at the center of a long-running insider trading scheme. They accused Mr. Walters of using stock tips from Mr. Davis to help him generate about $40 million in profits and avoid losses. Mr. Walters had lent Mr. Davis, whose finances were in trouble, money in return for feeding Mr. Walters boardroom secrets as far back as 2008, the authorities said. <strong>Mr. Davis has agreed to plead guilty and is cooperating against Mr. Walters.</strong></p>
+<p class="story-body-text" itemprop="articleBody">Mr. Mickelson was not accused of wrongdoing, but the S.E.C. listed him in a civil complaint as a relief defendant, arguing that he was &#8220;unjustly enriched&#8221; and must disgorge &#8220;ill-gotten gains&#8221; he made from trades Mr. Walters recommended. Mr. Mickelson owed money to Mr. Walters at the time. He has agreed to repay nearly $1 million and his lawyer said he took &#8220;full responsibility for the decisions and associations that led him to becoming part of this investigation.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Mr. Walters&#8217;s lawyer said his client had done nothing wrong.</strong> &#8220;Bill Walters is a true American success story, whose extraordinary accomplishments as a lawful sports gambler have been widely recognized and lauded,&#8221; Barry Berke, the lawyer, said in a statement. &#8220;Mr. Walters and his counsel look forward to his day in court.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">The case against Mr. Walters comes as prosecutors reassess their ability to bring insider trading cases. The appeals court ruling required &#8220;proof of a meaningfully close personal relationship that generates an exchange that is objective, consequential and represents at least a potential gain of a pecuniary or similarly valuable nature.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">The announcement of charges indicated that <strong>&#8220;the Southern District is still in the insider trading prosecution business,&#8221;</strong> said Daniel Richman, a former federal prosecutor, who is now a professor at Columbia Law School. He referred to the federal prosecutors in the Southern District of New York, based in Manhattan.</p>
+<p class="story-body-text" itemprop="articleBody">Read more about the details of <a href="//www.nytimes.com/2016/05/20/business/dealbook/insider-trading-billy-walters-sports-gambler.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160520">the case here</a>.<br />
+<br />
+<strong>PUERTO RICO&#8217;S DEBT CRISIS ADDRESSED IN BIPARTISAN BILL</strong> Republicans in the House of Representatives have made a plan to lead Puerto Rico out of its financial quagmire, <a href="//www.nytimes.com/2016/05/20/business/puerto-rico-debt-bankruptcy.html?ref=business">Mary Williams Walsh reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>The bill would put Puerto Rico&#8217;s fiscal affairs under direct federal control</strong> and establish a legal framework for reducing its $72 billion of debt. It would work like a Chapter 9 municipal bankruptcy in the United States, but with differences intended to reassure those creditors who believe Chapter 9 works against them.</p>
+<p class="story-body-text" itemprop="articleBody">The bill was drafted by the House Committee on Natural Resources under direction from Speaker Paul D. Ryan, who told his fellow Republicans to work with Democrats. There are provisions that different stakeholders have said they did not want but now seem willing to tolerate.</p>
+<p class="story-body-text" itemprop="articleBody">Josh Earnest, the White House press secretary, said the bill<strong> showed signs of &#8220;mean-spirited policy-making&#8221; by Republicans.</strong> It called for young minimum-wage earners on the island to take a pay cut. But Mr. Earnest added that the White House could accept that to get a bill passed.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>Puerto Rico&#8217;s financial affairs would come under a federal control board</strong>, in spite of elected officials warning that heavy-handed oversight from Washington would have unacceptable colonial connotations. The board&#8217;s seven members would be selected by President Obama from candidates proposed by Republicans and Democrats in Congress. At least one of them would be a Puerto Rico resident.</p>
+<p class="story-body-text" itemprop="articleBody">The board would have the power to subpoena records and hold hearings, something of potential concern to Puerto Rican officials past and present as well as the financial community. Conceivably,<strong> the investigations could show that some of Puerto Rico&#8217;s debt was created unlawfully</strong>, and the island could seek to have it voided, leaving bondholders empty-handed.</p>
+<p class="story-body-text" itemprop="articleBody">The board would also guide Puerto Rico through a court-supervised debt reduction.<strong> It would not be able to declare &#8220;mission accomplished&#8221; and leave until Puerto Rico regained normal access to the capital markets.</strong><br />
+<br />
+<strong>ON THE AGENDA</strong> <strong>Mary Jo White</strong>, the chairwoman of the United States Securities and Exchange Commission, will address the Investment Company Institute&#8217;s General Membership Meeting at 7:30 a.m. <strong>Goldman Sachs</strong> will hold its annual meeting for shareholders at 8:30 a.m. The <strong>Yum Brands</strong> shareholder meeting starts at 9 a.m. The <strong>National Association of Insurance Commissioners</strong> forum starts at 9 a.m., when the Federal Reserve Board of Governors member <strong>Daniel Tarullo</strong> will give the keynote speech.<br />
+<br />
+<strong>ENERGY TRANSFER DELAYS COULD SCUTTLE MERGER WITH WILLIAMS</strong> Energy Transfer Equity has no options except to run down the clock, <a href="//www.nytimes.com/2016/05/20/business/dealbook/delays-by-energy-transfer-could-scuttle-merger-with-williams-suit-says.html?ref=dealbook&amp;nl=dealbook&amp;emc=edit_dlbkam_20160520">Leslie Picker reports in DealBook</a>. If the pipeline company can delay filing the documents needed to complete its merger with the Williams Companies, it might not have to close the deal and pay a chunk of cash to shareholders. <strong>A new lawsuit in the six-month-old dispute has highlighted how prestigious Wall Street law firms are battling over the deal.</strong></p>
+<p class="story-body-text" itemprop="articleBody">This lawsuit, the third by the Williams Companies, was filed just six weeks before the June 28 deadline after which Energy Transfer, based in Dallas, can walk away. It asked the court to stop Energy Transfer from trying to break up the deal.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>It focused on the role of the lawyers.</strong> Cravath, Swaine &amp; Moore served as counsel for Williams and Wachtell, Lipton, Rosen &amp; Katz were Energy Transfer&#8217;s primary lawyers.</p>
+<p class="story-body-text" itemprop="articleBody">Williams&#8217;s lawyers lodged complaints about delay tactics, <strong>saying that Energy Transfer&#8217;s lawyers remained &#8220;conspicuously quiet&#8221; and &#8220;noticeably silent&#8221; over issues that have threatened to scuttle the deal.</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>The lawsuit also heaped blame on Latham &amp; Watkins, another firm representing Energy Transfer, for failing to come up with a tax opinion needed for the deal to close.</strong></p>
+<p class="story-body-text" itemprop="articleBody">Kelcy Warren, the chief executive of Energy Transfer, responded that by filing three lawsuits in six weeks, Williams had &#8220;contributed materially to the very delay in completing the Securities and Exchange Commission&#8217;s review.&#8221;</p>
+<p class="story-body-text" itemprop="articleBody">The contentiousness between typically buttoned-up lawyers reflects<strong> the hostility that has festered between their clients practically from the beginning.</strong><br />
+Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>MERGERS &amp; ACQUISITIONS Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Suitors Expected to Bid $2 Billion to $3 Billion for Yahoo</strong> Verizon and others are expected to bid $2 billion to $3 billion in the auction for Yahoo&#8217;s core business, less than it was expected to fetch, The Wall Street Journal reports, citing people familiar with the matter.<br />
+<a href="//www.wsj.com/articles/yahoo-suitors-expected-to-bid-2-billion-to-3-billion-below-past-indications-1463713093?nl=dealbook&amp;emc=edit_dlbkam_20160520">THE WALL STREET JOURNAL</a><br />
+<br />
+<strong>The Oil-Services Companies FMC Technologies and Technip Plan Merger</strong> The all-stock deal, worth $13 billion, would combine the American FMC and the French Technip, which have been hit hard by the global plunge in energy prices.<br />
+<a href="//www.nytimes.com/2016/05/20/business/dealbook/fmc-technologies-technip-merger.html?nl=dealbook&amp;emc=edit_dlbkam_20160520">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>BASF Should Steer Clear of Bidding for Monsanto</strong> Although the chemical company BASF has a good reason to prevent a combination of Bayer and Monsanto, a counterbid doesn&#8217;t make sense financially, Olaf Storbeck writes in Breakingviews.<br />
+<a href="//www.nytimes.com/2016/05/20/business/dealbook/basf-should-steer-clear-of-bidding-for-monsanto.html?nl=dealbook&amp;emc=edit_dlbkam_20160520">NYT Â»</a> | BAYER IN TALKS WITH MONSANTO OVER MEGA-MERGER</p>
+<p class="story-body-text" itemprop="articleBody"><strong>A Smart Meter Company Explores Sale</strong> Sensus USA, a provider of advanced metering technologies that is owned by the private equity firm Jordan Company, is exploring a sale that could value it at $1.7 billion, including debt, Reuters reports, citing people familiar with the matter.<br />
+<a href="//www.reuters.com/article/us-sensus-m-a-exclusive-idUSKCN0YA2M4?nl=dealbook&amp;emc=edit_dlbkam_20160520">REUTERS</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Warren Buffett Stake Suggests Apple Is All Grown Up</strong> When a value investor buys in, it&#8217;s a sign that a high-flying growth company has joined the ranks of venerable tech companies like IBM and Intel, James B. Stewart writes in Common Sense.<br />
+<a href="//www.nytimes.com/2016/05/20/business/buffett-stake-suggests-apple-is-all-grown-up.html?nl=dealbook&amp;emc=edit_dlbkam_20160520">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>INVESTMENT BANKING Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>JÃ¼rgen Fitschen to Stay With Deutsche Bank in New Role</strong> Mr. Fitschen is stepping down as co-chief executive of the German bank, as planned, but he will continue to work with clients on behalf of the lender.<br />
+<a href="//www.nytimes.com/2016/05/20/business/dealbook/jurgen-fitschen-to-stay-with-deutsche-bank-in-new-role.html?nl=dealbook&amp;emc=edit_dlbkam_20160520">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Goldman Sachs Said to Consider Sale of Spanish Energy</strong> Business Goldman Sachs&#8217;s infrastructure fund is considering selling all or part of its Spanish energy business Redexis this year, Reuters reports, citing five people familiar with the matter.<br />
+<a href="//www.reuters.com/article/us-redexis-equity-goldman-sachs-idUSKCN0YB0NL?feedType=RSS&amp;feedName=innovationNews&amp;nl=dealbook&amp;emc=edit_dlbkam_20160520">REUTERS</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>UBS Said to Trim Securities Jobs</strong> The UBS Group is trimming some positions at the investment bank as part of a plan to reduce costs across the business in response to a revenue slump, Bloomberg reports, citing people with knowledge of the situation.<br />
+<a href="//www.bloomberg.com/news/articles/2016-05-19/ubs-said-to-cut-investment-banking-jobs-in-cost-savings-plan?nl=dealbook&amp;emc=edit_dlbkam_20160520">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Morgan Stanley Said to Relocate 75 Shanghai Jobs</strong> Morgan Stanley will move about 75 jobs from its operations team in Shanghai to India and Hong Kong as it seeks to improve back-office efficiency, Bloomberg reports, citing a person with knowledge of the matter.<br />
+<a href="//www.bloomberg.com/news/articles/2016-05-20/morgan-stanley-said-to-move-75-shanghai-jobs-to-hong-kong-india?nl=dealbook&amp;emc=edit_dlbkam_20160520">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>HSBC to Close Half of India Branches in Digital Banking Push</strong> HSBC plans to shut almost half its branches in India and rely more on digital banking to expand its consumer business there.<br />
+<a href="//www.wsj.com/articles/head-of-morgan-stanleys-joint-venture-in-china-stepping-down-1463700589?nl=dealbook&amp;emc=edit_dlbkam_20160520">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Head of Morgan Stanley&#8217;s Joint Venture in China Stepping Down</strong> Bao Yi, chief executive of Morgan Stanley Huaxin Securities company, is leaving the bank to start his own investment firm, The Wall Street Journal reports, citing a person familiar with the matter.<br />
+<a href="//www.wsj.com/articles/head-of-morgan-stanleys-joint-venture-in-china-stepping-down-1463700589?nl=dealbook&amp;emc=edit_dlbkam_20160520">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>HEDGE FUNDS Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Hedge Fund Took Out Loan For Private Jet During Bribery Inquiry</strong> Och-Ziff, one of the world&#8217;s largest hedge funds by assets, took out a $49 million loan for a corporate jet when it was facing the possibility of a multimillion-dollar fine for bribery of the Gaddafi regime in Libya and other African government officials.<br />
+<a href="//www.ft.com/intl/cms/s/0/70e9b236-1d0d-11e6-b286-cddde55ca122.html?nl=dealbook&amp;emc=edit_dlbkam_20160520#axzz49ADh8wgd">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>VENTURE CAPITAL Â»</strong><br />
+<strong>General Mills Adds Kite Hill to Food Start-Up Investments</strong> Giant food companies are using investment as a way to compete with nimble start-ups for consumers seeking more healthful, less processed foods.<br />
+<a href="//www.nytimes.com/2016/05/20/business/general-mills-adds-kite-hill-to-food-start-up-investments.html?nl=dealbook&amp;emc=edit_dlbkam_20160520">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Facebook Co-Founder&#8217;s Venture Capital Firm Raises $143.6 Million</strong> A venture capital firm started last year by the Facebook co-founder Eduardo Saverin and a partner has raised more than $143.6 million in the first close for its initial fund, according to a regulatory filing on Thursday.<br />
+<a href="//www.wsj.com/articles/facebook-co-founders-venture-capital-firm-raises-143-6-million-1463666733?nl=dealbook&amp;emc=edit_dlbkam_20160520">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Elizabeth Warren Slams Uber and Lyft</strong> Ms. Warren&#8217;s intervention is a bad sign for Uber, Lyft and other app-based companies that rely on contract workers and are fighting to promote the economic benefits they deliver in the face of questions about the adequacy of protections for workers and consumers.<br />
+<a href="//www.ft.com/intl/cms/s/0/abc00336-1de1-11e6-b286-cddde55ca122.html?nl=dealbook&amp;emc=edit_dlbkam_20160520#axzz49ADh8wgd"> THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>LEGAL/REGULATORY Â»</strong></p>
+<p class="story-body-text" itemprop="articleBody"><strong>A Former Banker&#8217;s Push to End &#8216;Too Big to Fail&#8217;</strong> Neel Kashkari, head of the Federal Reserve Bank of Minneapolis, was once a free-market ideologue. Now he fears that the financial sector is too large.<br />
+<a href="//www.nytimes.com/2016/05/20/us/a-former-bankers-push-to-end-too-big-to-fail.html?nl=dealbook&amp;emc=edit_dlbkam_20160520">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Google Appeals French Privacy Ruling</strong> The search giant said it continued to resist France&#8217;s demand that Europe&#8217;s so-called right-to-be-forgotten rules should be applied globally.<br />
+<a href="//www.nytimes.com/2016/05/20/technology/google-appeals-french-privacy-ruling.html?nl=dealbook&amp;emc=edit_dlbkam_20160520">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Nasdaq Raises the Temperature in IEX Battle</strong> Nasdaq argued that the United States Securities and Exchange Commission could leave itself open to lawsuits if an application by IEX, the start-up trading venue, to become an exchange is approved.<br />
+<a href="//www.ft.com/intl/cms/s/0/46f57a3c-1dfd-11e6-b286-cddde55ca122.html?ftcamp=published_links%2Frss%2Fmarkets%2Ffeed%2F%2Fproduct&amp;nl=dealbook&amp;emc=edit_dlbkam_20160520#axzz49ADh8wgd">THE FINANCIAL TIMES</a><br />
+<br />
+<strong>State Officials Investigated Over Their Inquiry Into Exxon Mobil&#8217;s Climate Change</strong> Research Some members of Congress have demanded access to communications since 2012 between state attorneys general and climate change activist groups.<br />
+<a href="//www.nytimes.com/2016/05/20/science/exxon-mobil-climate-change-global-warming.html?nl=dealbook&amp;emc=edit_dlbkam_20160520">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>New York Lawyer Sent to Prison After Detailing Fraud in Suicide Note</strong> Charles Bennett detailed a more than $5 million Ponzi scheme in a lengthy suicide note that authorities discovered when they rescued him from the Hudson River. He was sentenced to five years in prison.<br />
+<a href="//www.reuters.com/article/us-usa-fraud-lawyer-idUSKCN0YA2Y5?nl=dealbook&amp;emc=edit_dlbkam_20160520">REUTERS</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>The Investor Steven Cohen Wins Dismissal of Suit Tied to Divorce</strong> Mr. Cohen&#8217;s former wife had accused him of cheating her out of millions of dollars in their divorce.<br />
+<a href="//www.reuters.com/article/us-people-cohen-divorce-idUSKCN0YA2DT?nl=dealbook&amp;emc=edit_dlbkam_20160520">REUTERS</a></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/05/20/morning-agenda-push-continues-on-insider-trading-cases-despite-limits-on-prosecutors/"
+					data-title="Morning Agenda: Push Continues on Insider Trading Cases Despite Limits on Prosecutors"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Puerto Rico&#039;s Debt Crisis Addressed in Bipartisan Bill | Energy Transfer Delays Could Scuttle Merger with Williams&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/05/20/morning-agenda-push-continues-on-insider-trading-cases-despite-limits-on-prosecutors/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":49,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

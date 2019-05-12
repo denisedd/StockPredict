@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003851725"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1439464052" />
+<meta name="PUD" content="20150813" />
+<meta name="pdate" content="20150813" />
+<meta name="ptime" content="20150813070732" />
+<meta name="utime" content="20150813110732" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-08-13T11:07:32-04:00" />
+<meta name="DISPLAYDATE" content="August 13, 2015" />
+<meta name="dat" content="August 13, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Schumer, Charles E">
+<meta name="des" content="Banking and Financial Institutions;China;Insider Trading;Mergers, Acquisitions and Divestitures;Micron Technology Inc;Recession and Depression;Renminbi (Currency);Stocks and Bonds">
+<meta name="org" content="A P Moller-Maersk;American International Group Inc;Bain Capital;Citigroup Inc;Deutsche Bank AG;Fidelity National Information Services Inc;Goldman Sachs Group Inc;Greenberg, Maurice R;HSBC Holdings PLC.;Justice Department;KKR &amp; Co LP;Morgan Stanley;NBCUniversal;News Corporation;Nomad Holdings Ltd;Private Equity;Royal Bank of Scotland PLC;Sungard Data Systems Inc;The Blackstone Group;UBS AG;Vox Media Inc">
+<meta name="geo" content="Argentina;Ukraine">
+<meta name="ticker" content="American International Group Inc|AIG|NYSE;Citigroup Inc|C|NYSE;Deutsche Bank AG|DB|NYSE;Fidelity National Information Services Inc|FIS|NYSE;Goldman Sachs Group Inc|GS|NYSE;HSBC Holdings PLC.|HSBC|NYSE;Morgan Stanley|MS|NYSE;News Corporation|NWSA|NASDAQ;The Blackstone Group|BX|NYSE;UBS AG|UBS|NYSE" />
+<meta property="article:tag" content="Schumer Charles E" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Insider Trading" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Micron Technology Inc" />
+<meta property="article:tag" content="Recession and Depression" />
+<meta property="article:tag" content="Renminbi (Currency)" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="A P Moller-Maersk" />
+<meta property="article:tag" content="American International Group Inc" />
+<meta property="article:tag" content="Bain Capital" />
+<meta property="article:tag" content="Citigroup Inc" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Fidelity National Information Services Inc" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Greenberg Maurice R" />
+<meta property="article:tag" content="HSBC Holdings PLC." />
+<meta property="article:tag" content="Justice Department" />
+<meta property="article:tag" content="KKR &amp; Co LP" />
+<meta property="article:tag" content="Morgan Stanley" />
+<meta property="article:tag" content="NBCUniversal" />
+<meta property="article:tag" content="News Corporation" />
+<meta property="article:tag" content="Nomad Holdings Ltd" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Royal Bank of Scotland PLC" />
+<meta property="article:tag" content="Sungard Data Systems Inc" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="UBS AG" />
+<meta property="article:tag" content="Vox Media Inc" />
+<meta property="article:tag" content="Argentina" />
+<meta property="article:tag" content="Ukraine" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Schumer Charles E,Banking and Financial Institutions,China,Insider Trading,Mergers Acquisitions and Divestitures,Micron Technology Inc,Recession and Depression,Renminbi (Currency),Stocks and Bonds,A P Moller-Maersk,American International Group Inc,Bain Capital,Citigroup Inc,Deutsche Bank AG,Fidelity National Information Services Inc,Goldman Sachs Group Inc,Greenberg Maurice R,HSBC Holdings PLC.,Justice Department,KKR &amp; Co LP,Morgan Stanley,NBCUniversal,News Corporation,Nomad Holdings Ltd,Private Equity,Royal Bank of Scotland PLC,Sungard Data Systems Inc,The Blackstone Group,UBS AG,Vox Media Inc,Argentina,Ukraine,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F08%2F13%2Fmorning-agenda-devaluation-suggests-china-is-short-of-options%2F" title="Morning Agenda: Devaluation Suggests China Is Short of Options" />
+<meta name="description" content="Prosecutors Ask to Deny Bail in Insider Trading Case &#124; Fidelity National Information Services to Buy SunGard &#124; U.S. Appeals A.I.G. Ruling" />
+<meta name="hdl" content="Morning Agenda: Devaluation Suggests China Is Short of Options" />
+<meta property="og:title" content="Morning Agenda: Devaluation Suggests China Is Short of Options" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/08/13/morning-agenda-devaluation-suggests-china-is-short-of-options/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Prosecutors Ask to Deny Bail in Insider Trading Case &#124; Fidelity National Information Services to Buy SunGard &#124; U.S. Appeals A.I.G. Ruling" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Devaluation Suggests China Is Short of Options" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/08/13/morning-agenda-devaluation-suggests-china-is-short-of-options/" />
+<meta name="twitter:description" content="Prosecutors Ask to Deny Bail in Insider Trading Case &#124; Fidelity National Information Services to Buy SunGard &#124; U.S. Appeals A.I.G. Ruling" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: China Weakens Currency Again' href='//news.blogs.nytimes.com/2015/08/12/morning-agenda-china-weakens-currency-again-2/' />
+<link rel='next' title='Morning Agenda: A New Global Currency War' href='//news.blogs.nytimes.com/2015/08/14/morning-agenda-a-new-global-currency-war/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/08/13/morning-agenda-devaluation-suggests-china-is-short-of-options/' />
+<link rel='shortlink' href='//nyti.ms/1PmxWze' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/08/13/morning-agenda-devaluation-suggests-china-is-short-of-options/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Devaluation Suggests China Is Short of Options - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3011 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Devaluation Suggests China Is Short of Options        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/08/13/morning-agenda-devaluation-suggests-china-is-short-of-options/"
+	 data-title="Morning Agenda: Devaluation Suggests China Is Short of Options"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Prosecutors Ask to Deny Bail in Insider Trading Case | Fidelity National Information Services to Buy SunGard | U.S. Appeals A.I.G. Ruling&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/08/13/morning-agenda-devaluation-suggests-china-is-short-of-options/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="August 13, 2015 7:07 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Devaluation Suggests China Is Short of Options</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-08-13T11:07:32+00:00" itemprop="datePublished">August 13, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">August 13, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3011 post type-post status-publish hentry category-dealbook tag-a-p-moller-maersk tag-american-international-group-inc tag-argentina tag-bain-capital tag-banking-and-financial-institutions tag-china tag-citigroup-inc tag-deutsche-bank-ag tag-fidelity-national-information-services-inc tag-goldman-sachs-group-inc tag-greenberg-maurice-r tag-hsbc-holdings-plc tag-insider-trading tag-justice-department tag-kkr-co-lp tag-mergers-acquisitions-and-divestitures tag-micron-technology-inc tag-morgan-stanley tag-nbcuniversal tag-news-corporation tag-nomad-holdings-ltd tag-private-equity tag-recession-and-depression tag-renminbi-currency tag-royal-bank-of-scotland-plc tag-schumer-charles-e tag-stocks-and-bonds tag-sungard-data-systems-inc tag-the-blackstone-group tag-ubs-ag tag-ukraine tag-vox-media-inc per-schumer-charles-e des-banking-and-financial-institutions des-china des-insider-trading des-mergers-acquisitions-and-divestitures des-micron-technology-inc des-recession-and-depression des-renminbi-currency des-stocks-and-bonds org-a-p-moller-maersk org-american-international-group-inc org-bain-capital org-citigroup-inc org-deutsche-bank-ag org-fidelity-national-information-services-inc org-goldman-sachs-group-inc org-greenberg-maurice-r org-hsbc-holdings-plc org-justice-department org-kkr-co-lp org-morgan-stanley org-nbcuniversal org-news-corporation org-nomad-holdings-ltd org-private-equity org-royal-bank-of-scotland-plc org-sungard-data-systems-inc org-the-blackstone-group org-ubs-ag org-vox-media-inc geo-argentina geo-ukraine" id="post-3011">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Devaluation Suggests China Is Short of Options</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-08-13T11:07:32+00:00" itemprop="datePublished">August 13, 2015 7:07 am</time>
+			<!-- date updated --><span class="visually-hidden updated">August 13, 2015 7:07 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/08/13/morning-agenda-devaluation-suggests-china-is-short-of-options/" data-title="Morning Agenda: Devaluation Suggests China Is Short of Options" data-description="Prosecutors Ask to Deny Bail in Insider Trading Case | Fidelity National Information Services to Buy SunGard | U.S. Appeals A.I.G. Ruling">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DEVALUATION SUGGESTS CHINA IS SHORT OF OPTIONS</strong> <span class="divider"> | </span></span> Even when the Chinese economy has struggled, the currency has never buckled. Now the plunge in the value of the renminbi has stoked fears that the economy is worse off than reported and that <b>the government is panicking</b>, <a href="//www.nytimes.com/2015/08/13/business/international/chinese-economic-vigor-is-disputed.html?_r=0">Neil Gough reports in The New York Times</a>. China allowed the renminbi to weaken significantly on Thursday for a third consecutive day. </p>
+<p class="story-body-text" itemprop="articleBody"> By official measures, the economy is growing at a 7 percent clip, <b>in line with government targets</b>. It is a steady pace that the leadership has indicated can support decent job growth and put more money into consumersâ pockets. But core parts of the economy, like construction, are weaker than ever. The real estate industry is struggling, consumer spending is not strong, and financial services are slipping. Economists are starting to wonder whether some provinces and regions could be <b>dealing with outright recessions</b>.</p>
+<p class="story-body-text" itemprop="articleBody"> âI donât see this mini-devaluation as some kind of outrageous act,â said George Magnus, an economic adviser to the bank UBS and an associate at Oxford Universityâs China center. âBut it is part of an array of other economic and financial stimulus measures designed to <b>shore up the flagging growth rate</b>.â (<a href="//www.nytimes.com/interactive/2015/08/11/business/international/china-yuan-devaluation-in-exports-economy-stock-market.html">The New York Times has visualized</a> the moves that China has made in the last two months to stabilize the economy.) </p>
+<p class="story-body-text" itemprop="articleBody">Consumers arenât yet able to shoulder the burden of driving the economy as construction weakens. Incomes are still rising, but the job market has started to show signs of stress. The stock market slump has also taken a toll on ordinary investors. As a result, <b>consumers are spending less</b>. With the government pumping money into the economy, it remains unclear just <b>how solid the economy will be</b>, Mr. Gough writes.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PROSECUTORS ASK TO DENY BAIL TO ACCUSED INSIDER TRADING RING</strong> <span class="divider"> | </span></span> Federal prosecutors asked the courts to refuse bail to all five men arrested in connection with a scheme that enabled securities traders to benefit from confidential corporate information stolen by hackers in Ukraine, <a href="//www.nytimes.com/2015/08/13/business/prosecutors-ask-for-no-bail-for-5-accused-in-insider-trading-ring.html?ref=international">Matthew Goldstein reports in DealBook</a>. The governmentâs lawyers contended that the men, all of whom were arrested in the United States but have <b>strong ties to Ukraine</b>, were likely to flee the country. </p>
+<p class="story-body-text" itemprop="articleBody"> The request is unusual for a white-collar crime case. None of the defendants has been accused of engaging in violent behavior, and three of them are United States citizens. But the prosecutors said the men represent substantial flight risks because of they have the <b>means to escape to non-extradition countries</b>; the United States does not have an extradition treaty with Ukraine. International arrest warrants have been issued for four other men in the case, who are believed to be in Ukraine. </p>
+<p class="story-body-text" itemprop="articleBody"> The men are accused of submitting lists of companies to hackers when they wanted to illegally obtain releases from news services. They would then trade on the stock of some of the biggest companies around the world using this information and their own <b>brokerage accounts in various investment banks</b>. One of the men prosecutors want to keep in custody is Vitaly Korchevsky, 50, a former Morgan Stanley mutual fund manager and a hedge fund manager. According to an indictment, Mr. Korchevsky was the <b>single biggest earner in the scheme</b>, making just over $17 million. Born in Ukraine, Mr. Korchevsky is a United States citizen and the pastor of a church. </p>
+<p class="story-body-text" itemprop="articleBody">The Brooklyn prosecutors also are asking that Leonid Momotok, 47, and Aleksandr Garkusha, 47, two men living near Atlanta, be held without bail. Both are also United States citizens, born in Ukraine. Over the next several days, detention hearings will be held to determine whether the men should be <b>released on bail or remain in custody</b> pending trials. Hearings will also be held to have the menâs cases formally transferred to either federal court in Brooklyn or in Newark.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FIDELITY NATIONAL INFORMATION SERVICES TO BUY SUNGARD</strong> <span class="divider"> | </span></span> Fidelity National Information Services, a large service provider for banks, agreed to buy SunGard in a cash-and-stock deal that values the <b>financial software company at about $9.1 billion</b>, including debt, <a href="//www.nytimes.com/2015/08/13/business/dealbook/fis-to-buy-sungard-in-9-billion-deal.html?ref=international">Michael J. de la Merced and Chad Bray report in DealBook</a>. The combined company would have more than $9.2 billion in annual revenue and more than 55,000 employees, Fidelity National Information Services said. </p>
+<p class="story-body-text" itemprop="articleBody"> Although the sale initially appears disappointing to the private equity firms that paid bout $11 billion for SunGard in 2005, the <b>investors can claim a modest return</b>. Some people briefed on the returns said it was just over 1.5 times their equity investments. The actual equity that the firms put in was less than the $11 billion figure, which included debt. Still, it is not a home run for an investment made a decade ago at the beginning of a leveraged-buyout boom.</p>
+<p class="story-body-text" itemprop="articleBody"> The private equity firms involved â Bain Capital, the Blackstone Group, the private equity division of Goldman Sachs, Kohlberg Kravis Roberts &#038; Company, Providence Equity Partners, Silver Lake and the Texas Pacific Group (now TPG Capital) â have <b>held on to the company for almost 10 years</b>. During this, they have managed to sell other investments in a shorter period of time for much better returns. </p>
+<p class="story-body-text" itemprop="articleBody"> The private equity investors were <b>able to bolster their returns</b> by taking out about $700 million in dividends from the company and breaking SunGard into parts, both to raise money and to make the resulting operation more digestible. Some of these parts have been sold, leaving the financial software business and a tiny portion of the education operations for Fidelity National Information Services. This accounts for just over 50 percent of the revenue that the old SunGard collected when it was acquired in 2005.</p>
+<p class="story-body-text" itemprop="articleBody"> Broken down, the deal amounts to $2.8 billion worth of stock, $2.3 billion in cash and the assumption of SunGardâs $4 billion in debt. The <b>ultimate return will depend</b> in part on the price at which the private equity consortium can sell its shares in Fidelity National.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>Kohlâs</b>  conference call on its latest results starts at 8:30 a.m. <b>Nordstrom</b>  holds a conference call on second-quarter earnings at 4:45 p.m. The  Commerce Departmentâs report on  <b>July retail sales</b>  is released at 8:30 a.m. The  <b>University of Michigan</b> releases August data on consumer sentiment at 10 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>U.S. APPEALS A.I.G. RULING</strong> <span class="divider"> | </span></span> The Justice Department formally appealed a court ruling that said the governmentâs terms for saving American International Group during the financial crisis were too strict,  <a href="//www.nytimes.com/2015/08/13/business/dealbook/us-appeals-ruling-that-aig-bailout-terms-were-too-harsh.html?ref=dealbook">Aaron M. Kessler reports in DealBook</a>. Maurice R. Greenberg, the former chief executive of A.I.G., charged that the government <b>overstepped its bounds by imposing unduly harsh terms</b> on the insurance giant compared with Wall Street banks. The federal lawsuit, brought on behalf of A.I.G. shareholders, sought damages in excess of $40 billion. </p>
+<p class="story-body-text" itemprop="articleBody"> In June, Judge Thomas C. Wheeler of the United States Court of Federal Claims ruled that the Federal Reserve had crossed the line by demanding a 79.9 percent equity stake in A.I.G. and that the <b>central bank did not have the legal right</b> to become the owner of A.I.G. But he <b>awarded no damages</b>, saying the shareholders had not suffered financially. âThe inescapable conclusion is that A.I.G. would have filed for bankruptcyâ without the bailout, he wrote, and âthe value of the shareholdersâ common stock would have been zero.â</p>
+<p class="story-body-text" itemprop="articleBody"> Starr International, the company through which Mr. Greenberg sued, almost immediately indicated that it planned to <b>appeal on the issue of damages</b>. The Federal government is worried because the ruling could <b>set a dangerous precedent</b> by declaring the Fedâs actions illegal. </p>
+<p class="story-body-text" itemprop="articleBody"> The case now moves to the Court of Appeals for the Federal Circuit. The <b>case could drag on</b> for several more years.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Nomad to Acquire Findusâs Continental Europe Business</strong> <span class="divider"> | </span></span> The deal continues a series of acquisitions by Nomad, a so-called special purpose acquisition company founded last year to buy food businesses.<br /><span class="kicker"><a href="//www.nytimes.com/2015/08/14/business/dealbook/nomad-to-acquire-finduss-continental-europe-business.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>News Corp. Planning to Sell Off Money-Losing Education Unit</strong> <span class="divider"> | </span></span> Amplify, the education division of Rupert Murdochâs company, is in an âadvanced stage of negotiationsâ with a potential buyer.<br /><span class="kicker"><a href="//www.nytimes.com/2015/08/13/business/news-corp-taking-a-dollar371-million-write-down-on-its-education-unit.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Maersk Shares Jump on Strong Results and Share Buy-Back</strong> <span class="divider"> | </span></span> Shares in Denmarkâs A.P. Moller-Maersk jumped as much as 8.6 percent on Thursday after the shipping and oil group reported second-quarter profits ahead of forecasts and started a $1 billion share buy-back program.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2015/08/13/business/13reuters-maersk-results.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Senator Calls for Block on Chinese Bid for U.S. Chip Maker </strong> <span class="divider"> | </span></span> âI am deeply concerned with the national security implications of allowing China to gain market control over the production of components tied to modern U.S. defense systems, potentially including Micronâs memory chips,â Senator Chuck Schumer wrote in a letter.<br /><span class="kicker"><a href="//www.wsj.com/articles/as-china-ties-fester-senator-calls-for-u-s-to-block-bid-for-american-chip-maker-1439399139"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Money Ills Raise Doubts on Plan to Take SFX Entertainment Private " src="https://static01.nyt.com/images/2015/08/13/business/13SILLERMAN/13SILLERMAN-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Money Ills Raise Doubts on Plan to Take SFX Entertainment Private </strong> <span class="divider"> | </span></span> A falling stock price, growing losses and several moves by SFX this year have rattled some in the music industry and worried analysts.<br /><span class="kicker"><a href="//www.nytimes.com/2015/08/13/business/money-ills-raise-doubts-on-plan-to-take-sfx-entertainment-private.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>NBCUniversal Invests $200 Million in Vox Media</strong> <span class="divider"> | </span></span> The media giant and digital upstart intend to blur the lines between their two worlds and collaborate on programming, advertising and technology.<br /><span class="kicker"><a href="//www.nytimes.com/2015/08/13/business/media/nbcuniversal-invests-200-million-in-vox-media.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>HSBC to Promote Two in Banking Operations</strong> <span class="divider"> | </span></span> The elevations for Natalie Blyth and Philip Noblet come as HSBC continues to reshape its global business.<br /><span class="kicker"><a href="//www.nytimes.com/2015/08/13/business/dealbook/hsbc-to-promote-two-in-banking-operations.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Bank Employees Charged in Emissions Trading Case</strong> <span class="divider"> | </span></span> Frankfurtâs public prosecutorâs office has filed charges against eight current and former employees of Deutsche Bank over the alleged evasion of taxes on trading carbon-emission certificates that has cost Germany hundreds of millions of euros.<br /><span class="kicker"><a href="//www.wsj.com/articles/deutsche-bank-employees-charged-in-emissions-trading-case-1439454844?mod=rss_markets_main"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>RBS Hands Out $5.2 Million in &#8216;Role-Based&#8217; Pay Awards</strong> <span class="divider"> | </span></span> State-backed Royal Bank of Scotland has awarded shares worth more than 3.3 million pounds, or $5.2 million,  to 10 executives under new ârole-basedâ pay awards it brought in to avoid limits on annual bonuses.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2015/08/12/business/12reuters-rbs-pay.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Goldman Sachs to Give Out âSecret Sauceâ on Trading</strong> <span class="divider"> | </span></span> Goldman will soon offer clients access to more of its in-house tools, like high-powered databases that analyze markets and manage risk, The Wall Street Journal reports, citing the firmâs executives. <br /><span class="kicker"><a href="//www.wsj.com/articles/goldman-sachs-to-give-out-secret-sauce-on-trading-1439371800"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Citigroupâs âBad Bankâ Isnât So Bad Anymore</strong> <span class="divider"> | </span></span> The âbad bankâ unit of Citigroup, Citi Holdings, has been the repository for businesses the bank wanted to dump, but the unit has reported four profitable quarters in a row and has sold more than $700 billion in assets.<br /><span class="kicker"><a href="//www.wsj.com/articles/citigroups-bad-bank-isnt-so-bad-anymore-1439417026"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Texas Investor Energy &#038; Minerals Acquires Aussie Shale Stake</strong> <span class="divider"> | </span></span> Energy &#038; Minerals Group, the Texas based private equity firm that manages about $16.8 billion in assets, agreed to acquire an 18 percent stake in acreage owned by Pangaea Resources, the Australian exploration company.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-08-13/texas-private-equity-firm-energy-minerals-invests-in-australia"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Private Equity Investment Returns Without the Fees </strong> <span class="divider"> | </span></span> A new paper suggests investors can do significantly better than the average private equity firm by buying shares in certain kinds of public companies.<br /><span class="kicker"><a href="//ftalphaville.ft.com/2015/08/13/2136919/getting-private-equity-investment-returns-without-the-fees/"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Houlihan Lokey, Boutique Investment Bank, Fizzles in I.P.O. Pricing</strong> <span class="divider"> | </span></span> The 43-year-old financial advisory firm sold fewer shares at a lower price than it had expected, valuing it at about $1.4 billion.<br /><span class="kicker"><a href="//www.nytimes.com/2015/08/13/business/dealbook/houlihan-lokey-boutique-investment-bank-disappoints-in-market-debut.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Data-Storage Start-Up Files for I.P.O.</strong> <span class="divider"> | </span></span> Pure Storage, a data-storage start-up valued privately at roughly $3 billion, filed to go public in what may become a crush of initial public offerings by business-technology firms.<br /><span class="kicker"><a href="//www.wsj.com/articles/pure-storage-valued-at-about-3-billion-files-for-ipo-1439399695?mod=pls_whats_news_us_business_f"> WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Argentine Assets Considered Commercial in Dispute</strong> <span class="divider"> | </span></span> A federal judge in New York sanctioned Argentina on Wednesday, ruling that he will consider Argentine government assets in the United States as commercial property in a long-running dispute over the South American nationâs debt.<br /><span class="kicker"><a href="//www.nytimes.com/aponline/2015/08/12/world/americas/ap-lt-argentina-debt-standoff.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ITG to Pay $20 Million on S.E.C. Charges It Ran Secret Trading Desk</strong> <span class="divider"> | </span></span> Investment Technology Group will pay a record $20.3 million to settle charges that it ran a secret trading desk that used confidential customer trading information for profit, including bets against its customers.<br /><span class="kicker"><a href="//www.nytimes.com/aponline/2015/08/12/business/ap-us-itg-sec-settlement.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Payday Lender Under Investigation</strong> <span class="divider"> | </span></span> World Acceptance is being investigated by the Consumer Financial Protection Bureau, which has increased its scrutiny of payday lenders. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-08-12/this-payday-lender-is-being-investigated-by-the-cfpb-and-its-stock-got-crushed"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Regulator Wins $11.87 Million High Court âLayeringâ Market Abuse Order</strong> <span class="divider"> | </span></span> A British High Court judge has ordered a Swiss investment firm and three Hungarian traders to pay 7.6 million pounds, or about $11.87 million,  for manipulating share prices on British trading platforms, handing the regulator a victory after a four-year legal battle.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2015/08/12/business/12reuters-britain-financial-fca.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/08/13/morning-agenda-devaluation-suggests-china-is-short-of-options/"
+					data-title="Morning Agenda: Devaluation Suggests China Is Short of Options"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Prosecutors Ask to Deny Bail in Insider Trading Case | Fidelity National Information Services to Buy SunGard | U.S. Appeals A.I.G. Ruling&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/08/13/morning-agenda-devaluation-suggests-china-is-short-of-options/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":47,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

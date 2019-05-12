@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003818330"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1437735870" />
+<meta name="PUD" content="20150724" />
+<meta name="pdate" content="20150724" />
+<meta name="ptime" content="20150724070430" />
+<meta name="utime" content="20150724110430" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-07-24T11:04:30-04:00" />
+<meta name="DISPLAYDATE" content="July 24, 2015" />
+<meta name="dat" content="July 24, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Paulson, John A;Puerto Rico">
+<meta name="des" content="Health Insurance and Managed Care;Hedge Funds;Initial Public Offerings;Mergers, Acquisitions and Divestitures;Newspapers;Private Equity;Start-ups;Venture Capital">
+<meta name="org" content="Anthem Inc.;Bank of America Corporation;Bridgewater Associates;CIGNA Corporation;Fiat Chrysler Automobiles NV;Google Inc;KKR &amp; Co LP;Noto, Anthony J;Pearson PLC;The Blackstone Group;Twitter">
+<meta name="geo" content="Far East, South and Southeast Asia and Pacific Areas;Silicon Valley (Calif);Wall Street (Manhattan, NY)">
+<meta name="ticker" content="Bank of America Corporation|BAC|NYSE;CIGNA Corporation|CI|NYSE;Fiat Chrysler Automobiles NV|FCAU|NYSE;Google Inc|GOOGL|NASDAQ;Pearson PLC|PSO|NYSE;Twitter|TWTR|NYSE" />
+<meta property="article:tag" content="Paulson John A" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="Health Insurance and Managed Care" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Newspapers" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Anthem Inc." />
+<meta property="article:tag" content="Bank of America Corporation" />
+<meta property="article:tag" content="Bridgewater Associates" />
+<meta property="article:tag" content="CIGNA Corporation" />
+<meta property="article:tag" content="Fiat Chrysler Automobiles NV" />
+<meta property="article:tag" content="Google Inc" />
+<meta property="article:tag" content="KKR &amp; Co LP" />
+<meta property="article:tag" content="Noto Anthony J" />
+<meta property="article:tag" content="Pearson PLC" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="Twitter" />
+<meta property="article:tag" content="Far East South and Southeast Asia and Pacific Areas" />
+<meta property="article:tag" content="Silicon Valley (Calif)" />
+<meta property="article:tag" content="Wall Street (Manhattan NY)" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Paulson John A,Puerto Rico,Health Insurance and Managed Care,Hedge Funds,Initial Public Offerings,Mergers Acquisitions and Divestitures,Newspapers,Private Equity,Start-ups,Venture Capital,Anthem Inc.,Bank of America Corporation,Bridgewater Associates,CIGNA Corporation,Fiat Chrysler Automobiles NV,Google Inc,KKR &amp; Co LP,Noto Anthony J,Pearson PLC,The Blackstone Group,Twitter,Far East South and Southeast Asia and Pacific Areas,Silicon Valley (Calif),Wall Street (Manhattan NY),DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F07%2F24%2Fmorning-agenda-nikkei-buys-the-pink-paper%2F" title="Morning Agenda: Nikkei Buys the Pink Paper" />
+<meta name="description" content="5 Men, 2 Fraud Schemes, 1 Hacking &#124; Blackstone C.F.O. Said to Be Headed to Airbnb &#124; Opportunities in Struggling Puerto Rico" />
+<meta name="hdl" content="Morning Agenda: Nikkei Buys the Pink Paper" />
+<meta property="og:title" content="Morning Agenda: Nikkei Buys the Pink Paper" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/07/24/morning-agenda-nikkei-buys-the-pink-paper/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="5 Men, 2 Fraud Schemes, 1 Hacking &#124; Blackstone C.F.O. Said to Be Headed to Airbnb &#124; Opportunities in Struggling Puerto Rico" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Nikkei Buys the Pink Paper" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/07/24/morning-agenda-nikkei-buys-the-pink-paper/" />
+<meta name="twitter:description" content="5 Men, 2 Fraud Schemes, 1 Hacking &#124; Blackstone C.F.O. Said to Be Headed to Airbnb &#124; Opportunities in Struggling Puerto Rico" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Bank of America Shake-Up' href='//news.blogs.nytimes.com/2015/07/23/dealbook-bank-of-america-shake-up/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/07/24/what-were-reading-75/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/07/24/morning-agenda-nikkei-buys-the-pink-paper/' />
+<link rel='shortlink' href='//nyti.ms/1DBmLMq' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/07/24/morning-agenda-nikkei-buys-the-pink-paper/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Nikkei Buys the Pink Paper - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-2860 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Nikkei Buys the Pink Paper        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/07/24/morning-agenda-nikkei-buys-the-pink-paper/"
+	 data-title="Morning Agenda: Nikkei Buys the Pink Paper"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;5 Men, 2 Fraud Schemes, 1 Hacking | Blackstone C.F.O. Said to Be Headed to Airbnb | Opportunities in Struggling Puerto Rico&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/07/24/morning-agenda-nikkei-buys-the-pink-paper/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 24, 2015 7:04 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Nikkei Buys the Pink Paper</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-07-24T11:04:30+00:00" itemprop="datePublished">July 24, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">July 24, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-2860 post type-post status-publish hentry category-dealbook tag-anthem-inc tag-bank-of-america-corporation tag-bridgewater-associates tag-cigna-corporation tag-far-east-south-and-southeast-asia-and-pacific-areas tag-fiat-chrysler-automobiles-nv tag-google-inc tag-health-insurance-and-managed-care tag-hedge-funds tag-initial-public-offerings tag-kkr-co-lp tag-mergers-acquisitions-and-divestitures tag-newspapers tag-noto-anthony-j tag-paulson-john-a tag-pearson-plc tag-private-equity tag-puerto-rico tag-silicon-valley-calif tag-start-ups tag-the-blackstone-group tag-twitter tag-venture-capital tag-wall-street-manhattan-ny per-paulson-john-a per-puerto-rico des-health-insurance-and-managed-care des-hedge-funds des-initial-public-offerings des-mergers-acquisitions-and-divestitures des-newspapers des-private-equity des-start-ups des-venture-capital org-anthem-inc org-bank-of-america-corporation org-bridgewater-associates org-cigna-corporation org-fiat-chrysler-automobiles-nv org-google-inc org-kkr-co-lp org-noto-anthony-j org-pearson-plc org-the-blackstone-group org-twitter geo-far-east-south-and-southeast-asia-and-pacific-areas geo-silicon-valley-calif geo-wall-street-manhattan-ny" id="post-2860">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Nikkei Buys the Pink Paper</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-07-24T11:04:30+00:00" itemprop="datePublished">July 24, 2015 7:04 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 24, 2015 7:04 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/07/24/morning-agenda-nikkei-buys-the-pink-paper/" data-title="Morning Agenda: Nikkei Buys the Pink Paper" data-description="5 Men, 2 Fraud Schemes, 1 Hacking | Blackstone C.F.O. Said to Be Headed to Airbnb | Opportunities in Struggling Puerto Rico">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>NIKKEI BUYS THE PINK PAPER</strong> <span class="divider"> | </span></span> The Japanese media company Nikkei trounced the German group Axel Springer to buy The Financial Times, <a href="//www.nytimes.com/2015/07/24/business/dealbook/pearson-financial-times-sale.html?emc=edit_dlbkpm_20150723&#038;nl=business&#038;nlid=72489293">Ravi Somaiya, Jonathan Soble and David Jolly report in DealBook</a>. Pearson, its parent company, had been discussing the sale with Financial Times executives for about a year, but there was a last-minute race to close the deal on Thursday, in which Nikkei trumped the competition with a <b>$1.3 billion offer</b>. </p>
+<p class="story-body-text" itemprop="articleBody"> Axel Springer had set its sights on the British news group early on and had been in talks until <b>just 15 minutes</b> before the announcement, <a href="https://next.ft.com/bc96456e-315e-11e5-8873-775ba7c2ea3d">The Financial Times reports</a>.</p>
+<p class="story-body-text" itemprop="articleBody"> The sale dwarfs other newspaper deals: Two years ago, The Washington Post sold for $250 million and The Boston Globe was sold for $70 million along with its other media assets. The Financial Times sale <b>does not include</b> Pearsonâs 50 percent stake in The Economist or The Financial Timesâs central London building, which Nikkei will rent from Pearson.</p>
+<p class="story-body-text" itemprop="articleBody"> The divestment allows Pearson to intensify its focus on the educational publishing business, which provided about three-quarters of its profit last year. The group has traditionally been a <b>hands-off owner</b>, and the FT has rarely been an investment priority, <a href="https://next.ft.com/88c00d8a-3148-11e5-8873-775ba7c2ea3d">The Financial Times reports</a>. Senior FT managers were becoming frustrated as they fought for greater investment to boost its digital efforts. </p>
+<p class="story-body-text" itemprop="articleBody"> <a href="//www.nytimes.com/2015/07/24/business/dealbook/at-1-3-billion-nikkei-is-paying-a-lot-for-financial-times.html?ref=dealbook">Jennifer Saba argues in Breakingviews</a> that Nikkei is <b>paying a hefty sum</b> for a group in an industry with an insecure future. At such a lofty price, Ms. Saba writes, Nikkei will have to work extraordinarily hard to make the numbers stack up. âNikkei might also try to recover some of the money through cost cuts. But that, in the long term, might diminish The Financial Timesâs reputation, which Nikkei has paid so much money for.â</p>
+<p class="story-body-text" itemprop="articleBody"> In spite of this premium price, <a href="//www.nytimes.com/2015/07/23/opinion/the-financial-times-will-be-in-good-hands.html?partner=rss&#038;emc=rss">Felix Salmon writes in a New York Times Op-Ed</a> that the Financial Times is in good hands and that Nikkei is likely to be a <b>better owner than Pearson</b> because news, not finances, will come first.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>5 MEN, 2 FRAUD SCHEMES, 1 HACKING ATTACK</strong> <span class="divider"> | </span></span> When two men were arrested on Tuesday in Florida on charges of running an illegal Bitcoin exchange, their case seemed on the surface to be unrelated to the seizure of two men in Israel, who were charged with running a stock manipulation scheme. But their arrests, along with the indictment of a third man in Israel, are the <b>first tantalizing clues</b> about a long-running federal investigation into the hacking of JPMorganâs vast network last summer, <a href="//www.nytimes.com/2015/07/24/business/dealbook/5-men-2-fraud-schemes-and-a-possible-link-to-jpmorgan-chase-hacking.html?ref=dealbook">Matthew Goldstein writes in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody"> The breach had compromised the contact information for 83 million customer accounts and federal authorities have <b>suspected for months</b> that some of the people arrested this week were involved, but have yet to officially link any of them to it. </p>
+<p class="story-body-text" itemprop="articleBody"> Many questions remain, but the authorities were <b>forced to move</b> much sooner than they wanted to, partly out of concern that the investigation was becoming too public and that some of those charged might try to move to countries that do not extradite to the United States. Federal prosecutors have said they would seek to extradite the Israeli defendants for trial in Manhattan.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BLACKSTONE C.F.O. SAID TO BE HEADED TO AIRBNB</strong> <span class="divider"> | </span></span> Laurence A. Tosi, chief financial officer at the Blackstone investment firm, is in talks to join Airbnb, <a href="//www.nytimes.com/2015/07/24/business/dealbook/blackstone-cfo-is-said-to-be-headed-to-airbnb.html?ref=dealbook">Landon Thomas Jr. and Mike Isaac report in DealBook</a>. The hire would be a coup for the fast expanding rental start-up. Mr. Tosi has <b>overseen growth</b> in Blackstoneâs assets from $102 billion to $330 billion during his time as finance chief. </p>
+<p class="story-body-text" itemprop="articleBody"> Airbnb is trying to raise more than $1 billion in cash, which would attach a valuation of around $24 billion to the company. That would rank it among the most valuable start-ups in Silicon Valley. The addition of Mr. Tosiâs finance expertise is likely to add to speculation that Airbnb <b>may try to go public</b> soon, although many start-ups with plenty of venture capital are choosing to stay private for longer so they can build their brands away from public market scrutiny. </p>
+<p class="story-body-text" itemprop="articleBody"> If Mr. Tosi did join Airbnb, his would be the third move by a <b>Wall Street professional</b> to oversee finances at a technology company. Anthony J. Noto left Goldman Sachs for Twitter last year and Google poached Ruth Porat from Morgan Stanley, a hire that helped its stock value balloon. </p>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The early July estimate for the <b>United States Manufacturing Purchasing Managersâ Index</b> will be released at 9:45 a.m. Data on <b>new home sales</b> in June will be released at 10 a.m. <b>AbbVie</b> releases its second-quarter results at 9 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>OPPORTUNITIES IN STRUGGLING PUERTO RICO</strong> <span class="divider"> | </span></span> The islandâs tourism industry has fallen victim to the struggling economy but Wall Street firms have spotted a chance to <b>dive into the turmoil</b>, <a href="//www.nytimes.com/2015/07/24/business/dealbook/john-paulsons-hedge-fund-to-buy-another-puerto-rico-hotel.html?ref=dealbook">Alexandra Stevenson writes in DealBook</a>. John A. Paulson, the billionaire hedge fund manager, is investing in the San Juan Beach Hotel. Fundamental Advisers, another Wall Street investment firm, bought the iconic El San Juan Resort and Casino for $71 million from Blackstone. </p>
+<p class="story-body-text" itemprop="articleBody"> Several funds had rushed into Puerto Rico in recent years â the territory was the hottest trade in the hedge fund world at one point. Now these two firms are betting that things <b>can only get better</b> after Gov. Alejandro GarcÃ­a Padilla announced that the commonwealth could not pay all of its $72 billion of debt. </p>
+<p class="story-body-text" itemprop="articleBody"> Both Mr. Paulson and Fundamental are eyeing additional investments on the island. The government is also <b>courting other foreign investors</b>. âAttracting savvy investors like Paulson and growing the tourism sector are important components of the administrationâs economic development plan,â Alberto BaguÃ©, secretary of commerce and economic development, said in a news release on Thursday.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Anthem to Buy Cigna in Deal Valued at $54.2 Billion" src="https://static01.nyt.com/images/2015/07/24/business/cigna-web1/cigna-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Anthem to Buy Cigna in Deal Valued at $54.2 Billion</strong> <span class="divider"> | </span></span> A combined Anthem-Cigna would have estimated revenue of about $115 billion and serve more than 53 million people with medical coverage.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/25/business/dealbook/anthem-cigna-health-insurance-deal.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AT&#038;T-DirecTV Merger Said To Clear Final Hurdle</strong> <span class="divider"> | </span></span> The Federal Communications Commission voted on Thursday to approve AT&#038;Tâs proposed $48.5 billion purchase of DirecTV, Reuters reports, citing people familiar with the vote.<br /><span class="kicker"><a href="//www.reuters.com/article/2015/07/24/us-at-t-directv-fcc-idUSKCN0PY01G20150724"> REUTERS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Meiji Yasuda to Buy StanCorp Financial for $5 Billion</strong> <span class="divider"> | </span></span> The deal is the latest move by a Japanese insurer to expand its operations in the United States, the worldâs largest insurance market.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/25/business/dealbook/meiji-yasuda-to-buy-stancorp-financial-for-5-billion.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Gambling Firm Ladbrokes to Acquire Bulk of Rival Gala Coral</strong> <span class="divider"> | </span></span> The deal would combine two of Britainâs largest sports betting operations and create a combined company worth about $3.6 billion.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/25/business/dealbook/british-gambling-firm-ladbrokes-to-acquire-bulk-of-rival-gala-coral.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Monsanto Presses Case for Merger as Syngenta Reports Results" src="https://static01.nyt.com/images/2015/07/23/business/cnbc-syngenta/cnbc-syngenta-square320.png"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Monsanto Presses Case for Merger as Syngenta Reports Results</strong> <span class="divider"> | </span></span> The Syngenta chief executive told CNBC Europe on Thursday that Monsantoâs proposal was âwoefully shortâ of addressing its concerns.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/24/business/dealbook/monsanto-presses-case-for-merger-as-syngenta-reports-results.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A So-Called Independent Foundation Enters the Mylan-Teva Fray</strong> <span class="divider"> | </span></span> A stichting is a Dutch defense to protect companies from hostile takeovers, and a foundation created by Mylan says it is exercising it to save Mylan and the world.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/24/business/a-so-called-independent-foundation-enters-the-mylan-teva-fray.html">Deal Professor &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Lazard and Evercore Do Better for Owners Than Big Rivals</strong> <span class="divider"> | </span></span> Although the two independent firms lag their larger rivals in growing merger advisory revenue, smaller firms do a better job of passing on gains to their owners.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/24/business/dealbook/lazard-and-evercorps-do-better-for-owners-than-big-rivals.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>EU Clears Berkshire Hathaway&#8217;s Purchase of Duracell</strong> <span class="divider"> | </span></span> The European Commission said on Thursday it had approved Berkshire Hathaway&#8217;s purchase of Procter &amp; Gamble&#8217;s Duracell battery unit.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2015/07/23/business/23reuters-duracell-m-a-eu.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Wall Street Pulls in Its Horns in Connecticut" src="https://static01.nyt.com/images/2015/07/26/business/26-TRADERS/26-TRADERS-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Wall Street Pulls in Its Horns in Connecticut</strong> <span class="divider"> | </span></span> The contraction of the Stamford, Conn., operations of two global banks could stand as an indicator of how Wall Street as a whole is faring.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/26/business/dealbook/wall-street-pulls-in-its-horns-in-connecticut.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bank of America: Back of the Pack</strong> <span class="divider"> | </span></span> Installing a new, growth-oriented finance chief may be sensible, but if expansion does not materialize, an aggressive chief executive may become necessary to finally make good on a long-anticipated dividend, argues The Financial Times Lex column.<br /><span class="kicker"><a href="https://next.ft.com/c8f86f36-3158-11e5-8873-775ba7c2ea3d"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Investment Gains Lift K.K.R.âs Quarterly Results" src="https://static01.nyt.com/images/2014/10/24/business/dbpix-kkr-kravis/dbpix-kkr-kravis-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Investment Gains Lift K.K.R.âs Quarterly Results</strong> <span class="divider"> | </span></span> The private equity company also showed its fund-raising prowess, closing two big funds so far this year.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/24/business/dealbook/buoyant-markets-lift-kkrs-quarterly-results.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bridgewater Reverses China Call</strong> <span class="divider"> | </span></span> This week, Raymond Dalioâs hedge fund told its clients âour views about China have changedâ for the worse, but the firm said on Thursday that its stance âremains the same.â<br /><span class="kicker"><a href="//blogs.wsj.com/moneybeat/2015/07/23/bridgewater-backpedals-on-china-call/?nl=business&#038;emc=edit_dlbkpm_20150723"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fund Bossâs Gamble on Health Law Pays Off Big</strong> <span class="divider"> | </span></span> Glenview Capital made a bold decision when it bet on President Obamaâs health care overhaul and the result has been one of the most successful hedge fund wagers in recent years.<br /><span class="kicker"><a href="//www.wsj.com/articles/fund-bosss-gamble-on-health-law-pays-off-big-1437695522?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>At 78, Scientist Starts a Hedge Fund</strong> <span class="divider"> | </span></span> âIâve still got it,â says George Zweig, who is making his first foray into the hedge fund world since leaving the famously secretive and profitable hedge fund Renaissance.<br /><span class="kicker"><a href="//www.wsj.com/articles/at-78-scientist-is-starting-a-hedge-fund-1437693849?mod=rss_markets_main"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Fiat Chrysler Files for I.P.O. of Ferrari" src="https://static01.nyt.com/images/2015/07/24/business/db-ferrari-web3/db-ferrari-web3-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fiat Chrysler Files for I.P.O. of Ferrari</strong> <span class="divider"> | </span></span> Following the spinoff on the New York Stock Exchange, Fiat Chrysler expects to own 80 percent of the luxury sports car maker.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/24/business/dealbook/fiat-chrysler-files-for-ipo-of-ferrari.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Terrorism-Tracking Firm Raises $450 Million</strong> <span class="divider"> | </span></span> Palantir Technologies, a start-up that focuses on data mining, raised $450 million in a new fund-raising round.<br /><span class="kicker"><a href="https://next.ft.com/639488d4-81c5-3b0b-a9a4-ee4e81242a50"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Huge Deals Bolster Venture Capital Boom in Asia</strong> <span class="divider"> | </span></span> Venture capital investments in Asia soared in the second quarter of this year, thanks to a series of huge deals aimed at building digital champions in China, South Korea and India.<br /><span class="kicker"><a href="https://next.ft.com/1fa19e22-3157-11e5-91ac-a5e17d9b4cff"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Banking Family Plans to File Suit Against Andorra</strong> <span class="divider"> | </span></span> The Cierco family is seeking to be compensated for the loss of its banking assets after the United States Treasury Department identified the principality as a likely laundering hub.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/24/business/international/banking-family-plans-to-file-suit-against-andorra.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Government Pension Cuts Tangled in Patchwork of Legal Rulings" src="https://static01.nyt.com/images/2015/07/24/business/24db-pensions-web1/24db-pensions-web1-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Government Pension Cuts Tangled in Patchwork of Legal Rulings</strong> <span class="divider"> | </span></span> Steps taken by states and cities to rein in pension plans have resulted in a tide of litigation, with vexing and sometimes contradictory results.<br /><span class="kicker"><a href="//www.nytimes.com/2015/07/24/business/dealbook/government-pension-cuts-tangled-in-patchwork-of-legal-rulings.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/07/24/morning-agenda-nikkei-buys-the-pink-paper/"
+					data-title="Morning Agenda: Nikkei Buys the Pink Paper"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;5 Men, 2 Fraud Schemes, 1 Hacking | Blackstone C.F.O. Said to Be Headed to Airbnb | Opportunities in Struggling Puerto Rico&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/07/24/morning-agenda-nikkei-buys-the-pink-paper/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":61,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

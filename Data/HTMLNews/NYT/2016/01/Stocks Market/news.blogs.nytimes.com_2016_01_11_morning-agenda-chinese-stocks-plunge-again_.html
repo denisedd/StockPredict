@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004137109"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1452509963" />
+<meta name="PUD" content="20160111" />
+<meta name="pdate" content="20160111" />
+<meta name="ptime" content="20160111055923" />
+<meta name="utime" content="20160111105923" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-01-11T10:59:23-05:00" />
+<meta name="DISPLAYDATE" content="January 11, 2016" />
+<meta name="dat" content="January 11, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Mayer, Marissa;Yahoo! Inc">
+<meta name="des" content="Audio Recordings, Downloads and Streaming;Banking and Financial Institutions;Building (Construction);Chemicals;China;E-Commerce;General Electric Company;Machinery and Equipment;Shenzhen Stock Exchange;Stocks and Bonds;UBS AG">
+<meta name="org" content="Arch Coal Inc;BlueCrest Capital Management LP;Cohen, Steven A;Hedge Funds;Lloyds Banking Group Plc;SAC Capital Advisors;Schwarzman, Stephen A;Securities and Exchange Commission;The Blackstone Group">
+<meta name="geo" content="Wall Street (Manhattan, NY)">
+<meta name="ticker" content="Arch Coal Inc|ACI|NYSE;Lloyds Banking Group Plc|LYG|NYSE" />
+<meta property="article:tag" content="Mayer Marissa" />
+<meta property="article:tag" content="Yahoo! Inc" />
+<meta property="article:tag" content="Audio Recordings Downloads and Streaming" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Building (Construction)" />
+<meta property="article:tag" content="Chemicals" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="E-Commerce" />
+<meta property="article:tag" content="General Electric Company" />
+<meta property="article:tag" content="Machinery and Equipment" />
+<meta property="article:tag" content="Shenzhen Stock Exchange" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="UBS AG" />
+<meta property="article:tag" content="Arch Coal Inc" />
+<meta property="article:tag" content="BlueCrest Capital Management LP" />
+<meta property="article:tag" content="Cohen Steven A" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Lloyds Banking Group Plc" />
+<meta property="article:tag" content="SAC Capital Advisors" />
+<meta property="article:tag" content="Schwarzman Stephen A" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="Wall Street (Manhattan NY)" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Mayer Marissa,Yahoo! Inc,Audio Recordings Downloads and Streaming,Banking and Financial Institutions,Building (Construction),Chemicals,China,E-Commerce,General Electric Company,Machinery and Equipment,Shenzhen Stock Exchange,Stocks and Bonds,UBS AG,Arch Coal Inc,BlueCrest Capital Management LP,Cohen Steven A,Hedge Funds,Lloyds Banking Group Plc,SAC Capital Advisors,Schwarzman Stephen A,Securities and Exchange Commission,The Blackstone Group,Wall Street (Manhattan NY),DealBook" />
+<meta name="news_keywords" content="Chemicals,E Commerce" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F01%2F11%2Fmorning-agenda-chinese-stocks-plunge-again%2F" title="Morning Agenda: Chinese Stocks Plunge Again" />
+<meta name="description" content="Steven Cohen Will Be Free to Manage Outside Money in 2 Years &#124; Yahoo&#8217;s Brain Drain Shows Loss of Faith" />
+<meta name="hdl" content="Morning Agenda: Chinese Stocks Plunge Again" />
+<meta property="og:title" content="Morning Agenda: Chinese Stocks Plunge Again" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/01/11/morning-agenda-chinese-stocks-plunge-again/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Steven Cohen Will Be Free to Manage Outside Money in 2 Years &#124; Yahoo&#8217;s Brain Drain Shows Loss of Faith" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Chinese Stocks Plunge Again" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/01/11/morning-agenda-chinese-stocks-plunge-again/" />
+<meta name="twitter:description" content="Steven Cohen Will Be Free to Manage Outside Money in 2 Years &#124; Yahoo&#8217;s Brain Drain Shows Loss of Faith" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/01/08/what-were-reading-119/' />
+<link rel='next' title='Morning Agenda: No Bottom in Sight for Oil Prices' href='//news.blogs.nytimes.com/2016/01/12/morning-agenda-no-bottom-in-sight-for-oil-prices/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/01/11/morning-agenda-chinese-stocks-plunge-again/' />
+<link rel='shortlink' href='//nyti.ms/1RFC1RS' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/01/11/morning-agenda-chinese-stocks-plunge-again/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Chinese Stocks Plunge Again - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4013 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Chinese Stocks Plunge Again        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/01/11/morning-agenda-chinese-stocks-plunge-again/"
+	 data-title="Morning Agenda: Chinese Stocks Plunge Again"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Steven Cohen Will Be Free to Manage Outside Money in 2 Years | Yahoo&#039;s Brain Drain Shows Loss of Faith&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/01/11/morning-agenda-chinese-stocks-plunge-again/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="January 11, 2016 5:59 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Chinese Stocks Plunge Again</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-01-11T10:59:23+00:00" itemprop="datePublished">January 11, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">January 11, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4013 post type-post status-publish hentry category-dealbook tag-arch-coal-inc tag-audio-recordings-downloads-and-streaming tag-banking-and-financial-institutions tag-bluecrest-capital-management-lp tag-building-construction tag-chemicals tag-china tag-cohen-steven-a tag-e-commerce tag-general-electric-company tag-hedge-funds tag-lloyds-banking-group-plc tag-machinery-and-equipment tag-mayer-marissa tag-sac-capital-advisors tag-schwarzman-stephen-a tag-securities-and-exchange-commission tag-shenzhen-stock-exchange tag-stocks-and-bonds tag-the-blackstone-group tag-ubs-ag tag-wall-street-manhattan-ny tag-yahoo-inc per-mayer-marissa per-yahoo-inc des-audio-recordings-downloads-and-streaming des-banking-and-financial-institutions des-building-construction des-chemicals des-china des-e-commerce des-general-electric-company des-machinery-and-equipment des-shenzhen-stock-exchange des-stocks-and-bonds des-ubs-ag org-arch-coal-inc org-bluecrest-capital-management-lp org-cohen-steven-a org-hedge-funds org-lloyds-banking-group-plc org-sac-capital-advisors org-schwarzman-stephen-a org-securities-and-exchange-commission org-the-blackstone-group geo-wall-street-manhattan-ny news_keywords-chemicals news_keywords-e-commerce-2" id="post-4013">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Chinese Stocks Plunge Again</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-01-11T10:59:23+00:00" itemprop="datePublished">January 11, 2016 5:59 am</time>
+			<!-- date updated --><span class="visually-hidden updated">January 11, 2016 5:59 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/01/11/morning-agenda-chinese-stocks-plunge-again/" data-title="Morning Agenda: Chinese Stocks Plunge Again" data-description="Steven Cohen Will Be Free to Manage Outside Money in 2 Years | Yahoo&#039;s Brain Drain Shows Loss of Faith">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CHINESE STOCKS PLUNGE AGAIN</strong> <span class="divider"> | </span></span> The volatility in Chinese markets has not let up. <b>The main Shanghai share index fell 5.3 percent</b> on Monday and the Shenzhen index ended the day down 6.6 percent, <a href="//www.nytimes.com/2016/01/12/business/dealbook/china-hong-kong-stock-markets.html?ref=international">Neil Gough reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody"><b>The selloff spilled over into Hong Kong</b>, where the main Hang Seng index closed down 2.8 percent. Markets in the rest of Asia, however, experienced only modest declines. </p>
+<p class="story-body-text" itemprop="articleBody">On Monday, the government set the renminbiâs official exchange rate stronger against the dollar.<br />
+<b>The strengthening prompted a scramble for offshore renminbi in Hong Kong</b>, where the currency is more freely traded, albeit in smaller volumes.</p>
+<p class="story-body-text" itemprop="articleBody">The overnight bank-to-bank borrowing rate for offshore renminbi in Hong Kong spiked on Monday to a record high of 13.4 percent. Such a sharp, short-term spike in demand can indicate a so-called short squeeze, in which investors betting that the currency will continue to weaken are forced to buy it to avoid losses, temporarily bolstering its value.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Shares in Europe inched lower in early trading.</b> The blue-chip FTSE 100 in London declined 0.4 percent while the DAX in Frankfurt fell 0.3 percent.</p>
+<p class="story-body-text" itemprop="articleBody">In the United States, Wall Street started the new year with a shudder â a salutary reminder that investing in stocks is inherently risky,<br />
+<a href="//www.nytimes.com/2016/01/10/your-money/one-market-prediction-is-sure-wall-street-will-be-wrong.html?ref=business">Jeff Sommer writes in the Strategies column.</a> <b>The unpleasant truth is that there is no reliable way to predict the short-term path of the market.</b> </p>
+<p class="story-body-text" itemprop="articleBody">But you might not know that from the forecasts of major Wall Street investment houses. Many analysts have issued very specific predictions and the consensus on Wall Street is that the S.&#038;P. 500 will rise 7 percent for all of 2016. </p>
+<p class="story-body-text" itemprop="articleBody">Bespoke Investment Group, however, began their 2016 forecast with this disarming statement: <b>âWe have no idea.â</b> </p>
+<p class="story-body-text" itemprop="articleBody">What is likely, if not absolutely certain, is that the Wall Street consensus will be wrong. </p>
+<p class="story-body-text" itemprop="articleBody">The Bespoke report reviewed the recent history of Wall Street predictions and found them wanting. <b>Predictions were inaccurate in every single year, sometimes by preposterous margins.</b></p>
+<p class="story-body-text" itemprop="articleBody">That does not mean that market analysis is useless, but data from S&#038;P Dow Jones Indices indicate that <b>most people would fail</b> if they tried to predict the direction of the overall market or of particular stocks and bonds. </p>
+<p class="story-body-text" itemprop="articleBody">When it comes to where the market is heading this year, <b>you might as well flip a coin</b>, Mr. Sommer says.   </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>STEVEN COHEN WILL BE FREE TO MANAGE OUTSIDE MONEY IN 2 YEARS</strong> <span class="divider"> | </span></span> Steven A. Cohen, the billionaire investor, reached a deal with the Securities and Exchange Commission that will <b>bar him from managing money for outside investors for the next two years</b>,<br />
+<a href="//www.nytimes.com/2016/01/09/business/dealbook/sec-and-steven-cohen-reach-settlement-in-insider-trading-case.html?ref=dealbook">Matthew Goldstein and Alexandra Stevenson report in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">The deal is a far cry from the lifetime ban that securities regulators sought when they filed a âfailure to superviseâ case against him and means <b>he will walk away largely unscathed from nearly a decade of investigations</b> into accusations of insider trading at his former hedge fund, SAC Capital. He is not paying a fine in the settlement. </p>
+<p class="story-body-text" itemprop="articleBody">Lifetime bans from the industry are rare, but the case brought against him was one of the most prominent of recent years. </p>
+<p class="story-body-text" itemprop="articleBody"><b>SAC Capital pleaded guilty in 2013 to insider trading charges</b> and paid a record $1.8 billion penalty. It also had to return outside money to investors. </p>
+<p class="story-body-text" itemprop="articleBody"><b>The S.E.C. had accused Mr. Cohen of failing to properly supervise Mathew Martoma</b>, a former trader at SAC who was convicted on charges that he used inside information to generate profits and avoid losses totaling $275 million while working at the hedge fund. </p>
+<p class="story-body-text" itemprop="articleBody"><b>âResolving the case gives us certainty and opens the path to raising outside capital,â</b> Mr. Cohen wrote in a memo on Friday to his employees. </p>
+<p class="story-body-text" itemprop="articleBody">Still, this has come at a cost to Mr. Cohen. Top traders left and legal costs mounted when SAC Capital was investigated. Some questioned how he had managed to outperform the industry for so many years. <b>The settlement order also had strong words about Mr. Cohen, blaming him for ignoring red flags.</b> </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>Alcoa</b> presents its latest quarterly earnings at 5 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>YAHOOâS BRAIN DRAIN SHOWS LOSS OF FAITH</strong> <span class="divider"> | </span></span> Morale has sunk so low at Yahoo that some employees refer to Marissa Mayer, the chief executive, as âEvita,â â a reference to Eva PerÃ³nâs outsize ego and her climb to power and wealth. </p>
+<p class="story-body-text" itemprop="articleBody">Ms. Mayer is about to make herself even more unpopular with her last-ditch plan to streamline the company,<br />
+<a href="//www.nytimes.com/2016/01/11/technology/yahoos-brain-drain-shows-a-loss-of-faith-inside-the-company.html?ref=business">Vindu Goel writes in The New York Times.</a> <b>The plan includes significant layoffs</b> and is expected to be announced before the end of the month. </p>
+<p class="story-body-text" itemprop="articleBody">More than 15 current and former employees from all levels of the company said many workers had lost faith in Ms. Mayerâs leadership. <b>More than a third of the companyâs work force has left in the last year</b>, people familiar with the data say. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Ms. Mayer has approved hefty retention packages to stem the brain drain</b>, but these have created resentment among employees who have stayed loyal.</p>
+<p class="story-body-text" itemprop="articleBody">Yahoo declined to comment on morale, but said that turnover was normal at Silicon Valley companies and that many others had been hired. </p>
+<p class="story-body-text" itemprop="articleBody">One Yahoo employee said she was praying to be laid off so she could collect a severance payment and move on with her life. Others said they were actively looking for new jobs, but the task was more difficult because of the taint of failure that some employers associated with anyone at the struggling company. </p>
+<p class="story-body-text" itemprop="articleBody">Employees started losing faith in Ms. Mayer in August 2014, when Yahoo embarked on a series of <b>stealth layoffs that paralyzed the company</b> according to people who watched the process. </p>
+<p class="story-body-text" itemprop="articleBody">Ms. Mayer told employees that the bloodletting was over last March, but changed her mind shortly after. <b>About 1,100 people lost their jobs in the layoffs.</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="ChemChina to Buy German Machinery Company for $1 Billion" src="https://static01.nyt.com/images/2016/01/12/business/12db-chinachem-web/12db-chinachem-web-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ChemChina to Buy German Machinery Company for $1 Billion</strong> <span class="divider"> | </span></span> One of Chinaâs largest chemical companies is acquiring KraussMaffei, a German machinery marker, from Onex, a Canadian private equity firm.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/12/business/dealbook/chemchina-krauss-maffei.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A Month After G.E. Deal Falters, Electrolux Chief Announces Heâll Retire</strong> <span class="divider"> | </span></span> Keith McLoughlin will be replaced by Jonas Samuelson, who leads Electroluxâs major appliances business for Europe, the Middle East and Africa.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/12/business/dealbook/electrolux-ceo-keith-mcloughlin-retire.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Stocks in K-Pop Streaming Service Jump on News of Takeover Offer</strong> <span class="divider"> | </span></span> Shares in Loen Entertainment, the Korean operator of the Spotify-like MelOn music service, rose after the company attracted a $1.5 billion takeover offer from the messaging service Kakao Corporation.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-01-11/k-pop-streamer-loen-jumps-as-kakao-to-buy-1-5-billion-stake">BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Laing OâRourke to Sell Australian Construction Arm</strong> <span class="divider"> | </span></span> Laing OâRourke, a British engineer, has put its Australian operation up for sale as infrastructure spending in the country shifts away from oil, gas and mining projects to roads and railways.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/c3f04712-b82a-11e5-b151-8e15c9a029fb.html#axzz3wvP5e5iD"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinese Social-Shopping Start-Up to Acquire Competitor</strong> <span class="divider"> | </span></span> Mogujie.com, one of Chinaâs biggest fashion-focused e-commerce services, has agreed to take over a competitor to form a new company valued at about $2.5 billion, in the latest of a series of mergers among technology startups.<br /><span class="kicker"><a href="//www.wsj.com/articles/chinese-social-shopping-startup-mogujie-to-acquire-competitor-1452481450">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Big Five Investment Banks Hurt by China and Oil </strong> <span class="divider"> | </span></span> Results to be presented over the next week and a half are expected to show the big five investment banks in the United States generated even less revenue from trading in the last three months of the year than in the troublesome third quarter.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/71337f8a-b55f-11e5-b147-e5e5bba42e51.html#axzz3wvP5e5iD"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>UBS Plans to Double Staff in China</strong> <span class="divider"> | </span></span> UBS Group will double its staff in China over five years, adding about 600 people as Sergio Ermotti, the chief executive, bets a time of volatile markets is as good as any for increasing operations.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-01-11/ubs-to-double-china-headcount-over-five-years-ermotti-says"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lloyds Said to Maintain $2,906 Restriction on Cash Bonuses</strong> <span class="divider"> | </span></span> Lloyds Banking Group, Britainâs largest mortgage lender, is set to keep a restriction of 2,000 pounds, or about $2,906, on cash bonuses until after the government has sold all of its shares, Bloomberg News reports, citing two people with knowledge of the matter.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-01-11/lloyds-said-to-maintain-2-000-pound-restriction-on-cash-bonuses">BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Schwarzman Scholars Announces Inaugural Class to Study in China" src="https://static01.nyt.com/images/2016/01/11/business/scholar/scholar-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Schwarzman Scholars Announces Inaugural Class to Study in China</strong> <span class="divider"> | </span></span> The scholarship program, created by Stephen A. Schwarzman, the chief executive of Blackstone, has chosen 111 students for a fully funded masterâs program in Beijing.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/11/business/dealbook/schwarzman-scholars-announces-inaugural-class-to-study-in-china.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstone to Invest Another $1 Billion in India in 2016</strong> <span class="divider"> | </span></span> Blackstone has put more than $5 billion into India since entering the market in 2005, making it the countryâs largest private investor by assets.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/2e5c9ad2-b764-11e5-a7cc-280dfe875e28.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3wvP5e5iD">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>TPG Capital Hiring Former Head of World Bank Private-Sector Investment Arm</strong> <span class="divider"> | </span></span> Jin-Yong Cai, a Chinese deal maker and former Goldman Sachs partner who most recently led the International Finance Corporation, will be in charge of overseeing billions of dollars in investments for TPG across Asia and Africa.<br /><span class="kicker"><a href="//www.wsj.com/articles/tpg-capital-hiring-former-head-of-world-bank-private-sector-investment-arm-1452486499"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Swaps Payout Is a Windfall for Funds</strong> <span class="divider"> | </span></span> BlueCrest Capital Management and BlueMountain Capital Management stand to be among the biggest beneficiaries from the nearly $1.9 billion settlement of a lawsuit challenging how credit derivatives were traded after the financial crisis, The Wall Street Journal reports, citing estimates from people familiar with the case.<br /><span class="kicker"><a href="//www.wsj.com/articles/swaps-payout-is-a-windfall-for-funds-1452464537">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Investor in the Mood to Cut Hedge Fund Exposure </strong> <span class="divider"> | </span></span> Preqinâs survey of institutional investors showed that more are planning to cut their hedge fund holdings this year than are planning to increase them.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/0ae1cba6-b640-11e5-b147-e5e5bba42e51.html#axzz3wvP5e5iD"> THE FINANCIAL TIMES  </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Italian REITs Seek to Test Appetite for Property with I.P.O.s</strong> <span class="divider"> | </span></span> The initial public offerings on Borsa Italiana come as international investors show increased interest in the countryâs property assets, turning their attention from other postcrisis markets, like Spain and Ireland.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/b6affede-b60a-11e5-b147-e5e5bba42e51.html#axzz3wvP5e5iD"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bruin Sports to Team Up With Others as Investor</strong> <span class="divider"> | </span></span> Bruin Sports Capital is expected to announce Courtside Ventures on Monday, a new $35 million venture investment firm to be based in Detroit and New York that is meant to invest in nascent sports and media technology start-ups.<br /><span class="kicker"><a href="//www.nytimes.com/2016/01/11/business/dealbook/bruin-sports-to-team-up-with-others-as-investor.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Arch Coal Files for Bankruptcy</strong> <span class="divider"> | </span></span> Arch Coal, one of the largest coal producers in the United States, said on Monday that it had filed for Chapter 11 bankruptcy protection as part of a reorganization plan aimed at trimming $4.5 billion in debt.<br /><span class="kicker"><a href="//www.wsj.com/articles/arch-coal-files-for-bankruptcy-1452500976">THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/01/11/morning-agenda-chinese-stocks-plunge-again/"
+					data-title="Morning Agenda: Chinese Stocks Plunge Again"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Steven Cohen Will Be Free to Manage Outside Money in 2 Years | Yahoo&#039;s Brain Drain Shows Loss of Faith&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/01/11/morning-agenda-chinese-stocks-plunge-again/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":49,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

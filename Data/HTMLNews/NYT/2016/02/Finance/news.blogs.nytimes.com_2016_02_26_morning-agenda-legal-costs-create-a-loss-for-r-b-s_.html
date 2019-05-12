@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004235267"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1456484124" />
+<meta name="PUD" content="20160226" />
+<meta name="pdate" content="20160226" />
+<meta name="ptime" content="20160226055524" />
+<meta name="utime" content="20170918184313" />
+<meta property="article:modified_time" itemprop="dateModified" content="2017-09-18T18:43:13-04:00" />
+<meta name="DISPLAYDATE" content="February 26, 2016" />
+<meta name="dat" content="February 26, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Ackman, William A">
+<meta name="des" content="Accounting and Accountants;Airports;Dodd-Frank Wall Street Reform and Consumer Protection Act (2010);Endowments;Insurance;London (England);Mortgage-Backed Securities;Royal Bank of Scotland PLC;Samsung Group;Video Recordings, Downloads and Streaming">
+<meta name="org" content="Apple Inc;Energy Transfer Equity LP;ENI S.p.A;Enron Corp;European Union;Foxconn Technology;Group of Twenty;Hedge Funds;Herbalife Ltd;Lloyds Banking Group Plc;Oil (Petroleum) and Gasoline;Pipelines;Puerto Rico;Securities and Commodities Violations;Sharp Corporation;Treasury Department;Williams Companies Inc">
+<meta name="geo" content="Brazil;China;Dalian Wanda Group;France;Japan;Paris (France);Shanghai (China)">
+<meta name="ticker" content="Apple Inc|AAPL|NASDAQ;Herbalife Ltd|HLF|NYSE;Lloyds Banking Group Plc|LYG|NYSE;Williams Companies Inc|WMB|NYSE" />
+<meta property="article:tag" content="Ackman William A" />
+<meta property="article:tag" content="Accounting and Accountants" />
+<meta property="article:tag" content="Airports" />
+<meta property="article:tag" content="Dodd-Frank Wall Street Reform and Consumer Protection Act (2010)" />
+<meta property="article:tag" content="Endowments" />
+<meta property="article:tag" content="Insurance" />
+<meta property="article:tag" content="London (England)" />
+<meta property="article:tag" content="Mortgage-Backed Securities" />
+<meta property="article:tag" content="Royal Bank of Scotland PLC" />
+<meta property="article:tag" content="Samsung Group" />
+<meta property="article:tag" content="Video Recordings Downloads and Streaming" />
+<meta property="article:tag" content="Apple Inc" />
+<meta property="article:tag" content="Energy Transfer Equity LP" />
+<meta property="article:tag" content="ENI S.p.A" />
+<meta property="article:tag" content="Enron Corp" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="Foxconn Technology" />
+<meta property="article:tag" content="Group of Twenty" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Herbalife Ltd" />
+<meta property="article:tag" content="Lloyds Banking Group Plc" />
+<meta property="article:tag" content="Oil (Petroleum) and Gasoline" />
+<meta property="article:tag" content="Pipelines" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="Securities and Commodities Violations" />
+<meta property="article:tag" content="Sharp Corporation" />
+<meta property="article:tag" content="Treasury Department" />
+<meta property="article:tag" content="Williams Companies Inc" />
+<meta property="article:tag" content="Brazil" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Dalian Wanda Group" />
+<meta property="article:tag" content="France" />
+<meta property="article:tag" content="Japan" />
+<meta property="article:tag" content="Paris (France)" />
+<meta property="article:tag" content="Shanghai (China)" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Ackman William A,Accounting and Accountants,Airports,Dodd-Frank Wall Street Reform and Consumer Protection Act (2010),Endowments,Insurance,London (England),Mortgage-Backed Securities,Royal Bank of Scotland PLC,Samsung Group,Video Recordings Downloads and Streaming,Apple Inc,Energy Transfer Equity LP,ENI S.p.A,Enron Corp,European Union,Foxconn Technology,Group of Twenty,Hedge Funds,Herbalife Ltd,Lloyds Banking Group Plc,Oil (Petroleum) and Gasoline,Pipelines,Puerto Rico,Securities and Commodities Violations,Sharp Corporation,Treasury Department,Williams Companies Inc,Brazil,China,Dalian Wanda Group,France,Japan,Paris (France),Shanghai (China),DealBook" />
+<meta name="news_keywords" content="Airport,Brazil,China,Endowments,France,Japan,Personal finance" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F02%2F26%2Fmorning-agenda-legal-costs-create-a-loss-for-r-b-s%2F" title="Morning Agenda: Legal Costs Create a Loss for R.B.S." />
+<meta name="description" content="Nightmare in the Pipeline &#124; Companies Required to Report Leases &#124; Sharp Says Foxconn Talks Are Continuing" />
+<meta name="hdl" content="Morning Agenda: Legal Costs Create a Loss for R.B.S." />
+<meta property="og:title" content="Morning Agenda: Legal Costs Create a Loss for R.B.S." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/02/26/morning-agenda-legal-costs-create-a-loss-for-r-b-s/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Nightmare in the Pipeline &#124; Companies Required to Report Leases &#124; Sharp Says Foxconn Talks Are Continuing" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Legal Costs Create a Loss for R.B.S." />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/02/26/morning-agenda-legal-costs-create-a-loss-for-r-b-s/" />
+<meta name="twitter:description" content="Nightmare in the Pipeline &#124; Companies Required to Report Leases &#124; Sharp Says Foxconn Talks Are Continuing" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Foxconn Delays Takeover of Sharp' href='//news.blogs.nytimes.com/2016/02/25/morning-agenda-foxconn-delays-takeover-of-sharp/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2016/02/26/what-were-reading-131/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/02/26/morning-agenda-legal-costs-create-a-loss-for-r-b-s/' />
+<link rel='shortlink' href='//nyti.ms/1n17r9l' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/02/26/morning-agenda-legal-costs-create-a-loss-for-r-b-s/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Legal Costs Create a Loss for R.B.S. - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-4311 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Legal Costs Create a Loss for R.B.S.        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/02/26/morning-agenda-legal-costs-create-a-loss-for-r-b-s/"
+	 data-title="Morning Agenda: Legal Costs Create a Loss for R.B.S."
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Nightmare in the Pipeline | Companies Required to Report Leases | Sharp Says Foxconn Talks Are Continuing &lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/02/26/morning-agenda-legal-costs-create-a-loss-for-r-b-s/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="February 26, 2016 5:55 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Legal Costs Create a Loss for R.B.S.</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-02-26T10:55:24+00:00" itemprop="datePublished">February 26, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">February 26, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-4311 post type-post status-publish hentry category-dealbook tag-accounting-and-accountants tag-ackman-william-a tag-airports tag-apple-inc tag-brazil tag-china tag-dalian-wanda-group tag-dodd-frank-wall-street-reform-and-consumer-protection-act-2010 tag-endowments tag-energy-transfer-equity-lp tag-eni-s-p-a tag-enron-corp tag-european-union tag-foxconn-technology tag-france tag-group-of-twenty tag-hedge-funds tag-herbalife-ltd tag-insurance tag-japan tag-lloyds-banking-group-plc tag-london-england tag-mortgage-backed-securities tag-oil-petroleum-and-gasoline tag-paris-france tag-pipelines tag-puerto-rico tag-royal-bank-of-scotland-plc tag-samsung-group tag-securities-and-commodities-violations tag-shanghai-china tag-sharp-corporation tag-treasury-department tag-video-recordings-downloads-and-streaming tag-williams-companies-inc per-ackman-william-a des-accounting-and-accountants des-airports des-dodd-frank-wall-street-reform-and-consumer-protection-act-2010 des-endowments des-insurance des-london-england des-mortgage-backed-securities des-royal-bank-of-scotland-plc des-samsung-group des-video-recordings-downloads-and-streaming org-apple-inc org-energy-transfer-equity-lp org-eni-s-p-a org-enron-corp org-european-union org-foxconn-technology org-group-of-twenty org-hedge-funds org-herbalife-ltd org-lloyds-banking-group-plc org-oil-petroleum-and-gasoline org-pipelines org-puerto-rico org-securities-and-commodities-violations org-sharp-corporation org-treasury-department org-williams-companies-inc geo-brazil geo-china geo-dalian-wanda-group geo-france geo-japan geo-paris-france geo-shanghai-china news_keywords-airport news_keywords-brazil news_keywords-china news_keywords-endowments news_keywords-france news_keywords-japan news_keywords-personal-finance" id="post-4311">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Legal Costs Create a Loss for R.B.S.</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-02-26T10:55:24+00:00" itemprop="datePublished">February 26, 2016 5:55 am</time>
+			<!-- date updated --><span class="visually-hidden updated">February 26, 2016 5:55 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/02/26/morning-agenda-legal-costs-create-a-loss-for-r-b-s/" data-title="Morning Agenda: Legal Costs Create a Loss for R.B.S." data-description="Nightmare in the Pipeline | Companies Required to Report Leases | Sharp Says Foxconn Talks Are Continuing ">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>LEGAL COSTS CREATE A LOSS FOR R.B.S.</strong> <span class="divider"> | </span></span> The Royal Bank of Scotland reported <b>another multibillion-dollar loss</b> in the fourth quarter of 2015, largely the result of having to put aside 2.21 billion pounds, or about $3 billion, for legal and regulatory matters,<br />
+<a href="//www.nytimes.com/2016/02/27/business/dealbook/rbs-q4-2015-earnings.html?ref=international">Chad Bray reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody"><b>The bank posted a loss of Â£2.74 billion</b>, compared with a loss of Â£5.79 billion in the fourth quarter of 2014.</p>
+<p class="story-body-text" itemprop="articleBody">It had to make a provision of <b>Â£1.5 billion for mortgage-backed securities litigation in the United States</b> and Â£500 million related to payment protection insurance, an insurance product that was sold to customers when taking out mortgages, applying for credit cards or seeking other loans. British banks have had to pay billions to compensate customers over improper sales of the product. Including the latest charge, the bank has set aside about Â£4.3 billion to cover customer redress related to payment-protection insurance.</p>
+<p class="story-body-text" itemprop="articleBody">The bank is also in the process of restructuring â dismantling its global investment bank and focusing on retail and corporate banking in Britain.</p>
+<p class="story-body-text" itemprop="articleBody">Ewan Stevenson, the chief financial officer of R.B.S., warned that the bank expected <b>âfurther substantial conduct costs to come.â</b></p>
+<p class="story-body-text" itemprop="articleBody">For the full year, <b>the bank reported an annual loss of Â£1.98 billion</b>, from a loss of Â£3.47 billion in 2014. The full-year results included restructuring costs of Â£2.93 billion.</p>
+<p class="story-body-text" itemprop="articleBody">R.B.S has not posted a full-year profit since 2007.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>NIGHTMARE IN THE PIPELINE</strong> <span class="divider"> | </span></span> Shares in Williams Companies plunged on Thursday after The New York Times reported that Energy Transfer had considered <b>offering a payment of more than $2 billion for it to walk away from a deal</b>, <a href="//www.reuters.com/article/us-williams-de-m-a-energy-idUSKCN0VY2SA">Reuters reports.</a></p>
+<p class="story-body-text" itemprop="articleBody">The plunge in oil prices created plenty of problems for energy companies, but Energy Transfer has also had to struggle with <b>buyerâs remorse after striking a $38 billion deal to buy Williams Companies</b>,<br />
+<a href="//www.nytimes.com/2016/02/26/business/dealbook/once-a-coup-energy-transfer-deal-becomes-a-nightmare.html?ref=dealbook">Leslie Picker and Julie Creswell report in DealBook</a>.</p>
+<p class="story-body-text" itemprop="articleBody">Kelcy Warren, Energy Transferâs chief executive, pursued Williams Companies doggedly for months, but the deal seems to have soured just five months after signing.</p>
+<p class="story-body-text" itemprop="articleBody">Shares of both companies had plummeted more than 60 percent even before the Times report, shedding a combined $37 billion in market value. This was partly because of the decline in energy prices, but <b>investors are also quavering about the complicated merger</b>.</p>
+<p class="story-body-text" itemprop="articleBody">The value of the deal took another hit on Thursday after Energy Transfer published disappointing earnings.</p>
+<p class="story-body-text" itemprop="articleBody">Now <b>Energy Transfer is frantically searching for a way out</b>, although it never presented the offer of a $2 billion payment for walking away.</p>
+<p class="story-body-text" itemprop="articleBody"><b>It also has another looming problem.</b> Under the terms of the deal, Energy Transfer has to pay $6 billion in cash to Williams as part of the cash-and-stock acquisition. It will have to either raise additional debt or sell assets, but cascading energy prices have made both options unattractive. One of Williamsâs biggest customers is also facing bankruptcy.</p>
+<p class="story-body-text" itemprop="articleBody">Short of filing for bankruptcy itself, <b>Energy Transfer is stuck buying Williams</b>, people involved in the transaction say. Williams shareholders, however, could still vote down the merger.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>COMPANIES REQUIRED TO REPORT LEASES</strong> <span class="divider"> | </span></span> The Enron accounting scandal happened nearly 15 years ago, but a new accounting rule announced on Thursday shows that its effect is still being felt in corporate America.</p>
+<p class="story-body-text" itemprop="articleBody">The Financial Accounting Standards Board issued <b>a rule that changes how companies account for most of their leases</b>,</p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/02/26/business/dealbook/accounting-of-company-leases-required-by-new-rule.html?ref=dealbook">Peter Eavis reports in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Leases are similar to loans, but companies have been allowed to exclude leases, and thus their true financial obligations, from their financial statements.</p>
+<p class="story-body-text" itemprop="articleBody">The new rules requires that the most common type of lease be included on a companyâs balance sheets.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Regulators started considering this change after Enron collapsed in 2001</b>. Its executives made the company look stronger by keeping some of its financial obligations âoff-balance sheet.â</p>
+<p class="story-body-text" itemprop="articleBody">The Financial Accounting Standards Board estimates that the rule <b>could add more than $1 trillion of obligations to liabilities on the balance sheets of public companies</b> traded in the United States. This compares with $26 trillion of total liabilities.</p>
+<p class="story-body-text" itemprop="articleBody">Companies had criticized the rule because of the possibility that it might make them look more indebted, but the lease obligations would be offset by corresponding assets and would not erode a companyâs net worth. <b>It would also make it easier for investors to compare the strength of several companies in one sector.</b></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> A revised estimate of <b>economic growth</b> in the fourth quarter of 2015 will be released at 8:30 a.m. Data on <b>consumer spending</b> during January will be released at 10 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>SHARP SAYS FOXCONN TALKS ARE CONTINUING</strong> <span class="divider"> | </span></span> After confusion on Thursday over whether the deal for Foxconn to buy Sharp was going ahead, Sharp said on Friday that talks were continuing, <a href="//www.wsj.com/articles/sharp-says-foxconn-takeover-talks-are-ongoing-1456465632?mod=pls_whats_news_us_business_f">The Wall Street Journal reports.</a></p>
+<p class="story-body-text" itemprop="articleBody">âSharp is in talks with Foxconn to seal a deal, including cross-checking various of our business conditions, including potential risks including contingent liabilities,â Sharp said in a statement to the Tokyo Stock Exchange.</p>
+<p class="story-body-text" itemprop="articleBody">âWeâve been appropriately disclosing contingent liabilities through financial reports, based on accounting rules. <b>We recognize no more such risks that need to be disclosed.â</b></p>
+<p class="story-body-text" itemprop="articleBody">Sharp announced on Thursday that it had agreed to a takeover by Foxconn, but <b>Foxconn unexpectedly balked just before the deal was to be completed</b> , as <a href="//www.nytimes.com/2016/02/26/business/foxconn-sharp.html?ref=international">Jonathan Soble and David Barboza report in DealBook.</a></p>
+<p class="story-body-text" itemprop="articleBody">Foxconn had delayed because Sharp had said the day before that it could be liable for <b>close to $3 billion in potential liabilities</b>, according to a person with knowledge of the talks. Foxconn said it needed to review ânew material informationâ from Sharp before committing.</p>
+<p class="story-body-text" itemprop="articleBody"><b>The decision raises questions about what might be lurking in Sharpâs books.</b></p>
+<p class="story-body-text" itemprop="articleBody">It was not meant to be like this, <a href="//www.nytimes.com/2016/02/26/business/dealbook/sharps-messy-milestone.html?ref=dealbook">Quentin Webb writes in Breakingviews</a>.</p>
+<p class="story-body-text" itemprop="articleBody">When Foxconn became the leading bidder, <b>it seemed like a promising sign of change in corporate Japan</b>. A victory would mean the board picked the most compelling pitch, not the establishment favorite.</p>
+<p class="story-body-text" itemprop="articleBody">In truth, <b>Foxconnâs bid is far more respectful of the status quo </b> than Innovation Networkâs breakup proposal, and softer on creditors, too.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Failure at this stage would embarrass all concerned</b> and the communications breakdown does not bode well for any deal in the future.</p>
+<p class="story-body-text" itemprop="articleBody">Sharp now looks either desperate in leaving it so late to share important data points, or confused in failing to understand Foxconn.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &amp; Acquisitions Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/02/27/business/27db-Londoncity/27db-Londoncity-square320.jpg" alt="Canadian-Led Consortium to Buy London City Airport" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Canadian-Led Consortium to Buy London City Airport</strong> <span class="divider"> | </span></span> The group was said to have agreed to pay $2.8 billion for the company that operates the airport, which is close to the center of London.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/02/27/business/dealbook/london-city-airport.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Merger Plans Fall Apart for Oi, Troubled Brazilian Telecom</strong> <span class="divider"> | </span></span> Telecom Italiaâs Brazilian operator said it was ending talks with Oi on a merger proposed by a Russian oligarch.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/02/26/business/dealbook/oi-troubled-brazilian-telecom-rejects-a-merger-offer.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinese Suitors Said to Plan Offers for Ausgrid</strong> <span class="divider"> | </span></span> State Grid Corporation of China, the nationâs biggest electricity distributor, and the billionaire Li Ka-shingâs Cheung Kong Infrastructure Holdings are among the suitors planning to submit bids for the Australian power network Ausgrid, Bloomberg News reports, citing people with knowledge of the matter.<br />
+<span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-02-26/cheung-kong-china-suitors-said-to-plan-bids-for-australian-grid"> bloomberg news </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Samsung Said to Be Restarting Talks to Buy Tidal </strong> <span class="divider"> | </span></span> According to The New York Post, a source close to the talks said, âSamsung is re-engaging; they are working on something really big, and theyâre keeping it very quiet in case it leaks.â<br />
+<span class="kicker"><a href="//nypost.com/2016/02/25/samsung-restarting-tidal-acquisition-talks/">new york post </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Wanda Group Sets Its Sights on Franceâs Europa City</strong> <span class="divider"> | </span></span> The Chinese real-estate and entertainment conglomerate Dalian Wanda Group is in advanced talks to invest in a retail and cultural development known as Europa City near Paris, The Wall Street Journal reports, citing people familiar with the situation.<br />
+<span class="kicker"><a href="//www.wsj.com/articles/chinas-wanda-group-sets-its-sights-on-frances-europa-city-1456401575">the wall street journal </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche BÃ¶rse Timed London Stock Exchange Bid to Exploit E.U. Uncertainty</strong> <span class="divider"> | </span></span> Deutsche BÃ¶rse deliberately began its bid for the London Stock Exchange Group during the uncertainty surrounding Britainâs referendum to upstage rivals in the United States, The Financial Times reports, citing people close to the negotiations.</p>
+<p class="story-body-text" itemprop="articleBody"><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/8e110728-dbe1-11e5-a72f-1e7744c66818.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz40rm7bpGI">the financial times </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lloyds Bank&#8217;s Dividend Surprise Sweetens Profit Miss</strong> <span class="divider"> | </span></span> Lloyds Banking Group rewarded investors with a surprise Â£2 billion payout on Thursday, underlining its intent to be the biggest dividend payer among Britainâs banks and its recovery after a state bailout.<br />
+<span class="kicker"><a href="//www.nytimes.com/reuters/2016/02/25/business/25reuters-lloyds-results.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Japan Post Bank Faces Bigger Hit from Negative Rates</strong> <span class="divider"> | </span></span> The negative rates policy, which came into effect last week, will subject an estimated 10 trillion yen, or about $88.6 billion, of cash parked at the Bank of Japan by the nationâs combined financial institutions to an interest rate of minus 0.1 percent.<br />
+<span class="kicker"><a href="//www.ft.com/intl/cms/s/0/6597f63c-dba8-11e5-a72f-1e7744c66818.html#axzz40rm7bpGI">the financial times </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/02/26/business/26stewart/26stewart-square320.jpg" alt="In College Endowment Returns, Davids Beat the Goliaths" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>In College Endowment Returns, Davids Beat the Goliaths</strong> <span class="divider"> | </span></span> In the latest Nacubo-Commonfund study, endowments under $25 million averaged a five-year annualized return of 10.6 percent versus 10.4 in the $1 billion-plus category, James B. Stewart writes in the Common Sense column.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/02/26/business/in-college-endowment-returns-davids-beat-the-goliaths.html">Common Sense Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS Â»</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Elliott Defends Acquisition of Samsung C&amp;T Stake</strong> <span class="divider"> | </span></span> The hedge fund Elliott Associates denied any wrongdoing on Friday in its acquisition of shares in Samsungâs de facto holding company, after South Koreaâs top financial regulator announced it would investigate the deal.<br />
+<span class="kicker"><a href="//www.wsj.com/articles/elliott-associates-defends-acquisition-of-samsung-c-t-stake-1456460574?mod=asia_home"> the wall street journal</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Hedge Funds Spar Over Norske Skog Debt Restructuring</strong> <span class="divider"> | </span></span> The dispute centers on a contentious style of hedge fund trading that involves buying up the debt of distressed companies while at the same time seeking to profit from bets that the company will default.<br />
+<span class="kicker"><a href="//www.ft.com/intl/cms/s/0/ea90717a-dbad-11e5-98fd-06d75973fe09.html">the financial times </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY Â»</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/02/26/business/26db-rico/26db-rico-square320-v2.jpg" alt="Treasury Official Urges Solution for Puerto Rico" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Treasury Official Urges Solution for Puerto Rico</strong> <span class="divider"> | </span></span> Some lawmakers worry that a debt restructuring for the island, similar to bankruptcy, could have broad implications for statesâ debt.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/02/26/business/dealbook/treasury-official-urges-solution-for-puerto-rico.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Eni, Hit by Falling Oil Prices, Reports $9.4 Billion Loss</strong> <span class="divider"> | </span></span> The Italian oil giant became the latest energy company to be hit by sharply lower crude prices, which have slashed revenue and led to asset write-downs.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/02/27/business/energy-environment/eni-earnings-oil.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/02/25/business/26courtroom-drawings-slide-4CLG/26courtroom-drawings-slide-4CLG-square320.jpg" alt="Library of Congress Acquires Drawings of Courtroom Drama" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Library of Congress Acquires Drawings of Courtroom Drama</strong> <span class="divider"> | </span></span> The sketches bring to life trials as varied as that of Charles Manson in the 1970s to those of recent terrorism suspects.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/02/26/business/dealbook/library-of-congress-acquires-drawings-of-courtroom-drama.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Sorting Out Dodd-Frankâs Treatment of Failed Broker-Dealers</strong> <span class="divider"> | </span></span> Dodd-Frankâs Title II provision for the broker-dealers, also known as âorderly liquidation authority,â has always been a bit confusing.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/02/26/business/dealbook/sorting-out-dodd-franks-treatment-of-failed-broker-dealers.html">In Debt Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Lawmakers Urge Commodities Agency to Keep Plan to Limit Futures Contracts</strong> <span class="divider"> | </span></span> Lawmakers criticized a report, by a committee composed largely of representatives from the energy and trading industries, that advised the C.F.T.C. to drop proposed limits.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/02/26/business/dealbook/lawmakers-urge-commodities-agency-to-keep-plan-to-limit-futures-contracts.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/02/26/business/26APPLEjp/26APPLEjp-square320.jpg" alt="Apple Goes to Court, and F.B.I. Presses Congress to Settle iPhone Privacy Fight" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Apple Goes to Court, and F.B.I. Presses Congress to Settle iPhone Privacy Fight</strong> <span class="divider"> | </span></span> In a court filing, Apple said the order had broad implications that would âinflict significant harm â to civil liberties, society and national security.â<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/02/26/technology/apple-unlock-iphone-fbi-san-bernardino-brief.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/02/26/business/26globalecon2/26globalecon2-square320.jpg" alt="Global Finance Leaders Meet as Economic Skies Darken" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Global Finance Leaders Meet as Economic Skies Darken</strong> <span class="divider"> | </span></span> Government and central bank officials are gathering in Shanghai with few easy answers to sluggishness in Europe, China and Japan.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/02/26/business/international/shanghai-g20-summit-world-economy.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<div class="w75 right"><img src="https://static01.nyt.com/images/2016/02/27/business/27yuan-web1/27yuan-web1-square320.jpg" alt="In Rare Appearance, Chinaâs Central Bank Chief Says All Is Well" width="75" height="75" border="0" /></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>In Rare Appearance, Chinaâs Central Bank Chief Says All Is Well</strong> <span class="divider"> | </span></span> At a news conference at the start of a G-20 meeting, Zhou Xiaochuan dismissed concerns about erosion of Chinaâs foreign currency reserves.<br />
+<span class="kicker"><a href="//www.nytimes.com/2016/02/27/business/international/china-economy-yuan.html">NYT Â»</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Herbalife Says It Is In Talks with F.T.C.</strong> <span class="divider"> | </span></span> The Federal Trade Commission opened an inquiry into Herbalife after allegations by the hedge fund manager William A. Ackman that it had a fraudulent business model that he compared to a pyramid scheme.<br />
+<span class="kicker"><a href="//www.reuters.com/article/herbalife-probe-ftc-idUSL2N1642UI?feedType=RSS&amp;feedName=USLegal">reuters </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></p>
+</div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody">&nbsp;</p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/02/26/morning-agenda-legal-costs-create-a-loss-for-r-b-s/"
+					data-title="Morning Agenda: Legal Costs Create a Loss for R.B.S."
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Nightmare in the Pipeline | Companies Required to Report Leases | Sharp Says Foxconn Talks Are Continuing &lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/02/26/morning-agenda-legal-costs-create-a-loss-for-r-b-s/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":48,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004558526"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1469788420" />
+<meta name="PUD" content="20160729" />
+<meta name="pdate" content="20160729" />
+<meta name="ptime" content="20160729063340" />
+<meta name="utime" content="20160729103340" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-07-29T10:33:40-04:00" />
+<meta name="DISPLAYDATE" content="July 29, 2016" />
+<meta name="dat" content="July 29, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Dalio, Raymond (1949- );Dauman, Philippe P;Ellison, Lawrence J;Redstone, Sumner M;Scaramucci, Anthony;Staley, James E">
+<meta name="des" content="Bank Robberies;Banking and Financial Institutions;Cloud Computing;Computers and the Internet;Enterprise Computing;Federal Taxes (US);Great Britain Withdrawal from EU (Brexit);Hedge Funds;Mergers, Acquisitions and Divestitures;Sovereign Wealth Funds;Start-ups;Venture Capital">
+<meta name="org" content="Amazon.com Inc;Anglo American Corp;Bank of Japan;Barclays PLC;Bridgewater Associates;CBS Corporation;Didi Chuxing;Facebook Inc;Federal Reserve Bank of New York;Goldman Sachs Group Inc;Google Inc;Higher Education Student Assistance Authority (NJ);Internal Revenue Service;Monte dei Paschi di Siena SpA;NetSuite Inc;Oracle Corporation;Skybridge Capital II LLC;Thoma Bravo;Uber Technologies Inc;UBS AG;Viacom Inc">
+<meta name="ticker" content="Amazon.com Inc|AMZN|NASDAQ;Barclays PLC|BCS|NYSE;CBS Corporation|CBS|NYSE;Facebook Inc|FB|NASDAQ;Goldman Sachs Group Inc|GS|NYSE;NetSuite Inc|N|NYSE;Oracle Corporation|ORCL|NYSE;Viacom Inc|VIAB|NASDAQ" />
+<meta property="article:tag" content="Dalio Raymond (1949- )" />
+<meta property="article:tag" content="Dauman Philippe P" />
+<meta property="article:tag" content="Ellison Lawrence J" />
+<meta property="article:tag" content="Redstone Sumner M" />
+<meta property="article:tag" content="Scaramucci Anthony" />
+<meta property="article:tag" content="Staley James E" />
+<meta property="article:tag" content="Bank Robberies" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Cloud Computing" />
+<meta property="article:tag" content="Computers and the Internet" />
+<meta property="article:tag" content="Enterprise Computing" />
+<meta property="article:tag" content="Federal Taxes (US)" />
+<meta property="article:tag" content="Great Britain Withdrawal from EU (Brexit)" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Sovereign Wealth Funds" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Amazon.com Inc" />
+<meta property="article:tag" content="Anglo American Corp" />
+<meta property="article:tag" content="Bank of Japan" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="Bridgewater Associates" />
+<meta property="article:tag" content="CBS Corporation" />
+<meta property="article:tag" content="Didi Chuxing" />
+<meta property="article:tag" content="Facebook Inc" />
+<meta property="article:tag" content="Federal Reserve Bank of New York" />
+<meta property="article:tag" content="Goldman Sachs Group Inc" />
+<meta property="article:tag" content="Google Inc" />
+<meta property="article:tag" content="Higher Education Student Assistance Authority (NJ)" />
+<meta property="article:tag" content="Internal Revenue Service" />
+<meta property="article:tag" content="Monte dei Paschi di Siena SpA" />
+<meta property="article:tag" content="NetSuite Inc" />
+<meta property="article:tag" content="Oracle Corporation" />
+<meta property="article:tag" content="Skybridge Capital II LLC" />
+<meta property="article:tag" content="Thoma Bravo" />
+<meta property="article:tag" content="Uber Technologies Inc" />
+<meta property="article:tag" content="UBS AG" />
+<meta property="article:tag" content="Viacom Inc" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Dalio Raymond (1949- ),Dauman Philippe P,Ellison Lawrence J,Redstone Sumner M,Scaramucci Anthony,Staley James E,Bank Robberies,Banking and Financial Institutions,Cloud Computing,Computers and the Internet,Enterprise Computing,Federal Taxes (US),Great Britain Withdrawal from EU (Brexit),Hedge Funds,Mergers Acquisitions and Divestitures,Sovereign Wealth Funds,Start-ups,Venture Capital,Amazon.com Inc,Anglo American Corp,Bank of Japan,Barclays PLC,Bridgewater Associates,CBS Corporation,Didi Chuxing,Facebook Inc,Federal Reserve Bank of New York,Goldman Sachs Group Inc,Google Inc,Higher Education Student Assistance Authority (NJ),Internal Revenue Service,Monte dei Paschi di Siena SpA,NetSuite Inc,Oracle Corporation,Skybridge Capital II LLC,Thoma Bravo,Uber Technologies Inc,UBS AG,Viacom Inc,DealBook" />
+<meta name="news_keywords" content="Startup" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F07%2F29%2Fmorning-agenda-profits-tumble-at-european-banks%2F" title="Morning Agenda: Profits Tumble at European Banks" />
+<meta name="description" content="Blockbuster Earnings From Google and Amazon &#124;Redstone Trial Set for October" />
+<meta name="hdl" content="Morning Agenda: Profits Tumble at European Banks" />
+<meta property="og:title" content="Morning Agenda: Profits Tumble at European Banks" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/07/29/morning-agenda-profits-tumble-at-european-banks/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Blockbuster Earnings From Google and Amazon &#124;Redstone Trial Set for October" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Profits Tumble at European Banks" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/07/29/morning-agenda-profits-tumble-at-european-banks/" />
+<meta name="twitter:description" content="Blockbuster Earnings From Google and Amazon &#124;Redstone Trial Set for October" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Consumer Agency Proposes New Rules for Debt Collectors' href='//news.blogs.nytimes.com/2016/07/28/morning-agenda-consumer-agency-proposes-new-rules-for-debt-collectors/' />
+<link rel='next' title='What Weâre Reading' href='//news.blogs.nytimes.com/2016/07/29/what-were-reading-175/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/07/29/morning-agenda-profits-tumble-at-european-banks/' />
+<link rel='shortlink' href='//nyti.ms/2amDhbw' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/07/29/morning-agenda-profits-tumble-at-european-banks/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Profits Tumble at European Banks - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5389 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Profits Tumble at European Banks        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/07/29/morning-agenda-profits-tumble-at-european-banks/"
+	 data-title="Morning Agenda: Profits Tumble at European Banks"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Blockbuster Earnings From Google and Amazon |Redstone Trial Set for October&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/29/morning-agenda-profits-tumble-at-european-banks/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="July 29, 2016 6:33 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+				<h3 class="kicker"><span class="kicker-label kicker-dealbook"><a href="//www.nytimes.com/pages/business/dealbook/index.html">DealBook</a></span></h3>		<h1 class="entry-title story-heading">Morning Agenda: Profits Tumble at European Banks</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-07-29T10:33:40+00:00" itemprop="datePublished">July 29, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">July 29, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5389 post type-post status-publish hentry category-dealbook tag-amazon-com-inc tag-anglo-american-corp tag-bank-of-japan tag-bank-robberies tag-banking-and-financial-institutions tag-barclays-plc tag-bridgewater-associates tag-cbs-corporation tag-cloud-computing tag-computers-and-the-internet tag-dalio-raymond-1949 tag-dauman-philippe-p tag-didi-chuxing tag-ellison-lawrence-j tag-enterprise-computing tag-facebook-inc tag-federal-reserve-bank-of-new-york tag-federal-taxes-us tag-goldman-sachs-group-inc tag-google-inc tag-great-britain-withdrawal-from-eu-brexit tag-hedge-funds tag-higher-education-student-assistance-authority-nj tag-internal-revenue-service tag-mergers-acquisitions-and-divestitures tag-monte-dei-paschi-di-siena-spa tag-netsuite-inc tag-oracle-corporation tag-redstone-sumner-m tag-scaramucci-anthony tag-skybridge-capital-ii-llc tag-sovereign-wealth-funds tag-staley-james-e tag-start-ups tag-thoma-bravo tag-uber-technologies-inc tag-ubs-ag tag-venture-capital tag-viacom-inc per-dalio-raymond-1949 per-dauman-philippe-p per-ellison-lawrence-j per-redstone-sumner-m per-scaramucci-anthony per-staley-james-e des-bank-robberies des-banking-and-financial-institutions des-cloud-computing des-computers-and-the-internet des-enterprise-computing des-federal-taxes-us des-great-britain-withdrawal-from-eu-brexit des-hedge-funds des-mergers-acquisitions-and-divestitures des-sovereign-wealth-funds des-start-ups des-venture-capital org-amazon-com-inc org-anglo-american-corp org-bank-of-japan org-barclays-plc org-bridgewater-associates org-cbs-corporation org-didi-chuxing org-facebook-inc org-federal-reserve-bank-of-new-york org-goldman-sachs-group-inc org-google-inc org-higher-education-student-assistance-authority-nj org-internal-revenue-service org-monte-dei-paschi-di-siena-spa org-netsuite-inc org-oracle-corporation org-skybridge-capital-ii-llc org-thoma-bravo org-uber-technologies-inc org-ubs-ag org-viacom-inc news_keywords-startup" id="post-5389">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Profits Tumble at European Banks</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-07-29T10:33:40+00:00" itemprop="datePublished">July 29, 2016 6:33 am</time>
+			<!-- date updated --><span class="visually-hidden updated">July 29, 2016 6:33 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/07/29/morning-agenda-profits-tumble-at-european-banks/" data-title="Morning Agenda: Profits Tumble at European Banks" data-description="Blockbuster Earnings From Google and Amazon |Redstone Trial Set for October">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><p class="story-body-text" itemprop="articleBody"><strong>PROFITS TUMBLE AT EUROPEAN BANKS</strong> <a href="//www.nytimes.com/2016/07/30/business/dealbook/ubs-profit-slipped-14-in-second-quarter-but-beat-estimates.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">UBS </a>said its second-quarter profit dropped 14 percent from a year earlier because uncertainty in financial markets was weighing on its wealth management and investment banking businesses.</p>
+<p class="story-body-text" itemprop="articleBody">Like Credit Suisse the day before, the bank was cautious about risks ahead. &#8220;Sustained market volatility, underlying macroeconomic uncertainty and heightened geopolitical tensions, exacerbated by the impact of the U.K. referendum vote to end E.U. membership, will lead to continued client risk aversion and generally low transaction volumes,&#8221; it said. Lower-than-anticipated interest rates and the strength of the Swiss franc were also expected to create difficulties.</p>
+<p class="story-body-text" itemprop="articleBody">The British bank <a href="//www.nytimes.com/2016/07/30/business/dealbook/barclays-profit-down-as-it-accelerates-plans-to-close-some-business.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">Barclays</a> also reported a drop in profits, of 41 percent. Its chief executive, James E. Staley, said the bank saw no reason to adjust its strategy of focusing on its British consumer bank and the corporate and investment bank in light of Britain&#8217;s vote to leave the European Union.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>BLOCKBUSTER EARNINGS FROM GOOGLE AND AMAZON</strong> Thursday was a bonanza for Google and Amazon, which both reported blockbuster results and showed their dominance &#8211; on phones for Google and in the cloud for Amazon.</p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/07/29/technology/alphabet-google-earnings.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">Google&#8217;s</a> revamped ad formats helped drive revenue to $21.5 billion in the second quarter &#8211; a 21 percent jump from a year earlier and more than analysts had predicted. These results show that the near future still looks rosy for the company, although some analysts say that Google will need to do some innovation close to home as the rewards from its moonshot projects are still some time away.</p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/07/29/technology/amazon-earnings-profit.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">Amazon</a>, which began renting access to computers and software in its data centers over a decade ago, reported operating income of $718 million from its web services business &#8211; more than the profit of $305 million made a year ago and more than the profits from its North American retail business. Still, the retail business is also growing speedily, with revenue in North America jumping 28 percent.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>ON THE AGENDA</strong> The Commerce Department will publish its first estimate of economic growth during the second quarter at 8:30 a.m. Merck, ExxonMobil and Chevron all report second-quarter earnings.</p>
+<p class="story-body-text" itemprop="articleBody"><strong>REDSTONE TRIAL SET FOR OCTOBER</strong> The <a href="//www.nytimes.com/2016/07/29/business/trial-on-sumner-redstones-mental-competence-set-for-october.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">legal battle</a> over Sumner M. Redstone&#8217;s mental capacity to make decisions about his media empire will take place in October at a Massachusetts court house. Judge George F. Phelan of Norfolk County Probate Court rejected a motion by Mr. Redstone&#8217;s lawyers to dismiss the lawsuit but said there was no need for an immediate mental and physical examination, requesting past medical records instead.</p>
+<p class="story-body-text" itemprop="articleBody">Philippe P. Dauman and George S. Abrams, two longtime confidants of Mr. Redstone, were dismissed in May and they are challenging Mr. Redstone&#8217;s mental capacity. Meanwhile, the fortunes of the Redstone family, Viacom and CBS are in limbo.</p>
+<p class="story-body-text" itemprop="articleBody">Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/?nl=dealbook&amp;emc=edit_dlbkam_20160729">MERGERS &amp; ACQUISITIONS Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Oracle&#8217;s $9.3 Billion Deal for NetSuite Will Bolster Its Cloud Offerings</strong> The deal, among the largest in Oracle&#8217;s history, is at the heart of the company&#8217;s fight to remake itself for the modern world of cloud computing.<br />
+<a href="//www.nytimes.com/2016/07/29/business/dealbook/oracle-netsuite-ellison-cloud-computing.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Once Again, an Oracle Deal Benefits Ellison</strong> The purchase of NetSuite by Oracle makes strategic sense, but Lawrence J. Ellison, the executive chairman of Oracle, appears to benefit from a side investment at Oracle&#8217;s expense, Robert Cyran writes in Breakingviews.<br />
+<a href="//www.nytimes.com/2016/07/29/business/dealbook/once-again-an-oracle-deal-benefits-ellison.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Sale of Software Firm Deltek Said to Be Under Consideration</strong> The private equity firm Thoma Bravo is exploring a sale of Deltek, the company that provides software to government contractors, that could value it at as much as $3 billion including debt, Reuters reports, citing people familiar with the matter.<br />
+<a href="//www.reuters.com/article/us-deltek-m-a-idUSKCN1082XC?feedType=RSS&amp;feedName=innovationNews&amp;nl=dealbook&amp;emc=edit_dlbkam_20160729">REUTERS</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Anglo American Said to Rebuff Approach About Merger</strong> Anglo American, the miner based in London, rebuffed informal approaches about a merger from Anil Agarwal, a billionaire who oversees India&#8217;s biggest mining company, Bloomberg reports, citing people familiar with the matter.<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-28/anglo-said-to-rebuff-indian-billionaire-agarwal-s-merger-plan?nl=dealbook&amp;emc=edit_dlbkam_20160729">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">INVESTMENT BANKING Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>After &#8216;Brexit&#8217; Vote, Lloyds Bank to Cut 3,000 Jobs and Close Branches</strong> It warned that &#8220;a deceleration of growth seems likely&#8221; in Britain after the vote to leave the European Union, but first-half profit soared.<br />
+<a href="//www.nytimes.com/2016/07/29/business/dealbook/lloyds-earnings.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Goldman Banker Said to Have Warned Colleagues Not to &#8216;Milk Libya&#8217;</strong> A lawyer for Libya&#8217;s sovereign wealth fund disclosed an internal email from a Goldman Sachs banker warning colleagues not to &#8220;milk Libya&#8221; by selling complicated trades that fund officials were not prepared to handle.<br />
+<a href="//www.wsj.com/articles/goldman-banker-warned-colleagues-not-to-milk-libya-1469737458?nl=dealbook&amp;emc=edit_dlbkam_20160729">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Businessman Presents Last-Minute Bid to Rescue Italy&#8217;s Oldest Bank</strong> Carrado Passera, a longtime Italian businessman and former industry minister, has teamed up with UBS to present a last-ditch rescue proposal to the board of the struggling lender, Monte dei Paschi di Siena.<br />
+<a href="//www.ft.com/cms/s/0/f575a786-5515-11e6-9664-e0bdc13c3bef.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct&amp;nl=dealbook&amp;emc=edit_dlbkam_20160729#axzz4FbFJ29lm">THE FINANCIAL TIMES</a></p>
+<p class="story-body-text" itemprop="articleBody"><em>For the latest updates, go to <a href="//www.nytimes.com/pages/business/dealbook/index.html">NYTimes.com/DealBook</a></em></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">HEDGE FUNDS Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Hedge Fund Calls New York Times Article a &#8216;Distortion&#8217;</strong> Ray Dalio, the chairman of Bridgewater Associates, said the article, which reported on the culture at the hedge fund, contained &#8220;significant mischaracterizations.&#8221;<br />
+<a href="//www.nytimes.com/2016/07/29/business/dealbook/hedge-fund-calls-new-york-times-article-a-distortion.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>SkyBridge Capital Opens London Office</strong> Anthony Scaramucci, who founded Skybridge, said he wanted to expand: &#8220;There&#8217;s a mass-affluent opportunity for hedge funds and for mutual funds on the European continent and in the U.K.&#8221;<br />
+<a href="//www.bloomberg.com/news/articles/2016-07-28/scaramucci-s-skybridge-opens-london-office-in-push-for-growth?nl=dealbook&amp;emc=edit_dlbkam_20160729">BLOOMBERG</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">VENTURE CAPITAL Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Tourism Start-Up Raises $10 Million From Investors</strong> The start-up, Peek, added that it was beginning a partnership with Yelp, in which companies that use Peek can add a &#8220;book now&#8221; button on their Yelp page.<br />
+<a href="//www.nytimes.com/2016/07/29/business/dealbook/peek-a-tourism-start-up-raises-10-million-from-investors.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">LEGAL/REGULATORY Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Helicopter Money: Why Some Economists Are Talking About Dropping Money From the Sky</strong> History shows the dangers of a government financing itself using its ability to create money. But here&#8217;s why it&#8217;s being considered anyway.<br />
+<a href="//www.nytimes.com/2016/07/29/upshot/helicopter-money-why-some-economists-are-talking-about-dropping-money-from-the-sky.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Bank of Japan Resists Strong Medicine for Stimulus</strong> The central bank announced a small expansion of its stimulus program, despite some calls for stronger steps, and announced plans to review its policies.<br />
+<a href="//www.nytimes.com/2016/07/30/business/international/japan-bank-economy-abe-yen.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Didi Chuxing and Uber, Popular in China, Are Now Legal, Too</strong> Although they have had huge success, and billions of dollars in investment, in the country, the ride-hailing services had operated in a legal gray area.<br />
+<a href="//www.nytimes.com/2016/07/29/business/international/china-uber-didi-chuxing.html?nl=dealbook&amp;emc=edit_dlbkam_20160729">NYT Â»</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>Facebook May Owe Billions More in Taxes</strong> Facebook said it could be on the hook for $3 billion to $5 billion in additional taxes as a result of an Internal Revenue Service investigation into how the social network transferred assets overseas.<br />
+<a href="//www.wsj.com/articles/facebook-gets-tax-notice-over-transfer-of-assets-overseas-1469750400?nl=dealbook&amp;emc=edit_dlbkam_20160729">THE WALL STREET JOURNAL</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>New York Fed Asks Philippines to Recover Stolen Money</strong> The general counsel for the Federal Reserve Bank of New York asked his counterpart at the central bank of the Philippines to &#8220;take all appropriate steps in support of Bangladesh Bank&#8217;s efforts to recover and return its stolen assets.&#8221;<br />
+<a href="//www.reuters.com/article/us-cyber-heist-bangladesh-idUSKCN10908A?feedType=RSS&amp;feedName=topNews&amp;utm_source=twitter&amp;utm_medium=Social&amp;nl=dealbook&amp;emc=edit_dlbkam_20160729">REUTERS</a></p>
+<p class="story-body-text" itemprop="articleBody"><strong>New Jersey Student Loan Agency Tells Staff Not to Volunteer Information to Borrowers</strong> Internal emails show that staffers at the Higher Education Student Assistance Authority have been instructed not to tell families that they may qualify for help unless they explicitly ask.<br />
+<a href="https://www.propublica.org/article/new-jersey-student-loan-agency-to-staff-dont-tell-borrowers-about-help-unle?nl=dealbook&amp;emc=edit_dlbkam_20160729">PROPUBLICA</a></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/07/29/morning-agenda-profits-tumble-at-european-banks/"
+					data-title="Morning Agenda: Profits Tumble at European Banks"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Blockbuster Earnings From Google and Amazon |Redstone Trial Set for October&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/07/29/morning-agenda-profits-tumble-at-european-banks/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":61,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

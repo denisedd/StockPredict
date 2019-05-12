@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003972063"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1444644341" />
+<meta name="PUD" content="20151012" />
+<meta name="pdate" content="20151012" />
+<meta name="ptime" content="20151012060541" />
+<meta name="utime" content="20151012100541" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-10-12T10:05:41-04:00" />
+<meta name="DISPLAYDATE" content="October 12, 2015" />
+<meta name="dat" content="October 12, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Allianz SE;Automobile Racing;Bitcoin (Currency);Foreign Investments;Initial Public Offerings;Interest Rates;Libor (London Interbank Offered Rate);Regulation and Deregulation of Industry;Venture Capital">
+<meta name="org" content="Banking and Financial Institutions;Barclays PLC;Credit Suisse Group AG;Data Storage;Dell, Michael S;Deutsche Bank AG;eBay Inc;Elliott Management Corp;EMC Corporation;European Union;Federal Reserve System;Fiat Chrysler Automobiles NV;General Electric Company;Hewlett-Packard Company;International Monetary Fund;Paypal Holdings Inc.;Societe Generale;Wells Fargo &amp; Company">
+<meta name="geo" content="Cayman Islands;Hedge Funds;Ireland;UBS AG">
+<meta name="ticker" content="Barclays PLC|BCS|NYSE;Credit Suisse Group AG|CS|NYSE;Deutsche Bank AG|DB|NYSE;EMC Corporation|EMC|NYSE;Fiat Chrysler Automobiles NV|FCAU|NYSE;General Electric Company|GE|NYSE;Societe Generale|SCGLY|Other OTC;Wells Fargo & Company|WFC|NYSE" />
+<meta property="article:tag" content="Allianz SE" />
+<meta property="article:tag" content="Automobile Racing" />
+<meta property="article:tag" content="Bitcoin (Currency)" />
+<meta property="article:tag" content="Foreign Investments" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Interest Rates" />
+<meta property="article:tag" content="Libor (London Interbank Offered Rate)" />
+<meta property="article:tag" content="Regulation and Deregulation of Industry" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Banking and Financial Institutions" />
+<meta property="article:tag" content="Barclays PLC" />
+<meta property="article:tag" content="Credit Suisse Group AG" />
+<meta property="article:tag" content="Data Storage" />
+<meta property="article:tag" content="Dell Michael S" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="eBay Inc" />
+<meta property="article:tag" content="Elliott Management Corp" />
+<meta property="article:tag" content="EMC Corporation" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Fiat Chrysler Automobiles NV" />
+<meta property="article:tag" content="General Electric Company" />
+<meta property="article:tag" content="Hewlett-Packard Company" />
+<meta property="article:tag" content="International Monetary Fund" />
+<meta property="article:tag" content="Paypal Holdings Inc." />
+<meta property="article:tag" content="Societe Generale" />
+<meta property="article:tag" content="Wells Fargo &amp; Company" />
+<meta property="article:tag" content="Cayman Islands" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Ireland" />
+<meta property="article:tag" content="UBS AG" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Allianz SE,Automobile Racing,Bitcoin (Currency),Foreign Investments,Initial Public Offerings,Interest Rates,Libor (London Interbank Offered Rate),Regulation and Deregulation of Industry,Venture Capital,Banking and Financial Institutions,Barclays PLC,Credit Suisse Group AG,Data Storage,Dell Michael S,Deutsche Bank AG,eBay Inc,Elliott Management Corp,EMC Corporation,European Union,Federal Reserve System,Fiat Chrysler Automobiles NV,General Electric Company,Hewlett-Packard Company,International Monetary Fund,Paypal Holdings Inc.,Societe Generale,Wells Fargo &amp; Company,Cayman Islands,Hedge Funds,Ireland,UBS AG,DealBook" />
+<meta name="news_keywords" content="Barclays,Bitcoin,Car Racing,Cayman Islands,Credit Suisse Group,Deutsche Bank,eBay,Elliott Management,EMC Corporation,EU,Federal Reserve,Foreign Investment,General Electric,Hewlett-Packard,IMF,Interest rate,IPO,Ireland,Libor,Regulation and Deregulation,Societe Generale,Venture capital,Wells Fargo &amp;" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F10%2F12%2Fmorning-agenda-dell-strikes-record-deal-to-take-over-emc%2F" title="Morning Agenda: Dell Strikes Record Deal to Take Over EMC" />
+<meta name="description" content="Ferrari Listing Moves Forward &#124; Bankers Grapple with Emerging Markets &#124; E.U. Banking Champion Wanted" />
+<meta name="hdl" content="Morning Agenda: Dell Strikes Record Deal to Take Over EMC" />
+<meta property="og:title" content="Morning Agenda: Dell Strikes Record Deal to Take Over EMC" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/10/12/morning-agenda-dell-strikes-record-deal-to-take-over-emc/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Ferrari Listing Moves Forward &#124; Bankers Grapple with Emerging Markets &#124; E.U. Banking Champion Wanted" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: Dell Strikes Record Deal to Take Over EMC" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/10/12/morning-agenda-dell-strikes-record-deal-to-take-over-emc/" />
+<meta name="twitter:description" content="Ferrari Listing Moves Forward &#124; Bankers Grapple with Emerging Markets &#124; E.U. Banking Champion Wanted" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/10/09/what-were-reading-96/' />
+<link rel='next' title='Morning Agenda: Anheuser-Busch InBev and SABMiller Agree on Deal' href='//news.blogs.nytimes.com/2015/10/13/morning-agenda-anheuser-busch-inbev-and-sabmiller-agree-on-deal/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/10/12/morning-agenda-dell-strikes-record-deal-to-take-over-emc/' />
+<link rel='shortlink' href='//nyti.ms/1VNsNam' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/10/12/morning-agenda-dell-strikes-record-deal-to-take-over-emc/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: Dell Strikes Record Deal to Take Over EMC - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3425 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: Dell Strikes Record Deal to Take Over EMC        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/10/12/morning-agenda-dell-strikes-record-deal-to-take-over-emc/"
+	 data-title="Morning Agenda: Dell Strikes Record Deal to Take Over EMC"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Ferrari Listing Moves Forward | Bankers Grapple with Emerging Markets | E.U. Banking Champion Wanted&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/10/12/morning-agenda-dell-strikes-record-deal-to-take-over-emc/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="October 12, 2015 6:05 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: Dell Strikes Record Deal to Take Over EMC</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-10-12T10:05:41+00:00" itemprop="datePublished">October 12, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">October 12, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3425 post type-post status-publish hentry category-dealbook tag-allianz-se tag-automobile-racing tag-banking-and-financial-institutions tag-barclays-plc tag-bitcoin-currency tag-cayman-islands tag-credit-suisse-group-ag tag-data-storage tag-dell-michael-s tag-deutsche-bank-ag tag-ebay-inc tag-elliott-management-corp tag-emc-corporation tag-european-union tag-federal-reserve-system tag-fiat-chrysler-automobiles-nv tag-foreign-investments tag-general-electric-company tag-hedge-funds tag-hewlett-packard-company tag-initial-public-offerings tag-interest-rates tag-international-monetary-fund tag-ireland tag-libor-london-interbank-offered-rate tag-paypal-holdings-inc tag-regulation-and-deregulation-of-industry tag-societe-generale tag-ubs-ag tag-venture-capital tag-wells-fargo-company des-allianz-se des-automobile-racing des-bitcoin-currency des-foreign-investments des-initial-public-offerings des-interest-rates des-libor-london-interbank-offered-rate des-regulation-and-deregulation-of-industry des-venture-capital org-banking-and-financial-institutions org-barclays-plc org-credit-suisse-group-ag org-data-storage org-dell-michael-s org-deutsche-bank-ag org-ebay-inc org-elliott-management-corp org-emc-corporation org-european-union org-federal-reserve-system org-fiat-chrysler-automobiles-nv org-general-electric-company org-hewlett-packard-company org-international-monetary-fund org-paypal-holdings-inc org-societe-generale org-wells-fargo-company geo-cayman-islands geo-hedge-funds geo-ireland geo-ubs-ag news_keywords-barclays news_keywords-bitcoin news_keywords-car-racing news_keywords-cayman-islands news_keywords-credit-suisse-group news_keywords-deutsche-bank news_keywords-ebay news_keywords-elliott-management news_keywords-emc-corporation news_keywords-eu news_keywords-federal-reserve news_keywords-foreign-investment news_keywords-general-electric news_keywords-hewlett-packard news_keywords-imf news_keywords-interest-rate news_keywords-ipo news_keywords-ireland news_keywords-libor news_keywords-regulation-and-deregulation news_keywords-societe-generale news_keywords-venture-capital-2 news_keywords-wells-fargo" id="post-3425">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: Dell Strikes Record Deal to Take Over EMC</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-10-12T10:05:41+00:00" itemprop="datePublished">October 12, 2015 6:05 am</time>
+			<!-- date updated --><span class="visually-hidden updated">October 12, 2015 6:05 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/10/12/morning-agenda-dell-strikes-record-deal-to-take-over-emc/" data-title="Morning Agenda: Dell Strikes Record Deal to Take Over EMC" data-description="Ferrari Listing Moves Forward | Bankers Grapple with Emerging Markets | E.U. Banking Champion Wanted">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DELL STRIKES RECORD DEAL TO TAKE OVER EMC</strong> <span class="divider"> | </span></span> Dell is expected to announce its <b>$65 billion deal</b> to buy EMC as soon as Monday, <a href="//www.nytimes.com/2015/10/12/business/dealbook/dell-to-buy-emc-for-65-billion-a-record-takeover-in-technology.html?hp&#038;action=click&#038;pgtype=Homepage&#038;module=first-column-region&#038;region=top-news&#038;WT.nav=top-news">Michael J. de la Merced reports in DealBook.</a> It would be the biggest-ever takeover in the technology sector. The company is betting that its huge acquisition of another company grappling with swift changes in the technology industry will help it keep up with the times.</p>
+<p class="story-body-text" itemprop="articleBody">Under the terms, Dell will pay the <b>equivalent of $33.15 a share</b> in a complicated transaction involving both cash and a special kind of stock. That price is about 27 percent higher than where EMCâs shares were trading before news of the deal first emerged.</p>
+<p class="story-body-text" itemprop="articleBody">Dell is offering EMC shareholders both about <b>$24.05 a share in cash</b> and $9.10 worth of a so-called tracking stock for VMware that mirrors the roughly 20 percent of that company already trading on the New York Stock Exchange.</p>
+<p class="story-body-text" itemprop="articleBody">Michael S. Dell took the company he founded private two years ago with the help of the investment firm Silver Lake. He wanted to <b>shift toward corporate computing services</b> without the glare of the public stock markets.<br />
+The purchase of EMC would give Dell one of the <b>biggest names in data storage</b>.</p>
+<p class="story-body-text" itemprop="articleBody">âWeâre continuing to evolve the company into the most relevant areas where I.T. is moving,â Mr. Dell said in an interview. âThis deal just accelerates that.â</p>
+<p class="story-body-text" itemprop="articleBody">Dell would acquire a <b>huge amount of debt</b>, but that money would be borrowed before an expected  increase in interest rates.</p>
+<p class="story-body-text" itemprop="articleBody">Dell is also expanding at a time when companies believe <b>smaller is better</b>. Many tech companies have announced plans to split off into their components, each devoted to a particular part of the market. Hewlett Packardâs plan to split its enterprise-services business and personal computer business is nearly complete. EBay spun off PayPal from its e-commerce division.</p>
+<p class="story-body-text" itemprop="articleBody">Proponents of breaking away from the conglomerate model argue that each business would have greater focus. <b>EMC itself has been criticized</b> for its collection of businesses.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Dell and his counterpart at EMC, Joe Tucci, maintain that sticking with the one-stop-shop business model will <b>draw corporate customers</b> eager to buy servers.</p>
+<p class="story-body-text" itemprop="articleBody"><b>Dellâs business performance</b>, at least, appears to be holding up. Its overall share of the global PC market has held steady at about 14 percent, in part because its sales have slipped less than those of its rivals.</p>
+<p class="story-body-text" itemprop="articleBody">Taking EMC private could give it the same sort of <b>breathing room</b> Dell has enjoyed.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FERRARI LISTING MOVES FORWARD</strong> <span class="divider"> | </span></span> The initial public offering market may not have looked so promising in recent weeks, but  Fiat Chrysler Automobiles is still going spin off Ferrari at a <b>valuation of $9.4 billion</b>,<br />
+<a href="//www.nytimes.com/2015/10/10/business/dealbook/fiat-chrysler-to-move-forward-with-ferrari-ipo.html?ref=dealbook">Leslie Picker reports in DealBook.</a> </p>
+<p class="story-body-text" itemprop="articleBody">The luxury sports car maker will market 17.2 million shares for $48 to $52 each. Most of the proceeds from the <b>$859 million listing</b> will go to Fiat Chrysler, which will also maintain an 80 percent stake. Piero Ferrari, the son of the founder Enzo, will hold onto his 10 percent stake. </p>
+<p class="story-body-text" itemprop="articleBody">Ferrari shipped <b>a mere 7,255 cars</b> last year, a tactic the company uses to cultivate a reputation for exclusivity. But this low-volume strategy also limits revenue and profit growth.</p>
+<p class="story-body-text" itemprop="articleBody">Ferrariâs stock will be listed on the New York Stock Exchange under <b>the symbol RACE</b>.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>BANKERS GRAPPLE WITH EMERGING MARKETS</strong> <span class="divider"> | </span></span> Bankers and policy makers want to stem the rush of investments out of emerging markets, but they <b>canât agree on how</b>,<br />
+<a href="//www.nytimes.com/2015/10/12/business/dealbook/bankers-grapple-with-how-to-help-emerging-markets.html?ref=dealbook&#038;_r=0">Landon Thomas Jr. reports in DealBook.</a> At the same time, fears abound that the flow out of emerging market stocks and bonds will worsen, especially if Chinaâs currency weakens further.</p>
+<p class="story-body-text" itemprop="articleBody">The root of the debate is whether the Fedâs decision to hold interest rates near zero has <b>increased investor confidence</b> in emerging markets or hurt it.</p>
+<p class="story-body-text" itemprop="articleBody">The International Monetary Fund thinks the Federal Reserve should <b>hold back on a rate increase</b> because of the global economy is weak.</p>
+<p class="story-body-text" itemprop="articleBody">But those on the front lines â central bankers in countries like Brazil, Turkey, Malaysia and Mexico â say the Fedâs restraint has made their job more difficult. Investors are <b>rushing out even faster</b> because theyâre spooked that the Fed has larger fears about China and other emerging markets.</p>
+<p class="story-body-text" itemprop="articleBody">Some argue that the money would continue to <b>flow out regardless</b> of the Fedâs movements. Chinese savers are looking to shift into dollars because the renminbi is expected to devalue more.</p>
+<p class="story-body-text" itemprop="articleBody">Economists for countries vulnerable to outflows have called for <b>capital controls</b> to make it more difficult to take money out of these economies, but most central banks at the I.M.F. meetings in Lima rejected that.</p>
+<p class="story-body-text" itemprop="articleBody">âThe first thing an investor asks when he comes in is, &#8216;<b>where is the exit</b>,ââ said AgustÃ­n Carstens, the head of Mexicoâs central bank. âIf he does not know where it is, he wonât come in.â</p>
+<p class="story-body-text" itemprop="articleBody">The mantra for emerging-market governments is that they need to <b>win back investor confidence</b> by keeping their budget deficits and currency declines under control.</p>
+<p class="story-body-text" itemprop="articleBody">Even so, analysts are not convinced that financial stability is possible <b>without a firm sense of the Fedâs plans</b>.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> <b>LVMH</b> releases its third-quarter results after the close of the Paris market.<br />
+<b>Dennis P. Lockhart</b>, the president of the Federal Reserve Bank of Atlanta, will speak about the economic outlook for the United States at 7:30 a.m. at the Association of University Business and Economic Researchers conference in Orlando.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>E.U. BANKING CHAMPION WANTED</strong> <span class="divider"> | </span></span> Two senior European bankers have voiced their <b>fears about the finance sector</b> on the continent.<br />
+John McFarlane, the chairman of Barclays, told<br />
+<a href="//www.ft.com/intl/cms/s/0/e7c14fde-6ebe-11e5-8171-ba1968cf791a.html#axzz3oJPqeZlU">The Financial Times</a> that European investment banks should consider merging to compete with their rivals in the United States.</p>
+<p class="story-body-text" itemprop="articleBody">âIf you did want to create an <b>investment banking champion for Europe</b>, you would have to combine the investment banking arms of the main players, but you would have to swallow really hard and you would need political support,â he said.</p>
+<p class="story-body-text" itemprop="articleBody">FrÃ©dÃ©ric OudÃ©a, chief executive of Franceâs SociÃ©tÃ© GÃ©nÃ©rale and president of the European Banking Federation, wrote in <a href="//www.ft.com/intl/cms/s/0/b911380e-6e8a-11e5-8171-ba1968cf791a.html#axzz3oFvZ4gKR">an F.T. op-ed</a> that, &#8220;<b>American investment banks</b> are playing a bigger and bigger role in financing the global economy. A handful of robust U.S. universal banks are gaining market share abroad while strengthening their positions at home, in large part thanks to regulation that makes it more difficult for foreign players to operate in the U.S.â</p>
+<p class="story-body-text" itemprop="articleBody">The comments highlight the angst that is growing over the industry in the region. <b>European banks are cutting</b> thousands of jobs and selling billions of euros of assets, while their rivals in the United States are expanding.</p>
+<p class="story-body-text" itemprop="articleBody">âAmericans do have the stronger positions than anyone else, and it is <b>not quite game over</b> but it is very severe,â Mr. McFarlane said. He did point out, however, that while he wouldnât be opposed to a merger that was beneficial or neutral for Barclaysâ shareholders, it didnât seem realistic.</p>
+<p class="story-body-text" itemprop="articleBody">The Bank of England will detail on Thursday how it will carry out the <b>law to separate the retail arms</b> of British banks from other operations. The move will make it hard for British banks to keep large investment banking operations.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>General Electric to Sell Part of Finance Unit to Wells Fargo</strong> <span class="divider"> | </span></span> GE Capital is in advanced talks to sell a specialty finance portfolio worth more than $30 billion to Wells Fargo, The Financial Times reports, citing people familiar with the situation.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/c1d4be3a-6ed9-11e5-aca9-d87542bf8673.html#axzz3oKAfvxSI"> THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Unit of Delek Group Buys Ithaca Stake to Expand Global Activity</strong> <span class="divider"> | </span></span> Delek Group, a partner in Israelâs two largest offshore natural gas fields, said one of its subsidiaries has acquired 20 percent of Canadaâs Ithaca Energy for about $66 million.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-11/delek-group-unit-buys-ithaca-stake-to-expand-global-activity"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Chinese Firm Pulls Out of Deal to Buy New Zealand Farms</strong> <span class="divider"> | </span></span> Dakang New Zealand Farm Group, which is 55 percent owned by Shanghai Pengxin Group, said it has pulled out of a deal to buy a group of farms on New Zealandâs North Island because of uncertainty from the governmentâs Overseas Investment Office.<br /><span class="kicker"><a href="//www.wsj.com/articles/chinese-firm-pulls-out-of-deal-to-buy-new-zealand-farms-1444608324?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Credit Suisse Said to Plan Up to $2.1 Billion in Cost Cuts</strong> <span class="divider"> | </span></span> Credit Suisse Group has âwell advancedâ plans to cut costs by 7 percent to 10 percent, which would translate into an annual reduction of as much as $2.1 billion for the group, Schweiz am Sonntag reported, citing several managers of units in the bank.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-11/credit-suisse-plans-up-to-2-billion-francs-cost-cuts-sas-says"> Bloomberg News </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Bank Said to Mull Sale of Abbey Life Insurance Unit</strong> <span class="divider"> | </span></span> Deutsche Bank is considering the sale of a unit that helps pension funds protect themselves against the risk of their members living longer than expected, Bloomberg News reports, citing people familiar with the discussions.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-10-11/deutsche-bank-said-to-weigh-sale-of-abbey-life-insurance-unit"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Banks in United States Defend Against Downturn</strong> <span class="divider"> | </span></span> Wall Streetâs biggest banks are beginning to build their defenses against downturns, signaling an end to the steady thinning of reserves that has helped bolster profits in the last five years.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/509ad9e4-6eab-11e5-aca9-d87542bf8673.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3oKAfvxSI"> THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>David Drumm, Ex-Chief of Anglo Irish Bank, Is Arrested</strong> <span class="divider"> | </span></span> Mr. Drumm, whose bank was at the center of a banking scandal, was arrested in Massachusetts, but charges were not disclosed.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/12/business/dealbook/david-drumm-ex-chief-of-anglo-irish-bank-is-arrested.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Shift by UBS Hedge Fund Is a Blow to Caymans</strong> <span class="divider"> | </span></span> UBS has shifted a fund of hedge funds onshore to Ireland from the Cayman Islands, delivering another blow to the reputation of the Caribbean tax haven as the domicile of choice for international hedge funds.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/1b97f352-6ddf-11e5-8171-ba1968cf791a.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3oKAfvxSI"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>$2.5 Billion Listing of China Huarong to Rest Heavily on Cornerstones</strong> <span class="divider"> | </span></span> When China Huarong Asset Management, one of Chinaâs leading âbad banks,â lists in Hong Kong this week, a record amount will be locked up by so-called cornerstone backers, suggesting shaky investor sentiment.  <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/60799f5e-6e3c-11e5-8171-ba1968cf791a.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3oKAfvxSI"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China Reinsurance Plans $2 Billion Initial Public Offering</strong> <span class="divider"> | </span></span> China Re has secured $1.1 billion in investments from cornerstone investors like Prudential Insurance Company, improving its listing chances. Cornerstone investors usually pledge to hold their stake for a few months after a company goes public.<br /><span class="kicker"><a href="//www.wsj.com/articles/china-reinsurance-plans-2-billion-ipo-1444612813?mod=rss_markets_main"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Jersey City Proposes Legislation to Legalize Airbnb " src="https://static01.nyt.com/images/2015/10/12/nyregion/12AIRBNB1/12AIRBNB1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Jersey City Proposes Legislation to Legalize Airbnb </strong> <span class="divider"> | </span></span> Mayor Steven M. Fulop anticipates a 6 percent hospitality tax would generate $600,000 to $1 million annually on the more than 300 Airbnb listings in the city.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/12/nyregion/jersey-city-proposes-legislation-to-legalize-airbnb.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A $400 Million Bonanza for  Start-Ups in the United States</strong> <span class="divider"> | </span></span> AngelList, a venture capital firm, has attracted the largest-ever single investment by a Chinese private equity firm in a United States fund.<br /><span class="kicker"><a href="//www.wsj.com/articles/coming-soon-from-china-a-400-million-bonanza-for-u-s-startups-1444622462?mod=asia_home"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>British Start-Up Claims Blockchain Breakthrough in Payment Processing</strong> <span class="divider"> | </span></span> Setl, a group based in London founded by a group of hedge fund investors and trading executives, said its blockchain was the first to demonstrate that the technology could handle the volumes required by the financial services industry.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/a2260946-7009-11e5-8af2-f259ceda7544.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3oKAfvxSI">THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Pimco Accused of Misusing Staff Pensions</strong> <span class="divider"> | </span></span> A former software developer for Pimco and an ex-Allianz employee have filed a lawsuit accusing Pimco and its sister company Allianz Global Investors of misusing their employeesâ retirement savings. The suit is seeking class action status.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/65c53050-6ec2-11e5-8171-ba1968cf791a.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3oKAfvxSI"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Regulatory Cost Stifles Boutique Funds</strong> <span class="divider"> | </span></span> Regulators are pursuing a reform agenda that is damaging the fund management industry by raising costs and stifling innovation, according to a think-tank, New City Initiative. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/808726bc-6e74-11e5-aca9-d87542bf8673.html?ftcamp=published_links%2Frss%2Fmarkets%2Ffeed%2F%2Fproduct#axzz3oKAfvxSI"> THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Regulators Will Allow Banks to Continue Using External Credit Ratings to Measure Risk</strong> <span class="divider"> | </span></span> The Basel Committee on Banking Supervision will allow banks to use external credit ratings to measure the riskiness of loans and determine their regulatory capital needs, backtracking on a 2014 proposal to which banks had objected.<br /><span class="kicker"><a href="//www.wsj.com/articles/regulators-to-allow-banks-to-continue-using-external-credit-ratings-for-measuring-risk-1444510492?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Under Political Pressure, Russian Billionaire Sells Energy Assets in North Sea" src="https://static01.nyt.com/images/2015/10/12/business/ineospix/ineospix-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Under Political Pressure, Russian Billionaire Sells Energy Assets in North Sea</strong> <span class="divider"> | </span></span> The LetterOne Group, an investment vehicle led by Mikhail Fridman, has sold oil and natural gas assets in the British North Sea to Ineos.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/12/business/under-political-pressure-russian-billionaire-sells-energy-assets-in-north-sea.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="In 3rd Quarter, Investors Rode the Rapids After Stocks Plunged" src="https://static01.nyt.com/images/2015/10/11/business/11-QUARTER/11-QUARTER-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>In 3rd Quarter, Investors Rode the Rapids After Stocks Plunged</strong> <span class="divider"> | </span></span> The Fed turned its gaze to market upheaval overseas and held rates steady. But the American economy looks relatively strong despite signs of more global weakness.<br /><span class="kicker"><a href="//www.nytimes.com/2015/10/11/business/mutfund/in-3rd-quarter-investors-rode-the-rapids-after-stocks-plunged.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>High Stakes in First Libor Trial in United States</strong> <span class="divider"> | </span></span> The trial come after  the Justice Department outlined guidance for prosecutors that puts greater emphasis on targeting individuals.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/51545c82-6ed5-11e5-aca9-d87542bf8673.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3oKAfvxSI"> THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/10/12/morning-agenda-dell-strikes-record-deal-to-take-over-emc/"
+					data-title="Morning Agenda: Dell Strikes Record Deal to Take Over EMC"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Ferrari Listing Moves Forward | Bankers Grapple with Emerging Markets | E.U. Banking Champion Wanted&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/10/12/morning-agenda-dell-strikes-record-deal-to-take-over-emc/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":60,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

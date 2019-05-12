@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004489158"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1466677410" />
+<meta name="PUD" content="20160623" />
+<meta name="pdate" content="20160623" />
+<meta name="ptime" content="20160623062330" />
+<meta name="utime" content="20160623102330" />
+<meta property="article:modified_time" itemprop="dateModified" content="2016-06-23T10:23:30-04:00" />
+<meta name="DISPLAYDATE" content="June 23, 2016" />
+<meta name="dat" content="June 23, 2016" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Kaplan, Robert S;Potsch, Hans Dieter (1951- );Redstone, Sumner M;Winterkorn, Martin">
+<meta name="des" content="Canals;Conflicts of Interest;For-Profit Schools;Fuel Emissions (Transportation);Health Insurance and Managed Care;Initial Public Offerings;Medicare;Mergers, Acquisitions and Divestitures;Polls and Public Opinion;Private Equity;Sovereign Wealth Funds;Start-ups;Suits and Litigation (Civil);Tax Evasion;Venture Capital">
+<meta name="org" content="Balmain;Corinthian Colleges Inc;European Union;Facebook Inc;Fiat Chrysler Automobiles NV;GE Money Bank;General Electric Company;Hermes International SA;Internal Revenue Service;McDonald&#039;s Corporation;Office of Science and Technology Policy;SolarCity Inc;Twilio Inc;UBS AG;Viacom Inc;Volkswagen AG;William Hill PLC">
+<meta name="geo" content="Panama Canal and Canal Zone">
+<meta name="ticker" content="Facebook Inc|FB|NASDAQ;General Electric Company|GE|NYSE;McDonald's Corporation|MCD|NYSE;Viacom Inc|VIAB|NASDAQ;Volkswagen AG|VLKAY|Other OTC" />
+<meta property="article:tag" content="Kaplan Robert S" />
+<meta property="article:tag" content="Potsch Hans Dieter (1951- )" />
+<meta property="article:tag" content="Redstone Sumner M" />
+<meta property="article:tag" content="Winterkorn Martin" />
+<meta property="article:tag" content="Canals" />
+<meta property="article:tag" content="Conflicts of Interest" />
+<meta property="article:tag" content="For-Profit Schools" />
+<meta property="article:tag" content="Fuel Emissions (Transportation)" />
+<meta property="article:tag" content="Health Insurance and Managed Care" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Medicare" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Polls and Public Opinion" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Sovereign Wealth Funds" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Suits and Litigation (Civil)" />
+<meta property="article:tag" content="Tax Evasion" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Balmain" />
+<meta property="article:tag" content="Corinthian Colleges Inc" />
+<meta property="article:tag" content="European Union" />
+<meta property="article:tag" content="Facebook Inc" />
+<meta property="article:tag" content="Fiat Chrysler Automobiles NV" />
+<meta property="article:tag" content="GE Money Bank" />
+<meta property="article:tag" content="General Electric Company" />
+<meta property="article:tag" content="Hermes International SA" />
+<meta property="article:tag" content="Internal Revenue Service" />
+<meta property="article:tag" content="McDonald&#039;s Corporation" />
+<meta property="article:tag" content="Office of Science and Technology Policy" />
+<meta property="article:tag" content="SolarCity Inc" />
+<meta property="article:tag" content="Twilio Inc" />
+<meta property="article:tag" content="UBS AG" />
+<meta property="article:tag" content="Viacom Inc" />
+<meta property="article:tag" content="Volkswagen AG" />
+<meta property="article:tag" content="William Hill PLC" />
+<meta property="article:tag" content="Panama Canal and Canal Zone" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Kaplan Robert S,Potsch Hans Dieter (1951- ),Redstone Sumner M,Winterkorn Martin,Canals,Conflicts of Interest,For-Profit Schools,Fuel Emissions (Transportation),Health Insurance and Managed Care,Initial Public Offerings,Medicare,Mergers Acquisitions and Divestitures,Polls and Public Opinion,Private Equity,Sovereign Wealth Funds,Start-ups,Suits and Litigation (Civil),Tax Evasion,Venture Capital,Balmain,Corinthian Colleges Inc,European Union,Facebook Inc,Fiat Chrysler Automobiles NV,GE Money Bank,General Electric Company,Hermes International SA,Internal Revenue Service,McDonald&#039;s Corporation,Office of Science and Technology Policy,SolarCity Inc,Twilio Inc,UBS AG,Viacom Inc,Volkswagen AG,William Hill PLC,Panama Canal and Canal Zone,DealBook" />
+<meta name="news_keywords" content="Balmain,Canal,Medicare,Startup" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2016%2F06%2F23%2Fmorning-agenda-an-early-winner-in-the-brexit-vote%2F" title="Morning Agenda: An Early Winner in the &#8216;Brexit Vote&#8217;" />
+<meta name="description" content="A Risky Bet on the Panama Canal &#124; VW Shareholders Vent" />
+<meta name="hdl" content="Morning Agenda: An Early Winner in the &#039;Brexit Vote&#039;" />
+<meta property="og:title" content="Morning Agenda: An Early Winner in the &#039;Brexit Vote&#039;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2016/06/23/morning-agenda-an-early-winner-in-the-brexit-vote/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="A Risky Bet on the Panama Canal &#124; VW Shareholders Vent" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: An Early Winner in the &#039;Brexit Vote&#039;" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2016/06/23/morning-agenda-an-early-winner-in-the-brexit-vote/" />
+<meta name="twitter:description" content="A Risky Bet on the Panama Canal &#124; VW Shareholders Vent" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Elon Musk Wants to Merge SolarCity With Tesla' href='//news.blogs.nytimes.com/2016/06/22/morning-agenda-elon-musk-wants-to-merge-solarcity-with-tesla/' />
+<link rel='next' title='Morning Agenda: Britain Votes to Leave E.U.' href='//news.blogs.nytimes.com/2016/06/24/morning-agenda-britain-votes-to-leave-e-u/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2016/06/23/morning-agenda-an-early-winner-in-the-brexit-vote/' />
+<link rel='shortlink' href='//nyti.ms/28PJmxS' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2016/06/23/morning-agenda-an-early-winner-in-the-brexit-vote/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: An Early Winner in the &#039;Brexit Vote&#039; - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-5111 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: An Early Winner in the &#8216;Brexit Vote&#8217;        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2016/06/23/morning-agenda-an-early-winner-in-the-brexit-vote/"
+	 data-title="Morning Agenda: An Early Winner in the &#8216;Brexit Vote&#8217;"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;A Risky Bet on the Panama Canal | VW Shareholders Vent&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/23/morning-agenda-an-early-winner-in-the-brexit-vote/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="June 23, 2016 6:23 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: An Early Winner in the &#8216;Brexit Vote&#8217;</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2016-06-23T10:23:30+00:00" itemprop="datePublished">June 23, 2016</time>
+			<!-- date updated --><span class="visually-hidden updated">June 23, 2016</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-5111 post type-post status-publish hentry category-dealbook tag-balmain tag-canals tag-conflicts-of-interest tag-corinthian-colleges-inc tag-european-union tag-facebook-inc tag-fiat-chrysler-automobiles-nv tag-for-profit-schools tag-fuel-emissions-transportation tag-ge-money-bank tag-general-electric-company tag-health-insurance-and-managed-care tag-hermes-international-sa tag-initial-public-offerings tag-internal-revenue-service tag-kaplan-robert-s tag-mcdonalds-corporation tag-medicare tag-mergers-acquisitions-and-divestitures tag-office-of-science-and-technology-policy tag-panama-canal-and-canal-zone tag-polls-and-public-opinion tag-potsch-hans-dieter-1951 tag-private-equity tag-redstone-sumner-m tag-solarcity-inc tag-sovereign-wealth-funds tag-start-ups tag-suits-and-litigation-civil tag-tax-evasion tag-twilio-inc tag-ubs-ag tag-venture-capital tag-viacom-inc tag-volkswagen-ag tag-william-hill-plc tag-winterkorn-martin per-kaplan-robert-s per-potsch-hans-dieter-1951 per-redstone-sumner-m per-winterkorn-martin des-canals des-conflicts-of-interest des-for-profit-schools des-fuel-emissions-transportation des-health-insurance-and-managed-care des-initial-public-offerings des-medicare des-mergers-acquisitions-and-divestitures des-polls-and-public-opinion des-private-equity des-sovereign-wealth-funds des-start-ups des-suits-and-litigation-civil des-tax-evasion des-venture-capital org-balmain org-corinthian-colleges-inc org-european-union org-facebook-inc org-fiat-chrysler-automobiles-nv org-ge-money-bank org-general-electric-company org-hermes-international-sa org-internal-revenue-service org-mcdonalds-corporation org-office-of-science-and-technology-policy org-solarcity-inc org-twilio-inc org-ubs-ag org-viacom-inc org-volkswagen-ag org-william-hill-plc geo-panama-canal-and-canal-zone news_keywords-balmain news_keywords-canal news_keywords-medicare news_keywords-startup" id="post-5111">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: An Early Winner in the &#8216;Brexit Vote&#8217;</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2016-06-23T10:23:30+00:00" itemprop="datePublished">June 23, 2016 6:23 am</time>
+			<!-- date updated --><span class="visually-hidden updated">June 23, 2016 6:23 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2016/06/23/morning-agenda-an-early-winner-in-the-brexit-vote/" data-title="Morning Agenda: An Early Winner in the &#8216;Brexit Vote&#8217;" data-description="A Risky Bet on the Panama Canal | VW Shareholders Vent">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>AN EARLY WINNER IN THE âBREXIT VOTEâ</strong> <span class="divider"> | </span></span> The gambling markets in Britain have been the closest thing to clarity in the face of the confusion created by the vote on Britainâs membership of the European Union, </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/06/23/business/international/brexit-britain-gambling-bookies.html">Peter S. Goodman reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">Although polls have shifted and shown just how divided the electorate is,  <b>gamblers have held firm, showing that people were putting their money on sticking with Europe</b>. What has created unease in other parts of the world has become an exploitable asset for bookmakers. </p>
+<p class="story-body-text" itemprop="articleBody"><b>âThe betting is just massive,â</b> said Mike Smithson, the founder and editor of PoliticalBetting.com, a website that is like a Bloomberg data terminal for people who wager on political events. He characterized the referendum as âthe biggest political betting event of all time, anywhere.â </p>
+<p class="story-body-text" itemprop="articleBody"><b>On Tuesday and Wednesday alone, the vote attracted wagers worth more than 3 million pounds, or about $4.4 million.</b> About three-quarters of that landed on remain, Mr. Smithson said. </p>
+<p class="story-body-text" itemprop="articleBody">William Hill, the largest bookmaker in Britain, assumes the betting industry will <b>collectively count wagers of more than $29 million before the results are in</b>. </p>
+<p class="story-body-text" itemprop="articleBody">If, in spite of indications from the betting industry, Britain does choose to leave, the country is sure to face a protracted political and legal mess,  <a href="//www.nytimes.com/2016/06/23/world/europe/brexit-consequences.html">Stephen Castle writes in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody"><b>There would be no instant change.</b> The government would have to invoke an unused provision of the European Unionâs governing treaty â Article 50 â which sets out the withdrawal process.</p>
+<p class="story-body-text" itemprop="articleBody"><b>It sets a two-year deadline for a negotiated departure.</b> It is not entirely clear whether Prime Minister David Cameron would stick to his stated plan to invoke it immediately if the country votes to leave. He could face pressure to delay starting the two-year period from those in his party who favor leaving. </p>
+<p class="story-body-text" itemprop="articleBody">Their thinking is that before starting the clock, Britain should start informally negotiating a new trade deal with the European Union. They suggest that Britain would lose considerable leverage in negotiating a new trade deal once it was outside the bloc and that it could get a better trade deal as a part of a negotiation that encompasses all aspects of the new cross-channel relationship.  </p>
+<p class="story-body-text" itemprop="articleBody">Many have misgivings about the prospect of disentangling Britain from four decades of European integration. <b>âThe long-term ghastliness of the legal complications is almost unimaginable,â</b>  Sir David Edward, a former judge at the European Court of Justice and professor emeritus at Edinburgh University, told a committee of the House of Lords. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A RISKY BET ON THE PANAMA CANAL</strong> <span class="divider"> | </span></span> The Panama Canalâs new locks will be on display this weekend, when heads of state congregate to see a Chinese container ship become the first commercial vessel to make the passage from the Atlantic to the Pacific. </p>
+<p class="story-body-text" itemprop="articleBody">But when the celebrations end, <b>the future of the expanded canal will be cloudy at best, its safety, quality of construction and economic viability in doubt</b>,<br />
+<a href="//www.nytimes.com/interactive/2016/06/22/world/americas/panama-canal.html?ref=business">Walt Bogdanich, Jacqueline Williams and Ana Graciela MÃ©ndez report in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">A new canal needs enough water, durable concrete and locks big enough to safely accommodate larger ships. <b>A Times investigation has found that the Panama Canal fails on all three counts. </b></p>
+<p class="story-body-text" itemprop="articleBody">The low bid for the project â a billion dollars less than the nearest competitorâs â made it precarious from the outset, according to a confidential analysis commissioned by the insurer for the four-nation consortium that built the new locks. <b>âThis is a high-risk situation,â</b> wrote the analysts from Hill International in 2010. </p>
+<p class="story-body-text" itemprop="articleBody">As the project developed, it was mired in infighting, political firestorms and severe concerns about its physical structure. </p>
+<p class="story-body-text" itemprop="articleBody">The canal has made Panama, a country with few natural resources, crucial to global economics. It became a major banking, trading and airline hub, not to mention a transit zone for drug dealing and money laundering. </p>
+<p class="story-body-text" itemprop="articleBody"><b>The consequences will be wide-ranging if the canal does not deliver.</b> American grain and soybean farmers and producers of liquefied natural gas may find it harder to sell to Asian customers. Asian manufacturers may forsake the struggling ports on Americaâs East Coast, or they, and ultimately consumers, will shoulder the added cost of going the long way round, through the Suez Canal. </p>
+<p class="story-body-text" itemprop="articleBody">The canalâs success may also be undercut by the slowdown in global trade, especially from China.</p>
+<p class="story-body-text" itemprop="articleBody">Read The Times investigation into the problems that struck the $3.1 billion expansion project <a href="//www.nytimes.com/interactive/2016/06/22/world/americas/panama-canal.html"> here</a>.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The <b>Global Entrepreneurship Summit</b> starts at midday Eastern Time in Silicon Valley.  The Federal Reserve will publish the results from its latest <b>stress tests on banks</b> at 4:30 p.m. <b>Robert Kaplan</b>, the president of the Federal Reserve Bank of Dallas, will speak at a meeting of the Money Marketeers of New York University at 5:30 p.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>VW SHAREHOLDERS VENT</strong> <span class="divider"> | </span></span> <b>âThey have been rewarded for failure,â</b> said Hans-Christoph Hirt, co-head of Hermes EOS, a firm that represents large institutional investors. Volkswagen shareholders had no shortage of things to complain about on Wednesday, </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2016/06/23/business/international/volkswagen-shareholder-meeting.html?ref=business">Jack Ewing reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">Management bonuses, sagging profits and an emissions scandal have made shareholders increasingly restive. Many are unsatisfied with a failure to adequately explain who was responsible for the emissions scandal and  <b>managersâ refusal to fully give up bonuses even after the companyâs first loss in more than two decades. </b></p>
+<p class="story-body-text" itemprop="articleBody"><b>But the top management faces little threat to its authority</b> as  influence lies largely in the hands of a few large shareholders. </p>
+<p class="story-body-text" itemprop="articleBody">Descendants of Ferdinand Porsche, inventor of the Beetle, own a majority of the voting shares, while the state of Lower Saxony owns a fifth and the sovereign wealth fund of Qatar holds 17 percent. </p>
+<p class="story-body-text" itemprop="articleBody"><b>Just 11 percent of the companyâs stock is held by outside shareholders and holders of Volkswagen preferred shares, the most actively traded, are entitled to dividends but cannot vote. </b> </p>
+<p class="story-body-text" itemprop="articleBody">At the annual shareholders meeting on Wednesday, many filed motions to block the management boardâs actions, but it was a foregone conclusion that the critics would not be able to muster anywhere near enough votes to succeed. </p>
+<p class="story-body-text" itemprop="articleBody">Hans Dieter PÃ¶tsch, the chairman of the supervisory board, started with a speech repeating the companyâs assertion that top executives were not aware of the gravity of the emissions problem. </p>
+<p class="story-body-text" itemprop="articleBody">A motion to remove Mr. PÃ¶tsch as chairman of the annual meeting was rejected by shareholders holding 98.8 percent of the voting shares. Manfred Klein, a shareholder who argued in favor of the motion, said that Mr. PÃ¶tsch had a conflict of interest because he was the chief financial officer during the period when the emissions deceit took place. </p>
+<p class="story-body-text" itemprop="articleBody">The session nevertheless <b>forced top managers to confront shareholders just days after German prosecutors said they had begun an investigation</b> into Martin Winterkorn, the former chief executive, and Herbert Diess, the executive in charge of the Volkswagen brand.<br />
+</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Teslaâs Plan to Buy SolarCity Has Major Flaws" src="https://static01.nyt.com/images/2016/06/23/business/db-dealprof1/db-dealprof1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Teslaâs Plan to Buy SolarCity Has Major Flaws</strong> <span class="divider"> | </span></span> Teslaâs stock fell more than 8 percent on Wednesday, as investors viewed the deal as a bailout of SolarCity, one that could sink both companies, Steven Davidoff Solomon writes in Deal Professor.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/23/business/dealbook/teslas-plan-to-buy-solarcity-has-major-flaws.html">Deal Professor &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Qatari Investment Group Acquires Parisian Fashion House Balmain" src="https://static01.nyt.com/images/2016/06/23/business/23DB-BALMAIN1/23DB-BALMAIN1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Qatari Investment Group Acquires Parisian Fashion House Balmain</strong> <span class="divider"> | </span></span> The sale to Mayhoola for Investments, a private investment group linked to Qatarâs royal family, will fund the expansion of the labelâs accessories business.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/23/business/dealbook/balmain-fashion-qatar-mayhoola.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>McDonaldâs Receives Bids for China Stores </strong> <span class="divider"> | </span></span> McDonaldâs has received more than half a dozen bids for its stores in China and Hong Kong, including offers from Beijing Tourism Group, Sanpower and ChemChina, in an auction that could fetch up to $3 billion, Reuters reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/us-mcdonalds-china-sale-idUSKCN0Z800P">reuters </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>G.E. Sells French Consumer Credit Unit to Private Equity Firm</strong> <span class="divider"> | </span></span>  General Electric received a binding offer from the private equity firm Cerberus Capital Management for its French consumer credit unit, GE Money Bank, as part of its efforts to exit the finance sector.<br /><span class="kicker"><a href="//www.wsj.com/articles/ge-sells-french-consumer-credit-unit-to-private-equity-firm-1466669243?mod=pls_whats_news_us_business_f">the wall street journal</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Twilio Raises $150 Million in I.P.O.</strong> <span class="divider"> | </span></span> Twilioâs offering, the largest but only the third of technology stock debuts this year, was a test of the market.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/23/business/dealbook/twilio-ipo-raises-150-million.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Cloud Management Company Hires Goldman for I.P.O. </strong> <span class="divider"> | </span></span> Okta, the cloud identity management company valued at $1.2 billion in its latest round of private fund-raising, hired Goldman Sachs to lead either an initial public offering or an outright sale, Reuters reports, citing people familiar with the matter.<br /><span class="kicker"><a href="//www.reuters.com/article/us-okta-m-a-ipo-idUSKCN0Z82FP?feedType=RSS&#038;feedName=innovationNews">reuters </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fullerton Health Seeks to Tap Interest in Health Care in Asia</strong> <span class="divider"> | </span></span> Fullerton Health, which provides health care to corporate clients like Singapore Airlines, is preparing for an initial public offering that could value the company at $1 billion.<br /><span class="kicker"><a href="//www.ft.com/cms/s/0/8d30f8f8-3448-11e6-bda0-04585c31b153.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz4COHQW3fx">the financial times</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Technology Start-Ups Pledge to Increase Diversity in the U.S. </strong> <span class="divider"> | </span></span> Only 3 percent of venture-backed start-ups were led by women and just 1 percent were led by African-Americans, while female entrepreneurs start companies with only half as much capital as their male counterparts, according to Megan Smith, the chief technology officer in the Office of Science and Technology Policy. <br /><span class="kicker"><a href="//www.ft.com/cms/s/0/31cb1656-38c6-11e6-a780-b48ed7b6126f.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz4COHQW3fx">the financial times  </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Corinthian Colleges Used Recruiting Incentives, Documents Show" src="https://static01.nyt.com/images/2016/06/22/business/22CORINTHIAN/22CORINTHIAN-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Corinthian Colleges Used Recruiting Incentives, Documents Show</strong> <span class="divider"> | </span></span> The disclosure, found in internal documents in a suit filed by employees of the defunct for-profit education company, could help former students get loans forgiven.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/23/business/corinthian-colleges-used-recruiting-incentives-documents-show.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Former Chief of Bangladesh Bank Blames Global System for Theft" src="https://static01.nyt.com/images/2016/06/23/business/23db-bangladeshbank/23db-bangladeshbank-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Former Chief of Bangladesh Bank Blames Global System for Theft</strong> <span class="divider"> | </span></span> In an interview, the former chief, Atiur Rahman, defended his own conduct and said other institutions were responsible for an $81 million digital heist in February.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/23/business/dealbook/former-bangladesh-bank-chief-blames-others.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Fiat Chrysler Moves Up Gearshift Repairs After Actorâs Death" src="https://static01.nyt.com/images/2016/06/23/business/23CHRYSLER/23CHRYSLER-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fiat Chrysler Moves Up Gearshift Repairs After Actorâs Death</strong> <span class="divider"> | </span></span> The death of the actor Anton Yelchin, which might be linked to a faulty gearshift in the Jeep Grand Cherokee, might have accelerated the repair schedule.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/23/business/fiat-chrysler-moves-up-repair-dates-for-gearshift-after-actors-death.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Mitsubishi Predicts $1.39 Billion Loss After Fuel Economy Fraud" src="https://static01.nyt.com/images/2016/06/23/business/23MITSUBISHI/23MITSUBISHI-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Mitsubishi Predicts $1.39 Billion Loss After Fuel Economy Fraud</strong> <span class="divider"> | </span></span> The net loss, forecast for the fiscal year to March, would be Mitsubishiâs first in eight years.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/23/business/international/mitsubishi-predicts-1-39-billion-loss-after-fuel-economy-fraud.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Court Puts Sumner Redstoneâs Plan to Replace Directors on Hold</strong> <span class="divider"> | </span></span> The plan by Sumner Redstone to replace five directors at Viacom is on hold until it can be determined if he is mentally competent to make those decisions, a Delaware court said on Wednesday.<br /><span class="kicker"><a href="//www.wsj.com/articles/court-puts-sumner-redstones-plan-to-replace-directors-on-hold-1466634433?mod=pls_whats_news_us_business_f">the wall street journal </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Facebook Shareholder Vote Produces Odd Results</strong> <span class="divider"> | </span></span> A vote on the companyâs governance was a brainteaser that suggested that institutional investors are more inclined to tick boxes than follow their heads, Jennifer Saba writes in Breakingviews.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/23/business/dealbook/facebook-shareholder-vote-produces-odd-results.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>UBS Gives I.R.S. Records on U.S. Citizenâs Account in Singapore</strong> <span class="divider"> | </span></span> UBS ended a legal fight with the Internal Revenue Service, agreeing to hand over records on an American clientâs account in Singapore as the authorities seek to move beyond Switzerland in their fight against offshore tax evasion.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2016-06-22/ubs-gives-irs-records-on-u-s-citizen-s-account-in-singapore-iprjhqd9">bloomberg </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Medicare and Social Security Trustees Warn of Shortfalls" src="https://static01.nyt.com/images/2016/06/23/us/23BENEFITS_web1/23BENEFITS-1466632272250-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Medicare and Social Security Trustees Warn of Shortfalls</strong> <span class="divider"> | </span></span> A report could add a note of fiscal reality to a presidential campaign that has given scant attention to the fiscal challenges of an aging population.<br /><span class="kicker"><a href="//www.nytimes.com/2016/06/23/us/politics/medicare-social-security-trustees-report.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2016/06/23/morning-agenda-an-early-winner-in-the-brexit-vote/"
+					data-title="Morning Agenda: An Early Winner in the &#8216;Brexit Vote&#8217;"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;A Risky Bet on the Panama Canal | VW Shareholders Vent&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2016/06/23/morning-agenda-an-early-winner-in-the-brexit-vote/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":55,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

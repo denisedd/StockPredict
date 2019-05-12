@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003889249"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1441277564" />
+<meta name="PUD" content="20150903" />
+<meta name="pdate" content="20150903" />
+<meta name="ptime" content="20150903065244" />
+<meta name="utime" content="20150903105244" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-09-03T10:52:44-04:00" />
+<meta name="DISPLAYDATE" content="September 3, 2015" />
+<meta name="dat" content="September 3, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="des" content="Hedge Funds;Private Equity;Stocks and Bonds;Venture Capital">
+<meta name="org" content="Carlyle Group LP;Deutsche Bank AG;European Central Bank;Fosun Industrial Co Ltd;KKR &amp; Co LP;Leonard Green &amp; Partners;Millennium Management LLC;Monsanto Company;Petco Animal Supplies Inc;Petsmart Inc;Puerto Rico;Puerto Rico Electric Power Authority;SAC Capital Advisors;Syngenta AG;The Blackstone Group">
+<meta name="geo" content="China">
+<meta name="ticker" content="Carlyle Group LP|CG|NASDAQ;Deutsche Bank AG|DB|NYSE;KKR & Co LP|KKR|NYSE;Monsanto Company|MON|NYSE;Syngenta AG|SYT|NYSE" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Private Equity" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Carlyle Group LP" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="European Central Bank" />
+<meta property="article:tag" content="Fosun Industrial Co Ltd" />
+<meta property="article:tag" content="KKR &amp; Co LP" />
+<meta property="article:tag" content="Leonard Green &amp; Partners" />
+<meta property="article:tag" content="Millennium Management LLC" />
+<meta property="article:tag" content="Monsanto Company" />
+<meta property="article:tag" content="Petco Animal Supplies Inc" />
+<meta property="article:tag" content="Petsmart Inc" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="Puerto Rico Electric Power Authority" />
+<meta property="article:tag" content="SAC Capital Advisors" />
+<meta property="article:tag" content="Syngenta AG" />
+<meta property="article:tag" content="The Blackstone Group" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Hedge Funds,Private Equity,Stocks and Bonds,Venture Capital,Carlyle Group LP,Deutsche Bank AG,European Central Bank,Fosun Industrial Co Ltd,KKR &amp; Co LP,Leonard Green &amp; Partners,Millennium Management LLC,Monsanto Company,Petco Animal Supplies Inc,Petsmart Inc,Puerto Rico,Puerto Rico Electric Power Authority,SAC Capital Advisors,Syngenta AG,The Blackstone Group,China,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F09%2F03%2Fmorning-agenda-the-hedge-funds-that-prospered-in-market-tumult%2F" title="Morning Agenda: The Hedge Funds that Prospered in Market Tumult" />
+<meta name="description" content="Puerto Rico&#8217;s Debt Deal &#124; Private Equity Firms Circle Petco" />
+<meta name="hdl" content="Morning Agenda: The Hedge Funds that Prospered in Market Tumult" />
+<meta property="og:title" content="Morning Agenda: The Hedge Funds that Prospered in Market Tumult" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/09/03/morning-agenda-the-hedge-funds-that-prospered-in-market-tumult/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Puerto Rico&#8217;s Debt Deal &#124; Private Equity Firms Circle Petco" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: The Hedge Funds that Prospered in Market Tumult" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/09/03/morning-agenda-the-hedge-funds-that-prospered-in-market-tumult/" />
+<meta name="twitter:description" content="Puerto Rico&#8217;s Debt Deal &#124; Private Equity Firms Circle Petco" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Chinese Stocks Slide After U.S. Sell-Off' href='//news.blogs.nytimes.com/2015/09/02/morning-agenda-chinese-stocks-slide-after-u-s-sell-off/' />
+<link rel='next' title='Morning Agenda: Markets Slide Ahead of U.S. Jobs Report' href='//news.blogs.nytimes.com/2015/09/04/morning-agenda-markets-slide-ahead-of-u-s-jobs-report/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/09/03/morning-agenda-the-hedge-funds-that-prospered-in-market-tumult/' />
+<link rel='shortlink' href='//nyti.ms/1N4Yk0R' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/09/03/morning-agenda-the-hedge-funds-that-prospered-in-market-tumult/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: The Hedge Funds that Prospered in Market Tumult - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3161 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: The Hedge Funds that Prospered in Market Tumult        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/09/03/morning-agenda-the-hedge-funds-that-prospered-in-market-tumult/"
+	 data-title="Morning Agenda: The Hedge Funds that Prospered in Market Tumult"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Puerto Rico&#039;s Debt Deal | Private Equity Firms Circle Petco&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/09/03/morning-agenda-the-hedge-funds-that-prospered-in-market-tumult/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="September 3, 2015 6:52 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: The Hedge Funds that Prospered in Market Tumult</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-09-03T10:52:44+00:00" itemprop="datePublished">September 3, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">September 3, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3161 post type-post status-publish hentry category-dealbook tag-carlyle-group-lp tag-china tag-deutsche-bank-ag tag-european-central-bank tag-fosun-industrial-co-ltd tag-hedge-funds tag-kkr-co-lp tag-leonard-green-partners tag-millennium-management-llc tag-monsanto-company tag-petco-animal-supplies-inc tag-petsmart-inc tag-private-equity tag-puerto-rico tag-puerto-rico-electric-power-authority tag-sac-capital-advisors tag-stocks-and-bonds tag-syngenta-ag tag-the-blackstone-group tag-venture-capital des-hedge-funds des-private-equity des-stocks-and-bonds des-venture-capital org-carlyle-group-lp org-deutsche-bank-ag org-european-central-bank org-fosun-industrial-co-ltd org-kkr-co-lp org-leonard-green-partners org-millennium-management-llc org-monsanto-company org-petco-animal-supplies-inc org-petsmart-inc org-puerto-rico org-puerto-rico-electric-power-authority org-sac-capital-advisors org-syngenta-ag org-the-blackstone-group geo-china" id="post-3161">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: The Hedge Funds that Prospered in Market Tumult</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-09-03T10:52:44+00:00" itemprop="datePublished">September 3, 2015 6:52 am</time>
+			<!-- date updated --><span class="visually-hidden updated">September 3, 2015 6:52 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/09/03/morning-agenda-the-hedge-funds-that-prospered-in-market-tumult/" data-title="Morning Agenda: The Hedge Funds that Prospered in Market Tumult" data-description="Puerto Rico&#039;s Debt Deal | Private Equity Firms Circle Petco">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>THE HEDGE FUNDS THAT PROSPERED IN MARKET TUMULT</strong> <span class="divider"> | </span></span> Itâs not all doom and gloom for the hedge fund industry. Several hedge funds are putting in <b>the kind of performances that just might justify the industryâs famously hefty fees</b>, <a href="//www.nytimes.com/2015/09/03/business/some-hedge-funds-prosper-in-market-tumult.html?partner=rss&#038;emc=rss">Alexandra Stevenson and Matthew Goldstein report in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody"> Some of the better performers were started in the past several years by <b>former disciples of Steven A. Cohen</b>, the billionaire investor who founded SAC Capital Advisors.</p>
+<p class="story-body-text" itemprop="articleBody"> Jason Karp, who worked with Mr. Cohen for nearly four years, created <b>Tourbillon Capital Partners</b> in 2012. The $2.9 billion fund is up 18.44 percent in its main portfolio, according to a person briefed on the firmâs performance.</p>
+<p class="story-body-text" itemprop="articleBody"> Aaron Cowen is a former SAC chief investment officer. His <b>Suvretta Capital Management</b>, a $2 billion hedge fund, is up 7 to 9 percent in its main funds. </p>
+<p class="story-body-text" itemprop="articleBody"> <b>Melvin Capital</b>, a roughly $1 billion firm that a former top trader for SAC, Gabriel Plotkin, founded last year, is up nearly 20 percent.</p>
+<p class="story-body-text" itemprop="articleBody"> All three former protÃ©gÃ©s are running classic long-short hedge funds that make both bullish and bearish bets on stocks. But they come from the <b>SAC tradition of moving quickly in and out of stocks</b> â a tactic that may be serving them well at a time when the unpredictability of the recent swings in the markets has unnerved others.</p>
+<p class="story-body-text" itemprop="articleBody"> Israel Englanderâs <b>Millennium Management</b>, a $27 billion firm with a wide array of trading strategies, uses the same tactic. Millennium is up 9.6 percent for the year. </p>
+<p class="story-body-text" itemprop="articleBody"> It is not clear how Mr. Cohen has done with Point72 Asset Management, the $10 billion family office that manages his money. </p>
+<p class="story-body-text" itemprop="articleBody"> Firms that make trades off the turmoil have done especially well. For instance, Ionic Capital Management, a $2.5 billion hedge fund that <b>performs best in volatile markets</b>, is up about 16 percent for the year, after notching an 11 percent gain in August, said a person briefed on the numbers.</p>
+<p class="story-body-text" itemprop="articleBody"> These gains are notable in a year when the <b>average hedge fund is down about 1 percent</b> and the benchmark Standard &#038; Poorâs 500-stock index is off 5.3 percent for the year.</p>
+<p class="story-body-text" itemprop="articleBody"> Hedge funds with more <b>concentrated positions and longer-term views</b> have tended to fare the worst.</p>
+<p class="story-body-text" itemprop="articleBody"> Hedge funds like Omega Partners, the $9 billion hedge fund founded by Leon Cooperman, have disappointed, partly because they have <b>abandoned short positions for long ones during a roaring bull market</b> in the United States that had clobbered short-sellers. </p>
+<p class="story-body-text" itemprop="articleBody"> In recent years, investors have been parking their money with <b>hedge funds that offer long-only funds</b>, according to a recent report by Deutsche Bank. In this environment, even short-sellers â investors who take bets against the market â have had to change their strategies.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PUERTO RICOâS DEBT DEAL</strong> <span class="divider"> | </span></span> Puerto Rico took a step toward dealing with its $72 billion of debt on Tuesday when its electric power authority and a group of investors agreed to restructure as much as $5.7 billion of bonds. The deal offers a <b>possible model for a much bigger and messier restructuring</b>, <a href="//www.nytimes.com/2015/09/03/business/dealbook/puerto-rico-reaches-deal-with-electric-utility-bondholders.html?ref=dealbook">Mary Williams Walsh writes in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody"> Each side <b>granted concessions and claimed some victories</b>. Bondholders, who had initially feared losses of more than 50 percent, took a loss of 15 percent. Puerto Rico got interest rate relief and a five-year payment moratorium in return. New bonds are to be issued, which will be backed by a securitized stream of revenue intended to make them much safer and likely to repay investors than the power authorityâs current bonds. </p>
+<p class="story-body-text" itemprop="articleBody"> The islandâs government is <b>close to running out of cash</b> and can no longer borrow on reasonable terms. Last month, it defaulted on a $58 million bond payment. It has also been trying without success to get access to federal bankruptcy courts, something that would take an act of Congress. </p>
+<p class="story-body-text" itemprop="articleBody"> The debt restructuring does not solve those problems, but the government now has something to show other creditors <b>why a negotiated restructuring could be more beneficial</b> than a battle in court. </p>
+<p class="story-body-text" itemprop="articleBody"> Alejandro GarcÃ­a Padilla, Puerto Ricoâs governor, has been trying to buy time and preserve cash, just to keep essential services running. But bondholders have shown little enthusiasm and some even say they believe Puerto Rico can pay its debts. They also <b>question the likelihood of the government achieving any of the economic reforms</b> that Puerto Rico needs, if it were given a debt moratorium.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The  <b>European Central Bank </b> news conference following the meeting of the governing council starts at 9:30 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>PRIVATE EQUITY FIRMS CIRCLE PETCO</strong> <span class="divider"> | </span></span> First PetSmart was sold to a private equity firm. Then its rival, Petco, began preparing itself for an initial public offering nearly a decade after its leveraged buyout. Now <b>Petco may find itself sold to another investment</b> firm, <a href="//www.nytimes.com/2015/09/03/business/dealbook/private-equity-firms-circle-petco.html?ref=dealbook">as Michael J. de la Merced reports in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody"> Petco has attracted takeover interest from private equity shops including <b>Kohlberg Kravis Roberts &#038; Company</b> even while it continues to prepare for an I.P.O., according to a person briefed on the matter. </p>
+<p class="story-body-text" itemprop="articleBody"> It plans to meet next week with potential buyers, <b>including K.K.R. and Carlyle Group</b>, <a href="//www.wsj.com/articles/private-equity-firms-carlyle-kkr-explore-bids-for-petco-1441229288">according to The Wall Street Journal</a>, which first reported the deliberations. </p>
+<p class="story-body-text" itemprop="articleBody"> It is unclear how much Petco could fetch in a sale, but The Wall Street Journal cited people familiar with the matter saying that the company <b>could be worth about $4 billion</b>. Its owners, TPG Capital and Leonard Green &#038; Partners, are still deciding whether to sell the company outright or list it on a stock exchange.</p>
+<p class="story-body-text" itemprop="articleBody"> Selling the company to a private equity peer could provide a <b>quicker and surer way to make a profit</b>. TPG and Leonard Green bought Petco in 2006 and under their ownership, the retailer has seen sales rise steadily, though profits have been volatile.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Syngenta Moves to Calm Disappointed Shareholders</strong> <span class="divider"> | </span></span> Syngenta moved to appease shareholders angered by its rejection of a takeover bid from Monsanto, saying it would divest its global vegetable seed business and return more than $2 billion to shareholders.<br /><span class="kicker"><a href="//www.wsj.com/articles/syngenta-moves-to-calm-disappointed-shareholders-1441258802?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Senior-Housing Companies Rally After Amica Agrees to Buyout</strong> <span class="divider"> | </span></span> Amica Mature Lifestyles, a Vancouver-based provider of luxury residences for older adults, agreed to be acquired by a pension fund-backed company, extending an industrywide consolidation.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-09-02/senior-housing-companies-rally-after-amica-agrees-to-buyout"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fosun Defiant Over Its Firepower</strong> <span class="divider"> | </span></span> Guo Guangchang, the co-founder of Chinaâs largest private conglomerate, said it would continue its streak of acquisitions despite its share price drop. <br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/03d90028-5186-11e5-8642-453585f2cfcd.html#axzz3kMuOmFHR"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Foreign Firms Feel Chinaâs Chill</strong> <span class="divider"> | </span></span> Investment banks, in particular, have been repeatedly frustrated in attempts to build deal-making businesses.<br /><span class="kicker"><a href="//www.wsj.com/articles/foreign-firms-feel-chinas-chill-1441232257?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Natalie Massenet, Net-a-Porter Founder, Announces Departure" src="https://static01.nyt.com/images/2015/09/03/business/03MASSENET/03MASSENET-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Natalie Massenet, Net-a-Porter Founder, Announces Departure</strong> <span class="divider"> | </span></span> She leaves only months after the company joined its Italian rival, Yoox, in a merger.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/03/business/natalie-massenet-net-a-porter-founder-announces-departure.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Leaves Open Possibility of Selling Hua Xia Stake</strong> <span class="divider"> | </span></span> Deutsche Bankâs co-chief executive has left open the possibility that the German lender could sell its 19.99 percent stake in the Chinese bank, Hua Xia, but ruled out any broader withdrawal from the country.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/a742063a-516b-11e5-b029-b9d50a74fd14.html#axzz3kMuOmFHR"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Kleinwort Benson Tries to Fend Off Fosun</strong> <span class="divider"> | </span></span> The Belgian owner of Kleinwort Benson is seeking to repel a hostile 675 million euro bid from Fosun, its biggest shareholder, by encouraging Franceâs Oddo &#038; Cie to make a counter offer, The Financial Times reports, citing two people familiar with the matter.<br /><span class="kicker"><a href="//www.ft.com/cms/s/0/fd598b70-518d-11e5-b029-b9d50a74fd14.html#ixzz3kfVxZekp"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Japanâs Banks Concerned About Asian Depreciation</strong> <span class="divider"> | </span></span> Japanese banks, which focused on expanding in emerging Asia as yields fell to record lows at home, are now exposed to some of the worldâs worst-performing currencies. <br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-09-02/japan-megabanks-show-asia-depreciation-concern-after-loan-binge"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/p/private_equity/index.html">PRIVATE EQUITY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Blackstone Makes Investment in Mortgage Insurer PMI Group</strong> <span class="divider"> | </span></span> The New York investment firm has agreed to provide PMI with a loan for working capital needs, in connection with the purchase of a significant equity stake.<br /><span class="kicker"><a href="//www.wsj.com/articles/blackstone-makes-investment-in-mortgage-insurer-pmi-group-1441227024?mod=rss_markets_main"> THE WALL STREET JOURNAL</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Leon Cooperman Blames Market Volatility on Risk-Parity Funds</strong> <span class="divider"> | </span></span> The founder of Omega Advisors blamed last weekâs stock market sell-off â and his own poor performance in August â on esoteric but increasingly influential trading strategies pioneered by hedge funds like Bridgewater.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/ae2914f8-51e7-11e5-8642-453585f2cfcd.html#axzz3kMuOmFHR"> THE FINANCIAL TIMES</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Calstrs Aims to Cut Risk by Moving Up to $20 Billion Out of Stocks</strong> <span class="divider"> | </span></span> A huge pension fund is considering a strategy to protect retirees from market gyrations when a big loss of principal would be devastating.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/03/business/dealbook/calstrs-eyes-a-strategy-to-cut-risk.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Fortress Hedge-Fund Executive Stuart Bohart Has Left Firm</strong> <span class="divider"> | </span></span> Stuart Bohartâs departure follows a rough period for Fortressâs âmacroâ trading business, which trades in various markets based on global economic trends.<br /><span class="kicker"><a href="//www.wsj.com/articles/fortress-hedge-fund-executive-stuart-bohart-has-left-firm-1441220739?mod=rss_markets_main"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Scrutiny of Security Start-Ups May Signal Shift in Venture Funding" src="https://static01.nyt.com/images/2015/09/03/business/03cyber-web1/03cyber-web1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Scrutiny of Security Start-Ups May Signal Shift in Venture Funding</strong> <span class="divider"> | </span></span> Cybersecurity companies have had an easy time raising money in Silicon Valley over the last few years. But investors are starting to ask about profit and sustainability.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/03/technology/scrutiny-of-security-start-ups-may-signal-shift-in-venture-funding.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Inside Uberâs Fight With Its Chinese Nemesis</strong> <span class="divider"> | </span></span> Uber and Didi Kuaidi are fighting to raise funds for expansion while they compete to woo drivers to their car hailing services and navigate Chinaâs tough regulatory environment.<br /><span class="kicker"><a href="//www.wsj.com/articles/inside-ubers-fight-with-its-chinese-nemesis-didi-kuaidi-1441234010?mod=pls_whats_news_us_business_f"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="No Resting on Laurels, European Central Bank Leader Faces New Threats" src="https://static01.nyt.com/images/2015/09/03/business/03ecb-web-1441208847165/03ecb-web-1441208847165-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>No Resting on Laurels, European Central Bank Leader Faces New Threats</strong> <span class="divider"> | </span></span> Eurozone growth has improved since the central bank began its stimulus program, but there are new uncertainties in European and global economies.<br /><span class="kicker"><a href="//www.nytimes.com/2015/09/03/business/international/questions-for-ecb-as-europe-faces-headwinds.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/09/03/morning-agenda-the-hedge-funds-that-prospered-in-market-tumult/"
+					data-title="Morning Agenda: The Hedge Funds that Prospered in Market Tumult"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Puerto Rico&#039;s Debt Deal | Private Equity Firms Circle Petco&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/09/03/morning-agenda-the-hedge-funds-that-prospered-in-market-tumult/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":48,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000004020095"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1446720492" />
+<meta name="PUD" content="20151105" />
+<meta name="pdate" content="20151105" />
+<meta name="ptime" content="20151105054812" />
+<meta name="utime" content="20151105104812" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-11-05T10:48:12-05:00" />
+<meta name="DISPLAYDATE" content="November 5, 2015" />
+<meta name="dat" content="November 5, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Icahn, Carl C;Lagarde, Christine;Peltz, Nelson;Velazquez, Nydia M">
+<meta name="des" content="Constitution (US);Exchange Traded Funds;Gender;Hedge Funds;Initial Public Offerings;Insider Trading;Interest Rates;Pensions and Retirement Plans;Puerto Rico;Start-ups;Trans-Pacific Partnership">
+<meta name="org" content="Bank of England;Deutsche Bank AG;Expedia Inc;Federal Reserve System;Securities and Exchange Commission;Societe Generale;Time Warner Inc">
+<meta name="geo" content="Bitcoin (Currency);China;Wall Street (Manhattan, NY)">
+<meta name="ticker" content="Deutsche Bank AG|DB|NYSE;Expedia Inc|EXPE|NASDAQ;Societe Generale|SCGLY|Other OTC;Time Warner Inc|TWX|NYSE" />
+<meta property="article:tag" content="Icahn Carl C" />
+<meta property="article:tag" content="Lagarde Christine" />
+<meta property="article:tag" content="Peltz Nelson" />
+<meta property="article:tag" content="Velazquez Nydia M" />
+<meta property="article:tag" content="Constitution (US)" />
+<meta property="article:tag" content="Exchange Traded Funds" />
+<meta property="article:tag" content="Gender" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Initial Public Offerings" />
+<meta property="article:tag" content="Insider Trading" />
+<meta property="article:tag" content="Interest Rates" />
+<meta property="article:tag" content="Pensions and Retirement Plans" />
+<meta property="article:tag" content="Puerto Rico" />
+<meta property="article:tag" content="Start-ups" />
+<meta property="article:tag" content="Trans-Pacific Partnership" />
+<meta property="article:tag" content="Bank of England" />
+<meta property="article:tag" content="Deutsche Bank AG" />
+<meta property="article:tag" content="Expedia Inc" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Securities and Exchange Commission" />
+<meta property="article:tag" content="Societe Generale" />
+<meta property="article:tag" content="Time Warner Inc" />
+<meta property="article:tag" content="Bitcoin (Currency)" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Wall Street (Manhattan NY)" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Icahn Carl C,Lagarde Christine,Peltz Nelson,Velazquez Nydia M,Constitution (US),Exchange Traded Funds,Gender,Hedge Funds,Initial Public Offerings,Insider Trading,Interest Rates,Pensions and Retirement Plans,Puerto Rico,Start-ups,Trans-Pacific Partnership,Bank of England,Deutsche Bank AG,Expedia Inc,Federal Reserve System,Securities and Exchange Commission,Societe Generale,Time Warner Inc,Bitcoin (Currency),China,Wall Street (Manhattan NY),DealBook" />
+<meta name="news_keywords" content="Bank of England,Carl Icahn,China,Christine Lagarde,Deutsche Bank,ETF,Expedia,Federal Reserve,Gender,Hedge fund,Insider trading,Interest rate,IPO,Nelson Peltz,Nydia M Velazquez,Pensions and Retirement Plans,SEC,Societe Generale,Startup,Time Warner,Trans-Pacific Partnership,US Constitution,Wall Street Manhattan" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F11%2F05%2Fmorning-agenda-the-bitcoin-resurgence%2F" title="Morning Agenda: The Bitcoin Resurgence" />
+<meta name="description" content="Interest Rate Increase in December Is Still Possible &#124; A 1975 Law Complicates Puerto Rico&#8217;s Debt Crisis &#124; Activists May Not Be That Myopic" />
+<meta name="hdl" content="Morning Agenda: The Bitcoin Resurgence" />
+<meta property="og:title" content="Morning Agenda: The Bitcoin Resurgence" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/11/05/morning-agenda-the-bitcoin-resurgence/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Interest Rate Increase in December Is Still Possible &#124; A 1975 Law Complicates Puerto Rico&#8217;s Debt Crisis &#124; Activists May Not Be That Myopic" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: The Bitcoin Resurgence" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/11/05/morning-agenda-the-bitcoin-resurgence/" />
+<meta name="twitter:description" content="Interest Rate Increase in December Is Still Possible &#124; A 1975 Law Complicates Puerto Rico&#8217;s Debt Crisis &#124; Activists May Not Be That Myopic" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Success of Goldman-Funded School Program Questioned' href='//news.blogs.nytimes.com/2015/11/04/morning-agenda-success-of-goldman-funded-school-program-questioned/' />
+<link rel='next' title='Morning Agenda: Former Traders Found Guilty in Libor Case' href='//news.blogs.nytimes.com/2015/11/06/morning-agenda-former-traders-found-guilty-in-libor-case/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/11/05/morning-agenda-the-bitcoin-resurgence/' />
+<link rel='shortlink' href='//nyti.ms/1RxOPYD' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/11/05/morning-agenda-the-bitcoin-resurgence/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: The Bitcoin Resurgence - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3572 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: The Bitcoin Resurgence        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/11/05/morning-agenda-the-bitcoin-resurgence/"
+	 data-title="Morning Agenda: The Bitcoin Resurgence"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Interest Rate Increase in December Is Still Possible | A 1975 Law Complicates Puerto Rico&#039;s Debt Crisis | Activists May Not Be That Myopic&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/11/05/morning-agenda-the-bitcoin-resurgence/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="November 5, 2015 5:48 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: The Bitcoin Resurgence</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-11-05T10:48:12+00:00" itemprop="datePublished">November 5, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">November 5, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3572 post type-post status-publish hentry category-dealbook tag-bank-of-england tag-bitcoin-currency tag-china tag-constitution-us tag-deutsche-bank-ag tag-exchange-traded-funds tag-expedia-inc tag-federal-reserve-system tag-gender tag-hedge-funds tag-icahn-carl-c tag-initial-public-offerings tag-insider-trading tag-interest-rates tag-lagarde-christine tag-peltz-nelson tag-pensions-and-retirement-plans tag-puerto-rico tag-securities-and-exchange-commission tag-societe-generale tag-start-ups tag-time-warner-inc tag-trans-pacific-partnership tag-velazquez-nydia-m tag-wall-street-manhattan-ny per-icahn-carl-c per-lagarde-christine per-peltz-nelson per-velazquez-nydia-m des-constitution-us des-exchange-traded-funds des-gender des-hedge-funds des-initial-public-offerings des-insider-trading des-interest-rates des-pensions-and-retirement-plans des-puerto-rico des-start-ups des-trans-pacific-partnership org-bank-of-england org-deutsche-bank-ag org-expedia-inc org-federal-reserve-system org-securities-and-exchange-commission org-societe-generale org-time-warner-inc geo-bitcoin-currency geo-china geo-wall-street-manhattan-ny news_keywords-bank-of-england news_keywords-carl-icahn news_keywords-china news_keywords-christine-lagarde news_keywords-deutsche-bank news_keywords-etf news_keywords-expedia news_keywords-federal-reserve news_keywords-gender news_keywords-hedge-fund news_keywords-insider-trading-2 news_keywords-interest-rate news_keywords-ipo news_keywords-nelson-peltz news_keywords-nydia-m-velazquez news_keywords-pensions-and-retirement-plans news_keywords-sec news_keywords-societe-generale news_keywords-startup news_keywords-time-warner news_keywords-trans-pacific-partnership news_keywords-us-constitution news_keywords-wall-street-manhattan" id="post-3572">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: The Bitcoin Resurgence</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-11-05T10:48:12+00:00" itemprop="datePublished">November 5, 2015 5:48 am</time>
+			<!-- date updated --><span class="visually-hidden updated">November 5, 2015 5:48 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/11/05/morning-agenda-the-bitcoin-resurgence/" data-title="Morning Agenda: The Bitcoin Resurgence" data-description="Interest Rate Increase in December Is Still Possible | A 1975 Law Complicates Puerto Rico&#039;s Debt Crisis | Activists May Not Be That Myopic">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>THE BITCOIN RESURGENCE</strong> <span class="divider"> | </span></span> The price of the virtual currency Bitcoin has surged after a quiet period, <a href="//www.nytimes.com/2015/11/05/business/dealbook/value-of-bitcoin-surges-emerging-from-a-lull-in-interest.html?ref=dealbook">Nathaniel Popper reports in DealBook.</a> Signs of <b>interest from China and Wall Street</b> have kicked off a speculative frenzy. </p>
+<p class="story-body-text" itemprop="articleBody">The price for Bitcoin has been rising for a few weeks and <b>spiked above $500</b> on Wednesday, bringing the value of a single coin up 100 percent from a month ago. It sank back to $400 by the end of the day.</p>
+<p class="story-body-text" itemprop="articleBody">The currency <b>had been in decline</b> after the collapse in 2014 of Mt. Gox, which was once the biggest Bitcoin exchange. The use of the currency for drug payments and ransom payments also dampened interest in it.</p>
+<p class="story-body-text" itemprop="articleBody">The surge in <b>demand came from China</b>, spurred by a drop in the stock market and the emergence of a new Ponzi scheme tied to Bitcoin. The price there has been rising faster than in the rest of the world. </p>
+<p class="story-body-text" itemprop="articleBody">This drew interest from <b>speculators betting more on the future of the currency</b> than on its current use. </p>
+<p class="story-body-text" itemprop="articleBody">Skepticism of Bitcoin has not abated, but the companies that handle the bulk of transactions seem stronger than those of the past. <b>New Yorkâs top financial regulator</b> granted trust company charters to two Bitcoin exchanges, which are in operation along with Coinbase, in California, the largest in the country. </p>
+<p class="story-body-text" itemprop="articleBody">Financial firms have also been studying <b>Bitcoinâs underlying technology</b>, particularly the blockchain ledger in which Bitcoin transactions are recorded, although they insist that they do not want to use blockchains tied to Bitcoin. </p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>INTEREST RATE INCREASE IN DECEMBER IS STILL POSSIBLE</strong> <span class="divider"> | </span></span> The Federal Reserve could still raise its benchmark <b>interest rate in December</b> as long as economic growth continues, <a HREF="//www.nytimes.com/2015/11/05/business/economy/fed-yellen-congress-interest-rates.html?ref=business">Binyamin Appelbaum reports in The New York Times.</a></p>
+<p class="story-body-text" itemprop="articleBody">Janet L. Yellen, the Fed chairwoman, told the House Financial Services Committee that the economy was performing well and that <b>âit could be appropriateâ to raise rates</b> at the Fedâs final policy meeting of the year. She stressed that no decision had been made and that the timing rested on the next few rounds of economic data. </p>
+<p class="story-body-text" itemprop="articleBody">William C. Dudley, the president of the Federal Reserve Bank of New York, echoed her words a few hours later. </p>
+<p class="story-body-text" itemprop="articleBody">Ms. Yellen <b>still needs to get a consensus</b> from the members of her own committee who disagree over the benefits of waiting until next year. </p>
+<p class="story-body-text" itemprop="articleBody">The messages made an impression on investors who have been slow to accept that the Fed may finally be ready to raise rates. <b>Yields on two-year Treasury securities</b>, closely tied to expectations about Fed policy, climbed to 0.84 percent, the highest level since spring 2011. </p>
+<p class="story-body-text" itemprop="articleBody">In effect, that means the Fed is <b>already starting to tighten financial conditions</b> even as officials continue to wrestle over how soon to end seven years of near-zero short-term rates.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A 1975 LAW COMPLICATES PUERTO RICOâS DEBT CRISIS</strong> <span class="divider"> | </span></span> A bill introduced in 1975 is making it harder for Washington to help Puerto Rico,<br />
+<a href="//www.nytimes.com/2015/11/05/business/puerto-ricos-debt-crisis-and-the-1975-law-complicating-matters.html">Mary Williams Walsh reports in DealBook.</a> It prevents the Securities and Exchange Commission from making states and local governments submit to <b>the same kind of scrutiny that companies must endure</b> before sending their securities to market.</p>
+<p class="story-body-text" itemprop="articleBody">When New York City went broke in 1975, federal securities regulators were worried about more <b>financial failures in other municipalities</b>. They wanted Congress to force states and cities to provide financial information about bonds they were going to sell to raise money. </p>
+<p class="story-body-text" itemprop="articleBody">Cities wanted no part in that and rallied around the <b>Constitutionâs separation-of-powers doctrine</b>. John Tower, a Republican senator from Texas, introduced a bill to keep the feds at bay. </p>
+<p class="story-body-text" itemprop="articleBody">There are signs that policy makers see Puerto Ricoâs issues as proof that the<b> hands-off approach that the S.E.C. has taken</b> to the $3.7 trillion municipal bond market is part of the problem. </p>
+<p class="story-body-text" itemprop="articleBody">The lack of oversight and transparency means the islandâs government <b>has not provided Congress with accurate numbers</b> that explain its financial needs. Investors are also in the dark. </p>
+<p class="story-body-text" itemprop="articleBody">Even Puerto Ricoâs governor, Alejandro GarcÃ­a Padilla, acknowledged the <b>absence of accurate information</b> had hampered the islands ability to return to fiscal health.</p>
+<p class="story-body-text" itemprop="articleBody">Representative Nydia M. VelÃ¡zquez, Democrat of New York, has introduced a bill that would require <b>improved disclosures from the hedge funds and alternative investment firms</b> that have been snapping up the bonds of distressed jurisdictions.</p>
+<p class="story-body-text" itemprop="articleBody">She says the funds and firms representing bondholders are maneuvering behind the scenes to protect their stakes. She says she believes the <b>unwillingness of these investors</b> to renegotiate their bond payments is forcing Puerto Rico to reduce its government services.</p>
+<p class="story-body-text" itemprop="articleBody">The bill is <b>not a move to repeal the Tower amendment</b>, but would require greater disclosure of positions taken in derivatives, such as interest-rate swaps, which were a popular hedging tool for variable-rate municipal bonds in the past. </p>
+<p class="story-body-text" itemprop="articleBody">Paul Volcker, the former Federal Reserve chairman, and Richard Ravitch, a former lieutenant governor of New York, did, however, <b>called on Congress to re-examine the Tower Amendment</b> last year, after leading a study of hidden financial weakness at the state level.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The <b>Bank of England</b> will announce its decision on whether to change the benchmark interest rate at 7 a.m. It will also release its latest inflation report. The New York Federal Reserveâs conference on <b>reforming culture and behavior in the financial services industry</b>  starts at 8 a.m. The discussion between Christine Lagarde and Stanley Fischer starts at 8:45 a.m. The Federal Reserve Bank of Chicagoâs conference on the <b>future of large, internationally active banks</b>, starts at 9:40 a.m. Ben Bernanke will speak about <b>Federal Reserve policy in an international context</b> at 4 p.m. as part of the I.M.F.âs annual research conference.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ACTIVISTS MAY NOT BE THAT MYOPIC </strong> <span class="divider"> | </span></span> Nearly $200 billion has poured into the coffers of activist investors like Carl C. Icahn, William A. Ackman and Nelson Peltz. They put some 200 companies in their cross hairs, replaced 19 chief executives and <b>put pressure on virtually every board</b> in the country to pay attention to this vocal class of shareholders. </p>
+<p class="story-body-text" itemprop="articleBody"><a href="//www.nytimes.com/2015/11/05/business/dealbook/headlines-aside-some-activist-investors-take-the-long-view.html?ref=dealbook">Andrew Ross Sorkin examines</a> whether they are short-term traders or <b>in it for the long term</b> in the DealBook column. </p>
+<p class="story-body-text" itemprop="articleBody">Chief executives and politicians often opt for the first. Mr. Icahn has been described as a <b>âfinancial parasiteâ</b> and a âcorporate raider.â Hillary Rodham Clinton has derided âquarterly capitalismâ driven by activists. Warren E. Buffett said, âThe bulk of activism just wants a quick hit.â </p>
+<p class="story-body-text" itemprop="articleBody">Yet in many instances, <b>activists hold shares longer</b> than many institutional or retail investors. Mr. Icahnâs average holding period for an individual stock is more than three years. </p>
+<p class="story-body-text" itemprop="articleBody">Trian, Mr. Peltzâs company, holds its investments for about <b>three years on average</b>. His holding time increases when he takes board seats because selling stock as a board member is complicated by insider trading issues. </p>
+<p class="story-body-text" itemprop="articleBody">The global investment manager MFS found that the <b>average equity in 2014</b> was bought and sold in just 1.92 years, and that mutual fund managers turn over their portfolios every 1.45 years. </p>
+<p class="story-body-text" itemprop="articleBody">None of this is meant to excuse activist shareholdersâ <b>seemingly short-term financial engineering efforts</b>, like buybacks, dividends, spinoffs and sales, Mr. Sorkin writes. These can send shares rising while potentially leaving the company vulnerable later. </p>
+<p class="story-body-text" itemprop="articleBody">For advocates of long-term investing, the goal perhaps should be as much about <b>pressing activists to think long term</b> as persuading the rest of us to do the same.</p>
+<p class="story-body-text" itemprop="articleBody">Take a look at DealBookâs latest special section, <b><a href="//www.nytimes.com/spotlight/dealbook-special-section?emc=dlbkpm&#038;emc=edit_dlbkpm_20151104&#038;nl=%3Fnl%3Ddlbk&#038;nlid=72489293">The Long and Short of It</a></b>, to read more about the need for long-term thinking in business.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Expedia to Acquire HomeAway for $3.9 Billion" src="https://static01.nyt.com/images/2015/11/05/business/dealbook/05db-homeaway-web1/05db-homeaway-web1-square320.png"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Expedia to Acquire HomeAway for $3.9 Billion</strong> <span class="divider"> | </span></span> The company is adding the Airbnb rival to its travel-booking brands, which include Orbitz, Travelocity, Hotels.com, Hotwire and Trivago.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/expedia-to-acquire-homeaway-for-3-9-billion.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/11/05/technology/personaltech/video-feature-home-rental-apps-as-alternatives-to-airbnb.html">App Smart Video Feature: Home-Rental Apps as Alternatives to Airbnb</a> <time class="timestamp" data-eastern-timestamp="3:33 PM" datetime="2015-11-04" data-utc-timestamp="1446669236000">3:33 PM</time></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China Life Insurance Invests More Than $1 Billion in American Warehouses</strong> <span class="divider"> | </span></span> China Life will take about a 30 percent stake in warehouse operations that have recently been acquired by Singapore-listed Global Logistic Properties, The Wall Street Journal reports, citing a person with knowledge of the deal. <br /><span class="kicker"><a href="//www.wsj.com/articles/china-life-insurance-invests-more-than-1-billion-in-u-s-warehouses-1446676284?mod=asia_home"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Breakingviews: Time Warner May Have Left Door Ajar for a Fox Return</strong> <span class="divider"> | </span></span> Time Warnerâs stock trades below the 2014 offer price from 21st Century Fox and at a discount to peers, making it vulnerable to a fresh takeover approach, Jennifer Saba writes.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/time-warner-may-have-left-door-ajar-for-a-fox-return.html">Breakingviews &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CrÃ©dit Agricole and SociÃ©tÃ© GÃ©nÃ©rale Post Higher 3rd-Quarter Profits</strong> <span class="divider"> | </span></span> The results for the lenders, two of Franceâs largest banks, came as their retail divisions reported improved results.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/dealbook/credit-agricole-societe-generale-q3-earnings.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Deutsche Bank to Pay $258 Million and Fire 6 in Settlement</strong> <span class="divider"> | </span></span> It is the latest in a string of settlements over sanctions violations as regulators take aim at banks for doing business with blacklisted countries.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/deutsche-bank-to-pay-258-million-and-fire-6-in-settlement.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Bonuses for Bank Executives Should Be Tied to Gender Diversity, Review Says</strong> <span class="divider"> | </span></span> A British government study has recommended that the awards at financial services companies be linked to the recruitment of more women for senior posts.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/bonuses-for-bank-executives-should-be-tied-to-gender-diversity-review-says.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Activist Investors Get a Welcome Seat at the Table" src="https://static01.nyt.com/images/2015/11/05/business/dealbook/1105-DB-HEDGE1/1105-DB-HEDGE1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Activist Investors Get a Welcome Seat at the Table</strong> <span class="divider"> | </span></span> As corporate America shifts its negative view of activists, more companies are adopting their tactics and even hiring them as consultants.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/activist-investors-get-a-welcome-seat-at-the-table.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Why Buffettâs Salad Oil Magic May Not Repeat for Ackman</strong> <span class="divider"> | </span></span> It can be dangerous to compare current investment opportunities to home runs from the annals of business history, Jeff Gramm writes in the Another View column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/why-buffetts-salad-oil-magic-may-not-repeat-for-ackman.html">Another View &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/i/initial_public_offerings/index.html">I.P.O./OFFERINGS &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Shareholders Vote With Their Dollars to Have Less of a Say" src="https://static01.nyt.com/images/2015/11/05/business/dealbook/05DBIPOS/1105-DB-IPOS-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Shareholders Vote With Their Dollars to Have Less of a Say</strong> <span class="divider"> | </span></span> Long debated, dual-class structures that give extra stock votes to a companyâs founders or a private equity fund have become increasingly popular, Steven Davidoff Solomon writes in the Deal Professor column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/shareholders-vote-with-their-dollars-to-have-less-of-a-say.html">Deal Professor &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Q. &amp; A.: Why Are More Companies Passing on Going Public?" src="https://static01.nyt.com/images/2015/11/05/business/dealbook/05DBRESEARCHERS1/1105-DB-RESEARCHERS1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Q. &amp; A.: Why Are More Companies Passing on Going Public?</strong> <span class="divider"> | </span></span> Researchers at U.C.L.A., Harvard and N.Y.U. found that corporate executives may have started to figure out that being publicly traded is a hindrance.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/q-a-why-are-more-companies-passing-on-going-public.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Public Companies Trying to Mimic Private Firms" src="https://static01.nyt.com/images/2015/11/05/business/dealbook/05DBLONGTERM1/1105-DB-LONGTERM1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Public Companies Trying to Mimic Private Firms</strong> <span class="divider"> | </span></span> Some companies go private to free themselves of meddling investors. But thereâs another way: Ignore them.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/public-companies-trying-to-mimic-private-firms.html">NYT &#187;</a></span><span class="divider">&nbsp;|&nbsp;</span><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/q-a-why-are-more-companies-passing-on-going-public.html">Q. &amp; A. Why Are More Companies Passing on Going Public?</a> </span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>China Health Care Companies Prescribe Themselves Hong Kong I.P.O.s</strong> <span class="divider"> | </span></span> Chinaâs health care companies are flocking to Hong Kong for initial public offerings. The latest entry is Chinaâs largest private psychiatric health care group by revenue, Wenzhou Kangning Hospital.<br /><span class="kicker"><a href="//www.wsj.com/articles/china-health-care-companies-prescribe-themselves-hong-kong-ipos-1446642224?mod=asia_home"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Saying No to a Cash Buffet in Start-Up World" src="https://static01.nyt.com/images/2015/11/05/business/dealbook/05-DEALBOOK-EVERLANE1/1105-DEALBOOK-EVERLANE1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Saying No to a Cash Buffet in Start-Up World</strong> <span class="divider"> | </span></span> Some companies refuse the big money, hold tight to their independence and build themselves through resilience and discipline.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/saying-no-to-cash-buffet-in-start-up-world.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Risking Your Neck to Run With the Unicorns" src="https://static01.nyt.com/images/2015/11/05/business/dealbook/Big-and-Little-Unicorns-1446591917098/Big-and-Little-Unicorns-1446591917098-square320.png"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Risking Your Neck to Run With the Unicorns</strong> <span class="divider"> | </span></span> Tech start-ups are making deals to stretch their private valuations to $1 billion. But those trade-offs may end up hurting employees and early investors.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/risking-your-neck-to-run-with-the-unicorns.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Defining Diversity in Silicon Valley and on Wall Street" src="https://static01.nyt.com/images/2015/11/05/business/dealbook/1105-DEALBOOK-DIVERSITY1SUB1/1105-DEALBOOK-DIVERSITY1SUB1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Defining Diversity in Silicon Valley and on Wall Street</strong> <span class="divider"> | </span></span> Solving the challenge of hiring a diverse work force in technology, finance and other industries is not as easy as it might seem.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/defining-diversity-in-silicon-valley-and-on-wall-street.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Market Changes May Prompt New Definition of Insider Trading" src="https://static01.nyt.com/images/2015/11/05/business/dealbook/05DBINSIDER/1105-DB-INSIDER-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Market Changes May Prompt New Definition of Insider Trading</strong> <span class="divider"> | </span></span> Some say a court ruling will prompt the Justice Department and the S.E.C. to push to toughen and expand the laws on insider trading, Peter J. Henning writes in the White Collar Watch column.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/market-changes-may-prompt-new-definition-of-insider-trading.html">White Collar Watch &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="The Executive Paycheck Myth " src="https://static01.nyt.com/images/2015/11/05/business/dealbook/05DBPAY/1105-DB-PAY-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Executive Paycheck Myth </strong> <span class="divider"> | </span></span> The concept of pay-for-performance has attained a sense of inevitability. But under the tax code, it encourages risky behavior.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/the-executive-paycheck-myth.html">Standard Deduction &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="The Man Who Hates E.T.F.s" src="https://static01.nyt.com/images/2015/11/05/business/dealbook/1105-DB-ETFS1/1105-DB-ETFS1-square320-v2.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>The Man Who Hates E.T.F.s</strong> <span class="divider"> | </span></span> Peter S. Kraus, chief of AllianceBernstein, is convinced that exchange-traded funds are a mounting peril to the markets. And he is not shy about telling E.T.F. brokers that to their faces.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/the-man-who-hates-etfs.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Graying Firms Wrestle With Making Room for Younger Lawyers" src="https://static01.nyt.com/images/2015/11/05/business/dealbook/05-DEALBOOK-LAW1/1105-DEALBOOK-LAW1-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Graying Firms Wrestle With Making Room for Younger Lawyers</strong> <span class="divider"> | </span></span> The millennial generation is pushing up against current law firm leaders, many of whom are not in much of a mind to budge.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/graying-firms-wrestle-with-making-room-for-younger-lawyers.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="Long Lives and Rocky Markets Have Some Pension Systems Recalibrating" src="https://static01.nyt.com/images/2015/11/05/business/dealbook/How-the-Same-Average-Returns-May-Yield-Vastly-Different-Outcomes-1446594747852/How-the-Same-Average-Returns-May-Yield-Vastly-Different-Outcomes-1446594747852-square320.png"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Long Lives and Rocky Markets Have Some Pension Systems Recalibrating</strong> <span class="divider"> | </span></span> The California State Teachersâ Retirement System is considering whether to pull back from traditional investment strategies to shield itself from stock market volatility.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/05/business/dealbook/long-lives-and-rocky-markets-have-some-pension-systems-recalibrating.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<div class="w75 right"><img width="75" height="75" border="0" alt="In Pacific Trade Deal, Vietnam Agrees to U.S. Terms on Labor Rights" src="https://static01.nyt.com/images/2015/11/06/business/06trade/06trade-square320.jpg"/></div>
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>In Pacific Trade Deal, Vietnam Agrees to U.S. Terms on Labor Rights</strong> <span class="divider"> | </span></span> Terms detailed in a newly released text of the Trans-Pacific Partnership include workersâ freedom to unionize and to strike.<br /><span class="kicker"><a href="//www.nytimes.com/2015/11/06/business/international/trans-pacific-trade-deal-tpp-vietnam-labor-rights.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/11/05/morning-agenda-the-bitcoin-resurgence/"
+					data-title="Morning Agenda: The Bitcoin Resurgence"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt;Interest Rate Increase in December Is Still Possible | A 1975 Law Complicates Puerto Rico&#039;s Debt Crisis | Activists May Not Be That Myopic&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/11/05/morning-agenda-the-bitcoin-resurgence/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":48,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

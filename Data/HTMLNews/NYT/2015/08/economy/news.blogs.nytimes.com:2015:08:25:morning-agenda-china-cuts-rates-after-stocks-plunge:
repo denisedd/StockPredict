@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!--[if (gt IE 9)|!(IE)]> <!--> <html lang="en" class="no-js has-comments blog-news section-"  itemscope xmlns:og="//opengraphprotocol.org/schema/"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="en" class="no-js ie9 lt-ie10 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="no-js ie8 lt-ie10 lt-ie9 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<!--[if (lt IE 8)]> <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 has-comments blog-news section-" xmlns:og="//opengraphprotocol.org/schema/"> <![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+		<meta name="PT" content="Blogs" />
+<meta name="PST" content="Blog Post" />
+<meta name="sourceApp" content="blogs" />
+<meta itemprop="identifier" name="blogpostid" content="100000003872463"><meta name="author" content="Amie Tsang" />
+<meta name="CLMST" content="Amie Tsang" />
+<meta name="byl" content="Amie Tsang" />
+<meta name="GBLC" content="DealBook">
+<meta name="PUV" content="normal" />
+<meta property="article:published_time" itemprop="datePublished" content="1440502135" />
+<meta name="PUD" content="20150825" />
+<meta name="pdate" content="20150825" />
+<meta name="ptime" content="20150825072855" />
+<meta name="utime" content="20150825112855" />
+<meta property="article:modified_time" itemprop="dateModified" content="2015-08-25T11:28:55-04:00" />
+<meta name="DISPLAYDATE" content="August 25, 2015" />
+<meta name="dat" content="August 25, 2015" />
+<meta itemprop="articleSection" property="article:section" content="" />
+<meta name="CG" content="" />
+<meta name="SCG" content="news" />
+<meta name="BN" content="news" />
+<meta name="robots" content="noodp">
+<meta name="per" content="Loeb, Daniel S;Reinhart, Carmen M;Rogoff, Kenneth S">
+<meta name="des" content="China;Computer Security;Cyberattacks and Hackers;Education;Hang Seng Index (Hong Kong);Hedge Funds;Interest Rates;Mergers, Acquisitions and Divestitures;Standard &amp; Poor&#039;s 500-Stock Index;Stocks and Bonds;Venture Capital">
+<meta name="org" content="Federal Reserve System;Monsanto Company;New York Stock Exchange;Roman Catholic Church;Syngenta AG;United States Economy;Warner Brothers">
+<meta name="geo" content="Vatican City">
+<meta name="ticker" content="Monsanto Company|MON|NYSE;Syngenta AG|SYT|NYSE" />
+<meta property="article:tag" content="Loeb Daniel S" />
+<meta property="article:tag" content="Reinhart Carmen M" />
+<meta property="article:tag" content="Rogoff Kenneth S" />
+<meta property="article:tag" content="China" />
+<meta property="article:tag" content="Computer Security" />
+<meta property="article:tag" content="Cyberattacks and Hackers" />
+<meta property="article:tag" content="Education" />
+<meta property="article:tag" content="Hang Seng Index (Hong Kong)" />
+<meta property="article:tag" content="Hedge Funds" />
+<meta property="article:tag" content="Interest Rates" />
+<meta property="article:tag" content="Mergers Acquisitions and Divestitures" />
+<meta property="article:tag" content="Standard &amp; Poor&#039;s 500-Stock Index" />
+<meta property="article:tag" content="Stocks and Bonds" />
+<meta property="article:tag" content="Venture Capital" />
+<meta property="article:tag" content="Federal Reserve System" />
+<meta property="article:tag" content="Monsanto Company" />
+<meta property="article:tag" content="New York Stock Exchange" />
+<meta property="article:tag" content="Roman Catholic Church" />
+<meta property="article:tag" content="Syngenta AG" />
+<meta property="article:tag" content="United States Economy" />
+<meta property="article:tag" content="Warner Brothers" />
+<meta property="article:tag" content="Vatican City" />
+<meta property="article:tag" content="DealBook" />
+<meta name="keywords" content="Loeb Daniel S,Reinhart Carmen M,Rogoff Kenneth S,China,Computer Security,Cyberattacks and Hackers,Education,Hang Seng Index (Hong Kong),Hedge Funds,Interest Rates,Mergers Acquisitions and Divestitures,Standard &amp; Poor&#039;s 500-Stock Index,Stocks and Bonds,Venture Capital,Federal Reserve System,Monsanto Company,New York Stock Exchange,Roman Catholic Church,Syngenta AG,United States Economy,Warner Brothers,Vatican City,DealBook" />
+<link rel="alternate" type="application/json+oembed" href="https://www.nytimes.com/svc/oembed/json/?url=http%3A%2F%2Fnews.blogs.nytimes.com%2F2015%2F08%2F25%2Fmorning-agenda-china-cuts-rates-after-stocks-plunge%2F" title="Morning Agenda: China Cuts Rates After Stocks Plunge" />
+<meta name="description" content="Rough and Tumble for Hedge Funds &#124; A Prescient Warning on China &#124; Dampening the Deal-Making" />
+<meta name="hdl" content="Morning Agenda: China Cuts Rates After Stocks Plunge" />
+<meta property="og:title" content="Morning Agenda: China Cuts Rates After Stocks Plunge" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//news.blogs.nytimes.com/2015/08/25/morning-agenda-china-cuts-rates-after-stocks-plunge/" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="Rough and Tumble for Hedge Funds &#124; A Prescient Warning on China &#124; Dampening the Deal-Making" />
+<meta property="og:image" content="https://static01.nyt.com/images/blogs_v5/../icons/t_logo_2048_black.png"/>
+<meta name="thumbnail_150" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta name="twitter:card" value="summary"><meta name="twitter:title" content="Morning Agenda: China Cuts Rates After Stocks Plunge" />
+<meta name="twitter:url" content="//news.blogs.nytimes.com/2015/08/25/morning-agenda-china-cuts-rates-after-stocks-plunge/" />
+<meta name="twitter:description" content="Rough and Tumble for Hedge Funds &#124; A Prescient Warning on China &#124; Dampening the Deal-Making" />
+<meta name="twitter:image" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png"/>
+<meta itemprop="thumbnailUrl" content="https://static01.nyt.com/packages/images/icons/t_logo_300_black.png" name="thumbnail" />
+<link rel='prev' title='Morning Agenda: Global Markets Continue to Plunge' href='//news.blogs.nytimes.com/2015/08/24/morning-agenda-global-markets-continue-to-plunge/' />
+<link rel='next' title='What We&#8217;re Reading' href='//news.blogs.nytimes.com/2015/08/25/what-were-reading-84/' />
+<link rel='canonical' href='//news.blogs.nytimes.com/2015/08/25/morning-agenda-china-cuts-rates-after-stocks-plunge/' />
+<link rel='shortlink' href='//nyti.ms/1EhajY9' />
+<link rel='https://github.com/WP-API/WP-API' href='//news.blogs.nytimes.com/json' />
+<meta name="adxPage" content="blog.nytimes.com/news/post" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="//news.blogs.nytimes.com/feed/" />
+<meta property="article:collection" content="https://static01.nyt.com/services/json/sectionfronts/index.jsonp" />
+<link rel="alternate" href="//mobile.nytimes.com/blogs/news/2015/08/25/morning-agenda-china-cuts-rates-after-stocks-plunge/" />
+<meta name="dfp-ad-unit-path" content="news" />			<title>Morning Agenda: China Cuts Rates After Stocks Plunge - The New York Times</title>
+            <!--[if (gt IE 9)|!(IE)]> <!-->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles.css" />
+<!--<![endif]-->
+<!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-ie.css" />
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="https://int.nyt.com/assets/blogs/latest/css/blogs/news.css" />
+<link rel="stylesheet" type="text/css" media="print" href="https://int.nyt.com/assets/blogs/latest/css/blogs/styles-print.css" />
+<script>
+var NYT = NYT || {}, NYTD = NYTD || {};
+</script>
+                        	<script src="https://int.nyt.com/assets/blogs/latest/js/blogs/layout.js"></script>
+	<script type="text/javascript">var googletag=googletag||{};googletag.cmd=googletag.cmd||[],function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//www.googletagservices.com/tag/js/gpt.js";var o=document.getElementsByTagName("script")[0];if (!/NYT-T=out/.test(document.cookie)) {o.parentNode.insertBefore(t,o)}}();</script>
+<script id="magnum-feature-flags" type="application/json">["limitFabrikSave","facebookOauthButton","videoVHSCover","videoVHSShareTools","videoVHSEmbeddedOnly","removeInternationalEdition","piiBlockDFP","indexAsHeaderBidder","caslOpt"]</script>
+<script>
+var require = {
+    baseUrl: 'https://int.nyt.com/assets/',
+    waitSeconds: 20,
+    paths: {
+        'foundation': 'blogs/latest/js/foundation',
+        'shared': 'blogs/latest/js/shared',
+        'blogs': 'blogs/latest/js/blogs',
+        'auth/mtr': 'https://static01.nyt.com/js/mtr',
+        'auth/growl': 'https://static01.nyt.com/js/auth/growl/default',
+        'vhs': 'https://static01.nyt.com/video/vhs/build/vhs-2.x.min'
+    }
+};
+</script>
+<!--[if (gte IE 9)|!(IE)]> <!-->
+<script data-main="foundation/main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<!--<![endif]-->
+<!--[if lt IE 9]>
+<script>
+require.map = { '*': { 'foundation/main': 'foundation/legacy_main' } };
+</script>
+<script data-main="foundation/legacy_main" src="https://int.nyt.com/assets/blogs/latest/js/foundation/lib/framework.js"></script>
+<![endif]-->
+<script>
+require(['foundation/main'], function () {
+    require(['auth/mtr']);
+});
+</script>
+<!--esi
+<script id="user-info-data" type="application/json">
+<esi:include src="/svc/web-products/userinfo-v3.json" />
+</script>
+-->
+    	</head><body class="single single-post postid-3072 blog-universal nyt-blog-news full-width-headline" id="" data-env="production" data-region="ewr1">
+	<div id="shell" class="shell">
+			<header id="masthead" class="masthead masthead-theme-standard" role="banner">
+    <div class="container">
+        <div class="quick-navigation button-group">
+            <button class="button sections-button"><i class="icon sprite-icon"></i><span class="button-text">Sections</span></button>
+            <button class="button home-button" data-href="https://www.nytimes.com/" title="Go to the home page to see the latest top stories."><i class="icon sprite-icon"></i>
+                <span class="button-text">Home</span>
+            </button>
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <a class="button skip-button skip-to-content visually-hidden focusable" href="#main">Skip to content</a>
+                                </div><!-- close button-group -->
+        <div class="branding">
+            <h2 class="branding-heading">
+                <a id="branding-heading-link" href="https://www.nytimes.com/">
+                    <span class="visually-hidden">The New York Times</span>
+                </a>
+            </h2>
+            <script>window.magnum.writeLogo('small', 'https://int.nyt.com/assets/blogs/latest/images/foundation/logos/', '', 'masthead-theme-standard', 'standard', 'branding-heading-link', 'blogs');</script>
+        </div><!-- close branding -->
+        <div class="story-meta">
+    <h6 class="kicker">
+        <span class="kicker-label">
+			            <a href="//news.blogs.nytimes.com">
+                News            </a>
+			        </span>
+
+                <span class="pipe">|</span>
+        Morning Agenda: China Cuts Rates After Stocks Plunge        
+    </h6>
+</div><!-- close story-meta -->
+
+
+        <div class="user-tools">
+            <div id="Bar1" class="ad bar1-ad nocontent robots-nocontent"></div>
+            <div id="sharetools-masthead" class="sharetools theme-classic"
+	 data-shares="email,facebook,twitter,show-all|More"
+	 data-url="//news.blogs.nytimes.com/2015/08/25/morning-agenda-china-cuts-rates-after-stocks-plunge/"
+	 data-title="Morning Agenda: China Cuts Rates After Stocks Plunge"
+	 data-description="&lt;span class=&quot;excerpt-inner&quot;&gt; Rough and Tumble for Hedge Funds | A Prescient Warning on China | Dampening the Deal-Making&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/08/25/morning-agenda-china-cuts-rates-after-stocks-plunge/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+	data-publish-date="August 25, 2015 7:28 am">
+<div class="ad sharetools-inline-article-ad hidden"></div>
+</div><!-- close shareTools -->
+            <button class="button search-button"><i class="icon sprite-icon"></i><span class="button-text">Search</span></button>
+            <div class="user-tools-button-group button-group">
+                <button class="button subscribe-button hidden" data-href="https://www.nytimes.com/subscriptions/Multiproduct/lp3004.html?campaignId=4XUYF">Subscribe Now</button>
+                <button class="button login-button login-modal-trigger hidden">Log In</button>
+                <button class="button comments-button  button-masthead" data-skip-to-para-id="">
+</button>
+                                <button class="button notifications-button hidden"><i class="icon sprite-icon"></i><span class="button-text">0</span></button>
+                <button class="button user-settings-button"><i class="icon sprite-icon"></i><span class="button-text">Settings</span></button>
+            </div><!-- close user-tools-button-group -->
+        </div><!-- close user-tools -->
+    </div><!-- close container -->
+    <div class="search-flyout-panel flyout-panel">
+    <button class="button close-button" type="button"><i class="icon"></i><span class="visually-hidden">Close search</span></button>
+    <nav class="search-form-control form-control layout-horizontal">
+    <h2 class="visually-hidden">Site Search Navigation</h2>
+    <form class="search-form" role="search">
+        <div class="control">
+            <div class="label-container visually-hidden">
+                                <label for="search-input">Search NYTimes.com</label>
+                            </div>
+            <div class="field-container">
+                                <input id="search-input" name="search-input" type="text" class="search-input text" autocomplete="off" placeholder="Search NYTimes.com" />
+                
+                <button type="button" class="button clear-button" tabindex="-1" aria-describedby="clear-search-input"><i class="icon"></i><span id="clear-search-input" class="visually-hidden">Clear this text input</span></button>
+                <div class="auto-suggest" style="display: none;">
+                    <ol></ol>
+                </div>
+                <button class="button submit-button" type="submit">Go</button>
+            </div>
+        </div><!-- close control -->
+    </form>
+</nav>
+
+
+</div><!-- close flyout-panel -->
+    <div id="notification-modals" class="notification-modals"></div>
+</header>
+					<nav id="ribbon" class="ribbon ribbon-start nocontent robots-nocontent" aria-hidden="true">
+    <div class="nocontent robots-nocontent">
+        <ol class="ribbon-menu">
+            <li class="collection ribbon-loader">
+                <div class="loader "><span class="visually-hidden">Loading...</span></div>
+            </li>
+        </ol>
+        <div class="ribbon-navigation-container">
+            <nav class="ribbon-navigation next">
+                <span class="visually-hidden">See next articles</span>
+                <div class="arrow arrow-right">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+            <nav class="ribbon-navigation previous">
+                <span class="visually-hidden">See previous articles</span>
+                <div class="arrow arrow-left">
+                    <div class="arrow-conceal"></div>
+                </div>
+            </nav>
+        </div>
+    </div><!-- close nocontent -->
+</nav>
+						<nav id="navigation" class="navigation">
+    <h2 class="visually-hidden">Site Navigation</h2>
+</nav><!-- close navigation -->
+
+<nav id="mobile-navigation" class="mobile-navigation hidden">
+    <h2 class="visually-hidden">Site Mobile Navigation</h2>
+</nav><!-- close mobile-navigation -->
+
+    <div id="navigation-edge" class="navigation-edge"></div>
+				<main id="main" class="main" role="main">
+				<div id="TopAd" class="ad top-ad"></div>
+				<div id="mobilebanner" class="ad mobilebanner"></div>
+								<div id="story" class="story theme-main">
+		<div id="news" class="spanAC blog">
+				<div class="postHeader story-header">
+	<div class="story-meta">
+						<h1 class="entry-title story-heading">Morning Agenda: China Cuts Rates After Stocks Plunge</h1>
+		<div class="story-meta-footer">
+			<address class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+				By Amie Tsang			</address>
+			<!-- date published --><time class="dateline " datetime="2015-08-25T11:28:55+00:00" itemprop="datePublished">August 25, 2015</time>
+			<!-- date updated --><span class="visually-hidden updated">August 25, 2015</span>			<div class="inside-story"></div><!-- Although this is empty, it is required for layout parity with NYT5 -->
+		</div>
+	</div>
+</div>
+<div class="a-column" id="a-col">
+	<div id="content" class="hfeed">
+			<article class="post-3072 post type-post status-publish hentry category-dealbook tag-china tag-computer-security tag-cyberattacks-and-hackers tag-education tag-federal-reserve-system tag-hang-seng-index-hong-kong tag-hedge-funds tag-interest-rates tag-loeb-daniel-s tag-mergers-acquisitions-and-divestitures tag-monsanto-company tag-new-york-stock-exchange tag-reinhart-carmen-m tag-rogoff-kenneth-s tag-roman-catholic-church tag-standard-poors-500-stock-index tag-stocks-and-bonds tag-syngenta-ag tag-united-states-economy tag-vatican-city tag-venture-capital tag-warner-brothers per-loeb-daniel-s per-reinhart-carmen-m per-rogoff-kenneth-s des-china des-computer-security des-cyberattacks-and-hackers des-education des-hang-seng-index-hong-kong des-hedge-funds des-interest-rates des-mergers-acquisitions-and-divestitures des-standard-poors-500-stock-index des-stocks-and-bonds des-venture-capital org-federal-reserve-system org-monsanto-company org-new-york-stock-exchange org-roman-catholic-church org-syngenta-ag org-united-states-economy org-warner-brothers geo-vatican-city" id="post-3072">
+                        <div class="visually-hidden">
+                <span itemprop="headline" class="entry-title">Morning Agenda: China Cuts Rates After Stocks Plunge</span>
+                <span class="byline author vcard" itemprop="author creator" itemtype="//schema.org/Person">
+                    By Amie Tsang                </span>
+                <!-- date published --><time class="dateline " datetime="2015-08-25T11:28:55+00:00" itemprop="datePublished">August 25, 2015 7:28 am</time>
+			<!-- date updated --><span class="visually-hidden updated">August 25, 2015 7:28 am</span>            </div>
+			<div class="entry-content">
+			<div id="sharetools-story" class="sharetools theme-classic sharetools-story" data-shares="email|Email,facebook|Share,twitter|Tweet,save|Save,show-all|More,ad" data-url="//news.blogs.nytimes.com/2015/08/25/morning-agenda-china-cuts-rates-after-stocks-plunge/" data-title="Morning Agenda: China Cuts Rates After Stocks Plunge" data-description=" Rough and Tumble for Hedge Funds | A Prescient Warning on China | Dampening the Deal-Making">
+				<div class="ad sharetools-inline-article-ad"></div>
+				<div id="MiddleLeft" class="ad middle-left-ad nocontent robots-nocontent"></div>
+				</div><div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>CHINA CUTS RATES AFTER SHANGHAI STOCKS PLUNGE</strong> <span class="divider"> | </span></span> Chinaâs central bank cut interest rates after <b>Shanghaiâs stock market went into free fall</b> on Tuesday, closing 7.6 percent lower after an 8.5 percent plunge on Monday, Chris Buckley writes in The New York Times. The move brought interest rates down by 0.25 percent, lowering the one-year lending rate to 4.6 percent. The Peopleâs Bank of China also reduced the reserve rate requirement by 0.5 percent. </p>
+<p class="story-body-text" itemprop="articleBody"> âCurrently, there are persisting downward pressures on the countryâs economic growth,â the bank said in an explanation that accompanied the announcement. âThere has also been quite large volatility in global capital markets recently, and <b>monetary policy tools need to be applied more flexibly</b>.â</p>
+<p class="story-body-text" itemprop="articleBody"> There seemed to be some conflict between decision makers over government intervention earlier on Tuesday. âThe slump in the stock markets is destroying what remains of investor confidence, and this problem is profoundly serious,â said a front-page commentary in the official Securities Daily, <b>defending interventionist policies</b>. </p>
+<p class="story-body-text" itemprop="articleBody"> Another official news outlet, The Economic Information Daily, said that it was time for the government to <b>step back from shoring up the stock market</b>. âThe domestic policy focus should be on steadily retreating from stock market bailout policies. Government bailouts are meant to avert financial risks, not to prop up stock prices.â</p>
+<p class="story-body-text" itemprop="articleBody"> The government had resorted to extraordinary measures to prop up Chinese markets after a rally fizzled out in June, but the measures seemed to fail. Chinese officials <b>did not make any aggressive moves</b> to support the market on Monday, but stepped in on Tuesday after they closed.</p>
+<p class="story-body-text" itemprop="articleBody"> Elsewhere <b>selling pressures appeared to ease</b> after a three-day rout that erased nearly $3 trillion in value from stocks globally, <a href="//www.nytimes.com/2015/08/26/business/dealbook/daily-stock-market-activity.html?hp&#038;action=click&#038;pgtype=Homepage&#038;module=a-lede-package-region&#038;region=top-news&#038;WT.nav=top-news">Neil Gough and Nathaniel Popper report in DealBook</a>. Markets in Japan opened sharply lower and closed down 4 percent after swinging widely between losses and gains. Other markets had modest rallies. Australiaâs benchmark index closed up 2.7 percent, while the Hang Seng index in Hong Kong closed 0.7 percent higher. By late morning, the blue-chip Euro Stoxx 50, had climbed 3.1 percent, and the FTSE 100 had risen 2.6 percent. Trading in <b>Standard &#038; Poorâs 500 index futures</b> suggested New York would also open the day with a strong surge of buying.</p>
+<p class="story-body-text" itemprop="articleBody"> The rout in China shook stocks around the world. The slide last week continued on Monday, drawing comparisons with the âBlack Mondayâ crash of 1987, <a href="//www.nytimes.com/2015/08/25/business/dealbook/daily-stock-market-activity.html?ref=dealbook">Mr. Popper and Mr. Gough report in DealBook</a>. Monday was a roller coaster for New York markets and ended with the Standard &#038; Poorâs 500-stock index, the benchmark for stocks, down 3.9 percent â 11 percent off its May high. </p>
+<p class="story-body-text" itemprop="articleBody"> This in turn fueled the growing debate about whether the Federal Reserve will still raise interest rates in September as some expect. Some have even turned to the more worrying question of <b>whether central banks are beginning to lose their influence</b> over markets. The annual Federal Reserve conference in Jackson Hole, which starts on Thursday, will be closely watched for any indication of what Fed officials are thinking.</p>
+<p class="story-body-text" itemprop="articleBody"> In spite of the rough and tumble of the markets, many investment advisers have urged their clients to <b>ignore the swings</b>. Recent data suggests that the American economy is getting stronger. Analysts say that high-flying American stocks were due for a pause, after climbing steadily for four years. </p>
+<p class="story-body-text" itemprop="articleBody"> Still, a number of <b>American companies could take a beating</b> because of weakness in China, as Apple knows very well. The tech companyâs stock got a reprieve from the markets after Tim Cook said Apple âcontinued to experience strong growthâ in China, <a href="//www.nytimes.com/2015/08/25/technology/tim-cook-of-apple-seeks-to-quell-china-fears-in-email-to-jim-cramer.html?ref=international">Brian X. Chen reports in The New York Times</a>. This helped lift its stock from 10 percent down to positive territory. It finished the day down 2.5 percent. </p>
+<p class="story-body-text" itemprop="articleBody"> The international and American oil benchmarks rebounded tentatively on Tuesday morning, though <b>concerns remained about oversupply</b>. Production has remained high in spite of a slump in oil prices, <a href="//www.nytimes.com/2015/08/25/upshot/why-global-financial-markets-are-going-crazy.html?ref=international&#038;abt=0002&#038;abg=1">Neil Irwin writes in the Upshot</a>. This, along with weak demand from a slowing economy in China and other emerging markets, has led to weaker economic conditions in energy-producing countries like those in the Middle East, Latin America and Russia. </p>
+<p class="story-body-text" itemprop="articleBody"> In countries like Nigeria and Venezuela, which rely almost completely on oil exports, <b>fears of unrest and economic instability</b> are already building, <a href="//www.nytimes.com/2015/08/25/world/from-venezuela-to-iraq-to-russia-oil-price-drops-raise-fears-of-unrest.html?ref=international">Clifford Krauss and Rick Gladstone report in The New York Times</a>. In Ecuador, where oil revenue has fallen by nearly half since last year, tens of thousands of demonstrators pour into the streets every week, angered by the governmentâs economic policies.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ROUGH AND TUMBLE FOR HEDGE FUNDS</strong> <span class="divider"> | </span></span> The fallout from the global sell-off has few limits. Many on  <b>Wall Street have been caught off guard</b> and money managers at some of the biggest hedge funds in the United States have had their vacation plans interrupted, <a href="//www.nytimes.com/2015/08/25/business/dealbook/25db-hedge.html?ref=dealbook">Alexandra Stevenson and Matthew Goldstein report in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody">One adviser had to hop around on conference calls from his cabin in the woods. Another said investors had requested play-by-play commentary and performance figures. With the reason for the plunge so unclear, many have  <b>not been willing to stick their necks out</b> and speak publicly.</p>
+<p class="story-body-text" itemprop="articleBody">It is clear, however, that August numbers are not looking good for them.   <b>Hedge funds went into the sell-off bullish</b>, with $1.5 trillion in long positions â bets that stocks will rise in price â compared with $684 billion in short positions, bets that stocks will decline in price, according to an analysis of the industry by Goldman Sachs.</p>
+<p class="story-body-text" itemprop="articleBody">The 10 stocks that Goldman said were the  <b>most widely held by hedge funds</b> â stocks like Apple, Citigroup, Facebook and Amazon â were down from 5 to 10 percent over the last three trading days.</p>
+<p class="story-body-text" itemprop="articleBody">Leon G. Cooperman, founder of the $9 billion hedge fund Omega Advisors and a longtime market bull, is  <b>emerging as a big loser in the chaos</b>. As of Friday, his fund was said to have lost 11 percent this month, according to people briefed on the matter. The firm was hit hard by big declines in the share prices of Allergan, AerCap, Citigroup and the American International Group.</p>
+<p class="story-body-text" itemprop="articleBody">One hedge fund manager who invests mainly in United States stocks, speaking on the condition of anonymity, said he would not be surprised <b>if the average fund lost from 3 to 7 percent in August</b>. He said the last week had been brutal and the losses had come far faster than most would have anticipated. </p>
+<p class="story-body-text" itemprop="articleBody">Even the  <b>worldâs biggest hedge fund</b>,  Bridgewater Associates, led by Ray Dalio, was not spared. The $162 billion firm told investors on Friday that its Pure Alpha fund was down 4.7 percent for the month. Going into August, the Pure Alpha portfolio had been up 11.8 percent for the year.</p>
+<p class="story-body-text" itemprop="articleBody">After six years of a bull market run, few hedge fund managers have been brave enough to short stocks with much conviction. To take a short position, a trader sells borrowed stock in a company that he or she thinks is overvalued in anticipation of buying it back at a cheap price.  <b>Those that have taken short positions</b>  have not been hit as hard by the sell-off. </p>
+<p class="story-body-text" itemprop="articleBody">Hedge funds that scoop up   <b>distressed assets at bottomed-out prices</b>  also began to eye opportunities. âWhat I have told investors is the economy is fine but now is a great time to be buying some things when they get hit,â said Marc Lasry, a co-founder of the $13.9 billion hedge fund Avenue Capital Group.<br />
+âOther people may be having issues,â Mr. Lasry said. âFor us, that is an opportunity as opposed to a problem.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A PRESCIENT WARNING ON CHINA </strong> <span class="divider"> | </span></span> Kenneth Rogoff, a professor of economics at Harvard University, accurately predicted the eurozone debt crisis and has long warned of a potential financial crisis in China. Itâs starting to look like  <b>heâs right again</b>, <a href="//www.nytimes.com/2015/08/25/business/dealbook/a-warning-on-china-seems-prescient.html?ref=dealbook">Andrew Ross Sorkin writes in the DealBook column</a>. </p>
+<p class="story-body-text" itemprop="articleBody">Mr. Rogoff has made a career of studying financial crises and co-wrote âThis Time Is Different,â a seminal book that examined eight centuries of financial crises. He and his co-author, Carmen M. Reinhart, contended that every financial crisis stems from the same problem:  <b>too much debt</b>. </p>
+<p class="story-body-text" itemprop="articleBody">âChina is the classic  <b>âThis time is differentâ story</b>,â Mr. Rogoff said, rattling off all the different rationalizations for why the country convinced itself â and many others â that it could load up on debt but was somehow immune to the laws of economic gravity.</p>
+<p class="story-body-text" itemprop="articleBody">Mr. Rogoff is  <b>not the first to identify China as a risk</b>. Henry M. Paulson Jr., the former Treasury secretary and a Sinophile, and the hedge fund manager James Chanos have also been sounding the alarm on China. </p>
+<p class="story-body-text" itemprop="articleBody">The  <b>countryâs debt load</b>  rose from $7 trillion in 2007 to $28 trillion by mid-2014, according to a report by the consulting firm McKinsey &#038; Company, China. âAt 282 percent of G.D.P., Chinaâs debt as a share of G.D.P., while manageable, is larger than that of the United States or Germany,â the firm said in a report. âSeveral factors are worrisome: Half of loans are linked directly or indirectly to Chinaâs real estate market, unregulated shadow banking accounts for nearly half of new lending, and the debt of many local governments is likely unsustainable.â</p>
+<p class="story-body-text" itemprop="articleBody">The question now is how interconnected China is with the rest of the world economy. And in spite of the tumultuous state of the market, Mr. Rogoff says he believes that the recent weeks have raised the prospects of a meaningful crisis. But with Chinaâs trillions of dollars in reserves, he thinks the country may have  <b>sufficient tools to prevent a calamity</b>  that spreads across the globe â at least for now. </p>
+<p class="story-body-text" itemprop="articleBody">âIf you had to bet,â Mr. Rogoff said, âyouâd still bet theyâd pull it out.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ON THE AGENDA</strong> <span class="divider"> | </span></span> The latest  <b>S.&#038;P./Case-Shiller Home Price Index</b>   data is released at 8 a.m.<br />
+Data  <b>on the sales of new homes</b> will be released at 10 a.m. by the Census Bureau.<br />
+<b>Andrew Mackenzie</b>, the chief executive of BHP Billiton, is a guest on Bloomberg Television at 9:30 a.m. <b>Robert Shiller</b>, the Nobel Laureate and professor of economics at Yale University, appears on Bloomberg TV at 9:40 a.m.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>DAMPENING THE DEAL-MAKING</strong> <span class="divider"> | </span></span> Deal makers arenât ready to call an end to one of the biggest waves of  <b>mergers and initial public offerings</b> in recent memory, but the possibility is certainly on the horizon,  <a href="//www.nytimes.com/2015/08/25/business/dealbook/uncertainty-in-the-market-may-imperil-deal-making.html?ref=dealbook">Michael J. de la Merced writes in DealBook</a>. </p>
+<p class="story-body-text" itemprop="articleBody">Deals are  underpinned by a trust that the <b> prices discussed are fair</b>  and that the move is the best way to finance further growth. But sharp gyrations in the broad stock markets could unnerve the people responsible for making these decisions.</p>
+<p class="story-body-text" itemprop="articleBody">âWhenever you see this kind of turmoil in the market, it can  <b>shake peopleâs confidence</b>,â said Kenneth M. Jacobs, the chief executive of Lazard. âYou could see a pause until the dust settles and conditions become clearer.â</p>
+<p class="story-body-text" itemprop="articleBody">Advisers say many of the factors that have underpinned the huge boom in mergers have stayed in place. The  <b>cost of borrowing money remains cheap</b>, letting buyers take on debt to take over their targets.</p>
+<p class="story-body-text" itemprop="articleBody">Lower share prices would not necessarily create an issue. If stocks fall to a new level, management teams would work with this  <b>new normal</b>. It would also benefit private equity firms, who have routinely been outbid by corporate buyers able to pay more for targets.<br />
+The problem is the volatility in markets. If markets are plunging one day and rebounding the next, it would make it  <b>difficult to price a takeover</b>. </p>
+<p class="story-body-text" itemprop="articleBody">For now, bankers and lawyers said that their stables of  <b>pending deals remained strong</b>. A number of prominent private companies are lining up to go public within the next few months. Among them are First Data, the big credit card processor, and Square, the smaller payments company co-founded by Jack Dorsey, the chairman of Twitter.</p>
+<p class="story-body-text" itemprop="articleBody">Many hopeful market debutantes are likely to continue to file the paperwork necessary for an initial offering, according to Stacy J. Kanter, a partner at the law firm Skadden, Arps, Slate, Meagher &#038; Flom. They can then  <b>wait until the markets improve</b>  to proceed with their stock sales.</p>
+<p class="story-body-text" itemprop="articleBody">Venture capitalists, however, are already fretting, <a href="//www.nytimes.com/2015/08/25/technology/hot-tech-start-ups-may-have-higher-funding-hurdles.html?ref=technology">Katie Benner reports in The New York Times</a>. They are worried that the plunge in American stocks could  <b>cool the market for shares of private companies</b>, especially in Silicon Valley. </p>
+<p class="story-body-text" itemprop="articleBody">The number of start-ups valued at $1 billion or more has jumped to at least 131, up from fewer than a dozen in 2010. The total amount of venture money invested has also more than doubled, to $50 billion in 2014, from $23 billion in 2010, with venture funding in the second quarter exceeding $17 billion for the first time since the end of 2000. Some people are wondering if itâs  <b>time for Silicon Valleyâs heat to cool off</b>.</p>
+<p class="story-body-text" itemprop="articleBody">Any adverse effect on venture-backed companies is likely to be uneven and more complicated than a straight bust, Ms. Benner writes. The effect of a stock market rout is set to move slowly across the start-up landscape, creating a gulf between well-run companies with achievable business plans and those that were funded during a frenzy that began earlier in the decade. But once  <b>negative sentiment takes hold</b>, a more widespread downward spiral could quickly unfold.</p>
+<p class="story-body-text" itemprop="articleBody">The prices for start-up shares are closely held by small groups of investors and generally reset only when the  <b>founders go into the market to raise money</b>.<br />
+So there may be cause for concern only for companies that absolutely need to collect new financing. Investors may want more reassurances that the start-ups can survive in the public market. </p>
+<p class="story-body-text" itemprop="articleBody">âInvestors are likely to refocus on business model viability and path to profitability,â said Bill Gurley, a prominent venture capitalist,. âThis will seem like an  <b>abrupt sea change to many</b>.â</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong></strong> <span class="divider"> | </span></span> <em>Contact <a href="mailto:amie.tsang@nytimes.com">amie.tsang@nytimes.com</a></em></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//dealbook.blogs.nytimes.com/category/mergers-acquisitions/">Mergers &#038; Acquisitions &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Southern Company to Pay $12 Billion for AGL Resources</strong> <span class="divider"> | </span></span> The deal between the two crosstown Atlanta rivals would make Southern the second-largest United States utility, with about nine million customers.<br /><span class="kicker"><a href="//www.nytimes.com/2015/08/25/business/dealbook/southern-company-to-pay-12-billion-for-agl-resources.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Belk Agrees to Be Bought for About $2.7 Billion</strong> <span class="divider"> | </span></span> The 127-year-old department-store chain concentrated in the southern United States agreed to be acquired by the private equity firm Sycamore.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-08-24/belk-to-be-acquired-by-sycamore-partners-for-about-2-7-billion?nl=business&#038;emc=edit_dlbkpm_20150824"> BLOOMBERG NEWS</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Warner Bros. in Talks to Make Movies in China</strong> <span class="divider"> | </span></span> The Time Warner-owned studio is in talks with China Media Capital, a state-backed investment fund focused on the entertainment industry, to form a joint venture that would produce local-language films, The Wall Street Journal reports, citing people with knowledge of the potential partnership.<br /><span class="kicker"><a href="//www.wsj.com/articles/warner-bros-in-talks-to-make-movies-in-china-1440475260"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Syngenta Gains 8.6% as Monsanto Said to Increase Takeover Bid</strong> <span class="divider"> | </span></span> The offer values Syngenta at about 470 Swiss francs per share in cash and stock, compared with the 449 francs the United States firm offered earlier this year. That would translate to a market capitalization of about 43.7 billion francs, or about $47 billion.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-08-24/monsanto-said-to-increase-syngenta-offer-to-about-47-billion"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/b/banks_and_banking/index.html">INVESTMENT BANKING &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>George Osborne Aims to Sell Lloyds Stake Within a Year</strong> <span class="divider"> | </span></span> Chancellor George Osborne aims to sell the governmentâs stake in Lloyds Banking Group within a year, prompting concern that he is rushing to privatize state-backed lenders at the expense of taxpayers.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/fbc21a72-4a74-11e5-b558-8a9722977189.html#axzz3jnbkcemb"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/h/hedge_funds/index.html">HEDGE FUNDS &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Loeb Ruling Raises Hurdles for Activists</strong> <span class="divider"> | </span></span> Activist hedge funds will face extra hurdles in their attempts to unseat managers and board directors, following a ruling against Daniel Loebâs fund management group Third Point.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/6a570b56-4aa6-11e5-9b5d-89a026fda5c9.html?ftcamp=published_links%2Frss%2Fcompanies%2Ffeed%2F%2Fproduct#axzz3jnbkcemb"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>ValueAct Confident in Halliburtonâs Deal for Baker Hughes</strong> <span class="divider"> | </span></span> Jeff Ubben, the chief executive of ValueAct Capital Management, isnât worried about the $2.5 billion bet that ValueAct has made on Halliburtonâs planned purchase of Baker Hughes.<br /><span class="kicker"><a href="//blogs.wsj.com/moneybeat/2015/08/24/valueacts-ubben-confident-in-haliburtons-deal-for-baker-hughes/"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/v/venture_capital/index.html">VENTURE CAPITAL &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Owl Ventures Is Betting $100 Million Fund on Education Start-Ups</strong> <span class="divider"> | </span></span> The partners shifted their focus to education-only with Owl Ventures because public, private and charter schools in the United States are planning to spend more on technology in coming years.<br /><span class="kicker"><a href="//blogs.wsj.com/venturecapital/2015/08/24/owl-ventures-is-betting-100-million-fund-on-education-startups/"> THE WALL STREET JOURNAL </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Point72âs David Fiszel to Leave to Start Tech-Investing Firm</strong> <span class="divider"> | </span></span> David Fiszel, the Point72 Asset Management money manager who was picked in March to lead a venture capital unit at Steven A. Cohenâs firm, is leaving to start a firm that invests in technology companies.<br /><span class="kicker"><a href="//www.bloomberg.com/news/articles/2015-08-24/point72-s-david-fiszel-to-leave-cohen-s-firm-to-start-business"> BLOOMBERG NEWS </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="round-up">
+<div class="ru-top-story">
+<h6 class="kicker"><a href="//topics.nytimes.com/top/reference/timestopics/subjects/c/credit_crisis/financial_regulatory_reform/index.html">LEGAL/REGULATORY &#187;</a></h6>
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>A New Way to Charge Insider Trading</strong> <span class="divider"> | </span></span> The Justice Department pursued a different track in a recent case, arguing that it didnât have to prove that a benefit flowed from a recipient to a tipper.<br /><span class="kicker"><a href="//www.nytimes.com/2015/08/25/business/dealbook/a-new-way-to-charge-insider-trading.html">White Collar Watch &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>FTC Has Power to Police Digital Security</strong> <span class="divider"> | </span></span> A United States appeals court said the Federal Trade Commission has the authority to regulate corporate computer systemsâ security, and may pursue a lawsuit accusing the hotel operator Wyndham Worldwide of failing to properly safeguard consumersâ information.<br /><span class="kicker"><a href="//www.nytimes.com/reuters/2015/08/24/technology/24reuters-wyndham-ftc-cybersecurity.html">NYT &#187;</a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story -->
+<div class="ru-story">
+<p class="story-body-text" itemprop="articleBody"><span class="title"><strong>Preaching a New Message About the Vaticanâs Money</strong> <span class="divider"> | </span></span> âAt some point, of course, some scandal will happen again, but we have the instruments to deal with that and we have our credibility back, based on facts, â says RenÃ© Bruelhart, the Vaticanâs chief anti-money laundering enforcer.<br /><span class="kicker"><a href="//www.ft.com/intl/cms/s/0/f8b7570c-4a38-11e5-9b5d-89a026fda5c9.html#axzz3jnbkcemb"> THE FINANCIAL TIMES </a></span></p>
+</div>
+<p class="story-body-text" itemprop="articleBody"><!-- end .ru-story --></div>
+</div>
+<div class="newsletter-signup">
+<p class="story-body-text" itemprop="articleBody"><a href="//dealbook.nytimes.com/dealbook-e-mail/">Sign up for the DealBook Newsletter</a>, delivered every morning and afternoon.</p>
+</div>
+<p class="story-body-text" itemprop="articleBody"></p>
+</div>
+			<footer class="entry-footer">
+				
+				<div id="sharetools-post-footer" class="sharetools theme-classic"
+					data-shares="show-all|Share"
+					data-url="//news.blogs.nytimes.com/2015/08/25/morning-agenda-china-cuts-rates-after-stocks-plunge/"
+					data-title="Morning Agenda: China Cuts Rates After Stocks Plunge"
+					data-description="&lt;span class=&quot;excerpt-inner&quot;&gt; Rough and Tumble for Hedge Funds | A Prescient Warning on China | Dampening the Deal-Making&lt;/span&gt;&lt;a href=&quot;//news.blogs.nytimes.com/2015/08/25/morning-agenda-china-cuts-rates-after-stocks-plunge/&quot; class=&quot;more-link&quot;&gt;Read&nbsp;more...&lt;/a&gt;"
+					>
+					<div class="ad sharetools-inline-article-ad hidden"></div>
+				</div>
+				<div class="footer-tags">
+									</div>
+			</footer>
+		</article>
+		<section id="whats-next" class="whats-next nocontent robots-nocontent">
+    <h2 class="visually-hidden">What's Next</h2>
+    <div class="nocontent robots-nocontent">
+        <div class="loader-container">
+            <div class="loader loader-t-logo-32x32-ecedeb-ffffff"><span class="visually-hidden">Loading...</span></div>
+        </div>
+    </div><!-- close nocontent -->
+</section>
+
+		</div> <!-- end content -->
+</div><!-- end .a-column -->
+<div class="cColumn nocontent robots-nocontent">
+	<aside>
+			<div class="module ad" id="MiddleRight"></div>
+        	</aside>
+</div>		<div class="clear"></div>
+	</div><!-- end blog wrap -->
+	<div class="hideContent"></div>
+
+	
+<!-- Google Analytics start -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;if (!/NYT-T=out/.test(document.cookie)) {m.parentNode.insertBefore(a,m)} })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-4406282-154',  { 'alwaysSendReferrer': true } );
+ga('send', 'pageview');
+</script>
+<!-- Google Analytics end -->
+		<div id="mobilebanner2" class="ad mobilebanner2"></div>
+		<div class="accessibility-ad-header visually-hidden">
+    <p>Advertisement</p>
+</div>
+<div id="SponLink" class="text-ad bottom-left-ad nocontent robots-nocontent"></div>
+
+		<div id="Top5" class="ad top5-ad hidden nocontent robots-nocontent"></div>
+
+					</div>
+			<div class="search-overlay"></div>
+		</main><!-- close main -->
+						<footer id="page-footer" class="page-footer" role="contentinfo">
+    <nav>
+         <ul>
+             <li>
+                <a href="https://www.nytco.com" itemprop="copyrightNotice">
+                    &copy; <span itemprop="copyrightYear">2017</span>
+					<span itemprop="copyrightHolder provider sourceOrganization" itemscope
+						itemtype="//schema.org/Organization"
+						itemid="//www.nytimes.com">
+						<span itemprop="name"> The New York Times Company</span>
+						<meta itemprop="tickerSymbol" content="NYSE NYT"/>
+					</span>
+                </a>
+            </li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/infoservdirectory.html">Contact Us</a></li>
+            <li><a href="//www.nytco.com/careers/">Work With Us</a></li>
+            <li><a href="//nytmediakit.com/">Advertise</a></li>
+            <li><a href="https://www.nytimes.com/content/help/rights/privacy/policy/privacy-policy.html#pp">Your Ad Choices</a></li>
+            <li><a href="https://www.nytimes.com/privacy">Privacy</a></li>
+            <li><a href="https://www.nytimes.com/ref/membercenter/help/agree.html" itemprop="usageTerms">Terms of Service</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/content/help/rights/sale/terms-of-sale.html">Terms of Sale</a></li>
+         </ul>
+    </nav>
+    <nav class="last-nav">
+        <ul>
+            <li><a href="//spiderbites.nytimes.com">Site Map</a></li>
+            <li><a href="https://www.nytimes.com/membercenter/sitehelp.html">Help</a></li>
+            <li><a href="https://myaccount.nytimes.com/membercenter/feedback.html">Site Feedback</a></li>
+            <li class="last-item"><a href="https://www.nytimes.com/subscriptions/Multiproduct/lp5558.html?campaignId=37WXW">Subscriptions</a></li>
+        </ul>
+    </nav>
+</footer>		</div><!-- close shell -->
+	<script>
+require(['foundation/main'], function () {
+    require(['blogs/main']);
+    require(['jquery/nyt', 'foundation/views/page-manager'], function ($, pageManager) {
+        if (window.location.search.indexOf('disable_tagx') > 0) {
+            return;
+        }
+        $(document).ready(function () {
+            require(['https://a1.nyt.com/analytics/json-kidd.min.js'], function () {
+                pageManager.trackingFireEventQueue();
+            });
+        });
+    });
+});
+</script>
+
+	<div id="Inv1" class="ad inv1-ad hidden"></div>
+<div id="Inv2" class="ad inv2-ad hidden"></div>
+<div id="Inv3" class="ad inv3-ad hidden"></div>
+<div id="ab1" class="ad ab1-ad hidden"></div>
+<div id="ab2" class="ad ab2-ad hidden"></div>
+<div id="ab3" class="ad ab3-ad hidden"></div>
+<div id="prop1" class="ad prop1-ad hidden"></div>
+<div id="prop2" class="ad prop2-ad hidden"></div>
+<div id="Anchor" class="ad anchor-ad hidden"></div>
+<div id="ADX_CLIENTSIDE" class="ad adx-clientside-ad hidden"></div>
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b5bcf2eba4","applicationID":"5164608","transactionName":"YwFXZhRYVhAEVUZcX1pLYEAPFlkTFRtQWV9TFxtCDkk=","queueTime":0,"applicationTime":60,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
